@@ -1,0 +1,45 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --device "AM64x_beta" --package "ALV" --part "Default"
+ * @versions {"data":"20201908","timestamp":"2020110405","tool":"1.6.0+1543","templates":"20190604"}
+ */
+
+/**
+ * These are the peripherals and settings in this configuration
+ */
+const iPRU_ICSSG1_MII_G_RT1               = scripting.addPeripheral("PRU_ICSSG1_MII_G_RT");
+iPRU_ICSSG1_MII_G_RT1.$name               = "MyPRU_ICSSG1_MII_G_RT1";
+iPRU_ICSSG1_MII_G_RT1.$assign             = "PRU_ICSSG1_MII_G_RT";
+iPRU_ICSSG1_MII_G_RT1.MII_MT0_CLK.$assign = "PRG1_PRU0_GPO16";
+iPRU_ICSSG1_MII_G_RT1.MII0_TXEN.$assign   = "PRG1_PRU0_GPO15";
+iPRU_ICSSG1_MII_G_RT1.MII0_TXD3.$assign   = "PRG1_PRU0_GPO14";
+iPRU_ICSSG1_MII_G_RT1.MII0_TXD2.$assign   = "PRG1_PRU0_GPO13";
+iPRU_ICSSG1_MII_G_RT1.MII0_TXD1.$assign   = "PRG1_PRU0_GPO12";
+iPRU_ICSSG1_MII_G_RT1.MII0_TXD0.$assign   = "PRG1_PRU0_GPO11";
+iPRU_ICSSG1_MII_G_RT1.MII0_RXDV.$assign   = "PRG1_PRU0_GPO4";
+iPRU_ICSSG1_MII_G_RT1.MII_MR0_CLK.$assign = "PRG1_PRU0_GPO6";
+iPRU_ICSSG1_MII_G_RT1.MII0_RXD3.$assign   = "PRG1_PRU0_GPO3";
+iPRU_ICSSG1_MII_G_RT1.MII0_RXD2.$assign   = "PRG1_PRU0_GPO2";
+iPRU_ICSSG1_MII_G_RT1.MII0_CRS.$assign    = "PRG1_PRU0_GPO10";
+iPRU_ICSSG1_MII_G_RT1.MII0_RXER.$assign   = "PRG1_PRU0_GPO5";
+iPRU_ICSSG1_MII_G_RT1.MII0_RXD1.$assign   = "PRG1_PRU0_GPO1";
+iPRU_ICSSG1_MII_G_RT1.MII0_RXD0.$assign   = "PRG1_PRU0_GPO0";
+iPRU_ICSSG1_MII_G_RT1.MII0_COL.$assign    = "PRG1_PRU0_GPO9";
+iPRU_ICSSG1_MII_G_RT1.MII0_RXLINK.$assign = "PRG1_PRU0_GPO8";
+iPRU_ICSSG1_MII_G_RT1.MII_MT1_CLK.$assign = "PRG1_PRU1_GPO16";
+iPRU_ICSSG1_MII_G_RT1.MII1_TXEN.$assign   = "PRG1_PRU1_GPO15";
+iPRU_ICSSG1_MII_G_RT1.MII1_TXD3.$assign   = "PRG1_PRU1_GPO14";
+iPRU_ICSSG1_MII_G_RT1.MII1_TXD2.$assign   = "PRG1_PRU1_GPO13";
+iPRU_ICSSG1_MII_G_RT1.MII1_TXD1.$assign   = "PRG1_PRU1_GPO12";
+iPRU_ICSSG1_MII_G_RT1.MII1_TXD0.$assign   = "PRG1_PRU1_GPO11";
+iPRU_ICSSG1_MII_G_RT1.MII1_RXDV.$assign   = "PRG1_PRU1_GPO4";
+iPRU_ICSSG1_MII_G_RT1.MII_MR1_CLK.$assign = "PRG1_PRU1_GPO6";
+iPRU_ICSSG1_MII_G_RT1.MII1_RXD3.$assign   = "PRG1_PRU1_GPO3";
+iPRU_ICSSG1_MII_G_RT1.MII1_RXD2.$assign   = "PRG1_PRU1_GPO2";
+iPRU_ICSSG1_MII_G_RT1.MII1_CRS.$assign    = "PRG1_PRU1_GPO10";
+iPRU_ICSSG1_MII_G_RT1.MII1_RXER.$assign   = "PRG1_PRU1_GPO5";
+iPRU_ICSSG1_MII_G_RT1.MII1_RXD1.$assign   = "PRG1_PRU1_GPO1";
+iPRU_ICSSG1_MII_G_RT1.MII1_RXD0.$assign   = "PRG1_PRU1_GPO0";
+iPRU_ICSSG1_MII_G_RT1.MII1_COL.$assign    = "PRG1_PRU1_GPO9";
+iPRU_ICSSG1_MII_G_RT1.MII1_RXLINK.$assign = "PRG1_PRU1_GPO8";

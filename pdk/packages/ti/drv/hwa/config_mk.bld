@@ -1,0 +1,20 @@
+/******************************************************************************
+ * FILE PURPOSE: Build configuration Script for the HWA Driver
+ ******************************************************************************
+ * FILE NAME: config_mk.bld
+ *
+ * DESCRIPTION: 
+ *  This file contains the build configuration script for the HWA driver
+ *  and is responsible for configuration of the paths for the various 
+ *  tools required to build the driver.
+ *
+ * Copyright (C) 2020, Texas Instruments, Inc.
+ *****************************************************************************/
+
+/* Configure the HWA Release Version Information */
+var hwaDriverReleaseVersion = (""+Pkg.version.replace(/\s/g, "")).split(',');
+
+var Build = xdc.useModule('xdc.bld.BuildEnvironment');
+Build.useTargets=null;
+
+

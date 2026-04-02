@@ -1,0 +1,129 @@
+# Low Power Management Kconfig
+#
+# For a description of the syntax of this configuration file,
+# see https://www.kernel.org/doc/Documentation/kbuild/kconfig-language.txt
+# NOTE: We ONLY support "bool"
+#
+# Copyright (c) 2024, Texas Instruments Incorporated
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# *  Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+# *  Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# *  Neither the name of Texas Instruments Incorporated nor the names of
+#    its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+# THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+# EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+menu "Low Power Mode support"
+
+config LPM_DM
+	bool "Enable DM Low Power Mode support"
+	depends on LIBRARY_BUILD_DM
+	help
+	 Enable required features in the DM to support low power modes.
+
+config LPM_INCLUDE_OSAL
+	bool "Enable OSAL support for LPM"
+	depends on LPM_DM
+	help
+	 Enable OSAL layer calls for LPM
+
+config LPM_DM_STUB
+	bool "Build an LPM Stub binary"
+	depends on LPM_DM
+	help
+	 Enable Low Power Mode Stub Generation
+
+config LNK_NSPS_BASE
+	hex "LNK_NSPS base address"
+	default 0x00040000
+	depends on LPM_DM_STUB
+	help
+	  Default base address of Non-secure Preserved Storage Memory
+
+config LNK_NSPS_LEN
+	hex "Size of NSPS"
+	default 0x00008000
+	depends on LPM_DM_STUB
+	help
+	  Set the maximum size of Non-secure Preserved Storage Memory
+
+config LPM_DM_TRACE
+	bool "Enable LPM Debug Trace"
+	depends on LPM_DM
+	help
+	 Enable Low Power Mode Debug Output
+
+config LPM_DM_TRACE_UART
+	bool "Enable LPM Debug Trace Over UART"
+	depends on LPM_DM_TRACE
+	help
+	 Enable Low Power Mode Debug Output over wakeup UART
+
+config LPM_DM_TRACE_BUFFER
+	bool "Enable LPM Debug Trace Over Buffer"
+	depends on LPM_DM_TRACE
+	help
+	 Enable Low Power Mode Debug Output over Memory Buffer
+
+config LPM_CLK
+	bool "Enable Clock Layer LPM"
+	depends on LPM_DM
+	help
+	 Enable Clock Layer LPM with enables all suspend and resume
+	 handlers for clock drivers.
+
+config LPM_LIMIT_IR_TRACKING
+	bool "Reduce amount of IR entries tracked"
+	default n
+	depends on LPM_DM
+	help
+	 Reduce the amount of IR entries tracked due to available memory.
+	 Enable for sysfw/sysfw-test, but disable for linux.
+
+config LPM_32_BIT_DDR
+	bool "Enable 32 bit DDR driver"
+	depends on LPM_DM
+	help
+	 Enable 32 bit DDR driver for DDR save and restore.
+
+menu "Low Power Debug Options"
+
+config LPM_DM_STUB_STANDALONE
+	bool "Build a standalone DM Stub"
+	depends on LPM_DM
+	help
+	 Enable build of a standalone DM Stub binary that can be loaded
+	 directly and used, can be useful for very specific debug
+	 scenarios.
+
+config LPM_DM_STUB_NO_FS_STUB
+	bool "Disable all attempted communication with TIFS/FS Stub"
+	depends on LPM_DM
+	help
+	 Disable attempted communication with TIFS or FS Stub using
+	 secure proxy. Useful for very specific debug scenarios.
+
+endmenu
+
+endmenu

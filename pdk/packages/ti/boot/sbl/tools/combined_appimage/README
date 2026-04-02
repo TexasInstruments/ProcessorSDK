@@ -1,0 +1,24 @@
+1. This bin folder contains board-specific directories for each of the combined_opt.appimage/
+combined_dev.appimage output builds. 
+2. Each board specific folder also contains bl31.bin,
+bl32.bin, Image, u-boot-spl.bin base-board.dtb which are used to generate combined_dev.appimage
+and combined_opt.appimage.
+3. Note : base-board.dtb needs to be modified to ensure that a SD card filesystem ('rootfs) 
+is specified for the Linux filesystem in each case. base-board.dtb file need to be 
+updated for every release.
+
+How to Modify base-boad.dtb :
+1. Clone ti-linux-kernel repo - https://bitbucket.itg.ti.com/projects/LCPDPUB/repos/ti-linux-kernel/browse
+2. Add bootargs in arch/arm64/boot/dts/ti/k3-<soc_name>-common-proc-board.dts i.e : 
+    - J721E,J7200: bootargs = "console=ttyS2,115200n8 earlycon=ns16550a,mmio32,0x02800000 root=/dev/mmcblk1p2 rw rootfstype=ext4 rootwait"
+    - J721S2,J784S4,J742S2: bootargs = "console=ttyS2,115200n8 earlycon=ns16550a,mmio32,0x02880000 root=/dev/mmcblk1p2 rw rootfstype=ext4 rootwait"
+3. Execute the following command - make ARCH=arm64 CROSS_COMPILE=aarch64-none-linux-gnu- defconfig ti_arm64_prune.config -j8
+4. Execute the following command - make ARCH=arm64 CROSS_COMPILE=aarch64-none-linux-gnu- dtbs -j8
+5. You can find the image at arch/arm64/boot/dts/ti/k3-<board_name>-common-proc-board.dtb
+6. Rename k3-<board_name>-common-proc-board.dtb as base-board.dtb and copy to board specific folder under board directory
+
+
+NOTE : For J721E you need to disable the serdes in device tree since serdes already being initialized by SBL. Make the below changes along with step2 mentioned above.
+
+Add 'status = "disabled";' for serdes0, serdes1, serdes2
+

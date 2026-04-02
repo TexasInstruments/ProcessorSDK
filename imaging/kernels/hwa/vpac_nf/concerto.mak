@@ -1,0 +1,48 @@
+
+ifeq ($(TARGET_CPU), $(filter $(TARGET_CPU), X86 x86_64 R5F))
+ifeq ($(BUILD_HWA_KERNELS),yes)
+ifeq ($(BUILD_VPAC_NF),yes)
+
+include $(PRELUDE)
+TARGET      := vx_target_kernels_vpac_nf
+TARGETTYPE  := library
+ifeq ($(TARGET_CPU),R5F)
+  ifeq ($(BUILD_VLAB),yes)
+    CSOURCES    := vx_vpac_nf_generic_target_sim.c vx_vpac_nf_bilateral_target_sim.c
+    IDIRS       += $(VPAC_C_MODELS_PATH)/include
+  else
+    CSOURCES    := vx_vpac_nf_generic_target.c vx_vpac_nf_bilateral_target.c
+    ifeq ($(RTOS_SDK), mcu_plus_sdk)
+      IDIRS       += $(MCU_PLUS_SDK_PATH)/source
+      IDIRS       += $(MCU_PLUS_SDK_PATH)/source/drivers
+      IDIRS       += $(MCU_PLUS_SDK_PATH)/source/drivers/vhwa
+    else
+      IDIRS       += $(PDK_PATH)/packages
+      IDIRS       += $(PDK_PATH)/packages/ti/drv
+      IDIRS       += $(PDK_PATH)/packages/ti/drv/vhwa
+    endif
+    IDIRS       += $(APP_UTILS_PATH)/
+  endif
+else
+  CSOURCES    := vx_vpac_nf_generic_target_sim.c vx_vpac_nf_bilateral_target_sim.c
+  IDIRS       += $(VPAC_C_MODELS_PATH)/include
+endif
+
+CSOURCES    += vx_kernels_hwa_target.c
+IDIRS       += $(HOST_ROOT)/kernels/include
+IDIRS       += $(HOST_ROOT)/kernels/hwa/include
+IDIRS       += $(VXLIB_PATH)/packages
+
+ifeq ($(TARGET_CPU)$(BUILD_VLAB),R5Fyes)
+DEFS += VLAB_HWA
+endif
+
+ifeq ($(SOC)$(TARGET_CPU),am62ax86_64)
+SKIPBUILD=1
+endif
+
+include $(FINALE)
+
+endif
+endif
+endif

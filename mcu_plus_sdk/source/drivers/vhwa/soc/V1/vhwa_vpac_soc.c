@@ -1,0 +1,330 @@
+/**
+ *   Copyright (c) Texas Instruments Incorporated 2021-2022
+ *   All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions
+ *  are met:
+ *
+ *    Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ *    Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the
+ *    distribution.
+ *
+ *    Neither the name of Texas Instruments Incorporated nor the names of
+ *    its contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ *  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ *  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ *  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ *  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ *  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ *  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
+
+/**
+ *  \file vhwa_vpac_soc.c
+ *
+ *  \brief File containing the SOC related configuration functions for VHWA VPAC.
+ *
+ */
+
+/* ========================================================================== */
+/*                             Include Files                                  */
+/* ========================================================================== */
+#include <ti/csl/soc.h>
+#include <soc/vhwa_soc.h>
+#include <include/vhwa_common.h>
+#include <soc/vhwa_vpac_priv.h>
+
+
+/* ========================================================================== */
+/*                           Macros & Typedefs                                */
+/* ========================================================================== */
+
+/* None */
+
+/* ========================================================================== */
+/*                         Structure Declarations                             */
+/* ========================================================================== */
+
+/* None */
+
+/* ========================================================================== */
+/*                          Function Declarations                             */
+/* ========================================================================== */
+
+/* None */
+
+/* ========================================================================== */
+/*                            Global Variables                                */
+/* ========================================================================== */
+/* Global containing SoC information. */
+#if defined VHWA_M2M_VPAC_INSTANCE
+#if (VHWA_M2M_VPAC_INSTANCE == 0)
+    static Msc_SocInfo gMsc_SocInfo = {
+        (CSL_vpac_cntlRegs *)CSL_VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_BASE,
+        (CSL_vpac_intd_cfgRegs *)CSL_VPAC0_CP_INTD_CFG_INTD_CFG_BASE,
+        (CSL_mscRegs *)CSL_VPAC0_PAR_VPAC_MSC_CFG_VP_CFG_VP_BASE,
+        (CSL_lseRegs *)CSL_VPAC0_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_BASE,
+        (CSL_htsRegs *)CSL_VPAC0_HTS_S_VBUSP_BASE,
+        1U
+    };
+
+    static Ldc_SocInfo gLdc_SocInfo = {
+        (CSL_vpac_cntlRegs *)CSL_VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_BASE,
+        (CSL_vpac_intd_cfgRegs *)CSL_VPAC0_CP_INTD_CFG_INTD_CFG_BASE,
+        (CSL_ldc_coreRegs *)CSL_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_BASE,
+        (CSL_lseRegs *)CSL_VPAC0_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_BASE,
+        (CSL_htsRegs *)CSL_VPAC0_HTS_S_VBUSP_BASE,
+        (uint32_t *)CSL_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT_BASE,
+        (uint32_t *)CSL_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT_BASE
+    };
+
+    static Viss_SocInfo gViss_SocInfo = {
+        (CSL_vpac_cntlRegs *)CSL_VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_BASE,
+        (CSL_vpac_intd_cfgRegs *)CSL_VPAC0_CP_INTD_CFG_INTD_CFG_BASE,
+        (uint32_t)CSL_VPAC0_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_BASE,
+        (CSL_htsRegs *)CSL_VPAC0_HTS_S_VBUSP_BASE
+    };
+
+    static Nf_SocInfo gNf_SocInfo = {
+        (CSL_vpac_cntlRegs *)CSL_VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_BASE,
+        (CSL_vpac_intd_cfgRegs *)CSL_VPAC0_CP_INTD_CFG_INTD_CFG_BASE,
+        (CSL_vpac_nfRegs *)CSL_VPAC0_PAR_VPAC_NF_S_VBUSP_MMR_VBUSP_NF_CFG_BASE,
+        (CSL_lseRegs *)CSL_VPAC0_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_BASE,
+        (CSL_htsRegs *)CSL_VPAC0_HTS_S_VBUSP_BASE
+    };
+#endif
+#endif
+
+#if defined VHWA_M2M_VPAC_INSTANCE
+#if (VHWA_M2M_VPAC_INSTANCE == 1)
+    static Msc_SocInfo gMsc_SocInfo = {
+        (CSL_vpac_cntlRegs *)CSL_VPAC1_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_BASE,
+        (CSL_vpac_intd_cfgRegs *)CSL_VPAC1_CP_INTD_CFG_INTD_CFG_BASE,
+        (CSL_mscRegs *)CSL_VPAC1_PAR_VPAC_MSC_CFG_VP_CFG_VP_BASE,
+        (CSL_lseRegs *)CSL_VPAC1_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_BASE,
+        (CSL_htsRegs *)CSL_VPAC1_HTS_S_VBUSP_BASE,
+        1U
+    };
+
+    static Ldc_SocInfo gLdc_SocInfo = {
+        (CSL_vpac_cntlRegs *)CSL_VPAC1_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_BASE,
+        (CSL_vpac_intd_cfgRegs *)CSL_VPAC1_CP_INTD_CFG_INTD_CFG_BASE,
+        (CSL_ldc_coreRegs *)CSL_VPAC1_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_BASE,
+        (CSL_lseRegs *)CSL_VPAC1_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_BASE,
+        (CSL_htsRegs *)CSL_VPAC1_HTS_S_VBUSP_BASE,
+        (uint32_t *)CSL_VPAC1_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT_BASE,
+        (uint32_t *)CSL_VPAC1_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT_BASE
+    };
+
+    static Viss_SocInfo gViss_SocInfo = {
+        (CSL_vpac_cntlRegs *)CSL_VPAC1_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_BASE,
+        (CSL_vpac_intd_cfgRegs *)CSL_VPAC1_CP_INTD_CFG_INTD_CFG_BASE,
+        (uint32_t)CSL_VPAC1_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_BASE,
+        (CSL_htsRegs *)CSL_VPAC1_HTS_S_VBUSP_BASE
+    };
+
+    static Nf_SocInfo gNf_SocInfo = {
+        (CSL_vpac_cntlRegs *)CSL_VPAC1_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_BASE,
+        (CSL_vpac_intd_cfgRegs *)CSL_VPAC1_CP_INTD_CFG_INTD_CFG_BASE,
+        (CSL_vpac_nfRegs *)CSL_VPAC1_PAR_VPAC_NF_S_VBUSP_MMR_VBUSP_NF_CFG_BASE,
+        (CSL_lseRegs *)CSL_VPAC1_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_BASE,
+        (CSL_htsRegs *)CSL_VPAC1_HTS_S_VBUSP_BASE
+    };
+#endif
+#endif
+
+/* ========================================================================== */
+/*                          Function Definitions                              */
+/* ========================================================================== */
+
+void Msc_getSocInfo(Msc_SocInfo *socInfo)
+{
+/* LDRA_JUSTIFY_START
+<metric start> branch <metric end>
+<justification start> 
+Rationale: The negative test framework and test apps cannot reach the false case of this condition. 
+           'socInfo' is passed using Fvid2Control from Imaging kernel layer along with pointer to initPrms which holds the pointer to socInfo, initPrms is defined as an object in appVhwaVpacInit().
+Effect on this unit: If the control reaches here, the code base is expected to accumulate and return the error.
+However, due to the stated rationale, this is not tested.
+<justification end> */
+    if (NULL != socInfo)
+/* LDRA_JUSTIFY_END */
+    {
+        socInfo->vpacCntlRegs = gMsc_SocInfo.vpacCntlRegs;
+        socInfo->vpacIntdRegs = gMsc_SocInfo.vpacIntdRegs;
+        socInfo->mscRegs      = gMsc_SocInfo.mscRegs;
+        socInfo->lseRegs      = gMsc_SocInfo.lseRegs;
+        socInfo->htsRegs      = gMsc_SocInfo.htsRegs;
+        socInfo->isDualChannel = gMsc_SocInfo.isDualChannel;
+    }
+}
+
+void Msc_getIrqInfo(Vhwa_IrqInfo irqInfo[])
+{
+/* LDRA_JUSTIFY_START
+<metric start> branch <metric end>
+<justification start> 
+Rationale: The negative test framework and test apps cannot reach the false case of this condition. 
+           'irqInfo' is passed using Fvid2Control from Imaging kernel layer along with pointer to initPrms which holds the pointer to irqInfo, initPrms is defined as an object in appVhwaVpacInit().
+Effect on this unit: If the control reaches here, the code base is expected to accumulate and return the error.
+However, due to the stated rationale, this is not tested.
+<justification end> */
+    if (NULL != irqInfo)
+/* LDRA_JUSTIFY_END */
+    {
+        irqInfo[0U].irqNum     = VHWA_M2M_MSC0_IRQ_NUM;
+        irqInfo[0U].vhwaIrqNum = VHWA_M2M_IRQ_NUM_1;
+
+        irqInfo[1U].irqNum     = VHWA_M2M_MSC1_IRQ_NUM;
+        irqInfo[1U].vhwaIrqNum = VHWA_M2M_IRQ_NUM_2;
+    }
+}
+
+void Ldc_getSocInfo(Ldc_SocInfo *socInfo)
+{
+/* LDRA_JUSTIFY_START
+<metric start> branch <metric end>
+<justification start> 
+Rationale: The negative test framework and test apps cannot reach the false case of this condition. 
+           'socInfo' is passed using Fvid2Control from Imaging kernel layer along with pointer to initPrms which holds the pointer to socInfo, initPrms is defined as an object in appVhwaVpacInit().
+Effect on this unit: If the control reaches here, the code base is expected to accumulate and return the error.
+However, due to the stated rationale, this is not tested.
+<justification end> */
+    if (NULL != socInfo)
+/* LDRA_JUSTIFY_END */
+    {
+        socInfo->vpacCntlRegs = gLdc_SocInfo.vpacCntlRegs;
+        socInfo->vpacIntdRegs = gLdc_SocInfo.vpacIntdRegs;
+        socInfo->ldcRegs      = gLdc_SocInfo.ldcRegs;
+        socInfo->lseRegs      = gLdc_SocInfo.lseRegs;
+        socInfo->htsRegs      = gLdc_SocInfo.htsRegs;
+        socInfo->lumaLutBaseAddr = gLdc_SocInfo.lumaLutBaseAddr;
+        socInfo->chromaLutBaseAddr = gLdc_SocInfo.chromaLutBaseAddr;
+    }
+}
+
+void Ldc_getIrqInfo(Vhwa_IrqInfo *irqInfo)
+{
+/* LDRA_JUSTIFY_START
+<metric start> branch <metric end>
+<justification start> 
+Rationale: The negative test framework and test apps cannot reach the false case of this condition. 
+           'irqInfo' is passed using Fvid2Control from Imaging kernel layer along with pointer to initPrms which holds the pointer to irqInfo, initPrms is defined as an object in appVhwaVpacInit().
+Effect on this unit: If the control reaches here, the code base is expected to accumulate and return the error.
+However, due to the stated rationale, this is not tested.
+<justification end> */
+    if (NULL != irqInfo)
+/* LDRA_JUSTIFY_END */
+    {
+        irqInfo->irqNum     = VHWA_M2M_LDC_IRQ_NUM;
+        irqInfo->vhwaIrqNum = VHWA_M2M_IRQ_NUM_3;
+    }
+}
+
+void Viss_getSocInfo(Viss_SocInfo *socInfo)
+{
+/* LDRA_JUSTIFY_START
+<metric start> branch <metric end>
+<justification start> 
+Rationale: The negative test framework and test apps cannot reach the false case of this condition. 
+           'socInfo' is passed using Fvid2Control from Imaging kernel layer along with pointer to initPrms which holds the pointer to socInfo, initPrms is defined as an object in appVhwaVpacInit().
+Effect on this unit: If the control reaches here, the code base is expected to accumulate and return the error.
+However, due to the stated rationale, this is not tested.
+<justification end> */
+    if (NULL != socInfo)
+/* LDRA_JUSTIFY_END */
+    {
+        socInfo->vpacCntlRegs = gViss_SocInfo.vpacCntlRegs;
+        socInfo->vpacIntdRegs = gViss_SocInfo.vpacIntdRegs;
+        socInfo->vissBaseAddr = gViss_SocInfo.vissBaseAddr;
+        socInfo->htsRegs      = gViss_SocInfo.htsRegs;
+    }
+}
+
+void Viss_getIrqInfo(Vhwa_IrqInfo *irqInfo)
+{
+/* LDRA_JUSTIFY_START
+<metric start> branch <metric end>
+<justification start> 
+Rationale: The negative test framework and test apps cannot reach the false case of this condition. 
+           'irqInfo' is passed using Fvid2Control from Imaging kernel layer along with pointer to initPrms which holds the pointer to irqInfo, initPrms is defined as an object in appVhwaVpacInit().
+Effect on this unit: If the control reaches here, the code base is expected to accumulate and return the error.
+However, due to the stated rationale, this is not tested.
+<justification end> */
+    if (NULL != irqInfo)
+/* LDRA_JUSTIFY_END */
+    {
+        irqInfo->irqNum     = VHWA_M2M_VISS_IRQ_NUM;
+        irqInfo->vhwaIrqNum = VHWA_M2M_IRQ_NUM_0;
+    }
+}
+
+void Nf_getSocInfo(Nf_SocInfo *socInfo)
+{
+/* LDRA_JUSTIFY_START
+<metric start> branch <metric end>
+<justification start> 
+Rationale: The negative test framework and test apps cannot reach the false case of this condition. 
+           'socInfo' is passed using Fvid2Control from Imaging kernel layer along with pointer to initPrms which holds the pointer to socInfo, initPrms is defined as an object in appVhwaVpacInit().
+Effect on this unit: If the control reaches here, the code base is expected to accumulate and return the error.
+However, due to the stated rationale, this is not tested.
+<justification end> */
+    if (NULL != socInfo)
+/* LDRA_JUSTIFY_END */
+    {
+        socInfo->vpacCntlRegs = gNf_SocInfo.vpacCntlRegs;
+        socInfo->vpacIntdRegs = gNf_SocInfo.vpacIntdRegs;
+        socInfo->nfRegs       = gNf_SocInfo.nfRegs;
+        socInfo->lseRegs      = gNf_SocInfo.lseRegs;
+        socInfo->htsRegs      = gNf_SocInfo.htsRegs;
+    }
+}
+
+void Nf_getIrqInfo(Vhwa_IrqInfo *irqInfo)
+{
+/* LDRA_JUSTIFY_START
+<metric start> branch <metric end>
+<justification start> 
+Rationale: The negative test framework and test apps cannot reach the false case of this condition. 
+           'irqInfo' is passed using Fvid2Control from Imaging kernel layer along with pointer to initPrms which holds the pointer to irqInfo, initPrms is defined as an object in appVhwaVpacInit().
+Effect on this unit: If the control reaches here, the code base is expected to accumulate and return the error.
+However, due to the stated rationale, this is not tested.
+<justification end> */
+    if (NULL != irqInfo)
+/* LDRA_JUSTIFY_END */
+    {
+        irqInfo->irqNum     = VHWA_M2M_NF_IRQ_NUM;
+        irqInfo->vhwaIrqNum = VHWA_M2M_IRQ_NUM_4;
+    }
+}
+
+void Fc_getSocHtsInfo(CSL_htsRegs **htsRegs)
+{
+/* LDRA_JUSTIFY_START
+<metric start> branch <metric end>
+<justification start> 
+Rationale: The negative test framework and test apps cannot reach the false case of this condition. 
+           'htsRegs' is passed using Fvid2Control from Imaging kernel layer along with pointer to instObj which holds the pointer to htsRegs, instObj is defined as a global gM2mVissInstObj.
+Effect on this unit: If the control reaches here, the code base is expected to accumulate and return the error.
+However, due to the stated rationale, this is not tested.
+<justification end> */
+    if (NULL != htsRegs)
+/* LDRA_JUSTIFY_END */
+    {
+        *htsRegs      = (CSL_htsRegs *)CSL_VPAC0_HTS_S_VBUSP_BASE;
+    }
+}
+

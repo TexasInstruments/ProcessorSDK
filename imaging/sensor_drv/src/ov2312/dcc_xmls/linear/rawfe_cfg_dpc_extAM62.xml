@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RAWFE_cfg_dpc_xml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--this is a comment-->
+    <dcc_name>rawfe_cfg_dpc_extension</dcc_name>
+    <dcc_header>
+		<camera_module_id> 2312 </camera_module_id>
+	    <dcc_descriptor_id> 36 </dcc_descriptor_id>
+	    <algorithm_vendor_id>  1 </algorithm_vendor_id>
+	    <tunning_tool_version> 0 </tunning_tool_version>
+    </dcc_header>
+<!--=======================================================================-->
+    <typedef>
+<!--===========================cfg dpc============================================-->
+		<cfg_rawfe_dpc_ext type="struct">
+            <dpc_cfa_mode type="uint32"> </dpc_cfa_mode>
+            <dpc_cfa_phase type="uint32"> </dpc_cfa_phase>
+            <dpc_detection_only type="uint32"> </dpc_detection_only>
+            <dpc_stats_cfg type="uint32"> </dpc_stats_cfg>
+            <dpc_lut_map type="uint32"> </dpc_lut_map>
+            <dpc_lut_0 type="uint16[8][3]"> </dpc_lut_0>
+            <dpc_lut_1 type="uint16[8][3]"> </dpc_lut_1>
+        </cfg_rawfe_dpc_ext>
+    </typedef>
+
+<!--=======================================================================-->
+    <use_case val="1023">
+        <n-space>
+            <region0 class="0">
+            <exposure val="1" min="0" max="2000000">  </exposure>
+            <gain val="0" min="0" max="100000">  </gain>
+        </region0>
+    </n-space>
+
+<!--===============================cfg dpc dcc========================================-->
+    <parameter_package>
+        <rawfe_dpc_ext_dcc type="cfg_rawfe_dpc_ext">
+        {
+            2,   // dpc_cfa_mode
+            0,   // dpc_cfa_phase
+            0,   // dpc_detection_only
+            0,   // dpc_stats_cfg
+            0,   // dpc_lut_map
+            {    // dpc_lut_0
+                {0,     100,    0}, 
+                {64,    100,   57},
+                {512,   200,   50},
+                {1024,  300,   50},
+                {2048,  500,   37},
+                {4096,  800,   50},
+                {8192,  1600,  50},
+                {16384, 3200,   0},
+            },
+            {    // dpc_lut_1
+                {0,       50,   0},
+                {64,      50,  29},
+                {512,    100,  25},
+                {1024,   150,  25},
+                {2048,   250,  18},
+                {4096,   400,  25},
+                {8192,   800,  25},
+                {16384, 1600,   0},
+            }
+        }
+        </rawfe_dpc_ext_dcc>
+    </parameter_package>
+</use_case>
+<!--=====================================================================-->
+</RAWFE_cfg_dpc_xml>

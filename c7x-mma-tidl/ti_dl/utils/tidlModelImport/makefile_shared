@@ -1,0 +1,338 @@
+#
+# Copyright (c) {2015 - 2020} Texas Instruments Incorporated
+#
+# All rights reserved not granted herein.
+#
+# Limited License.
+#
+# Texas Instruments Incorporated grants a world-wide, royalty-free, non-exclusive
+# license under copyrights and patents it now or hereafter owns or controls to make,
+# have made, use, import, offer to sell and sell ("Utilize") this software subject to the
+# terms herein.  With respect to the foregoing patent license, such license is granted
+# solely to the extent that any such patent is necessary to Utilize the software alone.
+# The patent license shall not apply to any combinations which include this software,
+# other than combinations with devices manufactured by or for TI ("TI Devices").
+# No hardware patent is licensed hereunder.
+#
+# Redistributions must preserve existing copyright notices and reproduce this license
+# (including the above copyright notice and the disclaimer and (if applicable) source
+# code license limitations below) in the documentation and/or other materials provided
+# with the distribution
+#
+# Redistribution and use in binary form, without modification, are permitted provided
+# that the following conditions are met:
+#
+# *       No reverse engineering, decompilation, or disassembly of this software is
+# permitted with respect to any software provided in binary form.
+#
+# *       any redistribution and use are licensed by TI for use only with TI Devices.
+#
+# *       Nothing shall obligate TI to provide you with source code for the software
+# licensed and provided to you in object code.
+#
+# If software source code is provided to you, modification and redistribution of the
+# source code are permitted provided that the following conditions are met:
+#
+# *       any redistribution and use of the source code, including any resulting derivative
+# works, are licensed by TI for use only with TI Devices.
+#
+# *       any redistribution and use of any object code compiled from the source code
+# and any resulting derivative works, are licensed by TI for use only with TI Devices.
+#
+# Neither the name of Texas Instruments Incorporated nor the names of its suppliers
+#
+# may be used to endorse or promote products derived from this software without
+# specific prior written permission.
+#
+# DISCLAIMER.
+#
+# THIS SOFTWARE IS PROVIDED BY TI AND TI'S LICENSORS "AS IS" AND ANY EXPRESS
+# OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+# OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+# IN NO EVENT SHALL TI AND TI'S LICENSORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+# OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+# OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+##############################################################
+# This makefile builds the TIDL import library, which is
+# a shared library containing most of the import tool's functionality
+##############################################################
+ALGBASE_PATH ?= $(abspath ../../../)
+PSDK_INSTALL_PATH ?= $(abspath ../../../../)
+include $(ALGBASE_PATH)/makerules/config.mk
+override BUILD_WITH_CUDA=0
+
+override BUILD_WITH_OPENACC=0
+
+COMMON_DIR= ../../../common
+CUSTOM_DIR= ../../custom
+
+CFILES += tidl_import_core.cpp
+CFILES += tidl_import_common.cpp
+CFILES += tidl_import_common_model_check.cpp
+CFILES += tidl_import_common_tidlrt_osrt.cpp
+CFILES += tidl_import_diag.cpp
+CFILES += tidl_import_session.cpp
+
+CFILES += tidl_onnxImport.cpp
+CFILES += tidl_tfImport.cpp
+CFILES += tidl_caffeImport_v2.cpp
+CFILES += tidl_caffeImport_param.cpp
+CFILES += tidl_tfMetaArchImport.cpp
+CFILES += tidl_tfLiteImport.cpp
+CFILES += tidl_metaArchImport.cpp
+CFILES += tidl_quantParamsImport.cpp
+CFILES += tidl_import_quantize.cpp
+CFILES += tidl_import_lut.cpp
+CFILES += tidl_import_lut_core.cpp
+CFILES += ../perfsim/gc_helper.c
+
+HFILES = ../caffeImport/caffe.pb.h
+HFILES += ti_dl.h
+HFILES += tidl_import_diag.h
+
+ifdef SystemRoot
+CFILES += $(COMMON_DIR)/asprintf/asprintf.c
+endif
+
+HFILES += tidlAllowlistingConstraints/tidl_constraint.h
+HFILES += tidlAllowlistingConstraints/tidl_jumptable.h
+
+CFILES += tidlAllowlistingConstraints/tidl_constraint.cpp
+CFILES += tidlAllowlistingConstraints/tidl_constraint_utils.cpp
+# the below are necessary files that help create folder 
+# structure for object files while building tidl tools
+CFILES += tidlParseTflite/tidl_parse_tflite_template.cpp
+CFILES += tidlParseOnnx/tidl_parse_onnx_template.cpp
+CFILES += tidlParseTVM/tidl_parse_tvm_template.cpp
+
+HFILES += tidlParseOnnx/tidl_parse_onnx.h
+HFILES += tidl_parse_onnx_jumptable.h
+CFILES += $(wildcard tidlParseOnnx/*.cpp)
+
+ifeq ($(MAKECMDGOALS),tvm_relay)
+CFILES += tidl_relayImport.cpp
+CFILES += tidl_runtimes_import_common.cpp
+HFILES += tidl_runtimes_import_common.h
+CFILES += tidl_runtimes_infer_common.cpp
+HFILES += tidl_runtimes_infer_common.h
+HFILES += tidlParseTVM/tidl_parse_tvm.h
+HFILES += tidl_parse_tvm_jumptable.h
+CFILES += $(wildcard tidlParseTVM/*.cpp)
+endif
+
+ifeq ($(MAKECMDGOALS),clean)
+CFILES += tidl_relayImport.cpp
+CFILES += tidl_runtimes_import_common.cpp
+HFILES += tidl_runtimes_import_common.h
+CFILES += tidl_runtimes_infer_common.cpp
+HFILES += tidl_runtimes_infer_common.h
+HFILES += tidlParseTVM/tidl_parse_tvm.h
+HFILES += tidl_parse_tvm_jumptable.h
+CFILES += $(wildcard tidlParseTVM/*.cpp)
+
+CFILES += tidl_tfLiteRtImport_core.cpp
+CFILES += tidl_tfLiteRtImport_delegate.cpp
+CFILES += tidl_runtimes_import_common.cpp
+HFILES += tidl_runtimes_import_common.h
+HFILES += tidl_tfLiteRtImport.h
+CFILES += tidl_runtimes_infer_common.cpp
+HFILES += tidl_runtimes_infer_common.h
+CFILES += tidl_tflrt_common.cpp
+HFILES += tidl_tflrt_common.h
+HFILES += tidlParseTflite/tidl_parse_tflite.h
+HFILES += tidl_parse_tflite_jumptable.h
+CFILES += $(wildcard tidlParseTflite/*.cpp)
+
+CFILES += tidl_onnxRtImport_EP.cpp
+CFILES += tidl_onnxRtImport_core.cpp
+HFILES += tidl_onnxRtImport_core.h
+HFILES += tidl_onnxRtImport_EP.cpp
+CFILES += tidl_runtimes_import_common.cpp
+HFILES += tidl_runtimes_import_common.h
+CFILES += tidl_runtimes_infer_common.cpp
+HFILES += tidl_runtimes_infer_common.h
+CFILES += tidl_onnxrt_common.cpp
+HFILES += tidl_onnxrt_common.h
+endif
+
+ifeq ($(MAKECMDGOALS),tflite_runtime)
+CFILES += tidl_tfLiteRtImport_core.cpp
+CFILES += tidl_tfLiteRtImport_delegate.cpp
+CFILES += tidl_runtimes_import_common.cpp
+HFILES += tidl_runtimes_import_common.h
+HFILES += tidl_tfLiteRtImport.h
+CFILES += tidl_runtimes_infer_common.cpp
+HFILES += tidl_runtimes_infer_common.h
+CFILES += tidl_tflrt_common.cpp
+HFILES += tidl_tflrt_common.h
+HFILES += tidlParseTflite/tidl_parse_tflite.h
+HFILES += tidl_parse_tflite_jumptable.h
+CFILES += $(wildcard tidlParseTflite/*.cpp)
+endif
+
+ifeq ($(MAKECMDGOALS),onnx_runtime)
+CFILES += tidl_onnxRtImport_EP.cpp
+CFILES += tidl_onnxRtImport_core.cpp
+HFILES += tidl_onnxRtImport_core.h
+HFILES += tidl_onnxRtImport_EP.cpp
+CFILES += tidl_runtimes_import_common.cpp
+HFILES += tidl_runtimes_import_common.h
+CFILES += tidl_runtimes_infer_common.cpp
+HFILES += tidl_runtimes_infer_common.h
+CFILES += tidl_onnxrt_common.cpp
+HFILES += tidl_onnxrt_common.h
+endif
+
+CFILES += ../../common/src/tidl_common_utils_infer_import.c
+
+TARGET_PLATFORM = PC
+BUILD_WITH_CUDA = 0
+
+ifdef SystemRoot
+PROTOBUF_LIB_DIR?=$(TIDL_PROTOBUF_PATH)/lib/Release
+PROTOBUF_INC_DIR?="$(TIDL_PROTOBUF_PATH)/src"
+else
+PROTOBUF_LIB_DIR?="$(TIDL_PROTOBUF_PATH)/src/.libs"
+PROTOBUF_INC_DIR?="$(TIDL_PROTOBUF_PATH)/src"
+endif
+FLATBUF_INC_DIR ?= $(TIDL_FLATBUF_PATH)/include
+
+LIBNAME = tidl_model_import
+ifeq ($(MAKECMDGOALS),tvm_relay)
+LIBNAME = tidl_model_import_relay
+endif
+
+
+ifeq ($(MAKECMDGOALS),tflite_runtime)
+LIBNAME = tidl_model_import_tflite
+endif
+
+ifeq ($(MAKECMDGOALS),onnx_runtime)
+LIBNAME = tidl_model_import_onnx
+endif
+
+ifdef SystemRoot
+OUTFILE= ./out/$(LIBNAME).dll
+else
+OUTFILE= ./out/$(LIBNAME).so
+endif
+
+##############################################################
+
+include $(ALGBASE_PATH)/makerules/rules.mk
+
+#used inside makerules, but okay to define it afterwards
+CFLAGS+= -I $(PROTOBUF_INC_DIR)
+CFLAGS+= -I $(FLATBUF_INC_DIR)
+CFLAGS+= -I ../../inc
+CFLAGS+= -I ../../common/inc
+CFLAGS+= -I ../caffeImport
+CFLAGS+= -I ../tidlMetaArch
+CFLAGS+= -I ../tidlQuantParams
+CFLAGS+= -I ../tfImport
+CFLAGS+= -I ../tfImport/proto_cc
+CFLAGS+= -I ../onnxImport/onnx_cc
+CFLAGS+= -I ../tfImport/models_research_cc
+CFLAGS += -I $(COMMON_DIR)
+CFLAGS += -I $(CUSTOM_DIR)
+CFLAGS += -I ../perfsim
+CFLAGS += -I ../tfliteImport
+CFLAGS += -I .
+CFLAGS += -I ../../../arm-tidl/rt/inc
+CFLAGS += -I ../../common
+
+#CFLAGS+= /D_MSC_VER=1700 /Gd
+ifdef SystemRoot
+CFLAGS += -I $(COMMON_DIR)/asprintf
+CFLAGS += /DTIDL_IMPORT_TOOL
+CFLAGS += /DDLL_EXPORT
+else
+CFLAGS += -D_GNU_SOURCE
+CFLAGS += -DTIDL_IMPORT_TOOL
+CFLAGS += -Werror=return-type -Wno-unused-result -Wno-format-overflow
+endif
+
+ifeq ($(MAKECMDGOALS),tvm_relay)
+CFLAGS += -I $(TVM_HOME)/tvm/include
+CFLAGS += -I $(TVM_HOME)/tvm/3rdparty/dmlc-core/include
+CFLAGS += -I $(TVM_HOME)/tvm/3rdparty/dlpack/include
+endif
+
+ifeq ($(MAKECMDGOALS),tflite_runtime)
+CFLAGS += -I $(TF_REPO_PATH)
+endif
+
+ifeq ($(MAKECMDGOALS),onnx_runtime)
+CFLAGS += -I $(ONNX_REPO_PATH)/onnxruntime
+CFLAGS += -I $(ONNX_REPO_PATH)/include/onnxruntime
+CFLAGS += -I $(ONNX_REPO_PATH)/cmake/external/onnx/
+endif
+
+##############################################################
+
+##############################################################
+ifdef SystemRoot
+LDFLAGS+=-l $(PROTOBUF_LIB_DIR)/libprotoc.lib
+LDFLAGS+=-l $(PROTOBUF_LIB_DIR)/libprotobuf.lib
+LDFLAGS+=-l ./lib/tidl_model_protos.lib
+else
+LDFLAGS+=-L$(PROTOBUF_LIB_DIR)
+LDFLAGS+=-L$(TIDL_FLATBUF_PATH)
+LDFLAGS+=-L./lib
+LDFLAGS+=-lprotoc -lprotobuf -ltidl_model_protos -lprotobuf-lite
+LDFLAGS +=-L ./out
+LDFLAGS +=-l :tidl_model_custom_import.so
+LDFLAGS +=-Wl,-rpath -Wl,\$$ORIGIN
+LDFLAGS +=-pthread -Wl,--no-as-needed
+ifeq ($(MAKECMDGOALS),tflite_runtime)
+LDFLAGS+=-lflatbuffers
+endif
+endif
+
+# defs needed by all platforms
+ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), J7 J721E j721e))
+    CFLAGS += -DSOC_J721E
+else ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), J721S2 j721s2))
+    CFLAGS += -DSOC_J721S2
+else ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), J784S4 j784s4))
+    CFLAGS += -DSOC_J784S4
+else ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), J742S2 j742s2))
+    CFLAGS += -DSOC_J742S2
+else ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), J722S j722s))
+    CFLAGS += -DSOC_J722S
+else ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), AM62A am62a))
+    CFLAGS += -DSOC_AM62A
+endif
+
+##############################################################
+
+### Latest TVM requires c++17 to compile
+ifeq ($(MAKECMDGOALS),tvm_relay)
+  ifdef SystemRoot
+    CFLAGS += /std:c++17
+  else
+    ifeq ($(TIDL_GCC_VERSION),5)
+      CC = g++-7 -c
+    endif
+    CFLAGS += -std=c++17
+  endif
+endif
+
+##############################################################
+OUTDIR =  "./out"
+
+$(OUTFILE) : sharedlibfile
+##############################################################
+
+.phony: tvm_relay tflite_runtime onnx_runtime
+tvm_relay: $(OUTFILE)
+tflite_runtime : $(OUTFILE)
+onnx_runtime : $(OUTFILE)
+
+##############################################################

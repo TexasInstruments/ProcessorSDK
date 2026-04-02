@@ -1,0 +1,11 @@
+/******************************************************************************
+ * FILE PURPOSE: Build description for the ADCBUF Driver
+ ******************************************************************************
+ * FILE NAME: package.bld
+ *
+ * DESCRIPTION: 
+ *  This file contains the build specification and description for the ADCBUF driver
+ *
+ *
+ * Copyright (C) 2021, Texas Instruments, Inc.
+ *****************************************************************************/

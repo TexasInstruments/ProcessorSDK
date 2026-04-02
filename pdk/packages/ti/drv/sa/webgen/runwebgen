@@ -1,0 +1,4 @@
+#!/bin/bash
+export PATH=/apps/cmdevtools/webgen/latest/webgen/exports:$PATH
+webgen_ext $PWD/webgen.mak $PWD/release exports -e $PWD/template.html -d
+

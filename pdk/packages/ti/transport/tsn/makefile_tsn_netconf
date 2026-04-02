@@ -1,0 +1,79 @@
+#
+# This file is the makefile for building gptp library.
+#
+ifeq ($(RULES_MAKE), )
+include $(PDK_INSTALL_PATH)/ti/build/Rules.make
+else
+include $(RULES_MAKE)
+endif
+
+MODULE_NAME = tsn_netconf
+
+SRCDIR =  tsn_netconf/src/common tsn_netconf/src/daemon
+SRCDIR += tsn_netconf/src/platform/ti-frtos
+INCDIR =  tsn_netconf/src/common tsn_netconf/src/daemon
+INCDIR += tsn_netconf/src/platform/ti-frtos
+
+SRC_PATH := $(PDK_TSN_COMP_PATH)/tsn-stack/tsn_netconf
+
+# List all the external components/interfaces, whose interface header files
+# need to be included for this component
+INCLUDE_INTERNAL_INTERFACES =
+INCLUDE_EXTERNAL_INTERFACES = pdk tsn_unibase tsn_combase tsn_uniconf pugixml
+INCLUDE_EXTERNAL_INTERFACES += lwipif_$(BUILD_OS_TYPE)
+INCLUDE_EXTERNAL_INTERFACES += lwipstack_$(BUILD_OS_TYPE)
+INCLUDE_EXTERNAL_INTERFACES += lwipcontrib_$(BUILD_OS_TYPE)
+INCLUDE_EXTERNAL_INTERFACES += lwipport_$(BUILD_OS_TYPE)
+INCLUDE_EXTERNAL_INTERFACES += freertos
+INCLUDE_EXTERNAL_INTERFACES += fatfs_indp
+
+# Common source files and CFLAGS across all platforms and cores
+SRCS_COMMON += nconf_ucclient.c \
+    nconf_msghdlr.c \
+    nconf_msgdec.c \
+    nconf_msgenc.c \
+    nconf_transmngr.c \
+    nconf_tlscon.c \
+    nconf_memutils.c \
+    nconf_fsutils_jacinto.c \
+    nconf_msgqueue_xqueue.c
+
+SRCS_COMMON_CPP += nconf_xmlutils.cpp
+
+PACKAGE_SRCS_COMMON = ../tsn_component.mk ../makefile_tsn_netconf ../tsn-stack/eval_inc
+PACKAGE_SRCS_COMMON += $(SRCDIR)
+
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j721e_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j721e_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j7200_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j7200_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j721s2_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j721s2_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j784s4_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j784s4_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j742s2_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j742s2_evm.r5f.ti-arm-clang.lib
+
+CFLAGS_LOCAL_COMMON = $(PDK_CFLAGS) $(TSN_CFLAGS) \
+    -DPUGIXML_NO_EXCEPTIONS \
+    -DUB_LOGCAT=6 \
+    -DUB_LOGTSTYPE=UB_CLOCK_REALTIME \
+    -DNCONF_ENABLE_TCP_PLAINTEXT=0x01 \
+    -DNCONF_GEN_ALLOC_FRAGMENTS=4500 \
+    -DNCONF_MAX_UCCFG_INFO_NUM=256 \
+    -include $(PDK_TSN_COMP_PATH)/tsn-stack/tsn_buildconf/jacinto_buildconf.h
+
+# Core/SoC/platform specific source files and CFLAGS
+# Example:
+#   SRCS_<core/SoC/platform-name> =
+#   CFLAGS_LOCAL_<core/SoC/platform-name> =
+
+# Include common make files
+ifeq ($(MAKERULEDIR), )
+  #Makerule path not defined, define this and assume relative path from ROOTDIR
+  MAKERULEDIR := $(ROOTDIR)/ti/build/makerules
+  export MAKERULEDIR
+endif
+
+CPLUSPLUS_ENET=yes
+include $(MAKERULEDIR)/common.mk
+
+# OBJs and libraries are built by using rule defined in rules_<target>.mk
+#     and need not be explicitly specified here
+
+# Nothing beyond this point

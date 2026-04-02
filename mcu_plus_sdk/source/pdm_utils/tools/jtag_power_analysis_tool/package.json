@@ -1,0 +1,18 @@
+{
+    "dependencies": {
+        "cli-table3": "^0.6.5",
+        "minimist": "^1.2.8"
+    },
+    "name": "jtag_power_analysis_tool",
+    "type": "commonjs",
+    "version": "1.0.0",
+    "description": "JTAG Power Analysis Tool to retrieve clock tree,PSCs and PLLs settings",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Texas Instruments",
+    "devDependencies": {
+        "prettier": "3.5.3"
+    }
+}

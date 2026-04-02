@@ -1,0 +1,8 @@
+%%{
+    let ospiModule = system.modules['/drivers/ospi/ospi']
+    let ospiInst = ospiModule.$instances[0];
+    let ospiConfig = ospiModule.getInstanceConfig(ospiInst);
+%%}
+% if (ospiConfig.skipDeinitFromSbl == false) {
+    OSPI_deinit();
+%}

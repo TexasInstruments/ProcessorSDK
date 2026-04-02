@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>readme</title>
+	<style>
+		/* Basic styles for readability */
+		body {
+			font-family: sans-serif;
+			max-width: 800px;
+			margin: 2em auto;
+			padding: 0 1em;
+			line-height: 1.6;
+		}
+		img { max-width: 100%; height: auto; }
+		pre { background-color: #f4f4f4; padding: 1em; overflow-x: auto; }
+		code { font-family: monospace; }
+	</style>
+</head>
+<body>
+	<h1>Sensor Driver Automation Tool</h1>
+<hr>
+<h2>1. Introduction</h2>
+<p>This README file provides instructions for using the Sensor Driver Automation (SDA) tool for TDA4x RTOS SDK.
+The SDA tool is a python script which generates the source code for your sensor driver in TDA4x RTOS SDK based on your input of <a href="#52-preparing-the-driver-configuration-file">a sensor driver configuration file</a>, <a href="#51-preparing-the-sensor-initialization-file">a sensor register initialization file</a>, and pre-prepared <a href="#4-sensor-driver-templates">sensor driver templates</a>.</p>
+<h2>2. Prerequisites</h2>
+<ul>
+<li>Python 3.x</li>
+<li>Your camera/sensor module with a FPD-Link serializer and a FAKRA output connector, e.g., <a href="https://www.d3embedded.com/product/designcore-d3rcm-imx390-953-rugged-camera-module/">D3RCM-IMX390-953</a></li>
+<li>One TI TDA4x EVM, e.g., <a href="https://www.ti.com/tool/J784S4XEVM">J784S4XEVM</a> or <a href="https://www.ti.com/tool/J722SXH01EVM">J722SXH01EVM</a></li>
+<li>A Fusion application Board (Fusion-1 or Fusion-2), e.g., <a href="https://www.ti.com/lit/pdf/spruii1">Fusion Application Board</a>
+<ul>
+<li>Please refer to this <a href="https://e2e.ti.com/support/processors-group/processors/f/processors-forum/1575823/faq-j722sxh01evm-how-do-i-use-the-fusion2-board-with-the-j722sxh01evm">e2e FAQ</a> for connecting J722S EVM, Fusion-2, and your camera.</li>
+</ul>
+</li>
+<li>TDA4 RTOS SDK, e.g., <a href="https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-j784s4/latest/exports/docs/psdk_rtos/docs/user_guide/index.html">Processor SDK RTOS J784S4</a>, or <a href="https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-j722s/latest/exports/docs/psdk_rtos/docs/user_guide/index.html">Processor SDK RTOS J722S</a></li>
+</ul>
+<h2>3. User Input</h2>
+<ul>
+<li>A sensor register initialization file including all information needed for initializing your sensor over I2C (the information is typically provided by your sensor vendor).</li>
+<li>A driver configuration file for your camera/sensor module</li>
+</ul>
+<h2>4. Sensor Driver Templates <a id="4-sensor-driver-templates"></a></h2>
+<p>Templates for popular ADAS sensors from Sony, OVT, and Onsemi are prepared and included in the SDA tool.
+They work well for <a href="https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-j722s/latest/exports/docs/imaging/imaging_release_notes.html#ImageSensor_Support_Linux_RTOS">the cameras</a> supported by TDA4 RTOS SDK so far.</p>
+<h2>5. User Instructions</h2>
+<p>To use the SDA tool, please follow these steps below.</p>
+<ul>
+<li>Step-1: clone the <a href="https://git.ti.com/cgit/processor-sdk/imaging/">imaging repository</a> or download the “imaging/tools/SDA/” folder manually, then navigate to that <code>SDA/</code> folder.</li>
+<li><a href="#51-preparing-the-sensor-initialization-file">Step-2:</a> Create a sensor initialization file, e.g., <code>SDA/input/sensor.txt</code> in the <code>SDA/input</code> directory.</li>
+<li><a href="#52-preparing-the-driver-configuration-file">Step-3:</a> Create a driver configuration file for your camera/sensor module, e.g., <code>SDA/input/config.txt</code> in the <code>SDA/input</code> directory.</li>
+<li><a href="#additional-instructions">Step-4:</a> Edit the configuration file to include the required settings and parameters for your camera/sensor module.</li>
+<li>Step-5: Run the script in <code>SDA/</code> folder using the command <code>python SDA.py -c input/config.txt</code>.</li>
+<li>Step-6: The script will generate the sensor driver source files under the <code>SDA/output</code> directory as specified in the driver configuration file.</li>
+<li><a href="#55-integration-of-the-new-sensor-driver-into-tda4x-rtos-sdk">Step-7:</a> Copy the generated sensor driver files into your TDA4x RTOS SDK <code>imaging/sensor_drv/</code> folder properly, apply some integration code changes, and test your new RTOS driver by streaming raw sensor video from your camera to TDA4 EVM.</li>
+</ul>
+<h3>5.1 Preparing the Sensor Initialization File <a id="51-preparing-the-sensor-initialization-file"></a></h3>
+<p>The sensor initialization file includes information needed to initialize all sensor registers.
+The initialization information is provided by the sensor vendor.</p>
+<ul>
+<li>Create a text file in the 3-column hex format of <code>sensor register address</code>, <code>sensor refister value</code>, and <code>I2C programming delay</code> to below.</li>
+</ul>
+<pre><code class="language-bash">0107                          01              00
+4d5a                          1c              00
+0308                          05              01
+0409                          06              02
+...
+</code></pre>
+<ul>
+<li>The sensor initialization also decides most of the information needed later in the configuration file (such as sensor image width and height)</li>
+</ul>
+<h3>5.2 Preparing the Driver Configuration File <a id="52-preparing-the-driver-configuration-file"></a></h3>
+<p>The configuration file should be in the 2-column format (“name” and “value”) as in the IMX390 camera example below.
+Please follow the comments at the end of each line carefully.</p>
+<pre><code class="language-bash">#--------------------------------------------------------
+# basic camera/sensor info
+
+SENSOR_MACRO_IN_HEADER          SENSOR_SONY_IMX390_UB953_D3           # define this string as a macro in &quot;iss_sensors.h&quot; for SDK integration
+SENSOR_NAME_UPPERCASE           IMX390                                # sensor name in upper case
+SENSOR_NAME_LOWERCASE           imx390                                # sensor name in lower case
+SENSOR_TEMPLATE_DIR             template_sony                         # driver template folder (available now for Sony, OVT, Onsemi)
+SENSOR_OUTPUT_DIR               out_imx390                            # folder for saving generated driver code
+
+# DCC ID must match ID used in tuning tool/tuning scripts
+SENSOR_DCC_ID                   390                                   # DCC ID used for the camera/sensor/ISP tuning
+
+#--------------------------------------------------------
+# sensor config
+SENSOR_RESOLUTION_WIDTH         1936                                  # number of pixels per row
+SENSOR_RESOLUTION_HEIGHT        1096                                  # number of pixels per column
+SENSOR_META_HEIGHT_BEFORE          0                                  # Metadata rows before a frame
+SENSOR_META_HEIGHT_AFTER           4                                  # Metadata rows after a frame
+SENSOR_RAW_MSB_LOCATION           11                                  # Raw pixel MSB location, e.g., 11 for 12-bit pixels
+SENSOR_INIT_FILE              input/imx390_regs.txt                   # Sensor register address and value pairs used to program the sensor with above settings
+SENSOR_USE_PCAL_D3                 0                                  # 0 - if no PCAL is used (D3 modules only); 1 - include PCAL code
+
+# sensor stream on/off
+SENSOR_STREAM_REG_ADDR          0x0000                                # Register address that controls stream on off on sensor
+SENSOR_STREAM_ON_VALUE          0x00                                  # Value for SENSOR_STREAM_REG_ADDR to start streaming on sensor
+SENSOR_STREAM_OFF_VALUE         0x01                                  # Value for SENSOR_STREAM_REG_ADDR to stop streaming on sensor
+
+SENSOR_STREAM_ON_REG2           0                                     # OPTIONAL - Need a 2nd register write to start sensor streaming: 0 for no, 1 for yes
+SENSOR_STREAM_OFF_REG2          0                                     # OPTIONAL - Need a 2nd register write to stop sensor streaming : 0 for no, 1 for yes
+SENSOR_STREAM_REG2_ADDR         0x0000                                # OPTIONAL - Address of the 2nd sensor register
+SENSOR_STREAM_ON_VAL2           0x00                                  # OPTIONAL - Value for SENSOR_STREAM_REG2_ADDR to start streaming
+SENSOR_STREAM_OFF_VAL2          0x00                                  # OPTIONAL - Value for SENSOR_STREAM_REG2_ADDR to stop streaming
+
+#--------------------------------------------------------
+# serdes config
+SENSOR_8_BIT_I2C_ADDRESS        0x34                                  # Physical 8-bit I2C address of sensor
+SERIALIZER_8_BIT_I2C_ADDRESS    0x30                                  # Physical 8-bit I2C address of serializer
+SERDES_USE_FPDLINK4                0                                  # Serializer type:     0 for FPD-Link 3, 1 for FPD-Link 4
+SER_CFG_I2C_STRAP                  0                                  # Sensor I2C valtage:  0 for 3.3V, 1 for 1.8V
+
+#--------------------------------------------------------
+# serilizer GPIO settings
+SER_LOCAL_GPIO_DATA             0x03                                  # GPIO output source register of serilizer: 4 LSBs for GPIO_OUT_SRC and 4 MSBs for GPIO_RMTEN
+SER_GPIO_INPUT_CTRL             0xF0                                  # GPIO input control settings of serizizer: fixed to 0xF0 for most camera modules 
+
+# clock divider setttings
+# FPD-Link 3: &quot;SENSOR_INPUT_CLK = 4000 * M / N / (1&lt;&lt;SER_HS_CLK_DIV)&quot;
+#          in the example below, 4000 * 1 / 37 / (1&lt;&lt;2) = 27.03 MHz
+SER_HS_CLK_DIV                  2                                    # Divider for output clock:  0 for 1x, 1 for 2x, 2 for 4x, 3 for 8x
+SER_DIV_M_VAL                   1                                    # M value for M/N Divider
+SER_DIV_N_VAL                   37                                   # N value for M/N Divider
+
+# FPD-Link 4: &quot;SENSOR_INPUT_CLK = 7550 * M / N / (1&lt;&lt;3)&quot;     (fix SER_HS_CLK_DIV to 3 for 8x)
+#          in the example below, 7550 * 1 / 37 / (1&lt;&lt;3) = 25.51 MHz
+#SER_HS_CLK_DIV                  3                                   # use 3 for FPDLink4
+#SER_DIV_M_VAL                   1                                   # M value for M/N Divider
+#SER_DIV_N_VAL                   37                                  # N value for M/N Divider
+</code></pre>
+<h4>Additional Instructions <a id="additional-instructions"></a></h4>
+<ul>
+<li><code>SENSOR_MACRO_IN_HEADER</code></li>
+</ul>
+<p>This is used for integrating your sensor driver into the sensor driver framework.
+Please refer to this <a href="https://git.ti.com/cgit/processor-sdk/imaging/tree/sensor_drv/include/iss_sensors.h?h=main#n161">line</a> for an example of IMX390 camera.</p>
+<ul>
+<li><code>SENSOR_TEMPLATE_DIR</code></li>
+</ul>
+<p>Driver templates for popular ADAS sensors from Sony, OVT, and Onsemi are included in the tool under <code>template_sony</code>, <code>template_ovt</code>, and <code>template_onsemi</code> folders.</p>
+<ul>
+<li><code>SENSOR_INIT_FILE</code></li>
+</ul>
+<p>This is the text file including all your sensor register initialization information.
+It is in 3-column hex format of <code>sensor register address</code>, <code>sensor refister value</code>, and <code>I2C programming delay</code>.
+These settings shall be provided by your sensor vendor.</p>
+<ul>
+<li><code>SENSOR_META_HEIGHT_BEFORE</code> and <code>SENSOR_META_HEIGHT_AFTER</code></li>
+</ul>
+<p>These values shall match the sensor register settings you used.</p>
+<ul>
+<li><code>SENSOR_USE_PCAL_D3</code></li>
+</ul>
+<p>This value may be set to 1 for the D3 DesignCore® Discovery cameras such as <a href="https://www.d3embedded.com/product-category/camera-modules/?fwp_platform=texas-instruments&amp;fwp_series=discovery">IMX390</a> and <a href="https://www.d3embedded.com/product-category/camera-modules/?fwp_platform=texas-instruments&amp;fwp_interface=fpd-link-iv&amp;fwp_sensor_model=sony-imx728-">IMX728</a>.</p>
+<ul>
+<li><code>SENSOR_STREAM_REG_ADDR</code>, <code>SENSOR_STREAM_ON_VALUE</code>, <code>SENSOR_STREAM_OFF_VALUE</code></li>
+</ul>
+<p>These fields identify sensor register address and values for starting and stopping sensor streaming.
+They shall be available in the sensor datasheet.</p>
+<ul>
+<li><code>SENSOR_STREAM_ON_REG2</code>, <code>SENSOR_STREAM_ON_VAL2</code>, <code>SENSOR_STREAM_OFF_VAL2</code>, and <code>SENSOR_STREAM_OFF_REG2</code></li>
+</ul>
+<p>Some sensors may require writing to a second value to start and/or stop streaming.</p>
+<ul>
+<li><code>SER_CFG_I2C_STRAP</code></li>
+</ul>
+<p>This field is for the “I2C Strap Mode” setting of serializer (e.g., UB953).
+Program this bit to choose the I2C voltage level between 3.3V and 1.8V.</p>
+<ul>
+<li><code>SER_LOCAL_GPIO_DATA</code> and <code>SER_GPIO_INPUT_CTRL</code></li>
+</ul>
+<p>These values are for the GPIO register settings of the serializer.
+Please refer to <code>LOCAL_GPIO_DATA</code> and <code>GPIO_INPUT_CTRL</code> registers in FPD-Link serializer <a href="https://www.ti.com/lit/ds/symlink/ds90ub953-q1.pdf">datasheet</a> for details.</p>
+<ul>
+<li><code>SER_HS_CLK_DIV</code>, <code>SER_DIV_M_VAL</code>, and <code>SER_DIV_N_VAL</code></li>
+</ul>
+<p>These values are for setting up the serializer correctly to provide an input clock signal for your sensor.
+Please follow the equations in the comments of the configuration file to choose the right values for your camera/sensor module.</p>
+<h3>5.4 Output</h3>
+<p>The script will generate 5 sensor driver source/header files according to <code>SENSOR_NAME_LOWERCASE</code> in configuration file, e.g.,</p>
+<ul>
+<li><code>imx390_sensor_config.h</code></li>
+<li><code>imx390_serdes_config.h</code></li>
+<li><code>imx390_gain_table.h</code></li>
+<li><code>iss_sensor_imx390.h</code></li>
+<li><code>iss_sensor_imx390.c</code></li>
+</ul>
+<p>These files will be placed in the directory specified by <code>SENSOR_OUTPUT_DIR</code> in the configuration file.</p>
+<h3>5.5 Integration of the New Sensor Driver into TDA4x RTOS SDK <a id="55-integration-of-the-new-sensor-driver-into-tda4x-rtos-sdk"></a></h3>
+<p>After the sensor driver files are generated and copied to TDA4 RTOS SDK, some modification to <code>iss_sensors.h</code> and <code>iss_sensors.c</code> is necessary to integrate the new driver into the sensor driver framework.</p>
+<ol>
+<li>Add driver C source files to <code>imaging/sensor_drv/src/concerto.mak</code> for top-level Makefiles to build driver into SDK.
+<ul>
+<li>Example: view the <a href="https://git.ti.com/cgit/processor-sdk/imaging/commit/sensor_drv/src/concerto.mak?h=main&amp;id=6c8864dd92b1ca91e6d37aa7cd14fd2943eef9cf">concerto Makefile example</a>.</li>
+</ul>
+</li>
+<li>Register the driver handle with the sensor driver framework.
+<ul>
+<li>Call your driver’s initialization function inside <code>IssSensor_Init()</code> in <code>imaging/sensor_drv/src/iss_sensors.c</code> to register the driver handle with the framework.</li>
+<li>Driver initialization function is generated by the SDA and is in the format of <code>IssSensor_SENSOR_NAME_UPPERCASE_Init</code>, where <code>SENSOR_NAME_UPPERCASE</code> is from sensor configuration file.
+<ul>
+<li>Example: <code>status |= IssSensor_IMX390_Init();</code></li>
+</ul>
+</li>
+<li>Add sensor init function signature to <code>imaging/sensor_drv/src/iss_sensor_priv.h</code>. See <a href="https://git.ti.com/cgit/processor-sdk/imaging/commit/sensor_drv/src/iss_sensor_priv.h?h=main&amp;id=7e3cc4030107247a885aa3530aa5346d6fa25a50">example commit</a>.</li>
+</ul>
+</li>
+<li>Add driver macro name definition to <code>iss_sensors.h</code>.
+<ul>
+<li>The driver macro name used in <code>iss_sensors.h</code> should match <code>SENSOR_MACRO_IN_HEADER</code> from the SDA configuration.</li>
+<li>The actual name used can be any alphanumeric string with 32 characters. TI usually uses <code>[IMAGE_SENSOR]-[SERIALIZER]-[CAM_MODULE_MANUFACTURER]</code>.</li>
+<li>Example: <code>[#define SENSOR_SONY_IMX390_UB953_D3     &quot;IMX390-UB953_D3&quot;]</code> in <code>iss_sensors.h</code> under the <code>&quot;Supports Sensor's name&quot;</code> section</li>
+</ul>
+</li>
+<li>Test your new sensor driver with <code>app_heterogeneous</code> in vision apps of TDA4x SDK
+<ul>
+<li>Change the app in capture only mode after uncommenting <a href="https://git.ti.com/cgit/processor-sdk/vision_apps/tree/apps/utilities/app_heterogeneous/app_heterogeneous.c?h=main#n83">this line</a></li>
+<li>Recompile your TDA4x SDK and prepare new SD card image for your TDA4x EVM following these instructions
+<ul>
+<li><a href="https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/latest/exports/docs/vision_apps/docs/user_guide/BUILD_INSTRUCTIONS.html#BUILD_DETAILED">Quick Steps to build vision apps for selected configuration</a></li>
+<li><a href="https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/latest/exports/docs/vision_apps/docs/user_guide/RUN_INSTRUCTIONS.html#run_steps_linux">Run vision apps on EVM in Linux+RTOS mode (via SD card boot)</a></li>
+<li>Stream 100 frames from your sensor and same one raw image on SD card with your camera connected to port-0 of your Fusion-board
+<ul>
+<li><code>./app_heterogeneous 101 0 &lt;your_sensor_driver_id&gt;</code></li>
+</ul>
+</li>
+<li>To determine your sensor ID run the app_heterogeneous app once to see the enumeration of available sensors. Example list below:<pre><code>ISS: Enumerating sensors ... !!!
+ISS: Enumerating sensors ... found 0 : IMX390-UB953_D3
+ISS: Enumerating sensors ... found 1 : IMX390-UB953-DISCOVERY-NARROW
+ISS: Enumerating sensors ... found 2 : IMX390-UB953-DISCOVERY-MID
+ISS: Enumerating sensors ... found 3 : IMX390-UB953-DISCOVERY-WIDE
+ISS: Enumerating sensors ... found 4 : IMX728-UB971_SONY
+ISS: Enumerating sensors ... found 5 : AR0233-UB953_MARS
+ISS: Enumerating sensors ... found 6 : AR0820-UB953_LI
+ISS: Enumerating sensors ... found 7 : UB9xxx_RAW12_TESTPATTERN
+ISS: Enumerating sensors ... found 8 : UB96x_UYVY_TESTPATTERN
+ISS: Enumerating sensors ... found 9 : GW_AR0233_UYVY
+ISS: Enumerating sensors ... found 10 : SENSOR_OX02F_UB953_OV
+</code></pre>
+</li>
+<li>For more instructions see: <a href="https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/latest/exports/docs/vision_apps/docs/user_guide/group_apps_utilities_app_heterogeneous.html">Heterogeneous App</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3>6 Additional Steps for Running Single-Cam App with Your New Sensor Driver</h3>
+<ul>
+<li>Generate default DCC files for your driver.
+<ul>
+<li>For basic generation of header files, follow the default <a href="https://git.ti.com/cgit/processor-sdk/imaging/tree/tools/default_DCC_profile_gen/readme.txt">XML generation tool</a>.</li>
+<li>Double check the information in input configuration matches with parameters used in the XML generation tool. In other words, width, height, DCC ID, sensor name etc, must match with that of the generated sensor driver params.</li>
+<li>Navigate to the generated XMLs and run <code>generate_dcc.sh</code>.
+<ul>
+<li>Double check the following paths are correct: DCC_TOOL_PATH, DCC_BIN_PATH, OUT_PATH in <code>generate_dcc.sh</code>.</li>
+<li>OUT_PATH must be <code>imaging/sensor_drv/include</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Add tuning header files to <code>imaging/utils/iss/src/app_iss_common_hlos.c</code>.
+<ul>
+<li>Tuning information needs to be passed to the VPAC and 2A kernels. <code>app_iss_common_hlos.c</code> abstracts the fetching of VISS, LDC, and 2A buffers and its sizes for each individual driver and DCC ID pair.</li>
+<li>Add generated DCC data from step 3 to <code>app_iss_common_hlos.c</code>, see <a href="https://git.ti.com/cgit/processor-sdk/imaging/commit/utils/iss/src/app_iss_common.c?h=main&amp;id=7e3cc4030107247a885aa3530aa5346d6fa25a50">example commit</a></li>
+</ul>
+</li>
+<li>Once the default DCC files are generated and tuning header files are added, please refer to the <a href="https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/latest/exports/docs/vision_apps/docs/user_guide/group_apps_basic_demos_app_single_cam.html">Single Camera Application Documentation</a> to run the demo.</li>
+</ul>
+<h2>7. Next Steps for Completing Your Sensor Driver</h2>
+<ul>
+<li>Sensor Exposure Control
+<ul>
+<li>Implement the <code>SetAeParams</code> function for adjusting sensor exposure, e.g., <a href="https://git.ti.com/cgit/processor-sdk/imaging/tree/sensor_drv/src/imx728/iss_sensor_imx728.c?h=main#n807">IMX728_SetAeParams</a>.
+<ul>
+<li>This function varies from sensor to sensor and please refer to your sensor datasheet for more detail.</li>
+</ul>
+</li>
+<li>Implement the <code>GetExpPrgFxn</code> function for setting up AE, e.g., <a href="https://git.ti.com/cgit/processor-sdk/imaging/tree/sensor_drv/src/imx728/iss_sensor_imx728.c?h=main#n1034">IMX728_GetExpPrgFxn</a>
+<ul>
+<li>Please follow <a href="https://e2e.ti.com/support/processors-group/processors/f/processors-forum/1262114/faq-setting-up-auto-exposure-ae-for-your-image-sensor-with-tda4-am6xa-isp-vpac">this FAQ</a> for more detail.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sensor White Balance (necessary if white balance has to be applied in sensor)
+<ul>
+<li>Properly set min max values for white balance gains in <code>GetWBPrgFxn</code> function, e.g., <a href="https://git.ti.com/cgit/processor-sdk/imaging/tree/sensor_drv/src/ar0233/iss_sensor_ar0233.c?h=main#n724">AR0233_GetWBPrgFxn</a>.</li>
+<li>Map white balance values to sensor register values in <code>SetAwbParams</code> function, e.g., <a href="https://git.ti.com/cgit/processor-sdk/imaging/tree/sensor_drv/src/ar0233/iss_sensor_ar0233.c?h=main#n502">AR0233_SetAwbParams</a>.</li>
+</ul>
+</li>
+<li>Sensor Probe Function (necessary if your sensor driver needs to support user probing)
+<ul>
+<li>Program the <code>Probe</code> function to read sensor identifying values. Return 0 if values match to indicate sensor was probed and matches driver known values, otherwise, return 0.</li>
+<li>e.g., <a href="https://git.ti.com/cgit/processor-sdk/imaging/tree/sensor_drv/src/imx390/iss_sensor_imx390.c?h=main#n198">IMX390_Probe</a></li>
+</ul>
+</li>
+<li>Set up VPAC tuning for your new camera/sensor module
+<ul>
+<li>Please refer to <a href="https://e2e.ti.com/support/processors-group/processors/f/processors-forum/1553641/faq-tda4vm-how-to-use-auto-tune-in-the-python-tool-under-imaging-tools-of-tda4x-am6xa-sdk">this page</a> for details.</li>
+</ul>
+</li>
+</ul>
+<h2>8. Troubleshooting</h2>
+<p>If you encounter any issues, check the following:</p>
+<ul>
+<li>Make sure you have the correct Python version installed.</li>
+<li>Verify that your configuration file is correctly formatted.</li>
+<li>Check if the output directory is created.</li>
+</ul>
+<p>For more information or to report issues, please go to <a href="https://e2e.ti.com">e2e.ti.com</a>.</p>
+
+</body>
+</html>

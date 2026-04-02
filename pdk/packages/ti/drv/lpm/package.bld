@@ -1,0 +1,19 @@
+/******************************************************************************
+ * FILE PURPOSE: Build description for the LPM Package
+ ******************************************************************************
+ * FILE NAME: package.bld
+ *
+ * DESCRIPTION: 
+ *  This file contains the build specification and description for the LPM library
+ *
+ *
+ * Copyright (C) 2021, Texas Instruments, Inc.
+ *****************************************************************************/
+
+/* Generate Settings.xdc */
+var tplt = xdc.loadTemplate("./Settings.xdc.xdt");
+tplt.genFile("./Settings.xdc",lpmDriverReleaseVersion);
+
+/* Generate paver.h */
+var tplt = xdc.loadTemplate("./lpmver.h.xdt");
+tplt.genFile("./lpmver.h",lpmDriverReleaseVersion);

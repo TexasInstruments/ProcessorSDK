@@ -1,0 +1,19 @@
+[
+    {
+        "displayName": "MAIN CSI RX",
+        "tisci_ip_name_list": [
+            "TISCI_DEV_CSI_RX_IF0",
+            "TISCI_DEV_CSI_RX_IF1",
+            "TISCI_DEV_DPHY_RX0",
+            "TISCI_DEV_DPHY_RX1"
+        ]
+    },
+    {
+        "displayName": "MAIN CSI TX",
+        "tisci_ip_name_list": [
+            "TISCI_DEV_CSI_TX_IF0",
+            "TISCI_DEV_DPHY_TX0"
+        ]
+    }
+
+]

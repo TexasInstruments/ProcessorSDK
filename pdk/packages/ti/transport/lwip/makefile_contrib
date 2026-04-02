@@ -1,0 +1,143 @@
+#
+# This file is the makefile for building LwIP contrib library.
+#
+ifeq ($(RULES_MAKE), )
+  include $(PDK_INSTALL_PATH)/ti/build/Rules.make
+else
+  include $(RULES_MAKE)
+endif
+
+MODULE_NAME = lwipcontrib_$(BUILD_OS_TYPE)
+
+LWIP_DIR         = $(PDK_LWIP_COMP_PATH)
+LWIP_STACK_DIR   = $(LWIP_DIR)/lwip-stack
+LWIP_CONTRIB_DIR = $(LWIP_DIR)/lwip-stack/contrib
+
+SRCDIR =  .
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps
+SRCDIR += $(LWIP_CONTRIB_DIR)/addons
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/httpd/fs_example
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/httpd/ssi_example
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/lwiperf
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/mdns
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/mqtt
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/ppp
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/snmp/snmp_private_mib
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/snmp/snmp_v3
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/snmp
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/sntp
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/tftp
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps/httpserver
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps/chargen
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps/udpecho
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps/tcpecho
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps/shell
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps/udpecho_raw
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps/tcpecho_raw
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps/netio
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps/ping
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps/socket_examples
+SRCDIR += $(LWIP_CONTRIB_DIR)/apps/rtp
+SRCDIR += $(LWIP_CONTRIB_DIR)/examples/example_app
+
+# Common source files and CFLAGS across all platforms and cores
+PACKAGE_SRCS_COMMON = .
+PACKAGE_SRCS_COMMON += ../../makefile_contrib
+
+INCDIR =
+INCDIR += $(LWIP_CONTRIB_DIR)
+
+ifeq ($(BUILD_OS_TYPE),freertos)
+  LWIP_CONTRIB_CFLAGS += -DFREERTOS
+else ifeq ($(BUILD_OS_TYPE),safertos)
+  LWIP_CONTRIB_CFLAGS += -DSAFERTOS
+endif
+
+ifeq ($(BUILD_PROFILE_$(CORE)),release)
+  LWIP_CONTRIB_CFLAGS += -O3 -flto
+  LNKFLAGS_LOCAL_COMMON += -flto
+endif
+
+# List all the external components/interfaces, whose interface header files
+# need to be included for this component
+ifeq ($(BUILD_OS_TYPE),freertos)
+  INCLUDE_EXTERNAL_INTERFACES = pdk osal freertos
+else ifeq ($(BUILD_OS_TYPE),safertos)
+  INCLUDE_EXTERNAL_INTERFACES = pdk osal safertos
+endif
+
+INCLUDE_INTERNAL_INTERFACES += lwipstack_$(BUILD_OS_TYPE)
+INCLUDE_INTERNAL_INTERFACES += lwipport_$(BUILD_OS_TYPE)
+
+SRCS_COMMON += fs_example.c
+SRCS_COMMON += ssi_example.c
+SRCS_COMMON += lwiperf_example.c
+SRCS_COMMON += mdns_example.c
+SRCS_COMMON += mqtt_example.c
+SRCS_COMMON += pppos_example.c
+SRCS_COMMON += lwip_prvmib.c
+SRCS_COMMON += snmpv3_dummy.c
+SRCS_COMMON += snmp_example.c
+#SRCS_COMMON += sntp_example.c
+SRCS_COMMON += tftp_example.c
+
+SRCS_COMMON += httpserver-netconn.c
+SRCS_COMMON += chargen.c
+SRCS_COMMON += udpecho.c
+SRCS_COMMON += tcpecho.c
+SRCS_COMMON += shell.c
+SRCS_COMMON += udpecho_raw.c
+SRCS_COMMON += tcpecho_raw.c
+SRCS_COMMON += netio.c
+SRCS_COMMON += ping.c
+SRCS_COMMON += socket_examples.c
+SRCS_COMMON += rtp.c
+
+CFLAGS_LOCAL_COMMON += $(PDK_CFLAGS) $(LWIP_CONTRIB_CFLAGS)
+# this is default supported in CLANG so no need to mention
+CFLAGS_LOCAL_COMMON += -fdiagnostics-show-option
+
+# Common source files and CFLAGS across all platforms and cores
+# Exclude files that give warning while compiling using ti_cgt_arm compiler
+
+LWIPCONTRIB_SRCS_EXCLUDE :=
+
+ifeq ($(CPLUSPLUS_BUILD), yes)
+  ifeq ($(TREAT_WARNINGS_AS_ERROR), yes)
+    #CFLAGS_LOCAL_COMMON += --issue_remarks
+    
+    #Enabling issue remarks creates lot of remarks.
+    #To suppress specific remarks from lwip-stack and lwip-contrib enable below compiler flags
+    #--diag_suppress=179
+    #--diag_suppress=183
+    #--diag_suppress=195
+    #--diag_suppress=2142
+    #--diag_suppress=552
+    
+    #LWIPCONTRIB_SRCS_EXCLUDE += rtp.c
+  endif
+endif
+
+# Core/SoC/platform specific source files and CFLAGS
+# Example:
+#   SRCS_<core/SoC/platform-name> =
+#   CFLAGS_LOCAL_<core/SoC/platform-name> =
+
+# Temporary override for "_SYS_SELECT_H" redefined warning
+ifeq ($(CORE), mpu1_0)
+  CFLAGS_LOCAL_COMMON += -std=c99
+endif
+
+# Include common make files
+ifeq ($(MAKERULEDIR), )
+  #Makerule path not defined, define this and assume relative path from ROOTDIR
+  MAKERULEDIR := $(ROOTDIR)/ti/build/makerules
+  export MAKERULEDIR
+endif
+include $(MAKERULEDIR)/common.mk
+
+# OBJs and libraries are built by using rule defined in rules_<target>.mk
+#     and need not be explicitly specified here
+
+# Nothing beyond this point

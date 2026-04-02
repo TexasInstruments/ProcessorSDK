@@ -1,0 +1,57 @@
+%%{
+/*!
+ *  This template implements the Doxyfile
+ */  
+  var ver = this.version;
+  var bid = this.bundleid;
+  var VERDOT = ver[0]+"."+ver[1]+"."+ver[2]+"."+ver[3];
+  var VERUND = VERDOT.toString().replace(/\./g,"_");
+  
+  var NAME   = "SA LLD";
+  var ID     = "ti.drv.sa";
+  var RNOTES = "./docs/ReleaseNotes_SA_LLD.pdf";
+  var TOC    = "toc_cdoc_sample.xml";
+%%}
+import xdc.tools.product.IProduct;                          
+
+metaonly module Product inherits IProduct {
+    
+    override config String name = "`NAME`";
+
+    override config String id   = "`ID`";
+
+    override config String version = "`VERDOT`";  
+
+    override config String companyName = "Texas Instruments Inc.";
+
+    override config IProduct.UrlDescriptor productDescriptor = {
+        url: "http://www.ti.com",
+        text: "SA LLD"
+    };
+
+    override config IProduct.UrlDescriptor licenseDescriptor = {
+        text: "Texas Instruments Incorporated - TI BSD license &amp; SSLeay license"
+    };
+
+    override config String copyRightNotice =
+        "Copyright Texas Instruments 2012";
+
+    override config String repositoryArr[] = [
+        "packages"
+    ];
+
+    override config String docsLocArr[] = [
+        ".",
+        "docs"
+    ];
+
+    override config String bundleName = "SA LLD";
+
+    override config IProduct.HelpToc helpTocArr[] = [
+        {
+            label: "API Reference",
+            filePath: "./eclipse/`TOC`",
+            tocFile:true
+        },
+    ];
+}

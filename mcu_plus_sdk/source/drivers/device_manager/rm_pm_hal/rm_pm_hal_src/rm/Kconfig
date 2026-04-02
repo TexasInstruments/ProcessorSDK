@@ -1,0 +1,193 @@
+#
+# Copyright (c) 2017-2020, Texas Instruments Incorporated
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# *  Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+# *  Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# *  Neither the name of Texas Instruments Incorporated nor the names of
+#    its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+# THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+# EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Resource Manager configuration
+#
+# For a description of the syntax of this configuration file,
+# see https://www.kernel.org/doc/Documentation/kbuild/kconfig-language.txt
+# NOTE: We ONLY support "bool"
+#
+
+menu "Resource Manager Feature Support"
+
+config RM 
+	bool "Enable Resource Manager"
+	help
+	 Enable support for Resource Manager functions
+
+config RM_LOCAL_SUBSYSTEM_REQUESTS
+	bool "Enable Resource Manager Local Subsystem Requests"
+	depends on RM
+	help
+	 Enable support for Resource Manager using local subsystem calls for some services
+
+config RM_IRQ
+	bool "Enable IRQ support in Resource Manager"
+	depends on RM
+	help
+	 Enable support for Resource Manager IRQ functions
+
+config INTERRUPT_AGGREGATOR_UNMAPPED_EVENTS
+	bool "Enable Interrupt Aggregator unmapped event support"
+	depends on RM_IRQ
+	default n if SOC_AM6
+	default n if SOC_J721E
+	default n if SOC_J7200
+	default y if SOC_J721S2
+	default y if SOC_J784S4
+	default y if SOC_AM64
+	default y if SOC_AM62
+	help
+	 Enable Interrupt Aggregator unmapped event support
+
+config RM_PSIL
+	bool "Enable PSIL support in Resource Manager"
+	depends on RM
+	help
+	 Enable support for Resource Manager PSIL functions
+
+config RM_RA
+	bool "Enable Ring Accelerator support in Resource Manager"
+	depends on RM
+	help
+	 Enable support for Resource Manager Ring Accelerator functions
+
+config RM_RA_OVERFLOW_DEFAULT
+	bool "Keep the default value of the overflow queue to be ring 0"
+	depends on RM_RA && SOC_AM65X_SR1
+	default y if SOC_AM65X_SR1
+	help
+	 Keep the default value of the overflow queue to be ring 0
+
+config RM_RA_DMSS_RING
+	bool "Enable support for DMSS dual rings"
+	depends on RM_RA
+	default n if SOC_AM6
+	default n if SOC_J721E
+	default n if SOC_J7200
+	default y if SOC_J721S2
+	default y if SOC_J784S4
+	default y if SOC_AM64
+	default y if SOC_AM62
+	help
+	 Enable support for DMSS dual rings
+
+config RM_RA_NAV_RING
+	bool "Enable support for Navigator rings"
+	depends on RM_RA
+	default y if SOC_AM6
+	default y if SOC_J721E
+	default y if SOC_J7200
+	default y if SOC_J721S2
+	default y if SOC_J784S4
+	default y if SOC_AM64
+	default n if SOC_AM62
+	help
+	 Enable support for Navigator rings
+
+config RM_UDMAP
+	bool "Enable UDMAP support in Resource Manager"
+	depends on RM
+	help
+	 Enable support for Resource Manager UDMAP functions
+
+config UDMAP_CHANNEL_BURST_SIZE
+	bool "Enable UDMAP Tx & Rx channel burst size configuration parameter"
+	depends on RM_UDMAP
+	default n if SOC_AM6
+	default y if SOC_J721E
+	default y if SOC_J7200
+	default y if SOC_J721S2
+	default y if SOC_J784S4
+	default n if SOC_AM64
+	default n if SOC_AM62
+	help
+	 Enable UDMAP Tx & Rx channel burst size configuration parameter
+
+config UDMAP_TX_CHANNEL_TEARDOWN_TYPE
+	bool "Enable UDMAP Tx channel teardown type configuration parameter"
+	depends on RM_UDMAP
+	default n if SOC_AM6
+	default y if SOC_J721E
+	default y if SOC_J7200
+	default y if SOC_J721S2
+	default y if SOC_J784S4
+	default n if SOC_AM64
+	default n if SOC_AM62
+	help
+	 Enable UDMAP Tx channel teardown type configuration parameter
+
+config UDMAP_UDMA
+	bool "Enable support for Navigator UDMAP channel types"
+	depends on RM_UDMAP
+	default y if SOC_AM6
+	default y if SOC_J721E
+	default y if SOC_J7200
+	default y if SOC_J721S2
+	default y if SOC_J784S4
+	default n if SOC_AM64
+	default n if SOC_AM62
+	help
+	 Enable support for Navigator UDMAP channel types
+
+config UDMAP_BCDMA
+	bool "Enable support for DMSS BCDMA channel types"
+	depends on RM_UDMAP
+	default n if SOC_AM6
+	default n if SOC_J721E
+	default n if SOC_J7200
+	default y if SOC_J721S2
+	default y if SOC_J784S4
+	default y if SOC_AM64
+	default y if SOC_AM62
+	help
+	 Enable support for DMSS BCDMA channel types
+
+config UDMAP_PKTDMA
+	bool "Enable support for DMSS PKTDMA channel types"
+	depends on RM_UDMAP
+	default n if SOC_AM6
+	default n if SOC_J721E
+	default n if SOC_J7200
+	default n if SOC_J721S2
+	default n if SOC_J784S4
+	default y if SOC_AM64
+	default y if SOC_AM62
+	help
+	 Enable support for DMSS PKTDMA channel types
+
+config RM_PROXY
+	bool "Enable Proxy support in Resource Manager"
+	depends on RM
+	help
+	 Enable support for Resource Manager Proxy functions
+
+endmenu

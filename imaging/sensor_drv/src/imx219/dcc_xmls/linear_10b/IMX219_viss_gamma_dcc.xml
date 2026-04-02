@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VISS_GAMMA_CFG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--this is comment-->
+  <dcc_name>VISS_GAMMA_cfg</dcc_name>
+  <dcc_header>
+    <camera_module_id>     219</camera_module_id>
+    <dcc_descriptor_id>  12</dcc_descriptor_id>
+    <algorithm_vendor_id>   1</algorithm_vendor_id>
+    <tunning_tool_version>       0</tunning_tool_version>
+  </dcc_header>
+  <!--=======================================================================-->
+  <typedef>
+      <cfg_viss_gamma type="struct">
+        <gamma_cfg_enable     type="uint32">          </gamma_cfg_enable>
+        <gamma_cfg_bitdepth   type="uint32">          </gamma_cfg_bitdepth>
+        <gamma_cfg_lut        type="uint32[513]">     </gamma_cfg_lut>
+      </cfg_viss_gamma>
+  </typedef>
+  <!--=======================================================================-->
+
+  <use_case val="65535">
+    <n-space>
+      <region0 class="0">
+        <exposure val="1" min="0" max="100000">  </exposure>
+        <gain val="0" min="0" max="250000">  </gain>
+      </region0>
+    </n-space>
+    <parameter_package>
+    <!-- Parameters for photospace class: 0 -->
+        <VISS_GAMMA_cfg_dcc type="cfg_viss_gamma">
+        {
+                        1     // enable
+                        10    // bitdepth
+                        {
+                            #include "lut_viss_fcc_gamma.txt"
+                        }
+        }
+        </VISS_GAMMA_cfg_dcc>
+    </parameter_package>
+  </use_case>
+</VISS_GAMMA_CFG>

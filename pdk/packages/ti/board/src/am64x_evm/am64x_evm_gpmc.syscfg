@@ -1,0 +1,87 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --device "AM64x_beta" --package "ALV" --part "Default"
+ * @versions {"data":"2020111214","timestamp":"2020111214","tool":"1.7.0+1672","templates":"2020111214"}
+ */
+
+/**
+ * These are the peripherals and settings in this configuration
+ */
+const iGPMC1            = scripting.addPeripheral("GPMC");
+iGPMC1.$name            = "MyGPMC1";
+iGPMC1.A0.$assign       = "PRG0_PRU0_GPO2";
+iGPMC1.A1.$assign       = "PRG0_PRU0_GPO4";
+iGPMC1.A10.$assign      = "PRG0_PRU1_GPO15";
+iGPMC1.A11.$assign      = "PRG0_PRU1_GPO16";
+iGPMC1.A12.$assign      = "PRG0_MDIO0_MDIO";
+iGPMC1.A13.$assign      = "PRG0_MDIO0_MDC";
+iGPMC1.A15.$assign      = "PRG0_PRU0_GPO13";
+iGPMC1.A16.$assign      = "PRG0_PRU0_GPO15";
+iGPMC1.A17.$assign      = "PRG0_PRU0_GPO17";
+iGPMC1.A18.$assign      = "PRG0_PRU1_GPO3";
+iGPMC1.A19.$assign      = "PRG0_PRU1_GPO6";
+iGPMC1.A2.$assign       = "PRG0_PRU0_GPO8";
+iGPMC1.A20.$assign      = "GPMC0_CSn3";
+iGPMC1.A21.$assign      = "GPMC0_WAIT1";
+iGPMC1.A22.$assign      = "GPMC0_WPn";
+iGPMC1.A3.$assign       = "PRG0_PRU0_GPO14";
+iGPMC1.A4.$assign       = "PRG0_PRU0_GPO16";
+iGPMC1.A5.$assign       = "PRG0_PRU0_GPO18";
+iGPMC1.A6.$assign       = "PRG0_PRU0_GPO19";
+iGPMC1.A7.$assign       = "PRG0_PRU1_GPO12";
+iGPMC1.A8.$assign       = "PRG0_PRU1_GPO13";
+iGPMC1.A9.$assign       = "PRG0_PRU1_GPO14";
+iGPMC1.AD0.$assign      = "GPMC0_AD0";
+iGPMC1.AD1.$assign      = "GPMC0_AD1";
+iGPMC1.AD10.$assign     = "GPMC0_AD10";
+iGPMC1.AD11.$assign     = "GPMC0_AD11";
+iGPMC1.AD12.$assign     = "GPMC0_AD12";
+iGPMC1.AD13.$assign     = "GPMC0_AD13";
+iGPMC1.AD14.$assign     = "GPMC0_AD14";
+iGPMC1.AD15.$assign     = "GPMC0_AD15";
+iGPMC1.AD16.$assign     = "PRG1_PRU0_GPO0";
+iGPMC1.AD17.$assign     = "PRG1_PRU0_GPO1";
+iGPMC1.AD18.$assign     = "PRG1_PRU0_GPO2";
+iGPMC1.AD19.$assign     = "PRG1_PRU0_GPO3";
+iGPMC1.AD2.$assign      = "GPMC0_AD2";
+iGPMC1.AD20.$assign     = "PRG1_PRU0_GPO4";
+iGPMC1.AD21.$assign     = "PRG1_PRU0_GPO5";
+iGPMC1.AD22.$assign     = "PRG1_PRU0_GPO6";
+iGPMC1.AD23.$assign     = "PRG1_PRU0_GPO7";
+iGPMC1.AD24.$assign     = "PRG1_PRU0_GPO8";
+iGPMC1.AD25.$assign     = "PRG1_PRU0_GPO9";
+iGPMC1.AD26.$assign     = "PRG1_PRU0_GPO10";
+iGPMC1.AD27.$assign     = "PRG1_PRU0_GPO11";
+iGPMC1.AD28.$assign     = "PRG1_PRU0_GPO12";
+iGPMC1.AD29.$assign     = "PRG1_PRU0_GPO13";
+iGPMC1.AD3.$assign      = "GPMC0_AD3";
+iGPMC1.AD30.$assign     = "PRG1_PRU0_GPO14";
+iGPMC1.AD31.$assign     = "PRG1_PRU0_GPO15";
+iGPMC1.AD4.$assign      = "GPMC0_AD4";
+iGPMC1.AD5.$assign      = "GPMC0_AD5";
+iGPMC1.AD6.$assign      = "GPMC0_AD6";
+iGPMC1.AD7.$assign      = "GPMC0_AD7";
+iGPMC1.AD8.$assign      = "GPMC0_AD8";
+iGPMC1.AD9.$assign      = "GPMC0_AD9";
+iGPMC1.WAIT0.$assign    = "GPMC0_WAIT0";
+iGPMC1.WAIT1.$used      = false;
+iGPMC1.BE1n.$assign     = "GPMC0_BE1n";
+iGPMC1.CSn0.$assign     = "GPMC0_CSn0";
+iGPMC1.CSn1.$used       = true;
+iGPMC1.CSn2.$assign     = "GPMC0_CSn2";
+iGPMC1.CSn2.$used       = true;
+iGPMC1.CSn3.$assign     = "GPMC0_CSn3";
+iGPMC1.ADVn_ALE.$assign = "GPMC0_ADVn_ALE";
+iGPMC1.OEn_REn.$assign  = "GPMC0_OEn_REn";
+iGPMC1.BE0n_CLE.$assign = "GPMC0_BE0n_CLE";
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+iGPMC1.$suggestSolution      = "GPMC0";
+iGPMC1.A14.$suggestSolution  = "PRG0_PRU0_GPO12";
+iGPMC1.CSn1.$suggestSolution = "GPMC0_CSn1";
+iGPMC1.WEn.$suggestSolution  = "GPMC0_WEn";

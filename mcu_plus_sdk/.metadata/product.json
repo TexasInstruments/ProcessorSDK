@@ -1,0 +1,103 @@
+{
+    "name": "MCU_PLUS_SDK",
+    "displayName": "MCU+ SDK",
+    "version": "07.03.01",
+    "documentationPath": "../docs",
+    "includePaths": [
+        "../source",
+    ],
+    "components": [
+        "/kernel/dpl",
+        "/drivers/drivers",
+        "/board/board",
+        "/fs/fs",
+        "/pdm_utils/tools/dm_power_config",
+    ],
+    "devices": [
+        "AM64x_beta",
+        "AM243x_ALV_beta",
+        "AM243x_ALX_beta",
+        "AM273x",
+        "AWR294X",
+        "AM263x_beta",
+        "AM62x",
+        "AM62Ax",
+        "AM62Px",
+        "J722S",
+    ],
+    "contexts": {
+        "AM64x_beta": [
+            "r5fss0-0",
+            "r5fss0-1",
+            "r5fss1-0",
+            "r5fss1-1",
+            "m4fss0-0",
+            "a53ss0-0",
+        ],
+        "AM243x_ALV_beta": [
+            "r5fss0-0",
+            "r5fss0-1",
+            "r5fss1-0",
+            "r5fss1-1",
+            "m4fss0-0",
+        ],
+        "AM243x_ALX_beta": [
+            "r5fss0-0",
+            "r5fss0-1",
+            "r5fss1-0",
+            "r5fss1-1",
+            "m4fss0-0",
+        ],
+        "AM273x": [
+            "r5fss0-0",
+            "r5fss0-1",
+            "c66ss0"
+        ],
+        "AWR294X": [
+            "r5fss0-0",
+            "r5fss0-1",
+            "c66ss0"
+        ],
+        "AM263x_beta": [
+            "r5fss0-0",
+            "r5fss0-1",
+            "r5fss1-0",
+            "r5fss1-1",
+            "hsm0-0",
+        ],
+        "AM62x": [
+            "m4fss0-0",
+            "r5fss0-0",
+        ],
+        "AM62Ax": [
+            "mcu-r5fss0-0",
+            "r5fss0-0",
+            "c75ss0-0",
+            "a53ss0-0",
+        ],
+        "AM62Px": [
+            "mcu-r5fss0-0",
+            "wkup-r5fss0-0",
+        ],
+        "J722S": [
+            "mcu-r5fss0-0",
+            "wkup-r5fss0-0",
+            "main-r5fss0-0",
+            "c75ss0-0",
+            "c75ss1-0",
+            "a53ss0-0",
+            "a53ss0-1",
+            "a53ss1-0",
+            "a53ss1-1",
+            "hsm0-0",
+        ],
+    },
+    "pinmuxUIOptions": {
+        "group": "merged",
+        "hidePeripheralTab": false,
+        "showPinTable": true,
+        "showSignals": true,
+        "showUsed": true
+    },
+    "minToolVersion" : "1.20.0"
+}

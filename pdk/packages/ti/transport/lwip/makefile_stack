@@ -1,0 +1,136 @@
+#
+# This file is the makefile for building LwIP stack library.
+#
+ifeq ($(RULES_MAKE), )
+  include $(PDK_INSTALL_PATH)/ti/build/Rules.make
+else
+  include $(RULES_MAKE)
+endif
+
+MODULE_NAME = lwipstack_$(BUILD_OS_TYPE)
+
+LWIPDIR = $(PDK_LWIP_COMP_PATH)/lwip-stack/src
+LWIPPORT = $(PDK_LWIP_COMP_PATH)/lwip-port
+
+include $(LWIPDIR)/Filelists.mk
+
+SRCDIR =  $(LWIPDIR)/core
+SRCDIR += $(LWIPDIR)/core/ipv4
+SRCDIR += $(LWIPDIR)/core/ipv6
+SRCDIR += $(LWIPDIR)/api
+SRCDIR += $(LWIPDIR)/netif
+SRCDIR += $(LWIPDIR)/netif/ppp
+SRCDIR += $(LWIPDIR)/netif/ppp/polarssl
+SRCDIR += $(LWIPDIR)/apps/snmp
+SRCDIR += $(LWIPDIR)/apps/http
+SRCDIR += $(LWIPDIR)/apps/http/makefsdata
+SRCDIR += $(LWIPDIR)/apps/lwiperf
+SRCDIR += $(LWIPDIR)/apps/smtp
+SRCDIR += $(LWIPDIR)/apps/sntp
+SRCDIR += $(LWIPDIR)/apps/mdns
+SRCDIR += $(LWIPDIR)/apps/netbiosns
+SRCDIR += $(LWIPDIR)/apps/tftp
+SRCDIR += $(LWIPDIR)/apps/mqtt
+SRCDIR += $(LWIPDIR)/apps/altcp_tls
+
+INCDIR = src/include
+
+ifeq ($(BUILD_OS_TYPE),freertos)
+  LWIP_STACK_CFLAGS += -DFREERTOS
+else ifeq ($(BUILD_OS_TYPE),safertos)
+  LWIP_STACK_CFLAGS += -DSAFERTOS
+endif
+
+ifeq ($(BUILD_PROFILE_$(CORE)),release)
+  LWIP_STACK_CFLAGS += -O3 -flto
+  LNKFLAGS_LOCAL_COMMON += -flto
+endif
+
+# List all the external components/interfaces, whose interface header files
+# need to be included for this component
+ifeq ($(BUILD_OS_TYPE),freertos)
+  INCLUDE_EXTERNAL_INTERFACES = pdk osal freertos
+else ifeq ($(BUILD_OS_TYPE),safertos)
+  INCLUDE_EXTERNAL_INTERFACES = pdk osal safertos
+endif
+
+INCLUDE_INTERNAL_INTERFACES += lwipport_$(BUILD_OS_TYPE)
+
+CFLAGS_LOCAL_COMMON += $(PDK_CFLAGS) $(LWIP_STACK_CFLAGS)
+# this is default supported in CLANG so no need to mention
+CFLAGS_LOCAL_COMMON += -fdiagnostics-show-option
+
+# Common source files and CFLAGS across all platforms and cores
+# Exclude files that give warning while compiling using ti_cgt_arm compiler
+LWIP_SRCS_EXCLUDE :=
+
+ifeq ($(TREAT_WARNINGS_AS_ERROR), yes)
+  #CFLAGS_LOCAL_COMMON += --issue_remarks
+  
+  #Enabling issue remarks creates lot of remarks . 
+  #To suppress specific remarks from lwip-stack and lwip-contrib enable below compiler flags
+  #--diag_suppress=179
+  #--diag_suppress=183
+  #--diag_suppress=195
+  #--diag_suppress=2142
+  #--diag_suppress=552
+    
+  #LWIP_SRCS_EXCLUDE := snmp_msg.c
+  #LWIP_SRCS_EXCLUDE += http_client.c
+  #LWIP_SRCS_EXCLUDE += mdns.c
+endif
+
+ifeq ($(CPLUSPLUS_BUILD), yes)
+  ifeq ($(TREAT_WARNINGS_AS_ERROR), yes)
+    #CFLAGS_LOCAL_COMMON += --issue_remarks
+    
+    #Enabling issue remarks creates lot of remarks . 
+    #To suppress specific remarks from lwip-stack and lwip-contrib enable below compiler flags
+    #--diag_suppress=179
+    #--diag_suppress=183
+    #--diag_suppress=195
+    #--diag_suppress=2142
+    #--diag_suppress=552
+    
+    #LWIP_SRCS_EXCLUDE += snmp_mib2_icmp.c
+    #LWIP_SRCS_EXCLUDE += snmp_mib2_interfaces.c
+    #LWIP_SRCS_EXCLUDE += snmp_mib2_ip.c
+    #LWIP_SRCS_EXCLUDE += snmp_mib2_snmp.c
+    #LWIP_SRCS_EXCLUDE += snmp_mib2_system.c
+    #LWIP_SRCS_EXCLUDE += snmp_mib2_tcp.c
+    #LWIP_SRCS_EXCLUDE += snmp_mib2_udp.c
+    #LWIP_SRCS_EXCLUDE += snmp_raw.c
+    #LWIP_SRCS_EXCLUDE += httpd.c
+    #LWIP_SRCS_EXCLUDE += tcp.c
+    #LWIP_SRCS_EXCLUDE += tcp_in.c
+  endif
+endif
+
+# Strip directory path and keep only source files
+SRCS_COMMON += $(filter-out ${LWIP_SRCS_EXCLUDE}, $(notdir $(LWIPAPPFILES) $(LWIPNOAPPSFILES)))
+
+PACKAGE_SRCS_COMMON = .
+PACKAGE_SRCS_COMMON += ../lwip_component.mk ../makefile_stack
+
+# Core/SoC/platform specific source files and CFLAGS
+# Example:
+#   SRCS_<core/SoC/platform-name> =
+#   CFLAGS_LOCAL_<core/SoC/platform-name> =
+
+# Temporary override for "_SYS_SELECT_H" redefined warning
+ifeq ($(CORE), mpu1_0)
+  CFLAGS_LOCAL_COMMON += -std=c99
+endif
+
+# Include common make files
+ifeq ($(MAKERULEDIR), )
+  #Makerule path not defined, define this and assume relative path from ROOTDIR
+  MAKERULEDIR := $(ROOTDIR)/ti/build/makerules
+  export MAKERULEDIR
+endif
+include $(MAKERULEDIR)/common.mk
+
+# OBJs and libraries are built by using rule defined in rules_<target>.mk
+#     and need not be explicitly specified here
+
+# Nothing beyond this point

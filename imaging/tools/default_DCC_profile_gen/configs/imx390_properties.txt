@@ -1,0 +1,40 @@
+SENSOR_ID 390
+PRJ_DIR ../imx390_output
+SENSOR_NAME imx390
+SENSOR_DCC_NAME IMX390-UB953_D3
+
+SENSOR_WIDTH 1936
+SENSOR_HEIGHT 1096
+
+# 0=RGGB;  1=GRBG;  2=GBRG;  3=BGGR,  4=MONO,
+#10=RGGI, 11=GRIG, 12=BGGI, 13=GBIG, 14=GIRG, 15=IGGR, 16=GIBG, 17=IGGB
+COLOR_PATTERN 0
+
+# sensor mode: 0 for linear (no decompanding), 1 for WDR (decompanding)
+WDR_MODE 1
+
+# raw sensor image BIT_DEPTH: it may be 8, 10, or 12 for linear sensors; typically 12 for WDR mode because of companding
+BIT_DEPTH 12
+
+# WDR BIT_DEPTH: WDR raw sensor image bitdepth after decompanding, typically 20 or 24
+WDR_BIT_DEPTH 20
+
+# WDR decompanding knee points (comma separated without spaces in between)
+WDR_KNEE_X 0,512,1408,2176,4095,65535
+WDR_KNEE_Y 0,2048,16384,65536,1048063,1048063
+
+# Sensor black level to subtract before decompanding (for some Sony WDR sensors)
+# When PCID is on for RGBIR sensors, black level might be set to 0
+BLACK_PRE  0
+
+# Sensor black level to subtract after decompanding (for most WDR sensors and all linear sensors)
+# When PCID is on for RGBIR sensors, black level might be set to 0
+BLACK_POST  0
+
+# GAMMA value for compressing 20/24-bit WDR raw to 16-bit ISP internal
+# typically around 50 (0.5) for 24-bit WDR sensors and 70 (0.7) for 20-bit sensors
+GAMMA_PRE 70
+
+# LSB location for H3A input bit range (from bit-H3A_INPUT_LSB to bit-H3A_INPUT_LSB+9) 
+H3A_INPUT_LSB 2
+

@@ -1,0 +1,1879 @@
+/*
+*  Copyright (c) Texas Instruments Incorporated 2024
+*
+*  Redistribution and use in source and binary forms, with or without
+*  modification, are permitted provided that the following conditions
+*  are met:
+*
+*    Redistributions of source code must retain the above copyright
+*    notice, this list of conditions and the following disclaimer.
+*
+*    Redistributions in binary form must reproduce the above copyright
+*    notice, this list of conditions and the following disclaimer in the
+*    documentation and/or other materials provided with the
+*    distribution.
+*
+*    Neither the name of Texas Instruments Incorporated nor the names of
+*    its contributors may be used to endorse or promote products derived
+*    from this software without specific prior written permission.
+*
+*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+*  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+*  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+*  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+*  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+*  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+*  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+*  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+*  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/**
+*  \file vhwa_msc_test_cfg.h
+*
+*  \brief Configurations for MSC test
+*/
+
+#ifndef APP_MSC_CFG_H_
+#define APP_MSC_CFG_H_
+
+/* ========================================================================== */
+/*                           Structures and Enums                             */
+/* ========================================================================== */
+
+#if defined (VHWA_VPAC_IP_REV_VPAC3L)
+    /* 0, THREAD 0 TestCase 1-in 1-out 2560x2048 12bit packed input and 12bit packed output  */
+    {
+        FALSE /*loopBack*/,
+        VPAC_MSC_INST_ID_0,
+        FALSE,
+        /* Input Frame Parameter */
+        {
+            1920, 1080, 1920,
+            FVID2_DF_YUV420SP_UV,
+            FVID2_CCSF_BITS8_PACKED,
+            FALSE, MSC_TAP_SEL_5TAPS
+        },
+        /* output Frame Parameter */
+        {
+            {
+                960, 540, 960,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                960, 540/2, 960,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+        },
+        /* MSC Configuration for each instance */
+        {
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {FALSE},{FALSE},{FALSE},{FALSE},{FALSE},{FALSE},{FALSE},{FALSE}
+        },
+        FALSE,
+        {{
+            0x39106907, 0x27F7421C, 0, 0
+        }},
+    },
+    /* 1, THREAD 0 TestCase 1-in 6-out 2560x2048 12bit packed input and 12bit packed output  */
+    {
+        FALSE /*loopBack*/,
+        VPAC_MSC_INST_ID_0,
+        FALSE,
+        /* Input Frame Parameter */
+        {
+            2560, 2048, 2560*3/2,
+            FVID2_DF_YUV420SP_UV,
+            FVID2_CCSF_BITS12_PACKED,
+            FALSE, MSC_TAP_SEL_5TAPS
+        },
+        /* output Frame Parameter */
+        {
+            {
+                1920, 1080, 1920*3/2,
+                2560, 2048,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1920, 1080/2, 1920*3/2,
+                2560, 2048/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                960, 540, 960*3/2,
+                2560, 2048,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                960, 540/2, 960*3/2,
+                2560, 2048/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+        },
+        /* MSC Configuration for each instance */
+        {
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {FALSE},{FALSE},{FALSE},{FALSE},{FALSE},{FALSE}
+        },
+        TRUE,
+        {{
+            0x39106907, 0x27F7421C, 0x3204DE51, 0x2EC5C689, 0x39106907, 0x27F7421C, 0x3204DE51, 0x2EC5C689
+        }},
+    },
+    /* 2, THREAD 1 TestCase 1-in 4-out 2560x2048 12bit packed input and 12bit packed output  */
+    {
+        FALSE /*loopBack*/,
+        VPAC_MSC_INST_ID_1,
+        FALSE,
+        /* Input Frame Parameter */
+        {
+            2560, 2048, 2560*3/2,
+            FVID2_DF_YUV420SP_UV,
+            FVID2_CCSF_BITS12_PACKED,
+            FALSE, MSC_TAP_SEL_5TAPS
+        },
+        /* output Frame Parameter */
+        {
+
+            {
+                0
+            },
+            {
+                0
+            },
+            {
+                0
+            },
+            {
+                0
+            },
+            {
+                1920, 1080, 1920*3/2,
+                2560, 2048,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1920, 1080/2, 1920*3/2,
+                2560, 2048/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                960, 540, 960*3/2,
+                2560, 2048,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                960, 540/2, 960*3/2,
+                2560, 2048/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+        },
+        /* MSC Configuration for each instance */
+        {
+            {FALSE},{FALSE},{FALSE},{FALSE},
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {FALSE},{FALSE},/*{FALSE},{FALSE},{FALSE},{FALSE}*/
+        },
+        TRUE,
+        {{
+            0x39106907, 0x27F7421C, 0x3204DE51, 0x2EC5C689
+        }},
+    },
+    /* 3, Instance 0 TestCase 1-in 10-out 1920x1080 12bit packed input and 12bit packed output  */
+    {
+        FALSE /*loopBack*/,
+        VPAC_MSC_INST_ID_0,
+        FALSE,
+        /* Input Frame Parameter */
+        {
+            1920, 1080, 1920*3/2,
+            FVID2_DF_YUV420SP_UV,
+            FVID2_CCSF_BITS12_PACKED,
+            FALSE, MSC_TAP_SEL_5TAPS
+        },
+        /* output Frame Parameter */
+        {
+            {
+                480, 270, 480*3/2,
+                1920, 1080,
+                FVID2_DF_YUV420SP_UV,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                960, 540, 960*3/2,
+                1920, 1080,
+                FVID2_DF_YUV420SP_UV,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1728, 972, 1728*3/2,
+                1920, 1080,
+                FVID2_DF_YUV420SP_UV,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1536, 864, 1536*3/2,
+                1920, 1080,
+                FVID2_DF_YUV420SP_UV,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1344, 756, 1344*3/2,
+                1920, 1080,
+                FVID2_DF_YUV420SP_UV,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1152, 648, 1152*3/2,
+                1920, 1080,
+                FVID2_DF_YUV420SP_UV,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                768, 432, 768*3/2,
+                1920, 1080,
+                FVID2_DF_YUV420SP_UV,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                576, 324, 576*3/2,
+                1920, 1080,
+                FVID2_DF_YUV420SP_UV,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1248, 702, 1248*3/2,
+                1920, 1080,
+                FVID2_DF_YUV420SP_UV,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                864, 486, 864*3/2,
+                1920, 1080,
+                FVID2_DF_YUV420SP_UV,
+                FVID2_CCSF_BITS12_PACKED
+            },
+        },
+        /* MSC Configuration for each instance */
+        {
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+        },
+        TRUE,
+        {
+            {
+                0xEE68C3FE, 0xCF9397E3, 0xFB785F14, 0xDC853C6A, 0xEFA819AC,
+                0xEEF60190, 0xC40DCBC3, 0x218198F8, 0x765A99F8, 0x7CE39B9E
+            },
+            {
+                0x3A0BD532, 0x668AA2A2, 0x42FCF08E, 0x5CEDE765, 0x86D5DB01,
+                0x3DA35EBA, 0xF30DE7AB, 0xE55BB80D, 0x39D37F4B, 0x280F7833
+            }
+        }
+    },
+     /* 4, Instance 0 TestCase 1-in 5-out 1920x1080 Y12 UV8  */
+    {
+        FALSE /*loopBack*/,
+        VPAC_MSC_INST_ID_0,
+        TRUE,
+        /* Input Frame Parameter */
+        {
+            1920, 1080, 1920*3/2,
+            FVID2_DF_YUV420SP_UV,
+            FVID2_CCSF_BITS12_PACKED,
+            FALSE, MSC_TAP_SEL_5TAPS
+        },
+        /* output Frame Parameter */
+        {
+            {
+                480, 270, 480*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                480, 270/2, 480,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                960, 540, 960*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                960, 540/2, 960,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                1728, 972, 1728*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1728, 972/2, 1728,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                1536, 864, 1536*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1536, 864/2, 1536,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                768, 432, 768*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                768, 432/2, 768,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+
+        },
+        /* MSC Configuration for each instance */
+        {
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+            {
+                TRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                FALSE, FALSE
+            },
+        },
+        FALSE,
+        {
+        },
+        FALSE,
+        {
+        },
+        {
+            TRUE,
+            1920,
+            FVID2_CCSF_BITS8_PACKED,
+        },
+    },
+/* 5 Instance 0 TestCase 1-in 5-out 1920x1080 12bit packed input and 12bit packed output  */
+    {
+        UFALSE /*loopBack*/,
+        VPAC_MSC_INST_ID_0,
+        UTRUE,
+        /* Input Frame Parameter */
+        {
+            1920, 1080, 1920*3/2,
+            FVID2_DF_YUV420SP_UV,
+            FVID2_CCSF_BITS12_PACKED,
+            UFALSE, MSC_TAP_SEL_5TAPS
+        },
+        /* output Frame Parameter */
+        {
+            {
+                480, 270, 480*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                480, 270/2, 480*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                960, 540, 960*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                960, 540/2, 960*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1728, 972, 1728*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1728, 972/2, 1728*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1536, 864, 1536*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1536, 864/2, 1536*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                768, 432, 768*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                768, 432/2, 768*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+
+        },
+        /* MSC Configuration for each instance */
+        {
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+        },
+        UFALSE,
+        {
+        }
+    },
+    /* 6, Instance 1 TestCase 1-in 5-out 1920x1080 12bit packed input and 12bit packed output  */
+    {
+        UFALSE /*loopBack*/,
+        VPAC_MSC_INST_ID_1,
+        UTRUE,
+        /* Input Frame Parameter */
+        {
+            1920, 1080, 1920*3/2,
+            FVID2_DF_YUV420SP_UV,
+            FVID2_CCSF_BITS12_PACKED,
+            UFALSE, MSC_TAP_SEL_5TAPS
+        },
+        /* output Frame Parameter */
+        {
+            {
+                480, 270, 480*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                480, 270/2, 480*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                960, 540, 960*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                960, 540/2, 960*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1728, 972, 1728*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1728, 972/2, 1728*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1536, 864, 1536*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1536, 864/2, 1536*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                768, 432, 768*3/2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                768, 432/2, 768*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+        },
+        /* MSC Configuration for each instance */
+        {
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+        },
+        UFALSE,
+        {
+        }
+    },
+    /* 7, Instance 0 TestCase 1-in 5-out 1920x1080 Y8 UV12  */
+    {
+        UFALSE /*loopBack*/,
+        VPAC_MSC_INST_ID_0,
+        UTRUE,
+        /* Input Frame Parameter */
+        {
+            1920, 1080, 1920,
+            FVID2_DF_YUV420SP_UV,
+            FVID2_CCSF_BITS8_PACKED,
+            UFALSE, MSC_TAP_SEL_5TAPS
+        },
+        /* output Frame Parameter */
+        {
+            {
+                480, 270, 480,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                480, 270/2, 480*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                960, 540, 960,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                960, 540/2, 960*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1728, 972, 1728,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                1728, 972/2, 1728*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                1536, 864, 1536,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                1536, 864/2, 1536*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+            {
+                768, 432, 768,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                768, 432/2, 768*3/2,
+                1920, 1080/2,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_PACKED
+            },
+
+        },
+        /* MSC Configuration for each instance */
+        {
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+        },
+        UFALSE,
+        {
+        },
+        UFALSE,
+        {
+        },
+        {
+            UTRUE,
+            1920*3/2,
+            FVID2_CCSF_BITS12_PACKED,
+        },
+    },
+    /* 8, Instance 0 TestCase 1-in 5-out 1920x1080 Y8 Y8  */
+    {
+        UFALSE /*loopBack*/,
+        VPAC_MSC_INST_ID_0,
+        UTRUE,
+        /* Input Frame Parameter */
+        {
+            1920, 1080, 1920,
+            FVID2_DF_2PLANES,
+            FVID2_CCSF_BITS8_PACKED,
+            UFALSE, MSC_TAP_SEL_5TAPS
+        },
+        /* output Frame Parameter */
+        {
+            {
+                480, 270, 480,
+                1920, 1080,
+                FVID2_DF_PLANE_1,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                480, 270, 480,
+                1920, 1080,
+                FVID2_DF_PLANE_2,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                960, 540, 960,
+                1920, 1080,
+                FVID2_DF_PLANE_1,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                960, 540, 960,
+                1920, 1080,
+                FVID2_DF_PLANE_2,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                1728, 972, 1728,
+                1920, 1080,
+                FVID2_DF_PLANE_1,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                1728, 972, 1728,
+                1920, 1080,
+                FVID2_DF_PLANE_2,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                1536, 864, 1536,
+                1920, 1080,
+                FVID2_DF_PLANE_1,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                1536, 864, 1536,
+                1920, 1080,
+                FVID2_DF_PLANE_2,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                768, 432, 768,
+                1920, 1080,
+                FVID2_DF_PLANE_1,
+                FVID2_CCSF_BITS8_PACKED
+            },
+            {
+                768, 432, 768,
+                1920, 1080,
+                FVID2_DF_PLANE_2,
+                FVID2_CCSF_BITS8_PACKED
+            },
+
+        },
+        /* MSC Configuration for each instance */
+        {
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+        },
+        UFALSE,
+        {
+        },
+        UFALSE,
+        {
+        }
+    },
+    /* 9, Instance 0, 1920x1080 YUV422SP 12bit unpacked input/output  */
+    {
+        UFALSE /*loopBack*/,
+        VPAC_MSC_INST_ID_0,
+        UTRUE,
+        /* Input Frame Parameter */
+        {
+            1920, 1080, 1920*2,
+            FVID2_DF_YUV422SP_UV,
+            FVID2_CCSF_BITS12_UNPACKED16,
+            UFALSE, MSC_TAP_SEL_5TAPS
+        },
+        /* output Frame Parameter */
+        {
+            {
+                480, 270, 480*2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            {
+                480, 270, 480*2,
+                1920, 1080,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            {
+                960, 540, 960*2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            {
+                960, 540, 960*2,
+                1920, 1080,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            {
+                1728, 972, 1728*2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            {
+                1728, 972, 1728*2,
+                1920, 1080,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            {
+                1536, 864, 1536*2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            {
+                1536, 864, 1536*2,
+                1920, 1080,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            {
+                768, 432, 768*2,
+                1920, 1080,
+                FVID2_DF_LUMA_ONLY,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            {
+                768, 432, 768*2,
+                1920, 1080,
+                FVID2_DF_CHROMA_ONLY,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+
+        },
+        /* MSC Configuration for each instance */
+        {
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+        },
+        UFALSE,
+        {
+        }
+    },
+    /* 10 Instance 0 TestCase 1-in 4-out 1920x1080 YUV422I 12bit unpacked input/output  */
+    {
+        UFALSE /*loopBack*/,
+        VPAC_MSC_INST_ID_0,
+        UTRUE,
+        /* Input Frame Parameter */
+        {
+            1920, 1080, 1920*4,
+            FVID2_DF_YUV422I_YUYV,
+            FVID2_CCSF_BITS12_UNPACKED16,
+            UFALSE, MSC_TAP_SEL_5TAPS
+        },
+        /* output Frame Parameter */
+        {
+            {
+                480, 270, 480*4,
+                1920, 1080,
+                FVID2_DF_YUV422I_YUYV,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            { 0 },
+            {
+                960, 540, 960*4,
+                1920, 1080,
+                FVID2_DF_YUV422I_YUYV,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            { 0 },
+            {
+                1728, 972, 1728*4,
+                1920, 1080,
+                FVID2_DF_YUV422I_YUYV,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            { 0 },
+            {
+                1536, 864, 1536*4,
+                1920, 1080,
+                FVID2_DF_YUV422I_YUYV,
+                FVID2_CCSF_BITS12_UNPACKED16
+            },
+            { 0 },
+            { 0 },
+            { 0 }
+        },
+        /* MSC Configuration for each instance */
+        {
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_3,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_2,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UFALSE
+            },
+            {
+                UTRUE, {0,0},
+                0, 0,
+                MSC_FILTER_MODE_MULTI_PHASE,
+                MSC_PHASE_MODE_32PHASE,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_SINGLE_PHASE_SP_COEFF_0,
+                MSC_MULTI_32PHASE_COEFF_SET_1,
+                MSC_MULTI_32PHASE_COEFF_SET_0,
+                MSC_COEFF_SHIFT_8,
+                UFALSE, UFALSE
+            },
+            {
+                UFALSE
+            },
+            {
+                UFALSE
+            },
+            {
+                UFALSE
+            },
+        },
+        UFALSE,
+        {
+        }
+    },
+#endif
+
+#endif

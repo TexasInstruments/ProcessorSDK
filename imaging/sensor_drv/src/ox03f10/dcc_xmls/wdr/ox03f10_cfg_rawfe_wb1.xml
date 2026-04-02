@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfg_flxd_cc_xml xmlns:xsi="http://www.w3.org/2001/xmlschema-instance" xmlns:xsd="http://www.w3.org/2001/xmlschema">
+  <!--this is a comment-->
+    <dcc_name>cfg_flxd_cc</dcc_name>
+    <dcc_header>
+		<camera_module_id>    3 </camera_module_id>
+	    <dcc_descriptor_id>   25 </dcc_descriptor_id>
+	    <algorithm_vendor_id>  1 </algorithm_vendor_id>
+	    <tunning_tool_version> 0 </tunning_tool_version>
+    </dcc_header>
+  <!--=======================================================================-->
+    <typedef>
+		<cfg_rawfe_wb1_vars type="struct">
+            <wb1 type="uint16[4]"> </wb1>
+      </cfg_rawfe_wb1_vars>
+    </typedef>
+	<!--=======================================================================-->
+    <use_case val="1023">
+        <n-space>
+			<region0 class="0">
+				<exposure val="1" min="0" max="2000000">  </exposure>
+				<gain val="0" min="0" max="100000">  </gain>
+			</region0>
+		</n-space>
+
+        <parameter_package>
+            <cfg_rawfe_wb1_vars_dcc type="cfg_rawfe_wb1_vars">
+            {
+                {2048,2048,2048,2048},
+            }
+            </cfg_rawfe_wb1_vars_dcc>
+        </parameter_package>
+    </use_case>
+  <!--=====================================================================-->
+</cfg_flxd_cc_xml>

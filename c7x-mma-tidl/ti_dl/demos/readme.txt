@@ -1,0 +1,1 @@
+The Open Source Runtime based examples and documents are moved to Github repository. Please refer this link https://github.com/TexasInstruments/edgeai-tidl-tools for more details

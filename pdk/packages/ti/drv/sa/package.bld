@@ -1,0 +1,151 @@
+/******************************************************************************
+ * FILE PURPOSE: Build description for the SA LLD Package
+ ******************************************************************************
+ * FILE NAME: package.bld
+ *
+ * DESCRIPTION:
+ *  This file contains the build specification and description for the SA LLD
+ *
+ *  The file takes the following parameters from the command line through the
+ *  XDCARGS variable.
+ *      XDCARGS[0] = SA LLD Install Type
+ *      Valid Values are "TAR" or "SETUP"
+ *      DEFAULT is "SETUP"
+ *
+ *  Example for a valid command:
+ *      xdc XDCARGS="SETUP" release
+ *
+ * Copyright (C) 2012-2018, Texas Instruments, Inc.
+ *****************************************************************************/
+
+/* List of all subdirectories that combine to make the SA LLD Package. */
+var subDirectories = [ "src", "docs", "fw", "example", "test"];
+
+/* Determine if we need to create the InstallJammer Application or not?
+ * SA LLD Deliverables be either of the following formats:
+ *  - TAR Ball Package
+ *  - Setup Executable
+ * DEFAULT is a TAR Executable. */
+
+if ((arguments[0] != "TAR") && (arguments[0] != "SETUP"))
+    lldInstallType = "TAR";
+else
+    lldInstallType = arguments[0];
+
+/* Irrespective of the InstallType we always create a TAR Ball Package as a part
+ * of the RTSC Build. Here we determine the name of the TAR Ball Package
+ *  Format is as follows:
+ *      salld_<version> */
+var lldRTSCFileName = "salld" + "_" +
+                         lldReleaseVersion[0] + "_" +  lldReleaseVersion[1] + "_" +
+                         lldReleaseVersion[2]  + "_" + lldReleaseVersion[3];
+
+var package_type = java.lang.System.getenv("PDK_PACKAGE_TYPE");
+
+/******************************************************************
+ ************************ Release Banner **************************
+ ******************************************************************/
+
+print ("************* SA LLD Build Information *************");
+print ("SA LLD Install             : " + lldInstallType);
+print ("SA LLD Version             : " + lldReleaseVersion);
+print ("C66 Tools Directory        : " + c66ToolsBaseDir);
+print ("A15 Tools Directory        : " + a15ToolsBaseDir);
+print ("RTSC File Name	           : " + lldRTSCFileName);
+print ("SA LLD Path                : " + lldPath);
+if (pOpts == 1)
+{
+    print ("CC LE opts                 : " + C66LE.ccOpts.prefix);
+    print ("A15 basic opts             : " + A15LE.ccOpts.prefix);
+}
+print ("***********************************************************");
+
+/* Create the release package for the SA LLD */
+Pkg.defaultRelease = Pkg.addRelease (lldRTSCFileName, {prefix: "./packages/"});
+
+/* Moving forward we need to set the Archiver of the package to be ZIP. This is currently
+ * not supported in the XDC tools being used. Currenly builds need to be done with the
+ * following options:-
+ *   xdc MK_FIXLISTOPTS=-t release
+ * ZIP is a better option as it works natively with INSTALL Jammer and we can remove the
+ * uncompression into a temporary directory. XDC Tools with xdc-rXX support the ZIP archiver. */
+//Pkg.attrs = {archiver : "zip"};
+
+if (package_type != "package_type_makefile")
+{
+    /* Cycle through all the sub-directories and build all the files */
+    for (var i = 0; i < subDirectories.length; i++)
+    {
+        /* Load the capsule in the sub directory. */
+        var caps = xdc.loadCapsule (subDirectories[i]+"/Module.xs");
+
+        print ("Building directory " + subDirectories[i]);
+
+        /* Build the capsule. */
+        caps.modBuild();
+
+        /* Package the module.xs files for building via package */
+        Pkg.otherFiles[Pkg.otherFiles.length++] = subDirectories[i]+"/Module.xs";
+    }
+
+    /* Package the remaining files */
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "config.bld";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "config_mk.bld";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "package.bld";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "package.xdc";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "package.xs";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "Settings.xdc";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "Settings.xdc.xdt";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "salld.h";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "saver.h";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "saver.h.xdt";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "sa_osal.h";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "docs/Doxyfile";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "docs/Doxyfile.xdt";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "build/buildlib.xs";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "makefile";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "makefile_armv7";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "sa_component.mk";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "build//makefile_lite2.mk";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "build/armv7/libsa_aearmv7.mk";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "util/coreDump/k2e/armv7/linux/build/makefile";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "util/coreDump/k2h/armv7/linux/build/makefile";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "util/coreDump/k2k/armv7/linux/build/makefile";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "util/coreDump/k2l/armv7/linux/build/makefile";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "util/coreDump/utilSaCoreDumpUtil.c";
+    Pkg.otherFiles[Pkg.otherFiles.length++] = "util/utilSaOsal.c";
+
+    if (pkgLibExplicitly == 1)
+    {
+        Pkg.otherFiles[Pkg.otherFiles.length++] = "./lib";
+    }
+
+    /* Generate Users Manual Doxyfile */
+    var tplt = xdc.loadTemplate("./docs/Doxyfile.xdt");
+    tplt.genFile("./docs/Doxyfile",lldReleaseVersion);
+}
+
+/* Check if we need to create the mini package? */
+var xdcplugin_gen = java.lang.System.getenv("ECLIPSE_PLUGIN_GEN");
+
+if (xdcplugin_gen=="NULL")
+{
+  /* There is no action */
+}
+else
+{
+  /* Eclipse Plugin generation is needed s */
+  var tplt = xdc.loadTemplate("./eclipse/sample.xml.xdt");
+  tplt.genFile("./eclipse/sample.xml",lldReleaseVersion);
+}
+
+
+/* Generate Settings.xdc */
+var tplt = xdc.loadTemplate("./Settings.xdc.xdt");
+tplt.genFile("./Settings.xdc",lldReleaseVersion);
+
+/* Generate saver.h */
+var tplt = xdc.loadTemplate("./saver.h.xdt");
+tplt.genFile("./saver.h",lldReleaseVersion);
+
+

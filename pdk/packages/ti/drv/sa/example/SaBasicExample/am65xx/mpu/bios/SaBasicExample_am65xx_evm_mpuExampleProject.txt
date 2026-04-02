@@ -1,0 +1,21 @@
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/a53/framework.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/a53/init_mmu_sysbios.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/armv7/bios/testMain.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/armv7/bios/testmem.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/common/testutil.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/test/SaUnitTest/src/common/common2.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/salldsim/salld_osal.c" 
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/salldsim/salldsim.c" 
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/salldsim/salldutil.c" 
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/salldsim/salldcfg.c" 
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/tests/test7.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/vectors/pkt_test7.c" 
+
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/am65xx/mpu/bios/saBasicExample_am65xx_evm_bios_a53.cfg"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/test/SaUnitTest/am65xx/linker_sa2ul_a53.lds"
+
+-ccs.setCompilerOptions "-DBUILD_MPU -DUSE_BIOS -DNSS_LITE2 -c -mcpu=cortex-a53+fp+simd -mabi=lp64 -mcmodel=large -Dam65xx_evm -DSOC_AM65XX -Dgcc -g -Wall -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -I${PDK_INSTALL_PATH}/ti/drv/sa -I${PDK_INSTALL_PATH}/ti/drv/sa/example/SaBasicExample/src/ -I${PDK_INSTALL_PATH} "  -rtsc.enableRtsc
+
+
+-ccs.setLinkerOptions " -lrdimon -lgcc -lm  -nostartfiles -static -Wl,--gc-sections "
+-rtsc.setConfiguroOptions "-b ${PDK_INSTALL_PATH}/ti/build/am65xx/config_am65xx_a53.bld -DBOARD=am65xx_evm"

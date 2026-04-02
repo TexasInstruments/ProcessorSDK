@@ -1,0 +1,40 @@
+SENSOR_ID 728
+PRJ_DIR ../../../sensor_drv/src/imx728
+SENSOR_NAME imx728
+SENSOR_DCC_NAME IMX728-UB971_D3
+
+SENSOR_WIDTH 3840
+SENSOR_HEIGHT 2160
+
+# 0=RGGB; 1=GRBG; 2=GBRG; 3=BGGR, 4=MONO,
+#10=RGGI, 11=GRIG, 12=BGGI, 13=GBIG, 14=GIRG, 15=IGGR, 16=GIBG, 17=IGGB
+COLOR_PATTERN 0
+
+# sensor mode: 0 for linear (no decompanding), 1 for WDR (decompanding)
+WDR_MODE 1
+
+# raw sensor image BIT_DEPTH: it may be 8, 10, or 12 for linear sensors; typically 12 for WDR mode because of companding
+BIT_DEPTH 12
+
+# WDR BIT_DEPTH: WDR raw sensor image bitdepth after decompanding, typically 20 or 24
+WDR_BIT_DEPTH 24
+
+# WDR decompanding knee points (comma separated without spaces in between)
+WDR_KNEE_X 0,384,512,1088,1408,1952,2016,2560,2976,3040,3264,4095
+WDR_KNEE_Y 0,384,858,3250,14445,34929,59255,243067,490916,997067,4089990,16777215
+
+# Sensor black level to subtract before decompanding (for linear sensors only and some Sony WDR sensors)
+BLACK_PRE  0
+
+# Sensor black level to subtract after decompanding (for most WDR sensors and all linear sensors)
+BLACK_POST  0
+
+# GAMMA value for compressing 20/24-bit WDR raw to 16-bit ISP internal
+# typically around 50 (0.5) for 24-bit WDR sensors and 70 (0.7) for 20-bit sensors
+GAMMA_PRE 48
+
+# LSB location for H3A input bit range (from bit-H3A_INPUT_LSB to bit-H3A_INPUT_LSB+9) 
+H3A_INPUT_LSB 2
+
+# Choose the default gamma curve used for YUV output: 0 for BT709, 1 for a high contrast gamma curve
+YUV_GAMMA 0

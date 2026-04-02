@@ -1,0 +1,39 @@
+SENSOR_ID 3
+PRJ_DIR ../../../sensor_drv/src/ox03f10/
+SENSOR_NAME ox03f10
+SENSOR_DCC_NAME OV0X3F-UB953_OV
+
+SENSOR_WIDTH 1920
+SENSOR_HEIGHT 1536
+
+# 0=RGGB;  1=GRBG;  2=GBRG;  3=BGGR,  4=MONO,
+#10=RGGI, 11=GRIG, 12=BGGI, 13=GBIG, 14=GIRG, 15=IGGR, 16=GIBG, 17=IGGB
+COLOR_PATTERN 3
+
+# sensor mode: 0 for linear (no decompanding), 1 for WDR (decompanding)
+WDR_MODE 1
+
+# raw sensor image BIT_DEPTH: it may be 8, 10, or 12 for linear sensors; typically 12 for WDR mode because of companding
+BIT_DEPTH 12
+
+# WDR BIT_DEPTH: WDR raw sensor image bitdepth after decompanding, typically 20 or 24
+WDR_BIT_DEPTH 24
+
+# WDR decompanding knee points (comma separated without spaces in between)
+WDR_KNEE_X 0,512,767,1023,1279,1535,1663,1791,1919,2047,2175,2303,2431,2559,2687,2815,2943,3071,3135,3199,3263,3327,3391,3455,3519,3583,3647,3711,3775,3839,3903,3967,4031,4095
+WDR_KNEE_Y 0,511,1022,2045,3068,4091,6138,8185,12280,16375,24566,32757,49140,65523,98290,131057,196592,262127,393198,524269,786412,1048555,1310698,1572841,2097128,2621415,3145702,4194277,5242852,6291427,8388578,10485729,12582880,16777183
+
+# Sensor black level to subtract before decompanding (for some Sony WDR sensors)
+# When PCID is on for RGBIR sensors, black level might be set to 0
+BLACK_PRE   0
+
+# When PCID is on for RGBIR sensors, black level might be set to 0
+BLACK_POST  0
+
+# GAMMA value for compressing 20/24-bit WDR raw to 16-bit ISP internal
+# typically around 50 (0.5) for 24-bit WDR sensors and 70 (0.7) for 20-bit sensors
+GAMMA_PRE 50
+
+# LSB location for H3A input bit range (from bit-H3A_INPUT_LSB to bit-H3A_INPUT_LSB+9) 
+H3A_INPUT_LSB 3
+

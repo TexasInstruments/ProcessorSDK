@@ -1,0 +1,40 @@
+SENSOR_ID 219
+PRJ_DIR ../imx219_output
+SENSOR_NAME imx219
+SENSOR_DCC_NAME IMX219
+
+SENSOR_WIDTH 1920
+SENSOR_HEIGHT 1080
+
+# 0=RGGB; 1=GRBG; 2=GBRG; 3=BGGR, 4=MONO
+COLOR_PATTERN 0
+
+# sensor mode: 0 for linear (no decompanding), 1 for WDR (decompanding)
+WDR_MODE 0
+
+# raw sensor image BIT_DEPTH: it may be 8, 10, or 12 for linear sensors; typically 12 for WDR mode because of companding
+BIT_DEPTH 10
+
+# WDR BIT_DEPTH: WDR raw sensor image bitdepth after decompanding, typically 20 or 24
+WDR_BIT_DEPTH 10
+
+# WDR decompanding knee points (comma separated without spaces in between)
+WDR_KNEE_X 0,512,1408,2176,4095,65535
+WDR_KNEE_Y 0,2048,16384,65536,1048063,1048063
+
+# Sensor black level to subtract before decompanding (for linear sensors only and some Sony WDR sensors)
+BLACK_PRE  64
+
+# Sensor black level to subtract after decompanding (for most WDR sensors and all linear sensors)
+BLACK_POST  0
+
+# GAMMA value for compressing 20/24-bit WDR raw to 16-bit ISP internal
+# typically around 50 (0.5) for 24-bit WDR sensors and 70 (0.7) for 20-bit sensors
+GAMMA_PRE 70
+
+# LSB location for H3A input bit range (from bit-H3A_INPUT_LSB to bit-H3A_INPUT_LSB+9) 
+H3A_INPUT_LSB 0
+
+# Choose the default gamma curve used for YUV output: 0 for BT709, 1 for a high contrast gamma curve
+YUV_GAMMA 1
+

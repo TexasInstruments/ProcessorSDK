@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
+.tg .tg-kftd{background-color:#efefef;text-align:left;vertical-align:top}
+.tg .tg-6sgx{background-color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-fjir{background-color:#343434;color:#ffffff;text-align:left;vertical-align:top}
+</style>
+
+    <head>
+        <title>System Memory Map for Linux+RTOS mode</title>
+    </head>
+    <body>
+        <h1>System Memory Map for Linux+RTOS mode</h1>
+        <p>Note, this file is auto generated using PyTI_PSDK_RTOS tool</p>
+        <table class="tg">
+            <tr>
+                <th class="tg-fjir">Name</th>
+                <th class="tg-fjir">Start Addr</th>
+                <th class="tg-fjir">End Addr</th>
+                <th class="tg-fjir">Size </th>
+                <th class="tg-fjir">Attributes</th>
+                <th class="tg-fjir">Description</th>
+            </tr>
+            <tr>
+                <td class="tg-kftd">L2RAM_C7x_1_MAIN</td>
+                <td class="tg-kftd">0x7E000000</td>
+                <td class="tg-kftd">0x7E0FFFFF</td>
+                <td class="tg-kftd">1024.00 KB</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">L3 for C7x_1</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">L2RAM_C7x_1_AUX</td>
+                <td class="tg-6sgx">0x7F000000</td>
+                <td class="tg-6sgx">0x7F03BFFF</td>
+                <td class="tg-6sgx">240.00 KB</td>
+                <td class="tg-6sgx">RWIX</td>
+                <td class="tg-6sgx">L2 for C7x_1</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">L2RAM_C7x_1_AUX_AS_L1</td>
+                <td class="tg-kftd">0x7F03C000</td>
+                <td class="tg-kftd">0x7F03FFFF</td>
+                <td class="tg-kftd">16.00 KB</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">L1 for C7x_1</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">DDR_C7x_1_IPC</td>
+                <td class="tg-6sgx">0x99800000</td>
+                <td class="tg-6sgx">0x998FFFFF</td>
+                <td class="tg-6sgx">1024.00 KB</td>
+                <td class="tg-6sgx">RWIX</td>
+                <td class="tg-6sgx">DDR for C7x_1 for Linux IPC</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">DDR_C7x_1_RESOURCE_TABLE</td>
+                <td class="tg-kftd">0x99900000</td>
+                <td class="tg-kftd">0x999003FF</td>
+                <td class="tg-kftd">1024 B</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">DDR for C7x_1 for Linux resource table</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">DDR_C7X_1_IPC_TRACEBUF</td>
+                <td class="tg-6sgx">0x99900400</td>
+                <td class="tg-6sgx">0x999FFFFF</td>
+                <td class="tg-6sgx">1023.00 KB</td>
+                <td class="tg-6sgx">RWIX</td>
+                <td class="tg-6sgx">DDR for C7X_1 for Linux IPC tracebuffer</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">DDR_C7x_1_BOOT</td>
+                <td class="tg-kftd">0x99A00000</td>
+                <td class="tg-kftd">0x99A003FF</td>
+                <td class="tg-kftd">1024 B</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">DDR for C7x_1 for boot section</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">DDR_C7x_1_VECS</td>
+                <td class="tg-6sgx">0x99C00000</td>
+                <td class="tg-6sgx">0x99C03FFF</td>
+                <td class="tg-6sgx">16.00 KB</td>
+                <td class="tg-6sgx">RWIX</td>
+                <td class="tg-6sgx">DDR for C7x_1 for vecs section</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">DDR_C7x_1</td>
+                <td class="tg-kftd">0x99C10000</td>
+                <td class="tg-kftd">0x9A7FFFFF</td>
+                <td class="tg-kftd">11.94 MB</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">DDR for C7x_1 for code/data</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">DDR_MCU_R5F_IPC</td>
+                <td class="tg-6sgx">0x9B800000</td>
+                <td class="tg-6sgx">0x9B8FFFFF</td>
+                <td class="tg-6sgx">1024.00 KB</td>
+                <td class="tg-6sgx">RWIX</td>
+                <td class="tg-6sgx">DDR for MCU R5F for Linux IPC</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">DDR_MCU_R5F_RESOURCE_TABLE</td>
+                <td class="tg-kftd">0x9B900000</td>
+                <td class="tg-kftd">0x9B9003FF</td>
+                <td class="tg-kftd">1024 B</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">DDR for MCU R5F for Linux resource table</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">DDR_MCU_R5F_IPC_TRACEBUF</td>
+                <td class="tg-6sgx">0x9B900400</td>
+                <td class="tg-6sgx">0x9B9FFFFF</td>
+                <td class="tg-6sgx">1023.00 KB</td>
+                <td class="tg-6sgx">RWIX</td>
+                <td class="tg-6sgx">DDR for MCU R5F for Linux IPC tracebuffer</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">DDR_MCU_R5F</td>
+                <td class="tg-kftd">0x9BA00000</td>
+                <td class="tg-kftd">0x9C7FFFFF</td>
+                <td class="tg-kftd">14.00 MB</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">DDR for MCU R5F for code/data</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">DDR_DM_R5F_IPC</td>
+                <td class="tg-6sgx">0x9C800000</td>
+                <td class="tg-6sgx">0x9C8FFFFF</td>
+                <td class="tg-6sgx">1024.00 KB</td>
+                <td class="tg-6sgx">RWIX</td>
+                <td class="tg-6sgx">DDR for DM R5F for Linux IPC</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">DDR_DM_R5F_RESOURCE_TABLE</td>
+                <td class="tg-kftd">0x9C900000</td>
+                <td class="tg-kftd">0x9C9003FF</td>
+                <td class="tg-kftd">1024 B</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">DDR for DM R5F for Linux resource table</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">DDR_DM_R5F_IPC_TRACEBUF</td>
+                <td class="tg-6sgx">0x9C900400</td>
+                <td class="tg-6sgx">0x9C9FFFFF</td>
+                <td class="tg-6sgx">1023.00 KB</td>
+                <td class="tg-6sgx">RWIX</td>
+                <td class="tg-6sgx">DDR for DM R5F for Linux IPC tracebuffer</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">DDR_DM_R5F</td>
+                <td class="tg-kftd">0x9CAA0000</td>
+                <td class="tg-kftd">0x9E6FFFFF</td>
+                <td class="tg-kftd">28.38 MB</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">DDR for DM R5F for code/data</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">TIFS_LPM_CTX</td>
+                <td class="tg-6sgx">0x9E700000</td>
+                <td class="tg-6sgx">0x9E77FFFF</td>
+                <td class="tg-6sgx">512.00 KB</td>
+                <td class="tg-6sgx"></td>
+                <td class="tg-6sgx">TIFS LPM context save memory</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">ATF_MEM</td>
+                <td class="tg-kftd">0x9E780000</td>
+                <td class="tg-kftd">0x9E7FFFFF</td>
+                <td class="tg-kftd">512.00 KB</td>
+                <td class="tg-kftd"></td>
+                <td class="tg-kftd">ARM Trusted Firmware</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">OPTEE_MEM</td>
+                <td class="tg-6sgx">0x9E800000</td>
+                <td class="tg-6sgx">0x9FFFFFFF</td>
+                <td class="tg-6sgx">24.00 MB</td>
+                <td class="tg-6sgx"></td>
+                <td class="tg-6sgx">Open Portable Trusted Execution Environment</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">IPC_VRING_MEM</td>
+                <td class="tg-kftd">0xA0000000</td>
+                <td class="tg-kftd">0xA0FFFFFF</td>
+                <td class="tg-kftd">16.00 MB</td>
+                <td class="tg-kftd"></td>
+                <td class="tg-kftd">Memory for IPC Vring's. MUST be non-cached or cache-coherent</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">APP_LOG_MEM</td>
+                <td class="tg-6sgx">0xA1000000</td>
+                <td class="tg-6sgx">0xA103FFFF</td>
+                <td class="tg-6sgx">256.00 KB</td>
+                <td class="tg-6sgx"></td>
+                <td class="tg-6sgx">Memory for remote core logging</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">TIOVX_OBJ_DESC_MEM</td>
+                <td class="tg-kftd">0xA1040000</td>
+                <td class="tg-kftd">0xA1FFFFFF</td>
+                <td class="tg-kftd">15.75 MB</td>
+                <td class="tg-kftd"></td>
+                <td class="tg-kftd">Memory for TI OpenVX shared memory. MUST be non-cached or cache-coherent</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">APP_FILEIO_MEM</td>
+                <td class="tg-6sgx">0xA2000000</td>
+                <td class="tg-6sgx">0xA23FFFFF</td>
+                <td class="tg-6sgx"> 4.00 MB</td>
+                <td class="tg-6sgx"></td>
+                <td class="tg-6sgx">Memory for remote core file operations</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">TIOVX_LOG_RT_MEM</td>
+                <td class="tg-kftd">0xA2400000</td>
+                <td class="tg-kftd">0xA2FFFFFF</td>
+                <td class="tg-kftd">12.00 MB</td>
+                <td class="tg-kftd"></td>
+                <td class="tg-kftd">Memory for TI OpenVX shared memory for Run-time logging. MUST be non-cached or cache-coherent</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">DDR_SHARED_MEM</td>
+                <td class="tg-6sgx">0xA3000000</td>
+                <td class="tg-6sgx">0xADBFFFFF</td>
+                <td class="tg-6sgx">172.00 MB</td>
+                <td class="tg-6sgx"></td>
+                <td class="tg-6sgx">Memory for shared memory buffers in DDR</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">DDR_DM_R5F_VISS_CONFIG_HEAP</td>
+                <td class="tg-kftd">0xADC00000</td>
+                <td class="tg-kftd">0xADFFFFFF</td>
+                <td class="tg-kftd"> 4.00 MB</td>
+                <td class="tg-kftd">RW</td>
+                <td class="tg-kftd">DDR for storing DMA buffers for VISS configuration</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">DDR_MCU_R5F_LOCAL_HEAP</td>
+                <td class="tg-6sgx">0xAE000000</td>
+                <td class="tg-6sgx">0xAEFFFFFF</td>
+                <td class="tg-6sgx">16.00 MB</td>
+                <td class="tg-6sgx">RWIX</td>
+                <td class="tg-6sgx">DDR for MCU R5F for local heap</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">DDR_DM_R5F_LOCAL_HEAP</td>
+                <td class="tg-kftd">0xAF000000</td>
+                <td class="tg-kftd">0xAFFFFFFF</td>
+                <td class="tg-kftd">16.00 MB</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">DDR for DM R5F for local heap</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">DDR_C7X_1_LOCAL_HEAP_NON_CACHEABLE</td>
+                <td class="tg-6sgx">0xB0000000</td>
+                <td class="tg-6sgx">0xB0FFFFFF</td>
+                <td class="tg-6sgx">16.00 MB</td>
+                <td class="tg-6sgx">RWIX</td>
+                <td class="tg-6sgx">DDR for c7x_1 for non cacheable local heap</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">DDR_C7X_1_SCRATCH_NON_CACHEABLE</td>
+                <td class="tg-kftd">0xB1000000</td>
+                <td class="tg-kftd">0xB1FFFFFF</td>
+                <td class="tg-kftd">16.00 MB</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">DDR for c7x_1 for non cacheable scratch Memory</td>
+            </tr>
+            <tr>
+                <td class="tg-6sgx">DDR_C7X_1_LOCAL_HEAP</td>
+                <td class="tg-6sgx">0xB2000000</td>
+                <td class="tg-6sgx">0xB8FFFFFF</td>
+                <td class="tg-6sgx">112.00 MB</td>
+                <td class="tg-6sgx">RWIX</td>
+                <td class="tg-6sgx">DDR for c7x_1 for local heap</td>
+            </tr>
+            <tr>
+                <td class="tg-kftd">DDR_C7X_1_SCRATCH</td>
+                <td class="tg-kftd">0xB9000000</td>
+                <td class="tg-kftd">0xBFFFFFFF</td>
+                <td class="tg-kftd">112.00 MB</td>
+                <td class="tg-kftd">RWIX</td>
+                <td class="tg-kftd">DDR for c7x_1 for Scratch Memory</td>
+            </tr>
+        </table>
+    </body>
+</html>

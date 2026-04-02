@@ -1,0 +1,45 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --device "J7200_DRA821_SR1.0_alpha" --package "ALM" --part "Default"
+ * @versions {"data":"20201003","timestamp":"2020060911","tool":"1.4.0+1234","templates":"20190604"}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const powerDomains = scripting.addModule("/ti/corePinmux/powerDomains");
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+powerDomains.CANUART          = "3.3 V";
+powerDomains.MMC1             = "3.3 V";
+powerDomains.MCU_CPSW2G_RGMII = "3.3 V";
+powerDomains.MCU_GENERAL      = "3.3 V";
+powerDomains.GENERAL          = "3.3 V";
+
+/**
+ * These are the peripherals and settings in this configuration
+ */
+const iSPI1         = scripting.addPeripheral("SPI");
+iSPI1.$name         = "MySPI5";
+iSPI1.$assign       = "SPI5";
+iSPI1.CLK.$assign   = "W15";
+iSPI1.CS0.$assign   = "W16";
+iSPI1.CS1.$assign   = "V21";
+iSPI1.CS2.$used     = false;
+iSPI1.CS3.$used     = false;
+iSPI1.D0.$assign    = "Y21";
+iSPI1.D1.$assign    = "Y20";
+const iUART1        = scripting.addPeripheral("UART");
+iUART1.$name        = "MyUART3";
+iUART1.$assign      = "USART3";
+iUART1.CTSn.$assign = "T15";
+iUART1.DCDn.$used   = false;
+iUART1.DSRn.$used   = false;
+iUART1.DTRn.$used   = false;
+iUART1.RIn.$used    = false;
+iUART1.RTSn.$assign = "U19";
+iUART1.RXD.$assign  = "Y18";
+iUART1.TXD.$assign  = "Y19";

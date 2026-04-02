@@ -1,0 +1,106 @@
+#
+# This file is the makefile for building sciclient .
+#
+ifeq ($(RULES_MAKE), )
+include $(PDK_INSTALL_PATH)/ti/build/Rules.make
+else
+include $(RULES_MAKE)
+endif
+
+all: src/sciclient/sciclient_direct.c
+src/sciclient/sciclient_direct.c: src/version/sciserver_version.h src/version/rmpmhal_version.h
+src/version/sciserver_version.h: gen_sciserver_version
+src/version/rmpmhal_version.h: gen_rmpmhal_version
+
+HS_SUFFIX=
+ifeq ($(BUILD_HS), yes)
+HS_SUFFIX=_hs
+endif
+
+MODULE_NAME = sciclient_merged$(HS_SUFFIX)
+
+SRCDIR = src/sciclient src/sec_proxy/src
+INCDIR = soc/sysfw/include src/sciclient src/sec_proxy
+
+# SoC Specific source files
+ifeq ($(SOC),$(filter $(SOC), j721e))
+  SCICLIENT_SOCVER = V1
+endif
+ifeq ($(SOC),$(filter $(SOC), j7200))
+  SCICLIENT_SOCVER = V2
+endif
+ifeq ($(SOC),$(filter $(SOC), j721s2))
+  SCICLIENT_SOCVER = V4
+endif
+ifeq ($(SOC),$(filter $(SOC), j784s4 j742s2))
+  SCICLIENT_SOCVER = V6
+endif
+
+SRCDIR += soc/$(SCICLIENT_SOCVER)
+INCDIR += soc/$(SCICLIENT_SOCVER)
+
+# List all the external components/interfaces, whose interface header files
+# need to be included for this component
+INCLUDE_EXTERNAL_INTERFACES = pdk osal
+
+# Common source files and CFLAGS across all platforms and cores
+ifeq ($(SOC),$(filter $(SOC), j721e j7200 j721s2 j784s4 j742s2))
+# Keep the sciclient.c the first file in this list. This is used to trigger
+# the generation of the header files from the firware binary file.
+SRCS_COMMON  = sciclient.c
+SRCS_COMMON += sciclient_osal.c
+SRCS_COMMON += sciclient_direct.c
+SRCS_COMMON += sciclient_indirect.c
+SRCS_COMMON += sciclient_fmwSecureProxyMap.c
+SRCS_COMMON += sciclient_pm.c
+SRCS_COMMON += sciclient_rm.c
+SRCS_COMMON += sciclient_firewall.c
+SRCS_COMMON += sciclient_dkek.c
+SRCS_COMMON += sciclient_irq_rm.c
+SRCS_COMMON += sciclient_rm_irq.c
+SRCS_COMMON += sciclient_boardcfg.c
+SRCS_COMMON += sciclient_procboot.c
+SRCS_COMMON += sciclient_genericMsgs.c
+SRCS_COMMON += sciclient_rom.c
+SRCS_COMMON += sciclient_secureProxyCfg.c
+SRCS_COMMON += sciclient_secureproxy.c
+SRCS_COMMON += sciclient_keywriter.c
+SRCS_COMMON += sciclient_lpm.c
+SRCS_COMMON += sciclient_pmic.c
+SRCS_COMMON += csl_sec_proxy.c
+SRCS_COMMON += sciclient_utils.c
+SRCS_COMMON += sciclient_merged.c
+endif
+
+ifeq ($(SOC),$(filter $(SOC), j7200 j784s4 j742s2))
+SRCS_COMMON += sciclient_s2r.c
+endif
+
+CFLAGS_LOCAL_COMMON = $(PDK_CFLAGS) $(SCICLIENT_CFLAGS)
+CFLAGS_LOCAL_COMMON += -DSCICLIENT_MERGED
+
+ifeq ($(BUILD_HS), yes)
+CFLAGS_LOCAL_COMMON += -DBUILD_HS
+endif
+
+include $(PDK_INSTALL_PATH)/ti/drv/sciclient/src/rm_pm_hal_build.mk
+
+# Core/SoC/platform specific source files and CFLAGS
+# Example:
+#   SRCS_<core/SoC/platform-name> =
+#   CFLAGS_LOCAL_<core/SoC/platform-name> =
+
+# Include common make files
+ifeq ($(MAKERULEDIR), )
+#Makerule path not defined, define this and assume relative path from ROOTDIR
+  MAKERULEDIR := $(ROOTDIR)/ti/build/makerules
+  export MAKERULEDIR
+endif
+include $(MAKERULEDIR)/common.mk
+
+include $(PDK_INSTALL_PATH)/ti/drv/sciclient/src/sciserver_version_makefile
+
+# OBJs and libraries are built by using rule defined in rules_<target>.mk
+#     and need not be explicitly specified here
+
+# Nothing beyond this point

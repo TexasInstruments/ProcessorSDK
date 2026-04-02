@@ -1,0 +1,1038 @@
+{
+  "description": "This JSON file contains configurations for Power and Sleep Controller (PSC) domains within a SoC. The structure of the file is as follows:                   The root contains keys that represent the different PSC domains. Each PSC domain contains keys that represent the different power domains.                   Each power domain contains a list of LPSCs, each LPSC have its status an a list of IPs it controls",
+  "pscStatus": {
+    "PSC0": {
+      "GP_Core_CTL": {
+        "lpsc_list": {
+          "LPSC_main_alwayson": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "COMPUTE_CLUSTER0_CORE_CORE",
+              "COMPUTE_CLUSTER0_EN_MSMC_DOMAIN",
+              "CPT2_AGGR0",
+              "CPT2_AGGR1",
+              "CPT2_AGGR2",
+              "CPT2_AGGR3",
+              "CTRL_MMR0",
+              "DCC0",
+              "DCC1",
+              "DCC2",
+              "DCC3",
+              "DCC4",
+              "DCC5",
+              "DCC6",
+              "EFUSE0",
+              "ESM0",
+              "GPIO0",
+              "MSRAM_512K0",
+              "NAVSS0_CPTS_0",
+              "NAVSS0_DMA_VIRTID_0",
+              "NAVSS0_DMA_VIRTID_1",
+              "NAVSS0_DTI_0",
+              "NAVSS0_INTR_ROUTER_0",
+              "NAVSS0_MAILBOX_0",
+              "NAVSS0_MAILBOX_1",
+              "NAVSS0_MAILBOX_10",
+              "NAVSS0_MAILBOX_11",
+              "NAVSS0_MAILBOX_2",
+              "NAVSS0_MAILBOX_3",
+              "NAVSS0_MAILBOX_4",
+              "NAVSS0_MAILBOX_5",
+              "NAVSS0_MAILBOX_6",
+              "NAVSS0_MAILBOX_7",
+              "NAVSS0_MAILBOX_8",
+              "NAVSS0_MAILBOX_9",
+              "NAVSS0_MCRC_0",
+              "NAVSS0_MODSS",
+              "NAVSS0_MODSS_ECC_AGGR_0",
+              "NAVSS0_MODSS_INTA_0",
+              "NAVSS0_MODSS_INTA_1",
+              "NAVSS0_NBSS_0",
+              "NAVSS0_NBSS_ECC_AGGR_0",
+              "NAVSS0_NORTH_0",
+              "NAVSS0_NORTH_1",
+              "NAVSS0_PROXY_0",
+              "NAVSS0_RINGACC_0",
+              "NAVSS0_SEC_PROXY_0",
+              "NAVSS0_SPINLOCK_0",
+              "NAVSS0_TBU_0",
+              "NAVSS0_TIMERMGR_0",
+              "NAVSS0_TIMERMGR_1",
+              "NAVSS0_UDMAP_0",
+              "NAVSS0_UDMASS",
+              "NAVSS0_UDMASS_ECC_AGGR_0",
+              "NAVSS0_UDMASS_INTA_0",
+              "NAVSS0_VIRTSS",
+              "NAVSS0_VIRTSS_ECC_AGGR_0",
+              "PDMA10",
+              "PDMA13",
+              "PDMA14",
+              "PDMA15",
+              "PDMA5",
+              "PDMA6",
+              "PDMA9",
+              "PLL0",
+              "PSRAM2KECC0",
+              "PSRAMECC0",
+              "SEC_MMR0",
+              "TIMEOUT0",
+              "TIMEOUT1",
+              "TIMEOUT2",
+              "TIMEOUT3",
+              "TIMEOUT4",
+              "TIMER4",
+              "TIMER5",
+              "TIMER6",
+              "TIMER7"
+            ]
+          },
+          "LPSC_main_test": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "DFTSS0"
+            ]
+          },
+          "LPSC_main_pbist": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "PBIST0",
+              "PBIST1"
+            ]
+          },
+          "LPSC_PER_audio": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCASP0",
+              "MCASP1",
+              "MCASP2"
+            ]
+          },
+          "LPSC_PER_ATL": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "atl0"
+            ]
+          },
+          "LPSC_PER_MLB": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "NAVSS0"
+            ]
+          },
+          "LPSC_PER_motor": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "ECAP0",
+              "ECAP1",
+              "ECAP2",
+              "EHRPWM0",
+              "EHRPWM1",
+              "EHRPWM2",
+              "EHRPWM3",
+              "EHRPWM4",
+              "EHRPWM5",
+              "EQEP0",
+              "EQEP1",
+              "EQEP2"
+            ]
+          },
+          "LPSC_PER_miscio": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "I2C0"
+            ]
+          },
+          "LPSC_PER_GPMC": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "ELM0",
+              "GPMC0"
+            ]
+          },
+          "LPSC_PER_VPFE": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "CMPEVENT_INTRTR0",
+              "GPIO2",
+              "GPIO4",
+              "GPIO6",
+              "GPIOMUX_INTRTR0",
+              "GTC0",
+              "MAIN2MCU_LVL_INTRTR0",
+              "MAIN2MCU_PLS_INTRTR0",
+              "TIMESYNC_INTRTR0"
+            ]
+          },
+          "LPSC_PER_vpe": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "CBASS_FFI0"
+            ]
+          },
+          "LPSC_PER_spare0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "TIMER10",
+              "TIMER11",
+              "TIMER12",
+              "TIMER13",
+              "TIMER14",
+              "TIMER15",
+              "TIMER16",
+              "TIMER17",
+              "TIMER18",
+              "TIMER19",
+              "TIMER8",
+              "TIMER9"
+            ]
+          },
+          "LPSC_PER_spare1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_main_debug": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "DEBUGSS0",
+              "DEBUGSS_WRAP0",
+              "DEBUGSUSPENDRTR0",
+              "PDMA2",
+              "STM0"
+            ]
+          },
+          "LPSC_EMIF_DATA_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "COMPUTE_CLUSTER0"
+            ]
+          },
+          "LPSC_EMIF_CFG_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "DDR0"
+            ]
+          },
+          "LPSC_EMIF_DATA_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_EMIF_CFG_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_PER_SPARE2": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_cc_top_PBIST": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "COMPUTE_CLUSTER0_PBIST_WRAP"
+            ]
+          },
+          "LPSC_USB_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "USB0"
+            ]
+          },
+          "LPSC_USB_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_USB_2": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "CBASS_FFI0"
+            ]
+          },
+          "LPSC_MMC4b_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MMCSD1"
+            ]
+          },
+          "LPSC_MMC4b_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_MMC8b_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MMCSD0"
+            ]
+          },
+          "LPSC_UFS_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_UFS_1": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "CBASS_FFI0"
+            ]
+          },
+          "LPSC_PCIe_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_PCIe_1": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "PCIE1"
+            ]
+          },
+          "LPSC_PCIe_2": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_PCIe_3": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_SAUL": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_PER_I3C": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "I3C0"
+            ]
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_mcanss": {
+        "lpsc_list": {
+          "LPSC_main_mcanss_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN0"
+            ]
+          },
+          "LPSC_main_mcanss_1": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN1"
+            ]
+          },
+          "LPSC_main_mcanss_2": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN2"
+            ]
+          },
+          "LPSC_main_mcanss_3": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN3"
+            ]
+          },
+          "LPSC_main_mcanss_4": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN4"
+            ]
+          },
+          "LPSC_main_mcanss_5": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN5"
+            ]
+          },
+          "LPSC_main_mcanss_6": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN6"
+            ]
+          },
+          "LPSC_main_mcanss_7": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN7"
+            ]
+          },
+          "LPSC_main_mcanss_8": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN8"
+            ]
+          },
+          "LPSC_main_mcanss_9": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN9"
+            ]
+          },
+          "LPSC_main_mcanss_10": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN10"
+            ]
+          },
+          "LPSC_main_mcanss_11": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN11"
+            ]
+          },
+          "LPSC_main_mcanss_12": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN12"
+            ]
+          },
+          "LPSC_main_mcanss_13": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCAN13"
+            ]
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_DSS": {
+        "lpsc_list": {
+          "LPSC_DSS": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "MCAN14"
+            ]
+          },
+          "LPSC_DSS_PBIST": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "MCAN15"
+            ]
+          },
+          "LPSC_DSI": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "MCAN16"
+            ]
+          },
+          "LPSC_eDP_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "MCAN17"
+            ]
+          },
+          "LPSC_eDP_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "MCSPI0",
+              "MCSPI1",
+              "MCSPI2",
+              "MCSPI3"
+            ]
+          },
+          "LPSC_CSIRX_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCSPI4",
+              "MCSPI5",
+              "MCSPI6",
+              "MCSPI7"
+            ]
+          },
+          "LPSC_CSIRX_1": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "UART0",
+              "UART1"
+            ]
+          },
+          "LPSC_CSIRX_2": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "UART2",
+              "UART3"
+            ]
+          },
+          "LPSC_CSITX_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "UART4",
+              "UART5",
+              "UART6",
+              "UART7",
+              "UART8",
+              "UART9"
+            ]
+          },
+          "LPSC_TX_DPHY_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "I2C1",
+              "I2C2",
+              "I2C3"
+            ]
+          },
+          "LPSC_CSIRX_PHY_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "I2C4",
+              "I2C5",
+              "I2C6"
+            ]
+          },
+          "LPSC_CSIRX_PHY_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_CSIRX_PHY_2": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_ICSS": {
+        "lpsc_list": {
+          "LPSC_ICSSG_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_ICSSG_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_9GSS": {
+        "lpsc_list": {
+          "LPSC_9GSS": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "CPSW0"
+            ]
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_SERDES_0": {
+        "lpsc_list": {
+          "LPSC_SERDES_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "SERDES_10G1"
+            ]
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_SERDES_1": {
+        "lpsc_list": {
+          "LPSC_SERDES_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_SERDES_2": {
+        "lpsc_list": {
+          "LPSC_SERDES_2": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_SERDES_3": {
+        "lpsc_list": {
+          "LPSC_SERDES_3": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_SERDES_4": {
+        "lpsc_list": {
+          "LPSC_SERDES_4": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_SERDES_5": {
+        "lpsc_list": {
+          "LPSC_SERDES_5": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_timer": {
+        "lpsc_list": {
+          "LPSC_DMtimer_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "TIMER0"
+            ]
+          },
+          "LPSC_DMtimer_1": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "TIMER1"
+            ]
+          },
+          "LPSC_DMtimer_2": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "TIMER2"
+            ]
+          },
+          "LPSC_DMtimer_3": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "TIMER3"
+            ]
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_C71x_0": {
+        "lpsc_list": {
+          "LPSC_C71x_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_C71x_0_PBIST": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_C71x_1": {
+        "lpsc_list": {
+          "LPSC_C71x_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_C71x_1_PBIST": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_A72_cluster_0": {
+        "lpsc_list": {
+          "LPSC_A72_Cluster_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "A72SS0_CORE0"
+            ]
+          },
+          "LPSC_A72_Cluster_0_PBIST": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "A72SS0_CORE0",
+              "COMPUTE_CLUSTER0_PBIST_WRAP"
+            ]
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_A72_0": {
+        "lpsc_list": {
+          "LPSC_A72_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "A72SS0_CORE0_0",
+              "RTI0"
+            ]
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_A72_1": {
+        "lpsc_list": {
+          "LPSC_A72_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "A72SS0_CORE0_1",
+              "RTI1"
+            ]
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_A72_Cluster_1": {
+        "lpsc_list": {
+          "LPSC_A72_Cluster_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_A72_Cluster_1_PBIST": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_A72_2": {
+        "lpsc_list": {
+          "LPSC_A72_2": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_A72_3": {
+        "lpsc_list": {
+          "LPSC_A72_3": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_GPUCOM": {
+        "lpsc_list": {
+          "LPSC_GPUCOM": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_GPUPBIST": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_GPUCORE": {
+        "lpsc_list": {
+          "LPSC_gpucore": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_C66x_0": {
+        "lpsc_list": {
+          "LPSC_C66x_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_C66x_PBIST_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_C66x_1": {
+        "lpsc_list": {
+          "LPSC_C66x_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_C66x_PBIST_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_Pulsar_0": {
+        "lpsc_list": {
+          "LPSC_Pulsar_0_R5_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "R5FSS0_CORE0",
+              "RTI28"
+            ]
+          },
+          "LPSC_Pulsar_0_R5_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "R5FSS0_CORE1",
+              "RTI29"
+            ]
+          },
+          "LPSC_Pulsar_pbist_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "PBIST2"
+            ]
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_Pulsar_1": {
+        "lpsc_list": {
+          "LPSC_Pulsar_1_R5_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_Pulsar_1_R5_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_Pulsar_Pbist_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_decode_0": {
+        "lpsc_list": {
+          "LPSC_decode_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_decode_pbist": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_encode_0": {
+        "lpsc_list": {
+          "LPSC_encode_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_encode_pbist": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_DMPAC": {
+        "lpsc_list": {
+          "LPSC_DMPAC": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_SDE": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_DMPAC_PBIST": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      },
+      "PD_VPAC": {
+        "lpsc_list": {
+          "LPSC_VPAC": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_VPAC_PBIST": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "DISABLED"
+      }
+    },
+    "WKUP_PSC0": {
+      "PD_wkup": {
+        "lpsc_list": {
+          "LPSC_wkup_alwayson": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCU_CPSW0",
+              "MCU_CPT2_AGGR0",
+              "MCU_CTRL_MMR0",
+              "MCU_DCC0",
+              "MCU_DCC1",
+              "MCU_DCC2",
+              "MCU_ESM0",
+              "MCU_FSS0_FSAS_0",
+              "MCU_FSS0_HYPERBUS1P0_0",
+              "MCU_FSS0_OSPI_0",
+              "MCU_FSS0_OSPI_1",
+              "MCU_I2C0",
+              "MCU_I2C1",
+              "MCU_MCSPI0",
+              "MCU_MCSPI1",
+              "MCU_MCSPI2",
+              "MCU_MSRAM_1MB0",
+              "MCU_NAVSS0_INTR_ROUTER_0",
+              "MCU_NAVSS0_MCRC_0",
+              "MCU_NAVSS0_MODSS",
+              "MCU_NAVSS0_MODSS_ECC_AGGR0",
+              "MCU_NAVSS0_PROXY0",
+              "MCU_NAVSS0_PSILCFG_0",
+              "MCU_NAVSS0_RINGACC0",
+              "MCU_NAVSS0_SEC_PROXY0",
+              "MCU_NAVSS0_UDMAP_0",
+              "MCU_NAVSS0_UDMASS",
+              "MCU_NAVSS0_UDMASS_ECC_AGGR0",
+              "MCU_NAVSS0_UDMASS_INTA_0",
+              "MCU_PDMA0",
+              "MCU_PDMA1",
+              "MCU_PDMA2",
+              "MCU_PDMA3",
+              "MCU_PLL0",
+              "MCU_SA2_UL0",
+              "MCU_SEC_MMR0",
+              "MCU_TIMEOUT_64B2",
+              "MCU_TIMEOUT_64B3",
+              "MCU_TIMEOUT_64B4",
+              "MCU_TIMER0",
+              "MCU_TIMER1",
+              "MCU_TIMER2",
+              "MCU_TIMER3",
+              "MCU_TIMER4",
+              "MCU_TIMER5",
+              "MCU_TIMER6",
+              "MCU_TIMER7",
+              "MCU_TIMER8",
+              "MCU_TIMER9",
+              "MCU_UART0",
+              "WKUP_CTRL_MMR0",
+              "WKUP_DDPA0",
+              "WKUP_ESM0",
+              "WKUP_GPIOMUX_INTRTR0",
+              "WKUP_VTM0"
+            ]
+          },
+          "LPSC_dmsc": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "WKUP_DMSC0"
+            ]
+          },
+          "LPSC_debug2dmsc": {
+            "status": "ENABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_wkup_gpio": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "WKUP_GPIO0",
+              "WKUP_GPIO1",
+              "WKUP_I2C0",
+              "WKUP_UART0"
+            ]
+          },
+          "LPSC_wkupmcu2main": {
+            "status": "ENABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_main2wkupmcu": {
+            "status": "ENABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_mcu_test": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCU_EFUSE0",
+              "MCU_PBIST0",
+              "MCU_PBIST1"
+            ]
+          },
+          "LPSC_mcu_debug": {
+            "status": "ENABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_mcu_mcan_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCU_MCAN0"
+            ]
+          },
+          "LPSC_mcu_mcan_1": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCU_MCAN1"
+            ]
+          },
+          "LPSC_mcu_ospi_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCU_FSS0_OSPI_0"
+            ]
+          },
+          "LPSC_mcu_ospi_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "MCU_FSS0_OSPI_1"
+            ]
+          },
+          "LPSC_mcu_hyperbus": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCU_FSS0_HYPERBUS1P0_0"
+            ]
+          },
+          "LPSC_mcu_i3c_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "MCU_I3C0"
+            ]
+          },
+          "LPSC_mcu_i3c_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "MCU_I3C1"
+            ]
+          },
+          "LPSC_mcu_adc_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCU_ADC0"
+            ]
+          },
+          "LPSC_mcu_adc_1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_wkup_spare0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          },
+          "LPSC_wkup_spare1": {
+            "status": "DISABLED",
+            "controlled_ip_instances": []
+          }
+        },
+        "status": "ENABLED"
+      },
+      "PD_mcu_pulsar": {
+        "lpsc_list": {
+          "LPSC_mcu_r5_0": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCU_R5FSS0_CORE0",
+              "MCU_RTI0"
+            ]
+          },
+          "LPSC_mcu_r5_1": {
+            "status": "ENABLED",
+            "controlled_ip_instances": [
+              "MCU_R5FSS0_CORE1",
+              "MCU_RTI1"
+            ]
+          },
+          "LPSC_mcu_pulsar_pbist_0": {
+            "status": "DISABLED",
+            "controlled_ip_instances": [
+              "MCU_PBIST2"
+            ]
+          }
+        },
+        "status": "ENABLED"
+      }
+    }
+  }
+}

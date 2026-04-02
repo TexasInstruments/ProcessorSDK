@@ -1,0 +1,472 @@
+/*
+ *
+ * Copyright (c) 2017 Texas Instruments Incorporated
+ *
+ * All rights reserved not granted herein.
+ *
+ * Limited License.
+ *
+ * Texas Instruments Incorporated grants a world-wide, royalty-free, non-exclusive
+ * license under copyrights and patents it now or hereafter owns or controls to make,
+ * have made, use, import, offer to sell and sell ("Utilize") this software subject to the
+ * terms herein.  With respect to the foregoing patent license, such license is granted
+ * solely to the extent that any such patent is necessary to Utilize the software alone.
+ * The patent license shall not apply to any combinations which include this software,
+ * other than combinations with devices manufactured by or for TI ("TI Devices").
+ * No hardware patent is licensed hereunder.
+ *
+ * Redistributions must preserve existing copyright notices and reproduce this license
+ * (including the above copyright notice and the disclaimer and (if applicable) source
+ * code license limitations below) in the documentation and/or other materials provided
+ * with the distribution
+ *
+ * Redistribution and use in binary form, without modification, are permitted provided
+ * that the following conditions are met:
+ *
+ * *       No reverse engineering, decompilation, or disassembly of this software is
+ * permitted with respect to any software provided in binary form.
+ *
+ * *       any redistribution and use are licensed by TI for use only with TI Devices.
+ *
+ * *       Nothing shall obligate TI to provide you with source code for the software
+ * licensed and provided to you in object code.
+ *
+ * If software source code is provided to you, modification and redistribution of the
+ * source code are permitted provided that the following conditions are met:
+ *
+ * *       any redistribution and use of the source code, including any resulting derivative
+ * works, are licensed by TI for use only with TI Devices.
+ *
+ * *       any redistribution and use of any object code compiled from the source code
+ * and any resulting derivative works, are licensed by TI for use only with TI Devices.
+ *
+ * Neither the name of Texas Instruments Incorporated nor the names of its suppliers
+ *
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * DISCLAIMER.
+ *
+ * THIS SOFTWARE IS PROVIDED BY TI AND TI'S LICENSORS "AS IS" AND ANY EXPRESS
+ * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ * IN NO EVENT SHALL TI AND TI'S LICENSORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
+
+#include <TI/tivx.h>
+#include <tivx_openvx_core_kernels.h>
+#include <tivx_kernel_addsub.h>
+#include <TI/tivx_target_kernel.h>
+#include "tivx_core_host_priv.h"
+
+static vx_kernel vx_add_kernel = NULL, vx_subtract_kernel = NULL;
+
+static vx_status VX_CALLBACK tivxAddKernelAddSubValidate(vx_node node,
+            const vx_reference parameters[ ],
+            vx_uint32 num,
+            vx_meta_format metas[]);
+static vx_status VX_CALLBACK tivxAddKernelAddSubInitialize(vx_node node,
+            const vx_reference parameters[ ],
+            vx_uint32 num_params);
+
+static vx_status VX_CALLBACK tivxAddKernelAddSubValidate(vx_node node,
+            const vx_reference parameters[ ],
+            vx_uint32 num,
+            vx_meta_format metas[])
+{
+    vx_status status = (vx_status)VX_SUCCESS;
+
+    vx_image in1 = NULL;
+    vx_uint32 in1_w;
+    vx_uint32 in1_h;
+    vx_df_image in1_fmt;
+
+    vx_image in2 = NULL;
+    vx_uint32 in2_w;
+    vx_uint32 in2_h;
+    vx_df_image in2_fmt;
+
+    vx_scalar policy = NULL;
+    vx_enum policy_scalar_type;
+
+    vx_image out = NULL;
+    vx_uint32 out_w;
+    vx_uint32 out_h;
+    vx_df_image out_fmt;
+
+    vx_bool is_virtual = (vx_bool)vx_false_e;
+
+    if ( (num != TIVX_KERNEL_ADDSUB_MAX_PARAMS)
+        || (NULL == parameters[TIVX_KERNEL_ADDSUB_IN1_IDX])
+        || (NULL == parameters[TIVX_KERNEL_ADDSUB_IN2_IDX])
+        || (NULL == parameters[TIVX_KERNEL_ADDSUB_POLICY_IDX])
+        || (NULL == parameters[TIVX_KERNEL_ADDSUB_OUT_IDX])
+    )
+    {
+        status = (vx_status)VX_ERROR_INVALID_PARAMETERS;
+        VX_PRINT(VX_ZONE_ERROR, "One or more REQUIRED parameters are set to NULL\n");
+    }
+
+    if ((vx_status)VX_SUCCESS == status)
+    {
+        in1 = (vx_image)parameters[TIVX_KERNEL_ADDSUB_IN1_IDX];
+        in2 = (vx_image)parameters[TIVX_KERNEL_ADDSUB_IN2_IDX];
+        policy = (vx_scalar)parameters[TIVX_KERNEL_ADDSUB_POLICY_IDX];
+        out = (vx_image)parameters[TIVX_KERNEL_ADDSUB_OUT_IDX];
+    }
+
+
+    /* PARAMETER ATTRIBUTE FETCH */
+
+    if ((vx_status)VX_SUCCESS == status)
+    {
+        tivxCheckStatus(&status, vxQueryImage(in1, (vx_enum)VX_IMAGE_WIDTH, &in1_w, sizeof(in1_w)));
+        tivxCheckStatus(&status, vxQueryImage(in1, (vx_enum)VX_IMAGE_HEIGHT, &in1_h, sizeof(in1_h)));
+        tivxCheckStatus(&status, vxQueryImage(in1, (vx_enum)VX_IMAGE_FORMAT, &in1_fmt, sizeof(in1_fmt)));
+
+        tivxCheckStatus(&status, vxQueryImage(in2, (vx_enum)VX_IMAGE_WIDTH, &in2_w, sizeof(in2_w)));
+        tivxCheckStatus(&status, vxQueryImage(in2, (vx_enum)VX_IMAGE_HEIGHT, &in2_h, sizeof(in2_h)));
+        tivxCheckStatus(&status, vxQueryImage(in2, (vx_enum)VX_IMAGE_FORMAT, &in2_fmt, sizeof(in2_fmt)));
+
+        tivxCheckStatus(&status, vxQueryScalar(policy, (vx_enum)VX_SCALAR_TYPE, &policy_scalar_type, sizeof(policy_scalar_type)));
+
+        tivxCheckStatus(&status, vxQueryImage(out, (vx_enum)VX_IMAGE_WIDTH, &out_w, sizeof(out_w)));
+        tivxCheckStatus(&status, vxQueryImage(out, (vx_enum)VX_IMAGE_HEIGHT, &out_h, sizeof(out_h)));
+        tivxCheckStatus(&status, vxQueryImage(out, (vx_enum)VX_IMAGE_FORMAT, &out_fmt, sizeof(out_fmt)));
+
+#if 1
+
+        is_virtual = tivxIsReferenceVirtual((vx_reference)out);
+
+#endif
+
+    }
+
+
+    /* PARAMETER CHECKING */
+
+    if ((vx_status)VX_SUCCESS == status)
+    {
+        if (((vx_df_image)VX_DF_IMAGE_U8 != in1_fmt) &&
+            ((vx_df_image)VX_DF_IMAGE_S16 != in1_fmt))
+        {
+            status = (vx_status)VX_ERROR_INVALID_PARAMETERS;
+            VX_PRINT(VX_ZONE_ERROR, "'in1' should be an image of type:\n VX_DF_IMAGE_U8 or VX_DF_IMAGE_S16 \n");
+        }
+
+        if (((vx_df_image)VX_DF_IMAGE_U8 != in2_fmt) &&
+            ((vx_df_image)VX_DF_IMAGE_S16 != in2_fmt))
+        {
+            status = (vx_status)VX_ERROR_INVALID_PARAMETERS;
+            VX_PRINT(VX_ZONE_ERROR, "'in2' should be an image of type:\n VX_DF_IMAGE_U8 or VX_DF_IMAGE_S16 \n");
+        }
+
+        if ((vx_enum)VX_TYPE_ENUM != policy_scalar_type)
+        {
+            status = (vx_status)VX_ERROR_INVALID_PARAMETERS;
+            VX_PRINT(VX_ZONE_ERROR, "'policy' should be a scalar of type:\n VX_ENUM \n");
+        }
+
+        if ((vx_bool)vx_false_e == is_virtual)
+        {
+            if (((vx_df_image)VX_DF_IMAGE_U8 != out_fmt) &&
+                ((vx_df_image)VX_DF_IMAGE_S16 != out_fmt))
+            {
+                status = (vx_status)VX_ERROR_INVALID_PARAMETERS;
+                VX_PRINT(VX_ZONE_ERROR, "'out' should be an image of type:\n VX_DF_IMAGE_U8 or VX_DF_IMAGE_S16 \n");
+            }
+            if ((((vx_df_image)VX_DF_IMAGE_S16 == in1_fmt) || ((vx_df_image)VX_DF_IMAGE_S16 == in2_fmt)) &&
+                ((vx_df_image)VX_DF_IMAGE_S16 != out_fmt))
+            {
+                status = (vx_status)VX_ERROR_INVALID_PARAMETERS;
+                VX_PRINT(VX_ZONE_ERROR, "'out' should be an image of type:\n VX_DF_IMAGE_S16 \n");
+            }
+        }
+    }
+
+
+    /* PARAMETER RELATIONSHIP CHECKING */
+
+    if ((vx_status)VX_SUCCESS == status)
+    {
+        if (in1_w != in2_w)
+        {
+            status = (vx_status)VX_ERROR_INVALID_PARAMETERS;
+            VX_PRINT(VX_ZONE_ERROR, "Parameters 'in1' and 'in2' should have the same value for VX_IMAGE_WIDTH \n");
+        }
+
+        if (in1_h != in2_h)
+        {
+            status = (vx_status)VX_ERROR_INVALID_PARAMETERS;
+            VX_PRINT(VX_ZONE_ERROR, "Parameters 'in1' and 'in2' should have the same value for VX_IMAGE_HEIGHT \n");
+        }
+
+        if ((vx_bool)vx_false_e == is_virtual)
+        {
+            if (in1_w != out_w)
+            {
+                status = (vx_status)VX_ERROR_INVALID_PARAMETERS;
+                VX_PRINT(VX_ZONE_ERROR, "Parameters 'in1' and 'out' should have the same value for VX_IMAGE_WIDTH \n");
+            }
+
+            if (in1_h != out_h)
+            {
+                status = (vx_status)VX_ERROR_INVALID_PARAMETERS;
+                VX_PRINT(VX_ZONE_ERROR, "Parameters 'in1' and 'out' should have the same value for VX_IMAGE_HEIGHT \n");
+            }
+        }
+    }
+
+#if 1
+
+    if ((vx_status)VX_SUCCESS == status)
+    {
+        if ((vx_df_image)VX_DF_IMAGE_U8 != out_fmt)
+        {
+            out_fmt = (vx_df_image)VX_DF_IMAGE_S16;
+        }
+
+        vxSetMetaFormatAttribute(metas[TIVX_KERNEL_ADDSUB_OUT_IDX], (vx_enum)VX_IMAGE_FORMAT, &out_fmt, sizeof(out_fmt));
+        vxSetMetaFormatAttribute(metas[TIVX_KERNEL_ADDSUB_OUT_IDX], (vx_enum)VX_IMAGE_WIDTH, &in1_w, sizeof(in1_w));
+        vxSetMetaFormatAttribute(metas[TIVX_KERNEL_ADDSUB_OUT_IDX], (vx_enum)VX_IMAGE_HEIGHT, &in1_h, sizeof(in1_h));
+    }
+
+#endif
+
+    return status;
+}
+
+static vx_status VX_CALLBACK tivxAddKernelAddSubInitialize(vx_node node,
+            const vx_reference parameters[ ],
+            vx_uint32 num_params)
+{
+    vx_status status = (vx_status)VX_SUCCESS;
+    tivxKernelValidRectParams prms;
+
+    if ( (num_params != TIVX_KERNEL_ADDSUB_MAX_PARAMS)
+        || (NULL == parameters[TIVX_KERNEL_ADDSUB_IN1_IDX])
+        || (NULL == parameters[TIVX_KERNEL_ADDSUB_IN2_IDX])
+        || (NULL == parameters[TIVX_KERNEL_ADDSUB_POLICY_IDX])
+        || (NULL == parameters[TIVX_KERNEL_ADDSUB_OUT_IDX])
+    )
+    {
+        status = (vx_status)VX_ERROR_INVALID_PARAMETERS;
+        VX_PRINT(VX_ZONE_ERROR, "One or more REQUIRED parameters are set to NULL\n");
+    }
+    if ((vx_status)VX_SUCCESS == status)
+    {
+        tivxKernelValidRectParams_init(&prms);
+
+        prms.in_img[0U] = (vx_image)parameters[TIVX_KERNEL_ADDSUB_IN1_IDX];
+        prms.in_img[1U] = (vx_image)parameters[TIVX_KERNEL_ADDSUB_IN2_IDX];
+        prms.out_img[0U] = (vx_image)parameters[TIVX_KERNEL_ADDSUB_OUT_IDX];
+
+        prms.num_input_images = 2U;
+        prms.num_output_images = 1U;
+
+        prms.top_pad = 0U;
+        prms.bot_pad = 0U;
+        prms.left_pad = 0U;
+        prms.right_pad = 0U;
+        prms.border_mode = (vx_enum)VX_BORDER_UNDEFINED;
+
+        tivxCheckStatus(&status, tivxKernelConfigValidRect(&prms));
+    }
+
+    return status;
+}
+
+vx_status tivxAddKernelAdd(vx_context context)
+{
+    vx_kernel kernel;
+    vx_status status;
+    uint32_t index;
+
+    kernel = vxAddUserKernel(
+                context,
+                "org.khronos.openvx.add",
+                (vx_enum)VX_KERNEL_ADD,
+                NULL,
+                TIVX_KERNEL_ADDSUB_MAX_PARAMS,
+                tivxAddKernelAddSubValidate,
+                tivxAddKernelAddSubInitialize,
+                NULL);
+
+    status = vxGetStatus((vx_reference)kernel);
+    if (status == (vx_status)VX_SUCCESS)
+    {
+        index = 0;
+
+        {
+            status = vxAddParameterToKernel(kernel,
+                        index,
+                        (vx_enum)VX_INPUT,
+                        (vx_enum)VX_TYPE_IMAGE,
+                        (vx_enum)VX_PARAMETER_STATE_REQUIRED
+            );
+            index++;
+        }
+        if (status == (vx_status)VX_SUCCESS)
+        {
+            status = vxAddParameterToKernel(kernel,
+                        index,
+                        (vx_enum)VX_INPUT,
+                        (vx_enum)VX_TYPE_IMAGE,
+                        (vx_enum)VX_PARAMETER_STATE_REQUIRED
+            );
+            index++;
+        }
+        if (status == (vx_status)VX_SUCCESS)
+        {
+            status = vxAddParameterToKernel(kernel,
+                        index,
+                        (vx_enum)VX_INPUT,
+                        (vx_enum)VX_TYPE_SCALAR,
+                        (vx_enum)VX_PARAMETER_STATE_REQUIRED
+            );
+            index++;
+        }
+        if (status == (vx_status)VX_SUCCESS)
+        {
+            status = vxAddParameterToKernel(kernel,
+                        index,
+                        (vx_enum)VX_OUTPUT,
+                        (vx_enum)VX_TYPE_IMAGE,
+                        (vx_enum)VX_PARAMETER_STATE_REQUIRED
+            );
+        }
+        if (status == (vx_status)VX_SUCCESS)
+        {
+            /* add supported target's */
+            tivxKernelsHostUtilsAddKernelTargetDsp(kernel);
+        }
+        if (status == (vx_status)VX_SUCCESS)
+        {
+            status = vxFinalizeKernel(kernel);
+        }
+        if (status != (vx_status)VX_SUCCESS)
+        {
+            vxReleaseKernel(&kernel);
+            kernel = NULL;
+        }
+    }
+    else
+    {
+        kernel = NULL;
+    }
+    vx_add_kernel = kernel;
+
+    return status;
+}
+
+vx_status tivxRemoveKernelAdd(vx_context context)
+{
+    vx_status status;
+    vx_kernel kernel = vx_add_kernel;
+
+    status = vxRemoveKernel(kernel);
+    vx_add_kernel = NULL;
+
+    return status;
+}
+
+vx_status tivxAddKernelSub(vx_context context)
+{
+    vx_kernel kernel;
+    vx_status status;
+    uint32_t index;
+
+    kernel = vxAddUserKernel(
+                context,
+                "org.khronos.openvx.subtract",
+                (vx_enum)VX_KERNEL_SUBTRACT,
+                NULL,
+                TIVX_KERNEL_ADDSUB_MAX_PARAMS,
+                tivxAddKernelAddSubValidate,
+                tivxAddKernelAddSubInitialize,
+                NULL);
+
+    status = vxGetStatus((vx_reference)kernel);
+    if (status == (vx_status)VX_SUCCESS)
+    {
+        index = 0;
+
+        {
+            status = vxAddParameterToKernel(kernel,
+                        index,
+                        (vx_enum)VX_INPUT,
+                        (vx_enum)VX_TYPE_IMAGE,
+                        (vx_enum)VX_PARAMETER_STATE_REQUIRED
+            );
+            index++;
+        }
+        if (status == (vx_status)VX_SUCCESS)
+        {
+            status = vxAddParameterToKernel(kernel,
+                        index,
+                        (vx_enum)VX_INPUT,
+                        (vx_enum)VX_TYPE_IMAGE,
+                        (vx_enum)VX_PARAMETER_STATE_REQUIRED
+            );
+            index++;
+        }
+        if (status == (vx_status)VX_SUCCESS)
+        {
+            status = vxAddParameterToKernel(kernel,
+                        index,
+                        (vx_enum)VX_INPUT,
+                        (vx_enum)VX_TYPE_ENUM,
+                        (vx_enum)VX_PARAMETER_STATE_REQUIRED
+            );
+            index++;
+        }
+        if (status == (vx_status)VX_SUCCESS)
+        {
+            status = vxAddParameterToKernel(kernel,
+                        index,
+                        (vx_enum)VX_OUTPUT,
+                        (vx_enum)VX_TYPE_IMAGE,
+                        (vx_enum)VX_PARAMETER_STATE_REQUIRED
+            );
+        }
+        if (status == (vx_status)VX_SUCCESS)
+        {
+            /* add supported target's */
+            tivxKernelsHostUtilsAddKernelTargetDsp(kernel);
+        }
+        if (status == (vx_status)VX_SUCCESS)
+        {
+            status = vxFinalizeKernel(kernel);
+        }
+        if (status != (vx_status)VX_SUCCESS)
+        {
+            vxReleaseKernel(&kernel);
+            kernel = NULL;
+        }
+    }
+    else
+    {
+        kernel = NULL;
+    }
+    vx_subtract_kernel = kernel;
+
+    return status;
+}
+
+vx_status tivxRemoveKernelSub(vx_context context)
+{
+    vx_status status;
+    vx_kernel kernel = vx_subtract_kernel;
+
+    status = vxRemoveKernel(kernel);
+    vx_subtract_kernel = NULL;
+
+    return status;
+}

@@ -1,0 +1,33 @@
+{
+  "description": "This JSON file contains junction temperature data for the SoC. Each object in the list represents    the temperature measured by a sensor located at the specified core and vddDomain.     The 'tempMiliDegC' field in each object represents the temperature in milli degree celcius.     The 'description' field in each object provides a brief description of the location of the sensor in the SoC.     The length of the list indicates the number of temperature sensors present in the SoC.",
+  "temp_data": [
+    {
+      "description": "Near MCU_R5FSS in VDD_MCU",
+      "tempMiliDegC": 38515
+    },
+    {
+      "description": "On VDD_MCU / VDD_CPU boundary near A72 (in VDD_MCU)",
+      "tempMiliDegC": 39450
+    },
+    {
+      "description": "Near GPU in VDD_CORE",
+      "tempMiliDegC": 38749
+    },
+    {
+      "description": "On VDD_CORE / VDD_CPU boundary near C7x / MMA (in VDD_CORE)",
+      "tempMiliDegC": 38983
+    },
+    {
+      "description": "On VDD_CORE / VDD_CPU boundary near A72 (in VDD_CORE)",
+      "tempMiliDegC": 38983
+    },
+    {
+      "description": "On VDD_CORE / VDD_CPU boundary near C7x / MMA (in VDD_CORE)",
+      "tempMiliDegC": 39450
+    },
+    {
+      "description": "Near LPDDR4 in VDD_CORE (DDR)",
+      "tempMiliDegC": 40381
+    }
+  ]
+}

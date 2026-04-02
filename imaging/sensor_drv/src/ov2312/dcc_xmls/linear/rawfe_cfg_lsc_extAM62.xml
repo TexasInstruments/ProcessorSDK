@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RAWFE_cfg_lsc_ext_xml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--this is a comment-->
+    <dcc_name>rawfe_cfg_lsc_extension</dcc_name>
+    <dcc_header>
+		<camera_module_id> 2312 </camera_module_id>
+	    <dcc_descriptor_id> 37 </dcc_descriptor_id>
+	    <algorithm_vendor_id>  1 </algorithm_vendor_id>
+	    <tunning_tool_version> 0 </tunning_tool_version>
+    </dcc_header>
+  <!--=======================================================================-->
+    <typedef>
+		<cfg_rawfe_lsc_ext type="struct">
+			<lsc_cfg_mode type="uint32"> </lsc_cfg_mode>
+			<lsc_ch2lut_map type="uint8[16]"> </lsc_ch2lut_map>
+        </cfg_rawfe_lsc_ext>
+    </typedef>
+
+<!--=======================================================================-->
+  <use_case val="1023">
+      <n-space>
+    <region0 class="0">
+      <exposure val="1" min="0" max="2000000">  </exposure>
+      <gain val="0" min="0" max="100000">  </gain>
+    </region0>
+  </n-space>
+    <parameter_package>
+        <rawfe_lsc_ext_dcc type="cfg_rawfe_lsc_ext">
+        {
+            1           // lsc_cfg_mode
+            {           // lsc_ch2lut_map
+                2, 1, 0, 1,
+                1, 3, 1, 3,
+                0, 1, 2, 1,
+                1, 3, 1, 3,
+            }
+        }
+        </rawfe_lsc_ext_dcc>
+    </parameter_package>
+</use_case>
+<!--=====================================================================-->
+</RAWFE_cfg_lsc_ext_xml>

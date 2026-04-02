@@ -1,0 +1,537 @@
+/*
+ *
+ * Copyright (C) 2010-2013 Texas Instruments Incorporated - http://www.ti.com/
+ *
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions
+ *  are met:
+ *
+ *    Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ *    Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the
+ *    distribution.
+ *
+ *    Neither the name of Texas Instruments Incorporated nor the names of
+ *    its contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ *  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ *  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ *  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ *  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ *  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ *  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+*/
+
+
+
+#include "unittest.h"
+#include "salldsim/salldcfg.h"
+
+/* IPSEC ESP test.
+ * This test performs a basic IPSEC ESP Tx/Rx test:
+ * - Open and Configure a SALLD channel in IPSEC ESP mode
+ * - Configure PA for the receive path (MAC/IP/ESP/IP/UDP)
+ * - Execute the test loop until all packets are processed
+ * - Read and send the packet to PA PDSP0 as received from the network
+ * - Wait and pop the received packet from the received queue
+ * - Invoke the SALLD APIs to peform protocol-specific post-processing
+ *   (End of receiving test)
+ * - Invoke the SALLD APIs to perform protocol-specifc pre-processing
+ * - Prepare and send a packet to the SA queue.
+ * - Wait and pop the transmitted packet from the received queue
+ * - End of the test loop
+ * - Query and verify PA statistics
+ * - Query the SALLD channel statistics
+ * - Close the SALLD channel
+ * - Remove all entries (handles) from the PA LUT1 and LUT2
+ *
+ * a0 is a pointer to the test framework structure
+ * a1 is a pointer to the saTest_t structure for this test, as initialized in testMain.
+ *
+ */
+
+#if 0 /* For reference only */
+
+#ifdef _TMS320C6X
+#pragma DATA_ALIGN(saExPkt, 16)
+const unsigned char saExPkt[] = {
+#else
+const unsigned char saExPkt[] __attribute__ ((aligned (16))) = {
+#endif
+                            0x12, 0x34, 0x56, 0x78, 0x9A, 0xBC,                      /* Dest MAC */
+                            0x00, 0xe0, 0xa6, 0x66, 0x57, 0x04,                      /* Src MAC  */
+                            0x08, 0x00,                                              /* Ethertype = IPv4 */
+                            0x45, 0x00, 0x00, 0x9c,                                  /* IP version, services, total length */
+                            0x00, 0x00, 0x00, 0x00,                                  /* IP ID, flags, fragment offset */
+                            0x05, 0x32, 0xff, 0xf3,                                  /* IP ttl, protocol (ESP), header checksum */
+                            0x9e, 0xda, 0x6d, 0x14,                                  /* Source IP address */
+                            0x14, 0x15, 0x16, 0x17,                                  /* Destination IP address*/
+                            0x44, 0x44, 0x44, 0x44,                                  /* IPSEC: SPI */
+                            0x12, 0x12, 0x12, 0x12,                                  /* IPSEC: SN */
+                            0x00, 0x00, 0x00, 0x00,                                  /* IPSEC: IV */
+                            0x00, 0x00, 0x00, 0x00,                                  /* IPSEC: IV */
+                            0x45, 0x00, 0x00, 0x6c,                                  /* IP version, services, total length */
+                            0x00, 0x00, 0x00, 0x00,                                  /* IP ID, flags, fragment offset */
+                            0x05, 0x11, 0x93, 0x85,                                  /* IP ttl, protocol (UDP), header checksum */
+                            0x9e, 0xda, 0x6d, 0x0A,                                  /* Source IP address */
+                            0x0a, 0x0b, 0x0c, 0x0d,                                  /* Destination IP address */
+                            0x12, 0x34, 0x05, 0x55,                                  /* UDP source port, dest port */
+                            0x00, 0x58, 0xe1, 0x98,                                  /* UDP len, UDP checksum */
+                            0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39,          /* 80 bytes of payload data */
+                            0x3a, 0x3b, 0x3c, 0x3d, 0x3e, 0x3f, 0x40, 0x41,
+                            0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49,
+                            0x4a, 0x4b, 0x4c, 0x4d, 0x4e, 0x4f, 0x50, 0x51,
+                            0x52, 0x53, 0x54, 0x55, 0x56, 0x57, 0x58, 0x59,
+                            0x5a, 0x5b, 0x5c, 0x5d, 0x5e, 0x5f, 0x60, 0x61,
+                            0x62, 0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69,
+                            0x6a, 0x6b, 0x6c, 0x6d, 0x6e, 0x6f, 0x70, 0x71,
+                            0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78, 0x79,
+                            0x7a, 0x7b, 0x7c, 0x7d, 0x7e, 0x7f, 0x80, 0x81,
+                            0x01, 0x02, 0x02, 0x04, 0x10, 0x11, 0x12, 0x13,
+                            0x14, 0x15, 0x16, 0x17  };
+
+#endif
+
+
+/* SALLD channel configurations */
+/* IPSEC ESP */
+static salldTestConfig_t saTestCfg1 =
+        {
+            0,                      /* channel index */
+            sa_PT_IPSEC_ESP,        /* protocolType */
+            sa_CipherMode_AES_CTR,  /* cipherMode */
+            sa_AuthMode_HMAC_SHA1,  /* authMode */
+            64,                     /* relayWinSize */
+            {                       /* openCfg */
+                sa_CONTROLINFO_CTRL_TX_ON |      /* ctrlBitMap */
+                sa_CONTROLINFO_CTRL_RX_ON
+            },
+            {                     /* destInfo */
+                {
+                    0,            /* ctrlBitfield */
+                    0,            /* Flow ID */
+                    DEST_QUEUE_PKT_RECV,           /* Queue ID (PA PDSP4) or DEST_QUEUE_PKT_RECV*/
+                    0x11100000,                    /* swInf0 */
+                    0x1110                         /* swInf1 */
+                },
+                {
+                    0,           /* ctrlBitfield */
+                    0,           /* Flow ID */
+                    TF_PA_QUEUE_INNER_IP,      /* Queue ID */
+                    0x11110000,  /* swInf0 */
+                    0x1110       /* swInf1 */
+                },
+            },
+        };
+
+
+
+static void paSetupIpsecESPRouting (tFramework_t *tf, saTest_t  *pat)
+{
+    Sa_SWInfo_t*   pSwInfo;
+
+	paEthInfo_t ethInfo = { {  0x00, 0xe0, 0xa6, 0x66, 0x57, 0x04 },
+                            {  0x12, 0x34, 0x56, 0x78, 0x9A, 0xBC },	/*  PA entry 0 */
+		                    0, 0x800, 0
+                          };
+
+    paIpInfo_t ipInfo =   {
+                             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },   /* IP source = dont care */   \
+                             { 0x14, 0x15, 0x16, 0x17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },   /* IP dest */                 \
+                               0x44444444   ,         /* SPI */                                                    \
+                               0,         /* flow = dont care */                                                   \
+                               pa_IPV4,   /* IP type */                                                            \
+                               0,         /* GRE protocol */                                                       \
+                               50,        /* Ip protocol = dont care (TCP or UDP or anything else) */              \
+                               0,         /* TOS */                                                                \
+                               FALSE,     /* TOS = dont care (seperate field since TOS=0 is valid */               \
+                               0};        /* SCTP port = dont care */
+
+    paIpInfo_t ipInfo2 =   {
+                             { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },   /* IP source = dont care */   \
+                             { 0x0a, 0x0b, 0x0c, 0x0d, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },   /* IP dest */                 \
+                               0,         /* SPI = dont care */                                                    \
+                               0,         /* flow = dont care */                                                   \
+                               pa_IPV4,   /* IP type */                                                            \
+                               0,         /* GRE protocol */                                                       \
+                               0,         /* Ip protocol = dont care (TCP or UDP or anything else) */              \
+                               0,         /* TOS */                                                                \
+                               FALSE,     /* TOS = dont care (seperate field since TOS=0 is valid */               \
+                               0};        /* SCTP port = dont care */
+
+
+ 	paRouteInfo_t   matchRoute = {  pa_DEST_CONTINUE_PARSE_LUT1,/* Dest */
+ 								    0,					        /* Flow ID */
+ 								    0,					        /* queue */
+ 								    -1,					        /* Multi route */
+ 								    0,					        /* sw Info 0 */
+                                    0,                          /* sw Info 1 */
+                                    0,                          /* customType : not used */
+                                    0,                          /* customIndex: not used */
+                                    0,                          /* pkyType: for SRIO only */
+                                    NULL};                      /* No commands */
+
+
+ 	paRouteInfo_t   nfailRoute = {  pa_DEST_DISCARD,            /* Dest */
+ 									0,					        /* Flow ID */
+ 									0,					        /* queue */
+ 									-1,					        /* Multi route */
+ 									0,					        /* sw Info 0 */
+                                    0,                          /* sw Info 1 */
+                                    0,                          /* customType : not used */
+                                    0,                          /* customIndex: not used */
+                                    0,                          /* pkyType: for SRIO only */
+                                    NULL};                      /* No commands */
+
+ 	paCmdReply_t cmdReply = {  pa_DEST_HOST,			        /* Dest */
+ 							   0,						        /* Reply ID (returned in swinfo0) */
+ 							   0,						        /* Queue */
+ 							   0 };						        /* Flow ID */
+
+ 	paRouteInfo_t   ipmatchRoute = {  pa_DEST_SASS,     		/* Dest */
+ 								    0,					        /* Flow ID */
+ 								    TF_SA_QUEUE_0,				        /* queue */ /* TF_SA_QUEUE_0 */
+ 								    -1,					        /* Multi route */
+ 								    0x12345678,					/* sw Info 0 */
+ 								    0x89abcdef,  				/* sw Info 1 */
+                                    0,                          /* customType : not used */
+                                    0,                          /* customIndex: not used */
+                                    0,                          /* pkyType: for SRIO only */
+                                    NULL};                      /* No commands */
+
+ 	paRouteInfo_t   ipnfailRoute = {  pa_DEST_DISCARD,		        /* Dest */
+ 									0,					        /* Flow ID */
+ 									0,					        /* queue */
+ 									-1,					        /* Multi route */
+ 									0,					        /* sw Info 0 */
+                                    0,                          /* sw Info 1 */
+                                    0,                          /* customType : not used */
+                                    0,                          /* customIndex: not used */
+                                    0,                          /* pkyType: for SRIO only */
+                                    NULL};                      /* No commands */
+
+ 	paRouteInfo_t   udpRoute =   {  pa_DEST_HOST,     	     	/* Dest */
+ 								    0,					        /* Flow ID */
+ 								    DEST_QUEUE_PKT_RECV,				        /* queue */ /* TF_SA_QUEUE_0 */
+ 								    -1,					        /* Multi route */
+ 								    0x55550000,					/* sw Info 0 */
+                                    0,                          /* sw Info 1 */
+                                    0,                          /* customType : not used */
+                                    0,                          /* customIndex: not used */
+                                    0,                          /* pkyType: for SRIO only */
+                                    NULL};                      /* No commands */
+
+
+    /* Runtime initial values */
+    matchRoute.queue = (uint16_t) tf->QGen[Q_MATCH];
+	matchRoute.flowId = (uint8_t) tf->tfFlowNum;
+    nfailRoute.queue = (uint16_t) tf->QGen[Q_NFAIL];
+	nfailRoute.flowId = (uint8_t) tf->tfFlowNum;
+    cmdReply.queue   = (uint16_t) tf->QGen[Q_CMD_REPLY];
+	cmdReply.flowId = udpRoute.flowId = tf->tfFlowNum;
+	ipmatchRoute.flowId  = tf->tfFlowNum;
+	ipnfailRoute.flowId = tf->tfFlowNum;
+
+ 	/* Initialize the first entry in the table */
+ 	cmdReply.replyId = TF_CMD_SWINFO0_ADD_ID + 0;  /* TF_CMD_SWINFO0_ADD_ID identifies command, 16 LS bits identify the local handle number */
+ 	cmdReply.queue = tf->QGen[Q_CMD_REPLY];
+ 	matchRoute.swInfo0 = nfailRoute.swInfo0 = TF_CMD_SWINFO0_PKT_ID;
+ 	if (!testCommonAddMac (tf, pat, (paEthInfo_t *)&ethInfo, &matchRoute, &nfailRoute,
+ 	                        &l2Handles[0].paHandle, tf->QLinkedBuf1, &cmdReply))
+    {
+ 		saTestRecoverAndExit (tf, pat, SA_TEST_FAILED);  /* no return */
+    }
+
+ 	l2Handles[0].state = TF_L2_HANDLE_ACTIVE;
+ 	saTestExpectedStats.classify1.nPackets += 1;
+
+ 	/* Initialize the first IP entry in the table */
+ 	cmdReply.replyId = TF_CMD_SWINFO0_ADD_ID + 0;  /* TF_CMD_SWINFO0_ADD_ID identifies command, 16 LS bits identify the local handle number */
+ 	cmdReply.queue = tf->QGen[Q_CMD_REPLY];
+ 	//matchRoute.swInfo0 = nfailRoute.swInfo0 = t2EthAndSwinfo[0].swinfo0;
+    pSwInfo = &tf->salldSimChn[0].regSwInfo;
+    ipmatchRoute.swInfo0 = ipnfailRoute.swInfo0 = pSwInfo->swInfo[0];
+    ipmatchRoute.swInfo1 = ipnfailRoute.swInfo1 = utilgAddr((uint32_t)pSwInfo->swInfo[1]);
+
+ 	if (!testCommonAddIp  (tf, pat, (paIpInfo_t *)&ipInfo, &ipmatchRoute, &ipnfailRoute,
+ 	                      l2Handles[0].paHandle, &l3Handles[0].paHandle, tf->QLinkedBuf2,
+ 	                      &cmdReply))
+    {
+ 		saTestRecoverAndExit (tf, pat, SA_TEST_FAILED);  /* no return */
+    }
+
+ 	l3Handles[0].state = TF_L2_HANDLE_ACTIVE;
+ 	saTestExpectedStats.classify1.nPackets += 1;
+
+ 	/* Initialize the Second IP entry in the table */
+ 	cmdReply.replyId = TF_CMD_SWINFO0_ADD_ID + 0;  /* TF_CMD_SWINFO0_ADD_ID identifies command, 16 LS bits identify the local handle number */
+ 	cmdReply.queue = tf->QGen[Q_CMD_REPLY];
+    ipmatchRoute.swInfo0 = ipnfailRoute.swInfo0 = 0xdeadbeef;
+    ipmatchRoute.swInfo1 = ipnfailRoute.swInfo1 = 0;
+    ipmatchRoute.dest  = pa_DEST_CONTINUE_PARSE_LUT2;
+    ipmatchRoute.queue = 0;
+
+ 	if (!testCommonAddIp  (tf, pat, (paIpInfo_t *)&ipInfo2, &ipmatchRoute, &ipnfailRoute,
+ 	                      l3Handles[0].paHandle, &l3Handles[1].paHandle, tf->QLinkedBuf2,
+ 	                      &cmdReply))
+    {
+ 		saTestRecoverAndExit (tf, pat, SA_TEST_FAILED);  /* no return */
+
+    }
+ 	l3Handles[1].state = TF_L2_HANDLE_ACTIVE;
+ 	saTestExpectedStats.classify1.nPackets += 1;
+
+
+ 	/* Initialize the UDP entry in the table */
+ 	cmdReply.replyId = TF_CMD_SWINFO0_ADD_ID + 0;  /* TF_CMD_SWINFO0_ADD_ID identifies command, 16 LS bits identify the local handle number */
+ 	cmdReply.queue = tf->QGen[Q_CMD_REPLY];
+
+ 	if (!testCommonAddUdp  (tf, pat, 0x0555, &udpRoute,
+ 	                       l3Handles[1].paHandle, l4Handles[0].paHandle, tf->QLinkedBuf1,
+ 	                       &cmdReply))
+    {
+ 		saTestRecoverAndExit (tf, pat, SA_TEST_FAILED);  /* no return */
+    }
+
+ 	l4Handles[0].state = TF_L2_HANDLE_ACTIVE;
+}
+
+void saESPTest (void *arg)
+{
+ 	tFramework_t  *tf  = ((saTestArgs_t *)arg)->tf;
+ 	saTest_t      *pat = ((saTestArgs_t *)arg)->pat;
+ 	Cppi_HostDesc *hd;
+ 	int  i;
+ 	uint32_t len;
+    testPktDesc_t  pktDesc;
+    uint16_t       pktNum;
+    Sa_PktInfo_t   pktInfo;
+    Sa_PktDesc_t*  pPktDesc = &pktInfo.pktDesc;
+    salldSimChannel_t  *pEspChan = &tf->salldSimChn[saTestCfg1.chnum];
+    uint32_t       psInfo[10];
+    uint16_t       psInfoSize;
+	paReturn_t     paret;
+
+    paRouteInfo_t  route =  {  pa_DEST_HOST,  /* Route - host         */
+                               0,             /* flow Id              */
+                               DEST_QUEUE_PKT_RECV,  			  /* Queue                */
+                               -1,            /* Multi route disabled */
+                               0x55550000,    /* SWInfo 0             */
+                               0,             /* sw Info 1 */
+                               0,             /* customType : not used */
+                               0,             /* customIndex: not used */
+                               0,             /* pkyType: for SRIO only */
+                               NULL};         /* No commands */
+
+	/* Runtime initialization */
+	route.flowId = tf->tfFlowNum;
+
+    /* Input the test vectors */
+    if (tf->fNullEnc)
+    {
+        utilInputTestPkts("pkt_test1.bin");
+    }
+    else
+    {
+        utilInputTestPkts("pkt_test1_enc.bin");
+    }
+
+    /* Initialize the packet descriptor */
+    salld_sim_init_pktdesc(pPktDesc, 1);
+
+	/* Update the flow ID */
+	saTestCfg1.destInfo[0].flowID = saTestCfg1.destInfo[1].flowID = tf->tfFlowNum;
+
+    /* Setup the SA Channel */
+    salldcfg_chan_init(&saTestCfg1);
+    salldSim_init_chn(saTestCfg1.chnum);
+    salldSim_open_chn(saTestCfg1.chnum, &(saTestCfg1.openCfg));
+
+    /* Configure PA */
+    paSetupIpsecESPRouting (tf, pat);
+    pktNum = 1;
+    while (utilGetPkt(&pktDesc))
+    {
+	    /* Send one data packet to the SA. The packet should be delivered back to Q 906 */
+        hd = testCommonGetBuffer(tf, (int)pktDesc.size);
+	    if (hd == NULL)  {
+		    System_printf ("%s (%s:%d): Queue pop failed for Link Buffer queue (%d)\n", pat->name, __FILE__, __LINE__, tf->QLinkedBuf2);
+ 		    saTestRecoverAndExit (tf, pat, SA_TEST_FAILED);  /* no return */
+	    }
+
+        memcpy((void *)hd->buffPtr, pktDesc.pkt, pktDesc.size);
+        hd->buffLen = pktDesc.size;
+  	    Cppi_setPacketLen (Cppi_DescType_HOST, (Cppi_Desc *)hd, pktDesc.size);
+
+        salld_sim_print("Routing Pkt %d to PA: BufPtr = 0x%08x, pkt at 0x%08x, size = %d\n",
+                         pktNum, hd->buffPtr, pktDesc.pkt, pktDesc.size);
+
+        //if(pktNum == 5) mdebugHaltPdsp (0);
+        //mdebugHaltSaPdsp (0);
+  	    Qmss_queuePush (tf->QPaTx[TF_PA_Q_INPUT], (Ptr)utilgAddr((uint32_t)hd), len, TF_SIZE_DESC, Qmss_Location_TAIL);
+
+        /* Update expected statistics */
+        saTestExpectedStats.classify1.nPackets += 3;    /* MAC/IP1/IP2 */
+        saTestExpectedStats.classify1.nTableMatch += 3; /* IPin, IPout, and UDP */
+        saTestExpectedStats.classify1.nIpv4Packets += 2;/* IPin and Ipout */
+        saTestExpectedStats.classify2.nUdp++;
+
+        //if(pktNum == 5) salld_sim_halt();
+
+  	    /* The packet should loop back into queue DEST_QUEUE_PKT_RECV */
+	    for (i = 0; i < 100; i++)  {
+		    utilCycleDelay (1000);
+		    if (Qmss_getQueueEntryCount (DEST_QUEUE_PKT_RECV) == 1)
+			    break;
+	    }
+
+	    if (i == 100)  {
+		    salld_sim_halt();
+		    System_printf ("%s (%s:%d): Did not find SA reply in queue %d \n", pat->name, __FILE__, __LINE__, DEST_QUEUE_PKT_RECV);
+ 		    saTestRecoverAndExit (tf, pat, SA_TEST_FAILED);  /* no return */
+	    }
+	    /* This descriptor has a buffer owned by the framework, so the common code can be used for recycle */
+        else
+        {
+            pasahoLongInfo_t	*pLongInfo;
+            uint32_t  infoLen;
+
+	        hd = (Cppi_HostDesc *)(((uint32_t)Qmss_queuePop (DEST_QUEUE_PKT_RECV) & ~15));
+
+            Cppi_getPSData (Cppi_DescType_HOST, Cppi_PSLoc_PS_IN_DESC, (Cppi_Desc *)hd, (uint8_t **)&pLongInfo, &infoLen);
+
+            /* IPSEC ESP Rx processing */
+            pPktDesc->size = hd->buffLen;
+            pPktDesc->segments[0] = (void *)hd->buffPtr;
+            pPktDesc->segUsedSizes[0] = pPktDesc->size;
+            pPktDesc->segAllocSizes[0] = hd->origBufferLen;
+            pPktDesc->payloadOffset = PASAHO_LINFO_READ_ESP_AH_OFFSET(pLongInfo) - 20;       /* Pointer to IP header (TBD: need to get from the payload)*/
+            pPktDesc->payloadLen = (pPktDesc->size - pPktDesc->payloadOffset);
+            pktInfo.validBitMap = sa_PKT_INFO_VALID_PKT_ERR_CODE;
+            pktInfo.pktErrCode = sa_PKT_ERR_OK;
+            /* Call SA LLD API to perform Protocol Specific Operation */
+            Sa_chanReceiveData(pEspChan->salldInst, &pktInfo);
+
+            salld_sim_print("Receive Pkt %d from PA/SA\n", pktNum);
+            testDispPkts(hd);
+
+            /* Transmit ESP packet */
+            /* Reuse the link buffer */
+            {
+                memset (psInfo, 0, sizeof(psInfo));
+
+                /* Preapare and send a packet through PA/SA */
+	            /* Send one data packet to the SA. The packet should be delivered back to Q 950 */
+
+                /* IPSEC ESP related operation */
+                pPktDesc->segUsedSizes[0] = pPktDesc->size;
+                pPktDesc->payloadOffset = 14;       /* Pointer to IP header */
+                pPktDesc->payloadLen = (pPktDesc->size - 14);
+                pktInfo.validBitMap = 0;
+
+                /* Call SA LLD API to perform Protocol Specific Operation */
+                Sa_chanSendData(pEspChan->salldInst, &pktInfo, FALSE);
+
+                /* Prepare to send pkt to PA/SA */
+  	            Cppi_setData (Cppi_DescType_HOST, (Cppi_Desc *)hd, (Ptr)pPktDesc->segments[0], pPktDesc->size);
+  	            Cppi_setPacketLen (Cppi_DescType_HOST, (Cppi_Desc *)hd, pPktDesc->size);
+  	            Cppi_setSoftwareInfo (Cppi_DescType_HOST, (Cppi_Desc *)hd, (uint8_t *)pktInfo.swInfo.swInfo);
+
+                /* Prepare PS Information
+                 * The following commands should be passed in the PS Info section
+                 * - Payload Info (short format) for IPSEC ESP
+                 * - Routing Info to Host (From PA)
+                 */
+                psInfo[0] = PASAHO_SINFO_FORMAT_CMD(pPktDesc->payloadOffset, pPktDesc->payloadLen);
+                /*
+                * The following commands are not necessary since the packet can be forwarded from SA
+                * to host or EMAC directly.
+                * We add this command here for proof of concept only.
+                * Note: It needs to be updated since the generated PS Info is not 8-byte aligned
+                *       Keep the short info only
+                */
+                psInfoSize = sizeof(pasahoNextRoute_t);
+                paret = Pa_formatTxRoute (  NULL,                /* IPv4 header checksum */
+                                            NULL,                /* No second checksum   */
+                                            &route,              /* Internal routing     */
+                                            (Ptr)&psInfo[2],     /* Command buffer       */
+                                            &psInfoSize);        /* Command size         */
+
+                if (paret != pa_OK)  {
+                    System_printf ("%s (%s:%d): Pa_formatTxRoute returned error code %d\n", pat->name, __FILE__, __LINE__, paret);
+ 	                saTestRecoverAndExit (tf, pat, SA_TEST_FAILED);  /* no return */
+                }
+                psInfoSize += 8;
+
+                /* Attach the command in PS data */
+                //Cppi_setPSData (Cppi_DescType_HOST, (Cppi_Desc *)hd, (uint8_t *)psInfo, psInfoSize);
+                Cppi_setPSData (Cppi_DescType_HOST, (Cppi_Desc *)hd, (uint8_t *)psInfo, 8);
+
+                //mdebugHaltPdsp (4);
+                //mdebugHaltSaPdsp (0);
+  	            Qmss_queuePush (tf->QPaTx[TF_PA_TX_QUEUE_INDEX_SA0], (Ptr)utilgAddr((uint32_t)hd), len, TF_SIZE_DESC, Qmss_Location_TAIL);
+
+                //salld_sim_halt();
+
+  	            /* The packet should loop back into queue DEST_QUEUE_PKT_RECV */
+	            for (i = 0; i < 100; i++)  {
+		            utilCycleDelay (1000);
+		            if (Qmss_getQueueEntryCount (DEST_QUEUE_PKT_RECV) > 0)
+			            break;
+	            }
+
+	            if (i == 100)  {
+		            salld_sim_halt();
+		            System_printf ("%s (%s:%d): Did not find SA reply in queue %d \n", pat->name, __FILE__, __LINE__, DEST_QUEUE_PKT_RECV);
+ 		            saTestRecoverAndExit (tf, pat, SA_TEST_FAILED);  /* no return */
+	            }
+
+	            /* This descriptor has a buffer owned by the framework, so the common code can be used for recycle */
+                while (Qmss_getQueueEntryCount (DEST_QUEUE_PKT_RECV))
+                {
+	                hd = (Cppi_HostDesc *)(((uint32_t)Qmss_queuePop (DEST_QUEUE_PKT_RECV) & ~15));
+                    salld_sim_print("Receive TxPkt %d from PA/SA\n", pktNum);
+                    testDispPkts(hd);
+	                if (testCommonRecycleLBDesc (tf, hd))  {
+		                System_printf ("%s (%s:%d): Failure in testCommonRecycleLBDesc\n", pat->name, __FILE__, __LINE__);
+ 		                saTestRecoverAndExit (tf, pat, SA_TEST_FAILED);  /* no return */
+	                }
+                }
+            }
+        } /* receive and transmit packet operation */
+
+        pktNum++;
+
+    } /* Send Packet Loop */
+
+#ifndef __LINUX_USER_SPACE
+	/* Request stats from the PA */
+    if (!testCommonReqAndChkPaStats (tf, pat, (paSysStats_t *)&saTestExpectedStats))
+    {
+		System_printf ("%s (%s:%d): testCommonReqAndChkPaStats failed\n", pat->name, __FILE__, __LINE__);
+  	    System_flush ();
+ 		saTestRecoverAndExit (tf, pat, SA_TEST_FAILED);  /* no return */
+    }
+#endif
+  	System_flush ();
+
+    /* Get Channel Statistics */
+    salldSim_get_stats(saTestCfg1.chnum);
+
+    /* Close SA channel */
+	salldSim_close_chn(saTestCfg1.chnum);
+
+ 	saTestRecoverAndExit (tf, pat, SA_TEST_PASSED);  /* no return */
+}
+

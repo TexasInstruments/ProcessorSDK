@@ -1,0 +1,20 @@
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/r5f/framework.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/armv7/bios/testMain.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/armv7/bios/testmem.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/common/testutil.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/test/SaUnitTest/src/common/common2.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/salldsim/salld_osal.c" 
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/salldsim/salldsim.c" 
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/salldsim/salldutil.c" 
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/salldsim/salldcfg.c" 
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/src/tests/test7.c"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/vectors/pkt_test7.c" 
+
+-ccs.linkFile "PDK_INSTALL_PATH/ti/drv/sa/example/SaBasicExample/j721e/mcu/bios/saBasicExample_j721e_sim_bios_r5.cfg"
+-ccs.linkFile "PDK_INSTALL_PATH/ti/build/j721e/linker_r5_sysbios.lds"
+
+-ccs.setCompilerOptions "-DBUILD_MCU -DUSE_BIOS -DNSS_LITE2 -Dj721e_sim -DSOC_J721E -Dgcc -g -ms -qq -pdsw225 -mv7R5 --abi=eabi -eo.oer5f -ea.ser5f --symdebug:dwarf --float_support=vfpv3d16 --emit_warnings_as_errors -I${PDK_INSTALL_PATH}/ti/csl -I${PDK_INSTALL_PATH}/ti/drv/sa -I${PDK_INSTALL_PATH}/ti/drv/sa/example/SaBasicExample/src/ -I${PDK_INSTALL_PATH}"  -rtsc.enableRtsc
+
+
+-ccs.setLinkerOptions " "
+-rtsc.setConfiguroOptions "-b ${PDK_INSTALL_PATH}/ti/build/j721e/config_j721e_r5f.bld -DBOARD=j721e_sim"

@@ -1,0 +1,103 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --device "J721E_DRA829_TDA4VM_AM752x" --package "ALF" --part "Default"
+ * @versions {"tool":"1.11.0+2225"}
+ */
+
+/**
+ * These are the peripherals and settings in this configuration
+ */
+const iCPSW9G1        = scripting.addPeripheral("CPSW9G");
+iCPSW9G1.$name        = "MyCPSW9G3";
+const iGPIO1          = scripting.addPeripheral("GPIO");
+iGPIO1.$useCase       = "GPIO_1";
+iGPIO1["96"].$assign  = "ball.T23";
+iGPIO1["96"].$used    = true;
+iGPIO1["104"].$assign = "ball.W26";
+iGPIO1["104"].$used   = true;
+iGPIO1.$name          = "MyGPIO0";
+iGPIO1.$assign        = "GPIO0";
+const iMDIO1          = scripting.addPeripheral("MDIO");
+iMDIO1.$name          = "MyMDIO1";
+iMDIO1.MDC.$assign    = "ball.V24";
+iMDIO1.MDIO.$assign   = "ball.V26";
+const iRGMII1         = scripting.addPeripheral("RGMII");
+iRGMII1.$name         = "MyRGMII3";
+iRGMII1.$assign       = "RGMII3";
+const iRGMII2         = scripting.addPeripheral("RGMII");
+iRGMII2.$name         = "MyRGMII4";
+iRGMII2.$assign       = "RGMII4";
+const iRGMII3         = scripting.addPeripheral("RGMII");
+iRGMII3.$name         = "MyRGMII1";
+iRGMII3.$assign       = "RGMII1";
+const iRGMII4         = scripting.addPeripheral("RGMII");
+iRGMII4.$name         = "MyRGMII8";
+iRGMII4.$assign       = "RGMII8";
+const iRMII1          = scripting.addPeripheral("RMII");
+iRMII1.$name          = "MyRMII8";
+iRMII1.$assign        = "RMII8";
+iRMII1.CRS_DV.$assign = "ball.Y28";
+iRMII1.RXD0.$assign   = "ball.W25";
+iRMII1.RXD1.$assign   = "ball.W24";
+iRMII1.RX_ER.$assign  = "ball.V23";
+iRMII1.TXD0.$assign   = "ball.W27";
+iRMII1.TXD1.$assign   = "ball.V25";
+iRMII1.TX_EN.$assign  = "ball.W29";
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+iCPSW9G1.$suggestSolution        = "CPSW9G0";
+iCPSW9G1.CLKOUT.$suggestSolution = "ball.AA25";
+iMDIO1.$suggestSolution          = "MDIO0";
+iRGMII1.RD0.$suggestSolution     = "ball.AF28";
+iRGMII1.RD1.$suggestSolution     = "ball.AE28";
+iRGMII1.RD2.$suggestSolution     = "ball.AE27";
+iRGMII1.RD3.$suggestSolution     = "ball.AD26";
+iRGMII1.RXC.$suggestSolution     = "ball.AE26";
+iRGMII1.RX_CTL.$suggestSolution  = "ball.AD25";
+iRGMII1.TD0.$suggestSolution     = "ball.AJ28";
+iRGMII1.TD1.$suggestSolution     = "ball.AH27";
+iRGMII1.TD2.$suggestSolution     = "ball.AH29";
+iRGMII1.TD3.$suggestSolution     = "ball.AG28";
+iRGMII1.TXC.$suggestSolution     = "ball.AH28";
+iRGMII1.TX_CTL.$suggestSolution  = "ball.AG27";
+iRGMII2.RD0.$suggestSolution     = "ball.AE29";
+iRGMII2.RD1.$suggestSolution     = "ball.AD28";
+iRGMII2.RD2.$suggestSolution     = "ball.AD27";
+iRGMII2.RD3.$suggestSolution     = "ball.AC25";
+iRGMII2.RXC.$suggestSolution     = "ball.AC26";
+iRGMII2.RX_CTL.$suggestSolution  = "ball.AD29";
+iRGMII2.TD0.$suggestSolution     = "ball.AG26";
+iRGMII2.TD1.$suggestSolution     = "ball.AF27";
+iRGMII2.TD2.$suggestSolution     = "ball.AF26";
+iRGMII2.TD3.$suggestSolution     = "ball.AE25";
+iRGMII2.TXC.$suggestSolution     = "ball.AG29";
+iRGMII2.TX_CTL.$suggestSolution  = "ball.AF29";
+iRGMII3.RD0.$suggestSolution     = "ball.AC23";
+iRGMII3.RD1.$suggestSolution     = "ball.AG22";
+iRGMII3.RD2.$suggestSolution     = "ball.AF22";
+iRGMII3.RD3.$suggestSolution     = "ball.AJ23";
+iRGMII3.RXC.$suggestSolution     = "ball.AD22";
+iRGMII3.RX_CTL.$suggestSolution  = "ball.AH23";
+iRGMII3.TD0.$suggestSolution     = "ball.AF24";
+iRGMII3.TD1.$suggestSolution     = "ball.AJ24";
+iRGMII3.TD2.$suggestSolution     = "ball.AG24";
+iRGMII3.TD3.$suggestSolution     = "ball.AD24";
+iRGMII3.TXC.$suggestSolution     = "ball.AE24";
+iRGMII3.TX_CTL.$suggestSolution  = "ball.AC24";
+iRGMII4.RD0.$suggestSolution     = "ball.AE22";
+iRGMII4.RD1.$suggestSolution     = "ball.AG23";
+iRGMII4.RD2.$suggestSolution     = "ball.AF23";
+iRGMII4.RD3.$suggestSolution     = "ball.AD23";
+iRGMII4.RXC.$suggestSolution     = "ball.AE23";
+iRGMII4.RX_CTL.$suggestSolution  = "ball.AH24";
+iRGMII4.TD0.$suggestSolution     = "ball.AJ25";
+iRGMII4.TD1.$suggestSolution     = "ball.AH25";
+iRGMII4.TD2.$suggestSolution     = "ball.AG25";
+iRGMII4.TD3.$suggestSolution     = "ball.AH26";
+iRGMII4.TXC.$suggestSolution     = "ball.AJ26";
+iRGMII4.TX_CTL.$suggestSolution  = "ball.AJ27";

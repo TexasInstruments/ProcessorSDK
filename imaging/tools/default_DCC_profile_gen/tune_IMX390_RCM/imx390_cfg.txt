@@ -1,0 +1,75 @@
+# use 233 for simulation
+SENSOR_ID 390
+
+PRJ_DIR ../tune_IMX390_RCM/
+SENSOR_NAME imx390_rcm
+SENSOR_DCC_NAME IMX390_RCM
+
+SENSOR_WIDTH 1936   
+SENSOR_HEIGHT 1096
+
+# 0=RGGB; 1=GRBG; 2=GBRG; 3=BGGR, 4=MONO,
+#10=RGGI, 11=GRIG, 12=BGGI, 13=GBIG, 14=GIRG, 15=IGGR, 16=GIBG, 17=IGGB
+COLOR_PATTERN 0
+
+# sensor mode: 0 for linear (no decompanding), 1 for WDR (decompanding)
+WDR_MODE 1
+
+# raw sensor image BIT_DEPTH: it may be 8, 10, or 12 for linear sensors; typically 12 for WDR mode because of companding
+BIT_DEPTH 12
+
+# WDR BIT_DEPTH: WDR raw sensor image bitdepth after decompanding, typically 20 or 24
+WDR_BIT_DEPTH 20
+
+# WDR decompanding knee points (comma separated without spaces in between)
+WDR_KNEE_X 0,512,1408,2176,4095,65535
+WDR_KNEE_Y 0,2048,16384,65536,1048063,1048063
+
+# Sensor black level to subtract before decompanding (for some Sony WDR sensors)
+#   - for Auto-Tune: you may provide a black sensor raw image for measurng black level automatically
+BLACK_PRE   0
+
+# Sensor black level to subtract after decompanding (for most WDR sensors and all linear sensors)
+# When PCID is on for RGBIR sensors, black level might be set to 0
+#   - for Auto-Tune: you may provide a black sensor raw image for measurng black level automatically
+BLACK_POST 0
+
+# Auto-Tune: RAW images for color correction and AWB
+#   - at least 4 raw images are required (typically Macbeth Chart under U30, TL84, D50, and D65 lighting)
+#   - please use keywords in the format of "RAW_RGB2RGB_{k}_{CCT}K" as in below order
+RAW_RGB2RGB_0_3000K ../tune_IMX390_RCM/input/cap_A24_1936x1096_R.raw
+RAW_RGB2RGB_1_4000K ../tune_IMX390_RCM/input/cap_TL84_1936x1096_R.raw
+RAW_RGB2RGB_2_5000K ../tune_IMX390_RCM/input/cap_D50_1936x1096_R.raw
+RAW_RGB2RGB_3_6500K ../tune_IMX390_RCM/input/cap_D65_1936x1096_R.raw
+
+# GAMMA value for compressing 20/24-bit WDR raw to 16-bit ISP internal
+#   - typically around 50 (0.5) for 24-bit WDR sensors and 70 (0.7) for 20-bit sensors
+GAMMA_PRE 70
+
+# LSB location for H3A input bit range (from bit-H3A_INPUT_LSB to bit-H3A_INPUT_LSB+9) 
+#   - typically 2 for 12-bit linear sensors and 2~6 for WDR sensors
+H3A_INPUT_LSB 4
+
+# Choose the default gamma curve used for YUV output: 0 for BT709, 1 for a high contrast gamma curve
+YUV_GAMMA 1
+
+# Auto-Tune LDC: lens distortion spec file (angle of ray in degree vs image height in mm)
+LDC_LENS_SPEC_FILE                    ../tune_IMX390_RCM/input/DSL239_fisheye_dist.txt
+
+# Auto-Tune LDC: sensor pixel pitch in mm
+LDC_SENSOR_PIXEL_PITCH_IN_MM          0.003
+
+# Auto-Tune LDC: input/output image size
+LDC_INPUT_WIDTH                       1936
+LDC_INPUT_HEIGHT                      1096
+
+# Auto-Tune LDC: optical center of the input image
+LDC_INPUT_H_CENTER                    968
+LDC_INPUT_V_CENTER                    550
+
+# Auto-Tune LDC: mesh LUT down-sampling factor (3: 8x8, 4: 16x16)
+LDC_MESH_DOWNSAMPLE_M                 4
+
+# Auto-Tune LDC: output view size scaler
+LDC_OUTPUT_VIEW_SCALER                1.2
+

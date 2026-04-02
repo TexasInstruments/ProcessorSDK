@@ -1,0 +1,95 @@
+/*
+ *  Copyright (C) 2025 Texas Instruments Incorporated
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions
+ *  are met:
+ *
+ *    Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ *    Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the
+ *    distribution.
+ *
+ *    Neither the name of Texas Instruments Incorporated nor the names of
+ *    its contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ *  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ *  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ *  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ *  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ *  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ *  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
+
+/**
+ * \file sciclient_trace_internal.h
+ *
+ * \brief Include file for DM Trace
+ */
+
+#ifndef SCICLIENT_TRACE_INTERNAL_H_
+#define SCICLIENT_TRACE_INTERNAL_H_
+
+/* ========================================================================== */
+/*                             Include Files                                  */
+/* ========================================================================== */
+
+/* None */
+
+/* ========================================================================== */
+/*                           Macros & Typedefs                                */
+/* ========================================================================== */
+
+#define Sciclient_printf Sciclient_traceBufferString
+#define Sciserver_printf Sciclient_traceBufferString
+
+/* ========================================================================== */
+/*                          Function Declarations                             */
+/* ========================================================================== */
+
+#if defined (ENABLE_DM_TRACE)
+/* Stores the logs in tracelog_dm buffer */
+void Sciclient_traceBufferString(const char *pcString,...);
+#else
+static inline void Sciclient_traceBufferString(const char *pcString __attribute__((unused)),...)
+{
+	return;
+}
+#endif
+
+#if defined (ENABLE_DM_TRACE)
+/*
+ * @brief Sets the tracebuffer and size provided by another module.
+ *
+ * This API is called by an external file that owns and allocates the trace buffer.
+ * This API externally allocated tracelog_dm buffer set by user
+ * along with its size and stores them internally for use by this module.
+ *
+ * @param[in]  	buffer           Array of char of length buffersize.
+ * @param[in]  	buffersize       Size of the trace buffer in bytes.
+ *
+ * @return      None
+ *
+ * @note        The buffer memory is owned by the caller.
+ * 				This module only stores this buffer
+ * 				it doesnot allocate or free the buffer.
+ */
+void Sciclient_setTracelogBuffer(char* buffer, uint32_t buffersize);
+#else
+static inline void Sciclient_setTracelogBuffer(char* buffer, uint32_t buffersize)
+{
+	return;
+}
+#endif
+
+#endif /* SCICLIENT_TRACE_INTERNAL_H _*/

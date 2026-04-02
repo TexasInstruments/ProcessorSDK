@@ -1,0 +1,203 @@
+#
+# Build include file for main rules
+#
+# Copyright (C) 2017-2019 Texas Instruments Incorporated - http://www.ti.com/
+# ALL RIGHTS RESERVED
+#
+
+CPP = $(CC)
+CC = armcl
+AS = armcl
+LD = armcl
+STRIP = armstrip
+HEX = armhex
+XS = xs
+
+ifeq ($(OS),Windows_NT)
+# where.exe does not handle absolute path names that contain a drive letter. It
+# instead parses them as a path:pattern. To work around this, if the normal
+# command fails, try giving it something it will parse properly by adding an
+# extra : separating the directory and file part. It will look in the given
+# directory for the given file.
+# Additionally, where.exe will return multiple results when there are multiple
+# copies of the given file in the %PATH%. Use sed to only return the first one.
+assign_path := PATH=$$PATH
+which_cmd = $(subst \,/,$(shell $(assign_path);where.exe $1 2>nul || where.exe $(dir $1):$(notdir $1) | sed -n 1p))
+else
+assign_path := PATH=$(PATH)
+which_cmd = $(shell $(assign_path) which $1)
+endif
+
+ifeq ($(OS),Windows_NT)
+PYTHON = python
+SH = "$(WIN_GITPATH)/sh"
+else
+PYTHON = python3
+SH = sh
+endif
+
+ARM_CC_PATH := $(dir $(call which_cmd,$(CC)))..
+ARM_STRIP_PATH := $(dir $(call which_cmd,$(STRIP)))..
+ARM_HEX_PATH := $(dir $(call which_cmd,$(HEX)))..
+XDC_XS_PATH := $(dir $(call which_cmd,$(XS)))
+
+_do_flags=$($2-y) $($1_$@) $($1_./$@)
+
+CFLAGS = $(call _do_flags,CFLAGS,cflags)
+CPPFLAGS = $(call _do_flags,CPPFLAGS,cppflags)
+AFLAGS = $(call _do_flags,AFLAGS,aflags)
+LDFLAGS = $(call _do_flags,LDFLAGS,ldflags)
+STRIPFLAGS = $(call _do_flags,STRIPFLAGS,stripflags)
+BINFLAGS = $(call _do_flags,BINFLAGS,binflags)
+
+# Pretty print
+build_quiet ?= 0
+
+# Check if the older and missing dependancies only contain PHONY
+check_deps = $(filter-out $(PHONY),$?) $(filter-out $(PHONY) $(wildcard $^),$^)
+
+# Check if the command is recorded in the .cmd file and matches the current command
+check_cmd = $(subst _$($1),,_$(cmd_$2))
+
+escape = $(subst ",\",$(subst \,\\,$1))
+
+# Perform a make rule:
+#   Check if the deps are up to date and the command matches
+#   Make sure the directory exists
+#   Create .d file is cmd is specified for it
+#   Print the pretty command or the full command
+#   Run the command
+#   Store the command in a .cmd file
+_make = $(if $(strip $3), \
+	$(shell mkdir -p $(dir $2)) \
+	@$(call dep_$1,$2) \
+	$(info $(if $(build_quiet:1=),$(quiet_$(1)),$($1))) \
+	$(call $1) \
+	$(shell echo "cmd_$2 := $(call escape,$($1))" >$(call dot,$2).cmd))
+
+make_named_dep = $(call _make,$1,$2,$(check_deps) $(call check_cmd,$1,$2))
+make = $(call _make,$1,$@,$(check_deps) $(call check_cmd,$1,$@))
+make_deps = $(call _make,$1,$@,$(check_deps))
+make_cmd = $(call _make,$1,$@,$(call check_cmd,$1,$@))
+make_force = $(call _make,$1,$@,force)
+dep_rule = $(shell echo "$1 : | $(filter-out $(PHONY),$^)" >$(call dot,$1).d)
+
+# We'd normally just supply --output_file $@, but when we give that to armcl,
+# rather than just specify the name of the dependency, it also overrides the
+# output filename we pass to --preproc_dependency. We get around this by
+# instead specifying the output object directory and extension.
+PP_OPTS=--obj_directory=$(dir $@) --obj_extension=$(suffix $@)
+
+# Generating a proper dep file involves two main steps with armcl. The first
+# is to generate the list of dependencies, this is done with
+# --preproc_dependency. It produces a file suitable for include in make which
+# causes the object file to depend on the things used to build it. The second
+# step is to fix a make issue where removing a file from source causes the
+# build to fail until the offending dep is removed. This is because the
+# object file now depends on a non-existent header. We fix this by adding a
+# phony target for each header. We have armcl produce a list of headers and
+# then append a semicolon to each one to generate the phony target. After
+# generating these two halves, we combine them into a single .d file suitable
+# for inclusion into make.
+quiet_rule_cc_o_c = CC      $@
+rule_cc_o_c = $(CC) $(CFLAGS) -c $< -D__HALT_FILENAME__='"$(notdir $<)"' --output_file $@
+dep_rule_cc_o_c = $(shell \
+	$(assign_path) $(CC) $(CFLAGS) $< --preproc_dependency=$(call dot,$1).d.pre $(PP_OPTS) && \
+	$(assign_path) $(CC) $(CFLAGS) $< --preproc_includes=$(call dot,$1).d.inc $(PP_OPTS) && \
+	cat $(call dot,$1).d.inc | sed 's/\(.*\)/\1:/g' > $(call dot,$1).d.inc2 && \
+	cat $(call dot,$1).d.pre $(call dot,$1).d.inc2 > $(call dot,$1).d; \
+	rm -f $(call dot,$1).d.inc $(call dot,$1).d.inc2 $(call dot,$1).d.pre \
+)
+
+vpath %.c $(srctree)
+%.o: %.c FORCE | prepare_headers
+	$(call make,rule_cc_o_c)
+
+quiet_rule_cc_o_s = AS      $@
+rule_cc_o_s = $(AS) $(AFLAGS) --asm_file=$< --output_file $@
+dep_rule_cc_o_s = $(shell \
+	$(assign_path) $(AS) $(AFLAGS) --cpp_file $< --preproc_dependency=$(call dot,$1).d.pre $(PP_OPTS) && \
+	$(assign_path) $(AS) $(AFLAGS) --cpp_file $< --preproc_includes=$(call dot,$1).d.inc $(PP_OPTS) && \
+	cat $(call dot,$1).d.inc | sed 's/\(.*\)/\1:/g' > $(call dot,$1).d.inc2 && \
+	cat $(call dot,$1).d.pre $(call dot,$1).d.inc2 > $(call dot,$1).d; \
+	rm -f $(call dot,$1).d.inc $(call dot,$1).d.inc2 $(call dot,$1).d.pre \
+)
+
+vpath %.S $(srctree)
+%.o: %.S FORCE | prepare_headers
+	$(call make,rule_cc_o_s)
+
+quiet_rule_ld_o_o = LD      $@
+rule_ld_o_o = $(LD) $(OPT_LEVEL) --run_linker -r $(filter-out $(PHONY),$^) -o $@
+
+quiet_rule_armcl_elf_o = LD      $@
+rule_armcl_elf_o = $(CC) $(OPT_LEVEL) --run_linker $(LDFLAGS) $(filter-out $(PHONY),$^) -m$(subst .elf,.map,$@)  --xml_link_info $(subst .elf,.xml,$@) -o $@
+
+quiet_rule_strip_elf_elf = STRIP      $@
+# XXX: Deal with windows arm cgt limitation of armstrip unable to handle
+# Existing stripped output file by explicitly deleting
+rule_strip_elf_elf = $(RM) -f $@; $(STRIP) $(STRIPFLAGS) -o=$@ $<
+
+quiet_rule_bin_elf = BIN      $@
+rule_bin_elf = $(HEX) $(BINFLAGS) $(filter %.cmd,$^) -map=$(subst .bin,.bin.map,$@) -o=$@ $<
+
+# This rule uses a "template" S file which is interpreted by the compiler as
+# an ASM file so that it can be run through the C preprocessor to allow the
+# usage of CONFIG_ options and ifdefs for configurable output.
+quiet_rule_lds_ld = CPP     $@
+rule_lds_ld = $(CPP) $(CPPFLAGS) $< --preproc_with_comment --output_file $@
+dep_rule_lds_ld = $(shell \
+	$(assign_path) $(CPP) $(CPPFLAGS) $< --preproc_dependency=$(call dot,$1).d.pre $(PP_OPTS) && \
+	$(assign_path) $(CPP) $(CPPFLAGS) $< --preproc_includes=$(call dot,$1).d.inc $(PP_OPTS) && \
+	cat $(call dot,$1).d.inc | sed 's/\(.*\)/\1:/g' > $(call dot,$1).d.inc2 && \
+	cat $(call dot,$1).d.pre | sed 's/\.ld:/:/g' > $(call dot,$1).d.pre2 && \
+	cat $(call dot,$1).d.pre2 $(call dot,$1).d.inc2 > $(call dot,$1).d; \
+	rm -f $(call dot,$1).d.inc $(call dot,$1).d.inc2 $(call dot,$1).d.pre $(call dot,$1).d.pre2 \
+)
+
+vpath %.ld.S $(srctree)
+%.ld: %.ld.S FORCE | prepare_headers
+	$(call make,rule_lds_ld)
+
+# This rule uses a "template" S file which is interpreted by the compiler as
+# an ASM file so that it can be run through the C preprocessor to allow the
+# usage of CONFIG_ options and ifdefs for configurable output.
+quiet_rule_cmds_cmd = CPP     $@
+rule_cmds_cmd = $(CPP) $(CPPFLAGS) $< --preproc_with_comment --output_file $@
+dep_rule_cmds_cmd = $(shell \
+	$(assign_path) $(CPP) $(CPPFLAGS) $< --preproc_dependency=$(call dot,$1).d.pre $(PP_OPTS) && \
+	$(assign_path) $(CPP) $(CPPFLAGS) $< --preproc_includes=$(call dot,$1).d.inc $(PP_OPTS) && \
+	cat $(call dot,$1).d.inc | sed 's/\(.*\)/\1:/g' > $(call dot,$1).d.inc2 && \
+	cat $(call dot,$1).d.pre | sed 's/\.cmd:/:/g' > $(call dot,$1).d.pre2 && \
+	cat $(call dot,$1).d.pre2 $(call dot,$1).d.inc2 > $(call dot,$1).d; \
+	rm -f $(call dot,$1).d.inc $(call dot,$1).d.inc2 $(call dot,$1).d.pre $(call dot,$1).d.pre2 \
+)
+
+vpath %cmd.S $(srctree)
+%.cmd: %.cmd.S FORCE | prepare_headers
+	$(call make,rule_cmds_cmd)
+
+# This rule uses a "template" S file which is interpreted by the compiler as
+# an ASM file so that it can be run through the C preprocessor to allow the
+# usage of CONFIG_ options and ifdefs for configurable output.
+quiet_rule_cfgs_cfg = CPP     $@
+rule_cfgs_cfg = $(CPP) $(CPPFLAGS) $< --preproc_with_comment --output_file $@
+dep_rule_cfgs_cfg = $(shell \
+	$(assign_path) $(CPP) $(CPPFLAGS) $< --preproc_dependency=$(call dot,$1).d.pre $(PP_OPTS) && \
+	$(assign_path) $(CPP) $(CPPFLAGS) $< --preproc_includes=$(call dot,$1).d.inc $(PP_OPTS) && \
+	cat $(call dot,$1).d.inc | sed 's/\(.*\)/\1:/g' > $(call dot,$1).d.inc2 && \
+	cat $(call dot,$1).d.pre | sed 's/\.cfg:/:/g' > $(call dot,$1).d.pre2 && \
+	cat $(call dot,$1).d.pre2 $(call dot,$1).d.inc2 > $(call dot,$1).d; \
+	rm -f $(call dot,$1).d.inc $(call dot,$1).d.inc2 $(call dot,$1).d.pre $(call dot,$1).d.pre2 \
+)
+
+vpath %.cfg.S $(srctree)
+%.cfg: %.cfg.S FORCE | prepare_headers
+	$(call make,rule_cfgs_cfg)
+
+quiet_rule_submake = SUBMAKE $@
+rule_submake = +$(MAKE) $(SUBMAKEFLAGS) $(SUBMAKERULES)
+
+SUBMAKEFLAGS = $(submakeflags-y) $($@_SUBMAKEFLAGS)
+SUBMAKERULES = $(submakerules-y) $($@_SUBMAKERULES)
+

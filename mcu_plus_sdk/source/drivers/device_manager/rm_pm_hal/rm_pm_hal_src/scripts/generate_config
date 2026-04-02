@@ -1,0 +1,92 @@
+#!/bin/sh
+##
+# DMSC firmware Configuration header Generator
+#
+# Cortex-M3 (CM3) firmware
+#
+# Copyright (C) 2020 Texas Instruments Incorporated - http://www.ti.com/
+#
+# This software is licensed under the  standard terms and conditions in the
+# Texas Instruments  Incorporated Technology and Software Publicly Available
+# Software License Agreement, a copy of which is included in the software
+# download.
+##
+
+if [ ! -f "$1" ]; then
+	echo "Need .config  file as parameter"
+	exit 1
+fi
+year=$(date +%Y)
+
+if [ ! -z "$WIN_GITPATH" ]; then
+	git_cmd="$WIN_GITPATH/git.exe"
+
+	if [ ! -x "$git_cmd" ]; then
+		echo "WARNING: Git is not at indicated location $git_cmd"
+	fi
+else
+	git_cmd="git"
+fi
+
+# Include an SCMVERSION if applicable. Make it short so we can still fit
+# the version string in the version reply. If we are on a clean tree that
+# matches the current tag, the string is blank. If the closest tag matches
+# what we expect based on v$VERSION.$SUBVERSION.$PATCHVERSION, don't bother
+# including it. Abbreviate dirty as +.
+if "$git_cmd" rev-parse --is-inside-work-tree 2>/dev/null >/dev/null; then
+	git_ver=$("$git_cmd" describe --abbrev=5 --dirty | sed -e 's/-dirty$/+/g')
+	makefile_ver="v${1}.${2}.${3}"
+	git_ver="$(echo "$git_ver" | sed -s "s/^${makefile_ver}-//g")"
+	if [ -n "$git_ver" ]; then
+		git_ver="-${git_ver}"
+	fi
+else
+	git_ver=""
+fi
+
+# Override git version if an explicit non-empty SCMVERSION is specified
+SCMVERSION=${2}
+if [ -n "$SCMVERSION" ]; then
+    git_ver="-${SCMVERSION}"
+fi
+
+cat << EOF
+/**
+ * DMSC firmware Config file (version: $git_ver)
+ *
+ * Cortex-M3 (CM3) firmware for security
+ *
+ * Copyright (C) 2014-$year Texas Instruments Incorporated - http://www.ti.com/
+ *
+ * This software is licensed under the  standard terms and conditions in the
+ * Texas Instruments  Incorporated Technology and Software Publicly Available
+ * Software License Agreement, a copy of which is included in the software
+ * download.
+ *
+ * NOTICE: This file is auto-generated based on version numbers passed in
+ * Makefile. Never edit this file by hand.
+ */
+
+#ifndef CONFIG_H
+#define CONFIG_H
+EOF
+
+cat $1 |\
+	    sed -e 's/#.*//'			\
+	    -e 's/.*=n.*//'			\
+	    -e 's/^.*=y/\#define &/g'		\
+	    -e 's/=y/ 1/g' 			\
+	    -e 's/^.*=0x/\#define &/g'		\
+	    -e 's/=0x/ 0x/'			\
+	    -e 's/^.*=[0-9]\+/\#define &/g'	\
+	    -e 's/\(=\)\([0-9]\+\)/ \2/g'	\
+	    -e 's/^.*=\"/\#define &/g'		\
+	    -e 's/="/ "/g'			\
+	    -e 's/ \([0-9A-Za-zx]\+\)$/ (\1U)/g'	\
+	    -e 's/\(CONFIG_LNK.*\)U/\1/g'		\
+	    -e 's/\(CONFIG_OSAL_NVIC_.*\)U/\1/g'
+
+cat << EOF
+
+#endif /* CONFIG_H */
+EOF

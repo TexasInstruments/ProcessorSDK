@@ -1,0 +1,482 @@
+/*
+ *  Copyright (C) 2025 Texas Instruments Incorporated
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions
+ *  are met:
+ *
+ *    Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ *    Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the
+ *    distribution.
+ *
+ *    Neither the name of Texas Instruments Incorporated nor the names of
+ *    its contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ *  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ *  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ *  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ *  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ *  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ *  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
+
+/**
+ *  \file  board_ecu.c
+ *
+ *  \brief Auto generated file from DM Power Configuration Tool, used to configure
+ *         PLL and PSC based on use case.
+ *
+ */
+% const module = system.modules['/dm_power_config_tool/dm_power_config'];
+/* ========================================================================== */
+/*                             Include Files                                  */
+/* ========================================================================== */
+
+#include <ti/drv/sciclient/sciclient.h>
+#include "board_ecu.h"
+#include "board_pll.h"
+#include "board_clock.h"
+#include "board_utils.h"
+
+/* ========================================================================== */
+/*                            Global Variables                                */
+/* ========================================================================== */
+
+ % if (module && module.getClockEnableIds) {
+        % for(let i = 0; i < module.$instances.length; i++) {
+            % let instance = module.$instances[i];
+            % let moduleInst = module.$instances[i];
+static uint32_t gBoardEcuClkModuleMcuIDInit_powerConfig`i`[] ={
+    /* Fixed config - None */
+    /* GUI configured */
+                % let moduleIds = module.getClockEnableIds(instance);
+
+                % if (moduleIds) {
+                    % moduleIds.forEach( function(moduleId) {
+                        % if (String(moduleId).includes("MCU") || String(moduleId).includes("WKUP")) {
+    `moduleId`,
+                        % }
+                    % } );
+                % }
+};
+
+        % }
+    % }
+ % if (module && module.getClockEnableIds) {
+        % for(let i = 0; i < module.$instances.length; i++) {
+             % let moduleInst = module.$instances[i];
+static uint32_t gBoardEcuClkModuleMainIDInit_powerConfig`i`[] = {
+    /* Fixed config - None */
+    /* GUI configured */
+                % let moduleIds = module.getClockEnableIds(moduleInst);
+                % if (moduleIds) {
+                    % moduleIds.forEach( function(moduleId) {
+                        % if(!(String(moduleId).includes("MCU") || String(moduleId).includes("WKUP"))){
+    `moduleId`,
+                        % }
+                    % } );
+                % }
+};
+
+        % }
+    % }
+ % if (module && module.getClockDisableIds) {
+        % for(let i = 0; i < module.$instances.length; i++) {
+            % let instance = module.$instances[i];
+            % let moduleInst = module.$instances[i];
+static uint32_t gBoardEcuClkModuleMcuIDDisable_powerConfig`i`[] ={
+    /* GUI configured disable PSCs */
+                % let moduleIds = module.getClockDisableIds(instance);
+
+                % if (moduleIds) {
+                    % moduleIds.forEach( function(moduleId) {
+                        % if (String(moduleId).includes("MCU") || String(moduleId).includes("WKUP")) {
+    `moduleId`,
+                        % }
+                    % } );
+                % }
+};
+
+        % }
+    % }
+ % if (module && module.getClockDisableIds) {
+        % for(let i = 0; i < module.$instances.length; i++) {
+             % let moduleInst = module.$instances[i];
+static uint32_t gBoardEcuClkModuleMainIDDisable_powerConfig`i`[] = {
+    /* GUI configured disable PSCs */
+                % let moduleIds = module.getClockDisableIds(moduleInst);
+                % if (moduleIds) {
+                    % moduleIds.forEach( function(moduleId) {
+                        % if(!(String(moduleId).includes("MCU") || String(moduleId).includes("WKUP"))){
+    `moduleId`,
+                        % }
+                    % } );
+                % }
+};
+
+        % }
+    % }
+% if (module && module.getClockFrequencies) {
+    % for(let i = 0; i < module.$instances.length; i++) {
+        % let instance = module.$instances[i];
+static Board_PllClkCfg_t gBoardEcuPllClkCfgMcu_powerConfig`i`[] =
+{   /* Fixed config */
+    {
+      TISCI_DEV_MCU_CPSW0,
+      TISCI_DEV_MCU_CPSW0_CPTS_RFT_CLK_PARENT_HSDIV4_16FFT_MCU_2_HSDIVOUT1_CLK,
+      200000000
+    },
+   /* GUI configured */
+        % let clockFrequencies = module.getClockFrequencies(instance);
+        % if (clockFrequencies) {
+            % clockFrequencies.forEach( function(clockFrequency) {
+                % if (String(clockFrequency.moduleId).includes("MCU") || String(clockFrequency.moduleId).includes("WKUP")) {
+    {
+      `clockFrequency.moduleId`,
+      `clockFrequency.clkId`,
+      `clockFrequency.clkRate`
+    },
+                % }
+            % } );
+        % }
+};
+
+    % }
+% }
+% if (module && module.getClockFrequencies) {
+    % for(let i = 0; i < module.$instances.length; i++) {
+        % let instance = module.$instances[i];
+static Board_PllClkCfg_t gBoardEcuPllClkCfgMain_powerConfig`i`[] =
+{   /* Fixed config */
+    {
+      TISCI_DEV_GTC0,
+      TISCI_DEV_GTC0_GTC_CLK_PARENT_POSTDIV3_16FFT_MAIN_0_HSDIVOUT6_CLK,
+      200000000
+    },
+    /* GUI configured */
+        % let clockFrequencies = module.getClockFrequencies(instance);
+        % if (clockFrequencies) {
+            % clockFrequencies.forEach( function(clockFrequency) {
+                % if (!(String(clockFrequency.moduleId).includes("MCU") || String(clockFrequency.moduleId).includes("WKUP"))) {
+    {
+      `clockFrequency.moduleId`,
+      `clockFrequency.clkId`,
+      `clockFrequency.clkRate`
+    },
+                % }
+            % } );
+        % }
+};
+
+    % }
+% }
+/* ========================================================================== */
+/*                           Macros & Typedefs                                */
+/* ========================================================================== */
+
+/* None */
+
+/* ========================================================================== */
+/*                         Structure Declarations                             */
+/* ========================================================================== */
+
+/* None */
+
+/* ========================================================================== */
+/*                        Function Declarations                               */
+/* ========================================================================== */
+
+/* None */
+
+/* ========================================================================== */
+/*                       Internal Function Declarations                       */
+/* ========================================================================== */
+
+static Board_STATUS Board_ecuInitPll(uint32_t cfg);
+static Board_STATUS Board_ecuInitClock(uint32_t cfg);
+
+/* ========================================================================== */
+/*                          Function Definitions                              */
+/* ========================================================================== */
+
+Board_STATUS Board_ecuInit(uint32_t cfg)
+{
+    Board_STATUS status = BOARD_SOK;
+
+    status = Board_ecuInitPll(cfg);
+    if(status == BOARD_SOK)
+    {
+        status = Board_ecuInitClock(cfg);
+    }
+    if(status == BOARD_SOK)
+    {
+        status = Board_ecuDisableClock(cfg);
+    }
+
+    return status;
+}
+
+Board_STATUS Board_ecuDisableClock(uint32_t cfg)
+{
+    uint32_t *pMcuDisableArray = NULL;
+    uint32_t *pMainDisableArray = NULL;
+    uint32_t mcuDisableArraySize = 0;
+    uint32_t mainDisableArraySize = 0;
+    Board_STATUS status = BOARD_SOK;
+    uint32_t index = 0;
+
+    /* Select array to use based on config */
+    switch (cfg)
+    {
+        case BOARD_ECU_NONE:
+        {
+            /* For ECU_NONE, no clocks to disable */
+        }
+        break;
+
+% for(let i = 0; module && i < module.$instances.length; i++) {
+% let instance = module.$instances[i];
+        case `instance.$name`:
+        {
+            pMcuDisableArray = gBoardEcuClkModuleMcuIDDisable_powerConfig`i`;
+            mcuDisableArraySize = sizeof(gBoardEcuClkModuleMcuIDDisable_powerConfig`i`) / sizeof(uint32_t);
+
+            pMainDisableArray = gBoardEcuClkModuleMainIDDisable_powerConfig`i`;
+            mainDisableArraySize = sizeof(gBoardEcuClkModuleMainIDDisable_powerConfig`i`) / sizeof(uint32_t);
+        }
+        break;
+
+%}
+        default:
+        {
+            status = BOARD_INVALID_PARAM;
+        }
+        break;
+    }
+
+    /* Disable MCU clocks */
+    if (pMcuDisableArray != NULL)
+     {
+        for (index = 0; index < mcuDisableArraySize && status == BOARD_SOK; index++)
+        {
+            status = Board_moduleClockDisable(pMcuDisableArray[index]);
+        }
+    }
+
+    /* Disable Main clocks */
+    if (pMainDisableArray != NULL)
+    {
+        for (index = 0; index < mainDisableArraySize && status == BOARD_SOK; index++)
+        {
+            status = Board_moduleClockDisable(pMainDisableArray[index]);
+        }
+    }
+
+    return status;
+}
+
+/* ========================================================================== */
+/*                       Internal Function Definitions                        */
+/* ========================================================================== */
+
+static Board_STATUS Board_ecuInitPll(uint32_t cfg)
+{
+    Board_PllClkCfg_t *pMcuArray = NULL;
+    Board_PllClkCfg_t *pMainArray = NULL;
+    uint32_t mcuArraySize = 0;
+    uint32_t mainArraySize = 0;
+    Board_STATUS status = BOARD_SOK;
+    uint32_t index = 0;
+
+   /* Select array to use based on config */
+    switch(cfg)
+    {
+        case BOARD_ECU_NONE:
+        {
+          /* For ECU_NONE use default PLL init */
+            status= Board_PLLInitMcu();
+
+            if(status == BOARD_SOK)
+            {
+                status = Board_PLLInitMain();
+            }
+        }
+        break;
+
+% for(let i = 0; module && i < module.$instances.length; i++) {
+% let instance = module.$instances[i];
+        case `instance.$name`:
+        {
+            pMcuArray = gBoardEcuPllClkCfgMcu_powerConfig`i`;
+            mcuArraySize = sizeof(gBoardEcuPllClkCfgMcu_powerConfig`i`) / sizeof(Board_PllClkCfg_t);
+
+            pMainArray = gBoardEcuPllClkCfgMain_powerConfig`i`;
+            mainArraySize = sizeof(gBoardEcuPllClkCfgMain_powerConfig`i`) / sizeof(Board_PllClkCfg_t);
+        }
+        break;
+
+%}
+        default:
+        {
+            status = BOARD_INVALID_PARAM;
+        }
+        break;
+    }
+
+    /* Set MCU PLLs */
+    if (pMcuArray != NULL)
+    {
+        for (index = 0; index < mcuArraySize && status == BOARD_SOK; index++)
+        {
+            status = Board_PLLInit(pMcuArray[index].tisciDevID,
+                                   pMcuArray[index].tisciClkID,
+                                   pMcuArray[index].clkRate);
+        }
+    }
+
+    /* Set Main PLLs */
+    if (pMainArray != NULL)
+    {
+        for (index = 0; index < mainArraySize && status == BOARD_SOK; index++)
+        {
+            status = Board_PLLInit(pMainArray[index].tisciDevID,
+                                   pMainArray[index].tisciClkID,
+                                   pMainArray[index].clkRate);
+        }
+    }
+
+    return status;
+}
+
+static Board_STATUS Board_ecuInitClock(uint32_t cfg)
+{
+    uint32_t *pMcuArray = NULL;
+    uint32_t *pMainArray = NULL;
+    uint32_t mcuArraySize = 0;
+    uint32_t mainArraySize = 0;
+    Board_STATUS status = BOARD_SOK;
+    uint32_t index = 0;
+
+    /* Select array to use based on config */
+    switch (cfg)
+    {
+        case BOARD_ECU_NONE:
+        {
+          /* For ECU_NONE, set main and mcu clock groups to all groups */
+            Board_initParams_t initParams;
+            Board_getInitParams(&initParams);
+            initParams.mainClkGrp = BOARD_MAIN_CLOCK_GROUP_ALL;
+            initParams.mcuClkGrp  = BOARD_MCU_CLOCK_GROUP_ALL;
+            Board_setInitParams(&initParams);
+
+            Board_init(BOARD_INIT_MODULE_CLOCK);
+        }
+        break;
+
+% for(let i = 0; module && i < module.$instances.length; i++) {
+% let instance = module.$instances[i];
+        case `instance.$name`:
+        {
+            pMcuArray = gBoardEcuClkModuleMcuIDInit_powerConfig`i`;
+            mcuArraySize = sizeof(gBoardEcuClkModuleMcuIDInit_powerConfig`i`) / sizeof(uint32_t);
+
+            pMainArray = gBoardEcuClkModuleMainIDInit_powerConfig`i`;
+            mainArraySize = sizeof(gBoardEcuClkModuleMainIDInit_powerConfig`i`) / sizeof(uint32_t);
+        }
+        break;
+
+%}
+        default:
+        {
+            status = BOARD_INVALID_PARAM;
+        }
+        break;
+    }
+
+    /* Set MCU clocks */
+    if (pMcuArray != NULL)
+    {
+        for (index = 0; index < mcuArraySize && status == BOARD_SOK; index++)
+        {
+            status = Board_moduleClockEnable(pMcuArray[index]);
+        }
+    }
+
+    /* Set Main clocks */
+    if (pMainArray != NULL)
+    {
+        for (index = 0; index < mainArraySize && status == BOARD_SOK; index++)
+        {
+            status = Board_moduleClockEnable(pMainArray[index]);
+        }
+    }
+
+    return status;
+}
+
+/**
+ * @brief  Get the CPU clock rate for a given device ID and ECU configuration.
+ *
+ * This function searches the appropriate clock configuration array based on the ECU config
+ * (FC, SRV, AVP4) and returns the clock rate for the specified TISCI device ID.
+ *
+ * @param tisci_dev_id  TISCI device ID for which the CPU clock rate is requested.
+ * @param cfg           ECU configuration (BOARD_ECU_FC, BOARD_ECU_SRV, BOARD_ECU_AVP4).
+ *
+ * @return              CPU clock rate in Hz if found, BOARD_INVALID_CORE_CLK_FREQ otherwise.
+ */
+int64_t Board_ecuGetCpuClock(uint32_t tisci_dev_id, uint32_t cfg)
+{
+    uint32_t index = 0;    
+    Board_STATUS status = BOARD_SOK;
+    Board_PllClkCfg_t *pMainArray = NULL;
+    uint32_t mainArraySize = 0;
+    int64_t retVal = BOARD_INVALID_CORE_CLK_FREQ;
+
+    /* Select the appropriate clock configuration array based on ECU config */
+    switch (cfg)
+    {
+        
+% for(let i = 0; module && i < module.$instances.length; i++) {
+% let instance = module.$instances[i];
+        case `instance.$name`:
+        {
+            pMainArray = gBoardEcuPllClkCfgMain_powerConfig`i`;
+            mainArraySize = sizeof(gBoardEcuPllClkCfgMain_powerConfig`i`) / sizeof(Board_PllClkCfg_t);
+        }
+        break;
+
+%}
+        default:
+        {
+            status = BOARD_INVALID_PARAM;
+        }
+        break;
+    }
+
+    /* Search for the device ID in the selected array and return its clock rate */
+    if (pMainArray != NULL)
+    {
+        for (index = 0; index < mainArraySize && status == BOARD_SOK; index++)
+        {
+            if (tisci_dev_id == pMainArray[index].tisciDevID)
+            {
+                retVal = pMainArray[index].clkRate;
+                break;
+            }
+        }
+    }
+
+    return retVal;
+}

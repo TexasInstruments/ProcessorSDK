@@ -1,0 +1,8363 @@
+/********************************************************************
+*
+* SOC FIREWALL PROPERTIES. header file
+*
+* Copyright (C) 2015-2019 Texas Instruments Incorporated.
+*  Redistribution and use in source and binary forms, with or without
+*  modification, are permitted provided that the following conditions
+*  are met:
+*
+*    Redistributions of source code must retain the above copyright
+*    notice, this list of conditions and the following disclaimer.
+*
+*    Redistributions in binary form must reproduce the above copyright
+*    notice, this list of conditions and the following disclaimer in the
+*    documentation and/or other materials provided with the
+*    distribution.
+*
+*    Neither the name of Texas Instruments Incorporated nor the names of
+*    its contributors may be used to endorse or promote products derived
+*    from this software without specific prior written permission.
+*
+*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+*  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+*  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+*  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+*  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+*  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+*  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+*  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+*  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*
+*/
+#ifndef CSLR_SOC_FW_H_
+#define CSLR_SOC_FW_H_
+
+#include <ti/csl/cslr.h>
+#include <ti/csl/tistdtypes.h>
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+/*
+* Auto-generated CSL definitions for SoC Firewalls:
+*/
+
+#define CSL_FW_SECURITY                                                                            (0U)
+#define CSL_FW_CHANNEL                                                                             (1U)
+#define CSL_FW_MST                                                                                 (2U)
+
+/* Standard Security Master Firewall Definitions */
+
+/* Properties of firewall at master: A72SS0_CPU_0_CPU_0_MSMC */
+#define CSL_MSTR_FW_A72SS0_CPU_0_CPU_0_MSMC_ID                                                     (257U)
+#define CSL_MSTR_FW_A72SS0_CPU_0_CPU_0_MSMC_TYPE                                                   (CSL_FW_MST)
+#define CSL_MSTR_FW_A72SS0_CPU_0_CPU_0_MSMC_MMR_BASE                                               (0x0000000045040400U)
+#define CSL_MSTR_FW_A72SS0_CPU_0_CPU_0_MSMC_NUM_REGIONS                                            (16U)
+#define CSL_MSTR_FW_A72SS0_CPU_0_CPU_0_MSMC_NUM_PRIV_IDS_PER_REGION                                (1U)
+
+/* Properties of firewall at master: COMPUTE_CLUSTER0_C71SS0_CPU_4_CPU_0_MSMC */
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_C71SS0_CPU_4_CPU_0_MSMC_ID                                    (265U)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_C71SS0_CPU_4_CPU_0_MSMC_TYPE                                  (CSL_FW_MST)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_C71SS0_CPU_4_CPU_0_MSMC_MMR_BASE                              (0x0000000045042400U)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_C71SS0_CPU_4_CPU_0_MSMC_NUM_REGIONS                           (8U)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_C71SS0_CPU_4_CPU_0_MSMC_NUM_PRIV_IDS_PER_REGION               (1U)
+
+/* Properties of firewall at master: COMPUTE_CLUSTER0_C71SS1_CPU_5_CPU_0_MSMC */
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_C71SS1_CPU_5_CPU_0_MSMC_ID                                    (267U)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_C71SS1_CPU_5_CPU_0_MSMC_TYPE                                  (CSL_FW_MST)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_C71SS1_CPU_5_CPU_0_MSMC_MMR_BASE                              (0x0000000045042C00U)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_C71SS1_CPU_5_CPU_0_MSMC_NUM_REGIONS                           (8U)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_C71SS1_CPU_5_CPU_0_MSMC_NUM_PRIV_IDS_PER_REGION               (1U)
+
+/* Properties of firewall at master: COMPUTE_CLUSTER0_DRU0_DRU_0_MSMC */
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_DRU0_DRU_0_MSMC_ID                                            (284U)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_DRU0_DRU_0_MSMC_TYPE                                          (CSL_FW_MST)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_DRU0_DRU_0_MSMC_MMR_BASE                                      (0x0000000045047000U)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_DRU0_DRU_0_MSMC_NUM_REGIONS                                   (16U)
+#define CSL_MSTR_FW_COMPUTE_CLUSTER0_DRU0_DRU_0_MSMC_NUM_PRIV_IDS_PER_REGION                       (3U)
+
+/* Standard Security Slave Firewall Definitions */
+
+/* Properties of firewall at slave: PSRAM2KECC0_RAM */
+#define CSL_STD_FW_PSRAM2KECC0_RAM_ID                                                              (1U)
+#define CSL_STD_FW_PSRAM2KECC0_RAM_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_PSRAM2KECC0_RAM_MMR_BASE                                                        (0x00000045000400U)
+#define CSL_STD_FW_PSRAM2KECC0_RAM_NUM_REGIONS                                                     (1U)
+#define CSL_STD_FW_PSRAM2KECC0_RAM_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_PSRAM2KECC0_RAM_RAM_START                                                       (0x00000000000000U)
+#define CSL_STD_FW_PSRAM2KECC0_RAM_RAM_END                                                         (0x000000000007ffU)
+
+/* Properties of firewall at slave: PSRAMECC0_RAM */
+#define CSL_STD_FW_PSRAMECC0_RAM_ID                                                                (3U)
+#define CSL_STD_FW_PSRAMECC0_RAM_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_PSRAMECC0_RAM_MMR_BASE                                                          (0x00000045000c00U)
+#define CSL_STD_FW_PSRAMECC0_RAM_NUM_REGIONS                                                       (1U)
+#define CSL_STD_FW_PSRAMECC0_RAM_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_PSRAMECC0_RAM_RAM_START                                                         (0x00000000200000U)
+#define CSL_STD_FW_PSRAMECC0_RAM_RAM_END                                                           (0x000000002003ffU)
+
+/* Properties of firewall at slave: PSC0_VBUS */
+#define CSL_STD_FW_PSC0_VBUS_ID                                                                    (5U)
+#define CSL_STD_FW_PSC0_VBUS_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_PSC0_VBUS_MMR_BASE                                                              (0x00000045001400U)
+#define CSL_STD_FW_PSC0_VBUS_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_PSC0_VBUS_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_PSC0_VBUS_START                                                                 (0x00000000400000U)
+#define CSL_STD_FW_PSC0_VBUS_END                                                                   (0x00000000400fffU)
+
+/* Properties of firewall at slave: PLLCTRL0_MEM */
+#define CSL_STD_FW_PLLCTRL0_MEM_ID                                                                 (6U)
+#define CSL_STD_FW_PLLCTRL0_MEM_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_PLLCTRL0_MEM_MMR_BASE                                                           (0x00000045001800U)
+#define CSL_STD_FW_PLLCTRL0_MEM_NUM_REGIONS                                                        (1U)
+#define CSL_STD_FW_PLLCTRL0_MEM_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_PLLCTRL0_MEM_START                                                              (0x00000000410000U)
+#define CSL_STD_FW_PLLCTRL0_MEM_END                                                                (0x000000004101ffU)
+
+/* Properties of firewall at slave: PLL0_CFG */
+#define CSL_STD_FW_PLL0_CFG_ID                                                                     (8U)
+#define CSL_STD_FW_PLL0_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_PLL0_CFG_MMR_BASE                                                               (0x00000045002000U)
+#define CSL_STD_FW_PLL0_CFG_NUM_REGIONS                                                            (26U)
+#define CSL_STD_FW_PLL0_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_PLL0_CFG_CFG_START                                                              (0x00000000680000U)
+#define CSL_STD_FW_PLL0_CFG_CFG_END                                                                (0x0000000069ffffU)
+
+/* Properties of firewall at slave: CTRL_MMR0_CFG0 */
+#define CSL_STD_FW_CTRL_MMR0_CFG0_ID                                                               (9U)
+#define CSL_STD_FW_CTRL_MMR0_CFG0_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_CTRL_MMR0_CFG0_MMR_BASE                                                         (0x00000045002400U)
+#define CSL_STD_FW_CTRL_MMR0_CFG0_NUM_REGIONS                                                      (16U)
+#define CSL_STD_FW_CTRL_MMR0_CFG0_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_CTRL_MMR0_CFG0_CFG0_START                                                       (0x00000000100000U)
+#define CSL_STD_FW_CTRL_MMR0_CFG0_CFG0_END                                                         (0x0000000011ffffU)
+
+/* Properties of firewall at slave: GPIO0_MEM */
+#define CSL_STD_FW_GPIO0_MEM_ID                                                                    (16U)
+#define CSL_STD_FW_GPIO0_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_GPIO0_MEM_MMR_BASE                                                              (0x00000045004000U)
+#define CSL_STD_FW_GPIO0_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_GPIO0_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_GPIO0_MEM_START                                                                 (0x00000000600000U)
+#define CSL_STD_FW_GPIO0_MEM_END                                                                   (0x000000006000ffU)
+
+/* Properties of firewall at slave: ESM0_CFG */
+#define CSL_STD_FW_ESM0_CFG_ID                                                                     (24U)
+#define CSL_STD_FW_ESM0_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_ESM0_CFG_MMR_BASE                                                               (0x00000045006000U)
+#define CSL_STD_FW_ESM0_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_ESM0_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_ESM0_CFG_CFG_START                                                              (0x00000000700000U)
+#define CSL_STD_FW_ESM0_CFG_CFG_END                                                                (0x00000000700fffU)
+
+/* Properties of firewall at slave: DCC0_CFG */
+#define CSL_STD_FW_DCC0_CFG_ID                                                                     (64U)
+#define CSL_STD_FW_DCC0_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DCC0_CFG_MMR_BASE                                                               (0x00000045010000U)
+#define CSL_STD_FW_DCC0_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_DCC0_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_DCC0_CFG_START                                                                  (0x00000000800000U)
+#define CSL_STD_FW_DCC0_CFG_END                                                                    (0x0000000080003fU)
+
+/* Properties of firewall at slave: DCC1_CFG */
+#define CSL_STD_FW_DCC1_CFG_ID                                                                     (65U)
+#define CSL_STD_FW_DCC1_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DCC1_CFG_MMR_BASE                                                               (0x00000045010400U)
+#define CSL_STD_FW_DCC1_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_DCC1_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_DCC1_CFG_START                                                                  (0x00000000804000U)
+#define CSL_STD_FW_DCC1_CFG_END                                                                    (0x0000000080403fU)
+
+/* Properties of firewall at slave: DCC2_CFG */
+#define CSL_STD_FW_DCC2_CFG_ID                                                                     (66U)
+#define CSL_STD_FW_DCC2_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DCC2_CFG_MMR_BASE                                                               (0x00000045010800U)
+#define CSL_STD_FW_DCC2_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_DCC2_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_DCC2_CFG_START                                                                  (0x00000000808000U)
+#define CSL_STD_FW_DCC2_CFG_END                                                                    (0x0000000080803fU)
+
+/* Properties of firewall at slave: DCC3_CFG */
+#define CSL_STD_FW_DCC3_CFG_ID                                                                     (67U)
+#define CSL_STD_FW_DCC3_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DCC3_CFG_MMR_BASE                                                               (0x00000045010c00U)
+#define CSL_STD_FW_DCC3_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_DCC3_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_DCC3_CFG_START                                                                  (0x0000000080c000U)
+#define CSL_STD_FW_DCC3_CFG_END                                                                    (0x0000000080c03fU)
+
+/* Properties of firewall at slave: DCC4_CFG */
+#define CSL_STD_FW_DCC4_CFG_ID                                                                     (68U)
+#define CSL_STD_FW_DCC4_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DCC4_CFG_MMR_BASE                                                               (0x00000045011000U)
+#define CSL_STD_FW_DCC4_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_DCC4_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_DCC4_CFG_START                                                                  (0x00000000810000U)
+#define CSL_STD_FW_DCC4_CFG_END                                                                    (0x0000000081003fU)
+
+/* Properties of firewall at slave: DCC5_CFG */
+#define CSL_STD_FW_DCC5_CFG_ID                                                                     (69U)
+#define CSL_STD_FW_DCC5_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DCC5_CFG_MMR_BASE                                                               (0x00000045011400U)
+#define CSL_STD_FW_DCC5_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_DCC5_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_DCC5_CFG_START                                                                  (0x00000000814000U)
+#define CSL_STD_FW_DCC5_CFG_END                                                                    (0x0000000081403fU)
+
+/* Properties of firewall at slave: DCC6_CFG */
+#define CSL_STD_FW_DCC6_CFG_ID                                                                     (70U)
+#define CSL_STD_FW_DCC6_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DCC6_CFG_MMR_BASE                                                               (0x00000045011800U)
+#define CSL_STD_FW_DCC6_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_DCC6_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_DCC6_CFG_START                                                                  (0x00000000818000U)
+#define CSL_STD_FW_DCC6_CFG_END                                                                    (0x0000000081803fU)
+
+/* Properties of firewall at slave: DCC7_CFG */
+#define CSL_STD_FW_DCC7_CFG_ID                                                                     (71U)
+#define CSL_STD_FW_DCC7_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DCC7_CFG_MMR_BASE                                                               (0x00000045011c00U)
+#define CSL_STD_FW_DCC7_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_DCC7_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_DCC7_CFG_START                                                                  (0x0000000081c000U)
+#define CSL_STD_FW_DCC7_CFG_END                                                                    (0x0000000081c03fU)
+
+/* Properties of firewall at slave: DCC8_CFG */
+#define CSL_STD_FW_DCC8_CFG_ID                                                                     (72U)
+#define CSL_STD_FW_DCC8_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DCC8_CFG_MMR_BASE                                                               (0x00000045012000U)
+#define CSL_STD_FW_DCC8_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_DCC8_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_DCC8_CFG_START                                                                  (0x00000000820000U)
+#define CSL_STD_FW_DCC8_CFG_END                                                                    (0x0000000082003fU)
+
+/* Properties of firewall at slave: DCC9_CFG */
+#define CSL_STD_FW_DCC9_CFG_ID                                                                     (73U)
+#define CSL_STD_FW_DCC9_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DCC9_CFG_MMR_BASE                                                               (0x00000045012400U)
+#define CSL_STD_FW_DCC9_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_DCC9_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_DCC9_CFG_START                                                                  (0x00000000824000U)
+#define CSL_STD_FW_DCC9_CFG_END                                                                    (0x0000000082403fU)
+
+/* Properties of firewall at slave: GPIO2_MEM */
+#define CSL_STD_FW_GPIO2_MEM_ID                                                                    (82U)
+#define CSL_STD_FW_GPIO2_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_GPIO2_MEM_MMR_BASE                                                              (0x00000045014800U)
+#define CSL_STD_FW_GPIO2_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_GPIO2_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_GPIO2_MEM_START                                                                 (0x00000000610000U)
+#define CSL_STD_FW_GPIO2_MEM_END                                                                   (0x000000006100ffU)
+
+/* Properties of firewall at slave: PBIST4_MEM */
+#define CSL_STD_FW_PBIST4_MEM_ID                                                                   (83U)
+#define CSL_STD_FW_PBIST4_MEM_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_PBIST4_MEM_MMR_BASE                                                             (0x00000045014c00U)
+#define CSL_STD_FW_PBIST4_MEM_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_PBIST4_MEM_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_PBIST4_MEM_START                                                                (0x00000000d30000U)
+#define CSL_STD_FW_PBIST4_MEM_END                                                                  (0x00000000d303ffU)
+
+/* Properties of firewall at slave: GPIO4_MEM */
+#define CSL_STD_FW_GPIO4_MEM_ID                                                                    (84U)
+#define CSL_STD_FW_GPIO4_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_GPIO4_MEM_MMR_BASE                                                              (0x00000045015000U)
+#define CSL_STD_FW_GPIO4_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_GPIO4_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_GPIO4_MEM_START                                                                 (0x00000000620000U)
+#define CSL_STD_FW_GPIO4_MEM_END                                                                   (0x000000006200ffU)
+
+/* Properties of firewall at slave: GPIO6_MEM */
+#define CSL_STD_FW_GPIO6_MEM_ID                                                                    (86U)
+#define CSL_STD_FW_GPIO6_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_GPIO6_MEM_MMR_BASE                                                              (0x00000045015800U)
+#define CSL_STD_FW_GPIO6_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_GPIO6_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_GPIO6_MEM_START                                                                 (0x00000000630000U)
+#define CSL_STD_FW_GPIO6_MEM_END                                                                   (0x000000006300ffU)
+
+/* Properties of firewall at slave: PBIST0_MEM */
+#define CSL_STD_FW_PBIST0_MEM_ID                                                                   (96U)
+#define CSL_STD_FW_PBIST0_MEM_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_PBIST0_MEM_MMR_BASE                                                             (0x00000045018000U)
+#define CSL_STD_FW_PBIST0_MEM_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_PBIST0_MEM_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_PBIST0_MEM_START                                                                (0x00000000d00000U)
+#define CSL_STD_FW_PBIST0_MEM_END                                                                  (0x00000000d003ffU)
+
+/* Properties of firewall at slave: DFTSS0_MEM */
+#define CSL_STD_FW_DFTSS0_MEM_ID                                                                   (97U)
+#define CSL_STD_FW_DFTSS0_MEM_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_DFTSS0_MEM_MMR_BASE                                                             (0x00000045018400U)
+#define CSL_STD_FW_DFTSS0_MEM_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_DFTSS0_MEM_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_DFTSS0_MEM_START                                                                (0x00000000d10000U)
+#define CSL_STD_FW_DFTSS0_MEM_END                                                                  (0x00000000d103ffU)
+
+/* Properties of firewall at slave: GTC0_GTC_CFG0 */
+#define CSL_STD_FW_GTC0_GTC_CFG0_ID                                                                (98U)
+#define CSL_STD_FW_GTC0_GTC_CFG0_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_GTC0_GTC_CFG0_MMR_BASE                                                          (0x00000045018800U)
+#define CSL_STD_FW_GTC0_GTC_CFG0_NUM_REGIONS                                                       (4U)
+#define CSL_STD_FW_GTC0_GTC_CFG0_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_GTC0_GTC_CFG0_GTC_CFG0_START                                                    (0x00000000a80000U)
+#define CSL_STD_FW_GTC0_GTC_CFG0_GTC_CFG0_END                                                      (0x00000000a803ffU)
+
+/* Properties of firewall at slave: GTC0_GTC_CFG1 */
+#define CSL_STD_FW_GTC0_GTC_CFG1_ID                                                                (98U)
+#define CSL_STD_FW_GTC0_GTC_CFG1_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_GTC0_GTC_CFG1_MMR_BASE                                                          (0x00000045018800U)
+#define CSL_STD_FW_GTC0_GTC_CFG1_NUM_REGIONS                                                       (4U)
+#define CSL_STD_FW_GTC0_GTC_CFG1_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_GTC0_GTC_CFG1_GTC_CFG1_START                                                    (0x00000000a90000U)
+#define CSL_STD_FW_GTC0_GTC_CFG1_GTC_CFG1_END                                                      (0x00000000a93fffU)
+
+/* Properties of firewall at slave: GTC0_GTC_CFG2 */
+#define CSL_STD_FW_GTC0_GTC_CFG2_ID                                                                (98U)
+#define CSL_STD_FW_GTC0_GTC_CFG2_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_GTC0_GTC_CFG2_MMR_BASE                                                          (0x00000045018800U)
+#define CSL_STD_FW_GTC0_GTC_CFG2_NUM_REGIONS                                                       (4U)
+#define CSL_STD_FW_GTC0_GTC_CFG2_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_GTC0_GTC_CFG2_GTC_CFG2_START                                                    (0x00000000aa0000U)
+#define CSL_STD_FW_GTC0_GTC_CFG2_GTC_CFG2_END                                                      (0x00000000aa3fffU)
+
+/* Properties of firewall at slave: GTC0_GTC_CFG3 */
+#define CSL_STD_FW_GTC0_GTC_CFG3_ID                                                                (98U)
+#define CSL_STD_FW_GTC0_GTC_CFG3_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_GTC0_GTC_CFG3_MMR_BASE                                                          (0x00000045018800U)
+#define CSL_STD_FW_GTC0_GTC_CFG3_NUM_REGIONS                                                       (4U)
+#define CSL_STD_FW_GTC0_GTC_CFG3_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_GTC0_GTC_CFG3_GTC_CFG3_START                                                    (0x00000000ab0000U)
+#define CSL_STD_FW_GTC0_GTC_CFG3_GTC_CFG3_END                                                      (0x00000000ab3fffU)
+
+/* Properties of firewall at slave: PBIST1_MEM */
+#define CSL_STD_FW_PBIST1_MEM_ID                                                                   (99U)
+#define CSL_STD_FW_PBIST1_MEM_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_PBIST1_MEM_MMR_BASE                                                             (0x00000045018c00U)
+#define CSL_STD_FW_PBIST1_MEM_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_PBIST1_MEM_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_PBIST1_MEM_START                                                                (0x00000000d20000U)
+#define CSL_STD_FW_PBIST1_MEM_END                                                                  (0x00000000d203ffU)
+
+/* Properties of firewall at slave: MAIN_CBASS0_ERR_REGS */
+#define CSL_STD_FW_MAIN_CBASS0_ERR_REGS_ID                                                         (100U)
+#define CSL_STD_FW_MAIN_CBASS0_ERR_REGS_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MAIN_CBASS0_ERR_REGS_MMR_BASE                                                   (0x00000045019000U)
+#define CSL_STD_FW_MAIN_CBASS0_ERR_REGS_NUM_REGIONS                                                (1U)
+#define CSL_STD_FW_MAIN_CBASS0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_MAIN_CBASS0_ERR_REGS_ERR_START                                                  (0x00000000b00000U)
+#define CSL_STD_FW_MAIN_CBASS0_ERR_REGS_ERR_END                                                    (0x00000000b003ffU)
+
+/* Properties of firewall at slave: CBASS_FW0_ERR_REGS */
+#define CSL_STD_FW_CBASS_FW0_ERR_REGS_ID                                                           (101U)
+#define CSL_STD_FW_CBASS_FW0_ERR_REGS_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_FW0_ERR_REGS_MMR_BASE                                                     (0x00000045019400U)
+#define CSL_STD_FW_CBASS_FW0_ERR_REGS_NUM_REGIONS                                                  (1U)
+#define CSL_STD_FW_CBASS_FW0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_CBASS_FW0_ERR_REGS_ERR_START                                                    (0x00000000b08000U)
+#define CSL_STD_FW_CBASS_FW0_ERR_REGS_ERR_END                                                      (0x00000000b083ffU)
+
+/* Properties of firewall at slave: CBASS_INFRA_NON_SAFE0_ERR_REGS */
+#define CSL_STD_FW_CBASS_INFRA_NON_SAFE0_ERR_REGS_ID                                               (102U)
+#define CSL_STD_FW_CBASS_INFRA_NON_SAFE0_ERR_REGS_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_INFRA_NON_SAFE0_ERR_REGS_MMR_BASE                                         (0x00000045019800U)
+#define CSL_STD_FW_CBASS_INFRA_NON_SAFE0_ERR_REGS_NUM_REGIONS                                      (1U)
+#define CSL_STD_FW_CBASS_INFRA_NON_SAFE0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_CBASS_INFRA_NON_SAFE0_ERR_REGS_ERR_START                                        (0x00000000b04000U)
+#define CSL_STD_FW_CBASS_INFRA_NON_SAFE0_ERR_REGS_ERR_END                                          (0x00000000b043ffU)
+
+/* Properties of firewall at slave: GPIOMUX_INTRTR0_INTR_ROUTER_CFG */
+#define CSL_STD_FW_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_ID                                              (104U)
+#define CSL_STD_FW_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_MMR_BASE                                        (0x0000004501a000U)
+#define CSL_STD_FW_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_NUM_REGIONS                                     (1U)
+#define CSL_STD_FW_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_NUM_PRIV_IDS_PER_REGION                         (3U)
+#define CSL_STD_FW_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_CFG_START                                       (0x00000000a00000U)
+#define CSL_STD_FW_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_CFG_END                                         (0x00000000a007ffU)
+
+/* Properties of firewall at slave: MAIN2MCU_LVL_INTRTR0_INTR_ROUTER_CFG */
+#define CSL_STD_FW_MAIN2MCU_LVL_INTRTR0_INTR_ROUTER_CFG_ID                                         (105U)
+#define CSL_STD_FW_MAIN2MCU_LVL_INTRTR0_INTR_ROUTER_CFG_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MAIN2MCU_LVL_INTRTR0_INTR_ROUTER_CFG_MMR_BASE                                   (0x0000004501a400U)
+#define CSL_STD_FW_MAIN2MCU_LVL_INTRTR0_INTR_ROUTER_CFG_NUM_REGIONS                                (1U)
+#define CSL_STD_FW_MAIN2MCU_LVL_INTRTR0_INTR_ROUTER_CFG_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MAIN2MCU_LVL_INTRTR0_INTR_ROUTER_CFG_CFG_START                                  (0x00000000a10000U)
+#define CSL_STD_FW_MAIN2MCU_LVL_INTRTR0_INTR_ROUTER_CFG_CFG_END                                    (0x00000000a107ffU)
+
+/* Properties of firewall at slave: MAIN2MCU_PLS_INTRTR0_INTR_ROUTER_CFG */
+#define CSL_STD_FW_MAIN2MCU_PLS_INTRTR0_INTR_ROUTER_CFG_ID                                         (106U)
+#define CSL_STD_FW_MAIN2MCU_PLS_INTRTR0_INTR_ROUTER_CFG_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MAIN2MCU_PLS_INTRTR0_INTR_ROUTER_CFG_MMR_BASE                                   (0x0000004501a800U)
+#define CSL_STD_FW_MAIN2MCU_PLS_INTRTR0_INTR_ROUTER_CFG_NUM_REGIONS                                (1U)
+#define CSL_STD_FW_MAIN2MCU_PLS_INTRTR0_INTR_ROUTER_CFG_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MAIN2MCU_PLS_INTRTR0_INTR_ROUTER_CFG_CFG_START                                  (0x00000000a20000U)
+#define CSL_STD_FW_MAIN2MCU_PLS_INTRTR0_INTR_ROUTER_CFG_CFG_END                                    (0x00000000a207ffU)
+
+/* Properties of firewall at slave: CMPEVENT_INTRTR0_INTR_ROUTER_CFG */
+#define CSL_STD_FW_CMPEVENT_INTRTR0_INTR_ROUTER_CFG_ID                                             (107U)
+#define CSL_STD_FW_CMPEVENT_INTRTR0_INTR_ROUTER_CFG_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_CMPEVENT_INTRTR0_INTR_ROUTER_CFG_MMR_BASE                                       (0x0000004501ac00U)
+#define CSL_STD_FW_CMPEVENT_INTRTR0_INTR_ROUTER_CFG_NUM_REGIONS                                    (1U)
+#define CSL_STD_FW_CMPEVENT_INTRTR0_INTR_ROUTER_CFG_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_CMPEVENT_INTRTR0_INTR_ROUTER_CFG_CFG_START                                      (0x00000000a30000U)
+#define CSL_STD_FW_CMPEVENT_INTRTR0_INTR_ROUTER_CFG_CFG_END                                        (0x00000000a301ffU)
+
+/* Properties of firewall at slave: TIMESYNC_INTRTR0_INTR_ROUTER_CFG */
+#define CSL_STD_FW_TIMESYNC_INTRTR0_INTR_ROUTER_CFG_ID                                             (108U)
+#define CSL_STD_FW_TIMESYNC_INTRTR0_INTR_ROUTER_CFG_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMESYNC_INTRTR0_INTR_ROUTER_CFG_MMR_BASE                                       (0x0000004501b000U)
+#define CSL_STD_FW_TIMESYNC_INTRTR0_INTR_ROUTER_CFG_NUM_REGIONS                                    (1U)
+#define CSL_STD_FW_TIMESYNC_INTRTR0_INTR_ROUTER_CFG_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_TIMESYNC_INTRTR0_INTR_ROUTER_CFG_INTR_ROUTER_CFG_START                          (0x00000000a40000U)
+#define CSL_STD_FW_TIMESYNC_INTRTR0_INTR_ROUTER_CFG_INTR_ROUTER_CFG_END                            (0x00000000a407ffU)
+
+/* Properties of firewall at slave: ECC_AGGR0_REGS */
+#define CSL_STD_FW_ECC_AGGR0_REGS_ID                                                               (114U)
+#define CSL_STD_FW_ECC_AGGR0_REGS_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_ECC_AGGR0_REGS_MMR_BASE                                                         (0x0000004501c800U)
+#define CSL_STD_FW_ECC_AGGR0_REGS_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_ECC_AGGR0_REGS_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_ECC_AGGR0_REGS_ECC_AGGR_START                                                   (0x00000000c02000U)
+#define CSL_STD_FW_ECC_AGGR0_REGS_ECC_AGGR_END                                                     (0x00000000c023ffU)
+
+/* Properties of firewall at slave: PSRAMECC0_REGS */
+#define CSL_STD_FW_PSRAMECC0_REGS_ID                                                               (115U)
+#define CSL_STD_FW_PSRAMECC0_REGS_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_PSRAMECC0_REGS_MMR_BASE                                                         (0x0000004501cc00U)
+#define CSL_STD_FW_PSRAMECC0_REGS_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_PSRAMECC0_REGS_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_PSRAMECC0_REGS_ECC_AGGR_START                                                   (0x00000000c00000U)
+#define CSL_STD_FW_PSRAMECC0_REGS_ECC_AGGR_END                                                     (0x00000000c003ffU)
+
+/* Properties of firewall at slave: PSRAM2KECC0_REGS */
+#define CSL_STD_FW_PSRAM2KECC0_REGS_ID                                                             (116U)
+#define CSL_STD_FW_PSRAM2KECC0_REGS_TYPE                                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_PSRAM2KECC0_REGS_MMR_BASE                                                       (0x0000004501d000U)
+#define CSL_STD_FW_PSRAM2KECC0_REGS_NUM_REGIONS                                                    (1U)
+#define CSL_STD_FW_PSRAM2KECC0_REGS_NUM_PRIV_IDS_PER_REGION                                        (3U)
+#define CSL_STD_FW_PSRAM2KECC0_REGS_ECC_AGGR_START                                                 (0x00000000c01000U)
+#define CSL_STD_FW_PSRAM2KECC0_REGS_ECC_AGGR_END                                                   (0x00000000c013ffU)
+
+/* Properties of firewall at slave: WKUP_PSC0_VBUS */
+#define CSL_STD_FW_WKUP_PSC0_VBUS_ID                                                               (129U)
+#define CSL_STD_FW_WKUP_PSC0_VBUS_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_PSC0_VBUS_MMR_BASE                                                         (0x00000045020400U)
+#define CSL_STD_FW_WKUP_PSC0_VBUS_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_WKUP_PSC0_VBUS_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_WKUP_PSC0_VBUS_START                                                            (0x00000042000000U)
+#define CSL_STD_FW_WKUP_PSC0_VBUS_END                                                              (0x00000042000fffU)
+
+/* Properties of firewall at slave: WKUP_PLLCTRL0_MEM */
+#define CSL_STD_FW_WKUP_PLLCTRL0_MEM_ID                                                            (130U)
+#define CSL_STD_FW_WKUP_PLLCTRL0_MEM_TYPE                                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_PLLCTRL0_MEM_MMR_BASE                                                      (0x00000045020800U)
+#define CSL_STD_FW_WKUP_PLLCTRL0_MEM_NUM_REGIONS                                                   (1U)
+#define CSL_STD_FW_WKUP_PLLCTRL0_MEM_NUM_PRIV_IDS_PER_REGION                                       (3U)
+#define CSL_STD_FW_WKUP_PLLCTRL0_MEM_START                                                         (0x00000042010000U)
+#define CSL_STD_FW_WKUP_PLLCTRL0_MEM_END                                                           (0x000000420101ffU)
+
+/* Properties of firewall at slave: WKUP_CTRL_MMR0_CFG0 */
+#define CSL_STD_FW_WKUP_CTRL_MMR0_CFG0_ID                                                          (131U)
+#define CSL_STD_FW_WKUP_CTRL_MMR0_CFG0_TYPE                                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_CTRL_MMR0_CFG0_MMR_BASE                                                    (0x00000045020c00U)
+#define CSL_STD_FW_WKUP_CTRL_MMR0_CFG0_NUM_REGIONS                                                 (16U)
+#define CSL_STD_FW_WKUP_CTRL_MMR0_CFG0_NUM_PRIV_IDS_PER_REGION                                     (3U)
+#define CSL_STD_FW_WKUP_CTRL_MMR0_CFG0_CFG0_START                                                  (0x00000043000000U)
+#define CSL_STD_FW_WKUP_CTRL_MMR0_CFG0_CFG0_END                                                    (0x0000004301ffffU)
+
+/* Properties of firewall at slave: WKUP_GPIO0_MEM */
+#define CSL_STD_FW_WKUP_GPIO0_MEM_ID                                                               (132U)
+#define CSL_STD_FW_WKUP_GPIO0_MEM_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_GPIO0_MEM_MMR_BASE                                                         (0x00000045021000U)
+#define CSL_STD_FW_WKUP_GPIO0_MEM_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_WKUP_GPIO0_MEM_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_WKUP_GPIO0_MEM_START                                                            (0x00000042110000U)
+#define CSL_STD_FW_WKUP_GPIO0_MEM_END                                                              (0x000000421100ffU)
+
+/* Properties of firewall at slave: WKUP_ESM0_CFG */
+#define CSL_STD_FW_WKUP_ESM0_CFG_ID                                                                (133U)
+#define CSL_STD_FW_WKUP_ESM0_CFG_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_ESM0_CFG_MMR_BASE                                                          (0x00000045021400U)
+#define CSL_STD_FW_WKUP_ESM0_CFG_NUM_REGIONS                                                       (1U)
+#define CSL_STD_FW_WKUP_ESM0_CFG_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_WKUP_ESM0_CFG_CFG_START                                                         (0x00000042080000U)
+#define CSL_STD_FW_WKUP_ESM0_CFG_CFG_END                                                           (0x00000042080fffU)
+
+/* Properties of firewall at slave: WKUP_VTM0_MMR_VBUSP_CFG1 */
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG1_ID                                                     (135U)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG1_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG1_MMR_BASE                                               (0x00000045021c00U)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG1_NUM_REGIONS                                            (3U)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG1_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG1_MMR_VBUSP_CFG1_START                                   (0x00000042040000U)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG1_MMR_VBUSP_CFG1_END                                     (0x000000420403ffU)
+
+/* Properties of firewall at slave: WKUP_VTM0_MMR_VBUSP_CFG2 */
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG2_ID                                                     (135U)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG2_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG2_MMR_BASE                                               (0x00000045021c00U)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG2_NUM_REGIONS                                            (3U)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG2_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG2_MMR_VBUSP_CFG2_START                                   (0x00000042050000U)
+#define CSL_STD_FW_WKUP_VTM0_MMR_VBUSP_CFG2_MMR_VBUSP_CFG2_END                                     (0x000000420503ffU)
+
+/* Properties of firewall at slave: WKUP_VTM0_ECCAGGR_CFG_REGS */
+#define CSL_STD_FW_WKUP_VTM0__ECCAGGR_CFG_REGS_ID                                                  (135U)
+#define CSL_STD_FW_WKUP_VTM0__ECCAGGR_CFG_REGS_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_VTM0__ECCAGGR_CFG_REGS_MMR_BASE                                            (0x00000045021c00U)
+#define CSL_STD_FW_WKUP_VTM0__ECCAGGR_CFG_REGS_NUM_REGIONS                                         (3U)
+#define CSL_STD_FW_WKUP_VTM0__ECCAGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_WKUP_VTM0__ECCAGGR_CFG_REGS_ECCAGGR_CFG_START                                   (0x00000042810000U)
+#define CSL_STD_FW_WKUP_VTM0__ECCAGGR_CFG_REGS_ECCAGGR_CFG_END                                     (0x000000428103ffU)
+
+/* Properties of firewall at slave: WKUP_DDPA0_DDPA */
+#define CSL_STD_FW_WKUP_DDPA0_DDPA_ID                                                              (136U)
+#define CSL_STD_FW_WKUP_DDPA0_DDPA_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_DDPA0_DDPA_MMR_BASE                                                        (0x00000045022000U)
+#define CSL_STD_FW_WKUP_DDPA0_DDPA_NUM_REGIONS                                                     (1U)
+#define CSL_STD_FW_WKUP_DDPA0_DDPA_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_WKUP_DDPA0_DDPA_START                                                           (0x00000042060000U)
+#define CSL_STD_FW_WKUP_DDPA0_DDPA_END                                                             (0x000000420603ffU)
+
+/* Properties of firewall at slave: WKUP_GPIO1_MEM */
+#define CSL_STD_FW_WKUP_GPIO1_MEM_ID                                                               (137U)
+#define CSL_STD_FW_WKUP_GPIO1_MEM_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_GPIO1_MEM_MMR_BASE                                                         (0x00000045022400U)
+#define CSL_STD_FW_WKUP_GPIO1_MEM_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_WKUP_GPIO1_MEM_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_WKUP_GPIO1_MEM_START                                                            (0x00000042100000U)
+#define CSL_STD_FW_WKUP_GPIO1_MEM_END                                                              (0x000000421000ffU)
+
+/* Properties of firewall at slave: WKUP_I2C0_CFG */
+#define CSL_STD_FW_WKUP_I2C0_CFG_ID                                                                (144U)
+#define CSL_STD_FW_WKUP_I2C0_CFG_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_I2C0_CFG_MMR_BASE                                                          (0x00000045024000U)
+#define CSL_STD_FW_WKUP_I2C0_CFG_NUM_REGIONS                                                       (1U)
+#define CSL_STD_FW_WKUP_I2C0_CFG_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_WKUP_I2C0_CFG_CFG_START                                                         (0x00000042120000U)
+#define CSL_STD_FW_WKUP_I2C0_CFG_CFG_END                                                           (0x000000421200ffU)
+
+/* Properties of firewall at slave: WKUP_UART0_MEM */
+#define CSL_STD_FW_WKUP_UART0_MEM_ID                                                               (160U)
+#define CSL_STD_FW_WKUP_UART0_MEM_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_UART0_MEM_MMR_BASE                                                         (0x00000045028000U)
+#define CSL_STD_FW_WKUP_UART0_MEM_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_WKUP_UART0_MEM_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_WKUP_UART0_MEM_START                                                            (0x00000042300000U)
+#define CSL_STD_FW_WKUP_UART0_MEM_END                                                              (0x000000423001ffU)
+
+/* Properties of firewall at slave: WKUP_GPIOMUX_INTRTR0_INTR_ROUTER_CFG */
+#define CSL_STD_FW_WKUP_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_ID                                         (168U)
+#define CSL_STD_FW_WKUP_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_MMR_BASE                                   (0x0000004502a000U)
+#define CSL_STD_FW_WKUP_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_NUM_REGIONS                                (1U)
+#define CSL_STD_FW_WKUP_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_WKUP_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_CFG_START                                  (0x00000042200000U)
+#define CSL_STD_FW_WKUP_GPIOMUX_INTRTR0_INTR_ROUTER_CFG_CFG_END                                    (0x000000422003ffU)
+
+/* Properties of firewall at slave: WKUP_CBASS0_ERR_REGS */
+#define CSL_STD_FW_WKUP_CBASS0_ERR_REGS_ID                                                         (176U)
+#define CSL_STD_FW_WKUP_CBASS0_ERR_REGS_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_CBASS0_ERR_REGS_MMR_BASE                                                   (0x0000004502c000U)
+#define CSL_STD_FW_WKUP_CBASS0_ERR_REGS_NUM_REGIONS                                                (1U)
+#define CSL_STD_FW_WKUP_CBASS0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_WKUP_CBASS0_ERR_REGS_ERR_START                                                  (0x00000042400000U)
+#define CSL_STD_FW_WKUP_CBASS0_ERR_REGS_ERR_END                                                    (0x000000424003ffU)
+
+/* Properties of firewall at slave: WKUP_FW_CBASS0_ERR_REGS */
+#define CSL_STD_FW_WKUP_FW_CBASS0_ERR_REGS_ID                                                      (177U)
+#define CSL_STD_FW_WKUP_FW_CBASS0_ERR_REGS_TYPE                                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_FW_CBASS0_ERR_REGS_MMR_BASE                                                (0x0000004502c400U)
+#define CSL_STD_FW_WKUP_FW_CBASS0_ERR_REGS_NUM_REGIONS                                             (1U)
+#define CSL_STD_FW_WKUP_FW_CBASS0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_STD_FW_WKUP_FW_CBASS0_ERR_REGS_ERR_START                                               (0x00000042404000U)
+#define CSL_STD_FW_WKUP_FW_CBASS0_ERR_REGS_ERR_END                                                 (0x000000424043ffU)
+
+/* Properties of firewall at slave: WKUP_ECC_AGGR0_REGS */
+#define CSL_STD_FW_WKUP_ECC_AGGR0_REGS_ID                                                          (178U)
+#define CSL_STD_FW_WKUP_ECC_AGGR0_REGS_TYPE                                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_ECC_AGGR0_REGS_MMR_BASE                                                    (0x0000004502c800U)
+#define CSL_STD_FW_WKUP_ECC_AGGR0_REGS_NUM_REGIONS                                                 (1U)
+#define CSL_STD_FW_WKUP_ECC_AGGR0_REGS_NUM_PRIV_IDS_PER_REGION                                     (3U)
+#define CSL_STD_FW_WKUP_ECC_AGGR0_REGS_REGS_START                                                  (0x00000042410000U)
+#define CSL_STD_FW_WKUP_ECC_AGGR0_REGS_REGS_END                                                    (0x000000424103ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CORE_CORE_CPU4 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU4_ID                                              (264U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU4_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU4_MMR_BASE                                        (0x00000045042000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU4_NUM_REGIONS                                     (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU4_NUM_PRIV_IDS_PER_REGION                         (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU4_CPU4_START                                      (0x00000064000000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU4_CPU4_END                                        (0x00000064ffffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CORE_CORE_CPU5 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU5_ID                                              (266U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU5_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU5_MMR_BASE                                        (0x00000045042800U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU5_NUM_REGIONS                                     (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU5_NUM_PRIV_IDS_PER_REGION                         (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU5_CPU5_START                                      (0x00000065000000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CORE_CORE_CPU5_CPU5_END                                        (0x00000065ffffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_ID                                   (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MMR_BASE                             (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_NUM_REGIONS                          (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_NUM_PRIV_IDS_PER_REGION              (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MMR_DRU0_MMR_CFG_DRU_START           (0x0000006d000000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MMR_DRU0_MMR_CFG_DRU_END             (0x0000006d003fffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_SET */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_SET_ID                               (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_SET_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_SET_MMR_BASE                         (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_SET_NUM_REGIONS                      (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_SET_NUM_PRIV_IDS_PER_REGION          (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_SET_MMR_DRU0_MMR_CFG_DRU_SET_START   (0x0000006d004000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_SET_MMR_DRU0_MMR_CFG_DRU_SET_END     (0x0000006d007fffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_QUEUE */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_QUEUE_ID                             (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_QUEUE_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_QUEUE_MMR_BASE                       (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_QUEUE_NUM_REGIONS                    (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_QUEUE_NUM_PRIV_IDS_PER_REGION        (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_QUEUE_MMR_DRU0_MMR_CFG_DRU_QUEUE_START (0x0000006d008000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_QUEUE_MMR_DRU0_MMR_CFG_DRU_QUEUE_END (0x0000006d009fffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MMU */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MMU_ID                               (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MMU_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MMU_MMR_BASE                         (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MMU_NUM_REGIONS                      (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MMU_NUM_PRIV_IDS_PER_REGION          (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MMU_MMR_DRU0_MMR_CFG_DRU_MMU_START   (0x0000006d00a000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MMU_MMR_DRU0_MMR_CFG_DRU_MMU_END     (0x0000006d00bfffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_UTLB */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_UTLB_ID                              (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_UTLB_TYPE                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_UTLB_MMR_BASE                        (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_UTLB_NUM_REGIONS                     (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_UTLB_NUM_PRIV_IDS_PER_REGION         (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_UTLB_MMR_DRU0_MMR_CFG_DRU_UTLB_START (0x0000006d00c000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_UTLB_MMR_DRU0_MMR_CFG_DRU_UTLB_END   (0x0000006d00ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT0 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT0_ID                          (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT0_TYPE                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT0_MMR_BASE                    (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT0_NUM_REGIONS                 (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT0_NUM_PRIV_IDS_PER_REGION     (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT0_START (0x0000006d010000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT0_END (0x0000006d01ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT1 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT1_ID                          (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT1_TYPE                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT1_MMR_BASE                    (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT1_NUM_REGIONS                 (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT1_NUM_PRIV_IDS_PER_REGION     (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT1_MMR_DRU0_MMR_CFG_DRU_MEM_ATT1_START (0x0000006d020000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT1_MMR_DRU0_MMR_CFG_DRU_MEM_ATT1_END (0x0000006d02ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT2 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT2_ID                          (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT2_TYPE                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT2_MMR_BASE                    (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT2_NUM_REGIONS                 (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT2_NUM_PRIV_IDS_PER_REGION     (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT2_MMR_DRU0_MMR_CFG_DRU_MEM_ATT2_START (0x0000006d030000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_MEM_ATT2_MMR_DRU0_MMR_CFG_DRU_MEM_ATT2_END (0x0000006d03ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHNRT */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHNRT_ID                             (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHNRT_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHNRT_MMR_BASE                       (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHNRT_NUM_REGIONS                    (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHNRT_NUM_PRIV_IDS_PER_REGION        (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHNRT_MMR_DRU0_MMR_CFG_DRU_CHNRT_START (0x0000006d040000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHNRT_MMR_DRU0_MMR_CFG_DRU_CHNRT_END (0x0000006d05ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHRT */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHRT_ID                              (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHRT_TYPE                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHRT_MMR_BASE                        (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHRT_NUM_REGIONS                     (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHRT_NUM_PRIV_IDS_PER_REGION         (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHRT_MMR_DRU0_MMR_CFG_DRU_CHRT_START (0x0000006d060000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHRT_MMR_DRU0_MMR_CFG_DRU_CHRT_END   (0x0000006d07ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_ID                    (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_TYPE                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_MMR_BASE              (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_NUM_REGIONS           (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_NUM_PRIV_IDS_PER_REGION (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_START (0x0000006d080000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_END (0x0000006d09ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHCORE */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHCORE_ID                            (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHCORE_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHCORE_MMR_BASE                      (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHCORE_NUM_REGIONS                   (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHCORE_NUM_PRIV_IDS_PER_REGION       (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHCORE_MMR_DRU0_MMR_CFG_DRU_CHCORE_START (0x0000006d0a0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHCORE_MMR_DRU0_MMR_CFG_DRU_CHCORE_END (0x0000006d0bffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CAUSE */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CAUSE_ID                             (288U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CAUSE_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CAUSE_MMR_BASE                       (0x00000045048000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CAUSE_NUM_REGIONS                    (2U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CAUSE_NUM_PRIV_IDS_PER_REGION        (1U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CAUSE_MMR_DRU0_MMR_CFG_DRU_CAUSE_START (0x0000006d0e0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CAUSE_MMR_DRU0_MMR_CFG_DRU_CAUSE_END (0x0000006d0fffffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_ROM_0_IROM_SLV_ROM */
+#define CSL_STD_FW_WKUP_SMS0_ROM_0_IROM_SLV_ROM_ID                                                 (512U)
+#define CSL_STD_FW_WKUP_SMS0_ROM_0_IROM_SLV_ROM_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_ROM_0_IROM_SLV_ROM_MMR_BASE                                           (0x00000045080000U)
+#define CSL_STD_FW_WKUP_SMS0_ROM_0_IROM_SLV_ROM_NUM_REGIONS                                        (2U)
+#define CSL_STD_FW_WKUP_SMS0_ROM_0_IROM_SLV_ROM_NUM_PRIV_IDS_PER_REGION                            (1U)
+#define CSL_STD_FW_WKUP_SMS0_ROM_0_IROM_SLV_ROM_IROM_SLV_ROM_START                                 (0x00000000000000U)
+#define CSL_STD_FW_WKUP_SMS0_ROM_0_IROM_SLV_ROM_IROM_SLV_ROM_END                                   (0x0000000003ffffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_TIFS_SRAM_0_TIFS_SRAM0 */
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_0_TIFS_SRAM0_ID                                             (513U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_0_TIFS_SRAM0_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_0_TIFS_SRAM0_MMR_BASE                                       (0x00000045080400U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_0_TIFS_SRAM0_NUM_REGIONS                                    (8U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_0_TIFS_SRAM0_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_0_TIFS_SRAM0_TIFS_SRAM0_START                               (0x00000044040000U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_0_TIFS_SRAM0_TIFS_SRAM0_END                                 (0x0000004405ffffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_0 */
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_0_ID                                           (514U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_0_TYPE                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_0_MMR_BASE                                     (0x00000045080800U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_0_NUM_REGIONS                                  (8U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_0_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_0_TIFS_SRAM1_0_START                           (0x00000044060000U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_0_TIFS_SRAM1_0_END                             (0x00000044067fffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_1 */
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_1_ID                                           (514U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_1_TYPE                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_1_MMR_BASE                                     (0x00000045080800U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_1_NUM_REGIONS                                  (8U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_1_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_1_TIFS_SRAM1_1_START                           (0x00000044068000U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_SRAM_1_TIFS_SRAM1_1_TIFS_SRAM1_1_END                             (0x0000004406bfffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_PWRCTRL_0_TIFS_PWR_MMR */
+#define CSL_STD_FW_WKUP_SMS0_PWRCTRL_0_TIFS_PWR_MMR_ID                                             (528U)
+#define CSL_STD_FW_WKUP_SMS0_PWRCTRL_0_TIFS_PWR_MMR_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_PWRCTRL_0_TIFS_PWR_MMR_MMR_BASE                                       (0x00000045084000U)
+#define CSL_STD_FW_WKUP_SMS0_PWRCTRL_0_TIFS_PWR_MMR_NUM_REGIONS                                    (1U)
+#define CSL_STD_FW_WKUP_SMS0_PWRCTRL_0_TIFS_PWR_MMR_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_WKUP_SMS0_PWRCTRL_0_TIFS_PWR_MMR_PWR_START                                      (0x00000044130000U)
+#define CSL_STD_FW_WKUP_SMS0_PWRCTRL_0_TIFS_PWR_MMR_PWR_END                                        (0x000000441307ffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_DMTIMER_0_TIFS_DMTIMER0 */
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_0_TIFS_DMTIMER0_ID                                            (536U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_0_TIFS_DMTIMER0_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_0_TIFS_DMTIMER0_MMR_BASE                                      (0x00000045086000U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_0_TIFS_DMTIMER0_NUM_REGIONS                                   (1U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_0_TIFS_DMTIMER0_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_0_TIFS_DMTIMER0_DMTIMER0_START                                (0x00000044133000U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_0_TIFS_DMTIMER0_DMTIMER0_END                                  (0x000000441333ffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_DMTIMER_1_TIFS_DMTIMER1 */
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_1_TIFS_DMTIMER1_ID                                            (537U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_1_TIFS_DMTIMER1_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_1_TIFS_DMTIMER1_MMR_BASE                                      (0x00000045086400U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_1_TIFS_DMTIMER1_NUM_REGIONS                                   (1U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_1_TIFS_DMTIMER1_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_1_TIFS_DMTIMER1_DMTIMER1_START                                (0x00000044134000U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_1_TIFS_DMTIMER1_DMTIMER1_END                                  (0x000000441343ffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_RTI_0_TIFS_RTI_MMR */
+#define CSL_STD_FW_WKUP_SMS0_RTI_0_TIFS_RTI_MMR_ID                                                 (544U)
+#define CSL_STD_FW_WKUP_SMS0_RTI_0_TIFS_RTI_MMR_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_RTI_0_TIFS_RTI_MMR_MMR_BASE                                           (0x00000045088000U)
+#define CSL_STD_FW_WKUP_SMS0_RTI_0_TIFS_RTI_MMR_NUM_REGIONS                                        (1U)
+#define CSL_STD_FW_WKUP_SMS0_RTI_0_TIFS_RTI_MMR_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_WKUP_SMS0_RTI_0_TIFS_RTI_MMR_RTI_START                                          (0x00000044135100U)
+#define CSL_STD_FW_WKUP_SMS0_RTI_0_TIFS_RTI_MMR_RTI_END                                            (0x000000441351ffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_WDTCTRL_0_TIFS_WDT_RTI */
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_0_TIFS_WDT_RTI_ID                                             (545U)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_0_TIFS_WDT_RTI_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_0_TIFS_WDT_RTI_MMR_BASE                                       (0x00000045088400U)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_0_TIFS_WDT_RTI_NUM_REGIONS                                    (1U)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_0_TIFS_WDT_RTI_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_0_TIFS_WDT_RTI_WDT_RTI_START                                  (0x00000044135000U)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_0_TIFS_WDT_RTI_WDT_RTI_END                                    (0x000000441350ffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_RAT_0_TIFS_RAT_MMRS */
+#define CSL_STD_FW_WKUP_SMS0_RAT_0_TIFS_RAT_MMRS_ID                                                (552U)
+#define CSL_STD_FW_WKUP_SMS0_RAT_0_TIFS_RAT_MMRS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_RAT_0_TIFS_RAT_MMRS_MMR_BASE                                          (0x0000004508a000U)
+#define CSL_STD_FW_WKUP_SMS0_RAT_0_TIFS_RAT_MMRS_NUM_REGIONS                                       (1U)
+#define CSL_STD_FW_WKUP_SMS0_RAT_0_TIFS_RAT_MMRS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_WKUP_SMS0_RAT_0_TIFS_RAT_MMRS_RAT_START                                         (0x00000044200000U)
+#define CSL_STD_FW_WKUP_SMS0_RAT_0_TIFS_RAT_MMRS_RAT_END                                           (0x00000044200fffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_TIFS_ECC_AGGR_0_TIFS_ECC_REGS */
+#define CSL_STD_FW_WKUP_SMS0_TIFS_ECC_AGGR_0_TIFS_ECC_REGS_ID                                      (562U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_ECC_AGGR_0_TIFS_ECC_REGS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_ECC_AGGR_0_TIFS_ECC_REGS_MMR_BASE                                (0x0000004508c800U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_ECC_AGGR_0_TIFS_ECC_REGS_NUM_REGIONS                             (2U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_ECC_AGGR_0_TIFS_ECC_REGS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_ECC_AGGR_0_TIFS_ECC_REGS_ECC_AGGR_START                          (0x00000043700000U)
+#define CSL_STD_FW_WKUP_SMS0_TIFS_ECC_AGGR_0_TIFS_ECC_REGS_ECC_AGGR_END                            (0x000000437003ffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_SECCTRL_0_TIFS_SEC_MMR */
+#define CSL_STD_FW_WKUP_SMS0_SECCTRL_0_TIFS_SEC_MMR_ID                                             (576U)
+#define CSL_STD_FW_WKUP_SMS0_SECCTRL_0_TIFS_SEC_MMR_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_SECCTRL_0_TIFS_SEC_MMR_MMR_BASE                                       (0x00000045090000U)
+#define CSL_STD_FW_WKUP_SMS0_SECCTRL_0_TIFS_SEC_MMR_NUM_REGIONS                                    (1U)
+#define CSL_STD_FW_WKUP_SMS0_SECCTRL_0_TIFS_SEC_MMR_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_WKUP_SMS0_SECCTRL_0_TIFS_SEC_MMR_SEC_START                                      (0x00000044230000U)
+#define CSL_STD_FW_WKUP_SMS0_SECCTRL_0_TIFS_SEC_MMR_SEC_END                                        (0x00000044230fffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_DBG_AUTH_0_TIFS_DBGAUTH */
+#define CSL_STD_FW_WKUP_SMS0_DBG_AUTH_0_TIFS_DBGAUTH_ID                                            (578U)
+#define CSL_STD_FW_WKUP_SMS0_DBG_AUTH_0_TIFS_DBGAUTH_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_DBG_AUTH_0_TIFS_DBGAUTH_MMR_BASE                                      (0x00000045090800U)
+#define CSL_STD_FW_WKUP_SMS0_DBG_AUTH_0_TIFS_DBGAUTH_NUM_REGIONS                                   (1U)
+#define CSL_STD_FW_WKUP_SMS0_DBG_AUTH_0_TIFS_DBGAUTH_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_WKUP_SMS0_DBG_AUTH_0_TIFS_DBGAUTH_TIFS_DBGAUTH_START                            (0x00000044232000U)
+#define CSL_STD_FW_WKUP_SMS0_DBG_AUTH_0_TIFS_DBGAUTH_TIFS_DBGAUTH_END                              (0x000000442320ffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_SEC_MGR_0_TIFS_SECMGR */
+#define CSL_STD_FW_WKUP_SMS0_SEC_MGR_0_TIFS_SECMGR_ID                                              (582U)
+#define CSL_STD_FW_WKUP_SMS0_SEC_MGR_0_TIFS_SECMGR_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_SEC_MGR_0_TIFS_SECMGR_MMR_BASE                                        (0x00000045091800U)
+#define CSL_STD_FW_WKUP_SMS0_SEC_MGR_0_TIFS_SECMGR_NUM_REGIONS                                     (2U)
+#define CSL_STD_FW_WKUP_SMS0_SEC_MGR_0_TIFS_SECMGR_NUM_PRIV_IDS_PER_REGION                         (3U)
+#define CSL_STD_FW_WKUP_SMS0_SEC_MGR_0_TIFS_SECMGR_SECMGR_START                                    (0x00000044234000U)
+#define CSL_STD_FW_WKUP_SMS0_SEC_MGR_0_TIFS_SECMGR_SECMGR_END                                      (0x00000044237fffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_DMTIMER_2_TIFS_DMTIMER2 */
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_2_TIFS_DMTIMER2_ID                                            (592U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_2_TIFS_DMTIMER2_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_2_TIFS_DMTIMER2_MMR_BASE                                      (0x00000045094000U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_2_TIFS_DMTIMER2_NUM_REGIONS                                   (1U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_2_TIFS_DMTIMER2_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_2_TIFS_DMTIMER2_DMTIMER2_START                                (0x00000044238000U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_2_TIFS_DMTIMER2_DMTIMER2_END                                  (0x000000442383ffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_DMTIMER_3_TIFS_DMTIMER3 */
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_3_TIFS_DMTIMER3_ID                                            (593U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_3_TIFS_DMTIMER3_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_3_TIFS_DMTIMER3_MMR_BASE                                      (0x00000045094400U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_3_TIFS_DMTIMER3_NUM_REGIONS                                   (1U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_3_TIFS_DMTIMER3_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_3_TIFS_DMTIMER3_DMTIMER3_START                                (0x00000044239000U)
+#define CSL_STD_FW_WKUP_SMS0_DMTIMER_3_TIFS_DMTIMER3_DMTIMER3_END                                  (0x000000442393ffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_AESEIP38T_0_TIFS_AES38T */
+#define CSL_STD_FW_WKUP_SMS0_AESEIP38T_0_TIFS_AES38T_ID                                            (602U)
+#define CSL_STD_FW_WKUP_SMS0_AESEIP38T_0_TIFS_AES38T_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_AESEIP38T_0_TIFS_AES38T_MMR_BASE                                      (0x00000045096800U)
+#define CSL_STD_FW_WKUP_SMS0_AESEIP38T_0_TIFS_AES38T_NUM_REGIONS                                   (2U)
+#define CSL_STD_FW_WKUP_SMS0_AESEIP38T_0_TIFS_AES38T_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_WKUP_SMS0_AESEIP38T_0_TIFS_AES38T_AES_START                                     (0x0000004423c000U)
+#define CSL_STD_FW_WKUP_SMS0_AESEIP38T_0_TIFS_AES38T_AES_END                                       (0x0000004423dfffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_DMSS_ECCAGGR_0_ECCAGGR_CFG_REGS */
+#define CSL_STD_FW_MCU_SA3_SS0_DMSS_ECCAGGR_0__ECCAGGR_CFG_REGS_ID                                 (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_DMSS_ECCAGGR_0__ECCAGGR_CFG_REGS_TYPE                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_DMSS_ECCAGGR_0__ECCAGGR_CFG_REGS_MMR_BASE                           (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_DMSS_ECCAGGR_0__ECCAGGR_CFG_REGS_NUM_REGIONS                        (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_DMSS_ECCAGGR_0__ECCAGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION            (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_DMSS_ECCAGGR_0__ECCAGGR_CFG_REGS_ECCAGGR_CFG_START                  (0x00000043702000U)
+#define CSL_STD_FW_MCU_SA3_SS0_DMSS_ECCAGGR_0__ECCAGGR_CFG_REGS_ECCAGGR_CFG_END                    (0x000000437023ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_PSILCFG_0_PSILCFG_CFG_PROXY */
+#define CSL_STD_FW_MCU_SA3_SS0_PSILCFG_0_PSILCFG_CFG_PROXY_ID                                      (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILCFG_0_PSILCFG_CFG_PROXY_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILCFG_0_PSILCFG_CFG_PROXY_MMR_BASE                                (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILCFG_0_PSILCFG_CFG_PROXY_NUM_REGIONS                             (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILCFG_0_PSILCFG_CFG_PROXY_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILCFG_0_PSILCFG_CFG_PROXY_PSILCFG_CFG_PROXY_START                 (0x00000044801000U)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILCFG_0_PSILCFG_CFG_PROXY_PSILCFG_CFG_PROXY_END                   (0x000000448011ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_PSILSS_0_PSILSS_CFG_MMRS */
+#define CSL_STD_FW_MCU_SA3_SS0_PSILSS_0_PSILSS_CFG_MMRS_ID                                         (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILSS_0_PSILSS_CFG_MMRS_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILSS_0_PSILSS_CFG_MMRS_MMR_BASE                                   (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILSS_0_PSILSS_CFG_MMRS_NUM_REGIONS                                (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILSS_0_PSILSS_CFG_MMRS_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILSS_0_PSILSS_CFG_MMRS_PSILSS_CFG_MMRS_START                      (0x00000044802000U)
+#define CSL_STD_FW_MCU_SA3_SS0_PSILSS_0_PSILSS_CFG_MMRS_PSILSS_CFG_MMRS_END                        (0x00000044802fffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_MMRS */
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_MMRS_ID                             (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_MMRS_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_MMRS_MMR_BASE                       (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_MMRS_NUM_REGIONS                    (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_MMRS_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_MMRS_IPCSS_SEC_PROXY_CFG_MMRS_START (0x00000044804000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_MMRS_IPCSS_SEC_PROXY_CFG_MMRS_END   (0x000000448040ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_GCFG */
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_GCFG_ID                                 (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_GCFG_TYPE                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_GCFG_MMR_BASE                           (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_GCFG_NUM_REGIONS                        (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_GCFG_NUM_PRIV_IDS_PER_REGION            (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_GCFG_IPCSS_RINGACC_CFG_GCFG_START       (0x00000044805000U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_GCFG_IPCSS_RINGACC_CFG_GCFG_END         (0x000000448053ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_CFG */
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_CFG_ID                                        (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_CFG_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_CFG_MMR_BASE                                  (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_CFG_NUM_REGIONS                               (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_CFG_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_CFG_INTAGGR_CFG_START                         (0x00000044808000U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_CFG_INTAGGR_CFG_END                           (0x0000004480801fU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_IMAP */
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_IMAP_ID                                       (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_IMAP_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_IMAP_MMR_BASE                                 (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_IMAP_NUM_REGIONS                              (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_IMAP_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_IMAP_INTAGGR_CFG_IMAP_START                   (0x00000044809000U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_IMAP_INTAGGR_CFG_IMAP_END                     (0x000000448093ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_MCAST */
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_MCAST_ID                                      (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_MCAST_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_MCAST_MMR_BASE                                (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_MCAST_NUM_REGIONS                             (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_MCAST_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_MCAST_INTAGGR_CFG_MCAST_START                 (0x0000004480a000U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_MCAST_INTAGGR_CFG_MCAST_END                   (0x0000004480a3ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTCFG */
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTCFG_ID                                    (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTCFG_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTCFG_MMR_BASE                              (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTCFG_NUM_REGIONS                           (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTCFG_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTCFG_INTAGGR_CFG_GCNTCFG_START             (0x0000004480b000U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTCFG_INTAGGR_CFG_GCNTCFG_END               (0x0000004480b3ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_INTR */
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_INTR_ID                                       (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_INTR_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_INTR_MMR_BASE                                 (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_INTR_NUM_REGIONS                              (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_INTR_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_INTR_INTAGGR_CFG_INTR_START                   (0x00000044810000U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_INTR_INTAGGR_CFG_INTR_END                     (0x00000044817fffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTRTI */
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTRTI_ID                                    (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTRTI_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTRTI_MMR_BASE                              (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTRTI_NUM_REGIONS                           (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTRTI_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTRTI_INTAGGR_CFG_GCNTRTI_START             (0x00000044820000U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_GCNTRTI_INTAGGR_CFG_GCNTRTI_END               (0x0000004483ffffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_UNMAP */
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_UNMAP_ID                                      (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_UNMAP_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_UNMAP_MMR_BASE                                (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_UNMAP_NUM_REGIONS                             (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_UNMAP_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_UNMAP_INTAGGR_CFG_UNMAP_START                 (0x00000044840000U)
+#define CSL_STD_FW_MCU_SA3_SS0_INTAGGR_0_INTAGGR_CFG_UNMAP_INTAGGR_CFG_UNMAP_END                   (0x0000004484ffffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_SCFG */
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_SCFG_ID                             (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_SCFG_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_SCFG_MMR_BASE                       (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_SCFG_NUM_REGIONS                    (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_SCFG_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_SCFG_IPCSS_SEC_PROXY_CFG_SCFG_START (0x00000044860000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_SCFG_IPCSS_SEC_PROXY_CFG_SCFG_END   (0x0000004487ffffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_RT */
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_RT_ID                               (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_RT_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_RT_MMR_BASE                         (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_RT_NUM_REGIONS                      (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_RT_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_RT_IPCSS_SEC_PROXY_CFG_RT_START     (0x00000044880000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_IPCSS_SEC_PROXY_CFG_RT_IPCSS_SEC_PROXY_CFG_RT_END       (0x0000004489ffffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_CFG */
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_CFG_ID                                  (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_CFG_TYPE                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_CFG_MMR_BASE                            (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_CFG_NUM_REGIONS                         (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_CFG_NUM_PRIV_IDS_PER_REGION             (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_CFG_IPCSS_RINGACC_CFG_START             (0x000000448c0000U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_CFG_IPCSS_RINGACC_CFG_END               (0x000000448fffffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_GCFG */
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_GCFG_ID                                         (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_GCFG_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_GCFG_MMR_BASE                                   (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_GCFG_NUM_REGIONS                                (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_GCFG_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_GCFG_PKTDMA_CFG_GCFG_START                      (0x00000044910000U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_GCFG_PKTDMA_CFG_GCFG_END                        (0x000000449100ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RFLOW */
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RFLOW_ID                                        (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RFLOW_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RFLOW_MMR_BASE                                  (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RFLOW_NUM_REGIONS                               (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RFLOW_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RFLOW_PKTDMA_CFG_RFLOW_START                    (0x00000044911000U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RFLOW_PKTDMA_CFG_RFLOW_END                      (0x000000449113ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHAN */
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHAN_ID                                        (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHAN_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHAN_MMR_BASE                                  (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHAN_NUM_REGIONS                               (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHAN_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHAN_PKTDMA_CFG_RCHAN_START                    (0x00000044912000U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHAN_PKTDMA_CFG_RCHAN_END                      (0x000000449123ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHAN */
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHAN_ID                                        (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHAN_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHAN_MMR_BASE                                  (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHAN_NUM_REGIONS                               (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHAN_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHAN_PKTDMA_CFG_TCHAN_START                    (0x00000044913000U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHAN_PKTDMA_CFG_TCHAN_END                      (0x000000449131ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHANRT */
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHANRT_ID                                      (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHANRT_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHANRT_MMR_BASE                                (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHANRT_NUM_REGIONS                             (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHANRT_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHANRT_PKTDMA_CFG_RCHANRT_START                (0x00000044914000U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RCHANRT_PKTDMA_CFG_RCHANRT_END                  (0x00000044917fffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHANRT */
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHANRT_ID                                      (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHANRT_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHANRT_MMR_BASE                                (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHANRT_NUM_REGIONS                             (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHANRT_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHANRT_PKTDMA_CFG_TCHANRT_START                (0x00000044918000U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_TCHANRT_PKTDMA_CFG_TCHANRT_END                  (0x00000044919fffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RING */
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RING_ID                                         (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RING_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RING_MMR_BASE                                   (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RING_NUM_REGIONS                                (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RING_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RING_PKTDMA_CFG_RING_START                      (0x0000004491a000U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RING_PKTDMA_CFG_RING_END                        (0x0000004491bfffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RINGRT */
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RINGRT_ID                                       (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RINGRT_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RINGRT_MMR_BASE                                 (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RINGRT_NUM_REGIONS                              (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RINGRT_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RINGRT_PKTDMA_CFG_RINGRT_START                  (0x00000044940000U)
+#define CSL_STD_FW_MCU_SA3_SS0_PKTDMA_0_PKTDMA_CFG_RINGRT_PKTDMA_CFG_RINGRT_END                    (0x0000004497ffffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_RT */
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_RT_ID                                   (638U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_RT_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_RT_MMR_BASE                             (0x0000004509f800U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_RT_NUM_REGIONS                          (24U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_RT_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_RT_IPCSS_RINGACC_CFG_RT_START           (0x00000044c00000U)
+#define CSL_STD_FW_MCU_SA3_SS0_RINGACC_0_IPCSS_RINGACC_CFG_RT_IPCSS_RINGACC_CFG_RT_END             (0x00000044ffffffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_FWMGR_0_TIFS_FW_VBUS_CFG */
+#define CSL_STD_FW_WKUP_SMS0_FWMGR_0_TIFS_FW_VBUS_CFG_ID                                           (639U)
+#define CSL_STD_FW_WKUP_SMS0_FWMGR_0_TIFS_FW_VBUS_CFG_TYPE                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_FWMGR_0_TIFS_FW_VBUS_CFG_MMR_BASE                                     (0x0000004509fc00U)
+#define CSL_STD_FW_WKUP_SMS0_FWMGR_0_TIFS_FW_VBUS_CFG_NUM_REGIONS                                  (8U)
+#define CSL_STD_FW_WKUP_SMS0_FWMGR_0_TIFS_FW_VBUS_CFG_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_STD_FW_WKUP_SMS0_FWMGR_0_TIFS_FW_VBUS_CFG_FW_START                                     (0x00000045000000U)
+#define CSL_STD_FW_WKUP_SMS0_FWMGR_0_TIFS_FW_VBUS_CFG_FW_END                                       (0x00000045ffffffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_0 */
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_0_ID                                             (641U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_0_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_0_MMR_BASE                                       (0x000000450a0400U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_0_NUM_REGIONS                                    (8U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_0_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_0_HSM_SRAM0_0_START                              (0x00000043c00000U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_0_HSM_SRAM0_0_END                                (0x00000043c1ffffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_1 */
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_1_ID                                             (641U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_1_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_1_MMR_BASE                                       (0x000000450a0400U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_1_NUM_REGIONS                                    (8U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_1_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_1_HSM_SRAM0_1_START                              (0x00000043c20000U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_0_HSM_SRAM0_1_HSM_SRAM0_1_END                                (0x00000043c2ffffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_HSM_SRAM_1_HSM_SRAM1 */
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_1_HSM_SRAM1_ID                                               (642U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_1_HSM_SRAM1_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_1_HSM_SRAM1_MMR_BASE                                         (0x000000450a0800U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_1_HSM_SRAM1_NUM_REGIONS                                      (8U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_1_HSM_SRAM1_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_1_HSM_SRAM1_HSM_SRAM1_START                                  (0x00000043c30000U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_SRAM_1_HSM_SRAM1_HSM_SRAM1_END                                    (0x00000043c3ffffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_RTI_1_HSM_CTRL_MMR */
+#define CSL_STD_FW_WKUP_SMS0_RTI_1_HSM_CTRL_MMR_ID                                                 (672U)
+#define CSL_STD_FW_WKUP_SMS0_RTI_1_HSM_CTRL_MMR_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_RTI_1_HSM_CTRL_MMR_MMR_BASE                                           (0x000000450a8000U)
+#define CSL_STD_FW_WKUP_SMS0_RTI_1_HSM_CTRL_MMR_NUM_REGIONS                                        (1U)
+#define CSL_STD_FW_WKUP_SMS0_RTI_1_HSM_CTRL_MMR_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_WKUP_SMS0_RTI_1_HSM_CTRL_MMR_HSM_CTRL_MMR_START                                 (0x00000043936000U)
+#define CSL_STD_FW_WKUP_SMS0_RTI_1_HSM_CTRL_MMR_HSM_CTRL_MMR_END                                   (0x00000043936fffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_WDTCTRL_1_HSM_WDT_RTI */
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_1_HSM_WDT_RTI_ID                                              (673U)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_1_HSM_WDT_RTI_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_1_HSM_WDT_RTI_MMR_BASE                                        (0x000000450a8400U)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_1_HSM_WDT_RTI_NUM_REGIONS                                     (1U)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_1_HSM_WDT_RTI_NUM_PRIV_IDS_PER_REGION                         (3U)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_1_HSM_WDT_RTI_HSM_WDT_RTI_START                               (0x00000043935000U)
+#define CSL_STD_FW_WKUP_SMS0_WDTCTRL_1_HSM_WDT_RTI_HSM_WDT_RTI_END                                 (0x000000439350ffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_RAT_1_HSM_RAT_MMRS */
+#define CSL_STD_FW_WKUP_SMS0_RAT_1_HSM_RAT_MMRS_ID                                                 (680U)
+#define CSL_STD_FW_WKUP_SMS0_RAT_1_HSM_RAT_MMRS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_RAT_1_HSM_RAT_MMRS_MMR_BASE                                           (0x000000450aa000U)
+#define CSL_STD_FW_WKUP_SMS0_RAT_1_HSM_RAT_MMRS_NUM_REGIONS                                        (1U)
+#define CSL_STD_FW_WKUP_SMS0_RAT_1_HSM_RAT_MMRS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_WKUP_SMS0_RAT_1_HSM_RAT_MMRS_HSM_RAT_MMRS_START                                 (0x00000043a00000U)
+#define CSL_STD_FW_WKUP_SMS0_RAT_1_HSM_RAT_MMRS_HSM_RAT_MMRS_END                                   (0x00000043a00fffU)
+
+/* Properties of firewall at slave: WKUP_SMS0_HSM_ECC_AGGR_0_HSM_ECC_REGS */
+#define CSL_STD_FW_WKUP_SMS0_HSM_ECC_AGGR_0_HSM_ECC_REGS_ID                                        (690U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_ECC_AGGR_0_HSM_ECC_REGS_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_WKUP_SMS0_HSM_ECC_AGGR_0_HSM_ECC_REGS_MMR_BASE                                  (0x000000450ac800U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_ECC_AGGR_0_HSM_ECC_REGS_NUM_REGIONS                               (2U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_ECC_AGGR_0_HSM_ECC_REGS_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_ECC_AGGR_0_HSM_ECC_REGS_HSM_ECC_START                             (0x00000043701000U)
+#define CSL_STD_FW_WKUP_SMS0_HSM_ECC_AGGR_0_HSM_ECC_REGS_HSM_ECC_END                               (0x000000437013ffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_CORE0_ATCM0 */
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ATCM0_ID                                                       (1024U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ATCM0_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ATCM0_MMR_BASE                                                 (0x00000045100000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ATCM0_NUM_REGIONS                                              (4U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ATCM0_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ATCM0_CORE0_ATCM_START                                         (0x00000041000000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ATCM0_CORE0_ATCM_END                                           (0x0000004100ffffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_CORE0_BTCM0 */
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_BTCM0_ID                                                       (1024U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_BTCM0_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_BTCM0_MMR_BASE                                                 (0x00000045100000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_BTCM0_NUM_REGIONS                                              (4U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_BTCM0_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_BTCM0_CORE0_BTCM_START                                         (0x00000041010000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_BTCM0_CORE0_BTCM_END                                           (0x0000004101ffffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_CORE0_ICACHE0 */
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ICACHE0_ID                                                     (1024U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ICACHE0_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ICACHE0_MMR_BASE                                               (0x00000045100000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ICACHE0_NUM_REGIONS                                            (4U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ICACHE0_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ICACHE0_CORE0_ICACHE_START                                     (0x00005400000000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ICACHE0_CORE0_ICACHE_END                                       (0x000054007fffffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_CORE0_DCACHE0 */
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_DCACHE0_ID                                                     (1024U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_DCACHE0_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_DCACHE0_MMR_BASE                                               (0x00000045100000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_DCACHE0_NUM_REGIONS                                            (4U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_DCACHE0_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_DCACHE0_CORE0_DCACHE_START                                     (0x00005400800000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_DCACHE0_CORE0_DCACHE_END                                       (0x00005400ffffffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_ID                             (1025U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_MMR_BASE                       (0x00000045100400U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_NUM_REGIONS                    (3U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_CORE0_ECC_AGGR_START           (0x00000040080000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_CORE0_ECC_AGGR_END             (0x000000400803ffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS */
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_ID                        (1025U)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_TYPE                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_MMR_BASE                  (0x00000045100400U)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_NUM_REGIONS               (3U)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_NUM_PRIV_IDS_PER_REGION   (3U)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_COMPARE_CFG_START         (0x000000400f0000U)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_COMPARE_CFG_END           (0x000000400f00ffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS */
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_ID                                       (1025U)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_MMR_BASE                                 (0x00000045100400U)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_NUM_REGIONS                              (3U)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_EVNT_BUS_VBUSP_MMRS_START                (0x0000004072f000U)
+#define CSL_STD_FW_MCU_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_EVNT_BUS_VBUSP_MMRS_END                  (0x0000004072f0ffU)
+
+/* Properties of firewall at slave: MCU_RTI0_CFG */
+#define CSL_STD_FW_MCU_RTI0_CFG_ID                                                                 (1026U)
+#define CSL_STD_FW_MCU_RTI0_CFG_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_RTI0_CFG_MMR_BASE                                                           (0x00000045100800U)
+#define CSL_STD_FW_MCU_RTI0_CFG_NUM_REGIONS                                                        (1U)
+#define CSL_STD_FW_MCU_RTI0_CFG_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_MCU_RTI0_CFG_CFG_START                                                          (0x00000040600000U)
+#define CSL_STD_FW_MCU_RTI0_CFG_CFG_END                                                            (0x000000406000ffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_CORE1_ATCM1 */
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ATCM1_ID                                                       (1028U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ATCM1_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ATCM1_MMR_BASE                                                 (0x00000045101000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ATCM1_NUM_REGIONS                                              (4U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ATCM1_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ATCM1_CORE1_ATCM_START                                         (0x00000041400000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ATCM1_CORE1_ATCM_END                                           (0x00000041407fffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_CORE1_BTCM1 */
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_BTCM1_ID                                                       (1028U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_BTCM1_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_BTCM1_MMR_BASE                                                 (0x00000045101000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_BTCM1_NUM_REGIONS                                              (4U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_BTCM1_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_BTCM1_CORE1_BTCM_START                                         (0x00000041410000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_BTCM1_CORE1_BTCM_END                                           (0x00000041417fffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_CORE1_ICACHE1 */
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ICACHE1_ID                                                     (1028U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ICACHE1_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ICACHE1_MMR_BASE                                               (0x00000045101000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ICACHE1_NUM_REGIONS                                            (4U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ICACHE1_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ICACHE1_CORE1_ICACHE_START                                     (0x00005401000000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ICACHE1_CORE1_ICACHE_END                                       (0x000054017fffffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_CORE1_DCACHE1 */
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_DCACHE1_ID                                                     (1028U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_DCACHE1_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_DCACHE1_MMR_BASE                                               (0x00000045101000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_DCACHE1_NUM_REGIONS                                            (4U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_DCACHE1_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_DCACHE1_CORE1_DCACHE_START                                     (0x00005401800000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_DCACHE1_CORE1_DCACHE_END                                       (0x00005401ffffffU)
+
+/* Properties of firewall at slave: MCU_R5FSS0_CORE1_ECC_AGGR_REGS */
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ECC_AGGR_REGS_ID                                               (1029U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ECC_AGGR_REGS_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ECC_AGGR_REGS_MMR_BASE                                         (0x00000045101400U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ECC_AGGR_REGS_NUM_REGIONS                                      (1U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ECC_AGGR_REGS_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ECC_AGGR_REGS_CORE1_ECC_AGGR_START                             (0x000000400c0000U)
+#define CSL_STD_FW_MCU_R5FSS0_CORE1_ECC_AGGR_REGS_CORE1_ECC_AGGR_END                               (0x000000400c03ffU)
+
+/* Properties of firewall at slave: MCU_RTI1_CFG */
+#define CSL_STD_FW_MCU_RTI1_CFG_ID                                                                 (1030U)
+#define CSL_STD_FW_MCU_RTI1_CFG_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_RTI1_CFG_MMR_BASE                                                           (0x00000045101800U)
+#define CSL_STD_FW_MCU_RTI1_CFG_NUM_REGIONS                                                        (1U)
+#define CSL_STD_FW_MCU_RTI1_CFG_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_MCU_RTI1_CFG_CFG_START                                                          (0x00000040610000U)
+#define CSL_STD_FW_MCU_RTI1_CFG_CFG_END                                                            (0x000000406100ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_FSS_MMR_FSS_MMR_CFG_FSS_GENREGS */
+#define CSL_STD_FW_MCU_FSS0_FSS_MMR_FSS_MMR_CFG_FSS_GENREGS_ID                                     (1032U)
+#define CSL_STD_FW_MCU_FSS0_FSS_MMR_FSS_MMR_CFG_FSS_GENREGS_TYPE                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_FSS_MMR_FSS_MMR_CFG_FSS_GENREGS_MMR_BASE                               (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_FSS_MMR_FSS_MMR_CFG_FSS_GENREGS_NUM_REGIONS                            (12U)
+#define CSL_STD_FW_MCU_FSS0_FSS_MMR_FSS_MMR_CFG_FSS_GENREGS_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_STD_FW_MCU_FSS0_FSS_MMR_FSS_MMR_CFG_FSS_GENREGS_CFG_START                              (0x00000047000000U)
+#define CSL_STD_FW_MCU_FSS0_FSS_MMR_FSS_MMR_CFG_FSS_GENREGS_CFG_END                                (0x000000470000ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_FSAS_0_FSAS_FSAS_MMR_CFG_FSAS_GENREGS */
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_MMR_CFG_FSAS_GENREGS_ID                               (1032U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_MMR_CFG_FSAS_GENREGS_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_MMR_CFG_FSAS_GENREGS_MMR_BASE                         (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_MMR_CFG_FSAS_GENREGS_NUM_REGIONS                      (12U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_MMR_CFG_FSAS_GENREGS_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_MMR_CFG_FSAS_GENREGS_FSAS_CFG_START                   (0x00000047010000U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_MMR_CFG_FSAS_GENREGS_FSAS_CFG_END                     (0x000000470100ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_FSAS_0_FSAS_FSAS_OTFA_CFG_FSAS_OTFA_REGS */
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_OTFA_CFG_FSAS_OTFA_REGS_ID                            (1032U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_OTFA_CFG_FSAS_OTFA_REGS_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_OTFA_CFG_FSAS_OTFA_REGS_MMR_BASE                      (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_OTFA_CFG_FSAS_OTFA_REGS_NUM_REGIONS                   (12U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_OTFA_CFG_FSAS_OTFA_REGS_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_OTFA_CFG_FSAS_OTFA_REGS_OTFA_CFG_START                (0x00000047020000U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_FSAS_FSAS_OTFA_CFG_FSAS_OTFA_REGS_OTFA_CFG_END                  (0x00000047020fffU)
+
+/* Properties of firewall at slave: MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_SYS_SS_CFG_SS_CFG_REG */
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_SYS_SS_CFG_SS_CFG_REG_ID                      (1032U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_SYS_SS_CFG_SS_CFG_REG_TYPE                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_SYS_SS_CFG_SS_CFG_REG_MMR_BASE                (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_SYS_SS_CFG_SS_CFG_REG_NUM_REGIONS             (12U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_SYS_SS_CFG_SS_CFG_REG_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_SYS_SS_CFG_SS_CFG_REG_HPB_SS_CFG_START        (0x00000047030000U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_SYS_SS_CFG_SS_CFG_REG_HPB_SS_CFG_END          (0x000000470300ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_CORE_CFG_CORE_CFG_REG */
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_CORE_CFG_CORE_CFG_REG_ID                 (1032U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_CORE_CFG_CORE_CFG_REG_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_CORE_CFG_CORE_CFG_REG_MMR_BASE           (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_CORE_CFG_CORE_CFG_REG_NUM_REGIONS        (12U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_CORE_CFG_CORE_CFG_REG_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_CORE_CFG_CORE_CFG_REG_HPB_CTRL_START     (0x00000047034000U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_CORE_CFG_CORE_CFG_REG_HPB_CTRL_END       (0x000000470340ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS */
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_ID (1032U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_TYPE (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_MMR_BASE (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_NUM_REGIONS (12U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_OSPI0_CTRL_START (0x00000047040000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_OSPI0_CTRL_END (0x000000470400ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS */
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_ID                         (1032U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_TYPE                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_MMR_BASE                   (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_NUM_REGIONS                (12U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_NUM_PRIV_IDS_PER_REGION    (3U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_OSPI0_SS_CFG_START         (0x00000047044000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_OSPI0_SS_CFG_END           (0x000000470441ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS */
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_ID (1032U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_TYPE (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_MMR_BASE (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_NUM_REGIONS (12U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_OSPI1_CTRL_START (0x00000047050000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_VBP2APB_WRAP_OSPI_CFG_VBP_OSPI_FLASH_APB_REGS_OSPI1_CTRL_END (0x000000470500ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS */
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_ID                         (1032U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_TYPE                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_MMR_BASE                   (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_NUM_REGIONS                (12U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_NUM_PRIV_IDS_PER_REGION    (3U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_OSPI1_SS_CFG_START         (0x00000047054000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_MMR_MMRVBP_REGS_OSPI1_SS_CFG_END           (0x000000470541ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_ECC_AGGR_CFG_REGS_ID                     (1032U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_ECC_AGGR_CFG_REGS_TYPE                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_ECC_AGGR_CFG_REGS_MMR_BASE               (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_ECC_AGGR_CFG_REGS_NUM_REGIONS            (12U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_ECC_AGGR_CFG_REGS_HPB_ECC_AGGR_START     (0x00000047060000U)
+#define CSL_STD_FW_MCU_FSS0_HYPERBUS1P0_0_HB_HPB_CFG_WRAP_ECC_AGGR_CFG_REGS_HPB_ECC_AGGR_END       (0x000000470603ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_ID             (1032U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_TYPE           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE       (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS    (12U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_OSPI1_ECC_AGGR_START (0x00000047064000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_OSPI1_ECC_AGGR_END (0x000000470643ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_ID             (1032U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_TYPE           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE       (0x00000045102000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS    (12U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_OSPI0_ECC_AGGR_START (0x00000047068000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_0_OSPI0_OSPI_CFG_VBUSP_OSPI_WRAP_ECC_AGGR_VBP_REGS_OSPI0_ECC_AGGR_END (0x000000470683ffU)
+
+/* Properties of firewall at slave: MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R1_MAP */
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R1_MAP_ID                                   (1033U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R1_MAP_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R1_MAP_MMR_BASE                             (0x00000045102400U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R1_MAP_NUM_REGIONS                          (8U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R1_MAP_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R1_MAP_OSPI1_R1_START                       (0x00000058000000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R1_MAP_OSPI1_R1_END                         (0x0000005fffffffU)
+
+/* Properties of firewall at slave: MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R0_MAP */
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R0_MAP_ID                                   (1033U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R0_MAP_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R0_MAP_MMR_BASE                             (0x00000045102400U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R0_MAP_NUM_REGIONS                          (8U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R0_MAP_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R0_MAP_OSPI1_R0_START                       (0x00000600000000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R0_MAP_OSPI1_R0_END                         (0x000006ffffffffU)
+
+/* Properties of firewall at slave: MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R3_MAP */
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R3_MAP_ID                                   (1033U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R3_MAP_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R3_MAP_MMR_BASE                             (0x00000045102400U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R3_MAP_NUM_REGIONS                          (8U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R3_MAP_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R3_MAP_OSPI1_R3_START                       (0x00000700000000U)
+#define CSL_STD_FW_MCU_FSS0_OSPI_1_OSPI1_OSPI_DATA_VBP_R3_MAP_OSPI1_R3_END                         (0x000007ffffffffU)
+
+/* Properties of firewall at slave: MCU_FSS0_FSAS_0_DAT_REG1 */
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG1_ID                                                     (1036U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG1_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG1_MMR_BASE                                               (0x00000045103000U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG1_NUM_REGIONS                                            (8U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG1_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG1_DAT_REG1_START                                         (0x00000050000000U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG1_DAT_REG1_END                                           (0x00000057ffffffU)
+
+/* Properties of firewall at slave: MCU_FSS0_FSAS_0_DAT_REG0 */
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG0_ID                                                     (1036U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG0_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG0_MMR_BASE                                               (0x00000045103000U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG0_NUM_REGIONS                                            (8U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG0_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG0_DAT_REG0_START                                         (0x00000400000000U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG0_DAT_REG0_END                                           (0x000004ffffffffU)
+
+/* Properties of firewall at slave: MCU_FSS0_FSAS_0_DAT_REG3 */
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG3_ID                                                     (1036U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG3_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG3_MMR_BASE                                               (0x00000045103000U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG3_NUM_REGIONS                                            (8U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG3_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG3_DAT_REG3_START                                         (0x00000500000000U)
+#define CSL_STD_FW_MCU_FSS0_FSAS_0_DAT_REG3_DAT_REG3_END                                           (0x000005ffffffffU)
+
+/* Properties of firewall at slave: MCU_ROM0_ROM */
+#define CSL_STD_FW_MCU_ROM0_ROM_ID                                                                 (1048U)
+#define CSL_STD_FW_MCU_ROM0_ROM_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_ROM0_ROM_MMR_BASE                                                           (0x00000045106000U)
+#define CSL_STD_FW_MCU_ROM0_ROM_NUM_REGIONS                                                        (1U)
+#define CSL_STD_FW_MCU_ROM0_ROM_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_MCU_ROM0_ROM_START                                                              (0x00000041800000U)
+#define CSL_STD_FW_MCU_ROM0_ROM_END                                                                (0x0000004183ffffU)
+
+/* Properties of firewall at slave: MCU_MSRAM_1MB0_RAM */
+#define CSL_STD_FW_MCU_MSRAM_1MB0_RAM_ID                                                           (1050U)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_RAM_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_RAM_MMR_BASE                                                     (0x00000045106800U)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_RAM_NUM_REGIONS                                                  (8U)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_RAM_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_RAM_RAM_START                                                    (0x00000041c00000U)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_RAM_RAM_END                                                      (0x00000041cfffffU)
+
+/* Properties of firewall at slave: MCU_MSRAM_1MB0_ECC_AGGR_REGSREGS */
+#define CSL_STD_FW_MCU_MSRAM_1MB0_ECC_AGGR_REGSREGS_ID                                             (1051U)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_ECC_AGGR_REGSREGS_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_ECC_AGGR_REGSREGS_MMR_BASE                                       (0x00000045106c00U)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_ECC_AGGR_REGSREGS_NUM_REGIONS                                    (1U)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_ECC_AGGR_REGSREGS_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_ECC_AGGR_REGSREGS_ECC_AGGR_REGS_START                            (0x0000004070b000U)
+#define CSL_STD_FW_MCU_MSRAM_1MB0_ECC_AGGR_REGSREGS_ECC_AGGR_REGS_END                              (0x0000004070b3ffU)
+
+/* Properties of firewall at slave: MCU_PSRAM0_RAM */
+#define CSL_STD_FW_MCU_PSRAM0_RAM_ID                                                               (1052U)
+#define CSL_STD_FW_MCU_PSRAM0_RAM_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_PSRAM0_RAM_MMR_BASE                                                         (0x00000045107000U)
+#define CSL_STD_FW_MCU_PSRAM0_RAM_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_PSRAM0_RAM_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_PSRAM0_RAM_RAM_START                                                        (0x00000040280000U)
+#define CSL_STD_FW_MCU_PSRAM0_RAM_RAM_END                                                          (0x000000402801ffU)
+
+/* Properties of firewall at slave: MCU_TIMER0_CFG */
+#define CSL_STD_FW_MCU_TIMER0_CFG_ID                                                               (1056U)
+#define CSL_STD_FW_MCU_TIMER0_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMER0_CFG_MMR_BASE                                                         (0x00000045108000U)
+#define CSL_STD_FW_MCU_TIMER0_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_TIMER0_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_TIMER0_CFG_CFG_START                                                        (0x00000040400000U)
+#define CSL_STD_FW_MCU_TIMER0_CFG_CFG_END                                                          (0x000000404003ffU)
+
+/* Properties of firewall at slave: MCU_TIMER1_CFG */
+#define CSL_STD_FW_MCU_TIMER1_CFG_ID                                                               (1057U)
+#define CSL_STD_FW_MCU_TIMER1_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMER1_CFG_MMR_BASE                                                         (0x00000045108400U)
+#define CSL_STD_FW_MCU_TIMER1_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_TIMER1_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_TIMER1_CFG_CFG_START                                                        (0x00000040410000U)
+#define CSL_STD_FW_MCU_TIMER1_CFG_CFG_END                                                          (0x000000404103ffU)
+
+/* Properties of firewall at slave: MCU_TIMER2_CFG */
+#define CSL_STD_FW_MCU_TIMER2_CFG_ID                                                               (1058U)
+#define CSL_STD_FW_MCU_TIMER2_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMER2_CFG_MMR_BASE                                                         (0x00000045108800U)
+#define CSL_STD_FW_MCU_TIMER2_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_TIMER2_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_TIMER2_CFG_CFG_START                                                        (0x00000040420000U)
+#define CSL_STD_FW_MCU_TIMER2_CFG_CFG_END                                                          (0x000000404203ffU)
+
+/* Properties of firewall at slave: MCU_TIMER3_CFG */
+#define CSL_STD_FW_MCU_TIMER3_CFG_ID                                                               (1059U)
+#define CSL_STD_FW_MCU_TIMER3_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMER3_CFG_MMR_BASE                                                         (0x00000045108c00U)
+#define CSL_STD_FW_MCU_TIMER3_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_TIMER3_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_TIMER3_CFG_CFG_START                                                        (0x00000040430000U)
+#define CSL_STD_FW_MCU_TIMER3_CFG_CFG_END                                                          (0x000000404303ffU)
+
+/* Properties of firewall at slave: MCU_TIMER4_CFG */
+#define CSL_STD_FW_MCU_TIMER4_CFG_ID                                                               (1060U)
+#define CSL_STD_FW_MCU_TIMER4_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMER4_CFG_MMR_BASE                                                         (0x00000045109000U)
+#define CSL_STD_FW_MCU_TIMER4_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_TIMER4_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_TIMER4_CFG_CFG_START                                                        (0x00000040440000U)
+#define CSL_STD_FW_MCU_TIMER4_CFG_CFG_END                                                          (0x000000404403ffU)
+
+/* Properties of firewall at slave: MCU_TIMER5_CFG */
+#define CSL_STD_FW_MCU_TIMER5_CFG_ID                                                               (1061U)
+#define CSL_STD_FW_MCU_TIMER5_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMER5_CFG_MMR_BASE                                                         (0x00000045109400U)
+#define CSL_STD_FW_MCU_TIMER5_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_TIMER5_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_TIMER5_CFG_CFG_START                                                        (0x00000040450000U)
+#define CSL_STD_FW_MCU_TIMER5_CFG_CFG_END                                                          (0x000000404503ffU)
+
+/* Properties of firewall at slave: MCU_TIMER6_CFG */
+#define CSL_STD_FW_MCU_TIMER6_CFG_ID                                                               (1062U)
+#define CSL_STD_FW_MCU_TIMER6_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMER6_CFG_MMR_BASE                                                         (0x00000045109800U)
+#define CSL_STD_FW_MCU_TIMER6_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_TIMER6_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_TIMER6_CFG_CFG_START                                                        (0x00000040460000U)
+#define CSL_STD_FW_MCU_TIMER6_CFG_CFG_END                                                          (0x000000404603ffU)
+
+/* Properties of firewall at slave: MCU_TIMER7_CFG */
+#define CSL_STD_FW_MCU_TIMER7_CFG_ID                                                               (1063U)
+#define CSL_STD_FW_MCU_TIMER7_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMER7_CFG_MMR_BASE                                                         (0x00000045109c00U)
+#define CSL_STD_FW_MCU_TIMER7_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_TIMER7_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_TIMER7_CFG_CFG_START                                                        (0x00000040470000U)
+#define CSL_STD_FW_MCU_TIMER7_CFG_CFG_END                                                          (0x000000404703ffU)
+
+/* Properties of firewall at slave: MCU_TIMER8_CFG */
+#define CSL_STD_FW_MCU_TIMER8_CFG_ID                                                               (1064U)
+#define CSL_STD_FW_MCU_TIMER8_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMER8_CFG_MMR_BASE                                                         (0x0000004510a000U)
+#define CSL_STD_FW_MCU_TIMER8_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_TIMER8_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_TIMER8_CFG_CFG_START                                                        (0x00000040480000U)
+#define CSL_STD_FW_MCU_TIMER8_CFG_CFG_END                                                          (0x000000404803ffU)
+
+/* Properties of firewall at slave: MCU_TIMER9_CFG */
+#define CSL_STD_FW_MCU_TIMER9_CFG_ID                                                               (1065U)
+#define CSL_STD_FW_MCU_TIMER9_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMER9_CFG_MMR_BASE                                                         (0x0000004510a400U)
+#define CSL_STD_FW_MCU_TIMER9_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_TIMER9_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_TIMER9_CFG_CFG_START                                                        (0x00000040490000U)
+#define CSL_STD_FW_MCU_TIMER9_CFG_CFG_END                                                          (0x000000404903ffU)
+
+/* Properties of firewall at slave: MCU_MCSPI0_CFG */
+#define CSL_STD_FW_MCU_MCSPI0_CFG_ID                                                               (1072U)
+#define CSL_STD_FW_MCU_MCSPI0_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MCSPI0_CFG_MMR_BASE                                                         (0x0000004510c000U)
+#define CSL_STD_FW_MCU_MCSPI0_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_MCSPI0_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_MCSPI0_CFG_CFG_START                                                        (0x00000040300000U)
+#define CSL_STD_FW_MCU_MCSPI0_CFG_CFG_END                                                          (0x000000403003ffU)
+
+/* Properties of firewall at slave: MCU_MCSPI1_CFG */
+#define CSL_STD_FW_MCU_MCSPI1_CFG_ID                                                               (1073U)
+#define CSL_STD_FW_MCU_MCSPI1_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MCSPI1_CFG_MMR_BASE                                                         (0x0000004510c400U)
+#define CSL_STD_FW_MCU_MCSPI1_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_MCSPI1_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_MCSPI1_CFG_CFG_START                                                        (0x00000040310000U)
+#define CSL_STD_FW_MCU_MCSPI1_CFG_CFG_END                                                          (0x000000403103ffU)
+
+/* Properties of firewall at slave: MCU_MCSPI2_CFG */
+#define CSL_STD_FW_MCU_MCSPI2_CFG_ID                                                               (1074U)
+#define CSL_STD_FW_MCU_MCSPI2_CFG_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MCSPI2_CFG_MMR_BASE                                                         (0x0000004510c800U)
+#define CSL_STD_FW_MCU_MCSPI2_CFG_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_MCSPI2_CFG_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_MCSPI2_CFG_CFG_START                                                        (0x00000040320000U)
+#define CSL_STD_FW_MCU_MCSPI2_CFG_CFG_END                                                          (0x000000403203ffU)
+
+/* Properties of firewall at slave: MCU_DCC0_CFG */
+#define CSL_STD_FW_MCU_DCC0_CFG_ID                                                                 (1088U)
+#define CSL_STD_FW_MCU_DCC0_CFG_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_DCC0_CFG_MMR_BASE                                                           (0x00000045110000U)
+#define CSL_STD_FW_MCU_DCC0_CFG_NUM_REGIONS                                                        (1U)
+#define CSL_STD_FW_MCU_DCC0_CFG_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_MCU_DCC0_CFG_START                                                              (0x00000040100000U)
+#define CSL_STD_FW_MCU_DCC0_CFG_END                                                                (0x0000004010003fU)
+
+/* Properties of firewall at slave: MCU_DCC1_CFG */
+#define CSL_STD_FW_MCU_DCC1_CFG_ID                                                                 (1089U)
+#define CSL_STD_FW_MCU_DCC1_CFG_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_DCC1_CFG_MMR_BASE                                                           (0x00000045110400U)
+#define CSL_STD_FW_MCU_DCC1_CFG_NUM_REGIONS                                                        (1U)
+#define CSL_STD_FW_MCU_DCC1_CFG_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_MCU_DCC1_CFG_START                                                              (0x00000040110000U)
+#define CSL_STD_FW_MCU_DCC1_CFG_END                                                                (0x0000004011003fU)
+
+/* Properties of firewall at slave: MCU_DCC2_CFG */
+#define CSL_STD_FW_MCU_DCC2_CFG_ID                                                                 (1090U)
+#define CSL_STD_FW_MCU_DCC2_CFG_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_DCC2_CFG_MMR_BASE                                                           (0x00000045110800U)
+#define CSL_STD_FW_MCU_DCC2_CFG_NUM_REGIONS                                                        (1U)
+#define CSL_STD_FW_MCU_DCC2_CFG_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_MCU_DCC2_CFG_START                                                              (0x00000040120000U)
+#define CSL_STD_FW_MCU_DCC2_CFG_END                                                                (0x0000004012003fU)
+
+/* Properties of firewall at slave: MCU_ADC12FCC0_ADC12_FIFO_DMA */
+#define CSL_STD_FW_MCU_ADC12FCC0_ADC12_FIFO_DMA_ID                                                 (1104U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADC12_FIFO_DMA_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADC12_FIFO_DMA_MMR_BASE                                           (0x00000045114000U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADC12_FIFO_DMA_NUM_REGIONS                                        (1U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADC12_FIFO_DMA_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADC12_FIFO_DMA_ADC12_FIFO_DMA_START                               (0x00000040208000U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADC12_FIFO_DMA_ADC12_FIFO_DMA_END                                 (0x000000402083ffU)
+
+/* Properties of firewall at slave: MCU_ADC12FCC0_ADCREGS */
+#define CSL_STD_FW_MCU_ADC12FCC0_ADCREGS_ID                                                        (1105U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADCREGS_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADCREGS_MMR_BASE                                                  (0x00000045114400U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADCREGS_NUM_REGIONS                                               (2U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADCREGS_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADCREGS_ADC_START                                                 (0x00000040200000U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ADCREGS_ADC_END                                                   (0x000000402003ffU)
+
+/* Properties of firewall at slave: MCU_ADC12FCC0_ECCREGS */
+#define CSL_STD_FW_MCU_ADC12FCC0_ECCREGS_ID                                                        (1105U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ECCREGS_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_ADC12FCC0_ECCREGS_MMR_BASE                                                  (0x00000045114400U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ECCREGS_NUM_REGIONS                                               (2U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ECCREGS_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ECCREGS_ECC_START                                                 (0x00000040707000U)
+#define CSL_STD_FW_MCU_ADC12FCC0_ECCREGS_ECC_END                                                   (0x000000407073ffU)
+
+/* Properties of firewall at slave: MCU_ADC12FCC1_ADC12_FIFO_DMA */
+#define CSL_STD_FW_MCU_ADC12FCC1_ADC12_FIFO_DMA_ID                                                 (1106U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADC12_FIFO_DMA_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADC12_FIFO_DMA_MMR_BASE                                           (0x00000045114800U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADC12_FIFO_DMA_NUM_REGIONS                                        (1U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADC12_FIFO_DMA_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADC12_FIFO_DMA_ADC12_FIFO_DMA_START                               (0x00000040218000U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADC12_FIFO_DMA_ADC12_FIFO_DMA_END                                 (0x000000402183ffU)
+
+/* Properties of firewall at slave: MCU_ADC12FCC1_ADCREGS */
+#define CSL_STD_FW_MCU_ADC12FCC1_ADCREGS_ID                                                        (1107U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADCREGS_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADCREGS_MMR_BASE                                                  (0x00000045114c00U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADCREGS_NUM_REGIONS                                               (2U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADCREGS_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADCREGS_ADC_START                                                 (0x00000040210000U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ADCREGS_ADC_END                                                   (0x000000402103ffU)
+
+/* Properties of firewall at slave: MCU_ADC12FCC1_ECCREGS */
+#define CSL_STD_FW_MCU_ADC12FCC1_ECCREGS_ID                                                        (1107U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ECCREGS_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_ADC12FCC1_ECCREGS_MMR_BASE                                                  (0x00000045114c00U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ECCREGS_NUM_REGIONS                                               (2U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ECCREGS_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ECCREGS_ECC_START                                                 (0x00000040708000U)
+#define CSL_STD_FW_MCU_ADC12FCC1_ECCREGS_ECC_END                                                   (0x000000407083ffU)
+
+/* Properties of firewall at slave: MCU_UART0_MEM */
+#define CSL_STD_FW_MCU_UART0_MEM_ID                                                                (1120U)
+#define CSL_STD_FW_MCU_UART0_MEM_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_UART0_MEM_MMR_BASE                                                          (0x00000045118000U)
+#define CSL_STD_FW_MCU_UART0_MEM_NUM_REGIONS                                                       (1U)
+#define CSL_STD_FW_MCU_UART0_MEM_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_MCU_UART0_MEM_START                                                             (0x00000040a00000U)
+#define CSL_STD_FW_MCU_UART0_MEM_END                                                               (0x00000040a001ffU)
+
+/* Properties of firewall at slave: MCU_I2C0_CFG */
+#define CSL_STD_FW_MCU_I2C0_CFG_ID                                                                 (1152U)
+#define CSL_STD_FW_MCU_I2C0_CFG_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_I2C0_CFG_MMR_BASE                                                           (0x00000045120000U)
+#define CSL_STD_FW_MCU_I2C0_CFG_NUM_REGIONS                                                        (1U)
+#define CSL_STD_FW_MCU_I2C0_CFG_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_MCU_I2C0_CFG_CFG_START                                                          (0x00000040b00000U)
+#define CSL_STD_FW_MCU_I2C0_CFG_CFG_END                                                            (0x00000040b000ffU)
+
+/* Properties of firewall at slave: MCU_I2C1_CFG */
+#define CSL_STD_FW_MCU_I2C1_CFG_ID                                                                 (1153U)
+#define CSL_STD_FW_MCU_I2C1_CFG_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_I2C1_CFG_MMR_BASE                                                           (0x00000045120400U)
+#define CSL_STD_FW_MCU_I2C1_CFG_NUM_REGIONS                                                        (1U)
+#define CSL_STD_FW_MCU_I2C1_CFG_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_MCU_I2C1_CFG_CFG_START                                                          (0x00000040b10000U)
+#define CSL_STD_FW_MCU_I2C1_CFG_CFG_END                                                            (0x00000040b100ffU)
+
+/* Properties of firewall at slave: MCU_I3C0_P_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_MCU_I3C0_P_ECC_AGGR_CFG_REGS_ID                                                 (1160U)
+#define CSL_STD_FW_MCU_I3C0_P_ECC_AGGR_CFG_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_I3C0_P_ECC_AGGR_CFG_REGS_MMR_BASE                                           (0x00000045122000U)
+#define CSL_STD_FW_MCU_I3C0_P_ECC_AGGR_CFG_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCU_I3C0_P_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCU_I3C0_P_ECC_AGGR_CFG_REGS_P_ECC_AGGR_CFG_START                               (0x00000040720000U)
+#define CSL_STD_FW_MCU_I3C0_P_ECC_AGGR_CFG_REGS_P_ECC_AGGR_CFG_END                                 (0x000000407203ffU)
+
+/* Properties of firewall at slave: MCU_I3C0_S_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_MCU_I3C0_S_ECC_AGGR_CFG_REGS_ID                                                 (1160U)
+#define CSL_STD_FW_MCU_I3C0_S_ECC_AGGR_CFG_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_I3C0_S_ECC_AGGR_CFG_REGS_MMR_BASE                                           (0x00000045122000U)
+#define CSL_STD_FW_MCU_I3C0_S_ECC_AGGR_CFG_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCU_I3C0_S_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCU_I3C0_S_ECC_AGGR_CFG_REGS_S_ECC_AGGR_CFG_START                               (0x00000040721000U)
+#define CSL_STD_FW_MCU_I3C0_S_ECC_AGGR_CFG_REGS_S_ECC_AGGR_CFG_END                                 (0x000000407213ffU)
+
+/* Properties of firewall at slave: MCU_I3C0_MMR_MMRVBP_REGS */
+#define CSL_STD_FW_MCU_I3C0_MMR_MMRVBP_REGS_ID                                                     (1160U)
+#define CSL_STD_FW_MCU_I3C0_MMR_MMRVBP_REGS_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_I3C0_MMR_MMRVBP_REGS_MMR_BASE                                               (0x00000045122000U)
+#define CSL_STD_FW_MCU_I3C0_MMR_MMRVBP_REGS_NUM_REGIONS                                            (4U)
+#define CSL_STD_FW_MCU_I3C0_MMR_MMRVBP_REGS_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MCU_I3C0_MMR_MMRVBP_REGS_MMR_MMRVBP_START                                       (0x00000040b80000U)
+#define CSL_STD_FW_MCU_I3C0_MMR_MMRVBP_REGS_MMR_MMRVBP_END                                         (0x00000040b801ffU)
+
+/* Properties of firewall at slave: MCU_I3C0_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS */
+#define CSL_STD_FW_MCU_I3C0_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_ID                             (1160U)
+#define CSL_STD_FW_MCU_I3C0_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_I3C0_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_MMR_BASE                       (0x00000045122000U)
+#define CSL_STD_FW_MCU_I3C0_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_NUM_REGIONS                    (4U)
+#define CSL_STD_FW_MCU_I3C0_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_MCU_I3C0_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_START (0x00000040b88000U)
+#define CSL_STD_FW_MCU_I3C0_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_END (0x00000040b883ffU)
+
+/* Properties of firewall at slave: MCU_I3C1_P_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_MCU_I3C1_P_ECC_AGGR_CFG_REGS_ID                                                 (1161U)
+#define CSL_STD_FW_MCU_I3C1_P_ECC_AGGR_CFG_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_I3C1_P_ECC_AGGR_CFG_REGS_MMR_BASE                                           (0x00000045122400U)
+#define CSL_STD_FW_MCU_I3C1_P_ECC_AGGR_CFG_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCU_I3C1_P_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCU_I3C1_P_ECC_AGGR_CFG_REGS_P_ECC_AGGR_CFG_START                               (0x00000040722000U)
+#define CSL_STD_FW_MCU_I3C1_P_ECC_AGGR_CFG_REGS_P_ECC_AGGR_CFG_END                                 (0x000000407223ffU)
+
+/* Properties of firewall at slave: MCU_I3C1_S_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_MCU_I3C1_S_ECC_AGGR_CFG_REGS_ID                                                 (1161U)
+#define CSL_STD_FW_MCU_I3C1_S_ECC_AGGR_CFG_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_I3C1_S_ECC_AGGR_CFG_REGS_MMR_BASE                                           (0x00000045122400U)
+#define CSL_STD_FW_MCU_I3C1_S_ECC_AGGR_CFG_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCU_I3C1_S_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCU_I3C1_S_ECC_AGGR_CFG_REGS_S_ECC_AGGR_CFG_START                               (0x00000040723000U)
+#define CSL_STD_FW_MCU_I3C1_S_ECC_AGGR_CFG_REGS_S_ECC_AGGR_CFG_END                                 (0x000000407233ffU)
+
+/* Properties of firewall at slave: MCU_I3C1_MMR_MMRVBP_REGS */
+#define CSL_STD_FW_MCU_I3C1_MMR_MMRVBP_REGS_ID                                                     (1161U)
+#define CSL_STD_FW_MCU_I3C1_MMR_MMRVBP_REGS_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_I3C1_MMR_MMRVBP_REGS_MMR_BASE                                               (0x00000045122400U)
+#define CSL_STD_FW_MCU_I3C1_MMR_MMRVBP_REGS_NUM_REGIONS                                            (4U)
+#define CSL_STD_FW_MCU_I3C1_MMR_MMRVBP_REGS_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MCU_I3C1_MMR_MMRVBP_REGS_MMR_MMRVBP_START                                       (0x00000040b90000U)
+#define CSL_STD_FW_MCU_I3C1_MMR_MMRVBP_REGS_MMR_MMRVBP_END                                         (0x00000040b901ffU)
+
+/* Properties of firewall at slave: MCU_I3C1_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS */
+#define CSL_STD_FW_MCU_I3C1_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_ID                             (1161U)
+#define CSL_STD_FW_MCU_I3C1_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_I3C1_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_MMR_BASE                       (0x00000045122400U)
+#define CSL_STD_FW_MCU_I3C1_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_NUM_REGIONS                    (4U)
+#define CSL_STD_FW_MCU_I3C1_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_MCU_I3C1_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_START (0x00000040b98000U)
+#define CSL_STD_FW_MCU_I3C1_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_REGS_VBP2APB_WRAP_CORE_VBP_MIPI_I3C_MST_END (0x00000040b983ffU)
+
+/* Properties of firewall at slave: MCU_ESM0_CFG */
+#define CSL_STD_FW_MCU_ESM0_CFG_ID                                                                 (1168U)
+#define CSL_STD_FW_MCU_ESM0_CFG_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_ESM0_CFG_MMR_BASE                                                           (0x00000045124000U)
+#define CSL_STD_FW_MCU_ESM0_CFG_NUM_REGIONS                                                        (1U)
+#define CSL_STD_FW_MCU_ESM0_CFG_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_MCU_ESM0_CFG_CFG_START                                                          (0x00000040800000U)
+#define CSL_STD_FW_MCU_ESM0_CFG_CFG_END                                                            (0x00000040800fffU)
+
+/* Properties of firewall at slave: MCU_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                         (1184U)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                   (0x00000045128000U)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                           (0x00000040500000U)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                             (0x00000040507fffU)
+
+/* Properties of firewall at slave: MCU_MCAN0_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCU_MCAN0_MMR_MMRVBP_MCANSS_REGS_ID                                             (1184U)
+#define CSL_STD_FW_MCU_MCAN0_MMR_MMRVBP_MCANSS_REGS_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MCAN0_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                       (0x00000045128000U)
+#define CSL_STD_FW_MCU_MCAN0_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCU_MCAN0_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCU_MCAN0_MMR_MMRVBP_MCANSS_REGS_SS_START                                       (0x00000040520000U)
+#define CSL_STD_FW_MCU_MCAN0_MMR_MMRVBP_MCANSS_REGS_SS_END                                         (0x000000405200ffU)
+
+/* Properties of firewall at slave: MCU_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCU_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                   (1184U)
+#define CSL_STD_FW_MCU_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                             (0x00000045128000U)
+#define CSL_STD_FW_MCU_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                          (4U)
+#define CSL_STD_FW_MCU_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_MCU_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                            (0x00000040528000U)
+#define CSL_STD_FW_MCU_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                              (0x000000405281ffU)
+
+/* Properties of firewall at slave: MCU_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                      (1184U)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                (0x00000045128000U)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                             (4U)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                          (0x00000040700000U)
+#define CSL_STD_FW_MCU_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                            (0x000000407003ffU)
+
+/* Properties of firewall at slave: MCU_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                         (1185U)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                   (0x00000045128400U)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                           (0x00000040540000U)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                             (0x00000040547fffU)
+
+/* Properties of firewall at slave: MCU_MCAN1_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCU_MCAN1_MMR_MMRVBP_MCANSS_REGS_ID                                             (1185U)
+#define CSL_STD_FW_MCU_MCAN1_MMR_MMRVBP_MCANSS_REGS_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MCAN1_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                       (0x00000045128400U)
+#define CSL_STD_FW_MCU_MCAN1_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCU_MCAN1_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCU_MCAN1_MMR_MMRVBP_MCANSS_REGS_SS_START                                       (0x00000040560000U)
+#define CSL_STD_FW_MCU_MCAN1_MMR_MMRVBP_MCANSS_REGS_SS_END                                         (0x000000405600ffU)
+
+/* Properties of firewall at slave: MCU_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCU_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                   (1185U)
+#define CSL_STD_FW_MCU_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                             (0x00000045128400U)
+#define CSL_STD_FW_MCU_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                          (4U)
+#define CSL_STD_FW_MCU_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_MCU_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                            (0x00000040568000U)
+#define CSL_STD_FW_MCU_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                              (0x000000405681ffU)
+
+/* Properties of firewall at slave: MCU_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                      (1185U)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                (0x00000045128400U)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                             (4U)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                          (0x00000040701000U)
+#define CSL_STD_FW_MCU_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                            (0x000000407013ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_SA_UL_0_ECC_REGS */
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_ECC_REGS_ID                                                 (1196U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_ECC_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_ECC_REGS_MMR_BASE                                           (0x0000004512b000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_ECC_REGS_NUM_REGIONS                                        (5U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_ECC_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_ECC_REGS_ECC_AGGR_START                                     (0x0000004070c000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_ECC_REGS_ECC_AGGR_END                                       (0x0000004070c3ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_SA_UL_0_MMRS */
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRS_ID                                                     (1196U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRS_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRS_MMR_BASE                                               (0x0000004512b000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRS_NUM_REGIONS                                            (5U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRS_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRS_REGS_START                                             (0x00000040900000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRS_REGS_END                                               (0x00000040900fffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_SA_UL_0_MMRA_REGS */
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRA_REGS_ID                                                (1196U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRA_REGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRA_REGS_MMR_BASE                                          (0x0000004512b000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRA_REGS_NUM_REGIONS                                       (5U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRA_REGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRA_REGS_MMRA_START                                        (0x00000040901000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_MMRA_REGS_MMRA_END                                          (0x000000409011ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_SA_UL_0_EIP_76D_8_BCDF_EIP76_REGISTERS */
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_76D_8_BCDF_EIP76_REGISTERS_ID                           (1196U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_76D_8_BCDF_EIP76_REGISTERS_TYPE                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_76D_8_BCDF_EIP76_REGISTERS_MMR_BASE                     (0x0000004512b000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_76D_8_BCDF_EIP76_REGISTERS_NUM_REGIONS                  (5U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_76D_8_BCDF_EIP76_REGISTERS_NUM_PRIV_IDS_PER_REGION      (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_76D_8_BCDF_EIP76_REGISTERS_EIP_76_START                 (0x00000040910000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_76D_8_BCDF_EIP76_REGISTERS_EIP_76_END                   (0x0000004091007fU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_SA_UL_0_EIP_29T2_REGS */
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_29T2_REGS_ID                                            (1196U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_29T2_REGS_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_29T2_REGS_MMR_BASE                                      (0x0000004512b000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_29T2_REGS_NUM_REGIONS                                   (5U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_29T2_REGS_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_29T2_REGS_EIP_29T2_START                                (0x00000040920000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SA_UL_0_EIP_29T2_REGS_EIP_29T2_END                                  (0x0000004092ffffU)
+
+/* Properties of firewall at slave: MCU_CTRL_MMR0_CFG0 */
+#define CSL_STD_FW_MCU_CTRL_MMR0_CFG0_ID                                                           (1200U)
+#define CSL_STD_FW_MCU_CTRL_MMR0_CFG0_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_CTRL_MMR0_CFG0_MMR_BASE                                                     (0x0000004512c000U)
+#define CSL_STD_FW_MCU_CTRL_MMR0_CFG0_NUM_REGIONS                                                  (8U)
+#define CSL_STD_FW_MCU_CTRL_MMR0_CFG0_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_MCU_CTRL_MMR0_CFG0_CFG0_START                                                   (0x00000040f00000U)
+#define CSL_STD_FW_MCU_CTRL_MMR0_CFG0_CFG0_END                                                     (0x00000040f1ffffU)
+
+/* Properties of firewall at slave: MCU_PLL0_CFG */
+#define CSL_STD_FW_MCU_PLL0_CFG_ID                                                                 (1201U)
+#define CSL_STD_FW_MCU_PLL0_CFG_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_PLL0_CFG_MMR_BASE                                                           (0x0000004512c400U)
+#define CSL_STD_FW_MCU_PLL0_CFG_NUM_REGIONS                                                        (3U)
+#define CSL_STD_FW_MCU_PLL0_CFG_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_MCU_PLL0_CFG_CFG_START                                                          (0x00000040d00000U)
+#define CSL_STD_FW_MCU_PLL0_CFG_CFG_END                                                            (0x00000040d03fffU)
+
+/* Properties of firewall at slave: MCU_EFUSE0_MEM */
+#define CSL_STD_FW_MCU_EFUSE0_MEM_ID                                                               (1208U)
+#define CSL_STD_FW_MCU_EFUSE0_MEM_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_EFUSE0_MEM_MMR_BASE                                                         (0x0000004512e000U)
+#define CSL_STD_FW_MCU_EFUSE0_MEM_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_EFUSE0_MEM_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_EFUSE0_MEM_START                                                            (0x00000040c00000U)
+#define CSL_STD_FW_MCU_EFUSE0_MEM_END                                                              (0x00000040c000ffU)
+
+/* Properties of firewall at slave: MCU_PBIST0_MEM */
+#define CSL_STD_FW_MCU_PBIST0_MEM_ID                                                               (1212U)
+#define CSL_STD_FW_MCU_PBIST0_MEM_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_PBIST0_MEM_MMR_BASE                                                         (0x0000004512f000U)
+#define CSL_STD_FW_MCU_PBIST0_MEM_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_PBIST0_MEM_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_PBIST0_MEM_START                                                            (0x00000040e00000U)
+#define CSL_STD_FW_MCU_PBIST0_MEM_END                                                              (0x00000040e003ffU)
+
+/* Properties of firewall at slave: MCU_PBIST2_MEM */
+#define CSL_STD_FW_MCU_PBIST2_MEM_ID                                                               (1213U)
+#define CSL_STD_FW_MCU_PBIST2_MEM_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_PBIST2_MEM_MMR_BASE                                                         (0x0000004512f400U)
+#define CSL_STD_FW_MCU_PBIST2_MEM_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_PBIST2_MEM_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_PBIST2_MEM_START                                                            (0x00000040e10000U)
+#define CSL_STD_FW_MCU_PBIST2_MEM_END                                                              (0x00000040e103ffU)
+
+/* Properties of firewall at slave: MCU_PBIST1_MEM */
+#define CSL_STD_FW_MCU_PBIST1_MEM_ID                                                               (1214U)
+#define CSL_STD_FW_MCU_PBIST1_MEM_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_PBIST1_MEM_MMR_BASE                                                         (0x0000004512f800U)
+#define CSL_STD_FW_MCU_PBIST1_MEM_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_MCU_PBIST1_MEM_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_MCU_PBIST1_MEM_START                                                            (0x00000040e20000U)
+#define CSL_STD_FW_MCU_PBIST1_MEM_END                                                              (0x00000040e203ffU)
+
+/* Properties of firewall at slave: MCU_CPSW0_CPSW_NUSS_VBUSP_ECC */
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_ECC_ID                                                (1220U)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_ECC_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_ECC_MMR_BASE                                          (0x00000045131000U)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_ECC_NUM_REGIONS                                       (2U)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_ECC_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_ECC_ECC_START                                         (0x00000040709000U)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_ECC_ECC_END                                           (0x000000407093ffU)
+
+/* Properties of firewall at slave: MCU_CPSW0_CPSW_NUSS_VBUSP */
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_ID                                                    (1220U)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_MMR_BASE                                              (0x00000045131000U)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_NUM_REGIONS                                           (2U)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_NUSS_START                                            (0x00000046000000U)
+#define CSL_STD_FW_MCU_CPSW0_CPSW_NUSS_VBUSP_NUSS_END                                              (0x000000461fffffU)
+
+/* Properties of firewall at slave: MCU_CBASS0_ERR_REGS */
+#define CSL_STD_FW_MCU_CBASS0_ERR_REGS_ID                                                          (1244U)
+#define CSL_STD_FW_MCU_CBASS0_ERR_REGS_TYPE                                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_CBASS0_ERR_REGS_MMR_BASE                                                    (0x00000045137000U)
+#define CSL_STD_FW_MCU_CBASS0_ERR_REGS_NUM_REGIONS                                                 (1U)
+#define CSL_STD_FW_MCU_CBASS0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                     (3U)
+#define CSL_STD_FW_MCU_CBASS0_ERR_REGS_ERR_START                                                   (0x00000047100000U)
+#define CSL_STD_FW_MCU_CBASS0_ERR_REGS_ERR_END                                                     (0x000000471003ffU)
+
+/* Properties of firewall at slave: MCU_CBASS_DEBUG0_ERR_REGS */
+#define CSL_STD_FW_MCU_CBASS_DEBUG0_ERR_REGS_ID                                                    (1245U)
+#define CSL_STD_FW_MCU_CBASS_DEBUG0_ERR_REGS_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_CBASS_DEBUG0_ERR_REGS_MMR_BASE                                              (0x00000045137400U)
+#define CSL_STD_FW_MCU_CBASS_DEBUG0_ERR_REGS_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_MCU_CBASS_DEBUG0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_MCU_CBASS_DEBUG0_ERR_REGS_ERR_START                                             (0x00000047104000U)
+#define CSL_STD_FW_MCU_CBASS_DEBUG0_ERR_REGS_ERR_END                                               (0x000000471043ffU)
+
+/* Properties of firewall at slave: MCU_CBASS_FW0_ERR_REGS */
+#define CSL_STD_FW_MCU_CBASS_FW0_ERR_REGS_ID                                                       (1246U)
+#define CSL_STD_FW_MCU_CBASS_FW0_ERR_REGS_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_CBASS_FW0_ERR_REGS_MMR_BASE                                                 (0x00000045137800U)
+#define CSL_STD_FW_MCU_CBASS_FW0_ERR_REGS_NUM_REGIONS                                              (1U)
+#define CSL_STD_FW_MCU_CBASS_FW0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_MCU_CBASS_FW0_ERR_REGS_ERR_START                                                (0x00000047108000U)
+#define CSL_STD_FW_MCU_CBASS_FW0_ERR_REGS_ERR_END                                                  (0x000000471083ffU)
+
+/* Properties of firewall at slave: MCUM_MCU_ECC_AGGR0_REGS */
+#define CSL_STD_FW_MCUM_MCU_ECC_AGGR0_REGS_ID                                                      (1253U)
+#define CSL_STD_FW_MCUM_MCU_ECC_AGGR0_REGS_TYPE                                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCUM_MCU_ECC_AGGR0_REGS_MMR_BASE                                                (0x00000045139400U)
+#define CSL_STD_FW_MCUM_MCU_ECC_AGGR0_REGS_NUM_REGIONS                                             (1U)
+#define CSL_STD_FW_MCUM_MCU_ECC_AGGR0_REGS_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_STD_FW_MCUM_MCU_ECC_AGGR0_REGS_REGS_START                                              (0x00000047200000U)
+#define CSL_STD_FW_MCUM_MCU_ECC_AGGR0_REGS_REGS_END                                                (0x000000472003ffU)
+
+/* Properties of firewall at slave: MCU_TIMEOUT_64B2_CFG */
+#define CSL_STD_FW_MCU_TIMEOUT_64B2_CFG_ID                                                         (1268U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B2_CFG_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMEOUT_64B2_CFG_MMR_BASE                                                   (0x0000004513d000U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B2_CFG_NUM_REGIONS                                                (1U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B2_CFG_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B2_CFG_CFG_START                                                  (0x00000040730000U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B2_CFG_CFG_END                                                    (0x000000407303ffU)
+
+/* Properties of firewall at slave: MCU_TIMEOUT_64B3_CFG */
+#define CSL_STD_FW_MCU_TIMEOUT_64B3_CFG_ID                                                         (1274U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B3_CFG_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMEOUT_64B3_CFG_MMR_BASE                                                   (0x0000004513e800U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B3_CFG_NUM_REGIONS                                                (1U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B3_CFG_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B3_CFG_CFG_START                                                  (0x00000040736000U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B3_CFG_CFG_END                                                    (0x000000407363ffU)
+
+/* Properties of firewall at slave: MCU_TIMEOUT_64B4_CFG */
+#define CSL_STD_FW_MCU_TIMEOUT_64B4_CFG_ID                                                         (1275U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B4_CFG_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_TIMEOUT_64B4_CFG_MMR_BASE                                                   (0x0000004513ec00U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B4_CFG_NUM_REGIONS                                                (1U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B4_CFG_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B4_CFG_CFG_START                                                  (0x00000040737000U)
+#define CSL_STD_FW_MCU_TIMEOUT_64B4_CFG_CFG_END                                                    (0x000000407373ffU)
+
+/* Properties of firewall at slave: MCU_SA3_SS0_SEC_PROXY_0_SEC_PROXY_SRC_TARGET_DATA */
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_SEC_PROXY_SRC_TARGET_DATA_ID                            (1276U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_SEC_PROXY_SRC_TARGET_DATA_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_SEC_PROXY_SRC_TARGET_DATA_MMR_BASE                      (0x0000004513f000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_SEC_PROXY_SRC_TARGET_DATA_NUM_REGIONS                   (16U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_SEC_PROXY_SRC_TARGET_DATA_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_SEC_PROXY_SRC_TARGET_DATA_SEC_PROXY_SRC_TARGET_DATA_START (0x00000043600000U)
+#define CSL_STD_FW_MCU_SA3_SS0_SEC_PROXY_0_SEC_PROXY_SRC_TARGET_DATA_SEC_PROXY_SRC_TARGET_DATA_END (0x0000004360ffffU)
+
+/* Properties of firewall at slave: EPWM0_EPWM_REGS */
+#define CSL_STD_FW_EPWM0_EPWM_REGS_ID                                                              (2048U)
+#define CSL_STD_FW_EPWM0_EPWM_REGS_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_EPWM0_EPWM_REGS_MMR_BASE                                                        (0x00000045200000U)
+#define CSL_STD_FW_EPWM0_EPWM_REGS_NUM_REGIONS                                                     (1U)
+#define CSL_STD_FW_EPWM0_EPWM_REGS_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_EPWM0_EPWM_REGS_EPWM_START                                                      (0x00000003000000U)
+#define CSL_STD_FW_EPWM0_EPWM_REGS_EPWM_END                                                        (0x000000030000ffU)
+
+/* Properties of firewall at slave: EPWM1_EPWM_REGS */
+#define CSL_STD_FW_EPWM1_EPWM_REGS_ID                                                              (2050U)
+#define CSL_STD_FW_EPWM1_EPWM_REGS_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_EPWM1_EPWM_REGS_MMR_BASE                                                        (0x00000045200800U)
+#define CSL_STD_FW_EPWM1_EPWM_REGS_NUM_REGIONS                                                     (1U)
+#define CSL_STD_FW_EPWM1_EPWM_REGS_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_EPWM1_EPWM_REGS_EPWM_START                                                      (0x00000003010000U)
+#define CSL_STD_FW_EPWM1_EPWM_REGS_EPWM_END                                                        (0x000000030100ffU)
+
+/* Properties of firewall at slave: EPWM2_EPWM_REGS */
+#define CSL_STD_FW_EPWM2_EPWM_REGS_ID                                                              (2052U)
+#define CSL_STD_FW_EPWM2_EPWM_REGS_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_EPWM2_EPWM_REGS_MMR_BASE                                                        (0x00000045201000U)
+#define CSL_STD_FW_EPWM2_EPWM_REGS_NUM_REGIONS                                                     (1U)
+#define CSL_STD_FW_EPWM2_EPWM_REGS_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_EPWM2_EPWM_REGS_EPWM_START                                                      (0x00000003020000U)
+#define CSL_STD_FW_EPWM2_EPWM_REGS_EPWM_END                                                        (0x000000030200ffU)
+
+/* Properties of firewall at slave: EPWM3_EPWM_REGS */
+#define CSL_STD_FW_EPWM3_EPWM_REGS_ID                                                              (2054U)
+#define CSL_STD_FW_EPWM3_EPWM_REGS_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_EPWM3_EPWM_REGS_MMR_BASE                                                        (0x00000045201800U)
+#define CSL_STD_FW_EPWM3_EPWM_REGS_NUM_REGIONS                                                     (1U)
+#define CSL_STD_FW_EPWM3_EPWM_REGS_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_EPWM3_EPWM_REGS_EPWM_START                                                      (0x00000003030000U)
+#define CSL_STD_FW_EPWM3_EPWM_REGS_EPWM_END                                                        (0x000000030300ffU)
+
+/* Properties of firewall at slave: EPWM4_EPWM_REGS */
+#define CSL_STD_FW_EPWM4_EPWM_REGS_ID                                                              (2056U)
+#define CSL_STD_FW_EPWM4_EPWM_REGS_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_EPWM4_EPWM_REGS_MMR_BASE                                                        (0x00000045202000U)
+#define CSL_STD_FW_EPWM4_EPWM_REGS_NUM_REGIONS                                                     (1U)
+#define CSL_STD_FW_EPWM4_EPWM_REGS_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_EPWM4_EPWM_REGS_EPWM_START                                                      (0x00000003040000U)
+#define CSL_STD_FW_EPWM4_EPWM_REGS_EPWM_END                                                        (0x000000030400ffU)
+
+/* Properties of firewall at slave: EPWM5_EPWM_REGS */
+#define CSL_STD_FW_EPWM5_EPWM_REGS_ID                                                              (2058U)
+#define CSL_STD_FW_EPWM5_EPWM_REGS_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_EPWM5_EPWM_REGS_MMR_BASE                                                        (0x00000045202800U)
+#define CSL_STD_FW_EPWM5_EPWM_REGS_NUM_REGIONS                                                     (1U)
+#define CSL_STD_FW_EPWM5_EPWM_REGS_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_EPWM5_EPWM_REGS_EPWM_START                                                      (0x00000003050000U)
+#define CSL_STD_FW_EPWM5_EPWM_REGS_EPWM_END                                                        (0x000000030500ffU)
+
+/* Properties of firewall at slave: EQEP0_REG */
+#define CSL_STD_FW_EQEP0_REG_ID                                                                    (2060U)
+#define CSL_STD_FW_EQEP0_REG_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_EQEP0_REG_MMR_BASE                                                              (0x00000045203000U)
+#define CSL_STD_FW_EQEP0_REG_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_EQEP0_REG_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_EQEP0_REG_REG_START                                                             (0x00000003200000U)
+#define CSL_STD_FW_EQEP0_REG_REG_END                                                               (0x000000032000ffU)
+
+/* Properties of firewall at slave: EQEP1_REG */
+#define CSL_STD_FW_EQEP1_REG_ID                                                                    (2061U)
+#define CSL_STD_FW_EQEP1_REG_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_EQEP1_REG_MMR_BASE                                                              (0x00000045203400U)
+#define CSL_STD_FW_EQEP1_REG_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_EQEP1_REG_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_EQEP1_REG_REG_START                                                             (0x00000003210000U)
+#define CSL_STD_FW_EQEP1_REG_REG_END                                                               (0x000000032100ffU)
+
+/* Properties of firewall at slave: EQEP2_REG */
+#define CSL_STD_FW_EQEP2_REG_ID                                                                    (2062U)
+#define CSL_STD_FW_EQEP2_REG_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_EQEP2_REG_MMR_BASE                                                              (0x00000045203800U)
+#define CSL_STD_FW_EQEP2_REG_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_EQEP2_REG_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_EQEP2_REG_REG_START                                                             (0x00000003220000U)
+#define CSL_STD_FW_EQEP2_REG_REG_END                                                               (0x000000032200ffU)
+
+/* Properties of firewall at slave: ECAP0_CTL_STS */
+#define CSL_STD_FW_ECAP0_CTL_STS_ID                                                                (2063U)
+#define CSL_STD_FW_ECAP0_CTL_STS_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_ECAP0_CTL_STS_MMR_BASE                                                          (0x00000045203c00U)
+#define CSL_STD_FW_ECAP0_CTL_STS_NUM_REGIONS                                                       (1U)
+#define CSL_STD_FW_ECAP0_CTL_STS_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_ECAP0_CTL_STS_CTL_STS_START                                                     (0x00000003100000U)
+#define CSL_STD_FW_ECAP0_CTL_STS_CTL_STS_END                                                       (0x000000031000ffU)
+
+/* Properties of firewall at slave: ECAP1_CTL_STS */
+#define CSL_STD_FW_ECAP1_CTL_STS_ID                                                                (2064U)
+#define CSL_STD_FW_ECAP1_CTL_STS_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_ECAP1_CTL_STS_MMR_BASE                                                          (0x00000045204000U)
+#define CSL_STD_FW_ECAP1_CTL_STS_NUM_REGIONS                                                       (1U)
+#define CSL_STD_FW_ECAP1_CTL_STS_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_ECAP1_CTL_STS_CTL_STS_START                                                     (0x00000003110000U)
+#define CSL_STD_FW_ECAP1_CTL_STS_CTL_STS_END                                                       (0x000000031100ffU)
+
+/* Properties of firewall at slave: ECAP2_CTL_STS */
+#define CSL_STD_FW_ECAP2_CTL_STS_ID                                                                (2065U)
+#define CSL_STD_FW_ECAP2_CTL_STS_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_ECAP2_CTL_STS_MMR_BASE                                                          (0x00000045204400U)
+#define CSL_STD_FW_ECAP2_CTL_STS_NUM_REGIONS                                                       (1U)
+#define CSL_STD_FW_ECAP2_CTL_STS_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_ECAP2_CTL_STS_CTL_STS_START                                                     (0x00000003120000U)
+#define CSL_STD_FW_ECAP2_CTL_STS_CTL_STS_END                                                       (0x000000031200ffU)
+
+/* Properties of firewall at slave: RTI15_CFG */
+#define CSL_STD_FW_RTI15_CFG_ID                                                                    (2066U)
+#define CSL_STD_FW_RTI15_CFG_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_RTI15_CFG_MMR_BASE                                                              (0x00000045204800U)
+#define CSL_STD_FW_RTI15_CFG_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_RTI15_CFG_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_RTI15_CFG_CFG_START                                                             (0x000000022f0000U)
+#define CSL_STD_FW_RTI15_CFG_CFG_END                                                               (0x000000022f00ffU)
+
+/* Properties of firewall at slave: MAIN_IP_ECC_AGGR0_REGS */
+#define CSL_STD_FW_MAIN_IP_ECC_AGGR0_REGS_ID                                                       (2067U)
+#define CSL_STD_FW_MAIN_IP_ECC_AGGR0_REGS_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MAIN_IP_ECC_AGGR0_REGS_MMR_BASE                                                 (0x00000045204c00U)
+#define CSL_STD_FW_MAIN_IP_ECC_AGGR0_REGS_NUM_REGIONS                                              (1U)
+#define CSL_STD_FW_MAIN_IP_ECC_AGGR0_REGS_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_MAIN_IP_ECC_AGGR0_REGS_ECC_AGGR_START                                           (0x00000002af6000U)
+#define CSL_STD_FW_MAIN_IP_ECC_AGGR0_REGS_ECC_AGGR_END                                             (0x00000002af63ffU)
+
+/* Properties of firewall at slave: PDMA5_REGS */
+#define CSL_STD_FW_PDMA5_REGS_ID                                                                   (2068U)
+#define CSL_STD_FW_PDMA5_REGS_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_PDMA5_REGS_MMR_BASE                                                             (0x00000045205000U)
+#define CSL_STD_FW_PDMA5_REGS_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_PDMA5_REGS_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_PDMA5_REGS_REGS_START                                                           (0x000000027e0000U)
+#define CSL_STD_FW_PDMA5_REGS_REGS_END                                                             (0x000000027e03ffU)
+
+/* Properties of firewall at slave: I2C0_CFG */
+#define CSL_STD_FW_I2C0_CFG_ID                                                                     (2072U)
+#define CSL_STD_FW_I2C0_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_I2C0_CFG_MMR_BASE                                                               (0x00000045206000U)
+#define CSL_STD_FW_I2C0_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_I2C0_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_I2C0_CFG_CFG_START                                                              (0x00000002000000U)
+#define CSL_STD_FW_I2C0_CFG_CFG_END                                                                (0x000000020000ffU)
+
+/* Properties of firewall at slave: I2C1_CFG */
+#define CSL_STD_FW_I2C1_CFG_ID                                                                     (2073U)
+#define CSL_STD_FW_I2C1_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_I2C1_CFG_MMR_BASE                                                               (0x00000045206400U)
+#define CSL_STD_FW_I2C1_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_I2C1_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_I2C1_CFG_CFG_START                                                              (0x00000002010000U)
+#define CSL_STD_FW_I2C1_CFG_CFG_END                                                                (0x000000020100ffU)
+
+/* Properties of firewall at slave: I2C2_CFG */
+#define CSL_STD_FW_I2C2_CFG_ID                                                                     (2074U)
+#define CSL_STD_FW_I2C2_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_I2C2_CFG_MMR_BASE                                                               (0x00000045206800U)
+#define CSL_STD_FW_I2C2_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_I2C2_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_I2C2_CFG_CFG_START                                                              (0x00000002020000U)
+#define CSL_STD_FW_I2C2_CFG_CFG_END                                                                (0x000000020200ffU)
+
+/* Properties of firewall at slave: I2C3_CFG */
+#define CSL_STD_FW_I2C3_CFG_ID                                                                     (2075U)
+#define CSL_STD_FW_I2C3_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_I2C3_CFG_MMR_BASE                                                               (0x00000045206c00U)
+#define CSL_STD_FW_I2C3_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_I2C3_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_I2C3_CFG_CFG_START                                                              (0x00000002030000U)
+#define CSL_STD_FW_I2C3_CFG_CFG_END                                                                (0x000000020300ffU)
+
+/* Properties of firewall at slave: RTI28_CFG */
+#define CSL_STD_FW_RTI28_CFG_ID                                                                    (2094U)
+#define CSL_STD_FW_RTI28_CFG_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_RTI28_CFG_MMR_BASE                                                              (0x0000004520b800U)
+#define CSL_STD_FW_RTI28_CFG_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_RTI28_CFG_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_RTI28_CFG_CFG_START                                                             (0x000000023c0000U)
+#define CSL_STD_FW_RTI28_CFG_CFG_END                                                               (0x000000023c00ffU)
+
+/* Properties of firewall at slave: RTI29_CFG */
+#define CSL_STD_FW_RTI29_CFG_ID                                                                    (2095U)
+#define CSL_STD_FW_RTI29_CFG_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_RTI29_CFG_MMR_BASE                                                              (0x0000004520bc00U)
+#define CSL_STD_FW_RTI29_CFG_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_RTI29_CFG_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_RTI29_CFG_CFG_START                                                             (0x000000023d0000U)
+#define CSL_STD_FW_RTI29_CFG_CFG_END                                                               (0x000000023d00ffU)
+
+/* Properties of firewall at slave: RTI30_CFG */
+#define CSL_STD_FW_RTI30_CFG_ID                                                                    (2096U)
+#define CSL_STD_FW_RTI30_CFG_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_RTI30_CFG_MMR_BASE                                                              (0x0000004520c000U)
+#define CSL_STD_FW_RTI30_CFG_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_RTI30_CFG_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_RTI30_CFG_CFG_START                                                             (0x000000023e0000U)
+#define CSL_STD_FW_RTI30_CFG_CFG_END                                                               (0x000000023e00ffU)
+
+/* Properties of firewall at slave: RTI31_CFG */
+#define CSL_STD_FW_RTI31_CFG_ID                                                                    (2097U)
+#define CSL_STD_FW_RTI31_CFG_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_RTI31_CFG_MMR_BASE                                                              (0x0000004520c400U)
+#define CSL_STD_FW_RTI31_CFG_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_RTI31_CFG_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_RTI31_CFG_CFG_START                                                             (0x000000023f0000U)
+#define CSL_STD_FW_RTI31_CFG_CFG_END                                                               (0x000000023f00ffU)
+
+/* Properties of firewall at slave: CPSW_PSILSS0_MMRS */
+#define CSL_STD_FW_CPSW_PSILSS0_MMRS_ID                                                            (2098U)
+#define CSL_STD_FW_CPSW_PSILSS0_MMRS_TYPE                                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_CPSW_PSILSS0_MMRS_MMR_BASE                                                      (0x0000004520c800U)
+#define CSL_STD_FW_CPSW_PSILSS0_MMRS_NUM_REGIONS                                                   (1U)
+#define CSL_STD_FW_CPSW_PSILSS0_MMRS_NUM_PRIV_IDS_PER_REGION                                       (3U)
+#define CSL_STD_FW_CPSW_PSILSS0_MMRS_MMRS_START                                                    (0x00000003404000U)
+#define CSL_STD_FW_CPSW_PSILSS0_MMRS_MMRS_END                                                      (0x00000003404fffU)
+
+/* Properties of firewall at slave: TIMER4_CFG */
+#define CSL_STD_FW_TIMER4_CFG_ID                                                                   (2116U)
+#define CSL_STD_FW_TIMER4_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER4_CFG_MMR_BASE                                                             (0x00000045211000U)
+#define CSL_STD_FW_TIMER4_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_TIMER4_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_TIMER4_CFG_CFG_START                                                            (0x00000002440000U)
+#define CSL_STD_FW_TIMER4_CFG_CFG_END                                                              (0x000000024403ffU)
+
+/* Properties of firewall at slave: TIMER5_CFG */
+#define CSL_STD_FW_TIMER5_CFG_ID                                                                   (2117U)
+#define CSL_STD_FW_TIMER5_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER5_CFG_MMR_BASE                                                             (0x00000045211400U)
+#define CSL_STD_FW_TIMER5_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_TIMER5_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_TIMER5_CFG_CFG_START                                                            (0x00000002450000U)
+#define CSL_STD_FW_TIMER5_CFG_CFG_END                                                              (0x000000024503ffU)
+
+/* Properties of firewall at slave: TIMER6_CFG */
+#define CSL_STD_FW_TIMER6_CFG_ID                                                                   (2118U)
+#define CSL_STD_FW_TIMER6_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER6_CFG_MMR_BASE                                                             (0x00000045211800U)
+#define CSL_STD_FW_TIMER6_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_TIMER6_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_TIMER6_CFG_CFG_START                                                            (0x00000002460000U)
+#define CSL_STD_FW_TIMER6_CFG_CFG_END                                                              (0x000000024603ffU)
+
+/* Properties of firewall at slave: TIMER7_CFG */
+#define CSL_STD_FW_TIMER7_CFG_ID                                                                   (2119U)
+#define CSL_STD_FW_TIMER7_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER7_CFG_MMR_BASE                                                             (0x00000045211c00U)
+#define CSL_STD_FW_TIMER7_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_TIMER7_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_TIMER7_CFG_CFG_START                                                            (0x00000002470000U)
+#define CSL_STD_FW_TIMER7_CFG_CFG_END                                                              (0x000000024703ffU)
+
+/* Properties of firewall at slave: MCSPI0_CFG */
+#define CSL_STD_FW_MCSPI0_CFG_ID                                                                   (2136U)
+#define CSL_STD_FW_MCSPI0_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCSPI0_CFG_MMR_BASE                                                             (0x00000045216000U)
+#define CSL_STD_FW_MCSPI0_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCSPI0_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCSPI0_CFG_CFG_START                                                            (0x00000002100000U)
+#define CSL_STD_FW_MCSPI0_CFG_CFG_END                                                              (0x000000021003ffU)
+
+/* Properties of firewall at slave: MCSPI1_CFG */
+#define CSL_STD_FW_MCSPI1_CFG_ID                                                                   (2137U)
+#define CSL_STD_FW_MCSPI1_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCSPI1_CFG_MMR_BASE                                                             (0x00000045216400U)
+#define CSL_STD_FW_MCSPI1_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCSPI1_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCSPI1_CFG_CFG_START                                                            (0x00000002110000U)
+#define CSL_STD_FW_MCSPI1_CFG_CFG_END                                                              (0x000000021103ffU)
+
+/* Properties of firewall at slave: MCSPI2_CFG */
+#define CSL_STD_FW_MCSPI2_CFG_ID                                                                   (2138U)
+#define CSL_STD_FW_MCSPI2_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCSPI2_CFG_MMR_BASE                                                             (0x00000045216800U)
+#define CSL_STD_FW_MCSPI2_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCSPI2_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCSPI2_CFG_CFG_START                                                            (0x00000002120000U)
+#define CSL_STD_FW_MCSPI2_CFG_CFG_END                                                              (0x000000021203ffU)
+
+/* Properties of firewall at slave: MCSPI3_CFG */
+#define CSL_STD_FW_MCSPI3_CFG_ID                                                                   (2139U)
+#define CSL_STD_FW_MCSPI3_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCSPI3_CFG_MMR_BASE                                                             (0x00000045216c00U)
+#define CSL_STD_FW_MCSPI3_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCSPI3_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCSPI3_CFG_CFG_START                                                            (0x00000002130000U)
+#define CSL_STD_FW_MCSPI3_CFG_CFG_END                                                              (0x000000021303ffU)
+
+/* Properties of firewall at slave: UART0_MEM */
+#define CSL_STD_FW_UART0_MEM_ID                                                                    (2148U)
+#define CSL_STD_FW_UART0_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_UART0_MEM_MMR_BASE                                                              (0x00000045219000U)
+#define CSL_STD_FW_UART0_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_UART0_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_UART0_MEM_START                                                                 (0x00000002800000U)
+#define CSL_STD_FW_UART0_MEM_END                                                                   (0x000000028001ffU)
+
+/* Properties of firewall at slave: UART1_MEM */
+#define CSL_STD_FW_UART1_MEM_ID                                                                    (2149U)
+#define CSL_STD_FW_UART1_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_UART1_MEM_MMR_BASE                                                              (0x00000045219400U)
+#define CSL_STD_FW_UART1_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_UART1_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_UART1_MEM_START                                                                 (0x00000002810000U)
+#define CSL_STD_FW_UART1_MEM_END                                                                   (0x000000028101ffU)
+
+/* Properties of firewall at slave: UART4_MEM */
+#define CSL_STD_FW_UART4_MEM_ID                                                                    (2152U)
+#define CSL_STD_FW_UART4_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_UART4_MEM_MMR_BASE                                                              (0x0000004521a000U)
+#define CSL_STD_FW_UART4_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_UART4_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_UART4_MEM_START                                                                 (0x00000002840000U)
+#define CSL_STD_FW_UART4_MEM_END                                                                   (0x000000028401ffU)
+
+/* Properties of firewall at slave: UART5_MEM */
+#define CSL_STD_FW_UART5_MEM_ID                                                                    (2153U)
+#define CSL_STD_FW_UART5_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_UART5_MEM_MMR_BASE                                                              (0x0000004521a400U)
+#define CSL_STD_FW_UART5_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_UART5_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_UART5_MEM_START                                                                 (0x00000002850000U)
+#define CSL_STD_FW_UART5_MEM_END                                                                   (0x000000028501ffU)
+
+/* Properties of firewall at slave: UART6_MEM */
+#define CSL_STD_FW_UART6_MEM_ID                                                                    (2154U)
+#define CSL_STD_FW_UART6_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_UART6_MEM_MMR_BASE                                                              (0x0000004521a800U)
+#define CSL_STD_FW_UART6_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_UART6_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_UART6_MEM_START                                                                 (0x00000002860000U)
+#define CSL_STD_FW_UART6_MEM_END                                                                   (0x000000028601ffU)
+
+/* Properties of firewall at slave: UART7_MEM */
+#define CSL_STD_FW_UART7_MEM_ID                                                                    (2155U)
+#define CSL_STD_FW_UART7_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_UART7_MEM_MMR_BASE                                                              (0x0000004521ac00U)
+#define CSL_STD_FW_UART7_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_UART7_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_UART7_MEM_START                                                                 (0x00000002870000U)
+#define CSL_STD_FW_UART7_MEM_END                                                                   (0x000000028701ffU)
+
+/* Properties of firewall at slave: UART8_MEM */
+#define CSL_STD_FW_UART8_MEM_ID                                                                    (2156U)
+#define CSL_STD_FW_UART8_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_UART8_MEM_MMR_BASE                                                              (0x0000004521b000U)
+#define CSL_STD_FW_UART8_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_UART8_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_UART8_MEM_START                                                                 (0x00000002880000U)
+#define CSL_STD_FW_UART8_MEM_END                                                                   (0x000000028801ffU)
+
+/* Properties of firewall at slave: UART9_MEM */
+#define CSL_STD_FW_UART9_MEM_ID                                                                    (2157U)
+#define CSL_STD_FW_UART9_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_UART9_MEM_MMR_BASE                                                              (0x0000004521b400U)
+#define CSL_STD_FW_UART9_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_UART9_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_UART9_MEM_START                                                                 (0x00000002890000U)
+#define CSL_STD_FW_UART9_MEM_END                                                                   (0x000000028901ffU)
+
+/* Properties of firewall at slave: MCAN0_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN0_MMR_MMRVBP_MCANSS_REGS_ID                                                 (2158U)
+#define CSL_STD_FW_MCAN0_MMR_MMRVBP_MCANSS_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN0_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                           (0x0000004521b800U)
+#define CSL_STD_FW_MCAN0_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCAN0_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCAN0_MMR_MMRVBP_MCANSS_REGS_SS_START                                           (0x00000002700000U)
+#define CSL_STD_FW_MCAN0_MMR_MMRVBP_MCANSS_REGS_SS_END                                             (0x000000027000ffU)
+
+/* Properties of firewall at slave: MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                       (2158U)
+#define CSL_STD_FW_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                 (0x0000004521b800U)
+#define CSL_STD_FW_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                              (4U)
+#define CSL_STD_FW_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                                (0x00000002701000U)
+#define CSL_STD_FW_MCAN0_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                  (0x000000027011ffU)
+
+/* Properties of firewall at slave: MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                             (2158U)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                       (0x0000004521b800U)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                               (0x00000002708000U)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                 (0x0000000270ffffU)
+
+/* Properties of firewall at slave: MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                          (2158U)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                    (0x0000004521b800U)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                 (4U)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                              (0x00000002a78000U)
+#define CSL_STD_FW_MCAN0_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                                (0x00000002a783ffU)
+
+/* Properties of firewall at slave: MCAN1_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN1_MMR_MMRVBP_MCANSS_REGS_ID                                                 (2159U)
+#define CSL_STD_FW_MCAN1_MMR_MMRVBP_MCANSS_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN1_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                           (0x0000004521bc00U)
+#define CSL_STD_FW_MCAN1_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCAN1_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCAN1_MMR_MMRVBP_MCANSS_REGS_SS_START                                           (0x00000002710000U)
+#define CSL_STD_FW_MCAN1_MMR_MMRVBP_MCANSS_REGS_SS_END                                             (0x000000027100ffU)
+
+/* Properties of firewall at slave: MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                       (2159U)
+#define CSL_STD_FW_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                 (0x0000004521bc00U)
+#define CSL_STD_FW_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                              (4U)
+#define CSL_STD_FW_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                                (0x00000002711000U)
+#define CSL_STD_FW_MCAN1_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                  (0x000000027111ffU)
+
+/* Properties of firewall at slave: MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                             (2159U)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                       (0x0000004521bc00U)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                               (0x00000002718000U)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                 (0x0000000271ffffU)
+
+/* Properties of firewall at slave: MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                          (2159U)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                    (0x0000004521bc00U)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                 (4U)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                              (0x00000002a79000U)
+#define CSL_STD_FW_MCAN1_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                                (0x00000002a793ffU)
+
+/* Properties of firewall at slave: MCAN2_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN2_MMR_MMRVBP_MCANSS_REGS_ID                                                 (2160U)
+#define CSL_STD_FW_MCAN2_MMR_MMRVBP_MCANSS_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN2_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                           (0x0000004521c000U)
+#define CSL_STD_FW_MCAN2_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCAN2_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCAN2_MMR_MMRVBP_MCANSS_REGS_SS_START                                           (0x00000002720000U)
+#define CSL_STD_FW_MCAN2_MMR_MMRVBP_MCANSS_REGS_SS_END                                             (0x000000027200ffU)
+
+/* Properties of firewall at slave: MCAN2_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN2_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                       (2160U)
+#define CSL_STD_FW_MCAN2_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN2_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                 (0x0000004521c000U)
+#define CSL_STD_FW_MCAN2_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                              (4U)
+#define CSL_STD_FW_MCAN2_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCAN2_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                                (0x00000002721000U)
+#define CSL_STD_FW_MCAN2_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                  (0x000000027211ffU)
+
+/* Properties of firewall at slave: MCAN2_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                             (2160U)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                       (0x0000004521c000U)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                               (0x00000002728000U)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                 (0x0000000272ffffU)
+
+/* Properties of firewall at slave: MCAN2_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                          (2160U)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                    (0x0000004521c000U)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                 (4U)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                              (0x00000002a7a000U)
+#define CSL_STD_FW_MCAN2_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                                (0x00000002a7a3ffU)
+
+/* Properties of firewall at slave: MCAN3_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN3_MMR_MMRVBP_MCANSS_REGS_ID                                                 (2161U)
+#define CSL_STD_FW_MCAN3_MMR_MMRVBP_MCANSS_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN3_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                           (0x0000004521c400U)
+#define CSL_STD_FW_MCAN3_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCAN3_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCAN3_MMR_MMRVBP_MCANSS_REGS_SS_START                                           (0x00000002730000U)
+#define CSL_STD_FW_MCAN3_MMR_MMRVBP_MCANSS_REGS_SS_END                                             (0x000000027300ffU)
+
+/* Properties of firewall at slave: MCAN3_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN3_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                       (2161U)
+#define CSL_STD_FW_MCAN3_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN3_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                 (0x0000004521c400U)
+#define CSL_STD_FW_MCAN3_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                              (4U)
+#define CSL_STD_FW_MCAN3_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCAN3_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                                (0x00000002731000U)
+#define CSL_STD_FW_MCAN3_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                  (0x000000027311ffU)
+
+/* Properties of firewall at slave: MCAN3_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                             (2161U)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                       (0x0000004521c400U)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                               (0x00000002738000U)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                 (0x0000000273ffffU)
+
+/* Properties of firewall at slave: MCAN3_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                          (2161U)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                    (0x0000004521c400U)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                 (4U)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                              (0x00000002a7b000U)
+#define CSL_STD_FW_MCAN3_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                                (0x00000002a7b3ffU)
+
+/* Properties of firewall at slave: MCAN4_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN4_MMR_MMRVBP_MCANSS_REGS_ID                                                 (2162U)
+#define CSL_STD_FW_MCAN4_MMR_MMRVBP_MCANSS_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN4_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                           (0x0000004521c800U)
+#define CSL_STD_FW_MCAN4_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCAN4_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCAN4_MMR_MMRVBP_MCANSS_REGS_SS_START                                           (0x00000002740000U)
+#define CSL_STD_FW_MCAN4_MMR_MMRVBP_MCANSS_REGS_SS_END                                             (0x000000027400ffU)
+
+/* Properties of firewall at slave: MCAN4_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN4_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                       (2162U)
+#define CSL_STD_FW_MCAN4_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN4_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                 (0x0000004521c800U)
+#define CSL_STD_FW_MCAN4_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                              (4U)
+#define CSL_STD_FW_MCAN4_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCAN4_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                                (0x00000002741000U)
+#define CSL_STD_FW_MCAN4_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                  (0x000000027411ffU)
+
+/* Properties of firewall at slave: MCAN4_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                             (2162U)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                       (0x0000004521c800U)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                               (0x00000002748000U)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                 (0x0000000274ffffU)
+
+/* Properties of firewall at slave: MCAN4_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                          (2162U)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                    (0x0000004521c800U)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                 (4U)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                              (0x00000002a7c000U)
+#define CSL_STD_FW_MCAN4_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                                (0x00000002a7c3ffU)
+
+/* Properties of firewall at slave: MCAN5_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN5_MMR_MMRVBP_MCANSS_REGS_ID                                                 (2163U)
+#define CSL_STD_FW_MCAN5_MMR_MMRVBP_MCANSS_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN5_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                           (0x0000004521cc00U)
+#define CSL_STD_FW_MCAN5_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCAN5_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCAN5_MMR_MMRVBP_MCANSS_REGS_SS_START                                           (0x00000002750000U)
+#define CSL_STD_FW_MCAN5_MMR_MMRVBP_MCANSS_REGS_SS_END                                             (0x000000027500ffU)
+
+/* Properties of firewall at slave: MCAN5_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN5_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                       (2163U)
+#define CSL_STD_FW_MCAN5_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN5_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                 (0x0000004521cc00U)
+#define CSL_STD_FW_MCAN5_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                              (4U)
+#define CSL_STD_FW_MCAN5_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCAN5_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                                (0x00000002751000U)
+#define CSL_STD_FW_MCAN5_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                  (0x000000027511ffU)
+
+/* Properties of firewall at slave: MCAN5_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                             (2163U)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                       (0x0000004521cc00U)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                               (0x00000002758000U)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                 (0x0000000275ffffU)
+
+/* Properties of firewall at slave: MCAN5_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                          (2163U)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                    (0x0000004521cc00U)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                 (4U)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                              (0x00000002a7d000U)
+#define CSL_STD_FW_MCAN5_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                                (0x00000002a7d3ffU)
+
+/* Properties of firewall at slave: MCAN6_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN6_MMR_MMRVBP_MCANSS_REGS_ID                                                 (2164U)
+#define CSL_STD_FW_MCAN6_MMR_MMRVBP_MCANSS_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN6_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                           (0x0000004521d000U)
+#define CSL_STD_FW_MCAN6_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCAN6_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCAN6_MMR_MMRVBP_MCANSS_REGS_SS_START                                           (0x00000002760000U)
+#define CSL_STD_FW_MCAN6_MMR_MMRVBP_MCANSS_REGS_SS_END                                             (0x000000027600ffU)
+
+/* Properties of firewall at slave: MCAN6_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN6_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                       (2164U)
+#define CSL_STD_FW_MCAN6_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN6_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                 (0x0000004521d000U)
+#define CSL_STD_FW_MCAN6_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                              (4U)
+#define CSL_STD_FW_MCAN6_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCAN6_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                                (0x00000002761000U)
+#define CSL_STD_FW_MCAN6_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                  (0x000000027611ffU)
+
+/* Properties of firewall at slave: MCAN6_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                             (2164U)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                       (0x0000004521d000U)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                               (0x00000002768000U)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                 (0x0000000276ffffU)
+
+/* Properties of firewall at slave: MCAN6_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                          (2164U)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                    (0x0000004521d000U)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                 (4U)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                              (0x00000002a7e000U)
+#define CSL_STD_FW_MCAN6_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                                (0x00000002a7e3ffU)
+
+/* Properties of firewall at slave: MCAN7_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN7_MMR_MMRVBP_MCANSS_REGS_ID                                                 (2165U)
+#define CSL_STD_FW_MCAN7_MMR_MMRVBP_MCANSS_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN7_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                           (0x0000004521d400U)
+#define CSL_STD_FW_MCAN7_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCAN7_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCAN7_MMR_MMRVBP_MCANSS_REGS_SS_START                                           (0x00000002770000U)
+#define CSL_STD_FW_MCAN7_MMR_MMRVBP_MCANSS_REGS_SS_END                                             (0x000000027700ffU)
+
+/* Properties of firewall at slave: MCAN7_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN7_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                       (2165U)
+#define CSL_STD_FW_MCAN7_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN7_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                 (0x0000004521d400U)
+#define CSL_STD_FW_MCAN7_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                              (4U)
+#define CSL_STD_FW_MCAN7_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCAN7_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                                (0x00000002771000U)
+#define CSL_STD_FW_MCAN7_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                  (0x000000027711ffU)
+
+/* Properties of firewall at slave: MCAN7_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                             (2165U)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                       (0x0000004521d400U)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                               (0x00000002778000U)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                 (0x0000000277ffffU)
+
+/* Properties of firewall at slave: MCAN7_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                          (2165U)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                    (0x0000004521d400U)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                 (4U)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                              (0x00000002a7f000U)
+#define CSL_STD_FW_MCAN7_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                                (0x00000002a7f3ffU)
+
+/* Properties of firewall at slave: MCAN8_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN8_MMR_MMRVBP_MCANSS_REGS_ID                                                 (2166U)
+#define CSL_STD_FW_MCAN8_MMR_MMRVBP_MCANSS_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN8_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                           (0x0000004521d800U)
+#define CSL_STD_FW_MCAN8_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCAN8_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCAN8_MMR_MMRVBP_MCANSS_REGS_SS_START                                           (0x00000002780000U)
+#define CSL_STD_FW_MCAN8_MMR_MMRVBP_MCANSS_REGS_SS_END                                             (0x000000027800ffU)
+
+/* Properties of firewall at slave: MCAN8_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN8_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                       (2166U)
+#define CSL_STD_FW_MCAN8_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN8_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                 (0x0000004521d800U)
+#define CSL_STD_FW_MCAN8_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                              (4U)
+#define CSL_STD_FW_MCAN8_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCAN8_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                                (0x00000002781000U)
+#define CSL_STD_FW_MCAN8_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                  (0x000000027811ffU)
+
+/* Properties of firewall at slave: MCAN8_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                             (2166U)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                       (0x0000004521d800U)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                               (0x00000002788000U)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                 (0x0000000278ffffU)
+
+/* Properties of firewall at slave: MCAN8_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                          (2166U)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                    (0x0000004521d800U)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                 (4U)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                              (0x00000002a40000U)
+#define CSL_STD_FW_MCAN8_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                                (0x00000002a403ffU)
+
+/* Properties of firewall at slave: MCAN9_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN9_MMR_MMRVBP_MCANSS_REGS_ID                                                 (2167U)
+#define CSL_STD_FW_MCAN9_MMR_MMRVBP_MCANSS_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN9_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                           (0x0000004521dc00U)
+#define CSL_STD_FW_MCAN9_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_MCAN9_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_MCAN9_MMR_MMRVBP_MCANSS_REGS_SS_START                                           (0x00000002790000U)
+#define CSL_STD_FW_MCAN9_MMR_MMRVBP_MCANSS_REGS_SS_END                                             (0x000000027900ffU)
+
+/* Properties of firewall at slave: MCAN9_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN9_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                       (2167U)
+#define CSL_STD_FW_MCAN9_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN9_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                 (0x0000004521dc00U)
+#define CSL_STD_FW_MCAN9_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                              (4U)
+#define CSL_STD_FW_MCAN9_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_MCAN9_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                                (0x00000002791000U)
+#define CSL_STD_FW_MCAN9_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                  (0x000000027911ffU)
+
+/* Properties of firewall at slave: MCAN9_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                             (2167U)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                       (0x0000004521dc00U)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                               (0x00000002798000U)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                 (0x0000000279ffffU)
+
+/* Properties of firewall at slave: MCAN9_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                          (2167U)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                    (0x0000004521dc00U)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                 (4U)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                              (0x00000002a41000U)
+#define CSL_STD_FW_MCAN9_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                                (0x00000002a413ffU)
+
+/* Properties of firewall at slave: MCAN10_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN10_MMR_MMRVBP_MCANSS_REGS_ID                                                (2168U)
+#define CSL_STD_FW_MCAN10_MMR_MMRVBP_MCANSS_REGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN10_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                          (0x0000004521e000U)
+#define CSL_STD_FW_MCAN10_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_MCAN10_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MCAN10_MMR_MMRVBP_MCANSS_REGS_SS_START                                          (0x000000027a0000U)
+#define CSL_STD_FW_MCAN10_MMR_MMRVBP_MCANSS_REGS_SS_END                                            (0x000000027a00ffU)
+
+/* Properties of firewall at slave: MCAN10_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN10_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                      (2168U)
+#define CSL_STD_FW_MCAN10_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN10_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                (0x0000004521e000U)
+#define CSL_STD_FW_MCAN10_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                             (4U)
+#define CSL_STD_FW_MCAN10_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCAN10_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                               (0x000000027a1000U)
+#define CSL_STD_FW_MCAN10_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                 (0x000000027a11ffU)
+
+/* Properties of firewall at slave: MCAN10_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                            (2168U)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                      (0x0000004521e000U)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                              (0x000000027a8000U)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                (0x000000027affffU)
+
+/* Properties of firewall at slave: MCAN10_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                         (2168U)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                   (0x0000004521e000U)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                             (0x00000002a42000U)
+#define CSL_STD_FW_MCAN10_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                               (0x00000002a423ffU)
+
+/* Properties of firewall at slave: MCAN11_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN11_MMR_MMRVBP_MCANSS_REGS_ID                                                (2169U)
+#define CSL_STD_FW_MCAN11_MMR_MMRVBP_MCANSS_REGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN11_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                          (0x0000004521e400U)
+#define CSL_STD_FW_MCAN11_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_MCAN11_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MCAN11_MMR_MMRVBP_MCANSS_REGS_SS_START                                          (0x000000027b0000U)
+#define CSL_STD_FW_MCAN11_MMR_MMRVBP_MCANSS_REGS_SS_END                                            (0x000000027b00ffU)
+
+/* Properties of firewall at slave: MCAN11_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN11_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                      (2169U)
+#define CSL_STD_FW_MCAN11_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN11_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                (0x0000004521e400U)
+#define CSL_STD_FW_MCAN11_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                             (4U)
+#define CSL_STD_FW_MCAN11_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCAN11_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                               (0x000000027b1000U)
+#define CSL_STD_FW_MCAN11_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                 (0x000000027b11ffU)
+
+/* Properties of firewall at slave: MCAN11_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                            (2169U)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                      (0x0000004521e400U)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                              (0x000000027b8000U)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                (0x000000027bffffU)
+
+/* Properties of firewall at slave: MCAN11_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                         (2169U)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                   (0x0000004521e400U)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                             (0x00000002a43000U)
+#define CSL_STD_FW_MCAN11_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                               (0x00000002a433ffU)
+
+/* Properties of firewall at slave: MCAN12_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN12_MMR_MMRVBP_MCANSS_REGS_ID                                                (2170U)
+#define CSL_STD_FW_MCAN12_MMR_MMRVBP_MCANSS_REGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN12_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                          (0x0000004521e800U)
+#define CSL_STD_FW_MCAN12_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_MCAN12_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MCAN12_MMR_MMRVBP_MCANSS_REGS_SS_START                                          (0x000000027c0000U)
+#define CSL_STD_FW_MCAN12_MMR_MMRVBP_MCANSS_REGS_SS_END                                            (0x000000027c00ffU)
+
+/* Properties of firewall at slave: MCAN12_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN12_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                      (2170U)
+#define CSL_STD_FW_MCAN12_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN12_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                (0x0000004521e800U)
+#define CSL_STD_FW_MCAN12_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                             (4U)
+#define CSL_STD_FW_MCAN12_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCAN12_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                               (0x000000027c1000U)
+#define CSL_STD_FW_MCAN12_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                 (0x000000027c11ffU)
+
+/* Properties of firewall at slave: MCAN12_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                            (2170U)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                      (0x0000004521e800U)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                              (0x000000027c8000U)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                (0x000000027cffffU)
+
+/* Properties of firewall at slave: MCAN12_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                         (2170U)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                   (0x0000004521e800U)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                             (0x00000002a44000U)
+#define CSL_STD_FW_MCAN12_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                               (0x00000002a443ffU)
+
+/* Properties of firewall at slave: MCAN13_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN13_MMR_MMRVBP_MCANSS_REGS_ID                                                (2171U)
+#define CSL_STD_FW_MCAN13_MMR_MMRVBP_MCANSS_REGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN13_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                          (0x0000004521ec00U)
+#define CSL_STD_FW_MCAN13_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_MCAN13_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MCAN13_MMR_MMRVBP_MCANSS_REGS_SS_START                                          (0x000000027d0000U)
+#define CSL_STD_FW_MCAN13_MMR_MMRVBP_MCANSS_REGS_SS_END                                            (0x000000027d00ffU)
+
+/* Properties of firewall at slave: MCAN13_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN13_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                      (2171U)
+#define CSL_STD_FW_MCAN13_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN13_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                (0x0000004521ec00U)
+#define CSL_STD_FW_MCAN13_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                             (4U)
+#define CSL_STD_FW_MCAN13_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCAN13_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                               (0x000000027d1000U)
+#define CSL_STD_FW_MCAN13_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                 (0x000000027d11ffU)
+
+/* Properties of firewall at slave: MCAN13_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                            (2171U)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                      (0x0000004521ec00U)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                              (0x000000027d8000U)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                (0x000000027dffffU)
+
+/* Properties of firewall at slave: MCAN13_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                         (2171U)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                   (0x0000004521ec00U)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                             (0x00000002a45000U)
+#define CSL_STD_FW_MCAN13_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                               (0x00000002a453ffU)
+
+/* Properties of firewall at slave: MCAN14_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN14_MMR_MMRVBP_MCANSS_REGS_ID                                                (2172U)
+#define CSL_STD_FW_MCAN14_MMR_MMRVBP_MCANSS_REGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN14_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                          (0x0000004521f000U)
+#define CSL_STD_FW_MCAN14_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_MCAN14_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MCAN14_MMR_MMRVBP_MCANSS_REGS_SS_START                                          (0x00000002680000U)
+#define CSL_STD_FW_MCAN14_MMR_MMRVBP_MCANSS_REGS_SS_END                                            (0x000000026800ffU)
+
+/* Properties of firewall at slave: MCAN14_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN14_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                      (2172U)
+#define CSL_STD_FW_MCAN14_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN14_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                (0x0000004521f000U)
+#define CSL_STD_FW_MCAN14_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                             (4U)
+#define CSL_STD_FW_MCAN14_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCAN14_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                               (0x00000002681000U)
+#define CSL_STD_FW_MCAN14_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                 (0x000000026811ffU)
+
+/* Properties of firewall at slave: MCAN14_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                            (2172U)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                      (0x0000004521f000U)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                              (0x00000002688000U)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                (0x0000000268ffffU)
+
+/* Properties of firewall at slave: MCAN14_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                         (2172U)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                   (0x0000004521f000U)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                             (0x00000002a46000U)
+#define CSL_STD_FW_MCAN14_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                               (0x00000002a463ffU)
+
+/* Properties of firewall at slave: MCAN15_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN15_MMR_MMRVBP_MCANSS_REGS_ID                                                (2173U)
+#define CSL_STD_FW_MCAN15_MMR_MMRVBP_MCANSS_REGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN15_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                          (0x0000004521f400U)
+#define CSL_STD_FW_MCAN15_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_MCAN15_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MCAN15_MMR_MMRVBP_MCANSS_REGS_SS_START                                          (0x00000002690000U)
+#define CSL_STD_FW_MCAN15_MMR_MMRVBP_MCANSS_REGS_SS_END                                            (0x000000026900ffU)
+
+/* Properties of firewall at slave: MCAN15_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN15_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                      (2173U)
+#define CSL_STD_FW_MCAN15_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN15_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                (0x0000004521f400U)
+#define CSL_STD_FW_MCAN15_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                             (4U)
+#define CSL_STD_FW_MCAN15_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCAN15_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                               (0x00000002691000U)
+#define CSL_STD_FW_MCAN15_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                 (0x000000026911ffU)
+
+/* Properties of firewall at slave: MCAN15_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                            (2173U)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                      (0x0000004521f400U)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                              (0x00000002698000U)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                (0x0000000269ffffU)
+
+/* Properties of firewall at slave: MCAN15_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                         (2173U)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                   (0x0000004521f400U)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                             (0x00000002a47000U)
+#define CSL_STD_FW_MCAN15_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                               (0x00000002a473ffU)
+
+/* Properties of firewall at slave: MCAN16_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN16_MMR_MMRVBP_MCANSS_REGS_ID                                                (2174U)
+#define CSL_STD_FW_MCAN16_MMR_MMRVBP_MCANSS_REGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN16_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                          (0x0000004521f800U)
+#define CSL_STD_FW_MCAN16_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_MCAN16_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MCAN16_MMR_MMRVBP_MCANSS_REGS_SS_START                                          (0x000000026a0000U)
+#define CSL_STD_FW_MCAN16_MMR_MMRVBP_MCANSS_REGS_SS_END                                            (0x000000026a00ffU)
+
+/* Properties of firewall at slave: MCAN16_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN16_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                      (2174U)
+#define CSL_STD_FW_MCAN16_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN16_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                (0x0000004521f800U)
+#define CSL_STD_FW_MCAN16_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                             (4U)
+#define CSL_STD_FW_MCAN16_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCAN16_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                               (0x000000026a1000U)
+#define CSL_STD_FW_MCAN16_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                 (0x000000026a11ffU)
+
+/* Properties of firewall at slave: MCAN16_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                            (2174U)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                      (0x0000004521f800U)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                              (0x000000026a8000U)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                (0x000000026affffU)
+
+/* Properties of firewall at slave: MCAN16_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                         (2174U)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                   (0x0000004521f800U)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                             (0x00000002a48000U)
+#define CSL_STD_FW_MCAN16_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                               (0x00000002a483ffU)
+
+/* Properties of firewall at slave: MCAN17_MMR_MMRVBP_MCANSS_REGS */
+#define CSL_STD_FW_MCAN17_MMR_MMRVBP_MCANSS_REGS_ID                                                (2175U)
+#define CSL_STD_FW_MCAN17_MMR_MMRVBP_MCANSS_REGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN17_MMR_MMRVBP_MCANSS_REGS_MMR_BASE                                          (0x0000004521fc00U)
+#define CSL_STD_FW_MCAN17_MMR_MMRVBP_MCANSS_REGS_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_MCAN17_MMR_MMRVBP_MCANSS_REGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MCAN17_MMR_MMRVBP_MCANSS_REGS_SS_START                                          (0x000000026b0000U)
+#define CSL_STD_FW_MCAN17_MMR_MMRVBP_MCANSS_REGS_SS_END                                            (0x000000026b00ffU)
+
+/* Properties of firewall at slave: MCAN17_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS */
+#define CSL_STD_FW_MCAN17_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_ID                                      (2175U)
+#define CSL_STD_FW_MCAN17_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN17_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_MMR_BASE                                (0x0000004521fc00U)
+#define CSL_STD_FW_MCAN17_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_REGIONS                             (4U)
+#define CSL_STD_FW_MCAN17_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCAN17_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_START                               (0x000000026b1000U)
+#define CSL_STD_FW_MCAN17_MCAN_WRAP_MCAN_CFG_VBP_MCAN_REGS_CFG_END                                 (0x000000026b11ffU)
+
+/* Properties of firewall at slave: MCAN17_MSGMEM_WRAP_MSGMEM_VBP_RAM */
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_MSGMEM_VBP_RAM_ID                                            (2175U)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_MSGMEM_VBP_RAM_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_MSGMEM_VBP_RAM_MMR_BASE                                      (0x0000004521fc00U)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_MSGMEM_VBP_RAM_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_START                              (0x000000026b8000U)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_MSGMEM_VBP_RAM_MSGMEM_RAM_END                                (0x000000026bffffU)
+
+/* Properties of firewall at slave: MCAN17_MSGMEM_WRAP_ECC_AGGR_VBP_REGS */
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ID                                         (2175U)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_MMR_BASE                                   (0x0000004521fc00U)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_START                             (0x00000002a49000U)
+#define CSL_STD_FW_MCAN17_MSGMEM_WRAP_ECC_AGGR_VBP_REGS_ECC_AGGR_END                               (0x00000002a493ffU)
+
+/* Properties of firewall at slave: MCASP0_CFG */
+#define CSL_STD_FW_MCASP0_CFG_ID                                                                   (2176U)
+#define CSL_STD_FW_MCASP0_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCASP0_CFG_MMR_BASE                                                             (0x00000045220000U)
+#define CSL_STD_FW_MCASP0_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCASP0_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCASP0_CFG_CFG_START                                                            (0x00000002b00000U)
+#define CSL_STD_FW_MCASP0_CFG_CFG_END                                                              (0x00000002b01fffU)
+
+/* Properties of firewall at slave: MCASP0_DMA */
+#define CSL_STD_FW_MCASP0_DMA_ID                                                                   (2177U)
+#define CSL_STD_FW_MCASP0_DMA_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCASP0_DMA_MMR_BASE                                                             (0x00000045220400U)
+#define CSL_STD_FW_MCASP0_DMA_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCASP0_DMA_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCASP0_DMA_DMA_START                                                            (0x00000002b08000U)
+#define CSL_STD_FW_MCASP0_DMA_DMA_END                                                              (0x00000002b083ffU)
+
+/* Properties of firewall at slave: MCASP1_CFG */
+#define CSL_STD_FW_MCASP1_CFG_ID                                                                   (2178U)
+#define CSL_STD_FW_MCASP1_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCASP1_CFG_MMR_BASE                                                             (0x00000045220800U)
+#define CSL_STD_FW_MCASP1_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCASP1_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCASP1_CFG_CFG_START                                                            (0x00000002b10000U)
+#define CSL_STD_FW_MCASP1_CFG_CFG_END                                                              (0x00000002b11fffU)
+
+/* Properties of firewall at slave: MCASP1_DMA */
+#define CSL_STD_FW_MCASP1_DMA_ID                                                                   (2179U)
+#define CSL_STD_FW_MCASP1_DMA_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCASP1_DMA_MMR_BASE                                                             (0x00000045220c00U)
+#define CSL_STD_FW_MCASP1_DMA_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCASP1_DMA_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCASP1_DMA_DMA_START                                                            (0x00000002b18000U)
+#define CSL_STD_FW_MCASP1_DMA_DMA_END                                                              (0x00000002b183ffU)
+
+/* Properties of firewall at slave: MCASP2_CFG */
+#define CSL_STD_FW_MCASP2_CFG_ID                                                                   (2180U)
+#define CSL_STD_FW_MCASP2_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCASP2_CFG_MMR_BASE                                                             (0x00000045221000U)
+#define CSL_STD_FW_MCASP2_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCASP2_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCASP2_CFG_CFG_START                                                            (0x00000002b20000U)
+#define CSL_STD_FW_MCASP2_CFG_CFG_END                                                              (0x00000002b21fffU)
+
+/* Properties of firewall at slave: MCASP3_CFG */
+#define CSL_STD_FW_MCASP3_CFG_ID                                                                   (2181U)
+#define CSL_STD_FW_MCASP3_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCASP3_CFG_MMR_BASE                                                             (0x00000045221400U)
+#define CSL_STD_FW_MCASP3_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCASP3_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCASP3_CFG_CFG_START                                                            (0x00000002b30000U)
+#define CSL_STD_FW_MCASP3_CFG_CFG_END                                                              (0x00000002b31fffU)
+
+/* Properties of firewall at slave: MCASP4_CFG */
+#define CSL_STD_FW_MCASP4_CFG_ID                                                                   (2182U)
+#define CSL_STD_FW_MCASP4_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCASP4_CFG_MMR_BASE                                                             (0x00000045221800U)
+#define CSL_STD_FW_MCASP4_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCASP4_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCASP4_CFG_CFG_START                                                            (0x00000002b40000U)
+#define CSL_STD_FW_MCASP4_CFG_CFG_END                                                              (0x00000002b41fffU)
+
+/* Properties of firewall at slave: MCASP2_DMA */
+#define CSL_STD_FW_MCASP2_DMA_ID                                                                   (2183U)
+#define CSL_STD_FW_MCASP2_DMA_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCASP2_DMA_MMR_BASE                                                             (0x00000045221c00U)
+#define CSL_STD_FW_MCASP2_DMA_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCASP2_DMA_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCASP2_DMA_DMA_START                                                            (0x00000002b28000U)
+#define CSL_STD_FW_MCASP2_DMA_DMA_END                                                              (0x00000002b283ffU)
+
+/* Properties of firewall at slave: MCASP3_DMA */
+#define CSL_STD_FW_MCASP3_DMA_ID                                                                   (2184U)
+#define CSL_STD_FW_MCASP3_DMA_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCASP3_DMA_MMR_BASE                                                             (0x00000045222000U)
+#define CSL_STD_FW_MCASP3_DMA_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCASP3_DMA_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCASP3_DMA_DMA_START                                                            (0x00000002b38000U)
+#define CSL_STD_FW_MCASP3_DMA_DMA_END                                                              (0x00000002b383ffU)
+
+/* Properties of firewall at slave: MCASP4_DMA */
+#define CSL_STD_FW_MCASP4_DMA_ID                                                                   (2185U)
+#define CSL_STD_FW_MCASP4_DMA_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCASP4_DMA_MMR_BASE                                                             (0x00000045222400U)
+#define CSL_STD_FW_MCASP4_DMA_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCASP4_DMA_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCASP4_DMA_DMA_START                                                            (0x00000002b48000U)
+#define CSL_STD_FW_MCASP4_DMA_DMA_END                                                              (0x00000002b483ffU)
+
+/* Properties of firewall at slave: I2C4_CFG */
+#define CSL_STD_FW_I2C4_CFG_ID                                                                     (2204U)
+#define CSL_STD_FW_I2C4_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_I2C4_CFG_MMR_BASE                                                               (0x00000045227000U)
+#define CSL_STD_FW_I2C4_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_I2C4_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_I2C4_CFG_CFG_START                                                              (0x00000002040000U)
+#define CSL_STD_FW_I2C4_CFG_CFG_END                                                                (0x000000020400ffU)
+
+/* Properties of firewall at slave: I2C5_CFG */
+#define CSL_STD_FW_I2C5_CFG_ID                                                                     (2205U)
+#define CSL_STD_FW_I2C5_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_I2C5_CFG_MMR_BASE                                                               (0x00000045227400U)
+#define CSL_STD_FW_I2C5_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_I2C5_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_I2C5_CFG_CFG_START                                                              (0x00000002050000U)
+#define CSL_STD_FW_I2C5_CFG_CFG_END                                                                (0x000000020500ffU)
+
+/* Properties of firewall at slave: I2C6_CFG */
+#define CSL_STD_FW_I2C6_CFG_ID                                                                     (2206U)
+#define CSL_STD_FW_I2C6_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_I2C6_CFG_MMR_BASE                                                               (0x00000045227800U)
+#define CSL_STD_FW_I2C6_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_I2C6_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_I2C6_CFG_CFG_START                                                              (0x00000002060000U)
+#define CSL_STD_FW_I2C6_CFG_CFG_END                                                                (0x000000020600ffU)
+
+/* Properties of firewall at slave: ATL0_REG */
+#define CSL_STD_FW_ATL0_REG_ID                                                                     (2208U)
+#define CSL_STD_FW_ATL0_REG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_ATL0_REG_MMR_BASE                                                               (0x00000045228000U)
+#define CSL_STD_FW_ATL0_REG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_ATL0_REG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_ATL0_REG_REG_START                                                              (0x000000031f0000U)
+#define CSL_STD_FW_ATL0_REG_REG_END                                                                (0x000000031f03ffU)
+
+/* Properties of firewall at slave: RTI0_CFG */
+#define CSL_STD_FW_RTI0_CFG_ID                                                                     (2214U)
+#define CSL_STD_FW_RTI0_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_RTI0_CFG_MMR_BASE                                                               (0x00000045229800U)
+#define CSL_STD_FW_RTI0_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_RTI0_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_RTI0_CFG_CFG_START                                                              (0x00000002200000U)
+#define CSL_STD_FW_RTI0_CFG_CFG_END                                                                (0x000000022000ffU)
+
+/* Properties of firewall at slave: RTI1_CFG */
+#define CSL_STD_FW_RTI1_CFG_ID                                                                     (2215U)
+#define CSL_STD_FW_RTI1_CFG_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_RTI1_CFG_MMR_BASE                                                               (0x00000045229c00U)
+#define CSL_STD_FW_RTI1_CFG_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_RTI1_CFG_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_RTI1_CFG_CFG_START                                                              (0x00000002210000U)
+#define CSL_STD_FW_RTI1_CFG_CFG_END                                                                (0x000000022100ffU)
+
+/* Properties of firewall at slave: RTI16_CFG */
+#define CSL_STD_FW_RTI16_CFG_ID                                                                    (2219U)
+#define CSL_STD_FW_RTI16_CFG_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_RTI16_CFG_MMR_BASE                                                              (0x0000004522ac00U)
+#define CSL_STD_FW_RTI16_CFG_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_RTI16_CFG_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_RTI16_CFG_CFG_START                                                             (0x00000002300000U)
+#define CSL_STD_FW_RTI16_CFG_CFG_END                                                               (0x000000023000ffU)
+
+/* Properties of firewall at slave: RTI17_CFG */
+#define CSL_STD_FW_RTI17_CFG_ID                                                                    (2220U)
+#define CSL_STD_FW_RTI17_CFG_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_RTI17_CFG_MMR_BASE                                                              (0x0000004522b000U)
+#define CSL_STD_FW_RTI17_CFG_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_RTI17_CFG_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_RTI17_CFG_CFG_START                                                             (0x00000002310000U)
+#define CSL_STD_FW_RTI17_CFG_CFG_END                                                               (0x000000023100ffU)
+
+/* Properties of firewall at slave: PDMA6_REGS */
+#define CSL_STD_FW_PDMA6_REGS_ID                                                                   (2231U)
+#define CSL_STD_FW_PDMA6_REGS_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_PDMA6_REGS_MMR_BASE                                                             (0x0000004522dc00U)
+#define CSL_STD_FW_PDMA6_REGS_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_PDMA6_REGS_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_PDMA6_REGS_REGS_START                                                           (0x000000027e1000U)
+#define CSL_STD_FW_PDMA6_REGS_REGS_END                                                             (0x000000027e13ffU)
+
+/* Properties of firewall at slave: PDMA7_REGS */
+#define CSL_STD_FW_PDMA7_REGS_ID                                                                   (2232U)
+#define CSL_STD_FW_PDMA7_REGS_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_PDMA7_REGS_MMR_BASE                                                             (0x0000004522e000U)
+#define CSL_STD_FW_PDMA7_REGS_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_PDMA7_REGS_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_PDMA7_REGS_REGS_START                                                           (0x000000027e2000U)
+#define CSL_STD_FW_PDMA7_REGS_REGS_END                                                             (0x000000027e23ffU)
+
+/* Properties of firewall at slave: MAIN_USART_PSILSS0_MMRS */
+#define CSL_STD_FW_MAIN_USART_PSILSS0_MMRS_ID                                                      (2236U)
+#define CSL_STD_FW_MAIN_USART_PSILSS0_MMRS_TYPE                                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MAIN_USART_PSILSS0_MMRS_MMR_BASE                                                (0x0000004522f000U)
+#define CSL_STD_FW_MAIN_USART_PSILSS0_MMRS_NUM_REGIONS                                             (1U)
+#define CSL_STD_FW_MAIN_USART_PSILSS0_MMRS_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_STD_FW_MAIN_USART_PSILSS0_MMRS_MMRS_START                                              (0x00000003400000U)
+#define CSL_STD_FW_MAIN_USART_PSILSS0_MMRS_MMRS_END                                                (0x00000003400fffU)
+
+/* Properties of firewall at slave: TIMER0_CFG */
+#define CSL_STD_FW_TIMER0_CFG_ID                                                                   (2240U)
+#define CSL_STD_FW_TIMER0_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER0_CFG_MMR_BASE                                                             (0x00000045230000U)
+#define CSL_STD_FW_TIMER0_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_TIMER0_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_TIMER0_CFG_CFG_START                                                            (0x00000002400000U)
+#define CSL_STD_FW_TIMER0_CFG_CFG_END                                                              (0x000000024003ffU)
+
+/* Properties of firewall at slave: TIMER1_CFG */
+#define CSL_STD_FW_TIMER1_CFG_ID                                                                   (2241U)
+#define CSL_STD_FW_TIMER1_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER1_CFG_MMR_BASE                                                             (0x00000045230400U)
+#define CSL_STD_FW_TIMER1_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_TIMER1_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_TIMER1_CFG_CFG_START                                                            (0x00000002410000U)
+#define CSL_STD_FW_TIMER1_CFG_CFG_END                                                              (0x000000024103ffU)
+
+/* Properties of firewall at slave: TIMER2_CFG */
+#define CSL_STD_FW_TIMER2_CFG_ID                                                                   (2242U)
+#define CSL_STD_FW_TIMER2_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER2_CFG_MMR_BASE                                                             (0x00000045230800U)
+#define CSL_STD_FW_TIMER2_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_TIMER2_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_TIMER2_CFG_CFG_START                                                            (0x00000002420000U)
+#define CSL_STD_FW_TIMER2_CFG_CFG_END                                                              (0x000000024203ffU)
+
+/* Properties of firewall at slave: TIMER3_CFG */
+#define CSL_STD_FW_TIMER3_CFG_ID                                                                   (2243U)
+#define CSL_STD_FW_TIMER3_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER3_CFG_MMR_BASE                                                             (0x00000045230c00U)
+#define CSL_STD_FW_TIMER3_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_TIMER3_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_TIMER3_CFG_CFG_START                                                            (0x00000002430000U)
+#define CSL_STD_FW_TIMER3_CFG_CFG_END                                                              (0x000000024303ffU)
+
+/* Properties of firewall at slave: TIMER8_CFG */
+#define CSL_STD_FW_TIMER8_CFG_ID                                                                   (2248U)
+#define CSL_STD_FW_TIMER8_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER8_CFG_MMR_BASE                                                             (0x00000045232000U)
+#define CSL_STD_FW_TIMER8_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_TIMER8_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_TIMER8_CFG_CFG_START                                                            (0x00000002480000U)
+#define CSL_STD_FW_TIMER8_CFG_CFG_END                                                              (0x000000024803ffU)
+
+/* Properties of firewall at slave: TIMER9_CFG */
+#define CSL_STD_FW_TIMER9_CFG_ID                                                                   (2249U)
+#define CSL_STD_FW_TIMER9_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER9_CFG_MMR_BASE                                                             (0x00000045232400U)
+#define CSL_STD_FW_TIMER9_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_TIMER9_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_TIMER9_CFG_CFG_START                                                            (0x00000002490000U)
+#define CSL_STD_FW_TIMER9_CFG_CFG_END                                                              (0x000000024903ffU)
+
+/* Properties of firewall at slave: TIMER10_CFG */
+#define CSL_STD_FW_TIMER10_CFG_ID                                                                  (2250U)
+#define CSL_STD_FW_TIMER10_CFG_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER10_CFG_MMR_BASE                                                            (0x00000045232800U)
+#define CSL_STD_FW_TIMER10_CFG_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_TIMER10_CFG_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_TIMER10_CFG_CFG_START                                                           (0x000000024a0000U)
+#define CSL_STD_FW_TIMER10_CFG_CFG_END                                                             (0x000000024a03ffU)
+
+/* Properties of firewall at slave: TIMER11_CFG */
+#define CSL_STD_FW_TIMER11_CFG_ID                                                                  (2251U)
+#define CSL_STD_FW_TIMER11_CFG_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER11_CFG_MMR_BASE                                                            (0x00000045232c00U)
+#define CSL_STD_FW_TIMER11_CFG_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_TIMER11_CFG_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_TIMER11_CFG_CFG_START                                                           (0x000000024b0000U)
+#define CSL_STD_FW_TIMER11_CFG_CFG_END                                                             (0x000000024b03ffU)
+
+/* Properties of firewall at slave: TIMER12_CFG */
+#define CSL_STD_FW_TIMER12_CFG_ID                                                                  (2252U)
+#define CSL_STD_FW_TIMER12_CFG_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER12_CFG_MMR_BASE                                                            (0x00000045233000U)
+#define CSL_STD_FW_TIMER12_CFG_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_TIMER12_CFG_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_TIMER12_CFG_CFG_START                                                           (0x000000024c0000U)
+#define CSL_STD_FW_TIMER12_CFG_CFG_END                                                             (0x000000024c03ffU)
+
+/* Properties of firewall at slave: TIMER13_CFG */
+#define CSL_STD_FW_TIMER13_CFG_ID                                                                  (2253U)
+#define CSL_STD_FW_TIMER13_CFG_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER13_CFG_MMR_BASE                                                            (0x00000045233400U)
+#define CSL_STD_FW_TIMER13_CFG_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_TIMER13_CFG_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_TIMER13_CFG_CFG_START                                                           (0x000000024d0000U)
+#define CSL_STD_FW_TIMER13_CFG_CFG_END                                                             (0x000000024d03ffU)
+
+/* Properties of firewall at slave: TIMER14_CFG */
+#define CSL_STD_FW_TIMER14_CFG_ID                                                                  (2254U)
+#define CSL_STD_FW_TIMER14_CFG_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER14_CFG_MMR_BASE                                                            (0x00000045233800U)
+#define CSL_STD_FW_TIMER14_CFG_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_TIMER14_CFG_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_TIMER14_CFG_CFG_START                                                           (0x000000024e0000U)
+#define CSL_STD_FW_TIMER14_CFG_CFG_END                                                             (0x000000024e03ffU)
+
+/* Properties of firewall at slave: TIMER15_CFG */
+#define CSL_STD_FW_TIMER15_CFG_ID                                                                  (2255U)
+#define CSL_STD_FW_TIMER15_CFG_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER15_CFG_MMR_BASE                                                            (0x00000045233c00U)
+#define CSL_STD_FW_TIMER15_CFG_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_TIMER15_CFG_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_TIMER15_CFG_CFG_START                                                           (0x000000024f0000U)
+#define CSL_STD_FW_TIMER15_CFG_CFG_END                                                             (0x000000024f03ffU)
+
+/* Properties of firewall at slave: TIMER16_CFG */
+#define CSL_STD_FW_TIMER16_CFG_ID                                                                  (2256U)
+#define CSL_STD_FW_TIMER16_CFG_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER16_CFG_MMR_BASE                                                            (0x00000045234000U)
+#define CSL_STD_FW_TIMER16_CFG_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_TIMER16_CFG_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_TIMER16_CFG_CFG_START                                                           (0x00000002500000U)
+#define CSL_STD_FW_TIMER16_CFG_CFG_END                                                             (0x000000025003ffU)
+
+/* Properties of firewall at slave: TIMER17_CFG */
+#define CSL_STD_FW_TIMER17_CFG_ID                                                                  (2257U)
+#define CSL_STD_FW_TIMER17_CFG_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER17_CFG_MMR_BASE                                                            (0x00000045234400U)
+#define CSL_STD_FW_TIMER17_CFG_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_TIMER17_CFG_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_TIMER17_CFG_CFG_START                                                           (0x00000002510000U)
+#define CSL_STD_FW_TIMER17_CFG_CFG_END                                                             (0x000000025103ffU)
+
+/* Properties of firewall at slave: TIMER18_CFG */
+#define CSL_STD_FW_TIMER18_CFG_ID                                                                  (2258U)
+#define CSL_STD_FW_TIMER18_CFG_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER18_CFG_MMR_BASE                                                            (0x00000045234800U)
+#define CSL_STD_FW_TIMER18_CFG_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_TIMER18_CFG_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_TIMER18_CFG_CFG_START                                                           (0x00000002520000U)
+#define CSL_STD_FW_TIMER18_CFG_CFG_END                                                             (0x000000025203ffU)
+
+/* Properties of firewall at slave: TIMER19_CFG */
+#define CSL_STD_FW_TIMER19_CFG_ID                                                                  (2259U)
+#define CSL_STD_FW_TIMER19_CFG_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_TIMER19_CFG_MMR_BASE                                                            (0x00000045234c00U)
+#define CSL_STD_FW_TIMER19_CFG_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_TIMER19_CFG_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_TIMER19_CFG_CFG_START                                                           (0x00000002530000U)
+#define CSL_STD_FW_TIMER19_CFG_CFG_END                                                             (0x000000025303ffU)
+
+/* Properties of firewall at slave: MCSPI4_CFG */
+#define CSL_STD_FW_MCSPI4_CFG_ID                                                                   (2268U)
+#define CSL_STD_FW_MCSPI4_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCSPI4_CFG_MMR_BASE                                                             (0x00000045237000U)
+#define CSL_STD_FW_MCSPI4_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCSPI4_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCSPI4_CFG_CFG_START                                                            (0x00000002140000U)
+#define CSL_STD_FW_MCSPI4_CFG_CFG_END                                                              (0x000000021403ffU)
+
+/* Properties of firewall at slave: MCSPI5_CFG */
+#define CSL_STD_FW_MCSPI5_CFG_ID                                                                   (2269U)
+#define CSL_STD_FW_MCSPI5_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCSPI5_CFG_MMR_BASE                                                             (0x00000045237400U)
+#define CSL_STD_FW_MCSPI5_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCSPI5_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCSPI5_CFG_CFG_START                                                            (0x00000002150000U)
+#define CSL_STD_FW_MCSPI5_CFG_CFG_END                                                              (0x000000021503ffU)
+
+/* Properties of firewall at slave: MCSPI6_CFG */
+#define CSL_STD_FW_MCSPI6_CFG_ID                                                                   (2270U)
+#define CSL_STD_FW_MCSPI6_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCSPI6_CFG_MMR_BASE                                                             (0x00000045237800U)
+#define CSL_STD_FW_MCSPI6_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCSPI6_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCSPI6_CFG_CFG_START                                                            (0x00000002160000U)
+#define CSL_STD_FW_MCSPI6_CFG_CFG_END                                                              (0x000000021603ffU)
+
+/* Properties of firewall at slave: MCSPI7_CFG */
+#define CSL_STD_FW_MCSPI7_CFG_ID                                                                   (2271U)
+#define CSL_STD_FW_MCSPI7_CFG_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCSPI7_CFG_MMR_BASE                                                             (0x00000045237c00U)
+#define CSL_STD_FW_MCSPI7_CFG_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_MCSPI7_CFG_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_MCSPI7_CFG_CFG_START                                                            (0x00000002170000U)
+#define CSL_STD_FW_MCSPI7_CFG_CFG_END                                                              (0x000000021703ffU)
+
+/* Properties of firewall at slave: UART2_MEM */
+#define CSL_STD_FW_UART2_MEM_ID                                                                    (2278U)
+#define CSL_STD_FW_UART2_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_UART2_MEM_MMR_BASE                                                              (0x00000045239800U)
+#define CSL_STD_FW_UART2_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_UART2_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_UART2_MEM_START                                                                 (0x00000002820000U)
+#define CSL_STD_FW_UART2_MEM_END                                                                   (0x000000028201ffU)
+
+/* Properties of firewall at slave: UART3_MEM */
+#define CSL_STD_FW_UART3_MEM_ID                                                                    (2279U)
+#define CSL_STD_FW_UART3_MEM_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_UART3_MEM_MMR_BASE                                                              (0x00000045239c00U)
+#define CSL_STD_FW_UART3_MEM_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_UART3_MEM_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_UART3_MEM_START                                                                 (0x00000002830000U)
+#define CSL_STD_FW_UART3_MEM_END                                                                   (0x000000028301ffU)
+
+/* Properties of firewall at slave: CBASS_IPPHY0_ERR_REGS */
+#define CSL_STD_FW_CBASS_IPPHY0_ERR_REGS_ID                                                        (2300U)
+#define CSL_STD_FW_CBASS_IPPHY0_ERR_REGS_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_IPPHY0_ERR_REGS_MMR_BASE                                                  (0x0000004523f000U)
+#define CSL_STD_FW_CBASS_IPPHY0_ERR_REGS_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_CBASS_IPPHY0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_CBASS_IPPHY0_ERR_REGS_ERR_START                                                 (0x00000002a8f000U)
+#define CSL_STD_FW_CBASS_IPPHY0_ERR_REGS_ERR_END                                                   (0x00000002a8f3ffU)
+
+/* Properties of firewall at slave: CBASS_IPPHY_SAFE0_ERR_REGS */
+#define CSL_STD_FW_CBASS_IPPHY_SAFE0_ERR_REGS_ID                                                   (2301U)
+#define CSL_STD_FW_CBASS_IPPHY_SAFE0_ERR_REGS_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_IPPHY_SAFE0_ERR_REGS_MMR_BASE                                             (0x0000004523f400U)
+#define CSL_STD_FW_CBASS_IPPHY_SAFE0_ERR_REGS_NUM_REGIONS                                          (1U)
+#define CSL_STD_FW_CBASS_IPPHY_SAFE0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_CBASS_IPPHY_SAFE0_ERR_REGS_ERR_START                                            (0x00000002a94000U)
+#define CSL_STD_FW_CBASS_IPPHY_SAFE0_ERR_REGS_ERR_END                                              (0x00000002a943ffU)
+
+/* Properties of firewall at slave: GPMC0_CFG */
+#define CSL_STD_FW_GPMC0_CFG_ID                                                                    (2304U)
+#define CSL_STD_FW_GPMC0_CFG_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_GPMC0_CFG_MMR_BASE                                                              (0x00000045240000U)
+#define CSL_STD_FW_GPMC0_CFG_NUM_REGIONS                                                           (8U)
+#define CSL_STD_FW_GPMC0_CFG_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_GPMC0_CFG_CFG_START                                                             (0x00000005390000U)
+#define CSL_STD_FW_GPMC0_CFG_CFG_END                                                               (0x000000053903ffU)
+
+/* Properties of firewall at slave: GPMC0_DATA */
+#define CSL_STD_FW_GPMC0_DATA_ID                                                                   (2304U)
+#define CSL_STD_FW_GPMC0_DATA_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_GPMC0_DATA_MMR_BASE                                                             (0x00000045240000U)
+#define CSL_STD_FW_GPMC0_DATA_NUM_REGIONS                                                          (8U)
+#define CSL_STD_FW_GPMC0_DATA_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_GPMC0_DATA_DATA_START                                                           (0x00000020000000U)
+#define CSL_STD_FW_GPMC0_DATA_DATA_END                                                             (0x00000027ffffffU)
+
+/* Properties of firewall at slave: EFUSE0_MEM */
+#define CSL_STD_FW_EFUSE0_MEM_ID                                                                   (2308U)
+#define CSL_STD_FW_EFUSE0_MEM_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_EFUSE0_MEM_MMR_BASE                                                             (0x00000045241000U)
+#define CSL_STD_FW_EFUSE0_MEM_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_EFUSE0_MEM_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_EFUSE0_MEM_START                                                                (0x000000053f0000U)
+#define CSL_STD_FW_EFUSE0_MEM_END                                                                  (0x000000053f00ffU)
+
+/* Properties of firewall at slave: CPSW1_CPSW_NUSS_VBUSP_ECC */
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_ECC_ID                                                    (2309U)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_ECC_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_ECC_MMR_BASE                                              (0x00000045241400U)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_ECC_NUM_REGIONS                                           (2U)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_ECC_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_ECC_ECC_START                                             (0x00000002a22000U)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_ECC_ECC_END                                               (0x00000002a223ffU)
+
+/* Properties of firewall at slave: CPSW1_CPSW_NUSS_VBUSP */
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_ID                                                        (2309U)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_MMR_BASE                                                  (0x00000045241400U)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_NUM_REGIONS                                               (2U)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_NUSS_START                                                (0x0000000c200000U)
+#define CSL_STD_FW_CPSW1_CPSW_NUSS_VBUSP_NUSS_END                                                  (0x0000000c3fffffU)
+
+/* Properties of firewall at slave: NAVSS0_NBSS_0_NBSS_CFG_REGS0_CFG_MMRS */
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_REGS0_CFG_MMRS_ID                                        (2311U)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_REGS0_CFG_MMRS_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_REGS0_CFG_MMRS_MMR_BASE                                  (0x00000045241c00U)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_REGS0_CFG_MMRS_NUM_REGIONS                               (5U)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_REGS0_CFG_MMRS_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_REGS0_CFG_MMRS_NBSS_CFG_REGS0_MMRS_START                 (0x00000003700000U)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_REGS0_CFG_MMRS_NBSS_CFG_REGS0_MMRS_END                   (0x000000037000ffU)
+
+/* Properties of firewall at slave: NAVSS0_NBSS_ECC_AGGR_0_NBSS_CFG_ECCAGGR0_REGS */
+#define CSL_STD_FW_NAVSS0_NBSS_ECC_AGGR_0_NBSS_CFG_ECCAGGR0_REGS_ID                                (2311U)
+#define CSL_STD_FW_NAVSS0_NBSS_ECC_AGGR_0_NBSS_CFG_ECCAGGR0_REGS_TYPE                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_NBSS_ECC_AGGR_0_NBSS_CFG_ECCAGGR0_REGS_MMR_BASE                          (0x00000045241c00U)
+#define CSL_STD_FW_NAVSS0_NBSS_ECC_AGGR_0_NBSS_CFG_ECCAGGR0_REGS_NUM_REGIONS                       (5U)
+#define CSL_STD_FW_NAVSS0_NBSS_ECC_AGGR_0_NBSS_CFG_ECCAGGR0_REGS_NUM_PRIV_IDS_PER_REGION           (3U)
+#define CSL_STD_FW_NAVSS0_NBSS_ECC_AGGR_0_NBSS_CFG_ECCAGGR0_REGS_NBSS_CFG_ECCAGGR0_REGS_START      (0x00000003701000U)
+#define CSL_STD_FW_NAVSS0_NBSS_ECC_AGGR_0_NBSS_CFG_ECCAGGR0_REGS_NBSS_CFG_ECCAGGR0_REGS_END        (0x000000037013ffU)
+
+/* Properties of firewall at slave: NAVSS0_NORTH_0_NBSS_CFG_NB0_CFG_CFG_CFG_MMRS */
+#define CSL_STD_FW_NAVSS0_NORTH_0_NBSS_CFG_NB0_CFG_CFG_CFG_MMRS_ID                                 (2311U)
+#define CSL_STD_FW_NAVSS0_NORTH_0_NBSS_CFG_NB0_CFG_CFG_CFG_MMRS_TYPE                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_NORTH_0_NBSS_CFG_NB0_CFG_CFG_CFG_MMRS_MMR_BASE                           (0x00000045241c00U)
+#define CSL_STD_FW_NAVSS0_NORTH_0_NBSS_CFG_NB0_CFG_CFG_CFG_MMRS_NUM_REGIONS                        (5U)
+#define CSL_STD_FW_NAVSS0_NORTH_0_NBSS_CFG_NB0_CFG_CFG_CFG_MMRS_NUM_PRIV_IDS_PER_REGION            (3U)
+#define CSL_STD_FW_NAVSS0_NORTH_0_NBSS_CFG_NB0_CFG_CFG_CFG_MMRS_NBSS_NB0_CFG_MMRS_START            (0x00000003702000U)
+#define CSL_STD_FW_NAVSS0_NORTH_0_NBSS_CFG_NB0_CFG_CFG_CFG_MMRS_NBSS_NB0_CFG_MMRS_END              (0x000000037020ffU)
+
+/* Properties of firewall at slave: NAVSS0_NORTH_1_NBSS_CFG_NB1_CFG_CFG_CFG_MMRS */
+#define CSL_STD_FW_NAVSS0_NORTH_1_NBSS_CFG_NB1_CFG_CFG_CFG_MMRS_ID                                 (2311U)
+#define CSL_STD_FW_NAVSS0_NORTH_1_NBSS_CFG_NB1_CFG_CFG_CFG_MMRS_TYPE                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_NORTH_1_NBSS_CFG_NB1_CFG_CFG_CFG_MMRS_MMR_BASE                           (0x00000045241c00U)
+#define CSL_STD_FW_NAVSS0_NORTH_1_NBSS_CFG_NB1_CFG_CFG_CFG_MMRS_NUM_REGIONS                        (5U)
+#define CSL_STD_FW_NAVSS0_NORTH_1_NBSS_CFG_NB1_CFG_CFG_CFG_MMRS_NUM_PRIV_IDS_PER_REGION            (3U)
+#define CSL_STD_FW_NAVSS0_NORTH_1_NBSS_CFG_NB1_CFG_CFG_CFG_MMRS_NBSS_NB1_CFG_MMRS_START            (0x00000003703000U)
+#define CSL_STD_FW_NAVSS0_NORTH_1_NBSS_CFG_NB1_CFG_CFG_CFG_MMRS_NBSS_NB1_CFG_MMRS_END              (0x000000037030ffU)
+
+/* Properties of firewall at slave: NAVSS0_NBSS_0_NBSS_CFG_MSMC0_SLV_VIRTID_CFG_MMRS */
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_MSMC0_SLV_VIRTID_CFG_MMRS_ID                             (2311U)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_MSMC0_SLV_VIRTID_CFG_MMRS_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_MSMC0_SLV_VIRTID_CFG_MMRS_MMR_BASE                       (0x00000045241c00U)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_MSMC0_SLV_VIRTID_CFG_MMRS_NUM_REGIONS                    (5U)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_MSMC0_SLV_VIRTID_CFG_MMRS_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_MSMC0_SLV_VIRTID_CFG_MMRS_NBSS_CFG_MSMC0_SLV_VIRTID_CFG_MMRS_START (0x00000003710000U)
+#define CSL_STD_FW_NAVSS0_NBSS_0_NBSS_CFG_MSMC0_SLV_VIRTID_CFG_MMRS_NBSS_CFG_MSMC0_SLV_VIRTID_CFG_MMRS_END (0x000000037100ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_TRANSLATER */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_TRANSLATER_ID                                     (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_TRANSLATER_TYPE                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_TRANSLATER_MMR_BASE                               (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_TRANSLATER_NUM_REGIONS                            (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_TRANSLATER_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_TRANSLATER_GIC_TRANSLATER_START                   (0x00000001000000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_TRANSLATER_GIC_TRANSLATER_END                     (0x000000013fffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_DISTRIBUTOR */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_DISTRIBUTOR_ID                                    (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_DISTRIBUTOR_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_DISTRIBUTOR_MMR_BASE                              (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_DISTRIBUTOR_NUM_REGIONS                           (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_DISTRIBUTOR_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_DISTRIBUTOR_GIC_DISTRIBUTOR_START                 (0x00000001800000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_DISTRIBUTOR_GIC_DISTRIBUTOR_END                   (0x0000000180ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_MESSAGE_BASED_SPIS */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_MESSAGE_BASED_SPIS_ID                             (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_MESSAGE_BASED_SPIS_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_MESSAGE_BASED_SPIS_MMR_BASE                       (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_MESSAGE_BASED_SPIS_NUM_REGIONS                    (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_MESSAGE_BASED_SPIS_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_MESSAGE_BASED_SPIS_GIC_MESSAGE_BASED_SPIS_START   (0x00000001810000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_MESSAGE_BASED_SPIS_GIC_MESSAGE_BASED_SPIS_END     (0x0000000181ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_ITS */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_ITS_ID                                            (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_ITS_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_ITS_MMR_BASE                                      (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_ITS_NUM_REGIONS                                   (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_ITS_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_ITS_GIC_ITS_START                                 (0x00000001820000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_ITS_GIC_ITS_END                                   (0x0000000182ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_0 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_0_ID                    (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_0_TYPE                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_0_MMR_BASE              (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_0_NUM_REGIONS           (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_0_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_0_GIC_REDISTRIBUTOR_CONTROL_LPI_0_START (0x00000001900000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_0_GIC_REDISTRIBUTOR_CONTROL_LPI_0_END (0x0000000190ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_0 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_0_ID                        (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_0_TYPE                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_0_MMR_BASE                  (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_0_NUM_REGIONS               (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_0_NUM_PRIV_IDS_PER_REGION   (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_0_GIC_REDISTRIBUTOR_SGI_PPI_0_START (0x00000001910000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_0_GIC_REDISTRIBUTOR_SGI_PPI_0_END (0x0000000191ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_1 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_1_ID                    (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_1_TYPE                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_1_MMR_BASE              (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_1_NUM_REGIONS           (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_1_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_1_GIC_REDISTRIBUTOR_CONTROL_LPI_1_START (0x00000001920000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_1_GIC_REDISTRIBUTOR_CONTROL_LPI_1_END (0x0000000192ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_1 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_1_ID                        (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_1_TYPE                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_1_MMR_BASE                  (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_1_NUM_REGIONS               (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_1_NUM_PRIV_IDS_PER_REGION   (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_1_GIC_REDISTRIBUTOR_SGI_PPI_1_START (0x00000001930000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_1_GIC_REDISTRIBUTOR_SGI_PPI_1_END (0x0000000193ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_2 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_2_ID                    (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_2_TYPE                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_2_MMR_BASE              (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_2_NUM_REGIONS           (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_2_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_2_GIC_REDISTRIBUTOR_CONTROL_LPI_2_START (0x00000001940000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_2_GIC_REDISTRIBUTOR_CONTROL_LPI_2_END (0x0000000194ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_2 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_2_ID                        (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_2_TYPE                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_2_MMR_BASE                  (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_2_NUM_REGIONS               (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_2_NUM_PRIV_IDS_PER_REGION   (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_2_GIC_REDISTRIBUTOR_SGI_PPI_2_START (0x00000001950000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_2_GIC_REDISTRIBUTOR_SGI_PPI_2_END (0x0000000195ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_3 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_3_ID                    (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_3_TYPE                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_3_MMR_BASE              (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_3_NUM_REGIONS           (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_3_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_3_GIC_REDISTRIBUTOR_CONTROL_LPI_3_START (0x00000001960000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_3_GIC_REDISTRIBUTOR_CONTROL_LPI_3_END (0x0000000196ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_3 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_3_ID                        (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_3_TYPE                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_3_MMR_BASE                  (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_3_NUM_REGIONS               (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_3_NUM_PRIV_IDS_PER_REGION   (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_3_GIC_REDISTRIBUTOR_SGI_PPI_3_START (0x00000001970000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_3_GIC_REDISTRIBUTOR_SGI_PPI_3_END (0x0000000197ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_4 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_4_ID                    (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_4_TYPE                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_4_MMR_BASE              (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_4_NUM_REGIONS           (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_4_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_4_GIC_REDISTRIBUTOR_CONTROL_LPI_4_START (0x00000001980000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_4_GIC_REDISTRIBUTOR_CONTROL_LPI_4_END (0x0000000198ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_4 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_4_ID                        (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_4_TYPE                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_4_MMR_BASE                  (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_4_NUM_REGIONS               (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_4_NUM_PRIV_IDS_PER_REGION   (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_4_GIC_REDISTRIBUTOR_SGI_PPI_4_START (0x00000001990000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_4_GIC_REDISTRIBUTOR_SGI_PPI_4_END (0x0000000199ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_5 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_5_ID                    (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_5_TYPE                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_5_MMR_BASE              (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_5_NUM_REGIONS           (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_5_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_5_GIC_REDISTRIBUTOR_CONTROL_LPI_5_START (0x000000019a0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_5_GIC_REDISTRIBUTOR_CONTROL_LPI_5_END (0x000000019affffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_5 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_5_ID                        (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_5_TYPE                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_5_MMR_BASE                  (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_5_NUM_REGIONS               (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_5_NUM_PRIV_IDS_PER_REGION   (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_5_GIC_REDISTRIBUTOR_SGI_PPI_5_START (0x000000019b0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_5_GIC_REDISTRIBUTOR_SGI_PPI_5_END (0x000000019bffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_6 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_6_ID                    (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_6_TYPE                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_6_MMR_BASE              (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_6_NUM_REGIONS           (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_6_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_6_GIC_REDISTRIBUTOR_CONTROL_LPI_6_START (0x000000019c0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_6_GIC_REDISTRIBUTOR_CONTROL_LPI_6_END (0x000000019cffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_6 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_6_ID                        (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_6_TYPE                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_6_MMR_BASE                  (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_6_NUM_REGIONS               (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_6_NUM_PRIV_IDS_PER_REGION   (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_6_GIC_REDISTRIBUTOR_SGI_PPI_6_START (0x000000019d0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_6_GIC_REDISTRIBUTOR_SGI_PPI_6_END (0x000000019dffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_7 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_7_ID                    (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_7_TYPE                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_7_MMR_BASE              (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_7_NUM_REGIONS           (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_7_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_7_GIC_REDISTRIBUTOR_CONTROL_LPI_7_START (0x000000019e0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_CONTROL_LPI_7_GIC_REDISTRIBUTOR_CONTROL_LPI_7_END (0x000000019effffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_7 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_7_ID                        (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_7_TYPE                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_7_MMR_BASE                  (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_7_NUM_REGIONS               (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_7_NUM_PRIV_IDS_PER_REGION   (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_7_GIC_REDISTRIBUTOR_SGI_PPI_7_START (0x000000019f0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS_GIC_REDISTRIBUTOR_SGI_PPI_7_GIC_REDISTRIBUTOR_SGI_PPI_7_END (0x000000019fffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_VBUSP_DDRSS0_DDRSS0_SSCFG */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_SSCFG_ID                       (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_SSCFG_TYPE                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_SSCFG_MMR_BASE                 (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_SSCFG_NUM_REGIONS              (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_SSCFG_NUM_PRIV_IDS_PER_REGION  (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_SSCFG_DDR0_0_SS_CFG_START      (0x00000002980000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_SSCFG_DDR0_0_SS_CFG_END        (0x000000029801ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_VBUSP_DDRSS0_DDRSS0_CTLCFG */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_CTLCFG_ID                      (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_CTLCFG_TYPE                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_CTLCFG_MMR_BASE                (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_CTLCFG_NUM_REGIONS             (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_CTLCFG_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_CTLCFG_DDR0_0_CTL_CFG_START    (0x00000002990000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS0_DDRSS0_CTLCFG_DDR0_0_CTL_CFG_END      (0x00000002997fffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_VBUSP_DDRSS1_DDRSS1_SSCFG */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_SSCFG_ID                       (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_SSCFG_TYPE                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_SSCFG_MMR_BASE                 (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_SSCFG_NUM_REGIONS              (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_SSCFG_NUM_PRIV_IDS_PER_REGION  (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_SSCFG_DDR1_1_SS_CFG_START      (0x000000029a0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_SSCFG_DDR1_1_SS_CFG_END        (0x000000029a01ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_VBUSP_DDRSS1_DDRSS1_CTLCFG */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_CTLCFG_ID                      (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_CTLCFG_TYPE                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_CTLCFG_MMR_BASE                (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_CTLCFG_NUM_REGIONS             (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_CTLCFG_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_CTLCFG_DDR1_1_CTL_CFG_START    (0x000000029b0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_CTLCFG_DDR1_1_CTL_CFG_END      (0x000000029b7fffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_VBUSP4_CFG_MSMC_PBIST0_CFG_MSMC_PBIST0 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_MSMC_PBIST0_CFG_MSMC_PBIST0_ID          (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_MSMC_PBIST0_CFG_MSMC_PBIST0_TYPE        (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_MSMC_PBIST0_CFG_MSMC_PBIST0_MMR_BASE    (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_MSMC_PBIST0_CFG_MSMC_PBIST0_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_MSMC_PBIST0_CFG_MSMC_PBIST0_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_MSMC_PBIST0_CFG_MSMC_PBIST0_MSMC_PBIST0_START (0x00004d10000000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_MSMC_PBIST0_CFG_MSMC_PBIST0_MSMC_PBIST0_END (0x00004d1000ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_VBUSP_CFG0_CFG_ARM_PBIST0 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_CFG0_CFG_ARM_PBIST0_ID                       (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_CFG0_CFG_ARM_PBIST0_TYPE                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_CFG0_CFG_ARM_PBIST0_MMR_BASE                 (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_CFG0_CFG_ARM_PBIST0_NUM_REGIONS              (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_CFG0_CFG_ARM_PBIST0_NUM_PRIV_IDS_PER_REGION  (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_CFG0_CFG_ARM_PBIST0_MPU_PBIST0_START         (0x00004d10010000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_CFG0_CFG_ARM_PBIST0_MPU_PBIST0_END           (0x00004d1001ffffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_VBUSP4_CFG_DSP4_CFG_DSP_PBIST4 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP4_CFG_DSP_PBIST4_ID                  (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP4_CFG_DSP_PBIST4_TYPE                (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP4_CFG_DSP_PBIST4_MMR_BASE            (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP4_CFG_DSP_PBIST4_NUM_REGIONS         (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP4_CFG_DSP_PBIST4_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP4_CFG_DSP_PBIST4_DSP0_PBIST_START    (0x00004d10050000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP4_CFG_DSP_PBIST4_DSP0_PBIST_END      (0x00004d100503ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_VBUSP4_CFG_DSP5_CFG_DSP_PBIST5 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP5_CFG_DSP_PBIST5_ID                  (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP5_CFG_DSP_PBIST5_TYPE                (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP5_CFG_DSP_PBIST5_MMR_BASE            (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP5_CFG_DSP_PBIST5_NUM_REGIONS         (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP5_CFG_DSP_PBIST5_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP5_CFG_DSP_PBIST5_DSP1_PBIST_START    (0x00004d10060000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP4_CFG_DSP5_CFG_DSP_PBIST5_DSP1_PBIST_END      (0x00004d100603ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_MSMC_ECC_AGGR_0_VBUSP_MSMC_ECC_AGGR0_CFG_MSMC_ECC0 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_0__VBUSP_MSMC_ECC_AGGR0_CFG_MSMC_ECC0_ID         (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_0__VBUSP_MSMC_ECC_AGGR0_CFG_MSMC_ECC0_TYPE       (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_0__VBUSP_MSMC_ECC_AGGR0_CFG_MSMC_ECC0_MMR_BASE   (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_0__VBUSP_MSMC_ECC_AGGR0_CFG_MSMC_ECC0_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_0__VBUSP_MSMC_ECC_AGGR0_CFG_MSMC_ECC0_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_0__VBUSP_MSMC_ECC_AGGR0_CFG_MSMC_ECC0_MSMC_ECC_AGGR0_START (0x00004d20000000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_0__VBUSP_MSMC_ECC_AGGR0_CFG_MSMC_ECC0_MSMC_ECC_AGGR0_END (0x00004d200003ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_MSMC_ECC_AGGR_1_VBUSP_MSMC_ECC_AGGR1_CFG_MSMC_ECC1 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_1__VBUSP_MSMC_ECC_AGGR1_CFG_MSMC_ECC1_ID         (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_1__VBUSP_MSMC_ECC_AGGR1_CFG_MSMC_ECC1_TYPE       (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_1__VBUSP_MSMC_ECC_AGGR1_CFG_MSMC_ECC1_MMR_BASE   (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_1__VBUSP_MSMC_ECC_AGGR1_CFG_MSMC_ECC1_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_1__VBUSP_MSMC_ECC_AGGR1_CFG_MSMC_ECC1_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_1__VBUSP_MSMC_ECC_AGGR1_CFG_MSMC_ECC1_MSMC_ECC_AGGR1_START (0x00004d20000400U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_ECC_AGGR_1__VBUSP_MSMC_ECC_AGGR1_CFG_MSMC_ECC1_MSMC_ECC_AGGR1_END (0x00004d200007ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1_VBUSP_MSMC_DDR_0_ECC_AGGR_CFG_MSMC_ECC2 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_0_ECC_AGGR_CFG_MSMC_ECC2_ID (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_0_ECC_AGGR_CFG_MSMC_ECC2_TYPE (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_0_ECC_AGGR_CFG_MSMC_ECC2_MMR_BASE (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_0_ECC_AGGR_CFG_MSMC_ECC2_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_0_ECC_AGGR_CFG_MSMC_ECC2_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_0_ECC_AGGR_CFG_MSMC_ECC2_MSMC_DDR_0_ECC_AGGR2_START (0x00004d20000800U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_0_ECC_AGGR_CFG_MSMC_ECC2_MSMC_DDR_0_ECC_AGGR2_END (0x00004d20000bffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1_VBUSP_MSMC_DDR_1_ECC_AGGR_CFG_MSMC_ECC3 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_1_ECC_AGGR_CFG_MSMC_ECC3_ID (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_1_ECC_AGGR_CFG_MSMC_ECC3_TYPE (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_1_ECC_AGGR_CFG_MSMC_ECC3_MMR_BASE (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_1_ECC_AGGR_CFG_MSMC_ECC3_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_1_ECC_AGGR_CFG_MSMC_ECC3_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_1_ECC_AGGR_CFG_MSMC_ECC3_MSMC_DDR_1_ECC_AGGR3_START (0x00004d20000c00U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_MSMC_DDR_ECC_AGGR_1__VBUSP_MSMC_DDR_1_ECC_AGGR_CFG_MSMC_ECC3_MSMC_DDR_1_ECC_AGGR3_END (0x00004d20000fffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_A72SS0_COMMON_ECC_AGGR_VBUSP_CFG0_CFG_ARM_ECC_COREPAC */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_COMMON_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_COREPAC_ID      (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_COMMON_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_COREPAC_TYPE    (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_COMMON_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_COREPAC_MMR_BASE (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_COMMON_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_COREPAC_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_COMMON_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_COREPAC_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_COMMON_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_COREPAC_MPU0_COREPAC_ECC_AGGR_START (0x00004d20010000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_COMMON_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_COREPAC_MPU0_COREPAC_ECC_AGGR_END (0x00004d200103ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_A72SS0_CORE0_ECC_AGGR_VBUSP_CFG0_CFG_ARM_ECC_CORE0 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE0_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE0_ID         (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE0_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE0_TYPE       (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE0_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE0_MMR_BASE   (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE0_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE0_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE0_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE0_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE0_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE0_MPU0_CORE0_ECC_AGGR_START (0x00004d20010400U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE0_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE0_MPU0_CORE0_ECC_AGGR_END (0x00004d200107ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_A72SS0_CORE1_ECC_AGGR_VBUSP_CFG0_CFG_ARM_ECC_CORE1 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE1_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE1_ID         (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE1_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE1_TYPE       (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE1_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE1_MMR_BASE   (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE1_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE1_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE1_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE1_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE1_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE1_MPU0_CORE1_ECC_AGGR_START (0x00004d20010800U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_A72SS0_CORE1_ECC_AGGR__VBUSP_CFG0_CFG_ARM_ECC_CORE1_MPU0_CORE1_ECC_AGGR_END (0x00004d20010bffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_C71SS0_ECC_AGGR_0_VBUSP4_CFG_DSP4_CFG_DSP_ECCAGGR4 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS0_ECC_AGGR_0__VBUSP4_CFG_DSP4_CFG_DSP_ECCAGGR4_ID         (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS0_ECC_AGGR_0__VBUSP4_CFG_DSP4_CFG_DSP_ECCAGGR4_TYPE       (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS0_ECC_AGGR_0__VBUSP4_CFG_DSP4_CFG_DSP_ECCAGGR4_MMR_BASE   (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS0_ECC_AGGR_0__VBUSP4_CFG_DSP4_CFG_DSP_ECCAGGR4_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS0_ECC_AGGR_0__VBUSP4_CFG_DSP4_CFG_DSP_ECCAGGR4_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS0_ECC_AGGR_0__VBUSP4_CFG_DSP4_CFG_DSP_ECCAGGR4_DSP0_ECC_AGGR_START (0x00004d20050000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS0_ECC_AGGR_0__VBUSP4_CFG_DSP4_CFG_DSP_ECCAGGR4_DSP0_ECC_AGGR_END (0x00004d200503ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_C71SS1_ECC_AGGR_0_VBUSP4_CFG_DSP5_CFG_DSP_ECCAGGR5 */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS1_ECC_AGGR_0__VBUSP4_CFG_DSP5_CFG_DSP_ECCAGGR5_ID         (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS1_ECC_AGGR_0__VBUSP4_CFG_DSP5_CFG_DSP_ECCAGGR5_TYPE       (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS1_ECC_AGGR_0__VBUSP4_CFG_DSP5_CFG_DSP_ECCAGGR5_MMR_BASE   (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS1_ECC_AGGR_0__VBUSP4_CFG_DSP5_CFG_DSP_ECCAGGR5_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS1_ECC_AGGR_0__VBUSP4_CFG_DSP5_CFG_DSP_ECCAGGR5_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS1_ECC_AGGR_0__VBUSP4_CFG_DSP5_CFG_DSP_ECCAGGR5_DSP1_ECCAGGR_START (0x00004d20060000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_C71SS1_ECC_AGGR_0__VBUSP4_CFG_DSP5_CFG_DSP_ECCAGGR5_DSP1_ECCAGGR_END (0x00004d200603ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CTL_0_VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CTL_REGS */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CTL_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CTL_REGS_ID (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CTL_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CTL_REGS_TYPE (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CTL_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CTL_REGS_MMR_BASE (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CTL_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CTL_REGS_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CTL_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CTL_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CTL_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CTL_REGS_DDR0_0_ECC_AGGR_CTL_START (0x00004d200b0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CTL_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CTL_REGS_DDR0_0_ECC_AGGR_CTL_END (0x00004d200b03ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_VBUS_0_VBUSP_DDRSS0_DDRSS0_ECC_AGGR_VBUS_REGS */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_VBUS_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_VBUS_REGS_ID (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_VBUS_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_VBUS_REGS_TYPE (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_VBUS_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_VBUS_REGS_MMR_BASE (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_VBUS_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_VBUS_REGS_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_VBUS_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_VBUS_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_VBUS_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_VBUS_REGS_DDR0_0_ECC_AGGR_VBUS_START (0x00004d200b0400U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_VBUS_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_VBUS_REGS_DDR0_0_ECC_AGGR_VBUS_END (0x00004d200b07ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_0_VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CFG_REGS_ID (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CFG_REGS_TYPE (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CFG_REGS_MMR_BASE (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CFG_REGS_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CFG_REGS_DDR0_0_ECC_AGGR_CFG_START (0x00004d200b0800U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_0__VBUSP_DDRSS0_DDRSS0_ECC_AGGR_CFG_REGS_DDR0_0_ECC_AGGR_CFG_END (0x00004d200b0bffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CTL_REGS */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CTL_REGS_ID           (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CTL_REGS_TYPE         (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CTL_REGS_MMR_BASE     (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CTL_REGS_NUM_REGIONS  (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CTL_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CTL_REGS_DDR1_1_ECC_AGGR_CTL_START (0x00004d200b0c00U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CTL_REGS_DDR1_1_ECC_AGGR_CTL_END (0x00004d200b0fffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_VBUSP_DDRSS1_DDRSS1_ECC_AGGR_VBUS_REGS */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_VBUS_REGS_ID          (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_VBUS_REGS_TYPE        (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_VBUS_REGS_MMR_BASE    (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_VBUS_REGS_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_VBUS_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_VBUS_REGS_DDR1_1_ECC_AGGR_VBUS_START (0x00004d200b1000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_VBUS_REGS_DDR1_1_ECC_AGGR_VBUS_END (0x00004d200b13ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_1_VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_1__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CFG_REGS_ID (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_1__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CFG_REGS_TYPE (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_1__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CFG_REGS_MMR_BASE (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_1__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CFG_REGS_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_1__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_1__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CFG_REGS_DDR1_1_ECC_AGGR_CFG_START (0x00004d200b1400U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_DDR32SSC_EW_BRCTL_SC_ECC_AGGR_CFG_1__VBUSP_DDRSS1_DDRSS1_ECC_AGGR_CFG_REGS_DDR1_1_ECC_AGGR_CFG_END (0x00004d200b17ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_VBUSP_GICSS_ECC_AGGR_GIC_ECC_AGGR_REGS */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_GICSS_ECC_AGGR_GIC_ECC_AGGR_REGS_ID          (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_GICSS_ECC_AGGR_GIC_ECC_AGGR_REGS_TYPE        (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_GICSS_ECC_AGGR_GIC_ECC_AGGR_REGS_MMR_BASE    (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_GICSS_ECC_AGGR_GIC_ECC_AGGR_REGS_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_GICSS_ECC_AGGR_GIC_ECC_AGGR_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_GICSS_ECC_AGGR_GIC_ECC_AGGR_REGS_ECC_AGGR_START (0x00004d200c0000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0__VBUSP_GICSS_ECC_AGGR_GIC_ECC_AGGR_REGS_ECC_AGGR_END (0x00004d200c03ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_GIC500SS_GICSS_VBUSM_GASKET_CFG_GICSS_VBUSM_GASKET_CFG_REGS */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS__GICSS_VBUSM_GASKET_CFG_GICSS_VBUSM_GASKET_CFG_REGS_ID (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS__GICSS_VBUSM_GASKET_CFG_GICSS_VBUSM_GASKET_CFG_REGS_TYPE (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS__GICSS_VBUSM_GASKET_CFG_GICSS_VBUSM_GASKET_CFG_REGS_MMR_BASE (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS__GICSS_VBUSM_GASKET_CFG_GICSS_VBUSM_GASKET_CFG_REGS_NUM_REGIONS (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS__GICSS_VBUSM_GASKET_CFG_GICSS_VBUSM_GASKET_CFG_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS__GICSS_VBUSM_GASKET_CFG_GICSS_VBUSM_GASKET_CFG_REGS_GICSS_VBUSM_GASKET_CFG_GICSS_VBUSM_GASKET_CFG_START (0x00004d200c0400U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_GIC500SS__GICSS_VBUSM_GASKET_CFG_GICSS_VBUSM_GASKET_CFG_REGS_GICSS_VBUSM_GASKET_CFG_GICSS_VBUSM_GASKET_CFG_END (0x00004d200c07ffU)
+
+/* Properties of firewall at slave: COMPUTE_CLUSTER0_CFG_WRAP_0_CC_REGS */
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0_CC_REGS_ID                                          (2312U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0_CC_REGS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0_CC_REGS_MMR_BASE                                    (0x00000045242000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0_CC_REGS_NUM_REGIONS                                 (16U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0_CC_REGS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0_CC_REGS_CC_START                                    (0x00004d21000000U)
+#define CSL_STD_FW_COMPUTE_CLUSTER0_CFG_WRAP_0_CC_REGS_CC_END                                      (0x00004d2100ffffU)
+
+/* Properties of firewall at slave: ECC_AGGR11_REGS */
+#define CSL_STD_FW_ECC_AGGR11_REGS_ID                                                              (2313U)
+#define CSL_STD_FW_ECC_AGGR11_REGS_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_ECC_AGGR11_REGS_MMR_BASE                                                        (0x00000045242400U)
+#define CSL_STD_FW_ECC_AGGR11_REGS_NUM_REGIONS                                                     (1U)
+#define CSL_STD_FW_ECC_AGGR11_REGS_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_ECC_AGGR11_REGS_ECC_AGGR_START                                                  (0x00000002afb000U)
+#define CSL_STD_FW_ECC_AGGR11_REGS_ECC_AGGR_END                                                    (0x00000002afb3ffU)
+
+/* Properties of firewall at slave: ECC_AGGR4_REGS */
+#define CSL_STD_FW_ECC_AGGR4_REGS_ID                                                               (2314U)
+#define CSL_STD_FW_ECC_AGGR4_REGS_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_ECC_AGGR4_REGS_MMR_BASE                                                         (0x00000045242800U)
+#define CSL_STD_FW_ECC_AGGR4_REGS_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_ECC_AGGR4_REGS_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_ECC_AGGR4_REGS_ECC_AGGR_START                                                   (0x00000002af4000U)
+#define CSL_STD_FW_ECC_AGGR4_REGS_ECC_AGGR_END                                                     (0x00000002af43ffU)
+
+/* Properties of firewall at slave: ECC_AGGR10_REGS */
+#define CSL_STD_FW_ECC_AGGR10_REGS_ID                                                              (2315U)
+#define CSL_STD_FW_ECC_AGGR10_REGS_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_ECC_AGGR10_REGS_MMR_BASE                                                        (0x00000045242c00U)
+#define CSL_STD_FW_ECC_AGGR10_REGS_NUM_REGIONS                                                     (1U)
+#define CSL_STD_FW_ECC_AGGR10_REGS_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_ECC_AGGR10_REGS_ECC_AGGR_START                                                  (0x00000002afa000U)
+#define CSL_STD_FW_ECC_AGGR10_REGS_ECC_AGGR_END                                                    (0x00000002afa3ffU)
+
+/* Properties of firewall at slave: CBASS_RC0_ERR_REGS */
+#define CSL_STD_FW_CBASS_RC0_ERR_REGS_ID                                                           (2316U)
+#define CSL_STD_FW_CBASS_RC0_ERR_REGS_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_RC0_ERR_REGS_MMR_BASE                                                     (0x00000045243000U)
+#define CSL_STD_FW_CBASS_RC0_ERR_REGS_NUM_REGIONS                                                  (1U)
+#define CSL_STD_FW_CBASS_RC0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_CBASS_RC0_ERR_REGS_ERR_START                                                    (0x00000002a8c000U)
+#define CSL_STD_FW_CBASS_RC0_ERR_REGS_ERR_END                                                      (0x00000002a8c3ffU)
+
+/* Properties of firewall at slave: CBASS_RC_CFG0_ERR_REGS */
+#define CSL_STD_FW_CBASS_RC_CFG0_ERR_REGS_ID                                                       (2317U)
+#define CSL_STD_FW_CBASS_RC_CFG0_ERR_REGS_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_RC_CFG0_ERR_REGS_MMR_BASE                                                 (0x00000045243400U)
+#define CSL_STD_FW_CBASS_RC_CFG0_ERR_REGS_NUM_REGIONS                                              (1U)
+#define CSL_STD_FW_CBASS_RC_CFG0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_CBASS_RC_CFG0_ERR_REGS_ERR_START                                                (0x00000002a8d000U)
+#define CSL_STD_FW_CBASS_RC_CFG0_ERR_REGS_ERR_END                                                  (0x00000002a8d3ffU)
+
+/* Properties of firewall at slave: MMCSD1_ECC_AGGR_RXMEM_CFG_REGS */
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_RXMEM_CFG_REGS_ID                                               (2400U)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_RXMEM_CFG_REGS_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_RXMEM_CFG_REGS_MMR_BASE                                         (0x00000045258000U)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_RXMEM_CFG_REGS_NUM_REGIONS                                      (4U)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_RXMEM_CFG_REGS_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_RXMEM_CFG_REGS_ECC_AGGR_RXMEM_START                             (0x00000002a26000U)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_RXMEM_CFG_REGS_ECC_AGGR_RXMEM_END                               (0x00000002a263ffU)
+
+/* Properties of firewall at slave: MMCSD1_ECC_AGGR_TXMEM_CFG_REGS */
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_TXMEM_CFG_REGS_ID                                               (2400U)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_TXMEM_CFG_REGS_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_TXMEM_CFG_REGS_MMR_BASE                                         (0x00000045258000U)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_TXMEM_CFG_REGS_NUM_REGIONS                                      (4U)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_TXMEM_CFG_REGS_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_TXMEM_CFG_REGS_ECC_AGGR_TXMEM_START                             (0x00000002a27000U)
+#define CSL_STD_FW_MMCSD1_ECC_AGGR_TXMEM_CFG_REGS_ECC_AGGR_TXMEM_END                               (0x00000002a273ffU)
+
+/* Properties of firewall at slave: MMCSD1_SDHC_WRAP_CTL_CFG_CTLCFG */
+#define CSL_STD_FW_MMCSD1_SDHC_WRAP_CTL_CFG_CTLCFG_ID                                              (2400U)
+#define CSL_STD_FW_MMCSD1_SDHC_WRAP_CTL_CFG_CTLCFG_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_MMCSD1_SDHC_WRAP_CTL_CFG_CTLCFG_MMR_BASE                                        (0x00000045258000U)
+#define CSL_STD_FW_MMCSD1_SDHC_WRAP_CTL_CFG_CTLCFG_NUM_REGIONS                                     (4U)
+#define CSL_STD_FW_MMCSD1_SDHC_WRAP_CTL_CFG_CTLCFG_NUM_PRIV_IDS_PER_REGION                         (3U)
+#define CSL_STD_FW_MMCSD1_SDHC_WRAP_CTL_CFG_CTLCFG_CTL_CFG_START                                   (0x00000004fb0000U)
+#define CSL_STD_FW_MMCSD1_SDHC_WRAP_CTL_CFG_CTLCFG_CTL_CFG_END                                     (0x00000004fb0fffU)
+
+/* Properties of firewall at slave: MMCSD1_REGS_SS_CFG_SSCFG */
+#define CSL_STD_FW_MMCSD1_REGS_SS_CFG_SSCFG_ID                                                     (2400U)
+#define CSL_STD_FW_MMCSD1_REGS_SS_CFG_SSCFG_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MMCSD1_REGS_SS_CFG_SSCFG_MMR_BASE                                               (0x00000045258000U)
+#define CSL_STD_FW_MMCSD1_REGS_SS_CFG_SSCFG_NUM_REGIONS                                            (4U)
+#define CSL_STD_FW_MMCSD1_REGS_SS_CFG_SSCFG_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MMCSD1_REGS_SS_CFG_SSCFG_SS_CFG_START                                           (0x00000004fb8000U)
+#define CSL_STD_FW_MMCSD1_REGS_SS_CFG_SSCFG_SS_CFG_END                                             (0x00000004fb83ffU)
+
+/* Properties of firewall at slave: ELM0_MEM */
+#define CSL_STD_FW_ELM0_MEM_ID                                                                     (2401U)
+#define CSL_STD_FW_ELM0_MEM_TYPE                                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_ELM0_MEM_MMR_BASE                                                               (0x00000045258400U)
+#define CSL_STD_FW_ELM0_MEM_NUM_REGIONS                                                            (1U)
+#define CSL_STD_FW_ELM0_MEM_NUM_PRIV_IDS_PER_REGION                                                (3U)
+#define CSL_STD_FW_ELM0_MEM_START                                                                  (0x00000005380000U)
+#define CSL_STD_FW_ELM0_MEM_END                                                                    (0x00000005380fffU)
+
+/* Properties of firewall at slave: CSI_RX_IF0_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_CSI_RX_IF0_ECC_AGGR_CFG_REGS_ID                                                 (2432U)
+#define CSL_STD_FW_CSI_RX_IF0_ECC_AGGR_CFG_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_RX_IF0_ECC_AGGR_CFG_REGS_MMR_BASE                                           (0x00000045260000U)
+#define CSL_STD_FW_CSI_RX_IF0_ECC_AGGR_CFG_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_CSI_RX_IF0_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_CSI_RX_IF0_ECC_AGGR_CFG_REGS_ECC_AGGR_CFG_START                                 (0x00000002a30000U)
+#define CSL_STD_FW_CSI_RX_IF0_ECC_AGGR_CFG_REGS_ECC_AGGR_CFG_END                                   (0x00000002a303ffU)
+
+/* Properties of firewall at slave: CSI_RX_IF0_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS */
+#define CSL_STD_FW_CSI_RX_IF0_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_ID                                   (2432U)
+#define CSL_STD_FW_CSI_RX_IF0_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_RX_IF0_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_MMR_BASE                             (0x00000045260000U)
+#define CSL_STD_FW_CSI_RX_IF0_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_NUM_REGIONS                          (4U)
+#define CSL_STD_FW_CSI_RX_IF0_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_CSI_RX_IF0_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_RX_SHIM_VBUSP_MMR_CSI2RXIF_START     (0x00000004500000U)
+#define CSL_STD_FW_CSI_RX_IF0_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_RX_SHIM_VBUSP_MMR_CSI2RXIF_END       (0x00000004500fffU)
+
+/* Properties of firewall at slave: CSI_RX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS */
+#define CSL_STD_FW_CSI_RX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_ID                               (2432U)
+#define CSL_STD_FW_CSI_RX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_RX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_MMR_BASE                         (0x00000045260000U)
+#define CSL_STD_FW_CSI_RX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_NUM_REGIONS                      (4U)
+#define CSL_STD_FW_CSI_RX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_STD_FW_CSI_RX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_START (0x00000004504000U)
+#define CSL_STD_FW_CSI_RX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_END (0x00000004504fffU)
+
+/* Properties of firewall at slave: CSI_RX_IF0_CP_INTD_INTD_CFG_INTD_CFG */
+#define CSL_STD_FW_CSI_RX_IF0_CP_INTD_INTD_CFG_INTD_CFG_ID                                         (2432U)
+#define CSL_STD_FW_CSI_RX_IF0_CP_INTD_INTD_CFG_INTD_CFG_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_RX_IF0_CP_INTD_INTD_CFG_INTD_CFG_MMR_BASE                                   (0x00000045260000U)
+#define CSL_STD_FW_CSI_RX_IF0_CP_INTD_INTD_CFG_INTD_CFG_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_CSI_RX_IF0_CP_INTD_INTD_CFG_INTD_CFG_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_CSI_RX_IF0_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_START                 (0x00000004508000U)
+#define CSL_STD_FW_CSI_RX_IF0_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_END                   (0x00000004508fffU)
+
+/* Properties of firewall at slave: CSI_RX_IF1_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_CSI_RX_IF1_ECC_AGGR_CFG_REGS_ID                                                 (2433U)
+#define CSL_STD_FW_CSI_RX_IF1_ECC_AGGR_CFG_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_RX_IF1_ECC_AGGR_CFG_REGS_MMR_BASE                                           (0x00000045260400U)
+#define CSL_STD_FW_CSI_RX_IF1_ECC_AGGR_CFG_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_CSI_RX_IF1_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_CSI_RX_IF1_ECC_AGGR_CFG_REGS_ECC_AGGR_CFG_START                                 (0x00000002a31000U)
+#define CSL_STD_FW_CSI_RX_IF1_ECC_AGGR_CFG_REGS_ECC_AGGR_CFG_END                                   (0x00000002a313ffU)
+
+/* Properties of firewall at slave: CSI_RX_IF1_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS */
+#define CSL_STD_FW_CSI_RX_IF1_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_ID                                   (2433U)
+#define CSL_STD_FW_CSI_RX_IF1_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_RX_IF1_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_MMR_BASE                             (0x00000045260400U)
+#define CSL_STD_FW_CSI_RX_IF1_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_NUM_REGIONS                          (4U)
+#define CSL_STD_FW_CSI_RX_IF1_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_CSI_RX_IF1_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_RX_SHIM_VBUSP_MMR_CSI2RXIF_START     (0x00000004510000U)
+#define CSL_STD_FW_CSI_RX_IF1_RX_SHIM_VBUSP_MMR_CSI2RXIF_REGS_RX_SHIM_VBUSP_MMR_CSI2RXIF_END       (0x00000004510fffU)
+
+/* Properties of firewall at slave: CSI_RX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS */
+#define CSL_STD_FW_CSI_RX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_ID                               (2433U)
+#define CSL_STD_FW_CSI_RX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_RX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_MMR_BASE                         (0x00000045260400U)
+#define CSL_STD_FW_CSI_RX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_NUM_REGIONS                      (4U)
+#define CSL_STD_FW_CSI_RX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_STD_FW_CSI_RX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_START (0x00000004514000U)
+#define CSL_STD_FW_CSI_RX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_REGS_VBUS2APB_WRAP_VBUSP_APB_CSI2RX_END (0x00000004514fffU)
+
+/* Properties of firewall at slave: CSI_RX_IF1_CP_INTD_INTD_CFG_INTD_CFG */
+#define CSL_STD_FW_CSI_RX_IF1_CP_INTD_INTD_CFG_INTD_CFG_ID                                         (2433U)
+#define CSL_STD_FW_CSI_RX_IF1_CP_INTD_INTD_CFG_INTD_CFG_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_RX_IF1_CP_INTD_INTD_CFG_INTD_CFG_MMR_BASE                                   (0x00000045260400U)
+#define CSL_STD_FW_CSI_RX_IF1_CP_INTD_INTD_CFG_INTD_CFG_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_CSI_RX_IF1_CP_INTD_INTD_CFG_INTD_CFG_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_CSI_RX_IF1_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_START                 (0x00000004518000U)
+#define CSL_STD_FW_CSI_RX_IF1_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_END                   (0x00000004518fffU)
+
+/* Properties of firewall at slave: DPHY_RX0_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS */
+#define CSL_STD_FW_DPHY_RX0_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_ID                                 (2436U)
+#define CSL_STD_FW_DPHY_RX0_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_TYPE                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_DPHY_RX0_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_MMR_BASE                           (0x00000045261000U)
+#define CSL_STD_FW_DPHY_RX0_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_NUM_REGIONS                        (2U)
+#define CSL_STD_FW_DPHY_RX0_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_NUM_PRIV_IDS_PER_REGION            (3U)
+#define CSL_STD_FW_DPHY_RX0_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_START (0x00000004580000U)
+#define CSL_STD_FW_DPHY_RX0_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_END (0x00000004580fffU)
+
+/* Properties of firewall at slave: DPHY_RX0_MMR_SLV_K3_DPHY_WRAP_REGS */
+#define CSL_STD_FW_DPHY_RX0_MMR_SLV_K3_DPHY_WRAP_REGS_ID                                           (2436U)
+#define CSL_STD_FW_DPHY_RX0_MMR_SLV_K3_DPHY_WRAP_REGS_TYPE                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_DPHY_RX0_MMR_SLV_K3_DPHY_WRAP_REGS_MMR_BASE                                     (0x00000045261000U)
+#define CSL_STD_FW_DPHY_RX0_MMR_SLV_K3_DPHY_WRAP_REGS_NUM_REGIONS                                  (2U)
+#define CSL_STD_FW_DPHY_RX0_MMR_SLV_K3_DPHY_WRAP_REGS_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_STD_FW_DPHY_RX0_MMR_SLV_K3_DPHY_WRAP_REGS_MMR_SLV_K3_DPHY_WRAP_START                   (0x00000004581000U)
+#define CSL_STD_FW_DPHY_RX0_MMR_SLV_K3_DPHY_WRAP_REGS_MMR_SLV_K3_DPHY_WRAP_END                     (0x000000045810ffU)
+
+/* Properties of firewall at slave: DPHY_RX1_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS */
+#define CSL_STD_FW_DPHY_RX1_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_ID                                 (2437U)
+#define CSL_STD_FW_DPHY_RX1_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_TYPE                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_DPHY_RX1_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_MMR_BASE                           (0x00000045261400U)
+#define CSL_STD_FW_DPHY_RX1_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_NUM_REGIONS                        (2U)
+#define CSL_STD_FW_DPHY_RX1_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_NUM_PRIV_IDS_PER_REGION            (3U)
+#define CSL_STD_FW_DPHY_RX1_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_START (0x00000004590000U)
+#define CSL_STD_FW_DPHY_RX1_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_REGS_VBUS2APB_WRAP_VBUSP_K3_DPHY_RX_END (0x00000004590fffU)
+
+/* Properties of firewall at slave: DPHY_RX1_MMR_SLV_K3_DPHY_WRAP_REGS */
+#define CSL_STD_FW_DPHY_RX1_MMR_SLV_K3_DPHY_WRAP_REGS_ID                                           (2437U)
+#define CSL_STD_FW_DPHY_RX1_MMR_SLV_K3_DPHY_WRAP_REGS_TYPE                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_DPHY_RX1_MMR_SLV_K3_DPHY_WRAP_REGS_MMR_BASE                                     (0x00000045261400U)
+#define CSL_STD_FW_DPHY_RX1_MMR_SLV_K3_DPHY_WRAP_REGS_NUM_REGIONS                                  (2U)
+#define CSL_STD_FW_DPHY_RX1_MMR_SLV_K3_DPHY_WRAP_REGS_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_STD_FW_DPHY_RX1_MMR_SLV_K3_DPHY_WRAP_REGS_MMR_SLV_K3_DPHY_WRAP_START                   (0x00000004591000U)
+#define CSL_STD_FW_DPHY_RX1_MMR_SLV_K3_DPHY_WRAP_REGS_MMR_SLV_K3_DPHY_WRAP_END                     (0x000000045910ffU)
+
+/* Properties of firewall at slave: CSI_TX_IF0_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_CFG_REGS_ID                                                 (2440U)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_CFG_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_CFG_REGS_MMR_BASE                                           (0x00000045262000U)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_CFG_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_CFG_REGS_ECC_AGGR_CFG_START                                 (0x00000002a38000U)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_CFG_REGS_ECC_AGGR_CFG_END                                   (0x00000002a383ffU)
+
+/* Properties of firewall at slave: CSI_TX_IF0_ECC_AGGR_BYTE_CFG_REGS */
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_BYTE_CFG_REGS_ID                                            (2440U)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_BYTE_CFG_REGS_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_BYTE_CFG_REGS_MMR_BASE                                      (0x00000045262000U)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_BYTE_CFG_REGS_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_BYTE_CFG_REGS_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_BYTE_CFG_REGS_ECC_AGGR_BYTE_CFG_START                       (0x00000002a38400U)
+#define CSL_STD_FW_CSI_TX_IF0_ECC_AGGR_BYTE_CFG_REGS_ECC_AGGR_BYTE_CFG_END                         (0x00000002a387ffU)
+
+/* Properties of firewall at slave: CSI_TX_IF0_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS */
+#define CSL_STD_FW_CSI_TX_IF0_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_ID                                (2440U)
+#define CSL_STD_FW_CSI_TX_IF0_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_TYPE                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_TX_IF0_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_MMR_BASE                          (0x00000045262000U)
+#define CSL_STD_FW_CSI_TX_IF0_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_NUM_REGIONS                       (4U)
+#define CSL_STD_FW_CSI_TX_IF0_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_NUM_PRIV_IDS_PER_REGION           (3U)
+#define CSL_STD_FW_CSI_TX_IF0_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_START (0x00000004400000U)
+#define CSL_STD_FW_CSI_TX_IF0_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_END (0x00000004400fffU)
+
+/* Properties of firewall at slave: CSI_TX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS */
+#define CSL_STD_FW_CSI_TX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_ID                            (2440U)
+#define CSL_STD_FW_CSI_TX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_TX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_MMR_BASE                      (0x00000045262000U)
+#define CSL_STD_FW_CSI_TX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_NUM_REGIONS                   (4U)
+#define CSL_STD_FW_CSI_TX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_CSI_TX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_START (0x00000004404000U)
+#define CSL_STD_FW_CSI_TX_IF0_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_END (0x00000004404fffU)
+
+/* Properties of firewall at slave: CSI_TX_IF0_CP_INTD_INTD_CFG_INTD_CFG */
+#define CSL_STD_FW_CSI_TX_IF0_CP_INTD_INTD_CFG_INTD_CFG_ID                                         (2440U)
+#define CSL_STD_FW_CSI_TX_IF0_CP_INTD_INTD_CFG_INTD_CFG_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_TX_IF0_CP_INTD_INTD_CFG_INTD_CFG_MMR_BASE                                   (0x00000045262000U)
+#define CSL_STD_FW_CSI_TX_IF0_CP_INTD_INTD_CFG_INTD_CFG_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_CSI_TX_IF0_CP_INTD_INTD_CFG_INTD_CFG_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_CSI_TX_IF0_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_START                 (0x00000004408000U)
+#define CSL_STD_FW_CSI_TX_IF0_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_END                   (0x00000004408fffU)
+
+/* Properties of firewall at slave: CSI_TX_IF1_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_CFG_REGS_ID                                                 (2441U)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_CFG_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_CFG_REGS_MMR_BASE                                           (0x00000045262400U)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_CFG_REGS_NUM_REGIONS                                        (4U)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_CFG_REGS_ECC_AGGR_CFG_START                                 (0x00000002a39000U)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_CFG_REGS_ECC_AGGR_CFG_END                                   (0x00000002a393ffU)
+
+/* Properties of firewall at slave: CSI_TX_IF1_ECC_AGGR_BYTE_CFG_REGS */
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_BYTE_CFG_REGS_ID                                            (2441U)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_BYTE_CFG_REGS_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_BYTE_CFG_REGS_MMR_BASE                                      (0x00000045262400U)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_BYTE_CFG_REGS_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_BYTE_CFG_REGS_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_BYTE_CFG_REGS_ECC_AGGR_BYTE_CFG_START                       (0x00000002a39400U)
+#define CSL_STD_FW_CSI_TX_IF1_ECC_AGGR_BYTE_CFG_REGS_ECC_AGGR_BYTE_CFG_END                         (0x00000002a397ffU)
+
+/* Properties of firewall at slave: CSI_TX_IF1_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS */
+#define CSL_STD_FW_CSI_TX_IF1_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_ID                                (2441U)
+#define CSL_STD_FW_CSI_TX_IF1_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_TYPE                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_TX_IF1_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_MMR_BASE                          (0x00000045262400U)
+#define CSL_STD_FW_CSI_TX_IF1_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_NUM_REGIONS                       (4U)
+#define CSL_STD_FW_CSI_TX_IF1_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_NUM_PRIV_IDS_PER_REGION           (3U)
+#define CSL_STD_FW_CSI_TX_IF1_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_START (0x00000004410000U)
+#define CSL_STD_FW_CSI_TX_IF1_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_REGS_TX_SHIM_VBUSP_MMR_CSI2TXIF_V2_END (0x00000004410fffU)
+
+/* Properties of firewall at slave: CSI_TX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS */
+#define CSL_STD_FW_CSI_TX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_ID                            (2441U)
+#define CSL_STD_FW_CSI_TX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_TX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_MMR_BASE                      (0x00000045262400U)
+#define CSL_STD_FW_CSI_TX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_NUM_REGIONS                   (4U)
+#define CSL_STD_FW_CSI_TX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_CSI_TX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_START (0x00000004414000U)
+#define CSL_STD_FW_CSI_TX_IF1_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_REGS_VBUS2APB_WRAP_VBUSP_APB_CSI2TX_V2_END (0x00000004414fffU)
+
+/* Properties of firewall at slave: CSI_TX_IF1_CP_INTD_INTD_CFG_INTD_CFG */
+#define CSL_STD_FW_CSI_TX_IF1_CP_INTD_INTD_CFG_INTD_CFG_ID                                         (2441U)
+#define CSL_STD_FW_CSI_TX_IF1_CP_INTD_INTD_CFG_INTD_CFG_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_TX_IF1_CP_INTD_INTD_CFG_INTD_CFG_MMR_BASE                                   (0x00000045262400U)
+#define CSL_STD_FW_CSI_TX_IF1_CP_INTD_INTD_CFG_INTD_CFG_NUM_REGIONS                                (4U)
+#define CSL_STD_FW_CSI_TX_IF1_CP_INTD_INTD_CFG_INTD_CFG_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_CSI_TX_IF1_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_START                 (0x00000004418000U)
+#define CSL_STD_FW_CSI_TX_IF1_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_END                   (0x00000004418fffU)
+
+/* Properties of firewall at slave: DPHY_TX0_WIZ16B8M4CDT */
+#define CSL_STD_FW_DPHY_TX0_WIZ16B8M4CDT_ID                                                        (2442U)
+#define CSL_STD_FW_DPHY_TX0_WIZ16B8M4CDT_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DPHY_TX0_WIZ16B8M4CDT_MMR_BASE                                                  (0x00000045262800U)
+#define CSL_STD_FW_DPHY_TX0_WIZ16B8M4CDT_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DPHY_TX0_WIZ16B8M4CDT_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DPHY_TX0_WIZ16B8M4CDT_START                                                     (0x00000004480000U)
+#define CSL_STD_FW_DPHY_TX0_WIZ16B8M4CDT_END                                                       (0x00000004480fffU)
+
+/* Properties of firewall at slave: DPHY_TX1_WIZ16B8M4CDT */
+#define CSL_STD_FW_DPHY_TX1_WIZ16B8M4CDT_ID                                                        (2443U)
+#define CSL_STD_FW_DPHY_TX1_WIZ16B8M4CDT_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DPHY_TX1_WIZ16B8M4CDT_MMR_BASE                                                  (0x00000045262c00U)
+#define CSL_STD_FW_DPHY_TX1_WIZ16B8M4CDT_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DPHY_TX1_WIZ16B8M4CDT_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DPHY_TX1_WIZ16B8M4CDT_START                                                     (0x00000004481000U)
+#define CSL_STD_FW_DPHY_TX1_WIZ16B8M4CDT_END                                                       (0x00000004481fffU)
+
+/* Properties of firewall at slave: CSI_PSILSS0_MMRS */
+#define CSL_STD_FW_CSI_PSILSS0_MMRS_ID                                                             (2446U)
+#define CSL_STD_FW_CSI_PSILSS0_MMRS_TYPE                                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_CSI_PSILSS0_MMRS_MMR_BASE                                                       (0x00000045263800U)
+#define CSL_STD_FW_CSI_PSILSS0_MMRS_NUM_REGIONS                                                    (1U)
+#define CSL_STD_FW_CSI_PSILSS0_MMRS_NUM_PRIV_IDS_PER_REGION                                        (3U)
+#define CSL_STD_FW_CSI_PSILSS0_MMRS_MMRS_START                                                     (0x00000003410000U)
+#define CSL_STD_FW_CSI_PSILSS0_MMRS_MMRS_END                                                       (0x00000003410fffU)
+
+/* Properties of firewall at slave: CBASS_CSI0_ERR_REGS */
+#define CSL_STD_FW_CBASS_CSI0_ERR_REGS_ID                                                          (2463U)
+#define CSL_STD_FW_CBASS_CSI0_ERR_REGS_TYPE                                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_CSI0_ERR_REGS_MMR_BASE                                                    (0x00000045267c00U)
+#define CSL_STD_FW_CBASS_CSI0_ERR_REGS_NUM_REGIONS                                                 (1U)
+#define CSL_STD_FW_CBASS_CSI0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                     (3U)
+#define CSL_STD_FW_CBASS_CSI0_ERR_REGS_ERR_START                                                   (0x00000002a88000U)
+#define CSL_STD_FW_CBASS_CSI0_ERR_REGS_ERR_END                                                     (0x00000002a883ffU)
+
+/* Properties of firewall at slave: STM0_STIMULUS */
+#define CSL_STD_FW_STM0_STIMULUS_ID                                                                (2464U)
+#define CSL_STD_FW_STM0_STIMULUS_TYPE                                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_STM0_STIMULUS_MMR_BASE                                                          (0x00000045268000U)
+#define CSL_STD_FW_STM0_STIMULUS_NUM_REGIONS                                                       (2U)
+#define CSL_STD_FW_STM0_STIMULUS_NUM_PRIV_IDS_PER_REGION                                           (3U)
+#define CSL_STD_FW_STM0_STIMULUS_STIMULUS_START                                                    (0x00000009000000U)
+#define CSL_STD_FW_STM0_STIMULUS_STIMULUS_END                                                      (0x00000009ffffffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_ROM_TABLE_0_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_0_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_0_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_0_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_0_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_0_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_0_ROM_TABLE_0_0_START                                 (0x00004c00000000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_0_ROM_TABLE_0_0_END                                   (0x00004c00000fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_RESV0_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_0_ID                                                        (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_0_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_0_MMR_BASE                                                  (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_0_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_0_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_0_RESV0_0_START                                             (0x00004c00001000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_0_RESV0_0_END                                               (0x00004c00001fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CFGAP_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_0_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_0_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_0_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_0_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_0_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_0_CFGAP0_START                                          (0x00004c00002000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_0_CFGAP0_END                                            (0x00004c000020ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_APBAP_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_0_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_0_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_0_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_0_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_0_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_0_APBAP0_START                                          (0x00004c00002100U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_0_APBAP0_END                                            (0x00004c000021ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_AXIAP_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_0_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_0_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_0_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_0_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_0_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_0_AXIAP0_START                                          (0x00004c00002200U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_0_AXIAP0_END                                            (0x00004c000022ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_PWRAP_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_0_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_0_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_0_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_0_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_0_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_0_PWRAP0_START                                          (0x00004c00002300U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_0_PWRAP0_END                                            (0x00004c000023ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_PVIEW_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_0_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_0_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_0_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_0_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_0_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_0_PVIEW0_START                                          (0x00004c00002400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_0_PVIEW0_END                                            (0x00004c000024ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_JTAGAP_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_0_ID                                                   (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_0_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_0_MMR_BASE                                             (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_0_NUM_REGIONS                                          (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_0_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_0_JTAGAP0_START                                        (0x00004c00002500U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_0_JTAGAP0_END                                          (0x00004c000025ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_SECAP_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_0_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_0_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_0_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_0_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_0_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_0_SECAP0_START                                          (0x00004c00002600U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_0_SECAP0_END                                            (0x00004c000026ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX0_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_0_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_0_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_0_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_0_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_0_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_0_CORTEX0_CFG0_START                                  (0x00004c00002700U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_0_CORTEX0_CFG0_END                                    (0x00004c000027ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX1_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_0_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_0_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_0_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_0_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_0_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_0_CORTEX1_CFG0_START                                  (0x00004c00002800U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_0_CORTEX1_CFG0_END                                    (0x00004c000028ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX2_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_0_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_0_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_0_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_0_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_0_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_0_CORTEX2_CFG0_START                                  (0x00004c00002900U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_0_CORTEX2_CFG0_END                                    (0x00004c000029ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX3_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_0_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_0_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_0_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_0_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_0_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_0_CORTEX3_CFG0_START                                  (0x00004c00002a00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_0_CORTEX3_CFG0_END                                    (0x00004c00002affU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX4_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_0_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_0_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_0_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_0_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_0_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_0_CORTEX4_CFG0_START                                  (0x00004c00002b00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_0_CORTEX4_CFG0_END                                    (0x00004c00002bffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX5_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_0_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_0_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_0_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_0_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_0_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_0_CORTEX5_CFG0_START                                  (0x00004c00002c00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_0_CORTEX5_CFG0_END                                    (0x00004c00002cffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX6_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_0_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_0_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_0_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_0_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_0_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_0_CORTEX6_CFG0_START                                  (0x00004c00002d00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_0_CORTEX6_CFG0_END                                    (0x00004c00002dffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX7_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_0_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_0_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_0_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_0_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_0_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_0_CORTEX7_CFG0_START                                  (0x00004c00002e00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_0_CORTEX7_CFG0_END                                    (0x00004c00002effU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX8_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_0_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_0_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_0_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_0_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_0_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_0_CORTEX8_CFG0_START                                  (0x00004c00002f00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_0_CORTEX8_CFG0_END                                    (0x00004c00002fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_RESV1_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_0_ID                                                        (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_0_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_0_MMR_BASE                                                  (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_0_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_0_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_0_RESV1_0_START                                             (0x00004c00003000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_0_RESV1_0_END                                               (0x00004c00003fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_RESV2_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_0_ID                                                        (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_0_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_0_MMR_BASE                                                  (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_0_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_0_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_0_RESV2_0_START                                             (0x00004c00004000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_0_RESV2_0_END                                               (0x00004c02003fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_ROM_TABLE_1_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_0_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_0_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_0_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_0_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_0_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_0_ROM_TABLE_1_0_START                                 (0x00004c20000000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_0_ROM_TABLE_1_0_END                                   (0x00004c20000fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CSCTI_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_0_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_0_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_0_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_0_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_0_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_0_CSCTI0_START                                          (0x00004c20001000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_0_CSCTI0_END                                            (0x00004c20001fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_DRM_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_0_ID                                                      (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_0_TYPE                                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_0_MMR_BASE                                                (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_0_NUM_REGIONS                                             (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_0_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_0_DRM0_START                                              (0x00004c20002000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_0_DRM0_END                                                (0x00004c20002fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_RESV3_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_0_ID                                                        (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_0_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_0_MMR_BASE                                                  (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_0_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_0_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_0_RESV3_0_START                                             (0x00004c20003000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_0_RESV3_0_END                                               (0x00004c20003fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CSTPIU_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_0_ID                                                   (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_0_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_0_MMR_BASE                                             (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_0_NUM_REGIONS                                          (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_0_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_0_CSTPIU0_START                                        (0x00004c20004000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_0_CSTPIU0_END                                          (0x00004c20004fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CTF_CFG_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_0_ID                                                      (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_0_TYPE                                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_0_MMR_BASE                                                (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_0_NUM_REGIONS                                             (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_0_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_0_CTF0_START                                              (0x00004c20005000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_0_CTF0_END                                                (0x00004c20005fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_RESV4_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_0_ID                                                        (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_0_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_0_MMR_BASE                                                  (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_0_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_0_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_0_RESV4_0_START                                             (0x00004c20006000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_0_RESV4_0_END                                               (0x00004c21005fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_EXT_APB_0 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_0_ID                                                      (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_0_TYPE                                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_0_MMR_BASE                                                (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_0_NUM_REGIONS                                             (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_0_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_0_EXT_APB0_START                                          (0x00004c30000000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_0_EXT_APB0_END                                            (0x00004c3fffffffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_ROM_TABLE_0_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_1_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_1_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_1_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_1_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_1_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_1_ROM_TABLE_0_1_START                                 (0x00004c40000000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_0_1_ROM_TABLE_0_1_END                                   (0x00004c40000fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_RESV0_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_1_ID                                                        (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_1_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_1_MMR_BASE                                                  (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_1_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_1_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_1_RESV0_1_START                                             (0x00004c40001000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV0_1_RESV0_1_END                                               (0x00004c40001fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CFGAP_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_1_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_1_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_1_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_1_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_1_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_1_CFGAP1_START                                          (0x00004c40002000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CFGAP_CFG_1_CFGAP1_END                                            (0x00004c400020ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_APBAP_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_1_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_1_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_1_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_1_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_1_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_1_APBAP1_START                                          (0x00004c40002100U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_APBAP_CFG_1_APBAP1_END                                            (0x00004c400021ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_AXIAP_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_1_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_1_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_1_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_1_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_1_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_1_AXIAP1_START                                          (0x00004c40002200U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_AXIAP_CFG_1_AXIAP1_END                                            (0x00004c400022ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_PWRAP_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_1_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_1_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_1_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_1_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_1_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_1_PWRAP1_START                                          (0x00004c40002300U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PWRAP_CFG_1_PWRAP1_END                                            (0x00004c400023ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_PVIEW_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_1_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_1_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_1_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_1_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_1_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_1_PVIEW1_START                                          (0x00004c40002400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_PVIEW_CFG_1_PVIEW1_END                                            (0x00004c400024ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_JTAGAP_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_1_ID                                                   (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_1_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_1_MMR_BASE                                             (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_1_NUM_REGIONS                                          (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_1_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_1_JTAGAP1_START                                        (0x00004c40002500U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_JTAGAP_CFG_1_JTAGAP1_END                                          (0x00004c400025ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_SECAP_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_1_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_1_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_1_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_1_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_1_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_1_SECAP1_START                                          (0x00004c40002600U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_SECAP_CFG_1_SECAP1_END                                            (0x00004c400026ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX0_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_1_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_1_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_1_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_1_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_1_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_1_CORTEX0_CFG1_START                                  (0x00004c40002700U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX0_CFG_1_CORTEX0_CFG1_END                                    (0x00004c400027ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX1_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_1_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_1_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_1_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_1_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_1_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_1_CORTEX1_CFG1_START                                  (0x00004c40002800U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX1_CFG_1_CORTEX1_CFG1_END                                    (0x00004c400028ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX2_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_1_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_1_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_1_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_1_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_1_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_1_CORTEX2_CFG1_START                                  (0x00004c40002900U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX2_CFG_1_CORTEX2_CFG1_END                                    (0x00004c400029ffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX3_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_1_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_1_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_1_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_1_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_1_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_1_CORTEX3_CFG1_START                                  (0x00004c40002a00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX3_CFG_1_CORTEX3_CFG1_END                                    (0x00004c40002affU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX4_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_1_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_1_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_1_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_1_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_1_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_1_CORTEX4_CFG1_START                                  (0x00004c40002b00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX4_CFG_1_CORTEX4_CFG1_END                                    (0x00004c40002bffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX5_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_1_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_1_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_1_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_1_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_1_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_1_CORTEX5_CFG1_START                                  (0x00004c40002c00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX5_CFG_1_CORTEX5_CFG1_END                                    (0x00004c40002cffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX6_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_1_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_1_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_1_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_1_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_1_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_1_CORTEX6_CFG1_START                                  (0x00004c40002d00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX6_CFG_1_CORTEX6_CFG1_END                                    (0x00004c40002dffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX7_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_1_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_1_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_1_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_1_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_1_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_1_CORTEX7_CFG1_START                                  (0x00004c40002e00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX7_CFG_1_CORTEX7_CFG1_END                                    (0x00004c40002effU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CORTEX8_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_1_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_1_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_1_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_1_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_1_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_1_CORTEX8_CFG1_START                                  (0x00004c40002f00U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CORTEX8_CFG_1_CORTEX8_CFG1_END                                    (0x00004c40002fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_RESV1_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_1_ID                                                        (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_1_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_1_MMR_BASE                                                  (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_1_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_1_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_1_RESV1_1_START                                             (0x00004c40003000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV1_1_RESV1_1_END                                               (0x00004c40003fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_RESV2_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_1_ID                                                        (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_1_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_1_MMR_BASE                                                  (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_1_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_1_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_1_RESV2_1_START                                             (0x00004c40004000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV2_1_RESV2_1_END                                               (0x00004c42003fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_ROM_TABLE_1_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_1_ID                                                  (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_1_TYPE                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_1_MMR_BASE                                            (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_1_NUM_REGIONS                                         (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_1_NUM_PRIV_IDS_PER_REGION                             (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_1_ROM_TABLE_1_1_START                                 (0x00004c60000000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_ROM_TABLE_1_1_ROM_TABLE_1_1_END                                   (0x00004c60000fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CSCTI_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_1_ID                                                    (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_1_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_1_MMR_BASE                                              (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_1_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_1_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_1_CSCTI1_START                                          (0x00004c60001000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSCTI_CFG_1_CSCTI1_END                                            (0x00004c60001fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_DRM_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_1_ID                                                      (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_1_TYPE                                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_1_MMR_BASE                                                (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_1_NUM_REGIONS                                             (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_1_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_1_DRM1_START                                              (0x00004c60002000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_DRM_CFG_1_DRM1_END                                                (0x00004c60002fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_RESV3_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_1_ID                                                        (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_1_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_1_MMR_BASE                                                  (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_1_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_1_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_1_RESV3_1_START                                             (0x00004c60003000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV3_1_RESV3_1_END                                               (0x00004c60003fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CSTPIU_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_1_ID                                                   (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_1_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_1_MMR_BASE                                             (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_1_NUM_REGIONS                                          (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_1_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_1_CSTPIU1_START                                        (0x00004c60004000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CSTPIU_CFG_1_CSTPIU1_END                                          (0x00004c60004fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_CTF_CFG_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_1_ID                                                      (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_1_TYPE                                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_1_MMR_BASE                                                (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_1_NUM_REGIONS                                             (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_1_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_1_CTF1_START                                              (0x00004c60005000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_CTF_CFG_1_CTF1_END                                                (0x00004c60005fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_RESV4_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_1_ID                                                        (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_1_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_1_MMR_BASE                                                  (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_1_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_1_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_1_RESV4_1_START                                             (0x00004c60006000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_RESV4_1_RESV4_1_END                                               (0x00004c61005fffU)
+
+/* Properties of firewall at slave: DEBUGSS_WRAP0_EXT_APB_1 */
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_1_ID                                                      (2465U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_1_TYPE                                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_1_MMR_BASE                                                (0x00000045268400U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_1_NUM_REGIONS                                             (1U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_1_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_1_EXT_APB1_START                                          (0x00004c70000000U)
+#define CSL_STD_FW_DEBUGSS_WRAP0_EXT_APB_1_EXT_APB1_END                                            (0x00004c7fffffffU)
+
+/* Properties of firewall at slave: CCDEBUGSS1_SYS_REGS */
+#define CSL_STD_FW_CCDEBUGSS1_SYS_REGS_ID                                                          (2466U)
+#define CSL_STD_FW_CCDEBUGSS1_SYS_REGS_TYPE                                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_CCDEBUGSS1_SYS_REGS_MMR_BASE                                                    (0x00000045268800U)
+#define CSL_STD_FW_CCDEBUGSS1_SYS_REGS_NUM_REGIONS                                                 (1U)
+#define CSL_STD_FW_CCDEBUGSS1_SYS_REGS_NUM_PRIV_IDS_PER_REGION                                     (3U)
+#define CSL_STD_FW_CCDEBUGSS1_SYS_REGS_SYS_START                                                   (0x00000008004000U)
+#define CSL_STD_FW_CCDEBUGSS1_SYS_REGS_SYS_END                                                     (0x00000008004fffU)
+
+/* Properties of firewall at slave: CCDEBUGSS0_SYS_REGS */
+#define CSL_STD_FW_CCDEBUGSS0_SYS_REGS_ID                                                          (2467U)
+#define CSL_STD_FW_CCDEBUGSS0_SYS_REGS_TYPE                                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_CCDEBUGSS0_SYS_REGS_MMR_BASE                                                    (0x00000045268c00U)
+#define CSL_STD_FW_CCDEBUGSS0_SYS_REGS_NUM_REGIONS                                                 (1U)
+#define CSL_STD_FW_CCDEBUGSS0_SYS_REGS_NUM_PRIV_IDS_PER_REGION                                     (3U)
+#define CSL_STD_FW_CCDEBUGSS0_SYS_REGS_SYS_START                                                   (0x00000008008000U)
+#define CSL_STD_FW_CCDEBUGSS0_SYS_REGS_SYS_END                                                     (0x00000008008fffU)
+
+/* Properties of firewall at slave: DEBUGSS0_SYS_REGS */
+#define CSL_STD_FW_DEBUGSS0_SYS_REGS_ID                                                            (2468U)
+#define CSL_STD_FW_DEBUGSS0_SYS_REGS_TYPE                                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUGSS0_SYS_REGS_MMR_BASE                                                      (0x00000045269000U)
+#define CSL_STD_FW_DEBUGSS0_SYS_REGS_NUM_REGIONS                                                   (1U)
+#define CSL_STD_FW_DEBUGSS0_SYS_REGS_NUM_PRIV_IDS_PER_REGION                                       (3U)
+#define CSL_STD_FW_DEBUGSS0_SYS_REGS_SYS_START                                                     (0x00000008000000U)
+#define CSL_STD_FW_DEBUGSS0_SYS_REGS_SYS_END                                                       (0x00000008000fffU)
+
+/* Properties of firewall at slave: DEBUG_PSILSS0_MMRS */
+#define CSL_STD_FW_DEBUG_PSILSS0_MMRS_ID                                                           (2472U)
+#define CSL_STD_FW_DEBUG_PSILSS0_MMRS_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_DEBUG_PSILSS0_MMRS_MMR_BASE                                                     (0x0000004526a000U)
+#define CSL_STD_FW_DEBUG_PSILSS0_MMRS_NUM_REGIONS                                                  (1U)
+#define CSL_STD_FW_DEBUG_PSILSS0_MMRS_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_DEBUG_PSILSS0_MMRS_MMRS_START                                                   (0x00000003408000U)
+#define CSL_STD_FW_DEBUG_PSILSS0_MMRS_MMRS_END                                                     (0x00000003408fffU)
+
+/* Properties of firewall at slave: CBASS_DEBUG0_ERR_REGS */
+#define CSL_STD_FW_CBASS_DEBUG0_ERR_REGS_ID                                                        (2494U)
+#define CSL_STD_FW_CBASS_DEBUG0_ERR_REGS_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_DEBUG0_ERR_REGS_MMR_BASE                                                  (0x0000004526f800U)
+#define CSL_STD_FW_CBASS_DEBUG0_ERR_REGS_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_CBASS_DEBUG0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_CBASS_DEBUG0_ERR_REGS_ERR_START                                                 (0x00000002a80000U)
+#define CSL_STD_FW_CBASS_DEBUG0_ERR_REGS_ERR_END                                                   (0x00000002a803ffU)
+
+/* Properties of firewall at slave: CBASS_DATADEBUG0_ERR_REGS */
+#define CSL_STD_FW_CBASS_DATADEBUG0_ERR_REGS_ID                                                    (2495U)
+#define CSL_STD_FW_CBASS_DATADEBUG0_ERR_REGS_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_DATADEBUG0_ERR_REGS_MMR_BASE                                              (0x0000004526fc00U)
+#define CSL_STD_FW_CBASS_DATADEBUG0_ERR_REGS_NUM_REGIONS                                           (1U)
+#define CSL_STD_FW_CBASS_DATADEBUG0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_CBASS_DATADEBUG0_ERR_REGS_ERR_START                                             (0x00000002a86000U)
+#define CSL_STD_FW_CBASS_DATADEBUG0_ERR_REGS_ERR_END                                               (0x00000002a863ffU)
+
+/* Properties of firewall at slave: SA2_CPSW_PSILSS0_MMRS */
+#define CSL_STD_FW_SA2_CPSW_PSILSS0_MMRS_ID                                                        (2530U)
+#define CSL_STD_FW_SA2_CPSW_PSILSS0_MMRS_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_SA2_CPSW_PSILSS0_MMRS_MMR_BASE                                                  (0x00000045278800U)
+#define CSL_STD_FW_SA2_CPSW_PSILSS0_MMRS_NUM_REGIONS                                               (1U)
+#define CSL_STD_FW_SA2_CPSW_PSILSS0_MMRS_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_SA2_CPSW_PSILSS0_MMRS_MMRS_START                                                (0x00000003414000U)
+#define CSL_STD_FW_SA2_CPSW_PSILSS0_MMRS_MMRS_END                                                  (0x00000003414fffU)
+
+/* Properties of firewall at slave: PBIST3_MEM */
+#define CSL_STD_FW_PBIST3_MEM_ID                                                                   (2531U)
+#define CSL_STD_FW_PBIST3_MEM_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_PBIST3_MEM_MMR_BASE                                                             (0x00000045278c00U)
+#define CSL_STD_FW_PBIST3_MEM_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_PBIST3_MEM_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_PBIST3_MEM_START                                                                (0x00000003370000U)
+#define CSL_STD_FW_PBIST3_MEM_END                                                                  (0x000000033703ffU)
+
+/* Properties of firewall at slave: PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT0 */
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT0_ID                                            (2547U)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT0_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT0_MMR_BASE                                      (0x0000004527cc00U)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT0_NUM_REGIONS                                   (24U)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT0_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT0_DAT0_START                                    (0x00000018000000U)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT0_DAT0_END                                      (0x0000001fffffffU)
+
+/* Properties of firewall at slave: PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT1 */
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT1_ID                                            (2547U)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT1_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT1_MMR_BASE                                      (0x0000004527cc00U)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT1_NUM_REGIONS                                   (24U)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT1_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT1_DAT1_START                                    (0x00004100000000U)
+#define CSL_STD_FW_PCIE1_CORE_CORE_DAT_SLV_PCIE_DAT1_DAT1_END                                      (0x000041ffffffffU)
+
+/* Properties of firewall at slave: VUSR_DUAL0_VUSR */
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_ID                                                              (2550U)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_MMR_BASE                                                        (0x0000004527d800U)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_NUM_REGIONS                                                     (24U)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_VUSR_START                                                      (0x00000002960000U)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_VUSR_END                                                        (0x00000002961fffU)
+
+/* Properties of firewall at slave: VUSR_DUAL0_VUSR_PORTAL */
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_PORTAL_ID                                                       (2550U)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_PORTAL_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_PORTAL_MMR_BASE                                                 (0x0000004527d800U)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_PORTAL_NUM_REGIONS                                              (24U)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_PORTAL_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_PORTAL_VUSR_PORTAL_START                                        (0x00005800000000U)
+#define CSL_STD_FW_VUSR_DUAL0_VUSR_PORTAL_VUSR_PORTAL_END                                          (0x000058ffffffffU)
+
+/* Properties of firewall at slave: SERDES_10G0_WIZ16B8M4CT2 */
+#define CSL_STD_FW_SERDES_10G0_WIZ16B8M4CT2_ID                                                     (2552U)
+#define CSL_STD_FW_SERDES_10G0_WIZ16B8M4CT2_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_SERDES_10G0_WIZ16B8M4CT2_MMR_BASE                                               (0x0000004527e000U)
+#define CSL_STD_FW_SERDES_10G0_WIZ16B8M4CT2_NUM_REGIONS                                            (1U)
+#define CSL_STD_FW_SERDES_10G0_WIZ16B8M4CT2_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_SERDES_10G0_WIZ16B8M4CT2_START                                                  (0x00000005060000U)
+#define CSL_STD_FW_SERDES_10G0_WIZ16B8M4CT2_END                                                    (0x0000000506ffffU)
+
+/* Properties of firewall at slave: ECC_AGGR5_REGS */
+#define CSL_STD_FW_ECC_AGGR5_REGS_ID                                                               (2556U)
+#define CSL_STD_FW_ECC_AGGR5_REGS_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_ECC_AGGR5_REGS_MMR_BASE                                                         (0x0000004527f000U)
+#define CSL_STD_FW_ECC_AGGR5_REGS_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_ECC_AGGR5_REGS_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_ECC_AGGR5_REGS_ECC_AGGR_START                                                   (0x00000002af5000U)
+#define CSL_STD_FW_ECC_AGGR5_REGS_ECC_AGGR_END                                                     (0x00000002af53ffU)
+
+/* Properties of firewall at slave: AEP_HC2_CBASS0_ERR_REGS */
+#define CSL_STD_FW_AEP_HC2_CBASS0_ERR_REGS_ID                                                      (2557U)
+#define CSL_STD_FW_AEP_HC2_CBASS0_ERR_REGS_TYPE                                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_AEP_HC2_CBASS0_ERR_REGS_MMR_BASE                                                (0x0000004527f400U)
+#define CSL_STD_FW_AEP_HC2_CBASS0_ERR_REGS_NUM_REGIONS                                             (1U)
+#define CSL_STD_FW_AEP_HC2_CBASS0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_STD_FW_AEP_HC2_CBASS0_ERR_REGS_ERR_START                                               (0x00000002a83000U)
+#define CSL_STD_FW_AEP_HC2_CBASS0_ERR_REGS_ERR_END                                                 (0x00000002a833ffU)
+
+/* Properties of firewall at slave: AEP_HC_CFG_CBASS0_ERR_REGS */
+#define CSL_STD_FW_AEP_HC_CFG_CBASS0_ERR_REGS_ID                                                   (2558U)
+#define CSL_STD_FW_AEP_HC_CFG_CBASS0_ERR_REGS_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_AEP_HC_CFG_CBASS0_ERR_REGS_MMR_BASE                                             (0x0000004527f800U)
+#define CSL_STD_FW_AEP_HC_CFG_CBASS0_ERR_REGS_NUM_REGIONS                                          (1U)
+#define CSL_STD_FW_AEP_HC_CFG_CBASS0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_AEP_HC_CFG_CBASS0_ERR_REGS_ERR_START                                            (0x00000002a89000U)
+#define CSL_STD_FW_AEP_HC_CFG_CBASS0_ERR_REGS_ERR_END                                              (0x00000002a893ffU)
+
+/* Properties of firewall at slave: PCIE1_CORE_PCIE_INTD_CFG_INTD_CFG */
+#define CSL_STD_FW_PCIE1_CORE_PCIE_INTD_CFG_INTD_CFG_ID                                            (2577U)
+#define CSL_STD_FW_PCIE1_CORE_PCIE_INTD_CFG_INTD_CFG_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_PCIE1_CORE_PCIE_INTD_CFG_INTD_CFG_MMR_BASE                                      (0x00000045284400U)
+#define CSL_STD_FW_PCIE1_CORE_PCIE_INTD_CFG_INTD_CFG_NUM_REGIONS                                   (7U)
+#define CSL_STD_FW_PCIE1_CORE_PCIE_INTD_CFG_INTD_CFG_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_PCIE1_CORE_PCIE_INTD_CFG_INTD_CFG_CORE_PCIE_INTD_CFG_INTD_CFG_START             (0x00000002910000U)
+#define CSL_STD_FW_PCIE1_CORE_PCIE_INTD_CFG_INTD_CFG_CORE_PCIE_INTD_CFG_INTD_CFG_END               (0x00000002910fffU)
+
+/* Properties of firewall at slave: PCIE1_CORE_VMAP_MMRS */
+#define CSL_STD_FW_PCIE1_CORE_VMAP_MMRS_ID                                                         (2577U)
+#define CSL_STD_FW_PCIE1_CORE_VMAP_MMRS_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_PCIE1_CORE_VMAP_MMRS_MMR_BASE                                                   (0x00000045284400U)
+#define CSL_STD_FW_PCIE1_CORE_VMAP_MMRS_NUM_REGIONS                                                (7U)
+#define CSL_STD_FW_PCIE1_CORE_VMAP_MMRS_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_PCIE1_CORE_VMAP_MMRS_CORE_VMAP_MMRS_START                                       (0x00000002914000U)
+#define CSL_STD_FW_PCIE1_CORE_VMAP_MMRS_CORE_VMAP_MMRS_END                                         (0x00000002914fffU)
+
+/* Properties of firewall at slave: PCIE1_CORE_ECC_AGGR0_REGS */
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR0_REGS_ID                                                    (2577U)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR0_REGS_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR0_REGS_MMR_BASE                                              (0x00000045284400U)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR0_REGS_NUM_REGIONS                                           (7U)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR0_REGS_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR0_REGS_CORE_ECC_AGGR0_START                                  (0x00000002915000U)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR0_REGS_CORE_ECC_AGGR0_END                                    (0x000000029153ffU)
+
+/* Properties of firewall at slave: PCIE1_CORE_CPTS_CFG_CPTS_VBUSP */
+#define CSL_STD_FW_PCIE1_CORE_CPTS_CFG_CPTS_VBUSP_ID                                               (2577U)
+#define CSL_STD_FW_PCIE1_CORE_CPTS_CFG_CPTS_VBUSP_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_PCIE1_CORE_CPTS_CFG_CPTS_VBUSP_MMR_BASE                                         (0x00000045284400U)
+#define CSL_STD_FW_PCIE1_CORE_CPTS_CFG_CPTS_VBUSP_NUM_REGIONS                                      (7U)
+#define CSL_STD_FW_PCIE1_CORE_CPTS_CFG_CPTS_VBUSP_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_PCIE1_CORE_CPTS_CFG_CPTS_VBUSP_CORE_CPTS_CFG_CPTS_VBUSP_START                   (0x00000002916000U)
+#define CSL_STD_FW_PCIE1_CORE_CPTS_CFG_CPTS_VBUSP_CORE_CPTS_CFG_CPTS_VBUSP_END                     (0x000000029163ffU)
+
+/* Properties of firewall at slave: PCIE1_CORE_USER_CFG_USER_CFG */
+#define CSL_STD_FW_PCIE1_CORE_USER_CFG_USER_CFG_ID                                                 (2577U)
+#define CSL_STD_FW_PCIE1_CORE_USER_CFG_USER_CFG_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_PCIE1_CORE_USER_CFG_USER_CFG_MMR_BASE                                           (0x00000045284400U)
+#define CSL_STD_FW_PCIE1_CORE_USER_CFG_USER_CFG_NUM_REGIONS                                        (7U)
+#define CSL_STD_FW_PCIE1_CORE_USER_CFG_USER_CFG_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_PCIE1_CORE_USER_CFG_USER_CFG_CORE_USER_CFG_USER_CFG_START                       (0x00000002917000U)
+#define CSL_STD_FW_PCIE1_CORE_USER_CFG_USER_CFG_CORE_USER_CFG_USER_CFG_END                         (0x000000029173ffU)
+
+/* Properties of firewall at slave: PCIE1_CORE_ECC_AGGR1_REGS */
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR1_REGS_ID                                                    (2577U)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR1_REGS_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR1_REGS_MMR_BASE                                              (0x00000045284400U)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR1_REGS_NUM_REGIONS                                           (7U)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR1_REGS_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR1_REGS_CORE_ECC_AGGR1_START                                  (0x00000002a02000U)
+#define CSL_STD_FW_PCIE1_CORE_ECC_AGGR1_REGS_CORE_ECC_AGGR1_END                                    (0x00000002a023ffU)
+
+/* Properties of firewall at slave: PCIE1_CORE_DBN_CFG_PCIE_CORE_REG */
+#define CSL_STD_FW_PCIE1_CORE_DBN_CFG_PCIE_CORE_REG_ID                                             (2577U)
+#define CSL_STD_FW_PCIE1_CORE_DBN_CFG_PCIE_CORE_REG_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_PCIE1_CORE_DBN_CFG_PCIE_CORE_REG_MMR_BASE                                       (0x00000045284400U)
+#define CSL_STD_FW_PCIE1_CORE_DBN_CFG_PCIE_CORE_REG_NUM_REGIONS                                    (7U)
+#define CSL_STD_FW_PCIE1_CORE_DBN_CFG_PCIE_CORE_REG_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_PCIE1_CORE_DBN_CFG_PCIE_CORE_REG_CORE_DBN_CFG_PCIE_CORE_START                   (0x0000000d800000U)
+#define CSL_STD_FW_PCIE1_CORE_DBN_CFG_PCIE_CORE_REG_CORE_DBN_CFG_PCIE_CORE_END                     (0x0000000dffffffU)
+
+/* Properties of firewall at slave: SA2_UL0_ECC_REGS */
+#define CSL_STD_FW_SA2_UL0_ECC_REGS_ID                                                             (2578U)
+#define CSL_STD_FW_SA2_UL0_ECC_REGS_TYPE                                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_SA2_UL0_ECC_REGS_MMR_BASE                                                       (0x00000045284800U)
+#define CSL_STD_FW_SA2_UL0_ECC_REGS_NUM_REGIONS                                                    (5U)
+#define CSL_STD_FW_SA2_UL0_ECC_REGS_NUM_PRIV_IDS_PER_REGION                                        (3U)
+#define CSL_STD_FW_SA2_UL0_ECC_REGS_ECC_AGGR_START                                                 (0x00000002a23000U)
+#define CSL_STD_FW_SA2_UL0_ECC_REGS_ECC_AGGR_END                                                   (0x00000002a233ffU)
+
+/* Properties of firewall at slave: SA2_UL0_MMRS */
+#define CSL_STD_FW_SA2_UL0_MMRS_ID                                                                 (2578U)
+#define CSL_STD_FW_SA2_UL0_MMRS_TYPE                                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_SA2_UL0_MMRS_MMR_BASE                                                           (0x00000045284800U)
+#define CSL_STD_FW_SA2_UL0_MMRS_NUM_REGIONS                                                        (5U)
+#define CSL_STD_FW_SA2_UL0_MMRS_NUM_PRIV_IDS_PER_REGION                                            (3U)
+#define CSL_STD_FW_SA2_UL0_MMRS_START                                                              (0x00000004e00000U)
+#define CSL_STD_FW_SA2_UL0_MMRS_END                                                                (0x00000004e00fffU)
+
+/* Properties of firewall at slave: SA2_UL0_MMRA_REGS */
+#define CSL_STD_FW_SA2_UL0_MMRA_REGS_ID                                                            (2578U)
+#define CSL_STD_FW_SA2_UL0_MMRA_REGS_TYPE                                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_SA2_UL0_MMRA_REGS_MMR_BASE                                                      (0x00000045284800U)
+#define CSL_STD_FW_SA2_UL0_MMRA_REGS_NUM_REGIONS                                                   (5U)
+#define CSL_STD_FW_SA2_UL0_MMRA_REGS_NUM_PRIV_IDS_PER_REGION                                       (3U)
+#define CSL_STD_FW_SA2_UL0_MMRA_REGS_MMRA_START                                                    (0x00000004e01000U)
+#define CSL_STD_FW_SA2_UL0_MMRA_REGS_MMRA_END                                                      (0x00000004e011ffU)
+
+/* Properties of firewall at slave: SA2_UL0_EIP_76D_8_BCDF_EIP76_REGISTERS */
+#define CSL_STD_FW_SA2_UL0_EIP_76D_8_BCDF_EIP76_REGISTERS_ID                                       (2578U)
+#define CSL_STD_FW_SA2_UL0_EIP_76D_8_BCDF_EIP76_REGISTERS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_SA2_UL0_EIP_76D_8_BCDF_EIP76_REGISTERS_MMR_BASE                                 (0x00000045284800U)
+#define CSL_STD_FW_SA2_UL0_EIP_76D_8_BCDF_EIP76_REGISTERS_NUM_REGIONS                              (5U)
+#define CSL_STD_FW_SA2_UL0_EIP_76D_8_BCDF_EIP76_REGISTERS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_SA2_UL0_EIP_76D_8_BCDF_EIP76_REGISTERS_EIP_76_START                             (0x00000004e10000U)
+#define CSL_STD_FW_SA2_UL0_EIP_76D_8_BCDF_EIP76_REGISTERS_EIP_76_END                               (0x00000004e1007fU)
+
+/* Properties of firewall at slave: SA2_UL0_EIP_29T2_REGS */
+#define CSL_STD_FW_SA2_UL0_EIP_29T2_REGS_ID                                                        (2578U)
+#define CSL_STD_FW_SA2_UL0_EIP_29T2_REGS_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_SA2_UL0_EIP_29T2_REGS_MMR_BASE                                                  (0x00000045284800U)
+#define CSL_STD_FW_SA2_UL0_EIP_29T2_REGS_NUM_REGIONS                                               (5U)
+#define CSL_STD_FW_SA2_UL0_EIP_29T2_REGS_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_SA2_UL0_EIP_29T2_REGS_EIP_29T2_START                                            (0x00000004e20000U)
+#define CSL_STD_FW_SA2_UL0_EIP_29T2_REGS_EIP_29T2_END                                              (0x00000004e2ffffU)
+
+/* Properties of firewall at slave: MMCSD0_ECC_AGGR_RXMEM_CFG_REGS */
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_RXMEM_CFG_REGS_ID                                               (2579U)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_RXMEM_CFG_REGS_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_RXMEM_CFG_REGS_MMR_BASE                                         (0x00000045284c00U)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_RXMEM_CFG_REGS_NUM_REGIONS                                      (4U)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_RXMEM_CFG_REGS_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_RXMEM_CFG_REGS_ECC_AGGR_RXMEM_START                             (0x00000002a24000U)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_RXMEM_CFG_REGS_ECC_AGGR_RXMEM_END                               (0x00000002a243ffU)
+
+/* Properties of firewall at slave: MMCSD0_ECC_AGGR_TXMEM_CFG_REGS */
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_TXMEM_CFG_REGS_ID                                               (2579U)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_TXMEM_CFG_REGS_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_TXMEM_CFG_REGS_MMR_BASE                                         (0x00000045284c00U)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_TXMEM_CFG_REGS_NUM_REGIONS                                      (4U)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_TXMEM_CFG_REGS_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_TXMEM_CFG_REGS_ECC_AGGR_TXMEM_START                             (0x00000002a25000U)
+#define CSL_STD_FW_MMCSD0_ECC_AGGR_TXMEM_CFG_REGS_ECC_AGGR_TXMEM_END                               (0x00000002a253ffU)
+
+/* Properties of firewall at slave: MMCSD0_SDHC_WRAP_CTL_CFG_CTLCFG */
+#define CSL_STD_FW_MMCSD0_SDHC_WRAP_CTL_CFG_CTLCFG_ID                                              (2579U)
+#define CSL_STD_FW_MMCSD0_SDHC_WRAP_CTL_CFG_CTLCFG_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_MMCSD0_SDHC_WRAP_CTL_CFG_CTLCFG_MMR_BASE                                        (0x00000045284c00U)
+#define CSL_STD_FW_MMCSD0_SDHC_WRAP_CTL_CFG_CTLCFG_NUM_REGIONS                                     (4U)
+#define CSL_STD_FW_MMCSD0_SDHC_WRAP_CTL_CFG_CTLCFG_NUM_PRIV_IDS_PER_REGION                         (3U)
+#define CSL_STD_FW_MMCSD0_SDHC_WRAP_CTL_CFG_CTLCFG_CTL_CFG_START                                   (0x00000004f80000U)
+#define CSL_STD_FW_MMCSD0_SDHC_WRAP_CTL_CFG_CTLCFG_CTL_CFG_END                                     (0x00000004f80fffU)
+
+/* Properties of firewall at slave: MMCSD0_REGS_SS_CFG_SSCFG */
+#define CSL_STD_FW_MMCSD0_REGS_SS_CFG_SSCFG_ID                                                     (2579U)
+#define CSL_STD_FW_MMCSD0_REGS_SS_CFG_SSCFG_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MMCSD0_REGS_SS_CFG_SSCFG_MMR_BASE                                               (0x00000045284c00U)
+#define CSL_STD_FW_MMCSD0_REGS_SS_CFG_SSCFG_NUM_REGIONS                                            (4U)
+#define CSL_STD_FW_MMCSD0_REGS_SS_CFG_SSCFG_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_MMCSD0_REGS_SS_CFG_SSCFG_SS_CFG_START                                           (0x00000004f88000U)
+#define CSL_STD_FW_MMCSD0_REGS_SS_CFG_SSCFG_SS_CFG_END                                             (0x00000004f883ffU)
+
+/* Properties of firewall at slave: USB0_RAMS_INJ_CFG_CFG */
+#define CSL_STD_FW_USB0_RAMS_INJ_CFG_CFG_ID                                                        (2580U)
+#define CSL_STD_FW_USB0_RAMS_INJ_CFG_CFG_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_USB0_RAMS_INJ_CFG_CFG_MMR_BASE                                                  (0x00000045285000U)
+#define CSL_STD_FW_USB0_RAMS_INJ_CFG_CFG_NUM_REGIONS                                               (4U)
+#define CSL_STD_FW_USB0_RAMS_INJ_CFG_CFG_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_USB0_RAMS_INJ_CFG_CFG_RAMS_INJ_CFG_START                                        (0x00000002a10000U)
+#define CSL_STD_FW_USB0_RAMS_INJ_CFG_CFG_RAMS_INJ_CFG_END                                          (0x00000002a103ffU)
+
+/* Properties of firewall at slave: USB0_A_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_USB0_A_ECC_AGGR_CFG_REGS_ID                                                     (2580U)
+#define CSL_STD_FW_USB0_A_ECC_AGGR_CFG_REGS_TYPE                                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_USB0_A_ECC_AGGR_CFG_REGS_MMR_BASE                                               (0x00000045285000U)
+#define CSL_STD_FW_USB0_A_ECC_AGGR_CFG_REGS_NUM_REGIONS                                            (4U)
+#define CSL_STD_FW_USB0_A_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                                (3U)
+#define CSL_STD_FW_USB0_A_ECC_AGGR_CFG_REGS_ECC_AGGR_START                                         (0x00000002a13000U)
+#define CSL_STD_FW_USB0_A_ECC_AGGR_CFG_REGS_ECC_AGGR_END                                           (0x00000002a133ffU)
+
+/* Properties of firewall at slave: USB0_MMR_MMRVBP_USBSS_CMN */
+#define CSL_STD_FW_USB0_MMR_MMRVBP_USBSS_CMN_ID                                                    (2580U)
+#define CSL_STD_FW_USB0_MMR_MMRVBP_USBSS_CMN_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_USB0_MMR_MMRVBP_USBSS_CMN_MMR_BASE                                              (0x00000045285000U)
+#define CSL_STD_FW_USB0_MMR_MMRVBP_USBSS_CMN_NUM_REGIONS                                           (4U)
+#define CSL_STD_FW_USB0_MMR_MMRVBP_USBSS_CMN_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_USB0_MMR_MMRVBP_USBSS_CMN_MMR_MMRVBP_USBSS_CMN_START                            (0x00000004104000U)
+#define CSL_STD_FW_USB0_MMR_MMRVBP_USBSS_CMN_MMR_MMRVBP_USBSS_CMN_END                              (0x000000041040ffU)
+
+/* Properties of firewall at slave: USB0_VBP2APB_WRAP_CONTROLLER_VBP_CORE_ADDR_MAP */
+#define CSL_STD_FW_USB0_VBP2APB_WRAP_CONTROLLER_VBP_CORE_ADDR_MAP_ID                               (2580U)
+#define CSL_STD_FW_USB0_VBP2APB_WRAP_CONTROLLER_VBP_CORE_ADDR_MAP_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_USB0_VBP2APB_WRAP_CONTROLLER_VBP_CORE_ADDR_MAP_MMR_BASE                         (0x00000045285000U)
+#define CSL_STD_FW_USB0_VBP2APB_WRAP_CONTROLLER_VBP_CORE_ADDR_MAP_NUM_REGIONS                      (4U)
+#define CSL_STD_FW_USB0_VBP2APB_WRAP_CONTROLLER_VBP_CORE_ADDR_MAP_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_STD_FW_USB0_VBP2APB_WRAP_CONTROLLER_VBP_CORE_ADDR_MAP_VBP2APB_WRAP_CONTROLLER_VBP_CORE_ADDR_MAP_START (0x00000006000000U)
+#define CSL_STD_FW_USB0_VBP2APB_WRAP_CONTROLLER_VBP_CORE_ADDR_MAP_VBP2APB_WRAP_CONTROLLER_VBP_CORE_ADDR_MAP_END (0x000000063fffffU)
+
+/* Properties of firewall at slave: USB0_PHY2 */
+#define CSL_STD_FW_USB0_PHY2_ID                                                                    (2581U)
+#define CSL_STD_FW_USB0_PHY2_TYPE                                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_USB0_PHY2_MMR_BASE                                                              (0x00000045285400U)
+#define CSL_STD_FW_USB0_PHY2_NUM_REGIONS                                                           (1U)
+#define CSL_STD_FW_USB0_PHY2_NUM_PRIV_IDS_PER_REGION                                               (3U)
+#define CSL_STD_FW_USB0_PHY2_PHY2_START                                                            (0x00000004108000U)
+#define CSL_STD_FW_USB0_PHY2_PHY2_END                                                              (0x000000041083ffU)
+
+/* Properties of firewall at slave: VUSR_DUAL0_REGS */
+#define CSL_STD_FW_VUSR_DUAL0_REGS_ID                                                              (2585U)
+#define CSL_STD_FW_VUSR_DUAL0_REGS_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_VUSR_DUAL0_REGS_MMR_BASE                                                        (0x00000045286400U)
+#define CSL_STD_FW_VUSR_DUAL0_REGS_NUM_REGIONS                                                     (1U)
+#define CSL_STD_FW_VUSR_DUAL0_REGS_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_VUSR_DUAL0_REGS_REGS_START                                                      (0x00000002afd000U)
+#define CSL_STD_FW_VUSR_DUAL0_REGS_REGS_END                                                        (0x00000002afd3ffU)
+
+/* Properties of firewall at slave: VPAC0_VPAC_TOP_PAC_BASE_MEM_SLV_CBASS_STRIPE_MSRAM_SLV */
+#define CSL_STD_FW_VPAC0_VPAC_TOP_PAC_BASE_MEM_SLV_CBASS_STRIPE_MSRAM_SLV_ID                       (2624U)
+#define CSL_STD_FW_VPAC0_VPAC_TOP_PAC_BASE_MEM_SLV_CBASS_STRIPE_MSRAM_SLV_TYPE                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_VPAC_TOP_PAC_BASE_MEM_SLV_CBASS_STRIPE_MSRAM_SLV_MMR_BASE                 (0x00000045290000U)
+#define CSL_STD_FW_VPAC0_VPAC_TOP_PAC_BASE_MEM_SLV_CBASS_STRIPE_MSRAM_SLV_NUM_REGIONS              (8U)
+#define CSL_STD_FW_VPAC0_VPAC_TOP_PAC_BASE_MEM_SLV_CBASS_STRIPE_MSRAM_SLV_NUM_PRIV_IDS_PER_REGION  (3U)
+#define CSL_STD_FW_VPAC0_VPAC_TOP_PAC_BASE_MEM_SLV_CBASS_STRIPE_MSRAM_SLV_VPAC_TOP_PAC_BASE_MEM_SLV_CBASS_STRIPE_MSRAM_SLV_START (0x00004f00000000U)
+#define CSL_STD_FW_VPAC0_VPAC_TOP_PAC_BASE_MEM_SLV_CBASS_STRIPE_MSRAM_SLV_VPAC_TOP_PAC_BASE_MEM_SLV_CBASS_STRIPE_MSRAM_SLV_END (0x00004f0007ffffU)
+
+/* Properties of firewall at slave: CODEC0_VPU_REGS */
+#define CSL_STD_FW_CODEC0_VPU_REGS_ID                                                              (2714U)
+#define CSL_STD_FW_CODEC0_VPU_REGS_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_CODEC0_VPU_REGS_MMR_BASE                                                        (0x000000452a6800U)
+#define CSL_STD_FW_CODEC0_VPU_REGS_NUM_REGIONS                                                     (12U)
+#define CSL_STD_FW_CODEC0_VPU_REGS_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_CODEC0_VPU_REGS_VPU_START                                                       (0x00000004210000U)
+#define CSL_STD_FW_CODEC0_VPU_REGS_VPU_END                                                         (0x0000000421ffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_COMMON_M */
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_M_ID                                                        (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_M_TYPE                                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_M_MMR_BASE                                                  (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_M_NUM_REGIONS                                               (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_M_NUM_PRIV_IDS_PER_REGION                                   (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_M_DISPC_0_COMMON_M_START                                    (0x00000004a00000U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_M_DISPC_0_COMMON_M_END                                      (0x00000004a0ffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_COMMON_S0 */
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S0_ID                                                       (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S0_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S0_MMR_BASE                                                 (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S0_NUM_REGIONS                                              (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S0_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S0_DISPC_0_COMMON_S0_START                                  (0x00000004a10000U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S0_DISPC_0_COMMON_S0_END                                    (0x00000004a1ffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_VIDL1 */
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL1_ID                                                           (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL1_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL1_MMR_BASE                                                     (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL1_NUM_REGIONS                                                  (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL1_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL1_VIDL1_START                                                  (0x00000004a20000U)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL1_VIDL1_END                                                    (0x00000004a2ffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_VIDL2 */
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL2_ID                                                           (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL2_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL2_MMR_BASE                                                     (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL2_NUM_REGIONS                                                  (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL2_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL2_VIDL2_START                                                  (0x00000004a30000U)
+#define CSL_STD_FW_DSS0_DISPC_0_VIDL2_VIDL2_END                                                    (0x00000004a3ffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_VID1 */
+#define CSL_STD_FW_DSS0_DISPC_0_VID1_ID                                                            (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_VID1_TYPE                                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_VID1_MMR_BASE                                                      (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_VID1_NUM_REGIONS                                                   (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_VID1_NUM_PRIV_IDS_PER_REGION                                       (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_VID1_VID1_START                                                    (0x00000004a50000U)
+#define CSL_STD_FW_DSS0_DISPC_0_VID1_VID1_END                                                      (0x00000004a5ffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_VID2 */
+#define CSL_STD_FW_DSS0_DISPC_0_VID2_ID                                                            (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_VID2_TYPE                                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_VID2_MMR_BASE                                                      (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_VID2_NUM_REGIONS                                                   (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_VID2_NUM_PRIV_IDS_PER_REGION                                       (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_VID2_VID2_START                                                    (0x00000004a60000U)
+#define CSL_STD_FW_DSS0_DISPC_0_VID2_VID2_END                                                      (0x00000004a6ffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_OVR1 */
+#define CSL_STD_FW_DSS0_DISPC_0_OVR1_ID                                                            (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR1_TYPE                                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR1_MMR_BASE                                                      (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR1_NUM_REGIONS                                                   (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR1_NUM_PRIV_IDS_PER_REGION                                       (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR1_OVR1_START                                                    (0x00000004a70000U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR1_OVR1_END                                                      (0x00000004a7ffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_VP1 */
+#define CSL_STD_FW_DSS0_DISPC_0_VP1_ID                                                             (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP1_TYPE                                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_VP1_MMR_BASE                                                       (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP1_NUM_REGIONS                                                    (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP1_NUM_PRIV_IDS_PER_REGION                                        (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP1_VP1_START                                                      (0x00000004a80000U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP1_VP1_END                                                        (0x00000004a8ffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_OVR2 */
+#define CSL_STD_FW_DSS0_DISPC_0_OVR2_ID                                                            (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR2_TYPE                                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR2_MMR_BASE                                                      (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR2_NUM_REGIONS                                                   (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR2_NUM_PRIV_IDS_PER_REGION                                       (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR2_OVR2_START                                                    (0x00000004a90000U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR2_OVR2_END                                                      (0x00000004a9ffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_VP2 */
+#define CSL_STD_FW_DSS0_DISPC_0_VP2_ID                                                             (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP2_TYPE                                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_VP2_MMR_BASE                                                       (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP2_NUM_REGIONS                                                    (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP2_NUM_PRIV_IDS_PER_REGION                                        (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP2_VP2_START                                                      (0x00000004aa0000U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP2_VP2_END                                                        (0x00000004aaffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_OVR3 */
+#define CSL_STD_FW_DSS0_DISPC_0_OVR3_ID                                                            (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR3_TYPE                                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR3_MMR_BASE                                                      (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR3_NUM_REGIONS                                                   (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR3_NUM_PRIV_IDS_PER_REGION                                       (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR3_OVR3_START                                                    (0x00000004ab0000U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR3_OVR3_END                                                      (0x00000004abffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_VP3 */
+#define CSL_STD_FW_DSS0_DISPC_0_VP3_ID                                                             (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP3_TYPE                                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_VP3_MMR_BASE                                                       (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP3_NUM_REGIONS                                                    (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP3_NUM_PRIV_IDS_PER_REGION                                        (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP3_VP3_START                                                      (0x00000004ac0000U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP3_VP3_END                                                        (0x00000004acffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_OVR4 */
+#define CSL_STD_FW_DSS0_DISPC_0_OVR4_ID                                                            (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR4_TYPE                                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR4_MMR_BASE                                                      (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR4_NUM_REGIONS                                                   (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR4_NUM_PRIV_IDS_PER_REGION                                       (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR4_OVR4_START                                                    (0x00000004ad0000U)
+#define CSL_STD_FW_DSS0_DISPC_0_OVR4_OVR4_END                                                      (0x00000004adffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_VP4 */
+#define CSL_STD_FW_DSS0_DISPC_0_VP4_ID                                                             (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP4_TYPE                                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_VP4_MMR_BASE                                                       (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP4_NUM_REGIONS                                                    (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP4_NUM_PRIV_IDS_PER_REGION                                        (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP4_VP4_START                                                      (0x00000004ae0000U)
+#define CSL_STD_FW_DSS0_DISPC_0_VP4_VP4_END                                                        (0x00000004aeffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_WB */
+#define CSL_STD_FW_DSS0_DISPC_0_WB_ID                                                              (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_WB_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_WB_MMR_BASE                                                        (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_WB_NUM_REGIONS                                                     (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_WB_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_WB_WB_START                                                        (0x00000004af0000U)
+#define CSL_STD_FW_DSS0_DISPC_0_WB_WB_END                                                          (0x00000004afffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_COMMON_S1 */
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S1_ID                                                       (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S1_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S1_MMR_BASE                                                 (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S1_NUM_REGIONS                                              (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S1_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S1_DISPC_0_COMMON_S1_START                                  (0x00000004b00000U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S1_DISPC_0_COMMON_S1_END                                    (0x00000004b0ffffU)
+
+/* Properties of firewall at slave: DSS0_DISPC_0_COMMON_S2 */
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S2_ID                                                       (2715U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S2_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S2_MMR_BASE                                                 (0x000000452a6c00U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S2_NUM_REGIONS                                              (17U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S2_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S2_DISPC_0_COMMON_S2_START                                  (0x00000004b10000U)
+#define CSL_STD_FW_DSS0_DISPC_0_COMMON_S2_DISPC_0_COMMON_S2_END                                    (0x00000004b1ffffU)
+
+/* Properties of firewall at slave: DSS_DSI0_DSI_TOP_ECC_AGGR_SYS_CFG_REGS */
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_ID                                       (2716U)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_MMR_BASE                                 (0x000000452a7000U)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_NUM_REGIONS                              (3U)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_DSI_TOP_ECC_AGGR_SYS_CFG_START           (0x00000004700000U)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_DSI_TOP_ECC_AGGR_SYS_CFG_END             (0x000000047003ffU)
+
+/* Properties of firewall at slave: DSS_DSI0_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP */
+#define CSL_STD_FW_DSS_DSI0_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_ID                                     (2716U)
+#define CSL_STD_FW_DSS_DSI0_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_TYPE                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_DSI0_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_MMR_BASE                               (0x000000452a7000U)
+#define CSL_STD_FW_DSS_DSI0_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_NUM_REGIONS                            (3U)
+#define CSL_STD_FW_DSS_DSI0_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_STD_FW_DSS_DSI0_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_START  (0x00000004710000U)
+#define CSL_STD_FW_DSS_DSI0_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_END    (0x000000047100ffU)
+
+/* Properties of firewall at slave: DSS_DSI0_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS */
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_ID                                    (2716U)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_MMR_BASE                              (0x000000452a7000U)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_NUM_REGIONS                           (3U)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_DSI_TOP_VBUSP_CFG_DSI_0_DSI_START     (0x00000004800000U)
+#define CSL_STD_FW_DSS_DSI0_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_DSI_TOP_VBUSP_CFG_DSI_0_DSI_END       (0x000000048fffffU)
+
+/* Properties of firewall at slave: DSS_DSI1_DSI_TOP_ECC_AGGR_SYS_CFG_REGS */
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_ID                                       (2717U)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_MMR_BASE                                 (0x000000452a7400U)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_NUM_REGIONS                              (3U)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_DSI_TOP_ECC_AGGR_SYS_CFG_START           (0x00000004701000U)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_ECC_AGGR_SYS_CFG_REGS_DSI_TOP_ECC_AGGR_SYS_CFG_END             (0x000000047013ffU)
+
+/* Properties of firewall at slave: DSS_DSI1_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP */
+#define CSL_STD_FW_DSS_DSI1_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_ID                                     (2717U)
+#define CSL_STD_FW_DSS_DSI1_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_TYPE                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_DSI1_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_MMR_BASE                               (0x000000452a7400U)
+#define CSL_STD_FW_DSS_DSI1_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_NUM_REGIONS                            (3U)
+#define CSL_STD_FW_DSS_DSI1_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_STD_FW_DSS_DSI1_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_START  (0x00000004720000U)
+#define CSL_STD_FW_DSS_DSI1_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_DSI_WRAP_MMR_VBUSP_CFG_DSI_WRAP_END    (0x000000047200ffU)
+
+/* Properties of firewall at slave: DSS_DSI1_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS */
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_ID                                    (2717U)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_MMR_BASE                              (0x000000452a7400U)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_NUM_REGIONS                           (3U)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_DSI_TOP_VBUSP_CFG_DSI_0_DSI_START     (0x00000004900000U)
+#define CSL_STD_FW_DSS_DSI1_DSI_TOP_VBUSP_CFG_DSI_0_DSI_REGS_DSI_TOP_VBUSP_CFG_DSI_0_DSI_END       (0x000000049fffffU)
+
+/* Properties of firewall at slave: DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_CORE_CFG_REGS */
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_CORE_CFG_REGS_ID                               (2718U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_CORE_CFG_REGS_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_CORE_CFG_REGS_MMR_BASE                         (0x000000452a7800U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_CORE_CFG_REGS_NUM_REGIONS                      (6U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_CORE_CFG_REGS_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_CORE_CFG_REGS_MHDPTX_WRAPPER_ECC_AGGR_CORE_CFG_START (0x00000002ac0000U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_CORE_CFG_REGS_MHDPTX_WRAPPER_ECC_AGGR_CORE_CFG_END (0x00000002ac03ffU)
+
+/* Properties of firewall at slave: DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_PHY_CFG_REGS */
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_PHY_CFG_REGS_ID                                (2718U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_PHY_CFG_REGS_TYPE                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_PHY_CFG_REGS_MMR_BASE                          (0x000000452a7800U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_PHY_CFG_REGS_NUM_REGIONS                       (6U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_PHY_CFG_REGS_NUM_PRIV_IDS_PER_REGION           (3U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_PHY_CFG_REGS_MHDPTX_WRAPPER_ECC_AGGR_PHY_CFG_START (0x00000002ac1000U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_PHY_CFG_REGS_MHDPTX_WRAPPER_ECC_AGGR_PHY_CFG_END (0x00000002ac13ffU)
+
+/* Properties of firewall at slave: DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_DSC_CFG_REGS */
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_DSC_CFG_REGS_ID                                (2718U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_DSC_CFG_REGS_TYPE                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_DSC_CFG_REGS_MMR_BASE                          (0x000000452a7800U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_DSC_CFG_REGS_NUM_REGIONS                       (6U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_DSC_CFG_REGS_NUM_PRIV_IDS_PER_REGION           (3U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_DSC_CFG_REGS_MHDPTX_WRAPPER_ECC_AGGR_DSC_CFG_START (0x00000002ac2000U)
+#define CSL_STD_FW_DSS_EDP0_MHDPTX_WRAPPER_ECC_AGGR_DSC_CFG_REGS_MHDPTX_WRAPPER_ECC_AGGR_DSC_CFG_END (0x00000002ac23ffU)
+
+/* Properties of firewall at slave: DSS_EDP0_INTG_CFG_VP_REGS */
+#define CSL_STD_FW_DSS_EDP0_INTG_CFG_VP_REGS_ID                                                    (2718U)
+#define CSL_STD_FW_DSS_EDP0_INTG_CFG_VP_REGS_TYPE                                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_EDP0_INTG_CFG_VP_REGS_MMR_BASE                                              (0x000000452a7800U)
+#define CSL_STD_FW_DSS_EDP0_INTG_CFG_VP_REGS_NUM_REGIONS                                           (6U)
+#define CSL_STD_FW_DSS_EDP0_INTG_CFG_VP_REGS_NUM_PRIV_IDS_PER_REGION                               (3U)
+#define CSL_STD_FW_DSS_EDP0_INTG_CFG_VP_REGS_INTG_CFG_VP_START                                     (0x00000004f40000U)
+#define CSL_STD_FW_DSS_EDP0_INTG_CFG_VP_REGS_INTG_CFG_VP_END                                       (0x00000004f400ffU)
+
+/* Properties of firewall at slave: DSS_EDP0_V2A_S_CORE_VP_REGS_SAPB */
+#define CSL_STD_FW_DSS_EDP0_V2A_S_CORE_VP_REGS_SAPB_ID                                             (2718U)
+#define CSL_STD_FW_DSS_EDP0_V2A_S_CORE_VP_REGS_SAPB_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_EDP0_V2A_S_CORE_VP_REGS_SAPB_MMR_BASE                                       (0x000000452a7800U)
+#define CSL_STD_FW_DSS_EDP0_V2A_S_CORE_VP_REGS_SAPB_NUM_REGIONS                                    (6U)
+#define CSL_STD_FW_DSS_EDP0_V2A_S_CORE_VP_REGS_SAPB_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_DSS_EDP0_V2A_S_CORE_VP_REGS_SAPB_V2A_S_CORE_VP_REGS_SAPB_START                  (0x00000004f48000U)
+#define CSL_STD_FW_DSS_EDP0_V2A_S_CORE_VP_REGS_SAPB_V2A_S_CORE_VP_REGS_SAPB_END                    (0x00000004f480ffU)
+
+/* Properties of firewall at slave: DSS_EDP0_V2A_CORE_VP_REGS_APB */
+#define CSL_STD_FW_DSS_EDP0_V2A_CORE_VP_REGS_APB_ID                                                (2718U)
+#define CSL_STD_FW_DSS_EDP0_V2A_CORE_VP_REGS_APB_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_DSS_EDP0_V2A_CORE_VP_REGS_APB_MMR_BASE                                          (0x000000452a7800U)
+#define CSL_STD_FW_DSS_EDP0_V2A_CORE_VP_REGS_APB_NUM_REGIONS                                       (6U)
+#define CSL_STD_FW_DSS_EDP0_V2A_CORE_VP_REGS_APB_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_DSS_EDP0_V2A_CORE_VP_REGS_APB_V2A_CORE_VP_REGS_APB_START                        (0x0000000a000000U)
+#define CSL_STD_FW_DSS_EDP0_V2A_CORE_VP_REGS_APB_V2A_CORE_VP_REGS_APB_END                          (0x0000000a03ffffU)
+
+/* Properties of firewall at slave: VPAC0_KSDW_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_VPAC0_KSDW_ECC_AGGR_CFG_REGS_ID                                                 (2719U)
+#define CSL_STD_FW_VPAC0_KSDW_ECC_AGGR_CFG_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_KSDW_ECC_AGGR_CFG_REGS_MMR_BASE                                           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_KSDW_ECC_AGGR_CFG_REGS_NUM_REGIONS                                        (8U)
+#define CSL_STD_FW_VPAC0_KSDW_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_VPAC0_KSDW_ECC_AGGR_CFG_REGS_ECC_AGGR_START                                     (0x00000002a60000U)
+#define CSL_STD_FW_VPAC0_KSDW_ECC_AGGR_CFG_REGS_ECC_AGGR_END                                       (0x00000002a603ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_ID                          (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_TYPE                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_MMR_BASE                    (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_NUM_REGIONS                 (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION     (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_VISS_ECC_AGGR_START         (0x00000002a61000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_VISS_ECC_AGGR_END           (0x00000002a613ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_LDC0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_ID                           (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_TYPE                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_MMR_BASE                     (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_NUM_REGIONS                  (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION      (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_LDC_ECC_AGGR_START           (0x00000002a63000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_KSDW_ECC_AGGR_CFG_REGS_LDC_ECC_AGGR_END             (0x00000002a633ffU)
+
+/* Properties of firewall at slave: VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS */
+#define CSL_STD_FW_VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_ID                                        (2719U)
+#define CSL_STD_FW_VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_MMR_BASE                                  (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_NUM_REGIONS                               (8U)
+#define CSL_STD_FW_VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_START     (0x00000003800000U)
+#define CSL_STD_FW_VPAC0_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_VPAC_REGS_VPAC_REGS_CFG_IP_MMRS_END       (0x000000038003ffU)
+
+/* Properties of firewall at slave: VPAC0_CTSET2_WRAP_CFG_CTSET2_CFG */
+#define CSL_STD_FW_VPAC0_CTSET2_WRAP_CFG_CTSET2_CFG_ID                                             (2719U)
+#define CSL_STD_FW_VPAC0_CTSET2_WRAP_CFG_CTSET2_CFG_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_CTSET2_WRAP_CFG_CTSET2_CFG_MMR_BASE                                       (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_CTSET2_WRAP_CFG_CTSET2_CFG_NUM_REGIONS                                    (8U)
+#define CSL_STD_FW_VPAC0_CTSET2_WRAP_CFG_CTSET2_CFG_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_VPAC0_CTSET2_WRAP_CFG_CTSET2_CFG_CTSET2_WRAP_CFG_CTSET2_CFG_START               (0x00000003802000U)
+#define CSL_STD_FW_VPAC0_CTSET2_WRAP_CFG_CTSET2_CFG_CTSET2_WRAP_CFG_CTSET2_CFG_END                 (0x00000003803fffU)
+
+/* Properties of firewall at slave: VPAC0_CP_INTD_INTD_CFG_INTD_CFG */
+#define CSL_STD_FW_VPAC0_CP_INTD_INTD_CFG_INTD_CFG_ID                                              (2719U)
+#define CSL_STD_FW_VPAC0_CP_INTD_INTD_CFG_INTD_CFG_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_CP_INTD_INTD_CFG_INTD_CFG_MMR_BASE                                        (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_CP_INTD_INTD_CFG_INTD_CFG_NUM_REGIONS                                     (8U)
+#define CSL_STD_FW_VPAC0_CP_INTD_INTD_CFG_INTD_CFG_NUM_PRIV_IDS_PER_REGION                         (3U)
+#define CSL_STD_FW_VPAC0_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_START                      (0x00000003804000U)
+#define CSL_STD_FW_VPAC0_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_END                        (0x00000003804fffU)
+
+/* Properties of firewall at slave: VPAC0_HTS_S_VBUSP_REGS */
+#define CSL_STD_FW_VPAC0_HTS_S_VBUSP_REGS_ID                                                       (2719U)
+#define CSL_STD_FW_VPAC0_HTS_S_VBUSP_REGS_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_HTS_S_VBUSP_REGS_MMR_BASE                                                 (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_HTS_S_VBUSP_REGS_NUM_REGIONS                                              (8U)
+#define CSL_STD_FW_VPAC0_HTS_S_VBUSP_REGS_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_VPAC0_HTS_S_VBUSP_REGS_HTS_S_VBUSP_START                                        (0x00000003810000U)
+#define CSL_STD_FW_VPAC0_HTS_S_VBUSP_REGS_HTS_S_VBUSP_END                                          (0x0000000381ffffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_REGS_ID                                   (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_REGS_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_REGS_MMR_BASE                             (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_REGS_NUM_REGIONS                          (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_REGS_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_REGS_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_START (0x00000003820000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_REGS_PAR_VPAC_LDC0_S_VBUSP_MMR_VBUSP_END  (0x000000038203ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_REGS_ID                         (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_REGS_TYPE                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_REGS_MMR_BASE                   (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_REGS_NUM_REGIONS                (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_REGS_NUM_PRIV_IDS_PER_REGION    (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_REGS_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_START (0x00000003820400U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_REGS_PAR_VPAC_LDC0_S_VBUSP_VPAC_LDC_LSE_CFG_VP_END (0x000000038205ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT_ID                 (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT_MMR_BASE           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT_NUM_REGIONS        (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT_START (0x00000003820800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALY_LUTCFG_DUALY_LUT_END (0x00000003820fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT_ID                 (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT_MMR_BASE           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT_NUM_REGIONS        (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT_START (0x00000003821000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT_PAR_VPAC_LDC0_S_VBUSP_PIXWRINTF_DUALC_LUTCFG_DUALC_LUT_END (0x000000038217ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_MESH_VBUSPI_MESH_MEM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_MESH_VBUSPI_MESH_MEM_ID                 (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_MESH_VBUSPI_MESH_MEM_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_MESH_VBUSPI_MESH_MEM_MMR_BASE           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_MESH_VBUSPI_MESH_MEM_NUM_REGIONS        (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_MESH_VBUSPI_MESH_MEM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_MESH_VBUSPI_MESH_MEM_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_MESH_VBUSPI_MESH_MEM_START (0x00000003822000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_MESH_VBUSPI_MESH_MEM_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_MESH_VBUSPI_MESH_MEM_END (0x00000003823fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_Y_VBUSPI_Y_MEM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_Y_VBUSPI_Y_MEM_ID                       (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_Y_VBUSPI_Y_MEM_TYPE                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_Y_VBUSPI_Y_MEM_MMR_BASE                 (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_Y_VBUSPI_Y_MEM_NUM_REGIONS              (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_Y_VBUSPI_Y_MEM_NUM_PRIV_IDS_PER_REGION  (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_Y_VBUSPI_Y_MEM_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_Y_VBUSPI_Y_MEM_START (0x00000003828000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_Y_VBUSPI_Y_MEM_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_Y_VBUSPI_Y_MEM_END (0x0000000382ffffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_CBCR_VBUSPI_CBCR_MEM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_CBCR_VBUSPI_CBCR_MEM_ID                 (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_CBCR_VBUSPI_CBCR_MEM_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_CBCR_VBUSPI_CBCR_MEM_MMR_BASE           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_CBCR_VBUSPI_CBCR_MEM_NUM_REGIONS        (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_CBCR_VBUSPI_CBCR_MEM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_CBCR_VBUSPI_CBCR_MEM_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_CBCR_VBUSPI_CBCR_MEM_START (0x00000003830000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_CBCR_VBUSPI_CBCR_MEM_PAR_VPAC_LDC0_S_VBUSP_MEMCFG_LOOP_CBCR_VBUSPI_CBCR_MEM_END (0x00000003837fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_MSC_CFG_VP_CFG_VP_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_CFG_VP_REGS_ID                                        (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_CFG_VP_REGS_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_CFG_VP_REGS_MMR_BASE                                  (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_CFG_VP_REGS_NUM_REGIONS                               (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_CFG_VP_REGS_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_CFG_VP_REGS_PAR_VPAC_MSC_CFG_VP_CFG_VP_START          (0x000000038c0000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_CFG_VP_REGS_PAR_VPAC_MSC_CFG_VP_CFG_VP_END            (0x000000038c07ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_REGS_ID                                    (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_REGS_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_REGS_MMR_BASE                              (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_REGS_NUM_REGIONS                           (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_REGS_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_REGS_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_START  (0x000000038c0800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_REGS_PAR_VPAC_MSC_CFG_VP_LSE_CFG_VP_END    (0x000000038c09ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_NF_S_VBUSP_MMR_MMR_VBUSP_NF_CFG */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_MMR_MMR_VBUSP_NF_CFG_ID                               (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_MMR_MMR_VBUSP_NF_CFG_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_MMR_MMR_VBUSP_NF_CFG_MMR_BASE                         (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_MMR_MMR_VBUSP_NF_CFG_NUM_REGIONS                      (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_MMR_MMR_VBUSP_NF_CFG_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_MMR_MMR_VBUSP_NF_CFG_PAR_VPAC_NF_S_VBUSP_MMR_VBUSP_NF_CFG_START (0x000000038c2000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_MMR_MMR_VBUSP_NF_CFG_PAR_VPAC_NF_S_VBUSP_MMR_VBUSP_NF_CFG_END (0x000000038c2fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_REGS_ID                            (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_REGS_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_REGS_MMR_BASE                      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_REGS_NUM_REGIONS                   (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_REGS_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_REGS_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_START (0x000000038c3000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_REGS_PAR_VPAC_NF_S_VBUSP_VPAC_NF_LSE_CFG_VP_END (0x000000038c31ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_REGS_ID                           (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_REGS_TYPE                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_REGS_MMR_BASE                     (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_REGS_NUM_REGIONS                  (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_REGS_NUM_PRIV_IDS_PER_REGION      (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_REGS_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_START (0x00000003900000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_REGS_PAR_VPAC_VISS0_S_VBUSP_MMR_CFG_VISS_TOP_END (0x000000039001ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VPAC_VISS_LSE_CFG_VP_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VPAC_VISS_LSE_CFG_VP_REGS_ID                       (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VPAC_VISS_LSE_CFG_VP_REGS_TYPE                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VPAC_VISS_LSE_CFG_VP_REGS_MMR_BASE                 (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VPAC_VISS_LSE_CFG_VP_REGS_NUM_REGIONS              (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VPAC_VISS_LSE_CFG_VP_REGS_NUM_PRIV_IDS_PER_REGION  (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VPAC_VISS_LSE_CFG_VP_REGS_PAR_VPAC_VISS0_S_VBUSP_VPAC_VISS_LSE_CFG_VP_START (0x00000003900400U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VPAC_VISS_LSE_CFG_VP_REGS_PAR_VPAC_VISS0_S_VBUSP_VPAC_VISS_LSE_CFG_VP_END (0x000000039005ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_CFG_GLBCE_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_CFG_GLBCE_REGS_ID                     (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_CFG_GLBCE_REGS_TYPE                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_CFG_GLBCE_REGS_MMR_BASE               (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_CFG_GLBCE_REGS_NUM_REGIONS            (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_CFG_GLBCE_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_CFG_GLBCE_REGS_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_CFG_GLBCE_START (0x00000003903800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_CFG_GLBCE_REGS_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_CFG_GLBCE_END (0x00000003903fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_STATMEM_CFG_GLBCE_STATMEM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_STATMEM_CFG_GLBCE_STATMEM_ID          (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_STATMEM_CFG_GLBCE_STATMEM_TYPE        (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_STATMEM_CFG_GLBCE_STATMEM_MMR_BASE    (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_STATMEM_CFG_GLBCE_STATMEM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_STATMEM_CFG_GLBCE_STATMEM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_STATMEM_CFG_GLBCE_STATMEM_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_STATMEM_CFG_GLBCE_STATMEM_START (0x00000003904000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_STATMEM_CFG_GLBCE_STATMEM_PAR_VPAC_VISS0_S_VBUSP_K3_GLBCE_TOP_STATMEM_CFG_GLBCE_STATMEM_END (0x00000003907fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_REGS_ID                 (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_REGS_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_REGS_MMR_BASE           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_REGS_NUM_REGIONS        (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_START (0x00000003908000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_END (0x0000000390ffffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_REGS_ID                  (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_REGS_TYPE                (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_REGS_MMR_BASE            (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_REGS_NUM_REGIONS         (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_START (0x00000003910000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_END (0x000000039107ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC1 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC1_ID            (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC1_TYPE          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC1_MMR_BASE      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC1_NUM_REGIONS   (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC1_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC1_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC1_START (0x00000003910800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC1_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC1_END (0x00000003910fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC2 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC2_ID            (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC2_TYPE          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC2_MMR_BASE      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC2_NUM_REGIONS   (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC2_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC2_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC2_START (0x00000003911000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC2_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC2_END (0x000000039117ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC3 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC3_ID            (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC3_TYPE          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC3_MMR_BASE      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC3_NUM_REGIONS   (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC3_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC3_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC3_START (0x00000003911800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC3_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_CONTRASTC3_END (0x00000003911fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_Y8R8 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_Y8R8_ID                  (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_Y8R8_TYPE                (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_Y8R8_MMR_BASE            (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_Y8R8_NUM_REGIONS         (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_Y8R8_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_Y8R8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_Y8R8_START (0x00000003912000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_Y8R8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_Y8R8_END (0x000000039127ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_C8G8 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_C8G8_ID                  (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_C8G8_TYPE                (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_C8G8_MMR_BASE            (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_C8G8_NUM_REGIONS         (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_C8G8_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_C8G8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_C8G8_START (0x00000003912800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_C8G8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_C8G8_END (0x00000003912fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_S8B8 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_S8B8_ID                  (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_S8B8_TYPE                (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_S8B8_MMR_BASE            (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_S8B8_NUM_REGIONS         (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_S8B8_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_S8B8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_S8B8_START (0x00000003913000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_S8B8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_S8B8_END (0x000000039137ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_HIST */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_HIST_ID                  (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_HIST_TYPE                (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_HIST_MMR_BASE            (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_HIST_NUM_REGIONS         (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_HIST_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_HIST_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_HIST_START (0x00000003913800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_HIST_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_HIST_END (0x00000003913fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_LINE */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_LINE_ID                  (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_LINE_TYPE                (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_LINE_MMR_BASE            (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_LINE_NUM_REGIONS         (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_LINE_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_LINE_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_LINE_START (0x00000003918000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_LINE_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_FCC_VBUSP_FLEXCC_LINE_END (0x000000039187ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_MMR_S_VBUSP_RAWFE_CFG */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_MMR_S_VBUSP_RAWFE_CFG_ID            (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_MMR_S_VBUSP_RAWFE_CFG_TYPE          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_MMR_S_VBUSP_RAWFE_CFG_MMR_BASE      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_MMR_S_VBUSP_RAWFE_CFG_NUM_REGIONS   (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_MMR_S_VBUSP_RAWFE_CFG_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_MMR_S_VBUSP_RAWFE_CFG_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_MMR_S_VBUSP_RAWFE_CFG_START (0x00000003920000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_MMR_S_VBUSP_RAWFE_CFG_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_MMR_S_VBUSP_RAWFE_CFG_END (0x000000039203ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_CFG_RAWFE_H3A_CFG */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_CFG_RAWFE_H3A_CFG_ID       (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_CFG_RAWFE_H3A_CFG_TYPE     (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_CFG_RAWFE_H3A_CFG_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_CFG_RAWFE_H3A_CFG_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_CFG_RAWFE_H3A_CFG_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_CFG_RAWFE_H3A_CFG_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_CFG_RAWFE_H3A_CFG_START (0x00000003920400U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_CFG_RAWFE_H3A_CFG_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_CFG_RAWFE_H3A_CFG_END (0x000000039204ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT3_RAM_RAWFE_PWL_LUT3_RAM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT3_RAM_RAWFE_PWL_LUT3_RAM_ID      (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT3_RAM_RAWFE_PWL_LUT3_RAM_TYPE    (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT3_RAM_RAWFE_PWL_LUT3_RAM_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT3_RAM_RAWFE_PWL_LUT3_RAM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT3_RAM_RAWFE_PWL_LUT3_RAM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT3_RAM_RAWFE_PWL_LUT3_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT3_RAM_RAWFE_PWL_LUT3_RAM_START (0x00000003920800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT3_RAM_RAWFE_PWL_LUT3_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT3_RAM_RAWFE_PWL_LUT3_RAM_END (0x00000003920fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT2_RAM_RAWFE_PWL_LUT2_RAM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT2_RAM_RAWFE_PWL_LUT2_RAM_ID      (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT2_RAM_RAWFE_PWL_LUT2_RAM_TYPE    (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT2_RAM_RAWFE_PWL_LUT2_RAM_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT2_RAM_RAWFE_PWL_LUT2_RAM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT2_RAM_RAWFE_PWL_LUT2_RAM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT2_RAM_RAWFE_PWL_LUT2_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT2_RAM_RAWFE_PWL_LUT2_RAM_START (0x00000003921000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT2_RAM_RAWFE_PWL_LUT2_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT2_RAM_RAWFE_PWL_LUT2_RAM_END (0x000000039217ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT1_RAM_RAWFE_PWL_LUT1_RAM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT1_RAM_RAWFE_PWL_LUT1_RAM_ID      (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT1_RAM_RAWFE_PWL_LUT1_RAM_TYPE    (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT1_RAM_RAWFE_PWL_LUT1_RAM_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT1_RAM_RAWFE_PWL_LUT1_RAM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT1_RAM_RAWFE_PWL_LUT1_RAM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT1_RAM_RAWFE_PWL_LUT1_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT1_RAM_RAWFE_PWL_LUT1_RAM_START (0x00000003921800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT1_RAM_RAWFE_PWL_LUT1_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LUT1_RAM_RAWFE_PWL_LUT1_RAM_END (0x00000003921fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_WDR_LUT_RAM_RAWFE_WDR_LUT_RAM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_WDR_LUT_RAM_RAWFE_WDR_LUT_RAM_ID    (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_WDR_LUT_RAM_RAWFE_WDR_LUT_RAM_TYPE  (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_WDR_LUT_RAM_RAWFE_WDR_LUT_RAM_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_WDR_LUT_RAM_RAWFE_WDR_LUT_RAM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_WDR_LUT_RAM_RAWFE_WDR_LUT_RAM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_WDR_LUT_RAM_RAWFE_WDR_LUT_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_WDR_LUT_RAM_RAWFE_WDR_LUT_RAM_START (0x00000003922000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_WDR_LUT_RAM_RAWFE_WDR_LUT_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_WDR_LUT_RAM_RAWFE_WDR_LUT_RAM_END (0x000000039227ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_LUT_RAM_RAWFE_H3A_LUT_RAM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_LUT_RAM_RAWFE_H3A_LUT_RAM_ID    (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_LUT_RAM_RAWFE_H3A_LUT_RAM_TYPE  (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_LUT_RAM_RAWFE_H3A_LUT_RAM_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_LUT_RAM_RAWFE_H3A_LUT_RAM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_LUT_RAM_RAWFE_H3A_LUT_RAM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_LUT_RAM_RAWFE_H3A_LUT_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_LUT_RAM_RAWFE_H3A_LUT_RAM_START (0x00000003922800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_LUT_RAM_RAWFE_H3A_LUT_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_LUT_RAM_RAWFE_H3A_LUT_RAM_END (0x00000003922fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_RAM_RAWFE_DPC_LUT_RAM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_RAM_RAWFE_DPC_LUT_RAM_ID        (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_RAM_RAWFE_DPC_LUT_RAM_TYPE      (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_RAM_RAWFE_DPC_LUT_RAM_MMR_BASE  (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_RAM_RAWFE_DPC_LUT_RAM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_RAM_RAWFE_DPC_LUT_RAM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_RAM_RAWFE_DPC_LUT_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_RAM_RAWFE_DPC_LUT_RAM_START (0x00000003923000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_RAM_RAWFE_DPC_LUT_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_RAM_RAWFE_DPC_LUT_RAM_END (0x000000039233ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_LRAM_RAWFE_DPC_LRAM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_LRAM_RAWFE_DPC_LRAM_ID          (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_LRAM_RAWFE_DPC_LRAM_TYPE        (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_LRAM_RAWFE_DPC_LRAM_MMR_BASE    (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_LRAM_RAWFE_DPC_LRAM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_LRAM_RAWFE_DPC_LRAM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_LRAM_RAWFE_DPC_LRAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_LRAM_RAWFE_DPC_LRAM_START (0x00000003924000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_LRAM_RAWFE_DPC_LRAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_DPC_LRAM_RAWFE_DPC_LRAM_END (0x00000003925fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LSC_RAM_RAWFE_LSC_LUT_RAM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LSC_RAM_RAWFE_LSC_LUT_RAM_ID        (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LSC_RAM_RAWFE_LSC_LUT_RAM_TYPE      (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LSC_RAM_RAWFE_LSC_LUT_RAM_MMR_BASE  (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LSC_RAM_RAWFE_LSC_LUT_RAM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LSC_RAM_RAWFE_LSC_LUT_RAM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LSC_RAM_RAWFE_LSC_LUT_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LSC_RAM_RAWFE_LSC_LUT_RAM_START (0x00000003928000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LSC_RAM_RAWFE_LSC_LUT_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_LSC_RAM_RAWFE_LSC_LUT_RAM_END (0x0000000392ffffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_ARAM_RAWFE_H3A_ARAM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_ARAM_RAWFE_H3A_ARAM_ID     (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_ARAM_RAWFE_H3A_ARAM_TYPE   (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_ARAM_RAWFE_H3A_ARAM_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_ARAM_RAWFE_H3A_ARAM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_ARAM_RAWFE_H3A_ARAM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_ARAM_RAWFE_H3A_ARAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_ARAM_RAWFE_H3A_ARAM_START (0x00000003930000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_ARAM_RAWFE_H3A_ARAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_ARAM_RAWFE_H3A_ARAM_END (0x00000003931fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_LRAM_RAWFE_H3A_LRAM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_LRAM_RAWFE_H3A_LRAM_ID     (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_LRAM_RAWFE_H3A_LRAM_TYPE   (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_LRAM_RAWFE_H3A_LRAM_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_LRAM_RAWFE_H3A_LRAM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_LRAM_RAWFE_H3A_LRAM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_LRAM_RAWFE_H3A_LRAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_LRAM_RAWFE_H3A_LRAM_START (0x00000003932000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_LRAM_RAWFE_H3A_LRAM_PAR_VPAC_VISS0_S_VBUSP_VISS_RAWFE_CFG_H3A_WRAP_LRAM_RAWFE_H3A_LRAM_END (0x00000003933fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MMR_MMR_VBUSP_NSF4VCORE_REG */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MMR_MMR_VBUSP_NSF4VCORE_REG_ID      (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MMR_MMR_VBUSP_NSF4VCORE_REG_TYPE    (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MMR_MMR_VBUSP_NSF4VCORE_REG_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MMR_MMR_VBUSP_NSF4VCORE_REG_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MMR_MMR_VBUSP_NSF4VCORE_REG_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MMR_MMR_VBUSP_NSF4VCORE_REG_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MMR_VBUSP_NSF4VCORE_START (0x00000003940000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MMR_MMR_VBUSP_NSF4VCORE_REG_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MMR_VBUSP_NSF4VCORE_END (0x000000039407ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTDATA_VBUSP_RAWHIST */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTDATA_VBUSP_RAWHIST_ID   (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTDATA_VBUSP_RAWHIST_TYPE (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTDATA_VBUSP_RAWHIST_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTDATA_VBUSP_RAWHIST_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTDATA_VBUSP_RAWHIST_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTDATA_VBUSP_RAWHIST_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTDATA_VBUSP_RAWHIST_START (0x00000003940800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTDATA_VBUSP_RAWHIST_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTDATA_VBUSP_RAWHIST_END (0x000000039409ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTLUT_VBUSP_RAWHIST_LUT */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTLUT_VBUSP_RAWHIST_LUT_ID (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTLUT_VBUSP_RAWHIST_LUT_TYPE (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTLUT_VBUSP_RAWHIST_LUT_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTLUT_VBUSP_RAWHIST_LUT_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTLUT_VBUSP_RAWHIST_LUT_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTLUT_VBUSP_RAWHIST_LUT_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTLUT_VBUSP_RAWHIST_LUT_START (0x00000003941000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTLUT_VBUSP_RAWHIST_LUT_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_RAWHIST_HISTLUT_VBUSP_RAWHIST_LUT_END (0x000000039417ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MEM_MMR_MMRRAM_VBUSP_MMR_RAM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MEM_MMR_MMRRAM_VBUSP_MMR_RAM_ID     (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MEM_MMR_MMRRAM_VBUSP_MMR_RAM_TYPE   (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MEM_MMR_MMRRAM_VBUSP_MMR_RAM_MMR_BASE (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MEM_MMR_MMRRAM_VBUSP_MMR_RAM_NUM_REGIONS (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MEM_MMR_MMRRAM_VBUSP_MMR_RAM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MEM_MMR_MMRRAM_VBUSP_MMR_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MEM_MMRRAM_VBUSP_MMR_RAM_START (0x00000003944000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MEM_MMR_MMRRAM_VBUSP_MMR_RAM_PAR_VPAC_VISS0_S_VBUSP_VISS_NSF4V_CFG_MEM_MMRRAM_VBUSP_MMR_RAM_END (0x00000003947fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_EE_VBUSP_FLEXEE_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_EE_VBUSP_FLEXEE_REGS_ID                   (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_EE_VBUSP_FLEXEE_REGS_TYPE                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_EE_VBUSP_FLEXEE_REGS_MMR_BASE             (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_EE_VBUSP_FLEXEE_REGS_NUM_REGIONS          (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_EE_VBUSP_FLEXEE_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_EE_VBUSP_FLEXEE_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_EE_VBUSP_FLEXEE_START (0x00000003950000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_EE_VBUSP_FLEXEE_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_EE_VBUSP_FLEXEE_END (0x00000003957fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_DLUTS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_DLUTS_ID                (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_DLUTS_TYPE              (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_DLUTS_MMR_BASE          (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_DLUTS_NUM_REGIONS       (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_DLUTS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_DLUTS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_DLUTS_START (0x00000003958000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_DLUTS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP_CFA_VBUSP_FLEXCFA_DLUTS_END (0x0000000395bfffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_DLUTS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_DLUTS_ID               (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_DLUTS_TYPE             (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_DLUTS_MMR_BASE         (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_DLUTS_NUM_REGIONS      (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_DLUTS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_DLUTS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_DLUTS_START (0x0000000395c000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_DLUTS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_DLUTS_END (0x0000000395ffffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_EE_VBUSP_FLEXEE_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_EE_VBUSP_FLEXEE_REGS_ID                  (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_EE_VBUSP_FLEXEE_REGS_TYPE                (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_EE_VBUSP_FLEXEE_REGS_MMR_BASE            (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_EE_VBUSP_FLEXEE_REGS_NUM_REGIONS         (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_EE_VBUSP_FLEXEE_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_EE_VBUSP_FLEXEE_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_EE_VBUSP_FLEXEE_START (0x00000003960000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_EE_VBUSP_FLEXEE_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_EE_VBUSP_FLEXEE_END (0x00000003967fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_REGS_ID                (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_REGS_TYPE              (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_REGS_MMR_BASE          (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_REGS_NUM_REGIONS       (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_START (0x00000003968000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_CFA_VBUSP_FLEXCFA_END (0x0000000396ffffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_REGS_ID                 (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_REGS_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_REGS_MMR_BASE           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_REGS_NUM_REGIONS        (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_START (0x00000003970000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_END (0x000000039707ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC1 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC1_ID           (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC1_TYPE         (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC1_MMR_BASE     (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC1_NUM_REGIONS  (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC1_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC1_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC1_START (0x00000003970800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC1_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC1_END (0x00000003970fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC2 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC2_ID           (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC2_TYPE         (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC2_MMR_BASE     (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC2_NUM_REGIONS  (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC2_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC2_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC2_START (0x00000003971000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC2_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC2_END (0x000000039717ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC3 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC3_ID           (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC3_TYPE         (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC3_MMR_BASE     (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC3_NUM_REGIONS  (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC3_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC3_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC3_START (0x00000003971800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC3_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_CONTRASTC3_END (0x00000003971fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_Y8R8 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_Y8R8_ID                 (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_Y8R8_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_Y8R8_MMR_BASE           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_Y8R8_NUM_REGIONS        (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_Y8R8_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_Y8R8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_Y8R8_START (0x00000003972000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_Y8R8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_Y8R8_END (0x000000039727ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_C8G8 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_C8G8_ID                 (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_C8G8_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_C8G8_MMR_BASE           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_C8G8_NUM_REGIONS        (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_C8G8_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_C8G8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_C8G8_START (0x00000003972800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_C8G8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_C8G8_END (0x00000003972fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_S8B8 */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_S8B8_ID                 (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_S8B8_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_S8B8_MMR_BASE           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_S8B8_NUM_REGIONS        (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_S8B8_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_S8B8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_S8B8_START (0x00000003973000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_S8B8_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_S8B8_END (0x000000039737ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_HIST */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_HIST_ID                 (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_HIST_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_HIST_MMR_BASE           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_HIST_NUM_REGIONS        (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_HIST_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_HIST_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_HIST_START (0x00000003973800U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_HIST_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_HIST_END (0x00000003973fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_LINE */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_LINE_ID                 (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_LINE_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_LINE_MMR_BASE           (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_LINE_NUM_REGIONS        (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_LINE_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_LINE_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_LINE_START (0x00000003978000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_LINE_PAR_VPAC_VISS0_S_VBUSP_VISS_FCP2_FCC_VBUSP_FLEXCC_LINE_END (0x000000039787ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_MMR_MMRCFG_CAC_REGS */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_MMR_MMRCFG_CAC_REGS_ID            (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_MMR_MMRCFG_CAC_REGS_TYPE          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_MMR_MMRCFG_CAC_REGS_MMR_BASE      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_MMR_MMRCFG_CAC_REGS_NUM_REGIONS   (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_MMR_MMRCFG_CAC_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_MMR_MMRCFG_CAC_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_MMRCFG_CAC_START (0x00000003980000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_MMR_MMRCFG_CAC_REGS_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_MMRCFG_CAC_END (0x000000039803ffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_CORE_LUT_CFG_LUT_MEM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_CORE_LUT_CFG_LUT_MEM_ID           (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_CORE_LUT_CFG_LUT_MEM_TYPE         (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_CORE_LUT_CFG_LUT_MEM_MMR_BASE     (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_CORE_LUT_CFG_LUT_MEM_NUM_REGIONS  (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_CORE_LUT_CFG_LUT_MEM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_CORE_LUT_CFG_LUT_MEM_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_CORE_LUT_CFG_LUT_MEM_START (0x00000003982000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_CORE_LUT_CFG_LUT_MEM_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_CORE_LUT_CFG_LUT_MEM_END (0x00000003983fffU)
+
+/* Properties of firewall at slave: VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_LINEMEM_CFG_LINE_MEM */
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_LINEMEM_CFG_LINE_MEM_ID           (2719U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_LINEMEM_CFG_LINE_MEM_TYPE         (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_LINEMEM_CFG_LINE_MEM_MMR_BASE     (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_LINEMEM_CFG_LINE_MEM_NUM_REGIONS  (8U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_LINEMEM_CFG_LINE_MEM_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_LINEMEM_CFG_LINE_MEM_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_LINEMEM_CFG_LINE_MEM_START (0x00000003984000U)
+#define CSL_STD_FW_VPAC0_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_LINEMEM_CFG_LINE_MEM_PAR_VPAC_VISS0_S_VBUSP_VISS_CAC_S_VBUSP_LINEMEM_CFG_LINE_MEM_END (0x00000003987fffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_ID                                  (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_TYPE                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_MMR_BASE                            (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_NUM_REGIONS                         (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_NUM_PRIV_IDS_PER_REGION             (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_START (0x00000003a00000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_END (0x00000003a03fffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_SET */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_SET_ID                              (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_SET_TYPE                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_SET_MMR_BASE                        (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_SET_NUM_REGIONS                     (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_SET_NUM_PRIV_IDS_PER_REGION         (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_SET_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_SET_START (0x00000003a04000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_SET_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_SET_END (0x00000003a07fffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_ID                            (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_MMR_BASE                      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_NUM_REGIONS                   (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_QUEUE_START (0x00000003a08000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_QUEUE_END (0x00000003a0ffffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_ID                            (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_MMR_BASE                      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_NUM_REGIONS                   (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_CHNRT_START (0x00000003a40000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_CHNRT_END (0x00000003a5ffffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHRT */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_ID                             (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_MMR_BASE                       (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_NUM_REGIONS                    (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_CHRT_START (0x00000003a60000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_CHRT_END (0x00000003a7ffffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_ID                   (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_TYPE                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_MMR_BASE             (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_NUM_REGIONS          (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_CHATOMIC_DEBUG_START (0x00000003a80000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_CHATOMIC_DEBUG_END (0x00000003a9ffffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_ID                            (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_MMR_BASE                      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_NUM_REGIONS                   (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_CAUSE_START (0x00000003ae0000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_DRU_UTC_VPAC0_DRU_MMR_CFG_DRU_DRU_CAUSE_END (0x00000003afffffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_ID                                  (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_TYPE                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_MMR_BASE                            (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_NUM_REGIONS                         (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_NUM_PRIV_IDS_PER_REGION             (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_START (0x00000003b00000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_END (0x00000003b03fffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_SET */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_SET_ID                              (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_SET_TYPE                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_SET_MMR_BASE                        (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_SET_NUM_REGIONS                     (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_SET_NUM_PRIV_IDS_PER_REGION         (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_SET_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_SET_START (0x00000003b04000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_SET_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_SET_END (0x00000003b07fffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_ID                            (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_MMR_BASE                      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_NUM_REGIONS                   (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_QUEUE_START (0x00000003b08000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_QUEUE_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_QUEUE_END (0x00000003b0ffffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_ID                            (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_MMR_BASE                      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_NUM_REGIONS                   (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_CHNRT_START (0x00000003b40000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHNRT_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_CHNRT_END (0x00000003b5ffffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHRT */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_ID                             (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_MMR_BASE                       (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_NUM_REGIONS                    (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_CHRT_START (0x00000003b60000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHRT_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_CHRT_END (0x00000003b7ffffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_ID                   (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_TYPE                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_MMR_BASE             (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_NUM_REGIONS          (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_CHATOMIC_DEBUG_START (0x00000003b80000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CHATOMIC_DEBUG_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_CHATOMIC_DEBUG_END (0x00000003b9ffffU)
+
+/* Properties of firewall at slave: VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE */
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_ID                            (2719U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_MMR_BASE                      (0x000000452a7c00U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_NUM_REGIONS                   (8U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_CAUSE_START (0x00000003be0000U)
+#define CSL_STD_FW_VPAC0_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_DRU_CAUSE_DRU_UTC_VPAC1_DRU_MMR_CFG_DRU_DRU_CAUSE_END (0x00000003bfffffU)
+
+/* Properties of firewall at slave: AEP_GPU_BXS464_WRAP0_GPU_SS_0_CORE_MMRS */
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_GPU_SS_0_CORE_MMRS_ID                                      (2721U)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_GPU_SS_0_CORE_MMRS_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_GPU_SS_0_CORE_MMRS_MMR_BASE                                (0x000000452a8400U)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_GPU_SS_0_CORE_MMRS_NUM_REGIONS                             (1U)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_GPU_SS_0_CORE_MMRS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_GPU_SS_0_CORE_MMRS_CORE_MMRS_START                         (0x00004e20000000U)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_GPU_SS_0_CORE_MMRS_CORE_MMRS_END                           (0x00004e2007ffffU)
+
+/* Properties of firewall at slave: R5FSS0_CORE0_ATCM0 */
+#define CSL_STD_FW_R5FSS0_CORE0_ATCM0_ID                                                           (2768U)
+#define CSL_STD_FW_R5FSS0_CORE0_ATCM0_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_CORE0_ATCM0_MMR_BASE                                                     (0x000000452b4000U)
+#define CSL_STD_FW_R5FSS0_CORE0_ATCM0_NUM_REGIONS                                                  (4U)
+#define CSL_STD_FW_R5FSS0_CORE0_ATCM0_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_R5FSS0_CORE0_ATCM0_CORE0_ATCM_START                                             (0x00000005c00000U)
+#define CSL_STD_FW_R5FSS0_CORE0_ATCM0_CORE0_ATCM_END                                               (0x00000005c0ffffU)
+
+/* Properties of firewall at slave: R5FSS0_CORE0_BTCM0 */
+#define CSL_STD_FW_R5FSS0_CORE0_BTCM0_ID                                                           (2768U)
+#define CSL_STD_FW_R5FSS0_CORE0_BTCM0_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_CORE0_BTCM0_MMR_BASE                                                     (0x000000452b4000U)
+#define CSL_STD_FW_R5FSS0_CORE0_BTCM0_NUM_REGIONS                                                  (4U)
+#define CSL_STD_FW_R5FSS0_CORE0_BTCM0_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_R5FSS0_CORE0_BTCM0_CORE0_BTCM_START                                             (0x00000005c10000U)
+#define CSL_STD_FW_R5FSS0_CORE0_BTCM0_CORE0_BTCM_END                                               (0x00000005c1ffffU)
+
+/* Properties of firewall at slave: R5FSS0_CORE0_ICACHE0 */
+#define CSL_STD_FW_R5FSS0_CORE0_ICACHE0_ID                                                         (2768U)
+#define CSL_STD_FW_R5FSS0_CORE0_ICACHE0_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_CORE0_ICACHE0_MMR_BASE                                                   (0x000000452b4000U)
+#define CSL_STD_FW_R5FSS0_CORE0_ICACHE0_NUM_REGIONS                                                (4U)
+#define CSL_STD_FW_R5FSS0_CORE0_ICACHE0_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_R5FSS0_CORE0_ICACHE0_CORE0_ICACHE_START                                         (0x00004e00000000U)
+#define CSL_STD_FW_R5FSS0_CORE0_ICACHE0_CORE0_ICACHE_END                                           (0x00004e007fffffU)
+
+/* Properties of firewall at slave: R5FSS0_CORE0_DCACHE0 */
+#define CSL_STD_FW_R5FSS0_CORE0_DCACHE0_ID                                                         (2768U)
+#define CSL_STD_FW_R5FSS0_CORE0_DCACHE0_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_CORE0_DCACHE0_MMR_BASE                                                   (0x000000452b4000U)
+#define CSL_STD_FW_R5FSS0_CORE0_DCACHE0_NUM_REGIONS                                                (4U)
+#define CSL_STD_FW_R5FSS0_CORE0_DCACHE0_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_R5FSS0_CORE0_DCACHE0_CORE0_DCACHE_START                                         (0x00004e00800000U)
+#define CSL_STD_FW_R5FSS0_CORE0_DCACHE0_CORE0_DCACHE_END                                           (0x00004e00ffffffU)
+
+/* Properties of firewall at slave: R5FSS0_CORE1_ATCM1 */
+#define CSL_STD_FW_R5FSS0_CORE1_ATCM1_ID                                                           (2769U)
+#define CSL_STD_FW_R5FSS0_CORE1_ATCM1_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_CORE1_ATCM1_MMR_BASE                                                     (0x000000452b4400U)
+#define CSL_STD_FW_R5FSS0_CORE1_ATCM1_NUM_REGIONS                                                  (4U)
+#define CSL_STD_FW_R5FSS0_CORE1_ATCM1_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_R5FSS0_CORE1_ATCM1_CORE1_ATCM_START                                             (0x00000005d00000U)
+#define CSL_STD_FW_R5FSS0_CORE1_ATCM1_CORE1_ATCM_END                                               (0x00000005d07fffU)
+
+/* Properties of firewall at slave: R5FSS0_CORE1_BTCM1 */
+#define CSL_STD_FW_R5FSS0_CORE1_BTCM1_ID                                                           (2769U)
+#define CSL_STD_FW_R5FSS0_CORE1_BTCM1_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_CORE1_BTCM1_MMR_BASE                                                     (0x000000452b4400U)
+#define CSL_STD_FW_R5FSS0_CORE1_BTCM1_NUM_REGIONS                                                  (4U)
+#define CSL_STD_FW_R5FSS0_CORE1_BTCM1_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_R5FSS0_CORE1_BTCM1_CORE1_BTCM_START                                             (0x00000005d10000U)
+#define CSL_STD_FW_R5FSS0_CORE1_BTCM1_CORE1_BTCM_END                                               (0x00000005d17fffU)
+
+/* Properties of firewall at slave: R5FSS0_CORE1_ICACHE1 */
+#define CSL_STD_FW_R5FSS0_CORE1_ICACHE1_ID                                                         (2769U)
+#define CSL_STD_FW_R5FSS0_CORE1_ICACHE1_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_CORE1_ICACHE1_MMR_BASE                                                   (0x000000452b4400U)
+#define CSL_STD_FW_R5FSS0_CORE1_ICACHE1_NUM_REGIONS                                                (4U)
+#define CSL_STD_FW_R5FSS0_CORE1_ICACHE1_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_R5FSS0_CORE1_ICACHE1_CORE1_ICACHE_START                                         (0x00004e01000000U)
+#define CSL_STD_FW_R5FSS0_CORE1_ICACHE1_CORE1_ICACHE_END                                           (0x00004e017fffffU)
+
+/* Properties of firewall at slave: R5FSS0_CORE1_DCACHE1 */
+#define CSL_STD_FW_R5FSS0_CORE1_DCACHE1_ID                                                         (2769U)
+#define CSL_STD_FW_R5FSS0_CORE1_DCACHE1_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_CORE1_DCACHE1_MMR_BASE                                                   (0x000000452b4400U)
+#define CSL_STD_FW_R5FSS0_CORE1_DCACHE1_NUM_REGIONS                                                (4U)
+#define CSL_STD_FW_R5FSS0_CORE1_DCACHE1_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_R5FSS0_CORE1_DCACHE1_CORE1_DCACHE_START                                         (0x00004e01800000U)
+#define CSL_STD_FW_R5FSS0_CORE1_DCACHE1_CORE1_DCACHE_END                                           (0x00004e01ffffffU)
+
+/* Properties of firewall at slave: AM_PULSAR0_SLV_CBASS0_ERR_REGS */
+#define CSL_STD_FW_AM_PULSAR0_SLV_CBASS0_ERR_REGS_ID                                               (2770U)
+#define CSL_STD_FW_AM_PULSAR0_SLV_CBASS0_ERR_REGS_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_AM_PULSAR0_SLV_CBASS0_ERR_REGS_MMR_BASE                                         (0x000000452b4800U)
+#define CSL_STD_FW_AM_PULSAR0_SLV_CBASS0_ERR_REGS_NUM_REGIONS                                      (1U)
+#define CSL_STD_FW_AM_PULSAR0_SLV_CBASS0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_AM_PULSAR0_SLV_CBASS0_ERR_REGS_ERR_START                                        (0x00000002a91000U)
+#define CSL_STD_FW_AM_PULSAR0_SLV_CBASS0_ERR_REGS_ERR_END                                          (0x00000002a913ffU)
+
+/* Properties of firewall at slave: AM_PULSAR0_MEM_CBASS0_ERR_REGS */
+#define CSL_STD_FW_AM_PULSAR0_MEM_CBASS0_ERR_REGS_ID                                               (2771U)
+#define CSL_STD_FW_AM_PULSAR0_MEM_CBASS0_ERR_REGS_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_AM_PULSAR0_MEM_CBASS0_ERR_REGS_MMR_BASE                                         (0x000000452b4c00U)
+#define CSL_STD_FW_AM_PULSAR0_MEM_CBASS0_ERR_REGS_NUM_REGIONS                                      (1U)
+#define CSL_STD_FW_AM_PULSAR0_MEM_CBASS0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_AM_PULSAR0_MEM_CBASS0_ERR_REGS_ERR_START                                        (0x00000002a90000U)
+#define CSL_STD_FW_AM_PULSAR0_MEM_CBASS0_ERR_REGS_ERR_END                                          (0x00000002a903ffU)
+
+/* Properties of firewall at slave: R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS */
+#define CSL_STD_FW_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_ID                                           (2772U)
+#define CSL_STD_FW_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_TYPE                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_MMR_BASE                                     (0x000000452b5000U)
+#define CSL_STD_FW_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_NUM_REGIONS                                  (3U)
+#define CSL_STD_FW_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_STD_FW_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_EVNT_BUS_VBUSP_MMRS_START                    (0x00000002a2d000U)
+#define CSL_STD_FW_R5FSS0_COMMON0_EVNT_BUS_VBUSP_MMRS_EVNT_BUS_VBUSP_MMRS_END                      (0x00000002a2d0ffU)
+
+/* Properties of firewall at slave: R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_ID                                 (2772U)
+#define CSL_STD_FW_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_TYPE                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_MMR_BASE                           (0x000000452b5000U)
+#define CSL_STD_FW_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_NUM_REGIONS                        (3U)
+#define CSL_STD_FW_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION            (3U)
+#define CSL_STD_FW_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_CORE0_ECC_AGGR_START               (0x00000002a68000U)
+#define CSL_STD_FW_R5FSS0_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_CORE0_ECC_AGGR_END                 (0x00000002a683ffU)
+
+/* Properties of firewall at slave: R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS */
+#define CSL_STD_FW_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_ID                            (2772U)
+#define CSL_STD_FW_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_MMR_BASE                      (0x000000452b5000U)
+#define CSL_STD_FW_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_NUM_REGIONS                   (3U)
+#define CSL_STD_FW_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_COMPARE_CFG_START             (0x00000005b00000U)
+#define CSL_STD_FW_R5FSS0_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_COMPARE_CFG_END               (0x00000005b000ffU)
+
+/* Properties of firewall at slave: R5FSS0_CORE1_ECC_AGGR_REGS */
+#define CSL_STD_FW_R5FSS0_CORE1_ECC_AGGR_REGS_ID                                                   (2773U)
+#define CSL_STD_FW_R5FSS0_CORE1_ECC_AGGR_REGS_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS0_CORE1_ECC_AGGR_REGS_MMR_BASE                                             (0x000000452b5400U)
+#define CSL_STD_FW_R5FSS0_CORE1_ECC_AGGR_REGS_NUM_REGIONS                                          (1U)
+#define CSL_STD_FW_R5FSS0_CORE1_ECC_AGGR_REGS_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_R5FSS0_CORE1_ECC_AGGR_REGS_CORE1_ECC_AGGR_START                                 (0x00000005b10000U)
+#define CSL_STD_FW_R5FSS0_CORE1_ECC_AGGR_REGS_CORE1_ECC_AGGR_END                                   (0x00000005b103ffU)
+
+/* Properties of firewall at slave: PBIST2_MEM */
+#define CSL_STD_FW_PBIST2_MEM_ID                                                                   (2777U)
+#define CSL_STD_FW_PBIST2_MEM_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_PBIST2_MEM_MMR_BASE                                                             (0x000000452b6400U)
+#define CSL_STD_FW_PBIST2_MEM_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_PBIST2_MEM_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_PBIST2_MEM_START                                                                (0x00000003380000U)
+#define CSL_STD_FW_PBIST2_MEM_END                                                                  (0x000000033803ffU)
+
+/* Properties of firewall at slave: MSRAM_512K0_ECC_AGGR_REGSREGS */
+#define CSL_STD_FW_MSRAM_512K0_ECC_AGGR_REGSREGS_ID                                                (2780U)
+#define CSL_STD_FW_MSRAM_512K0_ECC_AGGR_REGSREGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MSRAM_512K0_ECC_AGGR_REGSREGS_MMR_BASE                                          (0x000000452b7000U)
+#define CSL_STD_FW_MSRAM_512K0_ECC_AGGR_REGSREGS_NUM_REGIONS                                       (1U)
+#define CSL_STD_FW_MSRAM_512K0_ECC_AGGR_REGSREGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MSRAM_512K0_ECC_AGGR_REGSREGS_ECC_AGGR_REGS_START                               (0x00000002a2f000U)
+#define CSL_STD_FW_MSRAM_512K0_ECC_AGGR_REGSREGS_ECC_AGGR_REGS_END                                 (0x00000002a2f3ffU)
+
+/* Properties of firewall at slave: R5FSS1_CORE0_ATCM0 */
+#define CSL_STD_FW_R5FSS1_CORE0_ATCM0_ID                                                           (2781U)
+#define CSL_STD_FW_R5FSS1_CORE0_ATCM0_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_CORE0_ATCM0_MMR_BASE                                                     (0x000000452b7400U)
+#define CSL_STD_FW_R5FSS1_CORE0_ATCM0_NUM_REGIONS                                                  (4U)
+#define CSL_STD_FW_R5FSS1_CORE0_ATCM0_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_R5FSS1_CORE0_ATCM0_CORE0_ATCM_START                                             (0x00000005e00000U)
+#define CSL_STD_FW_R5FSS1_CORE0_ATCM0_CORE0_ATCM_END                                               (0x00000005e0ffffU)
+
+/* Properties of firewall at slave: R5FSS1_CORE0_BTCM0 */
+#define CSL_STD_FW_R5FSS1_CORE0_BTCM0_ID                                                           (2781U)
+#define CSL_STD_FW_R5FSS1_CORE0_BTCM0_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_CORE0_BTCM0_MMR_BASE                                                     (0x000000452b7400U)
+#define CSL_STD_FW_R5FSS1_CORE0_BTCM0_NUM_REGIONS                                                  (4U)
+#define CSL_STD_FW_R5FSS1_CORE0_BTCM0_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_R5FSS1_CORE0_BTCM0_CORE0_BTCM_START                                             (0x00000005e10000U)
+#define CSL_STD_FW_R5FSS1_CORE0_BTCM0_CORE0_BTCM_END                                               (0x00000005e1ffffU)
+
+/* Properties of firewall at slave: R5FSS1_CORE0_ICACHE0 */
+#define CSL_STD_FW_R5FSS1_CORE0_ICACHE0_ID                                                         (2781U)
+#define CSL_STD_FW_R5FSS1_CORE0_ICACHE0_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_CORE0_ICACHE0_MMR_BASE                                                   (0x000000452b7400U)
+#define CSL_STD_FW_R5FSS1_CORE0_ICACHE0_NUM_REGIONS                                                (4U)
+#define CSL_STD_FW_R5FSS1_CORE0_ICACHE0_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_R5FSS1_CORE0_ICACHE0_CORE0_ICACHE_START                                         (0x00004e10000000U)
+#define CSL_STD_FW_R5FSS1_CORE0_ICACHE0_CORE0_ICACHE_END                                           (0x00004e107fffffU)
+
+/* Properties of firewall at slave: R5FSS1_CORE0_DCACHE0 */
+#define CSL_STD_FW_R5FSS1_CORE0_DCACHE0_ID                                                         (2781U)
+#define CSL_STD_FW_R5FSS1_CORE0_DCACHE0_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_CORE0_DCACHE0_MMR_BASE                                                   (0x000000452b7400U)
+#define CSL_STD_FW_R5FSS1_CORE0_DCACHE0_NUM_REGIONS                                                (4U)
+#define CSL_STD_FW_R5FSS1_CORE0_DCACHE0_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_R5FSS1_CORE0_DCACHE0_CORE0_DCACHE_START                                         (0x00004e10800000U)
+#define CSL_STD_FW_R5FSS1_CORE0_DCACHE0_CORE0_DCACHE_END                                           (0x00004e10ffffffU)
+
+/* Properties of firewall at slave: R5FSS1_CORE1_ATCM1 */
+#define CSL_STD_FW_R5FSS1_CORE1_ATCM1_ID                                                           (2782U)
+#define CSL_STD_FW_R5FSS1_CORE1_ATCM1_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_CORE1_ATCM1_MMR_BASE                                                     (0x000000452b7800U)
+#define CSL_STD_FW_R5FSS1_CORE1_ATCM1_NUM_REGIONS                                                  (4U)
+#define CSL_STD_FW_R5FSS1_CORE1_ATCM1_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_R5FSS1_CORE1_ATCM1_CORE1_ATCM_START                                             (0x00000005f00000U)
+#define CSL_STD_FW_R5FSS1_CORE1_ATCM1_CORE1_ATCM_END                                               (0x00000005f07fffU)
+
+/* Properties of firewall at slave: R5FSS1_CORE1_BTCM1 */
+#define CSL_STD_FW_R5FSS1_CORE1_BTCM1_ID                                                           (2782U)
+#define CSL_STD_FW_R5FSS1_CORE1_BTCM1_TYPE                                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_CORE1_BTCM1_MMR_BASE                                                     (0x000000452b7800U)
+#define CSL_STD_FW_R5FSS1_CORE1_BTCM1_NUM_REGIONS                                                  (4U)
+#define CSL_STD_FW_R5FSS1_CORE1_BTCM1_NUM_PRIV_IDS_PER_REGION                                      (3U)
+#define CSL_STD_FW_R5FSS1_CORE1_BTCM1_CORE1_BTCM_START                                             (0x00000005f10000U)
+#define CSL_STD_FW_R5FSS1_CORE1_BTCM1_CORE1_BTCM_END                                               (0x00000005f17fffU)
+
+/* Properties of firewall at slave: R5FSS1_CORE1_ICACHE1 */
+#define CSL_STD_FW_R5FSS1_CORE1_ICACHE1_ID                                                         (2782U)
+#define CSL_STD_FW_R5FSS1_CORE1_ICACHE1_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_CORE1_ICACHE1_MMR_BASE                                                   (0x000000452b7800U)
+#define CSL_STD_FW_R5FSS1_CORE1_ICACHE1_NUM_REGIONS                                                (4U)
+#define CSL_STD_FW_R5FSS1_CORE1_ICACHE1_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_R5FSS1_CORE1_ICACHE1_CORE1_ICACHE_START                                         (0x00004e11000000U)
+#define CSL_STD_FW_R5FSS1_CORE1_ICACHE1_CORE1_ICACHE_END                                           (0x00004e117fffffU)
+
+/* Properties of firewall at slave: R5FSS1_CORE1_DCACHE1 */
+#define CSL_STD_FW_R5FSS1_CORE1_DCACHE1_ID                                                         (2782U)
+#define CSL_STD_FW_R5FSS1_CORE1_DCACHE1_TYPE                                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_CORE1_DCACHE1_MMR_BASE                                                   (0x000000452b7800U)
+#define CSL_STD_FW_R5FSS1_CORE1_DCACHE1_NUM_REGIONS                                                (4U)
+#define CSL_STD_FW_R5FSS1_CORE1_DCACHE1_NUM_PRIV_IDS_PER_REGION                                    (3U)
+#define CSL_STD_FW_R5FSS1_CORE1_DCACHE1_CORE1_DCACHE_START                                         (0x00004e11800000U)
+#define CSL_STD_FW_R5FSS1_CORE1_DCACHE1_CORE1_DCACHE_END                                           (0x00004e11ffffffU)
+
+/* Properties of firewall at slave: R5FSS1_COMMON0_EVNT_BUS_VBUSP_MMRS */
+#define CSL_STD_FW_R5FSS1_COMMON0_EVNT_BUS_VBUSP_MMRS_ID                                           (2783U)
+#define CSL_STD_FW_R5FSS1_COMMON0_EVNT_BUS_VBUSP_MMRS_TYPE                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_COMMON0_EVNT_BUS_VBUSP_MMRS_MMR_BASE                                     (0x000000452b7c00U)
+#define CSL_STD_FW_R5FSS1_COMMON0_EVNT_BUS_VBUSP_MMRS_NUM_REGIONS                                  (3U)
+#define CSL_STD_FW_R5FSS1_COMMON0_EVNT_BUS_VBUSP_MMRS_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_STD_FW_R5FSS1_COMMON0_EVNT_BUS_VBUSP_MMRS_EVNT_BUS_VBUSP_MMRS_START                    (0x00000002a2e000U)
+#define CSL_STD_FW_R5FSS1_COMMON0_EVNT_BUS_VBUSP_MMRS_EVNT_BUS_VBUSP_MMRS_END                      (0x00000002a2e0ffU)
+
+/* Properties of firewall at slave: R5FSS1_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_R5FSS1_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_ID                                 (2783U)
+#define CSL_STD_FW_R5FSS1_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_TYPE                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_MMR_BASE                           (0x000000452b7c00U)
+#define CSL_STD_FW_R5FSS1_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_NUM_REGIONS                        (3U)
+#define CSL_STD_FW_R5FSS1_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION            (3U)
+#define CSL_STD_FW_R5FSS1_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_CORE0_ECC_AGGR_START               (0x00000002a69000U)
+#define CSL_STD_FW_R5FSS1_CORE0_ECC_AGGR_CPU0_ECC_AGGR_CFG_REGS_CORE0_ECC_AGGR_END                 (0x00000002a693ffU)
+
+/* Properties of firewall at slave: R5FSS1_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS */
+#define CSL_STD_FW_R5FSS1_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_ID                            (2783U)
+#define CSL_STD_FW_R5FSS1_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_MMR_BASE                      (0x000000452b7c00U)
+#define CSL_STD_FW_R5FSS1_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_NUM_REGIONS                   (3U)
+#define CSL_STD_FW_R5FSS1_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_R5FSS1_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_COMPARE_CFG_START             (0x00000005b20000U)
+#define CSL_STD_FW_R5FSS1_COMMON0_PULSAR_SL_COMPARE_WRAPPER_CFG_MMRS_COMPARE_CFG_END               (0x00000005b200ffU)
+
+/* Properties of firewall at slave: R5FSS1_CORE1_ECC_AGGR_REGS */
+#define CSL_STD_FW_R5FSS1_CORE1_ECC_AGGR_REGS_ID                                                   (2784U)
+#define CSL_STD_FW_R5FSS1_CORE1_ECC_AGGR_REGS_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_R5FSS1_CORE1_ECC_AGGR_REGS_MMR_BASE                                             (0x000000452b8000U)
+#define CSL_STD_FW_R5FSS1_CORE1_ECC_AGGR_REGS_NUM_REGIONS                                          (1U)
+#define CSL_STD_FW_R5FSS1_CORE1_ECC_AGGR_REGS_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_R5FSS1_CORE1_ECC_AGGR_REGS_CORE1_ECC_AGGR_START                                 (0x00000005b30000U)
+#define CSL_STD_FW_R5FSS1_CORE1_ECC_AGGR_REGS_CORE1_ECC_AGGR_END                                   (0x00000005b303ffU)
+
+/* Properties of firewall at slave: PBIST10_MEM */
+#define CSL_STD_FW_PBIST10_MEM_ID                                                                  (2785U)
+#define CSL_STD_FW_PBIST10_MEM_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_PBIST10_MEM_MMR_BASE                                                            (0x000000452b8400U)
+#define CSL_STD_FW_PBIST10_MEM_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_PBIST10_MEM_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_PBIST10_MEM_START                                                               (0x00000003390000U)
+#define CSL_STD_FW_PBIST10_MEM_END                                                                 (0x000000033903ffU)
+
+/* Properties of firewall at slave: MSRAM_512K1_ECC_AGGR_REGSREGS */
+#define CSL_STD_FW_MSRAM_512K1_ECC_AGGR_REGSREGS_ID                                                (2788U)
+#define CSL_STD_FW_MSRAM_512K1_ECC_AGGR_REGSREGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MSRAM_512K1_ECC_AGGR_REGSREGS_MMR_BASE                                          (0x000000452b9000U)
+#define CSL_STD_FW_MSRAM_512K1_ECC_AGGR_REGSREGS_NUM_REGIONS                                       (1U)
+#define CSL_STD_FW_MSRAM_512K1_ECC_AGGR_REGSREGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_MSRAM_512K1_ECC_AGGR_REGSREGS_ECC_AGGR_REGS_START                               (0x00000002afc000U)
+#define CSL_STD_FW_MSRAM_512K1_ECC_AGGR_REGSREGS_ECC_AGGR_REGS_END                                 (0x00000002afc3ffU)
+
+/* Properties of firewall at slave: AEP_GPU_BXS464_WRAP0_DFT_EMBED_PBIST_0_MEM */
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_DFT_EMBED_PBIST_0_MEM_ID                                   (2820U)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_DFT_EMBED_PBIST_0_MEM_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_DFT_EMBED_PBIST_0_MEM_MMR_BASE                             (0x000000452c1000U)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_DFT_EMBED_PBIST_0_MEM_NUM_REGIONS                          (1U)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_DFT_EMBED_PBIST_0_MEM_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_DFT_EMBED_PBIST_0_MEM_MEM_START                            (0x000000033a0000U)
+#define CSL_STD_FW_AEP_GPU_BXS464_WRAP0_DFT_EMBED_PBIST_0_MEM_MEM_END                              (0x000000033a03ffU)
+
+/* Properties of firewall at slave: PBIST7_MEM */
+#define CSL_STD_FW_PBIST7_MEM_ID                                                                   (2822U)
+#define CSL_STD_FW_PBIST7_MEM_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_PBIST7_MEM_MMR_BASE                                                             (0x000000452c1800U)
+#define CSL_STD_FW_PBIST7_MEM_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_PBIST7_MEM_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_PBIST7_MEM_START                                                                (0x00000003300000U)
+#define CSL_STD_FW_PBIST7_MEM_END                                                                  (0x000000033003ffU)
+
+/* Properties of firewall at slave: PBIST5_MEM */
+#define CSL_STD_FW_PBIST5_MEM_ID                                                                   (2823U)
+#define CSL_STD_FW_PBIST5_MEM_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_PBIST5_MEM_MMR_BASE                                                             (0x000000452c1c00U)
+#define CSL_STD_FW_PBIST5_MEM_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_PBIST5_MEM_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_PBIST5_MEM_START                                                                (0x00000003340000U)
+#define CSL_STD_FW_PBIST5_MEM_END                                                                  (0x000000033403ffU)
+
+/* Properties of firewall at slave: PBIST8_MEM */
+#define CSL_STD_FW_PBIST8_MEM_ID                                                                   (2825U)
+#define CSL_STD_FW_PBIST8_MEM_TYPE                                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_PBIST8_MEM_MMR_BASE                                                             (0x000000452c2400U)
+#define CSL_STD_FW_PBIST8_MEM_NUM_REGIONS                                                          (1U)
+#define CSL_STD_FW_PBIST8_MEM_NUM_PRIV_IDS_PER_REGION                                              (3U)
+#define CSL_STD_FW_PBIST8_MEM_START                                                                (0x00000003310000U)
+#define CSL_STD_FW_PBIST8_MEM_END                                                                  (0x000000033103ffU)
+
+/* Properties of firewall at slave: PBIST11_MEM */
+#define CSL_STD_FW_PBIST11_MEM_ID                                                                  (2826U)
+#define CSL_STD_FW_PBIST11_MEM_TYPE                                                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_PBIST11_MEM_MMR_BASE                                                            (0x000000452c2800U)
+#define CSL_STD_FW_PBIST11_MEM_NUM_REGIONS                                                         (1U)
+#define CSL_STD_FW_PBIST11_MEM_NUM_PRIV_IDS_PER_REGION                                             (3U)
+#define CSL_STD_FW_PBIST11_MEM_START                                                               (0x00000003350000U)
+#define CSL_STD_FW_PBIST11_MEM_END                                                                 (0x000000033503ffU)
+
+/* Properties of firewall at slave: ECC_AGGR6_REGS */
+#define CSL_STD_FW_ECC_AGGR6_REGS_ID                                                               (2827U)
+#define CSL_STD_FW_ECC_AGGR6_REGS_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_ECC_AGGR6_REGS_MMR_BASE                                                         (0x000000452c2c00U)
+#define CSL_STD_FW_ECC_AGGR6_REGS_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_ECC_AGGR6_REGS_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_ECC_AGGR6_REGS_ECC_AGGR_START                                                   (0x00000002af7000U)
+#define CSL_STD_FW_ECC_AGGR6_REGS_ECC_AGGR_END                                                     (0x00000002af73ffU)
+
+/* Properties of firewall at slave: CBASS_AC_CFG_NONSAFE0_ERR_REGS */
+#define CSL_STD_FW_CBASS_AC_CFG_NONSAFE0_ERR_REGS_ID                                               (2829U)
+#define CSL_STD_FW_CBASS_AC_CFG_NONSAFE0_ERR_REGS_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_AC_CFG_NONSAFE0_ERR_REGS_MMR_BASE                                         (0x000000452c3400U)
+#define CSL_STD_FW_CBASS_AC_CFG_NONSAFE0_ERR_REGS_NUM_REGIONS                                      (1U)
+#define CSL_STD_FW_CBASS_AC_CFG_NONSAFE0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_CBASS_AC_CFG_NONSAFE0_ERR_REGS_ERR_START                                        (0x00000002a97000U)
+#define CSL_STD_FW_CBASS_AC_CFG_NONSAFE0_ERR_REGS_ERR_END                                          (0x00000002a973ffU)
+
+/* Properties of firewall at slave: CBASS_AC_NONSAFE0_ERR_REGS */
+#define CSL_STD_FW_CBASS_AC_NONSAFE0_ERR_REGS_ID                                                   (2830U)
+#define CSL_STD_FW_CBASS_AC_NONSAFE0_ERR_REGS_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_AC_NONSAFE0_ERR_REGS_MMR_BASE                                             (0x000000452c3800U)
+#define CSL_STD_FW_CBASS_AC_NONSAFE0_ERR_REGS_NUM_REGIONS                                          (1U)
+#define CSL_STD_FW_CBASS_AC_NONSAFE0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_CBASS_AC_NONSAFE0_ERR_REGS_ERR_START                                            (0x00000002a85000U)
+#define CSL_STD_FW_CBASS_AC_NONSAFE0_ERR_REGS_ERR_END                                              (0x00000002a853ffU)
+
+/* Properties of firewall at slave: CBASS_AC_CFG0_ERR_REGS */
+#define CSL_STD_FW_CBASS_AC_CFG0_ERR_REGS_ID                                                       (2831U)
+#define CSL_STD_FW_CBASS_AC_CFG0_ERR_REGS_TYPE                                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_CBASS_AC_CFG0_ERR_REGS_MMR_BASE                                                 (0x000000452c3c00U)
+#define CSL_STD_FW_CBASS_AC_CFG0_ERR_REGS_NUM_REGIONS                                              (1U)
+#define CSL_STD_FW_CBASS_AC_CFG0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                                  (3U)
+#define CSL_STD_FW_CBASS_AC_CFG0_ERR_REGS_ERR_START                                                (0x00000002a84000U)
+#define CSL_STD_FW_CBASS_AC_CFG0_ERR_REGS_ERR_END                                                  (0x00000002a843ffU)
+
+/* Properties of firewall at slave: AM_AC_MERGER_CBASS0_ERR_REGS */
+#define CSL_STD_FW_AM_AC_MERGER_CBASS0_ERR_REGS_ID                                                 (2832U)
+#define CSL_STD_FW_AM_AC_MERGER_CBASS0_ERR_REGS_TYPE                                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_AM_AC_MERGER_CBASS0_ERR_REGS_MMR_BASE                                           (0x000000452c4000U)
+#define CSL_STD_FW_AM_AC_MERGER_CBASS0_ERR_REGS_NUM_REGIONS                                        (1U)
+#define CSL_STD_FW_AM_AC_MERGER_CBASS0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                            (3U)
+#define CSL_STD_FW_AM_AC_MERGER_CBASS0_ERR_REGS_ERR_START                                          (0x00000002a98000U)
+#define CSL_STD_FW_AM_AC_MERGER_CBASS0_ERR_REGS_ERR_END                                            (0x00000002a983ffU)
+
+/* Properties of firewall at slave: ECC_AGGR9_REGS */
+#define CSL_STD_FW_ECC_AGGR9_REGS_ID                                                               (2833U)
+#define CSL_STD_FW_ECC_AGGR9_REGS_TYPE                                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_ECC_AGGR9_REGS_MMR_BASE                                                         (0x000000452c4400U)
+#define CSL_STD_FW_ECC_AGGR9_REGS_NUM_REGIONS                                                      (1U)
+#define CSL_STD_FW_ECC_AGGR9_REGS_NUM_PRIV_IDS_PER_REGION                                          (3U)
+#define CSL_STD_FW_ECC_AGGR9_REGS_REGS_START                                                       (0x00000002af9000U)
+#define CSL_STD_FW_ECC_AGGR9_REGS_REGS_END                                                         (0x00000002af93ffU)
+
+/* Properties of firewall at slave: MSRAM_512K0_RAM */
+#define CSL_STD_FW_MSRAM_512K0_RAM_ID                                                              (2880U)
+#define CSL_STD_FW_MSRAM_512K0_RAM_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_MSRAM_512K0_RAM_MMR_BASE                                                        (0x000000452d0000U)
+#define CSL_STD_FW_MSRAM_512K0_RAM_NUM_REGIONS                                                     (8U)
+#define CSL_STD_FW_MSRAM_512K0_RAM_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_MSRAM_512K0_RAM_RAM_START                                                       (0x00004f02000000U)
+#define CSL_STD_FW_MSRAM_512K0_RAM_RAM_END                                                         (0x00004f0207ffffU)
+
+/* Properties of firewall at slave: MSRAM_512K1_RAM */
+#define CSL_STD_FW_MSRAM_512K1_RAM_ID                                                              (2944U)
+#define CSL_STD_FW_MSRAM_512K1_RAM_TYPE                                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_MSRAM_512K1_RAM_MMR_BASE                                                        (0x000000452e0000U)
+#define CSL_STD_FW_MSRAM_512K1_RAM_NUM_REGIONS                                                     (8U)
+#define CSL_STD_FW_MSRAM_512K1_RAM_NUM_PRIV_IDS_PER_REGION                                         (3U)
+#define CSL_STD_FW_MSRAM_512K1_RAM_RAM_START                                                       (0x00004f02080000U)
+#define CSL_STD_FW_MSRAM_512K1_RAM_RAM_END                                                         (0x00004f020fffffU)
+
+/* Properties of firewall at slave: AM_PULSAR1_PERIPH_SWITCH_CBASS0_ERR_REGS */
+#define CSL_STD_FW_AM_PULSAR1_PERIPH_SWITCH_CBASS0_ERR_REGS_ID                                     (2945U)
+#define CSL_STD_FW_AM_PULSAR1_PERIPH_SWITCH_CBASS0_ERR_REGS_TYPE                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_AM_PULSAR1_PERIPH_SWITCH_CBASS0_ERR_REGS_MMR_BASE                               (0x000000452e0400U)
+#define CSL_STD_FW_AM_PULSAR1_PERIPH_SWITCH_CBASS0_ERR_REGS_NUM_REGIONS                            (1U)
+#define CSL_STD_FW_AM_PULSAR1_PERIPH_SWITCH_CBASS0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_STD_FW_AM_PULSAR1_PERIPH_SWITCH_CBASS0_ERR_REGS_ERR_START                              (0x00000002a95000U)
+#define CSL_STD_FW_AM_PULSAR1_PERIPH_SWITCH_CBASS0_ERR_REGS_ERR_END                                (0x00000002a953ffU)
+
+/* Properties of firewall at slave: AM_PULSAR1_MEM_CBASS0_ERR_REGS */
+#define CSL_STD_FW_AM_PULSAR1_MEM_CBASS0_ERR_REGS_ID                                               (2946U)
+#define CSL_STD_FW_AM_PULSAR1_MEM_CBASS0_ERR_REGS_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_AM_PULSAR1_MEM_CBASS0_ERR_REGS_MMR_BASE                                         (0x000000452e0800U)
+#define CSL_STD_FW_AM_PULSAR1_MEM_CBASS0_ERR_REGS_NUM_REGIONS                                      (1U)
+#define CSL_STD_FW_AM_PULSAR1_MEM_CBASS0_ERR_REGS_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_AM_PULSAR1_MEM_CBASS0_ERR_REGS_ERR_START                                        (0x00000002a92000U)
+#define CSL_STD_FW_AM_PULSAR1_MEM_CBASS0_ERR_REGS_ERR_END                                          (0x00000002a923ffU)
+
+/* Properties of firewall at slave: DMPAC_VPAC_PSILSS0_MMRS */
+#define CSL_STD_FW_DMPAC_VPAC_PSILSS0_MMRS_ID                                                      (2947U)
+#define CSL_STD_FW_DMPAC_VPAC_PSILSS0_MMRS_TYPE                                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC_VPAC_PSILSS0_MMRS_MMR_BASE                                                (0x000000452e0c00U)
+#define CSL_STD_FW_DMPAC_VPAC_PSILSS0_MMRS_NUM_REGIONS                                             (1U)
+#define CSL_STD_FW_DMPAC_VPAC_PSILSS0_MMRS_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_STD_FW_DMPAC_VPAC_PSILSS0_MMRS_MMRS_START                                              (0x0000000341c000U)
+#define CSL_STD_FW_DMPAC_VPAC_PSILSS0_MMRS_MMRS_END                                                (0x0000000341cfffU)
+
+/* Properties of firewall at slave: NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS */
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_ID                                          (4160U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_MMR_BASE                                    (0x00000045410000U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_NUM_REGIONS                                 (1U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_SRC_FIFOS_START             (0x00000038000000U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_SRC_FIFOS_END               (0x000000383fffffU)
+
+/* Properties of firewall at slave: NAVSS0_MSRAM_0_MSRAM0_SLV_RAM */
+#define CSL_STD_FW_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_ID                                                (4161U)
+#define CSL_STD_FW_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_MMR_BASE                                          (0x00000045410400U)
+#define CSL_STD_FW_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_NUM_REGIONS                                       (1U)
+#define CSL_STD_FW_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_MSRAM0_SLV_RAM_START                              (0x00000030000000U)
+#define CSL_STD_FW_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_MSRAM0_SLV_RAM_END                                (0x0000003000ffffU)
+
+/* Properties of firewall at slave: NAVSS0_RINGACC_0_RINGACC0_CFG_CFG */
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_CFG_ID                                            (4288U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_CFG_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_CFG_MMR_BASE                                      (0x00000045430000U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_CFG_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_CFG_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_CFG_UDMASS_RINGACC0_CFG_START                     (0x00000031080000U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_CFG_UDMASS_RINGACC0_CFG_END                       (0x000000310bffffU)
+
+/* Properties of firewall at slave: NAVSS0_RINGACC_0_RINGACC0_CFG_GCFG */
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_GCFG_ID                                           (4288U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_GCFG_TYPE                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_GCFG_MMR_BASE                                     (0x00000045430000U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_GCFG_NUM_REGIONS                                  (4U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_GCFG_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_GCFG_UDMASS_RINGACC0_GCFG_START                   (0x00000031160000U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_GCFG_UDMASS_RINGACC0_GCFG_END                     (0x000000311603ffU)
+
+/* Properties of firewall at slave: NAVSS0_RINGACC_0_RINGACC0_CFG_MON */
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_ID                                            (4288U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_MMR_BASE                                      (0x00000045430000U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_NUM_REGIONS                                   (4U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_START                 (0x00000032000000U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_END                   (0x0000003201ffffU)
+
+/* Properties of firewall at slave: NAVSS0_RINGACC_0_RINGACC0_CFG_RT */
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_RT_ID                                             (4288U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_RT_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_RT_MMR_BASE                                       (0x00000045430000U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_RT_NUM_REGIONS                                    (4U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_RT_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_RT_UDMASS_RINGACC0_CFG_RT_START                   (0x0000003c000000U)
+#define CSL_STD_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_RT_UDMASS_RINGACC0_CFG_RT_END                     (0x0000003c3fffffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_CFG */
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_CFG_ID                                    (4352U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_CFG_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_CFG_MMR_BASE                              (0x00000045440000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_CFG_NUM_REGIONS                           (8U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_CFG_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_CFG_UDMASS_INTA0_CFG_START                (0x00000030802000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_CFG_UDMASS_INTA0_CFG_END                  (0x0000003080201fU)
+
+/* Properties of firewall at slave: NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_UNMAP */
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_UNMAP_ID                                  (4352U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_UNMAP_TYPE                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_UNMAP_MMR_BASE                            (0x00000045440000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_UNMAP_NUM_REGIONS                         (8U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_UNMAP_NUM_PRIV_IDS_PER_REGION             (3U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_UNMAP_UDMASS_INTA0_CFG_UNMAP_START        (0x00000030880000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_UNMAP_UDMASS_INTA0_CFG_UNMAP_END          (0x0000003088ffffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_IMAP */
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_IMAP_ID                                   (4352U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_IMAP_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_IMAP_MMR_BASE                             (0x00000045440000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_IMAP_NUM_REGIONS                          (8U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_IMAP_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_IMAP_UDMASS_INTA0_IMAP_START              (0x00000030940000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_IMAP_UDMASS_INTA0_IMAP_END                (0x0000003094ffffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTCFG */
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTCFG_ID                                (4352U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTCFG_TYPE                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTCFG_MMR_BASE                          (0x00000045440000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTCFG_NUM_REGIONS                       (8U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTCFG_NUM_PRIV_IDS_PER_REGION           (3U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTCFG_UDMASS_INTA0_CFG_GCNTCFG_START    (0x00000031040000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTCFG_UDMASS_INTA0_CFG_GCNTCFG_END      (0x00000031043fffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_L2G */
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_L2G_ID                                    (4352U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_L2G_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_L2G_MMR_BASE                              (0x00000045440000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_L2G_NUM_REGIONS                           (8U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_L2G_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_L2G_UDMASS_INTA0_CFG_L2G_START            (0x00000031100000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_L2G_UDMASS_INTA0_CFG_L2G_END              (0x00000031101fffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_MCAST */
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_MCAST_ID                                  (4352U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_MCAST_TYPE                                (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_MCAST_MMR_BASE                            (0x00000045440000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_MCAST_NUM_REGIONS                         (8U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_MCAST_NUM_PRIV_IDS_PER_REGION             (3U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_MCAST_UDMASS_INTA0_CFG_MCAST_START        (0x00000031110000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_MCAST_UDMASS_INTA0_CFG_MCAST_END          (0x00000031113fffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI */
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_ID                                (4352U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_TYPE                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_MMR_BASE                          (0x00000045440000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_NUM_REGIONS                       (8U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_NUM_PRIV_IDS_PER_REGION           (3U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_GCNTRTI_START    (0x00000033800000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_GCNTRTI_END      (0x000000339fffffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_INTR */
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_INTR_ID                                   (4352U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_INTR_TYPE                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_INTR_MMR_BASE                             (0x00000045440000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_INTR_NUM_REGIONS                          (8U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_INTR_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_INTR_UDMASS_INTA0_CFG_INTR_START          (0x00000033d00000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_INTR_UDMASS_INTA0_CFG_INTR_END            (0x00000033dfffffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMAP_0_UDMAP0_CFG_TCHAN */
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHAN_ID                                              (4384U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHAN_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHAN_MMR_BASE                                        (0x00000045448000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHAN_NUM_REGIONS                                     (6U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHAN_NUM_PRIV_IDS_PER_REGION                         (3U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHAN_UDMASS_UDMAP0_CFG_TCHAN_START                   (0x00000030b00000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHAN_UDMASS_UDMAP0_CFG_TCHAN_END                     (0x00000030b1ffffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMAP_0_UDMAP0_CFG_RCHAN */
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHAN_ID                                              (4384U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHAN_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHAN_MMR_BASE                                        (0x00000045448000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHAN_NUM_REGIONS                                     (6U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHAN_NUM_PRIV_IDS_PER_REGION                         (3U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHAN_UDMASS_UDMAP0_CFG_RCHAN_START                   (0x00000030c00000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHAN_UDMASS_UDMAP0_CFG_RCHAN_END                     (0x00000030c07fffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMAP_0_UDMAP0_CFG_RFLOW */
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RFLOW_ID                                              (4384U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RFLOW_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RFLOW_MMR_BASE                                        (0x00000045448000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RFLOW_NUM_REGIONS                                     (6U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RFLOW_NUM_PRIV_IDS_PER_REGION                         (3U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RFLOW_UDMASS_UDMAP0_CFG_RFLOW_START                   (0x00000030d00000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RFLOW_UDMASS_UDMAP0_CFG_RFLOW_END                     (0x00000030d03fffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMAP_0_UDMAP0_CFG_GCFG */
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_GCFG_ID                                               (4384U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_GCFG_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_GCFG_MMR_BASE                                         (0x00000045448000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_GCFG_NUM_REGIONS                                      (6U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_GCFG_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_GCFG_UDMASS_UDMAP0_CFG_START                          (0x00000031150000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_GCFG_UDMASS_UDMAP0_CFG_END                            (0x000000311500ffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT */
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_ID                                            (4384U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_MMR_BASE                                      (0x00000045448000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_NUM_REGIONS                                   (6U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_RCHANRT_START               (0x00000034000000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_RCHANRT_END                 (0x0000003407ffffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMAP_0_UDMAP0_CFG_TCHANRT */
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHANRT_ID                                            (4384U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHANRT_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHANRT_MMR_BASE                                      (0x00000045448000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHANRT_NUM_REGIONS                                   (6U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHANRT_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHANRT_UDMASS_UDMAP0_CFG_TCHANRT_START               (0x00000035000000U)
+#define CSL_STD_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_TCHANRT_UDMASS_UDMAP0_CFG_TCHANRT_END                 (0x000000351fffffU)
+
+/* Properties of firewall at slave: NAVSS0_BCDMA_0_BCDMA0_CFG_GCFG */
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_GCFG_ID                                               (4392U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_GCFG_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_GCFG_MMR_BASE                                         (0x0000004544a000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_GCFG_NUM_REGIONS                                      (7U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_GCFG_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_GCFG_BCDMA0_CFG_GCFG_START                            (0x000000311a0000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_GCFG_BCDMA0_CFG_GCFG_END                              (0x000000311a00ffU)
+
+/* Properties of firewall at slave: NAVSS0_BCDMA_0_BCDMA0_CFG_TCHAN */
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHAN_ID                                              (4392U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHAN_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHAN_MMR_BASE                                        (0x0000004544a000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHAN_NUM_REGIONS                                     (7U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHAN_NUM_PRIV_IDS_PER_REGION                         (3U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHAN_BCDMA0_CFG_TCHAN_START                          (0x00000035840000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHAN_BCDMA0_CFG_TCHAN_END                            (0x00000035840fffU)
+
+/* Properties of firewall at slave: NAVSS0_BCDMA_0_BCDMA0_CFG_RCHAN */
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHAN_ID                                              (4392U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHAN_TYPE                                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHAN_MMR_BASE                                        (0x0000004544a000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHAN_NUM_REGIONS                                     (7U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHAN_NUM_PRIV_IDS_PER_REGION                         (3U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHAN_BCDMA0_CFG_RCHAN_START                          (0x00000035880000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHAN_BCDMA0_CFG_RCHAN_END                            (0x00000035881fffU)
+
+/* Properties of firewall at slave: NAVSS0_BCDMA_0_BCDMA0_CFG_RING */
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RING_ID                                               (4392U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RING_TYPE                                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RING_MMR_BASE                                         (0x0000004544a000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RING_NUM_REGIONS                                      (7U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RING_NUM_PRIV_IDS_PER_REGION                          (3U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RING_BCDMA0_CFG_RING_START                            (0x00000035900000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RING_BCDMA0_CFG_RING_END                              (0x00000035903fffU)
+
+/* Properties of firewall at slave: NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT */
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_ID                                            (4392U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_MMR_BASE                                      (0x0000004544a000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_NUM_REGIONS                                   (7U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_TCHANRT_START                      (0x00000035c00000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_TCHANRT_END                        (0x00000035c0ffffU)
+
+/* Properties of firewall at slave: NAVSS0_BCDMA_0_BCDMA0_CFG_RCHANRT */
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHANRT_ID                                            (4392U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHANRT_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHANRT_MMR_BASE                                      (0x0000004544a000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHANRT_NUM_REGIONS                                   (7U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHANRT_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHANRT_BCDMA0_CFG_RCHANRT_START                      (0x00000035d00000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RCHANRT_BCDMA0_CFG_RCHANRT_END                        (0x00000035d1ffffU)
+
+/* Properties of firewall at slave: NAVSS0_BCDMA_0_BCDMA0_CFG_RINGRT */
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RINGRT_ID                                             (4392U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RINGRT_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RINGRT_MMR_BASE                                       (0x0000004544a000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RINGRT_NUM_REGIONS                                    (7U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RINGRT_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RINGRT_BCDMA0_CFG_RINGRT_START                        (0x00000035e00000U)
+#define CSL_STD_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_RINGRT_BCDMA0_CFG_RINGRT_END                          (0x00000035e7ffffU)
+
+/* Properties of firewall at slave: NAVSS0_UDMASS_ECC_AGGR_0_UDMASS_ECCAGGR_CFG_REGS */
+#define CSL_STD_FW_NAVSS0_UDMASS_ECC_AGGR_0_UDMASS_ECCAGGR_CFG_REGS_ID                             (4393U)
+#define CSL_STD_FW_NAVSS0_UDMASS_ECC_AGGR_0_UDMASS_ECCAGGR_CFG_REGS_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_UDMASS_ECC_AGGR_0_UDMASS_ECCAGGR_CFG_REGS_MMR_BASE                       (0x0000004544a400U)
+#define CSL_STD_FW_NAVSS0_UDMASS_ECC_AGGR_0_UDMASS_ECCAGGR_CFG_REGS_NUM_REGIONS                    (1U)
+#define CSL_STD_FW_NAVSS0_UDMASS_ECC_AGGR_0_UDMASS_ECCAGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_NAVSS0_UDMASS_ECC_AGGR_0_UDMASS_ECCAGGR_CFG_REGS_UDMASS_ECCAGGR0_CFG_REGS_START (0x00000031001000U)
+#define CSL_STD_FW_NAVSS0_UDMASS_ECC_AGGR_0_UDMASS_ECCAGGR_CFG_REGS_UDMASS_ECCAGGR0_CFG_REGS_END   (0x000000310013ffU)
+
+/* Properties of firewall at slave: NAVSS0_PSILCFG_0_PSILCFG0_CFG_PROXY */
+#define CSL_STD_FW_NAVSS0_PSILCFG_0_PSILCFG0_CFG_PROXY_ID                                          (4394U)
+#define CSL_STD_FW_NAVSS0_PSILCFG_0_PSILCFG0_CFG_PROXY_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PSILCFG_0_PSILCFG0_CFG_PROXY_MMR_BASE                                    (0x0000004544a800U)
+#define CSL_STD_FW_NAVSS0_PSILCFG_0_PSILCFG0_CFG_PROXY_NUM_REGIONS                                 (1U)
+#define CSL_STD_FW_NAVSS0_PSILCFG_0_PSILCFG0_CFG_PROXY_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_PSILCFG_0_PSILCFG0_CFG_PROXY_UDMASS_PSILCFG0_CFG_PROXY_START             (0x00000031f78000U)
+#define CSL_STD_FW_NAVSS0_PSILCFG_0_PSILCFG0_CFG_PROXY_UDMASS_PSILCFG0_CFG_PROXY_END               (0x00000031f781ffU)
+
+/* Properties of firewall at slave: NAVSS0_PSILSS_0_PSILSS0_CFG_MMRS */
+#define CSL_STD_FW_NAVSS0_PSILSS_0_PSILSS0_CFG_MMRS_ID                                             (4395U)
+#define CSL_STD_FW_NAVSS0_PSILSS_0_PSILSS0_CFG_MMRS_TYPE                                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PSILSS_0_PSILSS0_CFG_MMRS_MMR_BASE                                       (0x0000004544ac00U)
+#define CSL_STD_FW_NAVSS0_PSILSS_0_PSILSS0_CFG_MMRS_NUM_REGIONS                                    (1U)
+#define CSL_STD_FW_NAVSS0_PSILSS_0_PSILSS0_CFG_MMRS_NUM_PRIV_IDS_PER_REGION                        (3U)
+#define CSL_STD_FW_NAVSS0_PSILSS_0_PSILSS0_CFG_MMRS_PSILSS0_CFG_MMRS_START                         (0x00000031170000U)
+#define CSL_STD_FW_NAVSS0_PSILSS_0_PSILSS0_CFG_MMRS_PSILSS0_CFG_MMRS_END                           (0x00000031170fffU)
+
+/* Properties of firewall at slave: NAVSS0_DMA_VIRTID_0_NAV_DDR0_VIRTID_CFG_MMRS */
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_0_NAV_DDR0_VIRTID_CFG_MMRS_ID                                 (4608U)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_0_NAV_DDR0_VIRTID_CFG_MMRS_TYPE                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_0_NAV_DDR0_VIRTID_CFG_MMRS_MMR_BASE                           (0x00000045480000U)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_0_NAV_DDR0_VIRTID_CFG_MMRS_NUM_REGIONS                        (1U)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_0_NAV_DDR0_VIRTID_CFG_MMRS_NUM_PRIV_IDS_PER_REGION            (3U)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_0_NAV_DDR0_VIRTID_CFG_MMRS_NAV_DDR0_VIRTID_CFG_MMRS_START     (0x00000030a02000U)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_0_NAV_DDR0_VIRTID_CFG_MMRS_NAV_DDR0_VIRTID_CFG_MMRS_END       (0x00000030a020ffU)
+
+/* Properties of firewall at slave: NAVSS0_DMA_VIRTID_1_NAV_DDR1_VIRTID_CFG_MMRS */
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_1_NAV_DDR1_VIRTID_CFG_MMRS_ID                                 (4609U)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_1_NAV_DDR1_VIRTID_CFG_MMRS_TYPE                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_1_NAV_DDR1_VIRTID_CFG_MMRS_MMR_BASE                           (0x00000045480400U)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_1_NAV_DDR1_VIRTID_CFG_MMRS_NUM_REGIONS                        (1U)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_1_NAV_DDR1_VIRTID_CFG_MMRS_NUM_PRIV_IDS_PER_REGION            (3U)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_1_NAV_DDR1_VIRTID_CFG_MMRS_NAV_DDR1_VIRTID_CFG_MMRS_START     (0x00000030a03000U)
+#define CSL_STD_FW_NAVSS0_DMA_VIRTID_1_NAV_DDR1_VIRTID_CFG_MMRS_NAV_DDR1_VIRTID_CFG_MMRS_END       (0x00000030a030ffU)
+
+/* Properties of firewall at slave: NAVSS0_CPTS_0_CPTS0_S_VBUSP_CPTS_VBUSP */
+#define CSL_STD_FW_NAVSS0_CPTS_0_CPTS0_S_VBUSP_CPTS_VBUSP_ID                                       (4610U)
+#define CSL_STD_FW_NAVSS0_CPTS_0_CPTS0_S_VBUSP_CPTS_VBUSP_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_CPTS_0_CPTS0_S_VBUSP_CPTS_VBUSP_MMR_BASE                                 (0x00000045480800U)
+#define CSL_STD_FW_NAVSS0_CPTS_0_CPTS0_S_VBUSP_CPTS_VBUSP_NUM_REGIONS                              (1U)
+#define CSL_STD_FW_NAVSS0_CPTS_0_CPTS0_S_VBUSP_CPTS_VBUSP_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_CPTS_0_CPTS0_S_VBUSP_CPTS_VBUSP_CPTS_START                               (0x000000310d0000U)
+#define CSL_STD_FW_NAVSS0_CPTS_0_CPTS0_S_VBUSP_CPTS_VBUSP_CPTS_END                                 (0x000000310d03ffU)
+
+/* Properties of firewall at slave: NAVSS0_SPINLOCK_0_SPINLOCK0_CFG_REGS */
+#define CSL_STD_FW_NAVSS0_SPINLOCK_0_SPINLOCK0_CFG_REGS_ID                                         (4611U)
+#define CSL_STD_FW_NAVSS0_SPINLOCK_0_SPINLOCK0_CFG_REGS_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_SPINLOCK_0_SPINLOCK0_CFG_REGS_MMR_BASE                                   (0x00000045480c00U)
+#define CSL_STD_FW_NAVSS0_SPINLOCK_0_SPINLOCK0_CFG_REGS_NUM_REGIONS                                (1U)
+#define CSL_STD_FW_NAVSS0_SPINLOCK_0_SPINLOCK0_CFG_REGS_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_SPINLOCK_0_SPINLOCK0_CFG_REGS_SPINLOCK_START                             (0x00000030e00000U)
+#define CSL_STD_FW_NAVSS0_SPINLOCK_0_SPINLOCK0_CFG_REGS_SPINLOCK_END                               (0x00000030e07fffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_0_MAILBOX0_CFG_REGS0 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_0_MAILBOX0_CFG_REGS0_ID                                          (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_0_MAILBOX0_CFG_REGS0_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_0_MAILBOX0_CFG_REGS0_MMR_BASE                                    (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_0_MAILBOX0_CFG_REGS0_NUM_REGIONS                                 (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_0_MAILBOX0_CFG_REGS0_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_0_MAILBOX0_CFG_REGS0_MAILBOX_REGS0_START                         (0x00000031f80000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_0_MAILBOX0_CFG_REGS0_MAILBOX_REGS0_END                           (0x00000031f801ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_1_MAILBOX0_CFG_REGS1 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_1_MAILBOX0_CFG_REGS1_ID                                          (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_1_MAILBOX0_CFG_REGS1_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_1_MAILBOX0_CFG_REGS1_MMR_BASE                                    (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_1_MAILBOX0_CFG_REGS1_NUM_REGIONS                                 (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_1_MAILBOX0_CFG_REGS1_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_1_MAILBOX0_CFG_REGS1_MAILBOX_REGS1_START                         (0x00000031f81000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_1_MAILBOX0_CFG_REGS1_MAILBOX_REGS1_END                           (0x00000031f811ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_2_MAILBOX0_CFG_REGS2 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_2_MAILBOX0_CFG_REGS2_ID                                          (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_2_MAILBOX0_CFG_REGS2_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_2_MAILBOX0_CFG_REGS2_MMR_BASE                                    (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_2_MAILBOX0_CFG_REGS2_NUM_REGIONS                                 (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_2_MAILBOX0_CFG_REGS2_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_2_MAILBOX0_CFG_REGS2_MAILBOX_REGS2_START                         (0x00000031f82000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_2_MAILBOX0_CFG_REGS2_MAILBOX_REGS2_END                           (0x00000031f821ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_3_MAILBOX0_CFG_REGS3 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_3_MAILBOX0_CFG_REGS3_ID                                          (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_3_MAILBOX0_CFG_REGS3_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_3_MAILBOX0_CFG_REGS3_MMR_BASE                                    (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_3_MAILBOX0_CFG_REGS3_NUM_REGIONS                                 (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_3_MAILBOX0_CFG_REGS3_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_3_MAILBOX0_CFG_REGS3_MAILBOX_REGS3_START                         (0x00000031f83000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_3_MAILBOX0_CFG_REGS3_MAILBOX_REGS3_END                           (0x00000031f831ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_4_MAILBOX0_CFG_REGS4 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_4_MAILBOX0_CFG_REGS4_ID                                          (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_4_MAILBOX0_CFG_REGS4_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_4_MAILBOX0_CFG_REGS4_MMR_BASE                                    (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_4_MAILBOX0_CFG_REGS4_NUM_REGIONS                                 (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_4_MAILBOX0_CFG_REGS4_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_4_MAILBOX0_CFG_REGS4_MAILBOX_REGS4_START                         (0x00000031f84000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_4_MAILBOX0_CFG_REGS4_MAILBOX_REGS4_END                           (0x00000031f841ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_5_MAILBOX0_CFG_REGS5 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_5_MAILBOX0_CFG_REGS5_ID                                          (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_5_MAILBOX0_CFG_REGS5_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_5_MAILBOX0_CFG_REGS5_MMR_BASE                                    (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_5_MAILBOX0_CFG_REGS5_NUM_REGIONS                                 (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_5_MAILBOX0_CFG_REGS5_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_5_MAILBOX0_CFG_REGS5_MAILBOX_REGS5_START                         (0x00000031f85000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_5_MAILBOX0_CFG_REGS5_MAILBOX_REGS5_END                           (0x00000031f851ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_6_MAILBOX0_CFG_REGS6 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_6_MAILBOX0_CFG_REGS6_ID                                          (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_6_MAILBOX0_CFG_REGS6_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_6_MAILBOX0_CFG_REGS6_MMR_BASE                                    (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_6_MAILBOX0_CFG_REGS6_NUM_REGIONS                                 (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_6_MAILBOX0_CFG_REGS6_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_6_MAILBOX0_CFG_REGS6_MAILBOX_REGS6_START                         (0x00000031f86000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_6_MAILBOX0_CFG_REGS6_MAILBOX_REGS6_END                           (0x00000031f861ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_7_MAILBOX0_CFG_REGS7 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_7_MAILBOX0_CFG_REGS7_ID                                          (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_7_MAILBOX0_CFG_REGS7_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_7_MAILBOX0_CFG_REGS7_MMR_BASE                                    (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_7_MAILBOX0_CFG_REGS7_NUM_REGIONS                                 (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_7_MAILBOX0_CFG_REGS7_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_7_MAILBOX0_CFG_REGS7_MAILBOX_REGS7_START                         (0x00000031f87000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_7_MAILBOX0_CFG_REGS7_MAILBOX_REGS7_END                           (0x00000031f871ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_8_MAILBOX0_CFG_REGS8 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_8_MAILBOX0_CFG_REGS8_ID                                          (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_8_MAILBOX0_CFG_REGS8_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_8_MAILBOX0_CFG_REGS8_MMR_BASE                                    (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_8_MAILBOX0_CFG_REGS8_NUM_REGIONS                                 (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_8_MAILBOX0_CFG_REGS8_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_8_MAILBOX0_CFG_REGS8_MAILBOX_REGS8_START                         (0x00000031f88000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_8_MAILBOX0_CFG_REGS8_MAILBOX_REGS8_END                           (0x00000031f881ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_9_MAILBOX0_CFG_REGS9 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_9_MAILBOX0_CFG_REGS9_ID                                          (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_9_MAILBOX0_CFG_REGS9_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_9_MAILBOX0_CFG_REGS9_MMR_BASE                                    (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_9_MAILBOX0_CFG_REGS9_NUM_REGIONS                                 (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_9_MAILBOX0_CFG_REGS9_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_9_MAILBOX0_CFG_REGS9_MAILBOX_REGS9_START                         (0x00000031f89000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_9_MAILBOX0_CFG_REGS9_MAILBOX_REGS9_END                           (0x00000031f891ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_10_MAILBOX0_CFG_REGS10 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_10_MAILBOX0_CFG_REGS10_ID                                        (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_10_MAILBOX0_CFG_REGS10_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_10_MAILBOX0_CFG_REGS10_MMR_BASE                                  (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_10_MAILBOX0_CFG_REGS10_NUM_REGIONS                               (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_10_MAILBOX0_CFG_REGS10_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_10_MAILBOX0_CFG_REGS10_MAILBOX_REGS10_START                      (0x00000031f8a000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_10_MAILBOX0_CFG_REGS10_MAILBOX_REGS10_END                        (0x00000031f8a1ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX_11_MAILBOX0_CFG_REGS11 */
+#define CSL_STD_FW_NAVSS0_MAILBOX_11_MAILBOX0_CFG_REGS11_ID                                        (4624U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_11_MAILBOX0_CFG_REGS11_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX_11_MAILBOX0_CFG_REGS11_MMR_BASE                                  (0x00000045484000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_11_MAILBOX0_CFG_REGS11_NUM_REGIONS                               (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_11_MAILBOX0_CFG_REGS11_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_11_MAILBOX0_CFG_REGS11_MAILBOX_REGS11_START                      (0x00000031f8b000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX_11_MAILBOX0_CFG_REGS11_MAILBOX_REGS11_END                        (0x00000031f8b1ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_ID                                         (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MMR_BASE                                   (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_NUM_REGIONS                                (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS0_START                       (0x00000031f90000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS0_END                         (0x00000031f901ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_1_MAILBOX1_CFG_REGS1 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_1_MAILBOX1_CFG_REGS1_ID                                         (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_1_MAILBOX1_CFG_REGS1_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_1_MAILBOX1_CFG_REGS1_MMR_BASE                                   (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_1_MAILBOX1_CFG_REGS1_NUM_REGIONS                                (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_1_MAILBOX1_CFG_REGS1_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_1_MAILBOX1_CFG_REGS1_MAILBOX1_REGS1_START                       (0x00000031f91000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_1_MAILBOX1_CFG_REGS1_MAILBOX1_REGS1_END                         (0x00000031f911ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_2_MAILBOX1_CFG_REGS2 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_2_MAILBOX1_CFG_REGS2_ID                                         (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_2_MAILBOX1_CFG_REGS2_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_2_MAILBOX1_CFG_REGS2_MMR_BASE                                   (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_2_MAILBOX1_CFG_REGS2_NUM_REGIONS                                (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_2_MAILBOX1_CFG_REGS2_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_2_MAILBOX1_CFG_REGS2_MAILBOX1_REGS2_START                       (0x00000031f92000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_2_MAILBOX1_CFG_REGS2_MAILBOX1_REGS2_END                         (0x00000031f921ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_3_MAILBOX1_CFG_REGS3 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_3_MAILBOX1_CFG_REGS3_ID                                         (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_3_MAILBOX1_CFG_REGS3_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_3_MAILBOX1_CFG_REGS3_MMR_BASE                                   (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_3_MAILBOX1_CFG_REGS3_NUM_REGIONS                                (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_3_MAILBOX1_CFG_REGS3_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_3_MAILBOX1_CFG_REGS3_MAILBOX1_REGS3_START                       (0x00000031f93000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_3_MAILBOX1_CFG_REGS3_MAILBOX1_REGS3_END                         (0x00000031f931ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_4_MAILBOX1_CFG_REGS4 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_4_MAILBOX1_CFG_REGS4_ID                                         (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_4_MAILBOX1_CFG_REGS4_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_4_MAILBOX1_CFG_REGS4_MMR_BASE                                   (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_4_MAILBOX1_CFG_REGS4_NUM_REGIONS                                (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_4_MAILBOX1_CFG_REGS4_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_4_MAILBOX1_CFG_REGS4_MAILBOX1_REGS4_START                       (0x00000031f94000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_4_MAILBOX1_CFG_REGS4_MAILBOX1_REGS4_END                         (0x00000031f941ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_5_MAILBOX1_CFG_REGS5 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_5_MAILBOX1_CFG_REGS5_ID                                         (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_5_MAILBOX1_CFG_REGS5_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_5_MAILBOX1_CFG_REGS5_MMR_BASE                                   (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_5_MAILBOX1_CFG_REGS5_NUM_REGIONS                                (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_5_MAILBOX1_CFG_REGS5_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_5_MAILBOX1_CFG_REGS5_MAILBOX1_REGS5_START                       (0x00000031f95000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_5_MAILBOX1_CFG_REGS5_MAILBOX1_REGS5_END                         (0x00000031f951ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_6_MAILBOX1_CFG_REGS6 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_6_MAILBOX1_CFG_REGS6_ID                                         (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_6_MAILBOX1_CFG_REGS6_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_6_MAILBOX1_CFG_REGS6_MMR_BASE                                   (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_6_MAILBOX1_CFG_REGS6_NUM_REGIONS                                (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_6_MAILBOX1_CFG_REGS6_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_6_MAILBOX1_CFG_REGS6_MAILBOX1_REGS6_START                       (0x00000031f96000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_6_MAILBOX1_CFG_REGS6_MAILBOX1_REGS6_END                         (0x00000031f961ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_7_MAILBOX1_CFG_REGS7 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_7_MAILBOX1_CFG_REGS7_ID                                         (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_7_MAILBOX1_CFG_REGS7_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_7_MAILBOX1_CFG_REGS7_MMR_BASE                                   (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_7_MAILBOX1_CFG_REGS7_NUM_REGIONS                                (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_7_MAILBOX1_CFG_REGS7_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_7_MAILBOX1_CFG_REGS7_MAILBOX1_REGS7_START                       (0x00000031f97000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_7_MAILBOX1_CFG_REGS7_MAILBOX1_REGS7_END                         (0x00000031f971ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_8_MAILBOX1_CFG_REGS8 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_8_MAILBOX1_CFG_REGS8_ID                                         (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_8_MAILBOX1_CFG_REGS8_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_8_MAILBOX1_CFG_REGS8_MMR_BASE                                   (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_8_MAILBOX1_CFG_REGS8_NUM_REGIONS                                (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_8_MAILBOX1_CFG_REGS8_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_8_MAILBOX1_CFG_REGS8_MAILBOX1_REGS8_START                       (0x00000031f98000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_8_MAILBOX1_CFG_REGS8_MAILBOX1_REGS8_END                         (0x00000031f981ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_9_MAILBOX1_CFG_REGS9 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_9_MAILBOX1_CFG_REGS9_ID                                         (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_9_MAILBOX1_CFG_REGS9_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_9_MAILBOX1_CFG_REGS9_MMR_BASE                                   (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_9_MAILBOX1_CFG_REGS9_NUM_REGIONS                                (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_9_MAILBOX1_CFG_REGS9_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_9_MAILBOX1_CFG_REGS9_MAILBOX1_REGS9_START                       (0x00000031f99000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_9_MAILBOX1_CFG_REGS9_MAILBOX1_REGS9_END                         (0x00000031f991ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_10_MAILBOX1_CFG_REGS10 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_10_MAILBOX1_CFG_REGS10_ID                                       (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_10_MAILBOX1_CFG_REGS10_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_10_MAILBOX1_CFG_REGS10_MMR_BASE                                 (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_10_MAILBOX1_CFG_REGS10_NUM_REGIONS                              (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_10_MAILBOX1_CFG_REGS10_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_10_MAILBOX1_CFG_REGS10_MAILBOX1_REGS10_START                    (0x00000031f9a000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_10_MAILBOX1_CFG_REGS10_MAILBOX1_REGS10_END                      (0x00000031f9a1ffU)
+
+/* Properties of firewall at slave: NAVSS0_MAILBOX1_11_MAILBOX1_CFG_REGS11 */
+#define CSL_STD_FW_NAVSS0_MAILBOX1_11_MAILBOX1_CFG_REGS11_ID                                       (4637U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_11_MAILBOX1_CFG_REGS11_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_11_MAILBOX1_CFG_REGS11_MMR_BASE                                 (0x00000045487400U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_11_MAILBOX1_CFG_REGS11_NUM_REGIONS                              (12U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_11_MAILBOX1_CFG_REGS11_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_11_MAILBOX1_CFG_REGS11_MAILBOX1_REGS11_START                    (0x00000031f9b000U)
+#define CSL_STD_FW_NAVSS0_MAILBOX1_11_MAILBOX1_CFG_REGS11_MAILBOX1_REGS11_END                      (0x00000031f9b1ffU)
+
+/* Properties of firewall at slave: NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_CONFIG */
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_CONFIG_ID                                       (4644U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_CONFIG_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_CONFIG_MMR_BASE                                 (0x00000045489000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_CONFIG_NUM_REGIONS                              (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_CONFIG_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_CONFIG_TIMERMGR0_CFG_CONFIG_START               (0x00000030e80000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_CONFIG_TIMERMGR0_CFG_CONFIG_END                 (0x00000030e801ffU)
+
+/* Properties of firewall at slave: NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_OES */
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_OES_ID                                          (4644U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_OES_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_OES_MMR_BASE                                    (0x00000045489000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_OES_NUM_REGIONS                                 (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_OES_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_OES_TIMERMGR0_CFG_OES_START                     (0x00000030f00000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_OES_TIMERMGR0_CFG_OES_END                       (0x00000030f00fffU)
+
+/* Properties of firewall at slave: NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS */
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_ID                                       (4644U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_MMR_BASE                                 (0x00000045489000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_NUM_REGIONS                              (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_TIMERMGR0_CFG_TIMERS_START               (0x00000032200000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_TIMERMGR0_CFG_TIMERS_END                 (0x0000003223ffffU)
+
+/* Properties of firewall at slave: NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_CONFIG */
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_CONFIG_ID                                       (4652U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_CONFIG_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_CONFIG_MMR_BASE                                 (0x0000004548b000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_CONFIG_NUM_REGIONS                              (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_CONFIG_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_CONFIG_TIMERMGR1_CFG_CONFIG_START               (0x00000030e81000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_CONFIG_TIMERMGR1_CFG_CONFIG_END                 (0x00000030e811ffU)
+
+/* Properties of firewall at slave: NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_OES */
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_OES_ID                                          (4652U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_OES_TYPE                                        (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_OES_MMR_BASE                                    (0x0000004548b000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_OES_NUM_REGIONS                                 (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_OES_NUM_PRIV_IDS_PER_REGION                     (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_OES_TIMERMGR1_CFG_OES_START                     (0x00000030f01000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_OES_TIMERMGR1_CFG_OES_END                       (0x00000030f01fffU)
+
+/* Properties of firewall at slave: NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS */
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_ID                                       (4652U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_MMR_BASE                                 (0x0000004548b000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_NUM_REGIONS                              (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_TIMERMGR1_CFG_TIMERS_START               (0x00000032240000U)
+#define CSL_STD_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_TIMERMGR1_CFG_TIMERS_END                 (0x0000003227ffffU)
+
+/* Properties of firewall at slave: NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_CFG */
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_CFG_ID                                      (4660U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_CFG_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_CFG_MMR_BASE                                (0x0000004548d000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_CFG_NUM_REGIONS                             (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_CFG_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_CFG_MODSS_INTA0_CFG_START                   (0x00000030800000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_CFG_MODSS_INTA0_CFG_END                     (0x0000003080001fU)
+
+/* Properties of firewall at slave: NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_IMAP */
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_IMAP_ID                                     (4660U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_IMAP_TYPE                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_IMAP_MMR_BASE                               (0x0000004548d000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_IMAP_NUM_REGIONS                            (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_IMAP_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_IMAP_MODSS_INTA0_CFG_IMAP_START             (0x00000030900000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_IMAP_MODSS_INTA0_CFG_IMAP_END               (0x00000030901fffU)
+
+/* Properties of firewall at slave: NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR */
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_ID                                     (4660U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_TYPE                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_MMR_BASE                               (0x0000004548d000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_NUM_REGIONS                            (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_MODSS_INTA0_CFG_INTR_START             (0x00000033c00000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_MODSS_INTA0_CFG_INTR_END               (0x00000033c3ffffU)
+
+/* Properties of firewall at slave: NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_CFG */
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_CFG_ID                                      (4668U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_CFG_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_CFG_MMR_BASE                                (0x0000004548f000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_CFG_NUM_REGIONS                             (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_CFG_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_CFG_MODSS_INTA1_CFG_START                   (0x00000030801000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_CFG_MODSS_INTA1_CFG_END                     (0x0000003080101fU)
+
+/* Properties of firewall at slave: NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_IMAP */
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_IMAP_ID                                     (4668U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_IMAP_TYPE                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_IMAP_MMR_BASE                               (0x0000004548f000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_IMAP_NUM_REGIONS                            (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_IMAP_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_IMAP_MODSS_INTA1_CFG_IMAP_START             (0x00000030908000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_IMAP_MODSS_INTA1_CFG_IMAP_END               (0x00000030909fffU)
+
+/* Properties of firewall at slave: NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR */
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_ID                                     (4668U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_TYPE                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_MMR_BASE                               (0x0000004548f000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_NUM_REGIONS                            (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_MODSS_INTA1_CFG_INTR_START             (0x00000033c40000U)
+#define CSL_STD_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_MODSS_INTA1_CFG_INTR_END               (0x00000033c7ffffU)
+
+/* Properties of firewall at slave: NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_GCFG */
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_GCFG_ID                                       (4676U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_GCFG_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_GCFG_MMR_BASE                                 (0x00000045491000U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_GCFG_NUM_REGIONS                              (3U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_GCFG_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_GCFG_PROXY0_CFG_BUF_CFG_START                 (0x00000031120000U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_GCFG_PROXY0_CFG_BUF_CFG_END                   (0x000000311200ffU)
+
+/* Properties of firewall at slave: NAVSS0_PROXY_0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM */
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_ID                                 (4676U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_TYPE                               (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_MMR_BASE                           (0x00000045491000U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_NUM_REGIONS                        (3U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_NUM_PRIV_IDS_PER_REGION            (3U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_PROXY_BUF_START                    (0x00000031130000U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_PROXY_BUF_END                      (0x00000031133fffU)
+
+/* Properties of firewall at slave: NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG */
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_ID                                        (4676U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_MMR_BASE                                  (0x00000045491000U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_NUM_REGIONS                               (3U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_START                      (0x00000033400000U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_END                        (0x0000003343ffffU)
+
+/* Properties of firewall at slave: NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_MMRS */
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_MMRS_ID                                       (4704U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_MMRS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_MMRS_MMR_BASE                                 (0x00000045498000U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_MMRS_NUM_REGIONS                              (3U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_MMRS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_MMRS_SEC_PROXY0_CFG_MMRS_START                (0x00000031140000U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_MMRS_SEC_PROXY0_CFG_MMRS_END                  (0x000000311400ffU)
+
+/* Properties of firewall at slave: NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT */
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_ID                                         (4704U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_TYPE                                       (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_MMR_BASE                                   (0x00000045498000U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_NUM_REGIONS                                (3U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_START                    (0x00000032400000U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_END                      (0x000000325fffffU)
+
+/* Properties of firewall at slave: NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_SCFG */
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_SCFG_ID                                       (4704U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_SCFG_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_SCFG_MMR_BASE                                 (0x00000045498000U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_SCFG_NUM_REGIONS                              (3U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_SCFG_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_SCFG_SEC_PROXY0_CFG_SCFG_START                (0x00000032800000U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_SCFG_SEC_PROXY0_CFG_SCFG_END                  (0x000000329fffffU)
+
+/* Properties of firewall at slave: NAVSS0_MODSS_ECC_AGGR_0_ECCAGGR0_REGS */
+#define CSL_STD_FW_NAVSS0_MODSS_ECC_AGGR_0__ECCAGGR0_REGS_ID                                       (4705U)
+#define CSL_STD_FW_NAVSS0_MODSS_ECC_AGGR_0__ECCAGGR0_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MODSS_ECC_AGGR_0__ECCAGGR0_REGS_MMR_BASE                                 (0x00000045498400U)
+#define CSL_STD_FW_NAVSS0_MODSS_ECC_AGGR_0__ECCAGGR0_REGS_NUM_REGIONS                              (1U)
+#define CSL_STD_FW_NAVSS0_MODSS_ECC_AGGR_0__ECCAGGR0_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_MODSS_ECC_AGGR_0__ECCAGGR0_REGS_ECCAGGR0_REGS_START                      (0x00000031000000U)
+#define CSL_STD_FW_NAVSS0_MODSS_ECC_AGGR_0__ECCAGGR0_REGS_ECCAGGR0_REGS_END                        (0x000000310003ffU)
+
+/* Properties of firewall at slave: NAVSS0_INTR_0_INTR0_CFG_INTR_ROUTER_CFG */
+#define CSL_STD_FW_NAVSS0_INTR_0_INTR0_CFG_INTR_ROUTER_CFG_ID                                      (4706U)
+#define CSL_STD_FW_NAVSS0_INTR_0_INTR0_CFG_INTR_ROUTER_CFG_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_INTR_0_INTR0_CFG_INTR_ROUTER_CFG_MMR_BASE                                (0x00000045498800U)
+#define CSL_STD_FW_NAVSS0_INTR_0_INTR0_CFG_INTR_ROUTER_CFG_NUM_REGIONS                             (1U)
+#define CSL_STD_FW_NAVSS0_INTR_0_INTR0_CFG_INTR_ROUTER_CFG_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_NAVSS0_INTR_0_INTR0_CFG_INTR_ROUTER_CFG_INTR0_INTR_ROUTER_CFG_START             (0x000000310e0000U)
+#define CSL_STD_FW_NAVSS0_INTR_0_INTR0_CFG_INTR_ROUTER_CFG_INTR0_INTR_ROUTER_CFG_END               (0x000000310e3fffU)
+
+/* Properties of firewall at slave: NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS */
+#define CSL_STD_FW_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_ID                                        (4707U)
+#define CSL_STD_FW_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_TYPE                                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_MMR_BASE                                  (0x00000045498c00U)
+#define CSL_STD_FW_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_NUM_REGIONS                               (1U)
+#define CSL_STD_FW_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_STD_FW_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_MCRC_START                                (0x00000031f70000U)
+#define CSL_STD_FW_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_MCRC_END                                  (0x00000031f70fffU)
+
+/* Properties of firewall at slave: NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA */
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_ID                                       (4712U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_MMR_BASE                                 (0x0000004549a000U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_NUM_REGIONS                              (1U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_PROXY_TARGET0_DATA_START                 (0x00000033000000U)
+#define CSL_STD_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_PROXY_TARGET0_DATA_END                   (0x0000003303ffffU)
+
+/* Properties of firewall at slave: NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA */
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_ID                                (4736U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_TYPE                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_MMR_BASE                          (0x000000454a0000U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_NUM_REGIONS                       (1U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_NUM_PRIV_IDS_PER_REGION           (3U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_SRC_TARGET_DATA_START  (0x00000032c00000U)
+#define CSL_STD_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_SRC_TARGET_DATA_END    (0x00000032dfffffU)
+
+/* Properties of firewall at slave: NAVSS0_PVU_0_IO_PVU0_CFG_MMRS */
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_MMRS_ID                                                (5128U)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_MMRS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_MMRS_MMR_BASE                                          (0x00000045502000U)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_MMRS_NUM_REGIONS                                       (2U)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_MMRS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_MMRS_IO_PVU0_CFG_MMRS_START                            (0x00000030f80000U)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_MMRS_IO_PVU0_CFG_MMRS_END                              (0x00000030f80fffU)
+
+/* Properties of firewall at slave: NAVSS0_PVU_0_IO_PVU0_CFG_TLBIF_TLB */
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_TLBIF_TLB_ID                                           (5128U)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_TLBIF_TLB_TYPE                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_TLBIF_TLB_MMR_BASE                                     (0x00000045502000U)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_TLBIF_TLB_NUM_REGIONS                                  (2U)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_TLBIF_TLB_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_TLBIF_TLB_IO_PVU0_CFG_TLBIF_TLB_START                  (0x00000036000000U)
+#define CSL_STD_FW_NAVSS0_PVU_0_IO_PVU0_CFG_TLBIF_TLB_IO_PVU0_CFG_TLBIF_TLB_END                    (0x0000003603ffffU)
+
+/* Properties of firewall at slave: NAVSS0_PVU_1_IO_PVU1_CFG_MMRS */
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_MMRS_ID                                                (5129U)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_MMRS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_MMRS_MMR_BASE                                          (0x00000045502400U)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_MMRS_NUM_REGIONS                                       (2U)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_MMRS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_MMRS_IO_PVU1_CFG_MMRS_START                            (0x00000030f81000U)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_MMRS_IO_PVU1_CFG_MMRS_END                              (0x00000030f81fffU)
+
+/* Properties of firewall at slave: NAVSS0_PVU_1_IO_PVU1_CFG_TLBIF_TLB */
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_TLBIF_TLB_ID                                           (5129U)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_TLBIF_TLB_TYPE                                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_TLBIF_TLB_MMR_BASE                                     (0x00000045502400U)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_TLBIF_TLB_NUM_REGIONS                                  (2U)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_TLBIF_TLB_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_TLBIF_TLB_IO_PVU1_CFG_TLBIF_TLB_START                  (0x00000036040000U)
+#define CSL_STD_FW_NAVSS0_PVU_1_IO_PVU1_CFG_TLBIF_TLB_IO_PVU1_CFG_TLBIF_TLB_END                    (0x0000003607ffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_ECC_AGGR_0_VIRTSS_ECCAGGR_CFG_REGS */
+#define CSL_STD_FW_NAVSS0_VIRTSS_ECC_AGGR_0_VIRTSS_ECCAGGR_CFG_REGS_ID                             (5137U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_ECC_AGGR_0_VIRTSS_ECCAGGR_CFG_REGS_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_ECC_AGGR_0_VIRTSS_ECCAGGR_CFG_REGS_MMR_BASE                       (0x00000045504400U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_ECC_AGGR_0_VIRTSS_ECCAGGR_CFG_REGS_NUM_REGIONS                    (1U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_ECC_AGGR_0_VIRTSS_ECCAGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_ECC_AGGR_0_VIRTSS_ECCAGGR_CFG_REGS_VIRTSS_ECCAGGR_CFG_START       (0x00000031002000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_ECC_AGGR_0_VIRTSS_ECCAGGR_CFG_REGS_VIRTSS_ECCAGGR_CFG_END         (0x000000310023ffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_NB_SLV0_MEM0 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV0_MEM0_ID                                                   (5140U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV0_MEM0_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV0_MEM0_MMR_BASE                                             (0x00000045505000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV0_MEM0_NUM_REGIONS                                          (24U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV0_MEM0_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV0_MEM0_NB_SLV0_MEM0_START                                   (0x00000060000000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV0_MEM0_NB_SLV0_MEM0_END                                     (0x0000007fffffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_NB_SLV1_MEM0 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV1_MEM0_ID                                                   (5141U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV1_MEM0_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV1_MEM0_MMR_BASE                                             (0x00000045505400U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV1_MEM0_NUM_REGIONS                                          (24U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV1_MEM0_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV1_MEM0_NB_SLV1_MEM0_START                                   (0x00000060000000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV1_MEM0_NB_SLV1_MEM0_END                                     (0x0000007fffffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_NB_SLV2_MEM0 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM0_ID                                                   (5142U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM0_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM0_MMR_BASE                                             (0x00000045505800U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM0_NUM_REGIONS                                          (24U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM0_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM0_NB_SLV2_MEM0_START                                   (0x00000080000000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM0_NB_SLV2_MEM0_END                                     (0x000000ffffffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_NB_SLV2_MEM1 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM1_ID                                                   (5142U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM1_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM1_MMR_BASE                                             (0x00000045505800U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM1_NUM_REGIONS                                          (24U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM1_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM1_NB_SLV2_MEM1_START                                   (0x00000800000000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV2_MEM1_NB_SLV2_MEM1_END                                     (0x00000fffffffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_NB_SLV3_MEM0 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM0_ID                                                   (5143U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM0_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM0_MMR_BASE                                             (0x00000045505c00U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM0_NUM_REGIONS                                          (24U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM0_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM0_NB_SLV3_MEM0_START                                   (0x00000080000000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM0_NB_SLV3_MEM0_END                                     (0x000000ffffffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_NB_SLV3_MEM1 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM1_ID                                                   (5143U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM1_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM1_MMR_BASE                                             (0x00000045505c00U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM1_NUM_REGIONS                                          (24U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM1_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM1_NB_SLV3_MEM1_START                                   (0x00000800000000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV3_MEM1_NB_SLV3_MEM1_END                                     (0x00000fffffffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_NB_SLV4_MEM0 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM0_ID                                                   (5144U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM0_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM0_MMR_BASE                                             (0x00000045506000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM0_NUM_REGIONS                                          (24U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM0_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM0_NB_SLV4_MEM0_START                                   (0x00000080000000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM0_NB_SLV4_MEM0_END                                     (0x000000ffffffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_NB_SLV4_MEM1 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM1_ID                                                   (5144U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM1_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM1_MMR_BASE                                             (0x00000045506000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM1_NUM_REGIONS                                          (24U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM1_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM1_NB_SLV4_MEM1_START                                   (0x00000800000000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_NB_SLV4_MEM1_NB_SLV4_MEM1_END                                     (0x00000fffffffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_AC_SLV0_MEM0 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV0_MEM0_ID                                                   (5148U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV0_MEM0_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV0_MEM0_MMR_BASE                                             (0x00000045507000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV0_MEM0_NUM_REGIONS                                          (16U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV0_MEM0_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV0_MEM0_AC_SLV0_MEM0_START                                   (0x00004f02000000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV0_MEM0_AC_SLV0_MEM0_END                                     (0x00004f0207ffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_AC_SLV2_MEM4 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM4_ID                                                   (5149U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM4_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM4_MMR_BASE                                             (0x00000045507400U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM4_NUM_REGIONS                                          (16U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM4_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM4_AC_SLV2_MEM4_START                                   (0x00000002a92000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM4_AC_SLV2_MEM4_END                                     (0x00000002a92fffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_AC_SLV2_MEM3 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM3_ID                                                   (5149U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM3_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM3_MMR_BASE                                             (0x00000045507400U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM3_NUM_REGIONS                                          (16U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM3_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM3_AC_SLV2_MEM3_START                                   (0x00000002a95000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM3_AC_SLV2_MEM3_END                                     (0x00000002a95fffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_AC_SLV2_MEM5 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM5_ID                                                   (5149U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM5_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM5_MMR_BASE                                             (0x00000045507400U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM5_NUM_REGIONS                                          (16U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM5_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM5_AC_SLV2_MEM5_START                                   (0x0000000341c000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM5_AC_SLV2_MEM5_END                                     (0x0000000341cfffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_AC_SLV2_MEM0 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM0_ID                                                   (5149U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM0_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM0_MMR_BASE                                             (0x00000045507400U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM0_NUM_REGIONS                                          (16U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM0_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM0_AC_SLV2_MEM0_START                                   (0x00004f02080000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM0_AC_SLV2_MEM0_END                                     (0x00004f020fffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_AC_SLV2_MEM1 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM1_ID                                                   (5149U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM1_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM1_MMR_BASE                                             (0x00000045507400U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM1_NUM_REGIONS                                          (16U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM1_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM1_AC_SLV2_MEM1_START                                   (0x00004f02100000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM1_AC_SLV2_MEM1_END                                     (0x00004f021fffffU)
+
+/* Properties of firewall at slave: NAVSS0_VIRTSS_AC_SLV2_MEM2 */
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM2_ID                                                   (5149U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM2_TYPE                                                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM2_MMR_BASE                                             (0x00000045507400U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM2_NUM_REGIONS                                          (16U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM2_NUM_PRIV_IDS_PER_REGION                              (3U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM2_AC_SLV2_MEM2_START                                   (0x00004f02200000U)
+#define CSL_STD_FW_NAVSS0_VIRTSS_AC_SLV2_MEM2_AC_SLV2_MEM2_END                                     (0x00004f023fffffU)
+
+/* Properties of firewall at slave: NAVSS0_PVU_0_PVU0_SRC_TOG_CFG */
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_SRC_TOG_CFG_ID                                                (5150U)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_SRC_TOG_CFG_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_SRC_TOG_CFG_MMR_BASE                                          (0x00000045507800U)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_SRC_TOG_CFG_NUM_REGIONS                                       (1U)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_SRC_TOG_CFG_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_SRC_TOG_CFG_PVU0_SRC_TOG_CFG_START                            (0x00000030f90000U)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_SRC_TOG_CFG_PVU0_SRC_TOG_CFG_END                              (0x00000030f903ffU)
+
+/* Properties of firewall at slave: NAVSS0_PVU_0_PVU0_CFG_TOG_CFG */
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_CFG_TOG_CFG_ID                                                (5151U)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_CFG_TOG_CFG_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_CFG_TOG_CFG_MMR_BASE                                          (0x00000045507c00U)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_CFG_TOG_CFG_NUM_REGIONS                                       (1U)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_CFG_TOG_CFG_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_CFG_TOG_CFG_PVU0_CFG_TOG_CFG_START                            (0x00000030f91000U)
+#define CSL_STD_FW_NAVSS0_PVU_0_PVU0_CFG_TOG_CFG_PVU0_CFG_TOG_CFG_END                              (0x00000030f913ffU)
+
+/* Properties of firewall at slave: DMPAC0_ECC_AGGR_KSDW_ECC_AGGR_CFG_REGS */
+#define CSL_STD_FW_DMPAC0_ECC_AGGR_KSDW_ECC_AGGR_CFG_REGS_ID                                       (5984U)
+#define CSL_STD_FW_DMPAC0_ECC_AGGR_KSDW_ECC_AGGR_CFG_REGS_TYPE                                     (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_ECC_AGGR_KSDW_ECC_AGGR_CFG_REGS_MMR_BASE                                 (0x000000455d8000U)
+#define CSL_STD_FW_DMPAC0_ECC_AGGR_KSDW_ECC_AGGR_CFG_REGS_NUM_REGIONS                              (1U)
+#define CSL_STD_FW_DMPAC0_ECC_AGGR_KSDW_ECC_AGGR_CFG_REGS_NUM_PRIV_IDS_PER_REGION                  (3U)
+#define CSL_STD_FW_DMPAC0_ECC_AGGR_KSDW_ECC_AGGR_CFG_REGS_ECC_AGGR_START                           (0x00000002a6a000U)
+#define CSL_STD_FW_DMPAC0_ECC_AGGR_KSDW_ECC_AGGR_CFG_REGS_ECC_AGGR_END                             (0x00000002a6a3ffU)
+
+/* Properties of firewall at slave: DMPAC0_DMPAC_REGS_DMPAC_REGS_CFG_IP_MMRS */
+#define CSL_STD_FW_DMPAC0_DMPAC_REGS_DMPAC_REGS_CFG_IP_MMRS_ID                                     (5985U)
+#define CSL_STD_FW_DMPAC0_DMPAC_REGS_DMPAC_REGS_CFG_IP_MMRS_TYPE                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_DMPAC_REGS_DMPAC_REGS_CFG_IP_MMRS_MMR_BASE                               (0x000000455d8400U)
+#define CSL_STD_FW_DMPAC0_DMPAC_REGS_DMPAC_REGS_CFG_IP_MMRS_NUM_REGIONS                            (1U)
+#define CSL_STD_FW_DMPAC0_DMPAC_REGS_DMPAC_REGS_CFG_IP_MMRS_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_STD_FW_DMPAC0_DMPAC_REGS_DMPAC_REGS_CFG_IP_MMRS_DMPAC_REGS_DMPAC_REGS_CFG_IP_MMRS_START (0x0000000f400000U)
+#define CSL_STD_FW_DMPAC0_DMPAC_REGS_DMPAC_REGS_CFG_IP_MMRS_DMPAC_REGS_DMPAC_REGS_CFG_IP_MMRS_END  (0x0000000f4003ffU)
+
+/* Properties of firewall at slave: DMPAC0_INTD_0_CP_INTD_INTD_CFG_INTD_CFG */
+#define CSL_STD_FW_DMPAC0_INTD_0_CP_INTD_INTD_CFG_INTD_CFG_ID                                      (5986U)
+#define CSL_STD_FW_DMPAC0_INTD_0_CP_INTD_INTD_CFG_INTD_CFG_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_INTD_0_CP_INTD_INTD_CFG_INTD_CFG_MMR_BASE                                (0x000000455d8800U)
+#define CSL_STD_FW_DMPAC0_INTD_0_CP_INTD_INTD_CFG_INTD_CFG_NUM_REGIONS                             (4U)
+#define CSL_STD_FW_DMPAC0_INTD_0_CP_INTD_INTD_CFG_INTD_CFG_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_DMPAC0_INTD_0_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_START              (0x0000000f401000U)
+#define CSL_STD_FW_DMPAC0_INTD_0_CP_INTD_INTD_CFG_INTD_CFG_CP_INTD_CFG_INTD_CFG_END                (0x0000000f401fffU)
+
+/* Properties of firewall at slave: DMPAC0_HTS_0_HTS_S_VBUSP_REGS */
+#define CSL_STD_FW_DMPAC0_HTS_0_HTS_S_VBUSP_REGS_ID                                                (5987U)
+#define CSL_STD_FW_DMPAC0_HTS_0_HTS_S_VBUSP_REGS_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_HTS_0_HTS_S_VBUSP_REGS_MMR_BASE                                          (0x000000455d8c00U)
+#define CSL_STD_FW_DMPAC0_HTS_0_HTS_S_VBUSP_REGS_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_DMPAC0_HTS_0_HTS_S_VBUSP_REGS_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_DMPAC0_HTS_0_HTS_S_VBUSP_REGS_HTS_S_VBUSP_START                                 (0x0000000f408000U)
+#define CSL_STD_FW_DMPAC0_HTS_0_HTS_S_VBUSP_REGS_HTS_S_VBUSP_END                                   (0x0000000f40ffffU)
+
+/* Properties of firewall at slave: DMPAC0_CTSET_0_CTSET2_WRAP_CFG_CTSET2_CFG */
+#define CSL_STD_FW_DMPAC0_CTSET_0_CTSET2_WRAP_CFG_CTSET2_CFG_ID                                    (5988U)
+#define CSL_STD_FW_DMPAC0_CTSET_0_CTSET2_WRAP_CFG_CTSET2_CFG_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_CTSET_0_CTSET2_WRAP_CFG_CTSET2_CFG_MMR_BASE                              (0x000000455d9000U)
+#define CSL_STD_FW_DMPAC0_CTSET_0_CTSET2_WRAP_CFG_CTSET2_CFG_NUM_REGIONS                           (1U)
+#define CSL_STD_FW_DMPAC0_CTSET_0_CTSET2_WRAP_CFG_CTSET2_CFG_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_DMPAC0_CTSET_0_CTSET2_WRAP_CFG_CTSET2_CFG_CTSET2_WRAP_CFG_CTSET2_CFG_START      (0x0000000f420000U)
+#define CSL_STD_FW_DMPAC0_CTSET_0_CTSET2_WRAP_CFG_CTSET2_CFG_CTSET2_WRAP_CFG_CTSET2_CFG_END        (0x0000000f421fffU)
+
+/* Properties of firewall at slave: DMPAC0_FOCO_0_DMPAC_FOCO_0_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS */
+#define CSL_STD_FW_DMPAC0_FOCO_0_DMPAC_FOCO_0_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_ID     (5989U)
+#define CSL_STD_FW_DMPAC0_FOCO_0_DMPAC_FOCO_0_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_TYPE   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_FOCO_0_DMPAC_FOCO_0_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_MMR_BASE (0x000000455d9400U)
+#define CSL_STD_FW_DMPAC0_FOCO_0_DMPAC_FOCO_0_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_NUM_REGIONS (1U)
+#define CSL_STD_FW_DMPAC0_FOCO_0_DMPAC_FOCO_0_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_DMPAC0_FOCO_0_DMPAC_FOCO_0_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_DMPAC_FOCO_0_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_START (0x0000000f424000U)
+#define CSL_STD_FW_DMPAC0_FOCO_0_DMPAC_FOCO_0_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_DMPAC_FOCO_0_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_END (0x0000000f42403fU)
+
+/* Properties of firewall at slave: DMPAC0_FOCO_1_DMPAC_FOCO_1_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS */
+#define CSL_STD_FW_DMPAC0_FOCO_1_DMPAC_FOCO_1_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_ID     (5990U)
+#define CSL_STD_FW_DMPAC0_FOCO_1_DMPAC_FOCO_1_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_TYPE   (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_FOCO_1_DMPAC_FOCO_1_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_MMR_BASE (0x000000455d9800U)
+#define CSL_STD_FW_DMPAC0_FOCO_1_DMPAC_FOCO_1_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_NUM_REGIONS (1U)
+#define CSL_STD_FW_DMPAC0_FOCO_1_DMPAC_FOCO_1_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_DMPAC0_FOCO_1_DMPAC_FOCO_1_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_DMPAC_FOCO_1_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_START (0x0000000f428000U)
+#define CSL_STD_FW_DMPAC0_FOCO_1_DMPAC_FOCO_1_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_DMPAC_FOCO_1_CFG_SLV_DMPAC_FOCO_CORE_FOCO_REGS_CFG_IP_MMRS_END (0x0000000f42803fU)
+
+/* Properties of firewall at slave: DMPAC0_DOF_0_PAR_DOF_CFG_VP_MMR_MMR_VBUSP_DOFCORE_REG */
+#define CSL_STD_FW_DMPAC0_DOF_0_PAR_DOF_CFG_VP_MMR_MMR_VBUSP_DOFCORE_REG_ID                        (5991U)
+#define CSL_STD_FW_DMPAC0_DOF_0_PAR_DOF_CFG_VP_MMR_MMR_VBUSP_DOFCORE_REG_TYPE                      (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_DOF_0_PAR_DOF_CFG_VP_MMR_MMR_VBUSP_DOFCORE_REG_MMR_BASE                  (0x000000455d9c00U)
+#define CSL_STD_FW_DMPAC0_DOF_0_PAR_DOF_CFG_VP_MMR_MMR_VBUSP_DOFCORE_REG_NUM_REGIONS               (1U)
+#define CSL_STD_FW_DMPAC0_DOF_0_PAR_DOF_CFG_VP_MMR_MMR_VBUSP_DOFCORE_REG_NUM_PRIV_IDS_PER_REGION   (3U)
+#define CSL_STD_FW_DMPAC0_DOF_0_PAR_DOF_CFG_VP_MMR_MMR_VBUSP_DOFCORE_REG_PAR_DOF_CFG_VP_MMR_VBUSP_DOFCORE_START (0x0000000f480000U)
+#define CSL_STD_FW_DMPAC0_DOF_0_PAR_DOF_CFG_VP_MMR_MMR_VBUSP_DOFCORE_REG_PAR_DOF_CFG_VP_MMR_VBUSP_DOFCORE_END (0x0000000f480fffU)
+
+/* Properties of firewall at slave: DMPAC0_SDE_0_PAR_PAR_SDE_S_VBUSP_MMR_MMR_VBUSP_MMR */
+#define CSL_STD_FW_DMPAC0_SDE_0_PAR_PAR_SDE_S_VBUSP_MMR_MMR_VBUSP_MMR_ID                           (5992U)
+#define CSL_STD_FW_DMPAC0_SDE_0_PAR_PAR_SDE_S_VBUSP_MMR_MMR_VBUSP_MMR_TYPE                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_SDE_0_PAR_PAR_SDE_S_VBUSP_MMR_MMR_VBUSP_MMR_MMR_BASE                     (0x000000455da000U)
+#define CSL_STD_FW_DMPAC0_SDE_0_PAR_PAR_SDE_S_VBUSP_MMR_MMR_VBUSP_MMR_NUM_REGIONS                  (1U)
+#define CSL_STD_FW_DMPAC0_SDE_0_PAR_PAR_SDE_S_VBUSP_MMR_MMR_VBUSP_MMR_NUM_PRIV_IDS_PER_REGION      (3U)
+#define CSL_STD_FW_DMPAC0_SDE_0_PAR_PAR_SDE_S_VBUSP_MMR_MMR_VBUSP_MMR_PAR_PAR_SDE_S_VBUSP_MMR_VBUSP_MMR_START (0x0000000f500000U)
+#define CSL_STD_FW_DMPAC0_SDE_0_PAR_PAR_SDE_S_VBUSP_MMR_MMR_VBUSP_MMR_PAR_PAR_SDE_S_VBUSP_MMR_VBUSP_MMR_END (0x0000000f500fffU)
+
+/* Properties of firewall at slave: DMPAC0_DRU_0_DRU_UTC_DMPAC0_DRU_MMR_CFG_DRU_DRU */
+#define CSL_STD_FW_DMPAC0_DRU_0_DRU_UTC_DMPAC0_DRU_MMR_CFG_DRU_DRU_ID                              (5993U)
+#define CSL_STD_FW_DMPAC0_DRU_0_DRU_UTC_DMPAC0_DRU_MMR_CFG_DRU_DRU_TYPE                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_DRU_0_DRU_UTC_DMPAC0_DRU_MMR_CFG_DRU_DRU_MMR_BASE                        (0x000000455da400U)
+#define CSL_STD_FW_DMPAC0_DRU_0_DRU_UTC_DMPAC0_DRU_MMR_CFG_DRU_DRU_NUM_REGIONS                     (4U)
+#define CSL_STD_FW_DMPAC0_DRU_0_DRU_UTC_DMPAC0_DRU_MMR_CFG_DRU_DRU_NUM_PRIV_IDS_PER_REGION         (3U)
+#define CSL_STD_FW_DMPAC0_DRU_0_DRU_UTC_DMPAC0_DRU_MMR_CFG_DRU_DRU_DRU_UTC_DMPAC0_DRU_MMR_CFG_DRU_DRU_START (0x0000000f600000U)
+#define CSL_STD_FW_DMPAC0_DRU_0_DRU_UTC_DMPAC0_DRU_MMR_CFG_DRU_DRU_DRU_UTC_DMPAC0_DRU_MMR_CFG_DRU_DRU_END (0x0000000f603fffU)
+
+/* Properties of firewall at slave: DMPAC0_DOF_0_KSBUS_MSRAM0_SLV */
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM0_SLV_ID                                                (6016U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM0_SLV_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM0_SLV_MMR_BASE                                          (0x000000455e0000U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM0_SLV_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM0_SLV_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM0_SLV_KSBUS_MSRAM0_SLV_START                            (0x00000000000000U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM0_SLV_KSBUS_MSRAM0_SLV_END                              (0x0000000001ffffU)
+
+/* Properties of firewall at slave: DMPAC0_DOF_0_KSBUS_MSRAM1_SLV */
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM1_SLV_ID                                                (6017U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM1_SLV_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM1_SLV_MMR_BASE                                          (0x000000455e0400U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM1_SLV_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM1_SLV_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM1_SLV_KSBUS_MSRAM1_SLV_START                            (0x00000000000000U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM1_SLV_KSBUS_MSRAM1_SLV_END                              (0x0000000001ffffU)
+
+/* Properties of firewall at slave: DMPAC0_DOF_0_KSBUS_MSRAM2_SLV */
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM2_SLV_ID                                                (6018U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM2_SLV_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM2_SLV_MMR_BASE                                          (0x000000455e0800U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM2_SLV_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM2_SLV_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM2_SLV_KSBUS_MSRAM2_SLV_START                            (0x00000000000000U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM2_SLV_KSBUS_MSRAM2_SLV_END                              (0x0000000001ffffU)
+
+/* Properties of firewall at slave: DMPAC0_DOF_0_KSBUS_MSRAM3_SLV */
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM3_SLV_ID                                                (6019U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM3_SLV_TYPE                                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM3_SLV_MMR_BASE                                          (0x000000455e0c00U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM3_SLV_NUM_REGIONS                                       (4U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM3_SLV_NUM_PRIV_IDS_PER_REGION                           (3U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM3_SLV_KSBUS_MSRAM3_SLV_START                            (0x00000000000000U)
+#define CSL_STD_FW_DMPAC0_DOF_0_KSBUS_MSRAM3_SLV_KSBUS_MSRAM3_SLV_END                              (0x0000000001ffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_GCFG */
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_GCFG_ID                                    (6148U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_GCFG_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_GCFG_MMR_BASE                              (0x00000045601000U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_GCFG_NUM_REGIONS                           (3U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_GCFG_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_GCFG_PROXY_CFG_GCFG_START                  (0x00000028590000U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_GCFG_PROXY_CFG_GCFG_END                    (0x000000285900ffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM */
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_ID                              (6148U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_TYPE                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_MMR_BASE                        (0x00000045601000U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_NUM_REGIONS                     (3U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_NUM_PRIV_IDS_PER_REGION         (3U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_PROXY_CFG_BUF_START             (0x000000285a0000U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_BUFRAM_SLV_RAM_PROXY_CFG_BUF_END               (0x000000285a3fffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG */
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_ID                                     (6148U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_TYPE                                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_MMR_BASE                               (0x00000045601000U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_NUM_REGIONS                            (3U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_START                   (0x0000002a580000U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_END                     (0x0000002a5bffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_MMRS */
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_MMRS_ID                                    (6156U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_MMRS_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_MMRS_MMR_BASE                              (0x00000045603000U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_MMRS_NUM_REGIONS                           (3U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_MMRS_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_MMRS_SEC_PROXY0_CFG_START                  (0x000000285b0000U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_MMRS_SEC_PROXY0_CFG_END                    (0x000000285b00ffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT */
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_ID                                      (6156U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_TYPE                                    (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_MMR_BASE                                (0x00000045603000U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_NUM_REGIONS                             (3U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_START                 (0x0000002a380000U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_END                   (0x0000002a3fffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_SCFG */
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_SCFG_ID                                    (6156U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_SCFG_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_SCFG_MMR_BASE                              (0x00000045603000U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_SCFG_NUM_REGIONS                           (3U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_SCFG_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_SCFG_SEC_PROXY0_CFG_SCFG_START             (0x0000002a400000U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_SCFG_SEC_PROXY0_CFG_SCFG_END               (0x0000002a47ffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_CFG */
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_CFG_ID                              (6176U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_CFG_TYPE                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_CFG_MMR_BASE                        (0x00000045608000U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_CFG_NUM_REGIONS                     (4U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_CFG_NUM_PRIV_IDS_PER_REGION         (3U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_CFG_UDMASS_RINGACC0_CFG_START       (0x00000028440000U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_CFG_UDMASS_RINGACC0_CFG_END         (0x0000002847ffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_GCFG */
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_GCFG_ID                             (6176U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_GCFG_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_GCFG_MMR_BASE                       (0x00000045608000U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_GCFG_NUM_REGIONS                    (4U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_GCFG_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_GCFG_UDMASS_RINGACC0_CFG_GCFG_START (0x000000285d0000U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_GCFG_UDMASS_RINGACC0_CFG_GCFG_END   (0x000000285d03ffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON */
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_ID                              (6176U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_TYPE                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_MMR_BASE                        (0x00000045608000U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_NUM_REGIONS                     (4U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_NUM_PRIV_IDS_PER_REGION         (3U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_START   (0x0000002a280000U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_END     (0x0000002a29ffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_RT */
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_RT_ID                               (6176U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_RT_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_RT_MMR_BASE                         (0x00000045608000U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_RT_NUM_REGIONS                      (4U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_RT_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_RT_UDMASS_RINGACC0_CFG_RT_START     (0x0000002b800000U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_RT_UDMASS_RINGACC0_CFG_RT_END       (0x0000002bbfffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_CFG */
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_CFG_ID                     (6240U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_CFG_TYPE                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_CFG_MMR_BASE               (0x00000045618000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_CFG_NUM_REGIONS            (7U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_CFG_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_CFG_UDMASS_INTA0_CFG_START (0x000000283c0000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_CFG_UDMASS_INTA0_CFG_END   (0x000000283c001fU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTCFG */
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTCFG_ID                 (6240U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTCFG_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTCFG_MMR_BASE           (0x00000045618000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTCFG_NUM_REGIONS        (7U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTCFG_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTCFG_UDMASS_INTA0_GCNT_START (0x00000028480000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTCFG_UDMASS_INTA0_GCNT_END (0x00000028481fffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_IMAP */
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_IMAP_ID                    (6240U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_IMAP_TYPE                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_IMAP_MMR_BASE              (0x00000045618000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_IMAP_NUM_REGIONS           (7U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_IMAP_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_IMAP_UDMASS_INTA0_IMAP_START (0x00000028560000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_IMAP_UDMASS_INTA0_IMAP_END (0x00000028563fffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_L2G */
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_L2G_ID                     (6240U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_L2G_TYPE                   (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_L2G_MMR_BASE               (0x00000045618000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_L2G_NUM_REGIONS            (7U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_L2G_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_L2G_UDMASS_INTA0_I2G_START (0x00000028570000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_L2G_UDMASS_INTA0_I2G_END   (0x000000285701ffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_MCAST */
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_MCAST_ID                   (6240U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_MCAST_TYPE                 (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_MCAST_MMR_BASE             (0x00000045618000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_MCAST_NUM_REGIONS          (7U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_MCAST_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_MCAST_UDMASS_INTA0_MCAST_START (0x00000028580000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_MCAST_UDMASS_INTA0_MCAST_END (0x00000028580fffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI */
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_ID                 (6240U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_TYPE               (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_MMR_BASE           (0x00000045618000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_NUM_REGIONS        (7U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_GCNTRTI_START (0x0000002a600000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_GCNTRTI_END (0x0000002a6fffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_INTR */
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_INTR_ID                    (6240U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_INTR_TYPE                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_INTR_MMR_BASE              (0x00000045618000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_INTR_NUM_REGIONS           (7U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_INTR_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_INTR_UDMASS_INTA0_INTR_START (0x0000002a700000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_INTR_UDMASS_INTA0_INTR_END (0x0000002a7fffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RFLOW */
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RFLOW_ID                               (6248U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RFLOW_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RFLOW_MMR_BASE                         (0x0000004561a000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RFLOW_NUM_REGIONS                      (6U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RFLOW_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RFLOW_UDMASS_UDMAP0_CFG_RFLOW_START    (0x00000028400000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RFLOW_UDMASS_UDMAP0_CFG_RFLOW_END      (0x00000028401fffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHAN */
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHAN_ID                               (6248U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHAN_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHAN_MMR_BASE                         (0x0000004561a000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHAN_NUM_REGIONS                      (6U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHAN_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHAN_UDMASS_UDMAP0_TCHAN_START        (0x000000284a0000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHAN_UDMASS_UDMAP0_TCHAN_END          (0x000000284a3fffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHAN */
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHAN_ID                               (6248U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHAN_TYPE                             (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHAN_MMR_BASE                         (0x0000004561a000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHAN_NUM_REGIONS                      (6U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHAN_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHAN_UDMASS_UDMAP0_RCHAN_START        (0x000000284c0000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHAN_UDMASS_UDMAP0_RCHAN_END          (0x000000284c3fffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_GCFG */
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_GCFG_ID                                (6248U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_GCFG_TYPE                              (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_GCFG_MMR_BASE                          (0x0000004561a000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_GCFG_NUM_REGIONS                       (6U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_GCFG_NUM_PRIV_IDS_PER_REGION           (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_GCFG_UDMASS_UDMAP0_CFG_GCFG_START      (0x000000285c0000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_GCFG_UDMASS_UDMAP0_CFG_GCFG_END        (0x000000285c00ffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT */
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_ID                             (6248U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_MMR_BASE                       (0x0000004561a000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_NUM_REGIONS                    (6U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_RCHANRT_START     (0x0000002a800000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_RCHANRT_END       (0x0000002a83ffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHANRT */
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHANRT_ID                             (6248U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHANRT_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHANRT_MMR_BASE                       (0x0000004561a000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHANRT_NUM_REGIONS                    (6U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHANRT_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHANRT_UDMASS_UDMAP_TCHANRT_START     (0x0000002aa00000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_TCHANRT_UDMASS_UDMAP_TCHANRT_END       (0x0000002aa3ffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_UDMASS_ECC_AGGR0_PAR_UDMASS_UDMASS_ECCAGGR0_CFG_REGS */
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_ECC_AGGR0_PAR_UDMASS_UDMASS_ECCAGGR0_CFG_REGS_ID              (6249U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_ECC_AGGR0_PAR_UDMASS_UDMASS_ECCAGGR0_CFG_REGS_TYPE            (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_ECC_AGGR0_PAR_UDMASS_UDMASS_ECCAGGR0_CFG_REGS_MMR_BASE        (0x0000004561a400U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_ECC_AGGR0_PAR_UDMASS_UDMASS_ECCAGGR0_CFG_REGS_NUM_REGIONS     (1U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_ECC_AGGR0_PAR_UDMASS_UDMASS_ECCAGGR0_CFG_REGS_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_ECC_AGGR0_PAR_UDMASS_UDMASS_ECCAGGR0_CFG_REGS_UDMASS_ECCAGGR0_START (0x00000028381000U)
+#define CSL_STD_FW_MCU_NAVSS0_UDMASS_ECC_AGGR0_PAR_UDMASS_UDMASS_ECCAGGR0_CFG_REGS_UDMASS_ECCAGGR0_END (0x000000283813ffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_PSILCFG_0_PAR_UDMASS_PSILCFG0_CFG_PROXY */
+#define CSL_STD_FW_MCU_NAVSS0_PSILCFG_0_PAR_UDMASS_PSILCFG0_CFG_PROXY_ID                           (6250U)
+#define CSL_STD_FW_MCU_NAVSS0_PSILCFG_0_PAR_UDMASS_PSILCFG0_CFG_PROXY_TYPE                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_PSILCFG_0_PAR_UDMASS_PSILCFG0_CFG_PROXY_MMR_BASE                     (0x0000004561a800U)
+#define CSL_STD_FW_MCU_NAVSS0_PSILCFG_0_PAR_UDMASS_PSILCFG0_CFG_PROXY_NUM_REGIONS                  (1U)
+#define CSL_STD_FW_MCU_NAVSS0_PSILCFG_0_PAR_UDMASS_PSILCFG0_CFG_PROXY_NUM_PRIV_IDS_PER_REGION      (3U)
+#define CSL_STD_FW_MCU_NAVSS0_PSILCFG_0_PAR_UDMASS_PSILCFG0_CFG_PROXY_UDMASS_PSILSS_CFG0_PROXY_START (0x0000002a268000U)
+#define CSL_STD_FW_MCU_NAVSS0_PSILCFG_0_PAR_UDMASS_PSILCFG0_CFG_PROXY_UDMASS_PSILSS_CFG0_PROXY_END (0x0000002a2681ffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_PSILSS_0_PAR_UDMASS_PSILSS0_CFG_MMRS */
+#define CSL_STD_FW_MCU_NAVSS0_PSILSS_0_PAR_UDMASS_PSILSS0_CFG_MMRS_ID                              (6251U)
+#define CSL_STD_FW_MCU_NAVSS0_PSILSS_0_PAR_UDMASS_PSILSS0_CFG_MMRS_TYPE                            (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_PSILSS_0_PAR_UDMASS_PSILSS0_CFG_MMRS_MMR_BASE                        (0x0000004561ac00U)
+#define CSL_STD_FW_MCU_NAVSS0_PSILSS_0_PAR_UDMASS_PSILSS0_CFG_MMRS_NUM_REGIONS                     (1U)
+#define CSL_STD_FW_MCU_NAVSS0_PSILSS_0_PAR_UDMASS_PSILSS0_CFG_MMRS_NUM_PRIV_IDS_PER_REGION         (3U)
+#define CSL_STD_FW_MCU_NAVSS0_PSILSS_0_PAR_UDMASS_PSILSS0_CFG_MMRS_UDMASS_PSILSS0_CFG_MMRS_START   (0x000000285e0000U)
+#define CSL_STD_FW_MCU_NAVSS0_PSILSS_0_PAR_UDMASS_PSILSS0_CFG_MMRS_UDMASS_PSILSS0_CFG_MMRS_END     (0x000000285e0fffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_MODSS_ECC_AGGR0_ECCAGGR0_REGS */
+#define CSL_STD_FW_MCU_NAVSS0_MODSS_ECC_AGGR0__ECCAGGR0_REGS_ID                                    (6252U)
+#define CSL_STD_FW_MCU_NAVSS0_MODSS_ECC_AGGR0__ECCAGGR0_REGS_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_MODSS_ECC_AGGR0__ECCAGGR0_REGS_MMR_BASE                              (0x0000004561b000U)
+#define CSL_STD_FW_MCU_NAVSS0_MODSS_ECC_AGGR0__ECCAGGR0_REGS_NUM_REGIONS                           (1U)
+#define CSL_STD_FW_MCU_NAVSS0_MODSS_ECC_AGGR0__ECCAGGR0_REGS_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_MCU_NAVSS0_MODSS_ECC_AGGR0__ECCAGGR0_REGS_ECCAGGR0_START                        (0x00000028380000U)
+#define CSL_STD_FW_MCU_NAVSS0_MODSS_ECC_AGGR0__ECCAGGR0_REGS_ECCAGGR0_END                          (0x000000283803ffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_INTR_ROUTER_0_INTR0_CFG_INTR_ROUTER_CFG */
+#define CSL_STD_FW_MCU_NAVSS0_INTR_ROUTER_0_INTR0_CFG_INTR_ROUTER_CFG_ID                           (6253U)
+#define CSL_STD_FW_MCU_NAVSS0_INTR_ROUTER_0_INTR0_CFG_INTR_ROUTER_CFG_TYPE                         (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_INTR_ROUTER_0_INTR0_CFG_INTR_ROUTER_CFG_MMR_BASE                     (0x0000004561b400U)
+#define CSL_STD_FW_MCU_NAVSS0_INTR_ROUTER_0_INTR0_CFG_INTR_ROUTER_CFG_NUM_REGIONS                  (1U)
+#define CSL_STD_FW_MCU_NAVSS0_INTR_ROUTER_0_INTR0_CFG_INTR_ROUTER_CFG_NUM_PRIV_IDS_PER_REGION      (3U)
+#define CSL_STD_FW_MCU_NAVSS0_INTR_ROUTER_0_INTR0_CFG_INTR_ROUTER_CFG_INTR0_CFG_START              (0x00000028540000U)
+#define CSL_STD_FW_MCU_NAVSS0_INTR_ROUTER_0_INTR0_CFG_INTR_ROUTER_CFG_INTR0_CFG_END                (0x000000285407ffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS */
+#define CSL_STD_FW_MCU_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_ID                                    (6254U)
+#define CSL_STD_FW_MCU_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_MMR_BASE                              (0x0000004561b800U)
+#define CSL_STD_FW_MCU_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_NUM_REGIONS                           (1U)
+#define CSL_STD_FW_MCU_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_MCU_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_MCRC_START                            (0x0000002a264000U)
+#define CSL_STD_FW_MCU_NAVSS0_MCRC_0_MCRC0_S_CFG_MCRC64_REGS_MCRC_END                              (0x0000002a264fffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA */
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_ID                                    (6260U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_TYPE                                  (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_MMR_BASE                              (0x0000004561d000U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_NUM_REGIONS                           (1U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_PROXY0_TARGET0_DATA_START             (0x0000002a500000U)
+#define CSL_STD_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_PROXY0_TARGET0_DATA_END               (0x0000002a53ffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA */
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_ID                             (6268U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_TYPE                           (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_MMR_BASE                       (0x0000004561f000U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_NUM_REGIONS                    (1U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_TARGET_DATA_START   (0x0000002a480000U)
+#define CSL_STD_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_TARGET_DATA_END     (0x0000002a4fffffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM */
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_ID                                            (6269U)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_MMR_BASE                                      (0x0000004561f400U)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_NUM_REGIONS                                   (1U)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_MSRAM0_SLV_RAM_START                          (0x00000028000000U)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_0_MSRAM0_SLV_RAM_MSRAM0_SLV_RAM_END                            (0x00000028007fffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_MSRAM_1_MSRAM1_SLV_RAM */
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_1_MSRAM1_SLV_RAM_ID                                            (6270U)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_1_MSRAM1_SLV_RAM_TYPE                                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_1_MSRAM1_SLV_RAM_MMR_BASE                                      (0x0000004561f800U)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_1_MSRAM1_SLV_RAM_NUM_REGIONS                                   (1U)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_1_MSRAM1_SLV_RAM_NUM_PRIV_IDS_PER_REGION                       (3U)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_1_MSRAM1_SLV_RAM_MSRAM1_SLV_RAM_START                          (0x00000028010000U)
+#define CSL_STD_FW_MCU_NAVSS0_MSRAM_1_MSRAM1_SLV_RAM_MSRAM1_SLV_RAM_END                            (0x00000028017fffU)
+
+/* Properties of firewall at slave: MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS */
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_ID                            (6288U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_TYPE                          (CSL_FW_SECURITY)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_MMR_BASE                      (0x00000045624000U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_NUM_REGIONS                   (1U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_FIFOS_START   (0x0000002b000000U)
+#define CSL_STD_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_FIFOS_END     (0x0000002b3fffffU)
+
+/* Channelized Firewall Definitions */
+
+/* Properties of channelized firewall at: COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG */
+#define CSL_CH_FW_COMPUTE_CLUSTER0_DRU0_MMR__DRU0_MMR_CFG__DRU_CHATOMIC_DEBUG_ID                   (304U)
+#define CSL_CH_FW_COMPUTE_CLUSTER0_DRU0_MMR__DRU0_MMR_CFG__DRU_CHATOMIC_DEBUG_TYPE                 (CSL_FW_CHANNEL)
+#define CSL_CH_FW_COMPUTE_CLUSTER0_DRU0_MMR__DRU0_MMR_CFG__DRU_CHATOMIC_DEBUG_MMR_BASE             (0x0000004504c000U)
+#define CSL_CH_FW_COMPUTE_CLUSTER0_DRU0_MMR__DRU0_MMR_CFG__DRU_CHATOMIC_DEBUG_NUM_REGIONS          (1U)
+#define CSL_CH_FW_COMPUTE_CLUSTER0_DRU0_MMR__DRU0_MMR_CFG__DRU_CHATOMIC_DEBUG_NUM_PRIV_IDS_PER_REGION (1U)
+#define CSL_CH_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_START (0x000000006D080000U)
+#define CSL_CH_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_END (0x000000006D082000U)
+#define CSL_CH_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_OFFSET_FIRST_RES (0x0000000000000000U)
+#define CSL_CH_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_NUM_CHANNELS (32U)
+#define CSL_CH_FW_COMPUTE_CLUSTER0_DRU0_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_MMR_DRU0_MMR_CFG_DRU_CHATOMIC_DEBUG_CHANNEL_SIZE (256U)
+
+/* Properties of channelized firewall at: NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS */
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0__SRC__FIFOS_ID                                         (4128U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0__SRC__FIFOS_TYPE                                       (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0__SRC__FIFOS_MMR_BASE                                   (0x00000045408000U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0__SRC__FIFOS_NUM_REGIONS                                (1U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0__SRC__FIFOS_NUM_PRIV_IDS_PER_REGION                    (3U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_SRC_FIFOS_START              (0x0000000038000000U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_SRC_FIFOS_END                (0x0000000038400000U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_SRC_FIFOS_OFFSET_FIRST_RES   (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_SRC_FIFOS_NUM_CHANNELS       (1024U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_SRC_FIFOS_CHANNEL_SIZE       (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_RINGACC_0_RINGACC0_CFG_MON */
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0__CFG__MON_ID                                           (4224U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0__CFG__MON_TYPE                                         (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0__CFG__MON_MMR_BASE                                     (0x00000045420000U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0__CFG__MON_NUM_REGIONS                                  (2U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0__CFG__MON_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_START                  (0x0000000032000000U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_END                    (0x0000000032020000U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_OFFSET_FIRST_RES       (0x0000000000008000U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_NUM_CHANNELS           (32U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_CHANNEL_SIZE           (4096U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_RT_START                   (0x000000003C000000U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_RT_END                     (0x000000003C400000U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_RT_OFFSET_FIRST_RES        (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_RT_NUM_CHANNELS            (1024U)
+#define CSL_CH_FW_NAVSS0_RINGACC_0_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_RT_CHANNEL_SIZE            (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI */
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0__CFG__GCNTRTI_ID                               (4320U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0__CFG__GCNTRTI_TYPE                             (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0__CFG__GCNTRTI_MMR_BASE                         (0x00000045438000U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0__CFG__GCNTRTI_NUM_REGIONS                      (2U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0__CFG__GCNTRTI_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_GCNTRTI_START     (0x0000000033800000U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_GCNTRTI_END       (0x0000000033A00000U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_GCNTRTI_OFFSET_FIRST_RES (0x0000000000002000U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_GCNTRTI_NUM_CHANNELS (512U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_GCNTRTI_CHANNEL_SIZE (4096U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_INTR_START        (0x0000000033D00000U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_INTR_END          (0x0000000033E00000U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_INTR_OFFSET_FIRST_RES (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_INTR_NUM_CHANNELS (256U)
+#define CSL_CH_FW_NAVSS0_UDMASS_INTA_0_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_CFG_INTR_CHANNEL_SIZE (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT */
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0__CFG__RCHANRT_ID                                           (4368U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0__CFG__RCHANRT_TYPE                                         (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0__CFG__RCHANRT_MMR_BASE                                     (0x00000045444000U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0__CFG__RCHANRT_NUM_REGIONS                                  (2U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0__CFG__RCHANRT_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_RCHANRT_START                (0x0000000034000000U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_RCHANRT_END                  (0x0000000034052000U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_RCHANRT_OFFSET_FIRST_RES     (0x00000000000024A0U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_RCHANRT_NUM_CHANNELS         (82U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_RCHANRT_CHANNEL_SIZE         (4096U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_TCHANRT_START                (0x0000000035000000U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_TCHANRT_END                  (0x0000000035125000U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_TCHANRT_OFFSET_FIRST_RES     (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_TCHANRT_NUM_CHANNELS         (293U)
+#define CSL_CH_FW_NAVSS0_UDMAP_0_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP0_CFG_TCHANRT_CHANNEL_SIZE         (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT */
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0__CFG__TCHANRT_ID                                           (4388U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0__CFG__TCHANRT_TYPE                                         (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0__CFG__TCHANRT_MMR_BASE                                     (0x00000045449000U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0__CFG__TCHANRT_NUM_REGIONS                                  (2U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0__CFG__TCHANRT_NUM_PRIV_IDS_PER_REGION                      (3U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_TCHANRT_START                       (0x0000000035C00000U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_TCHANRT_END                         (0x0000000035C10000U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_TCHANRT_OFFSET_FIRST_RES            (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_TCHANRT_NUM_CHANNELS                (16U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_TCHANRT_CHANNEL_SIZE                (4096U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_RCHANRT_START                       (0x0000000035D00000U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_RCHANRT_END                         (0x0000000035D20000U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_RCHANRT_OFFSET_FIRST_RES            (0x0000000000000200U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_RCHANRT_NUM_CHANNELS                (32U)
+#define CSL_CH_FW_NAVSS0_BCDMA_0_BCDMA0_CFG_TCHANRT_BCDMA0_CFG_RCHANRT_CHANNEL_SIZE                (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_MAILBOX_0_MAILBOX */
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_ID                                                      (4612U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_TYPE                                                    (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MMR_BASE                                                (0x00000045481000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_NUM_REGIONS                                             (12U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_NUM_PRIV_IDS_PER_REGION                                 (3U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX_REGS0_START                                     (0x0000000031F80000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX_REGS0_END                                       (0x0000000031F81000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX_REGS0_OFFSET_FIRST_RES                          (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX_REGS0_NUM_CHANNELS                              (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX_REGS0_CHANNEL_SIZE                              (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS1_START                                (0x0000000031F81000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS1_END                                  (0x0000000031F82000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS1_OFFSET_FIRST_RES                     (0x0000000000000020U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS1_NUM_CHANNELS                         (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS1_CHANNEL_SIZE                         (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS2_START                                (0x0000000031F82000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS2_END                                  (0x0000000031F83000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS2_OFFSET_FIRST_RES                     (0x0000000000000040U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS2_NUM_CHANNELS                         (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS2_CHANNEL_SIZE                         (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS3_START                                (0x0000000031F83000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS3_END                                  (0x0000000031F84000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS3_OFFSET_FIRST_RES                     (0x0000000000000060U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS3_NUM_CHANNELS                         (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS3_CHANNEL_SIZE                         (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS4_START                                (0x0000000031F84000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS4_END                                  (0x0000000031F85000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS4_OFFSET_FIRST_RES                     (0x0000000000000080U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS4_NUM_CHANNELS                         (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS4_CHANNEL_SIZE                         (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS5_START                                (0x0000000031F85000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS5_END                                  (0x0000000031F86000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS5_OFFSET_FIRST_RES                     (0x00000000000000A0U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS5_NUM_CHANNELS                         (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS5_CHANNEL_SIZE                         (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS6_START                                (0x0000000031F86000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS6_END                                  (0x0000000031F87000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS6_OFFSET_FIRST_RES                     (0x00000000000000C0U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS6_NUM_CHANNELS                         (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS6_CHANNEL_SIZE                         (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS7_START                                (0x0000000031F87000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS7_END                                  (0x0000000031F88000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS7_OFFSET_FIRST_RES                     (0x00000000000000E0U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS7_NUM_CHANNELS                         (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS7_CHANNEL_SIZE                         (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS8_START                                (0x0000000031F88000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS8_END                                  (0x0000000031F89000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS8_OFFSET_FIRST_RES                     (0x0000000000000100U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS8_NUM_CHANNELS                         (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS8_CHANNEL_SIZE                         (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS9_START                                (0x0000000031F89000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS9_END                                  (0x0000000031F8A000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS9_OFFSET_FIRST_RES                     (0x0000000000000120U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS9_NUM_CHANNELS                         (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS9_CHANNEL_SIZE                         (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS10_START                               (0x0000000031F8A000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS10_END                                 (0x0000000031F8B000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS10_OFFSET_FIRST_RES                    (0x0000000000000140U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS10_NUM_CHANNELS                        (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS10_CHANNEL_SIZE                        (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS11_START                               (0x0000000031F8B000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS11_END                                 (0x0000000031F8C000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS11_OFFSET_FIRST_RES                    (0x0000000000000160U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS11_NUM_CHANNELS                        (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX_0_MAILBOX_MAILBOX0_CFG_REGS11_CHANNEL_SIZE                        (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0 */
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1__CFG__REGS0_ID                                        (4625U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1__CFG__REGS0_TYPE                                      (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1__CFG__REGS0_MMR_BASE                                  (0x00000045484400U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1__CFG__REGS0_NUM_REGIONS                               (12U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1__CFG__REGS0_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS0_START                        (0x0000000031F90000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS0_END                          (0x0000000031F91000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS0_OFFSET_FIRST_RES             (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS0_NUM_CHANNELS                 (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS0_CHANNEL_SIZE                 (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS1_START                        (0x0000000031F91000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS1_END                          (0x0000000031F92000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS1_OFFSET_FIRST_RES             (0x0000000000000020U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS1_NUM_CHANNELS                 (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS1_CHANNEL_SIZE                 (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS2_START                        (0x0000000031F92000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS2_END                          (0x0000000031F93000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS2_OFFSET_FIRST_RES             (0x0000000000000040U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS2_NUM_CHANNELS                 (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS2_CHANNEL_SIZE                 (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS3_START                        (0x0000000031F93000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS3_END                          (0x0000000031F94000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS3_OFFSET_FIRST_RES             (0x0000000000000060U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS3_NUM_CHANNELS                 (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS3_CHANNEL_SIZE                 (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS4_START                        (0x0000000031F94000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS4_END                          (0x0000000031F95000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS4_OFFSET_FIRST_RES             (0x0000000000000080U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS4_NUM_CHANNELS                 (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS4_CHANNEL_SIZE                 (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS5_START                        (0x0000000031F95000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS5_END                          (0x0000000031F96000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS5_OFFSET_FIRST_RES             (0x00000000000000A0U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS5_NUM_CHANNELS                 (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS5_CHANNEL_SIZE                 (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS6_START                        (0x0000000031F96000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS6_END                          (0x0000000031F97000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS6_OFFSET_FIRST_RES             (0x00000000000000C0U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS6_NUM_CHANNELS                 (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS6_CHANNEL_SIZE                 (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS7_START                        (0x0000000031F97000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS7_END                          (0x0000000031F98000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS7_OFFSET_FIRST_RES             (0x00000000000000E0U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS7_NUM_CHANNELS                 (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS7_CHANNEL_SIZE                 (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS8_START                        (0x0000000031F98000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS8_END                          (0x0000000031F99000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS8_OFFSET_FIRST_RES             (0x0000000000000100U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS8_NUM_CHANNELS                 (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS8_CHANNEL_SIZE                 (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS9_START                        (0x0000000031F99000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS9_END                          (0x0000000031F9A000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS9_OFFSET_FIRST_RES             (0x0000000000000120U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS9_NUM_CHANNELS                 (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS9_CHANNEL_SIZE                 (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS10_START                       (0x0000000031F9A000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS10_END                         (0x0000000031F9B000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS10_OFFSET_FIRST_RES            (0x0000000000000140U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS10_NUM_CHANNELS                (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS10_CHANNEL_SIZE                (4096U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS11_START                       (0x0000000031F9B000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS11_END                         (0x0000000031F9C000U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS11_OFFSET_FIRST_RES            (0x0000000000000160U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS11_NUM_CHANNELS                (1U)
+#define CSL_CH_FW_NAVSS0_MAILBOX1_0_MAILBOX1_CFG_REGS0_MAILBOX1_REGS11_CHANNEL_SIZE                (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS */
+#define CSL_CH_FW_NAVSS0_TIMERMGR_0_TIMERMGR0__CFG__TIMERS_ID                                      (4640U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_0_TIMERMGR0__CFG__TIMERS_TYPE                                    (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_0_TIMERMGR0__CFG__TIMERS_MMR_BASE                                (0x00000045488000U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_0_TIMERMGR0__CFG__TIMERS_NUM_REGIONS                             (1U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_0_TIMERMGR0__CFG__TIMERS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_TIMERMGR0_CFG_TIMERS_START                (0x0000000032200000U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_TIMERMGR0_CFG_TIMERS_END                  (0x0000000032240000U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_TIMERMGR0_CFG_TIMERS_OFFSET_FIRST_RES     (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_TIMERMGR0_CFG_TIMERS_NUM_CHANNELS         (64U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_0_TIMERMGR0_CFG_TIMERS_TIMERMGR0_CFG_TIMERS_CHANNEL_SIZE         (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS */
+#define CSL_CH_FW_NAVSS0_TIMERMGR_1_TIMERMGR1__CFG__TIMERS_ID                                      (4648U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_1_TIMERMGR1__CFG__TIMERS_TYPE                                    (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_1_TIMERMGR1__CFG__TIMERS_MMR_BASE                                (0x0000004548a000U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_1_TIMERMGR1__CFG__TIMERS_NUM_REGIONS                             (1U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_1_TIMERMGR1__CFG__TIMERS_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_TIMERMGR1_CFG_TIMERS_START                (0x0000000032240000U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_TIMERMGR1_CFG_TIMERS_END                  (0x0000000032280000U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_TIMERMGR1_CFG_TIMERS_OFFSET_FIRST_RES     (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_TIMERMGR1_CFG_TIMERS_NUM_CHANNELS         (64U)
+#define CSL_CH_FW_NAVSS0_TIMERMGR_1_TIMERMGR1_CFG_TIMERS_TIMERMGR1_CFG_TIMERS_CHANNEL_SIZE         (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR */
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0__CFG__INTR_ID                                    (4656U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0__CFG__INTR_TYPE                                  (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0__CFG__INTR_MMR_BASE                              (0x0000004548c000U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0__CFG__INTR_NUM_REGIONS                           (1U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0__CFG__INTR_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_MODSS_INTA0_CFG_INTR_START              (0x0000000033C00000U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_MODSS_INTA0_CFG_INTR_END                (0x0000000033C40000U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_MODSS_INTA0_CFG_INTR_OFFSET_FIRST_RES   (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_MODSS_INTA0_CFG_INTR_NUM_CHANNELS       (64U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_0_MODSS_INTA0_CFG_INTR_MODSS_INTA0_CFG_INTR_CHANNEL_SIZE       (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR */
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1__CFG__INTR_ID                                    (4664U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1__CFG__INTR_TYPE                                  (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1__CFG__INTR_MMR_BASE                              (0x0000004548e000U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1__CFG__INTR_NUM_REGIONS                           (1U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1__CFG__INTR_NUM_PRIV_IDS_PER_REGION               (3U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_MODSS_INTA1_CFG_INTR_START              (0x0000000033C40000U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_MODSS_INTA1_CFG_INTR_END                (0x0000000033C80000U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_MODSS_INTA1_CFG_INTR_OFFSET_FIRST_RES   (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_MODSS_INTA1_CFG_INTR_NUM_CHANNELS       (64U)
+#define CSL_CH_FW_NAVSS0_MODSS_INTA_1_MODSS_INTA1_CFG_INTR_MODSS_INTA1_CFG_INTR_CHANNEL_SIZE       (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG */
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0__CFG__BUF__CFG__CFG_ID                                     (4672U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0__CFG__BUF__CFG__CFG_TYPE                                   (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0__CFG__BUF__CFG__CFG_MMR_BASE                               (0x00000045490000U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0__CFG__BUF__CFG__CFG_NUM_REGIONS                            (1U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0__CFG__BUF__CFG__CFG_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_START                       (0x0000000033400000U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_END                         (0x0000000033440000U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_OFFSET_FIRST_RES            (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_NUM_CHANNELS                (64U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_CHANNEL_SIZE                (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT */
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0__CFG__RT_ID                                        (4688U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0__CFG__RT_TYPE                                      (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0__CFG__RT_MMR_BASE                                  (0x00000045494000U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0__CFG__RT_NUM_REGIONS                               (1U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0__CFG__RT_NUM_PRIV_IDS_PER_REGION                   (3U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_START                     (0x0000000032400000U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_END                       (0x0000000032572000U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_OFFSET_FIRST_RES          (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_NUM_CHANNELS              (370U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_CHANNEL_SIZE              (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA */
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0__SRC__TARGET0_DATA_ID                                      (4708U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0__SRC__TARGET0_DATA_TYPE                                    (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0__SRC__TARGET0_DATA_MMR_BASE                                (0x00000045499000U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0__SRC__TARGET0_DATA_NUM_REGIONS                             (1U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0__SRC__TARGET0_DATA_NUM_PRIV_IDS_PER_REGION                 (3U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_PROXY_TARGET0_DATA_START                  (0x0000000033000000U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_PROXY_TARGET0_DATA_END                    (0x0000000033040000U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_PROXY_TARGET0_DATA_OFFSET_FIRST_RES       (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_PROXY_TARGET0_DATA_NUM_CHANNELS           (64U)
+#define CSL_CH_FW_NAVSS0_PROXY_0_PROXY0_SRC_TARGET0_DATA_PROXY_TARGET0_DATA_CHANNEL_SIZE           (4096U)
+
+/* Properties of channelized firewall at: NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA */
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0__SRC__TARGET_DATA_ID                               (4720U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0__SRC__TARGET_DATA_TYPE                             (CSL_FW_CHANNEL)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0__SRC__TARGET_DATA_MMR_BASE                         (0x0000004549c000U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0__SRC__TARGET_DATA_NUM_REGIONS                      (1U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0__SRC__TARGET_DATA_NUM_PRIV_IDS_PER_REGION          (3U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_SRC_TARGET_DATA_START   (0x0000000032C00000U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_SRC_TARGET_DATA_END     (0x0000000032D72000U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_SRC_TARGET_DATA_OFFSET_FIRST_RES (0x0000000000000000U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_SRC_TARGET_DATA_NUM_CHANNELS (370U)
+#define CSL_CH_FW_NAVSS0_SEC_PROXY_0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_SRC_TARGET_DATA_CHANNEL_SIZE (4096U)
+
+/* Properties of channelized firewall at: MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG */
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0__CFG__BUF__CFG__CFG_ID                                  (6146U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0__CFG__BUF__CFG__CFG_TYPE                                (CSL_FW_CHANNEL)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0__CFG__BUF__CFG__CFG_MMR_BASE                            (0x00000045600800U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0__CFG__BUF__CFG__CFG_NUM_REGIONS                         (1U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0__CFG__BUF__CFG__CFG_NUM_PRIV_IDS_PER_REGION             (3U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_START                    (0x000000002A580000U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_END                      (0x000000002A5C0000U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_OFFSET_FIRST_RES         (0x0000000000000000U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_NUM_CHANNELS             (64U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0_CFG_BUF_CFG_CFG_PROXY0_BUF_CFG_CHANNEL_SIZE             (4096U)
+
+/* Properties of channelized firewall at: MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT */
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0__CFG__RT_ID                                     (6152U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0__CFG__RT_TYPE                                   (CSL_FW_CHANNEL)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0__CFG__RT_MMR_BASE                               (0x00000045602000U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0__CFG__RT_NUM_REGIONS                            (1U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0__CFG__RT_NUM_PRIV_IDS_PER_REGION                (3U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_START                  (0x000000002A380000U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_END                    (0x000000002A3DA000U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_OFFSET_FIRST_RES       (0x0000000000000000U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_NUM_CHANNELS           (90U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_CFG_RT_SEC_PROXY0_CFG_RT_CHANNEL_SIZE           (4096U)
+
+/* Properties of channelized firewall at: MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON */
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS__RINGACC0_CFG__MON_ID                             (6160U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS__RINGACC0_CFG__MON_TYPE                           (CSL_FW_CHANNEL)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS__RINGACC0_CFG__MON_MMR_BASE                       (0x00000045604000U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS__RINGACC0_CFG__MON_NUM_REGIONS                    (2U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS__RINGACC0_CFG__MON_NUM_PRIV_IDS_PER_REGION        (3U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_START    (0x000000002A280000U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_END      (0x000000002A2A0000U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_OFFSET_FIRST_RES (0x00000000000023C0U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_NUM_CHANNELS (32U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_MON_CHANNEL_SIZE (4096U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_RT_START     (0x000000002B800000U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_RT_END       (0x000000002B91E000U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_RT_OFFSET_FIRST_RES (0x0000000000000000U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_RT_NUM_CHANNELS (286U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_CFG_MON_UDMASS_RINGACC0_CFG_RT_CHANNEL_SIZE (4096U)
+
+/* Properties of channelized firewall at: MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI */
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS__UDMASS_INTA0_CFG__GCNTRTI_ID                (6208U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS__UDMASS_INTA0_CFG__GCNTRTI_TYPE              (CSL_FW_CHANNEL)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS__UDMASS_INTA0_CFG__GCNTRTI_MMR_BASE          (0x00000045610000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS__UDMASS_INTA0_CFG__GCNTRTI_NUM_REGIONS       (2U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS__UDMASS_INTA0_CFG__GCNTRTI_NUM_PRIV_IDS_PER_REGION (3U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_GCNTRTI_START (0x000000002A600000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_GCNTRTI_END (0x000000002A700000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_GCNTRTI_OFFSET_FIRST_RES (0x0000000000002000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_GCNTRTI_NUM_CHANNELS (256U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_GCNTRTI_CHANNEL_SIZE (4096U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_INTR_START (0x000000002A700000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_INTR_END (0x000000002A800000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_INTR_OFFSET_FIRST_RES (0x0000000000000000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_INTR_NUM_CHANNELS (256U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMASS_INTA_0_PAR_UDMASS_UDMASS_INTA0_CFG_GCNTRTI_UDMASS_INTA0_INTR_CHANNEL_SIZE (4096U)
+
+/* Properties of channelized firewall at: MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT */
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS__UDMAP0_CFG__RCHANRT_ID                            (6244U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS__UDMAP0_CFG__RCHANRT_TYPE                          (CSL_FW_CHANNEL)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS__UDMAP0_CFG__RCHANRT_MMR_BASE                      (0x00000045619000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS__UDMAP0_CFG__RCHANRT_NUM_REGIONS                   (2U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS__UDMAP0_CFG__RCHANRT_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_RCHANRT_START      (0x000000002A800000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_RCHANRT_END        (0x000000002A830000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_RCHANRT_OFFSET_FIRST_RES (0x0000000000000600U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_RCHANRT_NUM_CHANNELS (48U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_RCHANRT_CHANNEL_SIZE (4096U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_TCHANRT_START      (0x000000002AA00000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_TCHANRT_END        (0x000000002AA30000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_TCHANRT_OFFSET_FIRST_RES (0x0000000000000000U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_TCHANRT_NUM_CHANNELS (48U)
+#define CSL_CH_FW_MCU_NAVSS0_UDMAP_0_PAR_UDMASS_UDMAP0_CFG_RCHANRT_UDMASS_UDMAP_TCHANRT_CHANNEL_SIZE (4096U)
+
+/* Properties of channelized firewall at: MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA */
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0__SRC__TARGET0_DATA_ID                                   (6256U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0__SRC__TARGET0_DATA_TYPE                                 (CSL_FW_CHANNEL)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0__SRC__TARGET0_DATA_MMR_BASE                             (0x0000004561c000U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0__SRC__TARGET0_DATA_NUM_REGIONS                          (1U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0__SRC__TARGET0_DATA_NUM_PRIV_IDS_PER_REGION              (3U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_PROXY0_TARGET0_DATA_START              (0x000000002A500000U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_PROXY0_TARGET0_DATA_END                (0x000000002A540000U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_PROXY0_TARGET0_DATA_OFFSET_FIRST_RES   (0x0000000000000000U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_PROXY0_TARGET0_DATA_NUM_CHANNELS       (64U)
+#define CSL_CH_FW_MCU_NAVSS0_PROXY0_PROXY0_SRC_TARGET0_DATA_PROXY0_TARGET0_DATA_CHANNEL_SIZE       (4096U)
+
+/* Properties of channelized firewall at: MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA */
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0__SRC__TARGET_DATA_ID                            (6264U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0__SRC__TARGET_DATA_TYPE                          (CSL_FW_CHANNEL)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0__SRC__TARGET_DATA_MMR_BASE                      (0x0000004561e000U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0__SRC__TARGET_DATA_NUM_REGIONS                   (1U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0__SRC__TARGET_DATA_NUM_PRIV_IDS_PER_REGION       (3U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_TARGET_DATA_START    (0x000000002A480000U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_TARGET_DATA_END      (0x000000002A4DA000U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_TARGET_DATA_OFFSET_FIRST_RES (0x0000000000000000U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_TARGET_DATA_NUM_CHANNELS (90U)
+#define CSL_CH_FW_MCU_NAVSS0_SEC_PROXY0_SEC_PROXY0_SRC_TARGET_DATA_SEC_PROXY0_TARGET_DATA_CHANNEL_SIZE (4096U)
+
+/* Properties of channelized firewall at: MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS */
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS__RINGACC0_SRC__FIFOS_ID                           (6272U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS__RINGACC0_SRC__FIFOS_TYPE                         (CSL_FW_CHANNEL)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS__RINGACC0_SRC__FIFOS_MMR_BASE                     (0x00000045620000U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS__RINGACC0_SRC__FIFOS_NUM_REGIONS                  (1U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS__RINGACC0_SRC__FIFOS_NUM_PRIV_IDS_PER_REGION      (3U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_FIFOS_START    (0x000000002B000000U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_FIFOS_END      (0x000000002B11E000U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_FIFOS_OFFSET_FIRST_RES (0x0000000000000000U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_FIFOS_NUM_CHANNELS (286U)
+#define CSL_CH_FW_MCU_NAVSS0_RINGACC0_PAR_UDMASS_RINGACC0_SRC_FIFOS_UDMASS_RINGACC0_FIFOS_CHANNEL_SIZE (4096U)
+
+#ifdef __cplusplus
+}
+#endif
+#endif /* CSLR_SOC_FW_H_ */
+

@@ -1,0 +1,61 @@
+bin/
+tiovx_dev/
+conformance_tests/test_data
+docs/pytiovx_guide
+docs/tutorial_guide
+docs/test_reports
+docs/user_guide
+*.pyc
+*.o
+*.dll
+out/
+lib/TDAX
+lib/PC
+libvx_*.a
+vx_*_exe*
+*.pp
+*.interfaces
+*.executables
+*.dlls
+*.libraries*
+*.asm
+*.nfo
+*.obj
+*.d
+*~
+*.lib
+package
+
+# Top-level generic files
+tags
+TAGS
+!.gitignore
+!.mailmap
+!lib
+
+# stgit generated dirs
+patches-*
+
+# quilt's files
+*.patch
+patches
+series
+
+# cscope files
+cscope.*
+ncscope.*
+
+# python generated file
+*.egg-info
+__pycache__
+
+# netbeans project
+nbproject/
+
+# CT tmp files
+conformance_tests/test_data/tidl_models/
+
+# tools, generated files
+tools/tivx_log_rt/*.out
+
+*.swp

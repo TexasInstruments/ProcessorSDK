@@ -1,0 +1,121 @@
+export MCU_PLUS_SDK_PATH?=$(abspath ../../..)
+include $(MCU_PLUS_SDK_PATH)/imports.mak
+
+CG_TOOL_ROOT=$(CGT_TI_C7X_HOSTEMU_PATH)
+
+OS_VERSION := $(shell cat /etc/os-release | grep VERSION_ID= | sed -e "s|VERSION_ID=\"||" | sed -e "s|\"||")
+ifeq ($(OS_VERSION),18.04)
+	GCC_VERSION?=5
+else
+	GCC_VERSION?=11
+endif
+
+CC=$(CGT_TI_C7X_HOSTEMU_PATH)/bin/g++-$(GCC_VERSION) -c
+AR=$(CGT_TI_C7X_HOSTEMU_PATH)/bin/gcc-ar-$(GCC_VERSION)
+
+PROFILE?=release
+ConfigName:=$(PROFILE)
+
+LIBNAME:=dmautils.am62ax.c75x.ti-c7x-hostemu.$(PROFILE).lib
+
+FILES_common := \
+    udma.c \
+    dmautils_autoincrement_3d.c \
+    dmautils_autoincrement_3d_hostemu.c \
+    csl_dru.c \
+
+FILES_PATH_common = \
+    udma_standalone \
+    src \
+    udma_standalone/src \
+    csl/dru/v0/priv \
+
+INCLUDES_common := \
+    -I${CGT_TI_C7000_PATH}/host_emulation/include/C7504 \
+    -I${MCU_PLUS_SDK_PATH}/source \
+
+DEFINES_common := \
+    -DSOC_AM62AX \
+    -DMCU_PLUS_SDK \
+    -DMAKEFILE_BUILD \
+    -DBUILD_C7X_1 \
+    -DBUILD_C7X \
+    -DUDMA_CFG_ASSERT_ENABLE \
+    -DUDMA_CFG_PRINT_ENABLE \
+    -DDMA_UTILS_STANDALONE  \
+    -DSOC_AM62A \
+
+CFLAGS_common := \
+    -std=c++14 \
+    -DHOST_EMULATION \
+    -w \
+    -D_HOST_BUILD \
+    -DGCC_BUILD \
+    -DCORE_DSP \
+    -fPIC \
+
+CFLAGS_debug := \
+    -ggdb \
+    -ggdb3 \
+    -gdwarf-2 \
+
+CFLAGS_release := \
+    -O3 \
+
+ARFLAGS_common := \
+    rcs \
+
+FILES := $(FILES_common) $(FILES_$(PROFILE))
+ASMFILES := $(ASMFILES_common) $(ASMFILES_$(PROFILE))
+FILES_PATH := $(FILES_PATH_common) $(FILES_PATH_$(PROFILE))
+CFLAGS := $(CFLAGS_common) $(CFLAGS_$(PROFILE))
+ASMFLAGS := $(CFLAGS_common) $(CFLAGS_$(PROFILE))
+ifeq ($(CPLUSPLUS_BUILD), yes)
+CFLAGS += $(CFLAGS_cpp_common)
+endif
+DEFINES := $(DEFINES_common) $(DEFINES_$(PROFILE))
+INCLUDES := $(INCLUDES_common) $(INCLUDE_$(PROFILE))
+ARFLAGS := $(ARFLAGS_common) $(ARFLAGS_$(PROFILE))
+
+LIBDIR := lib
+OBJDIR := obj/am62ax/ti-c7x-hostemu/$(PROFILE)/c75x/dmautils/
+OBJS := $(FILES:%.c=%.obj)
+OBJS += $(ASMFILES:%.S=%.obj)
+DEPS := $(FILES:%.c=%.d)
+
+vpath %.obj $(OBJDIR)
+vpath %.c $(FILES_PATH)
+vpath %.S $(FILES_PATH)
+
+$(OBJDIR)/%.obj %.obj: %.c
+	@echo  Compiling: $(LIBNAME): $<
+	$(CC) -c $(CFLAGS) $(INCLUDES) $(DEFINES) -o $(OBJDIR)/$@ $<
+
+$(OBJDIR)/%.obj %.obj: %.S
+	@echo  Compiling: $(LIBNAME): $<
+
+all: $(LIBDIR)/$(LIBNAME)
+
+$(LIBDIR)/$(LIBNAME): $(OBJS) | $(LIBDIR)
+	@echo  .
+	@echo  Archiving: $(LIBNAME) to $@ ...
+	$(AR) $(ARFLAGS) $@ $(addprefix $(OBJDIR), $(OBJS))
+	@echo  Archiving: $(LIBNAME) Done !!!
+	@echo  .
+
+clean:
+	@echo  Cleaning: $(LIBNAME) ...
+	$(RMDIR) $(OBJDIR)
+	$(RM) $(LIBDIR)/$(LIBNAME)
+
+scrub:
+	@echo  Scrubing: $(LIBNAME) ...
+	-$(RMDIR) obj/
+	-$(RMDIR) lib/
+
+$(OBJS): | $(OBJDIR)
+
+$(LIBDIR) $(OBJDIR):
+	$(MKDIR) $@
+
+-include $(addprefix $(OBJDIR)/, $(DEPS))

@@ -1,0 +1,145 @@
+[ req ]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_ca
+prompt = no
+dirstring_type = nobmp
+
+# This information will be filled by the end user.
+# The current data is only a place holder.
+# System firmware does not make decisions based
+# on the contents of this distinguished name block.
+[ req_distinguished_name ]
+C = oR
+ST = rx
+L = gQE843yQV0sag
+O = dqhGYAQ2Y4gFfCq0t1yABCYxex9eAxt71f
+OU = a87RB35W
+CN = x0FSqGTPWbGpuiV
+emailAddress = kFp5uGcgWXxcfxi@vsHs9C9qQWGrBs.com
+
+[ v3_ca ]
+basicConstraints = CA:true
+1.3.6.1.4.1.294.1.64 = ASN1:SEQUENCE:enc_aes_key
+1.3.6.1.4.1.294.1.65 = ASN1:SEQUENCE:enc_smpk_signed_aes_key
+1.3.6.1.4.1.294.1.66 = ASN1:SEQUENCE:enc_bmpk_signed_aes_key
+1.3.6.1.4.1.294.1.67 = ASN1:SEQUENCE:aesenc_smpkh
+1.3.6.1.4.1.294.1.68 = ASN1:SEQUENCE:aesenc_smek
+1.3.6.1.4.1.294.1.69 = ASN1:SEQUENCE:plain_mpk_options
+1.3.6.1.4.1.294.1.70 = ASN1:SEQUENCE:aesenc_bmpkh
+1.3.6.1.4.1.294.1.71 = ASN1:SEQUENCE:aesenc_bmek
+1.3.6.1.4.1.294.1.72 = ASN1:SEQUENCE:plain_mek_options
+1.3.6.1.4.1.294.1.73 = ASN1:SEQUENCE:aesenc_user_otp
+1.3.6.1.4.1.294.1.74 = ASN1:SEQUENCE:plain_key_rev
+1.3.6.1.4.1.294.1.76 = ASN1:SEQUENCE:plain_msv
+1.3.6.1.4.1.294.1.77 = ASN1:SEQUENCE:plain_key_cnt
+1.3.6.1.4.1.294.1.78 = ASN1:SEQUENCE:plain_swrev_sysfw
+1.3.6.1.4.1.294.1.79 = ASN1:SEQUENCE:plain_swrev_sbl
+1.3.6.1.4.1.294.1.80 = ASN1:SEQUENCE:plain_swrev_sec_brdcfg
+1.3.6.1.4.1.294.1.81 = ASN1:SEQUENCE:plain_keywr_min_version
+1.3.6.1.4.1.294.1.82 = ASN1:SEQUENCE:jtag_disable
+
+[ enc_aes_key ]
+# Replace PUT-ENC-AES-KEY with acutal Encrypted AES Key
+val = FORMAT:HEX,OCT:PUT_ENC_AES_KEY
+size = INTEGER:PUT_SIZE_ENC_AES
+
+[ enc_bmpk_signed_aes_key ]
+# Replace PUT-ENC-BMPK-SIGNED-AES-KEY with acutal Encrypted BMPK signed AES Key
+val = FORMAT:HEX,OCT:PUT_ENC_BMPK_SIGNED_AES_KEY
+size = INTEGER:PUT_SIZE_ENC_BMPK_SIGNED_AES
+
+[ enc_smpk_signed_aes_key ]
+# Replace PUT-ENC-SMPK-SIGNED-AES-KEY with acutal Encrypted SMPK signed AES Key
+val = FORMAT:HEX,OCT:PUT_ENC_SMPK_SIGNED_AES_KEY
+size = INTEGER:PUT_SIZE_ENC_SMPK_SIGNED_AES
+
+[ aesenc_smpkh ]
+# Replace PUT-AESENC-SPMKH with acutal Encrypted AES Key
+val = FORMAT:HEX,OCT:PUT_AESENC_SMPKH
+iv = FORMAT:HEX,OCT:PUT_IV_AESENC_SMPKH
+rs = FORMAT:HEX,OCT:PUT_RS_AESENC_SMPKH
+size = INTEGER:PUT_SIZE_AESENC_SMPKH
+action_flags = INTEGER:PUT_ACTFLAG_AESENC_SMPKH
+
+[ aesenc_smek ]
+# Replace PUT-AESENC-SMEK with acutal Encrypted AES Key
+val = FORMAT:HEX,OCT:PUT_AESENC_SMEK
+iv = FORMAT:HEX,OCT:PUT_IV_AESENC_SMEK
+rs = FORMAT:HEX,OCT:PUT_RS_AESENC_SMEK
+size = INTEGER:PUT_SIZE_AESENC_SMEK
+action_flags = INTEGER:PUT_ACTFLAG_AESENC_SMEK
+
+[ aesenc_bmpkh ]
+# Replace PUT-AESENC-BMPKH with acutal Encrypted BMPKH
+val = FORMAT:HEX,OCT:PUT_AESENC_BMPKH
+iv = FORMAT:HEX,OCT:PUT_IV_AESENC_BMPKH
+rs = FORMAT:HEX,OCT:PUT_RS_AESENC_BMPKH
+size = INTEGER:PUT_SIZE_AESENC_BMPKH
+action_flags = INTEGER:PUT_ACTFLAG_AESENC_BMPKH
+
+[ aesenc_bmek ]
+# Replace PUT-AESENC-BMEK with acutal Encrypted BMEK
+val = FORMAT:HEX,OCT:PUT_AESENC_BMEK
+iv = FORMAT:HEX,OCT:PUT_IV_AESENC_BMEK
+rs = FORMAT:HEX,OCT:PUT_RS_AESENC_BMEK
+size = INTEGER:PUT_SIZE_AESENC_BMEK
+action_flags = INTEGER:PUT_ACTFLAG_AESENC_BMEK
+
+[ plain_msv ]
+# Replace PUT-PLAIN-MSV with actual MSV value
+val = FORMAT:HEX,OCT:PUT_PLAIN_MSV
+action_flags = INTEGER:PUT_ACTFLAG_PLAIN_MSV
+
+[ jtag_disable ]
+# Replace PUT-JTAG-DISABLE with actual value
+val = FORMAT:HEX,OCT:PUT_PLAIN_JTAG_DISABLE
+action_flags = INTEGER:PUT_ACTFLAG_JTAG_DISABLE
+
+[ plain_mpk_options ]
+# Replace PUT-PLAIN-MPK-OPT with actual MPK OPT value
+val = FORMAT:HEX,OCT:PUT_PLAIN_MPK_OPT
+action_flags = INTEGER:PUT_ACTFLAG_PLAIN_MPK_OPT
+
+[ plain_mek_options ]
+# Replace PUT-PLAIN-MEK-OPT with actual MEK OPT value
+val = FORMAT:HEX,OCT:PUT_PLAIN_MEK_OPT
+action_flags = INTEGER:PUT_ACTFLAG_PLAIN_MEK_OPT
+
+[ plain_key_rev ]
+# Replace PUT-PLAIN-KEY-REV with actual Key Rev value
+val = FORMAT:HEX,OCT:PUT_PLAIN_KEY_REV
+action_flags = INTEGER:PUT_ACTFLAG_PLAIN_KEY_REV
+
+[ plain_key_cnt ]
+# Replace PUT-PLAIN-KEY-CNT with actual Key Count value
+val = FORMAT:HEX,OCT:PUT_PLAIN_KEY_CNT
+action_flags = INTEGER:PUT_ACTFLAG_PLAIN_KEY_CNT
+
+[ plain_swrev_sysfw ]
+# Replace PUT-PLAIN-SWREV-SYSFW with actual SWREV SYSFW value
+val = FORMAT:HEX,OCT:PUT_PLAIN_SWREV_SYSFW
+action_flags = INTEGER:PUT_ACTFLAG_PLAIN_SWREV_SYSFW
+
+[ plain_swrev_sbl ]
+# Replace PUT-PLAIN-SWREV-SBL with actual SWREV SBL value
+val = FORMAT:HEX,OCT:PUT_PLAIN_SWREV_SBL
+action_flags = INTEGER:PUT_ACTFLAG_PLAIN_SWREV_SBL
+
+[ plain_swrev_sec_brdcfg ]
+# Replace PUT-PLAIN-SWREV-SEC-BRDCFG with actual SWREV SEC BRDCFG value
+val = FORMAT:HEX,OCT:PUT_PLAIN_SWREV_SEC_BRDCFG
+action_flags = INTEGER:PUT_ACTFLAG_PLAIN_SWREV_SEC_BRDCFG
+
+[plain_keywr_min_version ] 
+# Replace PUT-PLAIN-KEYWR-MIN-VER with actual KEYWR-MIN-VER value
+val = FORMAT:HEX,OCT:PUT_PLAIN_KEYWR_MIN_VER
+
+[ aesenc_user_otp ]
+# Replace PUT-AESENC-USER-OTP with actual Encrypted OTP
+val = FORMAT:HEX,OCT:PUT_AESENC_USER_OTP
+iv = FORMAT:HEX,OCT:PUT_IV_AESENC_USER_OTP
+rs = FORMAT:HEX,OCT:PUT_RS_AESENC_USER_OTP
+wprp = FORMAT:HEX,OCT:PUT_WPRP_AESENC_USER_OTP
+index = INTEGER:PUT_INDX_AESENC_USER_OTP
+size = INTEGER:PUT_SIZE_AESENC_USER_OTP
+action_flags = INTEGER:PUT_ACTFLAG_AESENC_USER_OTP

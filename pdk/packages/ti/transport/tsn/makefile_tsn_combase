@@ -1,0 +1,69 @@
+#
+# This file is the makefile for building combase library.
+#
+ifeq ($(RULES_MAKE), )
+include $(PDK_INSTALL_PATH)/ti/build/Rules.make
+else
+include $(RULES_MAKE)
+endif
+
+MODULE_NAME = tsn_combase
+
+SRCDIR = tsn_combase tsn_combase/tilld tsn_combase/tilld/jacinto
+INCDIR = tsn_combase tsn_combase/tilld tsn_combase/tilld/jacinto
+
+SRC_PATH := $(PDK_TSN_COMP_PATH)/tsn-stack/tsn_combase
+TSNPKGVERSION = 1.1.8
+
+# List all the external components/interfaces, whose interface header files
+# need to be included for this component
+INCLUDE_INTERNAL_INTERFACES =
+INCLUDE_EXTERNAL_INTERFACES = pdk tsn_unibase
+
+# Common source files and CFLAGS across all platforms and cores
+SRCS_COMMON += cb_noipcshmem.c \
+	cb_lld_ethernet.c \
+	cb_lld_thread.c \
+	cb_lld_tmevent.c \
+	ub_lld_binding.c \
+	lldenet.c \
+	lldenetext.c \
+	lldtsync.c \
+	cb_link_tilld.c \
+	fs_stdio.c \
+	cb_xtimer.c \
+	cb_lld_frer.c \
+	cb_rate_reporter.c \
+
+PACKAGE_SRCS_COMMON = ../makefile_tsn_combase
+
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j721e_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j721e_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j7200_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j7200_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j721s2_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j721s2_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j784s4_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j784s4_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j742s2_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j742s2_evm.r5f.ti-arm-clang.lib
+
+PACKAGE_SRCS_COMMON += $(SRCDIR)
+PACKAGE_SRCS_COMMON += tsn_buildconf ../tsn-stack/eval_inc
+
+CFLAGS_LOCAL_COMMON = $(PDK_CFLAGS) $(TSN_CFLAGS) -DTSNPKGVERSION=\"$(TSNPKGVERSION)\" \
+	-include $(PDK_TSN_COMP_PATH)/tsn-stack/tsn_buildconf/jacinto_buildconf.h
+
+# Core/SoC/platform specific source files and CFLAGS
+# Example:
+#   SRCS_<core/SoC/platform-name> =
+#   CFLAGS_LOCAL_<core/SoC/platform-name> =
+
+# Include common make files
+ifeq ($(MAKERULEDIR), )
+  #Makerule path not defined, define this and assume relative path from ROOTDIR
+  MAKERULEDIR := $(ROOTDIR)/ti/build/makerules
+  export MAKERULEDIR
+endif
+
+include $(MAKERULEDIR)/common.mk
+
+# OBJs and libraries are built by using rule defined in rules_<target>.mk
+#     and need not be explicitly specified here
+
+# Nothing beyond this point

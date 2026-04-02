@@ -1,0 +1,12 @@
+/******************************************************************************
+ * FILE PURPOSE: Build description for the HWA Driver
+ ******************************************************************************
+ * FILE NAME: package.bld
+ *
+ * DESCRIPTION: 
+ *  This file contains the build specification and description for the HWA driver
+ *
+ *
+ * Copyright (C) 2020, Texas Instruments, Inc.
+ *****************************************************************************/
+

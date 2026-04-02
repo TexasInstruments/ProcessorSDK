@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Environment Variables
+# export TOOLS=/apps/cmdevtools/webgen/tools-C75
+export PATH=/apps/cmdevtools/webgen/tools-C75/bin86U:$PATH
+source ~/.toolsrc
+
+# Copy and Generate MD5 checksum:
+make -f webgen.mak .clean
+make -f webgen.mak .all-files
+

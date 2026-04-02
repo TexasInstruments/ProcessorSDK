@@ -1,0 +1,58 @@
+#
+# This file is the makefile for building sciclient .
+#
+ifeq ($(RULES_MAKE), )
+include $(PDK_INSTALL_PATH)/ti/build/Rules.make
+else
+include $(RULES_MAKE)
+endif
+
+MODULE_NAME = rm_pm_hal
+
+SRCDIR = src/rm_pm_hal
+INCDIR = src/rm_pm_hal src/
+
+# List all the external components/interfaces, whose interface header files
+# need to be included for this component
+INCLUDE_EXTERNAL_INTERFACES = pdk osal
+
+CFLAGS_LOCAL_COMMON = $(PDK_CFLAGS)
+
+include $(PDK_INSTALL_PATH)/ti/drv/sciclient/src/rm_pm_hal_build.mk
+SRCS_COMMON = $(foreach f, $(obj-y), $(subst .o,.c,$(f)))
+
+SRCDIR += src/priv/osal
+SRCS_COMMON +=  osal_glue.c
+
+ifeq ($(CONFIG_TRACE),y)
+
+SRCDIR += src/priv/trace
+INCDIR += src/priv/trace
+ifeq ($(CONFIG_TRACE_BUFFER),y)
+SRCS_COMMON +=  trace-buffer.c
+endif
+ifeq ($(CONFIG_TRACE_UART),y)
+SRCS_COMMON +=  trace-uart.c
+endif
+SRCS_COMMON +=  trace.c
+
+endif
+
+
+# Core/SoC/platform specific source files and CFLAGS
+# Example:
+#   SRCS_<core/SoC/platform-name> =
+#   CFLAGS_LOCAL_<core/SoC/platform-name> =
+
+# Include common make files
+ifeq ($(MAKERULEDIR), )
+#Makerule path not defined, define this and assume relative path from ROOTDIR
+  MAKERULEDIR := $(ROOTDIR)/ti/build/makerules
+  export MAKERULEDIR
+endif
+include $(MAKERULEDIR)/common.mk
+
+# OBJs and libraries are built by using rule defined in rules_<target>.mk
+#     and need not be explicitly specified here
+
+# Nothing beyond this point

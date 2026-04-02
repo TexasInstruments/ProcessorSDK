@@ -1,0 +1,1 @@
+"D:\work\vision\CNN\protobuf\protoc-3.5.1-win32\bin\protoc.exe" --proto_path=. --cpp_out=. tidl_meta_arch.proto

@@ -1,0 +1,15 @@
+{
+    "components": [
+        "/dm_power_config"
+    ],
+    "name": "DM-Configuration-Tool",
+    "displayName": "Device Manager Configuration Tool",
+    "version": "1.0.0-alpha",
+    "includePaths": [
+        ".."
+    ],
+    "devices": [
+        "J784S4",
+        "J721S2"
+    ]
+}

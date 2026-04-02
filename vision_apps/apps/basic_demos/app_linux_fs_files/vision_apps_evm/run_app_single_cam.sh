@@ -1,0 +1,1 @@
+/opt/vision_apps/vx_app_single_cam.out --cfg /opt/vision_apps/app_single_cam.cfg

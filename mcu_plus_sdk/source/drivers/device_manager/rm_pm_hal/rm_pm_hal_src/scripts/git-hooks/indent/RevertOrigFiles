@@ -1,0 +1,66 @@
+#!/bin/sh
+# This file MUST be located at ../MAIN_DIR/.git/indent/FileIndentAll
+
+
+# ---------------- Do NOT edit below!!! ----------------
+OS_Type="unknown"                                    # OS type - Windows / Linux / unknown
+errMgs=""                                            # Error msg if tabs (\t) and/or trailing whitespaces... are found.    BreakCommit="False"                                  # =True if need to break git commit (found corruped file(s))
+
+# Go 2 directory UP (from ../MAIN_DIR/.git/indent to ../MAIN_DIR/)
+cd ../../
+
+# OS Type ?= Windows / Linux
+if `echo "$PATH" | grep -w -i "bin" | grep -w -i "sbin" | grep -w -i "usr" 1>/dev/null 2>&1`; then
+  OS_Type="Linux"
+elif `echo "$PATH" | grep -w -i "windows" | grep -w -i "system32" | grep -w -i "program files" 1>/dev/null 2>&1`; then
+  OS_Type="Windows"
+fi
+
+# Print on screen OS type
+echo
+echo "OS type - $OS_Type"
+
+if [ "$OS_Type" != "Windows" ]; then
+  if [ "$OS_Type" != "Linux" ]; then
+    OS_Type="unknown"
+  fi
+fi
+
+# Error if OS type unknown
+if [ "$OS_Type" = "unknown" ]; then
+  echo
+  msg="ERROR => Unknown OS type!\n"
+  # Display errMgs
+  echo "$msg"
+  exit -1
+else
+  if [ "$OS_Type" = "Windows" ]; then
+    #Windows
+    # Save names and path of *.orig files to temp1 file
+    findwin | grep -P -i "(\.orig)$" | sed -r 's/^\.\///g;s/(\.orig)$//g'  > ./.git/indent/temp1
+
+    # temp1 is not empty?
+    if [ -s ./.git/indent/temp1 ]; then
+      echo
+      echo "        Reverting files..."
+      echo
+      for FILE in `cat ./.git/indent/temp1`; do
+        echo $FILE
+        cp "$FILE.orig" "$FILE"
+        rm "$FILE.orig"
+      done
+    else
+      echo
+      echo "    There is no *.orig files"
+      echo
+    fi
+  else
+    #Linux
+    echo "Not Implemented"
+    exit -1
+  fi
+
+
+fi
+
+exit -1

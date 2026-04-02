@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfg_rgb2rgb_xml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--this is comment-->
+	<dcc_name>cfg_rgb2rgb</dcc_name>
+	<dcc_header>
+		<camera_module_id>    2312 </camera_module_id>
+		<dcc_descriptor_id>   10 </dcc_descriptor_id>
+		<algorithm_vendor_id>  1 </algorithm_vendor_id>
+		<tunning_tool_version> 0 </tunning_tool_version>
+	</dcc_header>
+	<!--=======================================================================-->
+	<typedef>
+		<cfg_rgb2rgb type="struct">
+			<!-- [RR] [GR] [BR] [CR]
+			     [RG] [GG] [BG] [CG]
+			     [RB] [GB] [BB] [CB] -->
+			<!-- Blending + Chroma values (S12Q8 format) -->
+			<ccm type="int16[3][4]"> </ccm> <!-- ipipe rgb2rgb matrix: S12Q8 -->
+			<!-- [OR] [OG] [OB] -->
+			<!-- Blending offset value for R,G,B - (S13) -->
+			<offset type="int16[3]"> </offset> <!-- ipipe rgb2rgb1 offset: S13 -->
+		</cfg_rgb2rgb>
+	</typedef>
+	<!--=======================================================================-->
+	
+	<use_case val="1023">
+		<n-space>
+		
+			<region0 class="0">
+				<colortemperature val="2" min="0" max="2000">  </colortemperature>
+				<exposure val="1" min="0" max="10000000">  </exposure>
+				<gain val="0" min="0" max="1024">  </gain>
+			</region0>
+		
+			<region1 class="1">
+				<colortemperature val="2" min="2001" max="3200">  </colortemperature>
+				<exposure val="1" min="0" max="10000000">  </exposure>
+				<gain val="0" min="0" max="1024">  </gain>
+			</region1>
+		
+			<region2 class="2">
+				<colortemperature val="2" min="3201" max="4500">  </colortemperature>
+				<exposure val="1" min="0" max="10000000">  </exposure>
+				<gain val="0" min="0" max="1024">  </gain>
+			</region2>
+		
+			<region3 class="3">
+				<colortemperature val="2" min="4501" max="5750">  </colortemperature>
+				<exposure val="1" min="0" max="10000000">  </exposure>
+				<gain val="0" min="0" max="1024">  </gain>
+			</region3>
+		
+			<region4 class="4">
+				<colortemperature val="2" min="5751" max="7000">  </colortemperature>
+				<exposure val="1" min="0" max="10000000">  </exposure>
+				<gain val="0" min="0" max="1024">  </gain>
+			</region4>
+		
+			<region5 class="5">
+				<colortemperature val="2" min="7001" max="20000">  </colortemperature>
+				<exposure val="1" min="0" max="10000000">  </exposure>
+				<gain val="0" min="0" max="1024">  </gain>
+			</region5>
+		
+		</n-space>
+	
+		<parameter_package>
+			<rgb2rgb type="cfg_rgb2rgb">
+			{
+				{
+					{409, -111, -42, 0},
+					{-38, 243, 51, 0},
+					{30, -136, 362, 0}
+				},
+				{0, 0, 0}
+			}
+			</rgb2rgb>
+		</parameter_package>
+		
+		<parameter_package>
+			<rgb2rgb type="cfg_rgb2rgb">
+			{
+				{
+					{409, -111, -42, 0},
+					{-38, 243, 51, 0},
+					{30, -136, 362, 0}
+				},
+				{0, 0, 0}
+			}
+			</rgb2rgb>
+		</parameter_package>
+		
+		<parameter_package>
+			<rgb2rgb type="cfg_rgb2rgb">
+			{
+				{
+					{425, -141, -28, 0},
+					{-73, 351, -22, 0},
+					{7, -131, 380, 0}
+				},
+				{0, 0, 0}
+			}
+			</rgb2rgb>
+		</parameter_package>
+		
+		<parameter_package>
+			<rgb2rgb type="cfg_rgb2rgb">
+			{
+				{
+					{403, -122, -25, 0},
+					{-51, 357, -50, 0},
+					{0, -123, 379, 0}
+				},
+				{0, 0, 0}
+			}
+			</rgb2rgb>
+		</parameter_package>
+		
+		<parameter_package>
+			<rgb2rgb type="cfg_rgb2rgb">
+			{
+				{
+					{400, -126, -18, 0},
+					{-48, 357, -53, 0},
+					{0, -123, 379, 0}
+				},
+				{0, 0, 0}
+			}
+			</rgb2rgb>
+		</parameter_package>
+		
+		<parameter_package>
+			<rgb2rgb type="cfg_rgb2rgb">
+			{
+				{
+					{400, -126, -18, 0},
+					{-48, 357, -53, 0},
+					{0, -123, 379, 0}
+				},
+				{0, 0, 0}
+			}
+			</rgb2rgb>
+		</parameter_package>
+		  
+	
+	</use_case>
+	<!--=====================================================================-->
+</cfg_rgb2rgb_xml> 

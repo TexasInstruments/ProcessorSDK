@@ -1,0 +1,12 @@
+# Format:
+# Run script | Delay in seconds | orig datasheet produced by app | datasheet folder | renamed datasheet name in folder | Datasheet Title | Num cameras
+
+# Demos without capture
+run_app_tidl.sh            | 30 | dl_demos_app_tidl.md       | 02_dl_demos | 020_app_tidl_8bit_datasheet.md | Object Classification Application (8bit) Datasheet | 0 |
+run_app_tidl_16bit.sh      | 10 | dl_demos_app_tidl.md       | 02_dl_demos | 021_app_tidl_16bit_datasheet.md | Object Classification Application (16bit) Datasheet | 0 |
+run_app_stereo.sh          | 20 | basic_demos_app_stereo.md  | 01_basic_demos | 014_app_app_stereo_datasheet.md | Stereo Disparity Application Datasheet | 0 |
+run_app_dof.sh             | 10 | basic_demos_app_dense_optical_flow.md | 01_basic_demos | 015_app_dense_optical_flow_datasheet.md | Dense Optical Flow Application Datasheet | 0 |
+
+# Demos with capture
+run_app_single_cam.sh     | 10 | basic_demos_app_single_cam.md    | 01_basic_demos | 010_app_single_cam_datasheet.md | Single Camera Application Datasheet | 1 |
+run_app_multi_cam.sh      | 10 | basic_demos_app_multi_cam.md     | 01_basic_demos | 011_app_multi_cam_4ch_datasheet.md | Multi camera application (4Ch) Datasheet | 4 |

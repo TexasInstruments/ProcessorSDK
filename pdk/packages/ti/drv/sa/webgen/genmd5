@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "genmd5 start"
+find . -type f | xargs md5sum >$1
+echo "genmd5 end"

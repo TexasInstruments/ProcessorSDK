@@ -1,0 +1,1 @@
+/opt/vision_apps/vx_app_tidl_front_cam.out --cfg app_front_cam.cfg

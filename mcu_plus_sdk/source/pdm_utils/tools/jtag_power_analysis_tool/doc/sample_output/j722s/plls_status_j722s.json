@@ -1,0 +1,533 @@
+{
+  "description": "This JSON file contains clock configuration data for a PLL (Phase-Locked Loop) device.      Each object in the file represents a specific clock configuration, with properties such as     'isEnable', 'numHsdiv', 'freqOut', 'hsdivOut', and 'settings'.    The 'isEnable' property indicates whether the clock is enabled or not.     The 'numHsdiv' property specifies the number of high-speed dividers.    The 'freqOut' property contains the output frequency of the PLL, with     'foutVco' and 'foutPostDiv' representing the VCO (Voltage-Controlled Oscillator) frequency and     post-divider frequency, respectively. The 'hsdivOut' property is an array of objects, each representing a high-speed divider output,    with properties such as 'idx', 'isEnable', 'freqOut', and 'hsDiv'. The 'settings' property contains additional configuration settings,    such as 'postDiv1', 'postDiv2', 'vcoFreqMul', 'M', 'fracM', and 'isPostDivEn'.",
+  "pllStatus": {
+    "PLLFRACF2_SSMOD_16FFT_MAIN_0": {
+      "isEnable": 1,
+      "numHsdiv": 10,
+      "freqOut": {
+        "foutVco": 2000,
+        "foutPostDiv": 1000
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 500,
+          "hsDiv": 4
+        },
+        {
+          "idx": 1,
+          "isEnable": 1,
+          "freqOut": 200,
+          "hsDiv": 10
+        },
+        {
+          "idx": 2,
+          "isEnable": 1,
+          "freqOut": 200,
+          "hsDiv": 10
+        },
+        {
+          "idx": 3,
+          "isEnable": 1,
+          "freqOut": 133.333333,
+          "hsDiv": 15
+        },
+        {
+          "idx": 4,
+          "isEnable": 1,
+          "freqOut": 80,
+          "hsDiv": 25
+        },
+        {
+          "idx": 5,
+          "isEnable": 1,
+          "freqOut": 200,
+          "hsDiv": 5
+        },
+        {
+          "idx": 6,
+          "isEnable": 1,
+          "freqOut": 200,
+          "hsDiv": 5
+        },
+        {
+          "idx": 7,
+          "isEnable": 1,
+          "freqOut": 200,
+          "hsDiv": 5
+        },
+        {
+          "idx": 8,
+          "isEnable": 1,
+          "freqOut": 50,
+          "hsDiv": 20
+        },
+        {
+          "idx": 9,
+          "isEnable": 1,
+          "freqOut": 100,
+          "hsDiv": 10
+        }
+      ],
+      "settings": {
+        "postDiv1": 2,
+        "postDiv2": 1,
+        "vcoFreqMul": 80,
+        "M": 80,
+        "fracM": 0,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MAIN_1": {
+      "isEnable": 1,
+      "numHsdiv": 7,
+      "freqOut": {
+        "foutVco": 1920,
+        "foutPostDiv": 960
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 192,
+          "hsDiv": 10
+        },
+        {
+          "idx": 1,
+          "isEnable": 1,
+          "freqOut": 160,
+          "hsDiv": 12
+        },
+        {
+          "idx": 2,
+          "isEnable": 1,
+          "freqOut": 192,
+          "hsDiv": 10
+        },
+        {
+          "idx": 3,
+          "isEnable": 1,
+          "freqOut": 192,
+          "hsDiv": 10
+        },
+        {
+          "idx": 4,
+          "isEnable": 1,
+          "freqOut": 320,
+          "hsDiv": 6
+        },
+        {
+          "idx": 5,
+          "isEnable": 1,
+          "freqOut": 160,
+          "hsDiv": 6
+        },
+        {
+          "idx": 6,
+          "isEnable": 1,
+          "freqOut": 96,
+          "hsDiv": 10
+        }
+      ],
+      "settings": {
+        "postDiv1": 2,
+        "postDiv2": 1,
+        "vcoFreqMul": 76.80000001192093,
+        "M": 76,
+        "fracM": 13421773,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MAIN_12": {
+      "isEnable": 1,
+      "numHsdiv": 1,
+      "freqOut": {
+        "foutVco": 1866.5,
+        "foutPostDiv": 1866.5
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 933.25,
+          "hsDiv": 2
+        }
+      ],
+      "settings": {
+        "postDiv1": 1,
+        "postDiv2": 1,
+        "vcoFreqMul": 74.66000002622604,
+        "M": 74,
+        "fracM": 11072963,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MAIN_15": {
+      "isEnable": 1,
+      "numHsdiv": 4,
+      "freqOut": {
+        "foutVco": 2400,
+        "foutPostDiv": 2400
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 400,
+          "hsDiv": 6
+        },
+        {
+          "idx": 1,
+          "isEnable": 1,
+          "freqOut": 400,
+          "hsDiv": 6
+        },
+        {
+          "idx": 2,
+          "isEnable": 1,
+          "freqOut": 800,
+          "hsDiv": 3
+        },
+        {
+          "idx": 3,
+          "isEnable": 1,
+          "freqOut": 800,
+          "hsDiv": 3
+        }
+      ],
+      "settings": {
+        "postDiv1": 1,
+        "postDiv2": 1,
+        "vcoFreqMul": 96,
+        "M": 96,
+        "fracM": 0,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MAIN_16": {
+      "isEnable": 1,
+      "numHsdiv": 1,
+      "freqOut": {
+        "foutVco": 2100,
+        "foutPostDiv": 1050
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 2100,
+          "hsDiv": 1
+        }
+      ],
+      "settings": {
+        "postDiv1": 2,
+        "postDiv2": 1,
+        "vcoFreqMul": 84,
+        "M": 84,
+        "fracM": 0,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MAIN_17": {
+      "isEnable": 1,
+      "numHsdiv": 1,
+      "freqOut": {
+        "foutVco": 1800,
+        "foutPostDiv": 900
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 300,
+          "hsDiv": 6
+        }
+      ],
+      "settings": {
+        "postDiv1": 2,
+        "postDiv2": 1,
+        "vcoFreqMul": 72,
+        "M": 72,
+        "fracM": 0,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MAIN_18": {
+      "isEnable": 1,
+      "numHsdiv": 1,
+      "freqOut": {
+        "foutVco": 2100,
+        "foutPostDiv": 1050
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 700,
+          "hsDiv": 3
+        }
+      ],
+      "settings": {
+        "postDiv1": 2,
+        "postDiv2": 1,
+        "vcoFreqMul": 84,
+        "M": 84,
+        "fracM": 0,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MAIN_2": {
+      "isEnable": 1,
+      "numHsdiv": 10,
+      "freqOut": {
+        "foutVco": 2000,
+        "foutPostDiv": 1000
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 100,
+          "hsDiv": 20
+        },
+        {
+          "idx": 1,
+          "isEnable": 1,
+          "freqOut": 250,
+          "hsDiv": 8
+        },
+        {
+          "idx": 2,
+          "isEnable": 1,
+          "freqOut": 200,
+          "hsDiv": 10
+        },
+        {
+          "idx": 3,
+          "isEnable": 1,
+          "freqOut": 333.333333,
+          "hsDiv": 6
+        },
+        {
+          "idx": 4,
+          "isEnable": 1,
+          "freqOut": 500,
+          "hsDiv": 4
+        },
+        {
+          "idx": 5,
+          "isEnable": 1,
+          "freqOut": 500,
+          "hsDiv": 2
+        },
+        {
+          "idx": 6,
+          "isEnable": 1,
+          "freqOut": 250,
+          "hsDiv": 4
+        },
+        {
+          "idx": 7,
+          "isEnable": 1,
+          "freqOut": 100,
+          "hsDiv": 10
+        },
+        {
+          "idx": 8,
+          "isEnable": 1,
+          "freqOut": 100,
+          "hsDiv": 10
+        },
+        {
+          "idx": 9,
+          "isEnable": 1,
+          "freqOut": 50,
+          "hsDiv": 20
+        }
+      ],
+      "settings": {
+        "postDiv1": 2,
+        "postDiv2": 1,
+        "vcoFreqMul": 80,
+        "M": 80,
+        "fracM": 0,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MAIN_5": {
+      "isEnable": 1,
+      "numHsdiv": 3,
+      "freqOut": {
+        "foutVco": 3000,
+        "foutPostDiv": 1500
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 600,
+          "hsDiv": 5
+        },
+        {
+          "idx": 1,
+          "isEnable": 1,
+          "freqOut": 300,
+          "hsDiv": 10
+        },
+        {
+          "idx": 2,
+          "isEnable": 1,
+          "freqOut": 428.571428,
+          "hsDiv": 7
+        }
+      ],
+      "settings": {
+        "postDiv1": 2,
+        "postDiv2": 1,
+        "vcoFreqMul": 120,
+        "M": 120,
+        "fracM": 0,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MAIN_6": {
+      "isEnable": 1,
+      "numHsdiv": 1,
+      "freqOut": {
+        "foutVco": 2160,
+        "foutPostDiv": 1080
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 720,
+          "hsDiv": 3
+        }
+      ],
+      "settings": {
+        "postDiv1": 2,
+        "postDiv2": 1,
+        "vcoFreqMul": 86.40000003576279,
+        "M": 86,
+        "fracM": 6710887,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MAIN_7": {
+      "isEnable": 1,
+      "numHsdiv": 2,
+      "freqOut": {
+        "foutVco": 2000,
+        "foutPostDiv": 1000
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 1000,
+          "hsDiv": 2
+        },
+        {
+          "idx": 1,
+          "isEnable": 1,
+          "freqOut": 1000,
+          "hsDiv": 2
+        }
+      ],
+      "settings": {
+        "postDiv1": 2,
+        "postDiv2": 1,
+        "vcoFreqMul": 80,
+        "M": 80,
+        "fracM": 0,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MAIN_8": {
+      "isEnable": 1,
+      "numHsdiv": 1,
+      "freqOut": {
+        "foutVco": 2500,
+        "foutPostDiv": 1250
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 1250,
+          "hsDiv": 2
+        }
+      ],
+      "settings": {
+        "postDiv1": 2,
+        "postDiv2": 1,
+        "vcoFreqMul": 100,
+        "M": 100,
+        "fracM": 0,
+        "isPostDivEn": 1
+      }
+    },
+    "PLLFRACF2_SSMOD_16FFT_MCU_0": {
+      "isEnable": 1,
+      "numHsdiv": 7,
+      "freqOut": {
+        "foutVco": 2400,
+        "foutPostDiv": 1200
+      },
+      "hsdivOut": [
+        {
+          "idx": 0,
+          "isEnable": 1,
+          "freqOut": 400,
+          "hsDiv": 6
+        },
+        {
+          "idx": 1,
+          "isEnable": 1,
+          "freqOut": 96,
+          "hsDiv": 25
+        },
+        {
+          "idx": 2,
+          "isEnable": 1,
+          "freqOut": 48,
+          "hsDiv": 50
+        },
+        {
+          "idx": 3,
+          "isEnable": 1,
+          "freqOut": 800,
+          "hsDiv": 3
+        },
+        {
+          "idx": 4,
+          "isEnable": 1,
+          "freqOut": 20,
+          "hsDiv": 120
+        },
+        {
+          "idx": 5,
+          "isEnable": 1,
+          "freqOut": 200,
+          "hsDiv": 6
+        },
+        {
+          "idx": 6,
+          "isEnable": 1,
+          "freqOut": 400,
+          "hsDiv": 3
+        }
+      ],
+      "settings": {
+        "postDiv1": 2,
+        "postDiv2": 1,
+        "vcoFreqMul": 96,
+        "M": 96,
+        "fracM": 0,
+        "isPostDivEn": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+This file is added to create j742s2_evm_hs folder to fix build error while packaging.
+This file can be removed once we have linux images for j742s2_evm_hs

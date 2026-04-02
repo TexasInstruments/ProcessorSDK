@@ -1,0 +1,54 @@
+{
+    "clk_data_pllfracf2_ssmod_16fft_main_0": {
+        "base": "0x00680000",
+        "idx": 0
+    },
+    "clk_data_pllfracf2_ssmod_16fft_main_1": {
+        "base": "0x00680000",
+        "idx": 1
+    },
+    "clk_data_pllfracf2_ssmod_16fft_main_12": {
+        "base": "0x00680000",
+        "idx": 12
+    },
+    "clk_data_pllfracf2_ssmod_16fft_main_15": {
+        "base": "0x00680000",
+        "idx": 15
+    },
+    "clk_data_pllfracf2_ssmod_16fft_main_16": {
+        "base": "0x00680000",
+        "idx": 16
+    },
+    "clk_data_pllfracf2_ssmod_16fft_main_17": {
+        "base": "0x00680000",
+        "idx": 17
+    },
+    "clk_data_pllfracf2_ssmod_16fft_main_18": {
+        "base": "0x00680000",
+        "idx": 18
+    },
+    "clk_data_pllfracf2_ssmod_16fft_main_2": {
+        "base": "0x00680000",
+        "idx": 2
+    },
+    "clk_data_pllfracf2_ssmod_16fft_main_5": {
+        "base": "0x00680000",
+        "idx": 5
+    },
+    "clk_data_pllfracf2_ssmod_16fft_main_6": {
+        "base": "0x00680000",
+        "idx": 6
+    },
+    "clk_data_pllfracf2_ssmod_16fft_main_7": {
+        "base": "0x00680000",
+        "idx": 7
+    },
+    "clk_data_pllfracf2_ssmod_16fft_main_8": {
+        "base": "0x00680000",
+        "idx": 8
+    },
+    "clk_data_pllfracf2_ssmod_16fft_mcu_0": {
+        "base": "0x04040000",
+        "idx": 0
+    }
+}

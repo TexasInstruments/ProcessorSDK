@@ -1,0 +1,1346 @@
+{
+    "clk_ATL_AWS_SEL_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP0_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP1_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP2_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP3_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP4_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP0_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP1_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP2_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP3_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP4_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_AUDIO_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_AUDIO_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_AUDIO_EXT_REFCLK2_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        }
+    ],
+    "clk_ATL_BWS_SEL_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP0_AFSR_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP1_AFSR_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP2_AFSR_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP3_AFSR_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP4_AFSR_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP0_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP1_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP2_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP3_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCASP4_AFSX_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_AUDIO_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_AUDIO_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_AUDIO_EXT_REFCLK2_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        }
+    ],
+    "clk_ATL_CLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_2_HSDIVOUT8_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV1_16FFT_MAIN_1_HSDIVOUT6_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV2_16FFT_MAIN_5_HSDIVOUT1_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_0_HSDIVOUT7_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        }
+    ],
+    "clk_AUDIO_REFCLKn_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_MCASP_MAIN_0_MCASP_AHCLKR_POUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_MCASP_MAIN_1_MCASP_AHCLKR_POUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_MCASP_MAIN_2_MCASP_AHCLKR_POUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_MCASP_MAIN_3_MCASP_AHCLKR_POUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_MCASP_MAIN_4_MCASP_AHCLKR_POUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_MCASP_MAIN_0_MCASP_AHCLKX_POUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_MCASP_MAIN_1_MCASP_AHCLKX_POUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_MCASP_MAIN_2_MCASP_AHCLKX_POUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_MCASP_MAIN_3_MCASP_AHCLKX_POUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_MCASP_MAIN_4_MCASP_AHCLKX_POUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT_1",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT_2",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT_3",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV1_16FFT_MAIN_1_HSDIVOUT6_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_2_HSDIVOUT8_CLK",
+            "div": 1
+        }
+    ],
+    "clk_CLKOUT0_CTRL_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_2_HSDIVOUT1_CLK",
+            "div": 5
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_2_HSDIVOUT1_CLK",
+            "div": 10
+        }
+    ],
+    "clk_CLK_32K_RC_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLK_1P0V_97P65K",
+            "div": 3
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 8
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLK_1P0V_97P65K",
+            "div": 3
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_LFOSC0_CLKOUT",
+            "div": 1
+        }
+    ],
+    "clk_DPHY0_CLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_0_HSDIVOUT9_CLK",
+            "div": 1
+        }
+    ],
+    "clk_DPI0_SEL_OUT_SEL_parents": [
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "CLK_J722S_K3_DSS_UL_MAIN_0_DPI_1_OUT_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_K3_DSS_UL_MAIN_1_DPI_0_OUT_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_K3_DSS_UL_MAIN_1_DPI_1_OUT_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_CP_GEMAC_CPTS_CLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_2_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_0_HSDIVOUT6_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_CP_GEMAC_CPTS0_RFT_CLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_WIZ16B2M4CT_MAIN_1_IP1_LN0_TXMCLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SAM62_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_DSS0_DPI1_PCLK_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV0_16FFT_MAIN_17_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_VOUT0_EXTPCLKIN_OUT",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_DSS1_DPI0_PCLK_parents": [
+        {
+            "clk_name": "CLK_J722S_MAIN_DSS1_DPI0__PLLSEL_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_VOUT0_EXTPCLKIN_OUT",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_DSS1_DPI0__PLLSEL_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV0_16FFT_MAIN_18_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV0_16FFT_MAIN_17_HSDIVOUT0_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_DSS1_DPI1_PCLK_parents": [
+        {
+            "clk_name": "CLK_J722S_MAIN_DSS1_DPI1__PLLSEL_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_VOUT0_EXTPCLKIN_OUT",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_EMMCSD0_REFCLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_2_HSDIVOUT2_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_EMMCSD1_IO_CLKLB_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MMC1_CLKLB_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MMC1_CLK_OUT",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_EMMCSD2_IO_CLKLB_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MMC2_CLKLB_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MMC2_CLK_OUT",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_GPMC_FCLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_0_HSDIVOUT3_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_2_HSDIVOUT7_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_GTCCLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_2_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_0_HSDIVOUT6_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_CP_GEMAC_CPTS0_RFT_CLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SAM62_PLL_CTRL_WRAP_MCU_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "clk_name": "CLK_J722S_SAM62_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_MCANn_CLK_SEL_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_0_HSDIVOUT4_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_OBSCLK0_MUX_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_0_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_1_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_2_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SAM62A_A53_512KB_WRAP_MAIN_0_ARM_COREPACK_0_A53_DIVH_CLK4_OBSCLK_OUT_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SAM67_DDR_WRAP_MAIN_0_DDR_PLL_DIVH_CLK4_OBSCLK_OUT_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 8
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_0_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLK_1P0V_97P65K",
+            "div": 3
+        },
+        {
+            "clk_name": "CLK_J722S_CPSW_3GUSS_AM67_MAIN_0_CPTS_GENF0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CPSW_3GUSS_AM67_MAIN_0_CPTS_GENF1",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MCU_0_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV3_16FFT_MAIN_15_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV0_16FFT_MAIN_16_HSDIVOUT0_CLK",
+            "div": 8
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV0_16FFT_MAIN_17_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SAM62_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CLK_32K_RC_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV2_16FFT_MAIN_5_HSDIVOUT0_CLK",
+            "div": 2
+        },
+        {
+            "clk_name": "CLK_J722S_SAM67_C7XV_WRAP_MAIN_0_CLOCK_CONTROL_0_C7XV_DIVH_CLK4_OBSCLK_OUT_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SAM67_GPU_BXS464_WRAP_MAIN_0_GPU_DCC_CLK",
+            "div": 4
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV0_16FFT_MAIN_18_HSDIVOUT0_CLK",
+            "div": 2
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        }
+    ],
+    "clk_MAIN_OBSCLK_OUTMUX_SEL_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_MAIN_OBSCLK_DIV_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_OSPI_LOOPBACK_CLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_BOARD_0_OSPI0_DQS_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_OSPI0_LBCLKO_OUT",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_OSPI_REF_CLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_0_HSDIVOUT1_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV1_16FFT_MAIN_1_HSDIVOUT5_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_PCIE0_CPTS_CLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_2_HSDIVOUT6_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_0_HSDIVOUT6_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_CP_GEMAC_CPTS0_RFT_CLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_WIZ16B2M4CT_MAIN_1_IP1_LN0_TXMCLK",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        }
+    ],
+    "clk_MAIN_SERDES0_CORE_REFCLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_2_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_0_HSDIVOUT9_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_TIMER1_CASCADE_parents": [
+        {
+            "clk_name": "CLK_J722S_MAIN_TIMERCLKN_SEL_OUT1",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_DMTIMER_DMC1MS_MAIN_0_TIMER_PWM",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_TIMER3_CASCADE_parents": [
+        {
+            "clk_name": "CLK_J722S_MAIN_TIMERCLKN_SEL_OUT3",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_DMTIMER_DMC1MS_MAIN_2_TIMER_PWM",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_TIMER5_CASCADE_parents": [
+        {
+            "clk_name": "CLK_J722S_MAIN_TIMERCLKN_SEL_OUT5",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_DMTIMER_DMC1MS_MAIN_4_TIMER_PWM",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_TIMER7_CASCADE_parents": [
+        {
+            "clk_name": "CLK_J722S_MAIN_TIMERCLKN_SEL_OUT7",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_DMTIMER_DMC1MS_MAIN_6_TIMER_PWM",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_TIMERCLKn_SEL_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CLK_32K_RC_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_0_HSDIVOUT7_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_CP_GEMAC_CPTS0_RFT_CLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_1_HSDIVOUT3_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_2_HSDIVOUT6_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CPSW_3GUSS_AM67_MAIN_0_CPTS_GENF0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CPSW_3GUSS_AM67_MAIN_0_CPTS_GENF1",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        }
+    ],
+    "clk_MAIN_USB0_REFCLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_0_HSDIVOUT8_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_WWDTCLKn_SEL_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CLK_32K_RC_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLK_1P0V_97P65K",
+            "div": 3
+        }
+    ],
+    "clk_MAIN_spi0_mstr_lp_clksel_parents": [
+        {
+            "clk_name": "CLK_J722S_BOARD_0_SPI0_CLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SPI_MAIN_0_IO_CLKSPIO_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_spi1_mstr_lp_clksel_parents": [
+        {
+            "clk_name": "CLK_J722S_BOARD_0_SPI1_CLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SPI_MAIN_1_IO_CLKSPIO_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_spi2_mstr_lp_clksel_parents": [
+        {
+            "clk_name": "CLK_J722S_BOARD_0_SPI2_CLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SPI_MAIN_2_IO_CLKSPIO_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_usart0_fclk_sel_parents": [
+        {
+            "clk_name": "CLK_J722S_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_1_HSDIVOUT1_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_usart1_fclk_sel_parents": [
+        {
+            "clk_name": "CLK_J722S_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT1",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_1_HSDIVOUT1_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_usart2_fclk_sel_parents": [
+        {
+            "clk_name": "CLK_J722S_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT2",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_1_HSDIVOUT1_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_usart3_fclk_sel_parents": [
+        {
+            "clk_name": "CLK_J722S_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT3",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_1_HSDIVOUT1_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_usart4_fclk_sel_parents": [
+        {
+            "clk_name": "CLK_J722S_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT4",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_1_HSDIVOUT1_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_usart5_fclk_sel_parents": [
+        {
+            "clk_name": "CLK_J722S_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT5",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_1_HSDIVOUT1_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MAIN_usart6_fclk_sel_parents": [
+        {
+            "clk_name": "CLK_J722S_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT6",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_1_HSDIVOUT1_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MCASPn_AHCLKSEL_AHCLKR_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_BOARD_0_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_AUDIO_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_AUDIO_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_AUDIO_EXT_REFCLK2_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT_1",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT_2",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT_3",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        }
+    ],
+    "clk_MCASPn_CLKSEL_AUXCLK_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_2_HSDIVOUT8_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV1_16FFT_MAIN_1_HSDIVOUT6_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT_1",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT_2",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_ATL_MAIN_0_ATL_IO_PORT_ATCLK_OUT_3",
+            "div": 1
+        }
+    ],
+    "clk_MCU_GPIO0_CLKSEL_parents": [
+        {
+            "clk_name": "CLK_J722S_SAM62_PLL_CTRL_WRAP_MCU_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_LFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLK_1P0V_97P65K",
+            "div": 3
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLKOUT",
+            "div": 1
+        }
+    ],
+    "clk_MCU_MCANn_CLK_SEL_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MCU_0_HSDIVOUT4_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        }
+    ],
+    "clk_MCU_OBSCLK_MUX_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MCU_0_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MCU_0_HSDIVOUT4_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MCU_0_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLK_1P0V_97P65K",
+            "div": 3
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 8
+        },
+        {
+            "clk_name": "CLK_J722S_SAM62_PLL_CTRL_WRAP_MCU_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CLK_32K_RC_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 1
+        },
+        {
+            "clk_name": "0",
+            "div": 1
+        }
+    ],
+    "clk_MCU_OBSCLK_OUTMUX_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_MCU_OBSCLK_DIV_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        }
+    ],
+    "clk_MCU_TIMER1_CASCADE_parents": [
+        {
+            "clk_name": "CLK_J722S_MCU_TIMERCLKN_SEL_OUT1",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_DMTIMER_DMC1MS_MCU_0_TIMER_PWM",
+            "div": 1
+        }
+    ],
+    "clk_MCU_TIMER3_CASCADE_parents": [
+        {
+            "clk_name": "CLK_J722S_MCU_TIMERCLKN_SEL_OUT3",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_DMTIMER_DMC1MS_MCU_2_TIMER_PWM",
+            "div": 1
+        }
+    ],
+    "clk_MCU_TIMERCLKn_SEL_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SAM62_PLL_CTRL_WRAP_MCU_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV1_16FFT_MCU_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CLK_32K_RC_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CPSW_3GUSS_AM67_MAIN_0_CPTS_GENF0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLK_1P0V_97P65K",
+            "div": 3
+        }
+    ],
+    "clk_MCU_spi0_mstr_lp_clksel_parents": [
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCU_SPI0_CLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SPI_MCU_0_IO_CLKSPIO_CLK",
+            "div": 1
+        }
+    ],
+    "clk_MCU_spi1_mstr_lp_clksel_parents": [
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCU_SPI1_CLK_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_SPI_MCU_1_IO_CLKSPIO_CLK",
+            "div": 1
+        }
+    ],
+    "clk_OLDI_TX1_FWD_CLK_MUX_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV0_16FFT_MAIN_16_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_MAIN_DSS1_DPI0_PCLK_OUT0",
+            "div": 1
+        }
+    ],
+    "clk_OLDI_TX1_PLL_CLK_MUX_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV0_16FFT_MAIN_16_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV0_16FFT_MAIN_18_HSDIVOUT0_CLK",
+            "div": 1
+        }
+    ],
+    "clk_RTC_CLK_SEL_parents": [
+        {
+            "clk_name": "CLK_J722S_CLK_32K_RC_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLK_1P0V_97P65K",
+            "div": 3
+        }
+    ],
+    "clk_WKUP_CLKOUT_SEL_parents": [
+        {
+            "clk_name": "0",
+            "div": 0
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_LFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_0_HSDIVOUT2_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_1_HSDIVOUT2_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV4_16FF_MAIN_2_HSDIVOUT9_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CLK_32K_RC_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        }
+    ],
+    "clk_WKUP_CLKOUT_SEL_IO_parents": [
+        {
+            "clk_name": "CLK_J722S_WKUP_CLKOUT_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        }
+    ],
+    "clk_WKUP_CLKSEL_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV3_16FFT_MAIN_15_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MCU_0_HSDIVOUT0_CLK",
+            "div": 1
+        }
+    ],
+    "clk_WKUP_CLKSEL_R5FSS_parents": [
+        {
+            "clk_name": "CLK_J722S_HSDIV3_16FFT_MAIN_15_HSDIVOUT2_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MCU_0_HSDIVOUT0_CLK",
+            "div": 1
+        }
+    ],
+    "clk_WKUP_TIMER1_CASCADE_parents": [
+        {
+            "clk_name": "CLK_J722S_WKUP_TIMERCLKN_SEL_OUT1",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_DMTIMER_DMC1MS_WKUP_0_TIMER_PWM",
+            "div": 1
+        }
+    ],
+    "clk_WKUP_TIMERCLKn_SEL_out0_parents": [
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_WKUP_CLKSEL_OUT0",
+            "div": 2
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_POSTDIV1_16FFT_MCU_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CLK_32K_RC_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_CPSW_3GUSS_AM67_MAIN_0_CPTS_GENF0",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_RCOSC_CLK_1P0V_97P65K",
+            "div": 3
+        }
+    ],
+    "clk_sam62_pll_ctrl_wrap_main_0_parents": [
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MAIN_0_HSDIVOUT0_CLK",
+            "div": 1
+        }
+    ],
+    "clk_sam62_pll_ctrl_wrap_mcu_0_parents": [
+        {
+            "clk_name": "CLK_J722S_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "clk_name": "CLK_J722S_HSDIV4_16FFT_MCU_0_HSDIVOUT0_CLK",
+            "div": 1
+        }
+    ]
+}

@@ -1,0 +1,189 @@
+#
+# Auto generated makefile
+#
+
+export MCU_PLUS_SDK_PATH?=$(abspath ../../..)
+include $(MCU_PLUS_SDK_PATH)/imports.mak
+
+CG_TOOL_ROOT=$(CGT_TI_ARM_CLANG_PATH)
+
+CC=$(CGT_TI_ARM_CLANG_PATH)/bin/tiarmclang
+AR=$(CGT_TI_ARM_CLANG_PATH)/bin/tiarmar
+
+PROFILE?=release
+ConfigName:=$(PROFILE)
+
+# LDRA Coverage support - set to 'yes' to enable LDRA coverage
+LDRA_COVERAGE?=no
+
+LIBNAME:=vhwa.j722s.main-r5fss0-0.ti-arm-clang.$(PROFILE).lib
+
+FILES_common := \
+    vhwa_m2mLdcApi.c \
+    vhwa_m2mLdcIntr.c \
+    vhwa_m2mLdcUdma.c \
+    vhwa_m2mMscApi.c \
+    vhwa_m2mMscIntr.c \
+    vhwa_m2mMscUdma.c \
+    vhwa_m2mVissApi.c \
+    vhwa_m2mVissCsl.c \
+    vhwa_m2mVissPriv.c \
+    vhwa_m2mVissIntr.c \
+    vhwa_m2mVissUdma.c \
+    vhwa_m2mFcDrvApi.c \
+    vhwa_m2mFcResManages.c \
+    vhwa_m2mFcDrvEvtManager.c \
+    vhwa_m2mFcConfig.c \
+    vhwa_m2mLbistDrv.c \
+    csl_ee.c \
+    csl_glbce.c \
+    csl_h3a.c \
+    csl_vpacTop.c \
+    csl_cac.c \
+    csl_fcp.c \
+    csl_hts.c \
+    csl_ldc.c \
+    csl_lse.c \
+    csl_msc.c \
+    csl_nsf4.c \
+    csl_pcid.c \
+    csl_rawfe.c \
+    csl_visstop.c \
+    vhwa_utils.c \
+    csl_dof.c \
+    csl_sde.c \
+    csl_dmpac_hts.c \
+    csl_dmpacTop.c \
+    vhwa_m2mDofApi.c \
+    vhwa_m2mDofIntr.c \
+    vhwa_m2mDofUdma.c \
+    vhwa_m2mSdeApi.c \
+    vhwa_m2mSdeIntr.c \
+    vhwa_m2mSdeUdma.c \
+
+FILES_PATH_common = \
+    src/drv \
+    src/drv/V0 \
+    src/csl/src \
+    soc/V2 \
+    soc/V1 \
+
+FILES_soc := \
+    vhwa_vpac_soc.c \
+    vhwa_dmpac_soc.c \
+    vhwa_soc_fc.c \
+
+FILES_PATH_soc = \
+    soc/V2 \
+
+INCLUDES_common := \
+    -I${CG_TOOL_ROOT}/include/c \
+    -I${MCU_PLUS_SDK_PATH}/source \
+    -Isoc/j722s \
+    -I../include \
+    -I${MCU_PLUS_SDK_PATH}/source/drivers/vhwa \
+
+DEFINES_common := \
+    -DSOC_J722S \
+    -DMCU_PLUS_SDK \
+    -DMAIN_R5 \
+    -DVPAC3L \
+    -DDMPAC \
+    -DSOC_J722S \
+    -DVHWA_M2M_VPAC_INSTANCE=0 \
+    -DVHWA_M2M_DMPAC_INSTANCE \
+
+CFLAGS_common := \
+    -DBUILD_MAIN_R5 \
+    -mcpu=cortex-r5 \
+    -mfloat-abi=hard \
+    -mfpu=vfpv3-d16 \
+    -mthumb \
+    -Wall \
+    -Werror \
+    -g \
+    -Wno-gnu-variable-sized-type-not-at-end \
+    -Wno-unused-function \
+    -Wno-address-of-packed-member \
+
+# Remove -Werror when LDRA_COVERAGE is enabled
+ifeq ($(LDRA_COVERAGE),yes)
+CFLAGS_common := $(filter-out -Werror,$(CFLAGS_common))
+endif
+
+CFLAGS_cpp_common := \
+    -Wno-c99-designator \
+    -Wno-extern-c-compat \
+    -Wno-c++11-narrowing \
+    -Wno-reorder-init-list \
+    -Wno-deprecated-register \
+    -Wno-writable-strings \
+    -Wno-enum-compare \
+    -Wno-reserved-user-defined-literal \
+    -Wno-unused-const-variable \
+    -x c++ \
+
+CFLAGS_debug := \
+    -D_DEBUG_=1 \
+
+CFLAGS_release := \
+    -Os \
+
+ARFLAGS_common := \
+    rc \
+
+FILES := $(FILES_common) $(FILES_soc) $(FILES_$(PROFILE))
+ASMFILES := $(ASMFILES_common) $(ASMFILES_$(PROFILE))
+FILES_PATH := $(FILES_PATH_common) $(FILES_PATH_soc) $(FILES_PATH_$(PROFILE))
+CFLAGS := $(CFLAGS_common) $(CFLAGS_$(PROFILE))
+ASMFLAGS := $(CFLAGS_common) $(CFLAGS_$(PROFILE))
+ifeq ($(CPLUSPLUS_BUILD), yes)
+CFLAGS += $(CFLAGS_cpp_common)
+endif
+DEFINES := $(DEFINES_common) $(DEFINES_$(PROFILE))
+INCLUDES := $(INCLUDES_common) $(INCLUDE_$(PROFILE))
+ARFLAGS := $(ARFLAGS_common) $(ARFLAGS_$(PROFILE))
+
+LIBDIR := lib
+OBJDIR := obj/j722s/ti-arm-clang/$(PROFILE)/main-r5fss0-0/vhwa/
+OBJS := $(FILES:%.c=%.obj)
+OBJS += $(ASMFILES:%.S=%.obj)
+DEPS := $(FILES:%.c=%.d)
+
+vpath %.obj $(OBJDIR)
+vpath %.c $(FILES_PATH)
+vpath %.S $(FILES_PATH)
+
+$(OBJDIR)/%.obj %.obj: %.c
+	@echo  Compiling: $(LIBNAME): $<
+	$(CC) -c $(CFLAGS) $(INCLUDES) $(DEFINES) -MMD -o $(OBJDIR)/$@ $<
+
+$(OBJDIR)/%.obj %.obj: %.S
+	@echo  Compiling: $(LIBNAME): $<
+	$(CC) -c $(ASMFLAGS) -o $(OBJDIR)/$@ $<
+
+all: $(LIBDIR)/$(LIBNAME)
+
+$(LIBDIR)/$(LIBNAME): $(OBJS) | $(LIBDIR)
+	@echo  .
+	@echo  Archiving: $(LIBNAME) to $@ ...
+	$(AR) $(ARFLAGS) $@ $(addprefix $(OBJDIR), $(OBJS))
+	@echo  Archiving: $(LIBNAME) Done !!!
+	@echo  .
+
+clean:
+	@echo  Cleaning: $(LIBNAME) ...
+	$(RMDIR) $(OBJDIR)
+	$(RM) $(LIBDIR)/$(LIBNAME)
+
+scrub:
+	@echo  Scrubing: $(LIBNAME) ...
+	-$(RMDIR) obj/
+	-$(RMDIR) lib/
+
+$(OBJS): | $(OBJDIR)
+
+$(LIBDIR) $(OBJDIR):
+	$(MKDIR) $@
+
+-include $(addprefix $(OBJDIR)/, $(DEPS))

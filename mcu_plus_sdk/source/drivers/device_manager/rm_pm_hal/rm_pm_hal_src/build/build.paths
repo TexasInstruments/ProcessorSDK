@@ -1,0 +1,46 @@
+#
+# Build include file for configuring various paths
+#
+# Copyright (C) 2017 Texas Instruments Incorporated - http://www.ti.com/
+# ALL RIGHTS RESERVED
+#
+
+### Configure toolchain paths ###
+
+# Version of CG-ARM-Tools
+CGT_ARM_VERSION=18.1.3.LTS
+
+TOOLCHAIN_PATH_M3 ?= $(srcroot)/ti-cgt-arm_$(CGT_ARM_VERSION)
+
+### Configure component paths ###
+
+# Version of BIOS
+BIOS_VERSION=6_76_00_08
+
+# Version of XDC
+XDC_VERSION=3_51_01_18_core
+
+BIOS_INSTALL_PATH ?= $(srcroot)/bios_$(BIOS_VERSION)
+XDC_INSTALL_PATH ?= $(srcroot)/xdctools_$(XDC_VERSION)
+
+ifeq ($(OS),Windows_NT)
+path_sep = ;
+else
+path_sep = :
+endif
+
+override PATH := $(TOOLCHAIN_PATH_M3)/bin$(path_sep)$(XDC_INSTALL_PATH)$(path_sep)$(PATH)
+export PATH
+
+# Check to ensure we are pointing to valid locations
+ifeq (,$(wildcard $(TOOLCHAIN_PATH_M3)))
+$(error ERROR: TOOLCHAIN_PATH_M3 = $(TOOLCHAIN_PATH_M3). Make sure path exists)
+endif
+
+ifeq (,$(wildcard $(BIOS_INSTALL_PATH)))
+$(error ERROR: BIOS_INSTALL_PATH = $(BIOS_INSTALL_PATH). Make sure path exists)
+endif
+
+ifeq (,$(wildcard $(XDC_INSTALL_PATH)))
+$(error ERROR: XDC_INSTALL_PATH = $(XDC_INSTALL_PATH). Make sure path exists)
+endif

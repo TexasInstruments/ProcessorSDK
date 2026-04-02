@@ -1,0 +1,64 @@
+#******************************************************************************
+#*      Copyright (C) 2009-2012 Texas Instruments Incorporated.               *
+#*                      All Rights Reserved                                   *
+#******************************************************************************
+
+##############################################################
+ALGBASE_PATH ?= $(abspath ../../../)
+PSDK_INSTALL_PATH ?= $(abspath ../../../../)
+COMMON_DIR= ../../../common
+CFILES := tidl_graph_model_runtimes.cpp
+OUTFILE= ./out/tidl_graphVisualiser_runtimes.out
+##############################################################
+TIDL_IMPORT_TOOL := 1
+TARGET_PLATFORM = PC
+BUILD_WITH_CUDA := 0
+override BUILD_WITH_CUDA=0
+override BUILD_WITH_OPENACC=0
+
+include $(ALGBASE_PATH)/makerules/rules.mk
+
+#used inside makerules, but okay to define it afterwards
+CFLAGS+= -I ../../inc
+CFLAGS+= -I $(COMMON_DIR)
+CFLAGS+= -I $(TIDL_GRAPHVIZ_PATH)/include/graphviz
+CFLAGS+= -I ../../../arm-tidl/rt/inc
+
+ifdef SystemRoot
+CFLAGS+= /DTIDL_IMPORT_TOOL
+LDFLAGS+=-l $(TIDL_GRAPHVIZ_PATH)/lib/cgraph.lib
+LDFLAGS+=-l $(TIDL_GRAPHVIZ_PATH)/lib/gvc.lib
+else
+CFLAGS+= -DTIDL_IMPORT_TOOL
+CFLAGS += -Werror=return-type -Wno-unused-result -Wno-format-overflow
+LDFLAGS+= -L $(TIDL_GRAPHVIZ_PATH)/lib
+
+LDFLAGS+= -lcgraph -lgvc
+CFLAGS+= -I $(TIDL_GRAPHVIZ_PATH)/
+endif
+CFLAGS += -I ../tidlModelImport
+
+# defs needed by all platforms
+ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), J7 J721E j721e))
+    CFLAGS += -DSOC_J721E
+else ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), J721S2 j721s2))
+    CFLAGS += -DSOC_J721S2
+else ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), J784S4 j784s4))
+    CFLAGS += -DSOC_J784S4
+else ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), J742S2 j742s2))
+    CFLAGS += -DSOC_J742S2
+else ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), J722S j722s))
+    CFLAGS += -DSOC_J722S
+else ifeq ($(TARGET_SOC),$(filter $(TARGET_SOC), AM62A am62a))
+    CFLAGS += -DSOC_AM62A
+endif
+
+##############################################################
+#LDFLAGS+= -lcdt -lgvc -lcgraph
+##############################################################
+##############################################################
+OUTDIR =  "./out"
+
+$(OUTFILE) : outfile
+##############################################################
+

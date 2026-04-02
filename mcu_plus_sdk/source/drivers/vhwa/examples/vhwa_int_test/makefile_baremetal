@@ -1,0 +1,13 @@
+#
+# This file is the makefile for building VHWA SDE test app for baremetal
+#
+ifeq ($(RULES_MAKE), )
+include $(PDK_INSTALL_PATH)/ti/build/Rules.make
+else
+include $(RULES_MAKE)
+endif
+
+APP_NAME = vhwa_int_baremetal_testapp
+BUILD_OS_TYPE=baremetal
+
+include makefile.mk

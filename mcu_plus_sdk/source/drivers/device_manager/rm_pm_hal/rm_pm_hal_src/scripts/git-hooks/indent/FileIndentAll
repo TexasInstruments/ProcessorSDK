@@ -1,0 +1,535 @@
+#!/bin/sh
+# This file MUST be located at ../MAIN_DIR/.git/indent/FileIndentAll
+# Indent all files in ../MAIN_DIR/ (including sub directories)
+
+# ---- Init Variables ----
+ShowInfo="True"                                      # Show information on screen        [True / False]
+CreateBackupFiles="True"                             # Create backup files                [True / False]
+Indentation="True"                                      # File Indentation                    [True / False]
+ConvertTab2Spaces="False"                            # Convert tabs to spaces            [True / False]
+ConvertCRLF="True"                                  # Convert CRLF to CR                [True / False]
+TrimWhitespace="True"                                # Removing Trailing Whitespaces     [True / False]
+
+# ---------------- Do NOT edit below!!! ----------------
+OS_Type="unknown"                                    # OS type - Windows / Linux / unknown
+errMgs=""                                            # Error msg if tabs (\t) and/or trailing whitespaces... are found.
+BreakCommit="False"                                  # =True if need to break git commit (found corruped file(s))
+
+# Go 2 directory UP (from ../MAIN_DIR/.git/indent to ../MAIN_DIR/)
+cd ../../
+
+# Setup Mask
+Mask=0;
+if [ "$Indentation" = "True" ]; then
+  Mask=$((Mask+1000))
+fi
+if [ "$ConvertTab2Spaces" = "True" ]; then
+  Mask=$((Mask+100))
+fi
+if [ "$ConvertCRLF" = "True" ]; then
+  Mask=$((Mask+10))
+fi
+if [ "$TrimWhitespace" = "True" ]; then
+  Mask=$((Mask+1))
+fi
+
+# OS Type ?= Windows / Linux
+if `echo "$PATH" | grep -w -i "bin" | grep -w -i "sbin" | grep -w -i "usr" 1>/dev/null 2>&1`; then
+  OS_Type="Linux"
+elif `echo "$PATH" | grep -w -i "windows" | grep -w -i "system32" | grep -w -i "program files" 1>/dev/null 2>&1`; then
+  OS_Type="Windows"
+fi
+
+# Check uncrustify version and exit if do not match
+if `echo "$(uncrustify --version)" | grep -w -i "uncrustify 0.59" 1>/dev/null 2>&1`; then
+  version=$(echo "$(uncrustify --version)")
+  echo
+  echo "$version"
+  echo
+else
+  version=$(echo "$(uncrustify --version)")
+  echo
+  echo
+  echo "Error: Incorrect version of uncrustify"
+  echo " - Required  uncrustify 0.59"
+  echo " - Installed $version"
+  echo
+  exit -1
+fi
+
+
+# Print on screen OS type
+echo
+echo "OS type - $OS_Type"
+case $Mask in
+  0 )
+    # All - false (Indentation - 0 ConvertTab2Spaces - 0 ConvertCRLF - 0 TrimWhitespace - 0)
+    echo "All settings are set to false. Change settings in pre-commit!"
+    maskmsg="All settings are set to false. Change settings in .git/hooks/pre-commit!"
+    ;;
+  1 ) # Indentation - 0 ConvertTab2Spaces - 0 ConvertCRLF - 0 TrimWhitespace - 1
+    echo "Remove Trailing Whitespaces and Blank Newlines at EOF."
+    maskmsg="Remove Trailing Whitespaces and Blank Newlines at EOF."
+    ;;
+  10 )
+    # Indentation - 0 ConvertTab2Spaces - 0 ConvertCRLF - 1 TrimWhitespace - 0
+    echo "Convert CRLF to LF"
+    maskmsg="Convert CRLF to LF."
+    ;;
+  11 )
+    # Indentation - 0 ConvertTab2Spaces - 0 ConvertCRLF - 1 TrimWhitespace - 1
+    echo "Convert CRLF to LF, Remove Trailing Whitespaces and Blank Newlines at EOF."
+    maskmsg="Convert CRLF to LF, Remove Trailing Whitespaces and Blank Newlines at EOF."
+    ;;
+  100 )
+    # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 0 TrimWhitespace - 0
+    echo "Convert Tabs to Spaces."
+    maskmsg="Convert Tabs to Spaces."
+    ;;
+  101 )
+    # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 0 TrimWhitespace - 1
+    echo "Convert Tabs to Spaces, Remove Trailing Whitespaces and Blank Newlines at EOF."
+    maskmsg="Convert Tabs to Spaces, Remove Trailing Whitespaces and Blank Newlines at EOF."
+    ;;
+  110 )
+    # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 1 TrimWhitespace - 0
+    echo "Convert Tabs to Spaces and CRLF to LF."
+    maskmsg="Convert Tabs to Spaces and CRLF to LF."
+    ;;
+  111 )
+    # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 1 TrimWhitespace - 1
+    echo "Convert Tabs to Spaces, CRLF to LF, Remove Trailing Whitespaces and Blank Newlines at EOF."
+    maskmsg="Convert Tabs to Spaces, CRLF to LF, Remove Trailing Whitespaces and Blank Newlines at EOF."
+    ;;
+  1000 | 1001 | 1010 | 1011 | 1100 | 1101 | 1110 | 1111 )
+    # Indentation - 1 ConvertTab2Spaces - x ConvertCRLF - x TrimWhitespace - x
+    echo "Indentation +(Convert CRLF to LF, Tabs to Spaces, remove WS and NL at EOF)"
+    maskmsg="Indentation +(Convert CRLF to LF, Tabs to Spaces, remove WS and NL at EOF)"
+    ;;
+  *)
+    echo "Error in (Indentation / ConvertTab2Spaces / ConvertCRLF / TrimWhitespace)!"
+    echo "Edit .git/hooks/pre-commit"
+    exit -1
+    ;;
+esac
+
+if [ "$OS_Type" != "Windows" ]; then
+  if [ "$OS_Type" != "Linux" ]; then
+    OS_Type="unknown"
+  fi
+fi
+
+# Error if OS type unknown
+if [ "$OS_Type" = "unknown" ]; then
+  echo
+  msg="Unknown OS type! Can NOT fix file(s) automatically!\n     Setup OS in .git/hooks/pre-commit"
+  echo "$msg"
+  exit -1
+else
+  if [ $((Mask)) -ne 0 ] ; then
+    # Print ones on screen
+    if [ "$ShowInfo" = "True" ] ; then
+      echo
+      echo "          Procesing file(s) (.c .cpp .h).           "
+      echo "===================================================="
+      echo
+    else
+      echo
+      echo "See log file in ./.git/indent/Info_all.log"
+      echo
+    fi
+    # Create log file (remove if exsist)
+    echo Log file > ./.git/indent/Info_all.log
+    echo >> ./.git/indent/Info_all.log
+    echo "  Options:" >> ./.git/indent/Info_all.log
+    echo "     - ShowInfo            (Show information on screen      [True/False])  = $ShowInfo" >> ./.git/indent/Info_all.log
+    echo "     - CreateBackupFiles   (Create backup files             [True/False])  = $CreateBackupFiles" >> ./.git/indent/Info_all.log
+    echo "     - Indentation         (File Indentation - Uncrustify   [True/False])  = $Indentation" >> ./.git/indent/Info_all.log
+    echo "     - ConvertTab2Spaces   (Convert tabs to spaces          [True/False])  = $ConvertTab2Spaces" >> ./.git/indent/Info_all.log
+    echo "     - ConvertCRLF         (Convert CRLF to CR              [True/False])  = $ConvertCRLF" >> ./.git/indent/Info_all.log
+    echo "     - TrimWhitespace      (Removing Trailing Whitespaces   [True/False])  = $TrimWhitespace" >> ./.git/indent/Info_all.log
+    echo >> ./.git/indent/Info_all.log
+    echo "  $maskmsg" >> ./.git/indent/Info_all.log
+    echo >> ./.git/indent/Info_all.log
+    echo "   WS    - Contain (X) trailing whitespaces in line(s):" >> ./.git/indent/Info_all.log
+    echo "   TB    - Contain (X) tabs in line(s):" >> ./.git/indent/Info_all.log
+    echo "   OF    - Contain (X) *INDENT-OFF* in line(s):" >> ./.git/indent/Info_all.log
+    echo >> ./.git/indent/Info_all.log
+    echo "          Procesing file(s) (.c .cpp .h).          " >> ./.git/indent/Info_all.log
+    echo ==================================================== >> ./.git/indent/Info_all.log
+    echo >> ./.git/indent/Info_all.log
+
+    # Check all files in ../MAIN_DIR/, except .git directory
+    if [ "$OS_Type" = "Windows" ]; then
+      # Windows
+      for FILE in `exec findwin . -type f | grep --invert-match '^[.][/][.]git' | uniq | grep -i '\(\.c\|\.cpp\|\.h\)$' | sed 's/^[.][/]//'`; do
+
+        # Tabs
+        countTB=$(grep -P -i -c "\t" "$FILE")
+        lineTB=$(grep -P -i -o -n "\t" "$FILE" | uniq | sed s/:/,/g)
+        # WhiteSpaces
+        countWS=$(grep -i -c [[:space:]]$ "$FILE")
+        lineWS=$(grep -i -o -n [[:space:]]$ "$FILE" | uniq | sed s/:/,/g)
+        # *INDENT-OFF*
+        countOF=$(grep -c [*]INDENT-OFF[*] "$FILE")
+        lineOF=$(grep -o -n [*]INDENT-OFF[*] "$FILE" | uniq | sed s/:[*]INDENT-OFF[*]/,/g)
+
+        errMgsWS="  "        # Contain trailing whitespaces
+        errMgsTB="  "        # Contain tabs
+        errMgsOF="  "        # Contain *INDENT-OFF*
+
+        # WhiteSpaces
+        if [ $((countWS)) -ne 0 ] ; then
+          errMgsWS="WS"
+        fi
+        # Tabs
+        if [ $((countTB)) -ne 0 ] ; then
+          errMgsTB="TB"
+        fi
+        # *INDENT-OFF*
+        if [ $((countOF)) -ne 0 ] ; then
+          errMgsOF="OF"
+        fi
+
+        errMgs="$errMgsWS $errMgsTB"
+
+        # Print files on screen
+        if [ "$ShowInfo" = "True" ]; then
+          errMgs=" $errMgs - "$FILE""
+          echo "$errMgs"
+        fi
+
+        # Create back up file
+        if [ "$CreateBackupFiles" = "True" ]; then
+          # Copy original file in .orig
+          cp "$FILE" "$FILE".orig
+        fi
+
+        # Process file
+        case $Mask in
+          1 ) # Indentation - 0 ConvertTab2Spaces - 0 ConvertCRLF - 0 TrimWhitespace - 1
+            # Remove Trailing Whitespaces
+            perl -p -e 's/[[:space:]]*\r\n/\r\n/g' $FILE > temp
+            perl -p -e 's/[ \t]*\n/\n/g' temp > $FILE
+            # Remove Blank Newlines at EOF
+            perl -0777 -pe 's/[\r\n]*\Z/\n\n/' $FILE > temp
+            mv temp $FILE
+            ;;
+          10 )
+            # Indentation - 0 ConvertTab2Spaces - 0 ConvertCRLF - 1 TrimWhitespace - 0
+            # Convert CRLF to LF
+            dos2unix -U "$FILE"
+            ;;
+          11 )
+            # Indentation - 0 ConvertTab2Spaces - 0 ConvertCRLF - 1 TrimWhitespace - 1
+            # Convert CRLF to LF and Remove Trailing Whitespaces
+            perl -p -e 's/[[:space:]]*\r\n/\r\n/g' $FILE > temp
+            perl -p -e 's/[ \t]*\n/\n/g' temp > $FILE
+            # Remove Blank Newlines at EOF
+            perl -0777 -pe 's/[\r\n]*\Z/\n\n/' $FILE > temp
+            mv temp $FILE
+            dos2unix -U "$FILE"
+            if [ "$errMgsWS" = "WS" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          100 )
+            # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 0 TrimWhitespace - 0
+            # Convert Tabs to Spaces.
+            expandwin -t4 $FILE > temp
+            mv temp $FILE
+            if [ "$errMgsTB" = "TB" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          101 )
+            # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 0 TrimWhitespace - 1
+            # Convert Tabs to Spaces and Remove Trailing Whitespaces.
+            expandwin -t4 $FILE > temp
+            mv temp $FILE
+            perl -p -e 's/[[:space:]]*\r\n/\r\n/g' $FILE > temp
+            perl -p -e 's/[ \t]*\n/\n/g' temp > $FILE
+            # Remove Blank Newlines at EOF
+            perl -0777 -pe 's/[\r\n]*\Z/\n\n/' $FILE > temp
+            mv temp $FILE
+            if [ "$errMgsWS" = "WS" ] ; then
+              BreakCommit="True"
+            fi
+            if [ "$errMgsTB" = "TB" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          110 )
+            # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 1 TrimWhitespace - 0
+            # Convert Tabs to Spaces and CRLF to LF.
+            expandwin -t4 $FILE > temp
+            mv temp $FILE
+            dos2unix -U "$FILE"
+            if [ "$errMgsTB" = "TB" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          111 )
+            # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 1 TrimWhitespace - 1
+            # Convert Tabs to Spaces, CRLF to LF and Remove Trailing Whitespaces
+            expandwin -t4 $FILE > temp
+            mv temp $FILE
+            perl -p -e 's/[[:space:]]*\r\n/\r\n/g' $FILE > temp
+            perl -p -e 's/[ \t]*\n/\n/g' temp > $FILE
+            # Remove Blank Newlines at EOF
+            perl -0777 -pe 's/[\r\n]*\Z/\n\n/' $FILE > temp
+            mv temp $FILE
+            dos2unix -U "$FILE"
+            if [ "$errMgsWS" = "WS" ] ; then
+              BreakCommit="True"
+            fi
+            if [ "$errMgsTB" = "TB" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          1000 | 1001 | 1010 | 1011 | 1100 | 1101 | 1110 | 1111 )
+            # Indentation - 1 ConvertTab2Spaces - x ConvertCRLF - x TrimWhitespace - x
+            # "Indenting +(Convert CRLF to LF, Tabs to Spaces and remove WS)"
+
+            # FIX - Find " */ //xxx" and add NewLine before "//xxx"
+            perl -p -e 's/^(?!([[:space:]]*\/\/))(.*\*\/)(.*)(\/\/.*)/$1$2\n$4/g' $FILE > temp
+            mv temp $FILE
+            for counter in {1..2}
+            do
+              # Indent
+              uncrustify -l c --no-backup -q $FILE -c ./.git/indent/uncrustify_options.cfg
+              dos2unix -U $FILE
+            done
+
+            if [ "$errMgsWS" = "WS" ] ; then
+              BreakCommit="True"
+            fi
+            if [ "$errMgsTB" = "TB" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          *)
+            echo "Error in (Indentation / ConvertTab2Spaces / ConvertCRLF / TrimWhitespace)!"
+            echo "Edit .git/hooks/pre-commit"
+            exit -1
+            ;;
+        esac
+
+        # Save to log file (append >>)
+        echo >> ./.git/indent/Info_all.log
+        echo "  - $FILE" >> ./.git/indent/Info_all.log
+        if [ "$errMgsWS" = "WS" ] ; then
+          echo "   = WS - "$countWS" / in lines: "$lineWS"" >> ./.git/indent/Info_all.log
+        fi
+        if [ "$errMgsTB" = "TB" ] ; then
+          echo "   = TB - "$countTB" / in lines: "$lineTB"" >> ./.git/indent/Info_all.log
+        fi
+        if [ "$errMgsOF" = "OF" ] ; then
+          echo "   = OF - "$countOF" / in lines: "$lineOF"" >> ./.git/indent/Info_all.log
+        fi
+
+      done
+    else
+      # Linux
+      for FILE in `exec find . -type f | grep --invert-match '^[.][/][.]git' | uniq | grep -i '\(\.c\|\.cpp\|\.h\)$' | sed 's/^[.][/]//'`; do
+        # Linux
+        # Tabs
+        countTB=$(grep -P -i -c '\t' "$FILE")
+        lineTB=$(grep -P -i -o -n '\t' "$FILE" | uniq | sed 's/:/,/g')
+        # WhiteSpaces
+        countWS=$(grep -i -c '[[:space:]]$' "$FILE")
+        lineWS=$(grep -i -o -n '[[:space:]]$' "$FILE" | uniq | sed 's/:/,/g')
+        # *INDENT-OFF*
+        countOF=$(grep -c '[*]INDENT-OFF[*]' "$FILE")
+        lineOF=$(grep -o -n '[*]INDENT-OFF[*]' "$FILE" | uniq | sed s/:[*]INDENT-OFF[*]/,/g)
+
+        errMgsWS="  "        # Contain trailing whitespaces
+        errMgsTB="  "        # Contain tabs
+        errMgsOF="  "        # Contain *INDENT-OFF*
+
+        # WhiteSpaces
+        if [ $((countWS)) -ne 0 ] ; then
+          errMgsWS="WS"
+        fi
+        # Tabs
+        if [ $((countTB)) -ne 0 ] ; then
+          errMgsTB="TB"
+        fi
+        # *INDENT-OFF*
+        if [ $((countOF)) -ne 0 ] ; then
+          errMgsOF="OF"
+        fi
+
+        errMgs="$errMgsWS $errMgsTB"
+
+        # Print files on screen
+        if [ "$ShowInfo" = "True" ]; then
+          errMgs=" $errMgs - "$FILE""
+          echo "$errMgs"
+        fi
+
+        # Create back up file
+        if [ "$CreateBackupFiles" = "True" ]; then
+          # Copy original file in .orig
+          cp "$FILE" "$FILE".orig
+        fi
+
+        # Process file
+        # Linux
+        case $Mask in
+          1 ) # Indentation - 0 ConvertTab2Spaces - 0 ConvertCRLF - 0 TrimWhitespace - 1
+            # Remove Trailing Whitespaces
+            perl -p -e 's/[[:space:]]*\r\n/\r\n/g' $FILE > temp
+            perl -p -e 's/[ \t]*\n/\n/g' temp > $FILE
+            # Remove Blank Newlines at EOF
+            perl -0777 -pe 's/[\r\n]*\Z/\n\n/' $FILE > temp
+            mv temp $FILE
+            ;;
+          10 )
+            # Indentation - 0 ConvertTab2Spaces - 0 ConvertCRLF - 1 TrimWhitespace - 0
+            # Convert CRLF to LF
+            fromdos -d "$FILE"
+            ;;
+          11 )
+            # Indentation - 0 ConvertTab2Spaces - 0 ConvertCRLF - 1 TrimWhitespace - 1
+            # Convert CRLF to LF and Remove Trailing Whitespaces
+            perl -p -e 's/[[:space:]]*\r\n/\r\n/g' $FILE > temp
+            perl -p -e 's/[ \t]*\n/\n/g' temp > $FILE
+            # Remove Blank Newlines at EOF
+            perl -0777 -pe 's/[\r\n]*\Z/\n\n/' $FILE > temp
+            mv temp $FILE
+            fromdos -d "$FILE"
+            if [ "$errMgsWS" = "WS" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          100 )
+            # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 0 TrimWhitespace - 0
+            # Convert Tabs to Spaces.
+            expand -t4 $FILE > temp
+            mv temp $FILE
+            if [ "$errMgsTB" = "TB" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          101 )
+            # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 0 TrimWhitespace - 1
+            # Convert Tabs to Spaces and Remove Trailing Whitespaces.
+            expand -t4 $FILE > temp
+            mv temp $FILE
+            perl -p -e 's/[[:space:]]*\r\n/\r\n/g' $FILE > temp
+            perl -p -e 's/[ \t]*\n/\n/g' temp > $FILE
+            # Remove Blank Newlines at EOF
+            perl -0777 -pe 's/[\r\n]*\Z/\n\n/' $FILE > temp
+            mv temp $FILE
+            if [ "$errMgsWS" = "WS" ] ; then
+              BreakCommit="True"
+            fi
+            if [ "$errMgsTB" = "TB" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          110 )
+            # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 1 TrimWhitespace - 0
+            # Convert Tabs to Spaces and CRLF to LF.
+            expand -t4 $FILE > temp
+            mv temp $FILE
+            fromdos -d "$FILE"
+            if [ "$errMgsTB" = "TB" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          111 )
+            # Indentation - 0 ConvertTab2Spaces - 1 ConvertCRLF - 1 TrimWhitespace - 1
+            # Convert Tabs to Spaces, CRLF to LF and Remove Trailing Whitespaces
+            expand -t4 $FILE > temp
+            mv temp $FILE
+            perl -p -e 's/[[:space:]]*\r\n/\r\n/g' $FILE > temp
+            perl -p -e 's/[ \t]*\n/\n/g' temp > $FILE
+            # Remove Blank Newlines at EOF
+            perl -0777 -pe 's/[\r\n]*\Z/\n\n/' $FILE > temp
+            mv temp $FILE
+            fromdos -d "$FILE"
+            if [ "$errMgsWS" = "WS" ] ; then
+              BreakCommit="True"
+            fi
+            if [ "$errMgsTB" = "TB" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          1000 | 1001 | 1010 | 1011 | 1100 | 1101 | 1110 | 1111 )
+            # Indentation - 1 ConvertTab2Spaces - x ConvertCRLF - x TrimWhitespace - x
+            # "Indenting +(Convert CRLF to LF, Tabs to Spaces and remove WS)"
+
+            # FIX - Find " */ //xxx" and add NewLine before "//xxx"
+            perl -p -e 's/^(?!([[:space:]]*\/\/))(.*\*\/)(.*)(\/\/.*)/$1$2\n$4/g' $FILE > temp
+            mv temp $FILE
+            for counter in {1..2}
+            do
+              # Indent
+              uncrustify -l c --no-backup -q $FILE -c ./.git/indent/uncrustify_options.cfg
+              fromdos -d "$FILE"
+            done
+
+            if [ "$errMgsWS" = "WS" ] ; then
+              BreakCommit="True"
+            fi
+            if [ "$errMgsTB" = "TB" ] ; then
+              BreakCommit="True"
+            fi
+            ;;
+          *)
+            echo "Error in (Indentation / ConvertTab2Spaces / ConvertCRLF / TrimWhitespace)!"
+            echo "Edit .git/hooks/pre-commit"
+            exit -1
+            ;;
+        esac
+
+        # Save to log file (append >>)
+        echo >> ./.git/indent/Info_all.log
+        echo "  - $FILE" >> ./.git/indent/Info_all.log
+        if [ "$errMgsWS" = "WS" ] ; then
+          echo "   = WS - "$countWS" / in lines: "$lineWS"" >> ./.git/indent/Info_all.log
+        fi
+        if [ "$errMgsTB" = "TB" ] ; then
+          echo "   = TB - "$countTB" / in lines: "$lineTB"" >> ./.git/indent/Info_all.log
+        fi
+        if [ "$errMgsOF" = "OF" ] ; then
+          echo "   = OF - "$countOF" / in lines: "$lineOF"" >> ./.git/indent/Info_all.log
+        fi
+
+      done
+    fi
+
+    if [ "$ShowInfo" = "True" ] ; then
+      echo
+      echo ====================================================
+      echo
+    fi
+    echo >> ./.git/indent/Info_all.log
+    echo ==================================================== >> ./.git/indent/Info_all.log
+    echo >> ./.git/indent/Info_all.log
+
+    # Output Messages
+    echo "       Open fixed files to see changes!      "
+    echo "(For more details - .git/indent/log/Info_all.log)"
+    if [ "$CreateBackupFiles" = "True" ]; then
+      echo "         Original files are saved as .orig.         "
+    fi
+    echo
+
+    if [ "$BreakCommit" = "True" ] ; then
+      msg="         Tabs or Trailing Whitespaces found!         "
+        echo "$msg"
+      echo
+      exit -1
+    else
+      msg="                      DONE!                      "
+        echo "$msg"
+      echo
+      exit
+    fi
+
+  fi
+fi
+exit

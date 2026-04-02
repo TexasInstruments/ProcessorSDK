@@ -1,0 +1,79 @@
+;Trace32 Script to read memory addresses and save address-value pairs to csv file
+
+;The following are taken as parameters to the .cmm file at the time of execution
+
+;div_addr_file_path -> path of csv file containing div addresses
+;mux_addr_file_path -> path of csv file containing mux addresses
+;values_dir -> path of directory to which to save the csv file containing address-value pairs
+;div_values_file_name -> intended file name to contain address-value pairs of div
+;mux_values_file_name -> intended file name to contain address-value pairs of mux
+
+LOCAL &div_addr_file_path &mux_addr_file_path &values_dir &div_values_file_name &mux_values_file_name
+PARAMETERS &div_addr_file_path &mux_addr_file_path &values_dir &div_values_file_name &mux_values_file_name
+
+OPEN #1 "&div_addr_file_path" /Read
+OPEN #2 "&mux_addr_file_path" /Read
+
+IF (OS.DIR("&values_dir"))
+(
+  ;if values_dir already exists, go to output creation step
+  GOTO output
+)
+ELSE
+(
+  ;if values_dir does not exist, create directory
+  OS.Command mkdir -p &values_dir
+)
+
+output:
+&div_values_file_path="&values_dir"+"/"+"&div_values_file_name"
+&mux_values_file_path="&values_dir"+"/"+"&mux_values_file_name"
+
+
+OPEN #3 "&div_values_file_path" /Create
+OPEN #4 "&mux_values_file_path" /Create
+
+
+PRIVATE &address
+;read addresses from the addresses file, get values at these addresses and append to address-value pairs file
+
+WHILE TRUE()
+(
+  READ #1 %LINE &address
+  IF EOF()
+  (
+    ;if end of file reached, exit loop
+    GOTO loop_end_1
+  )
+
+  PRIVATE &value
+  &value=Data.Long(D:&address)
+  IF ERROR.POSITION()==1
+    &value=-1
+  WRITE #3 "&address," %Decimal &value
+)
+loop_end_1:PRINT "File &div_addr_file_path Read"
+
+WHILE TRUE()
+(
+  READ #2 %LINE &address
+  IF EOF()
+  (
+    ;if end of file reached, exit loop
+    GOTO loop_end_2
+  )
+
+  PRIVATE &value
+  &value=Data.Long(D:&address)
+  IF ERROR.POSITION()==1
+    &value=-1
+  WRITE #4 "&address," %Decimal &value
+)
+loop_end_2:PRINT "File &mux_addr_file_path Read"
+
+
+;close all files
+CLOSE #1
+CLOSE #2
+CLOSE #3
+CLOSE #4

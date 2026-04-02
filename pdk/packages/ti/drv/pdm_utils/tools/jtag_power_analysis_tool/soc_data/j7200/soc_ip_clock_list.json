@@ -1,0 +1,3958 @@
+{
+    "J7200_DEV_MCU_ADC0": [
+        {
+            "input_name": "DEV_MCU_ADC0_ADC_CLK",
+            "clk_name": "CLK_J7200_MCU_ADC_CLK_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_ADC0_SYS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MCU_ADC0_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 3
+        }
+    ],
+    "J7200_DEV_MCU_ADC1": [
+        {
+            "input_name": "DEV_MCU_ADC1_ADC_CLK",
+            "clk_name": "CLK_J7200_MCU_ADC_CLK_SEL_OUT1",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_ADC1_SYS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MCU_ADC1_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 3
+        }
+    ],
+    "J7200_DEV_ATL0": [
+        {
+            "input_name": "DEV_ATL0_ATL_CLK",
+            "clk_name": "CLK_J7200_ATL_PCLKMUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_ATL0_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_COMPUTE_CLUSTER0": [
+        {
+            "input_name": "DEV_COMPUTE_CLUSTER0_DDR32SS_EMIF0_DDR_PLL_CLK",
+            "clk_name": "CLK_J7200_HSDIV0_16FFT_MAIN_12_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_COMPUTE_CLUSTER0_DDR32SS_EMIF0_PLL_CTRL_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_COMPUTE_CLUSTER0_TB_SOC_GIC_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_COMPUTE_CLUSTER0_TB_SOC_VBUSP_CFG_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_COMPUTE_CLUSTER0_TB_SOC_VBUSP_DBG_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_COMPUTE_CLUSTER0_TB_SOC_VBUSP_DMSC_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_A72SS0_CORE0": [
+        {
+            "input_name": "DEV_A72SS0_CORE0_ARM_CLK_CLK",
+            "clk_name": "CLK_J7200_HSDIV0_16FFT_MAIN_8_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_A72SS0_CORE0_MSMC_CLK",
+            "clk_name": "CLK_J7200_HSDIV0_16FFT_MAIN_7_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_A72SS0_CORE0_PLL_CTRL_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_COMPUTE_CLUSTER0_CFG_WRAP": [],
+    "J7200_DEV_COMPUTE_CLUSTER0_CLEC": [],
+    "J7200_DEV_COMPUTE_CLUSTER0_CORE_CORE": [],
+    "J7200_DEV_DDR0": [
+        {
+            "input_name": "DEV_DDR0_DDRSS_DDR_PLL_CLK",
+            "clk_name": "CLK_J7200_HSDIV0_16FFT_MAIN_12_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DDR0_PLL_CTRL_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_COMPUTE_CLUSTER0_DEBUG_WRAP": [],
+    "J7200_DEV_COMPUTE_CLUSTER0_DMSC_WRAP": [],
+    "J7200_DEV_COMPUTE_CLUSTER0_EN_MSMC_DOMAIN": [],
+    "J7200_DEV_COMPUTE_CLUSTER0_GIC500SS": [],
+    "J7200_DEV_COMPUTE_CLUSTER0_PBIST_WRAP": [
+        {
+            "input_name": "DEV_COMPUTE_CLUSTER0_PBIST_WRAP_DIVH_CLK4_CLK_CLK",
+            "clk_name": "CLK_J7200_HSDIV0_16FFT_MAIN_7_HSDIVOUT0_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_CPSW0": [
+        {
+            "input_name": "DEV_MCU_CPSW0_CPPI_CLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 3
+        },
+        {
+            "input_name": "DEV_MCU_CPSW0_CPTS_RFT_CLK",
+            "clk_name": "CLK_J7200_CPSW2G_CPTS_RCLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_CPSW0_GMII1_MR_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT0_CLK",
+            "div": 10
+        },
+        {
+            "input_name": "DEV_MCU_CPSW0_GMII1_MT_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT0_CLK",
+            "div": 10
+        },
+        {
+            "input_name": "DEV_MCU_CPSW0_GMII_RFT_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT0_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MCU_CPSW0_RGMII1_RXC_I",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_RGMII1_RXC_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_CPSW0_RGMII_MHZ_250_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_CPSW0_RGMII_MHZ_50_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT0_CLK",
+            "div": 5
+        },
+        {
+            "input_name": "DEV_MCU_CPSW0_RGMII_MHZ_5_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT0_CLK",
+            "div": 50
+        },
+        {
+            "input_name": "DEV_MCU_CPSW0_RMII_MHZ_50_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_RMII1_REF_CLK_OUT",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_CPSW0": [
+        {
+            "input_name": "DEV_CPSW0_CPPI_CLK_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT1_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_CPTS_RFT_CLK",
+            "clk_name": "CLK_J7200_CPSW5X_CPTS_RFT_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_GMII1_MR_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 10
+        },
+        {
+            "input_name": "DEV_CPSW0_GMII1_MT_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 10
+        },
+        {
+            "input_name": "DEV_CPSW0_GMII2_MR_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 10
+        },
+        {
+            "input_name": "DEV_CPSW0_GMII2_MT_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 10
+        },
+        {
+            "input_name": "DEV_CPSW0_GMII3_MR_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 10
+        },
+        {
+            "input_name": "DEV_CPSW0_GMII3_MT_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 10
+        },
+        {
+            "input_name": "DEV_CPSW0_GMII4_MR_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 10
+        },
+        {
+            "input_name": "DEV_CPSW0_GMII4_MT_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 10
+        },
+        {
+            "input_name": "DEV_CPSW0_GMII_RFT_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_CPSW0_RGMII1_RXC_I",
+            "clk_name": "CLK_J7200_BOARD_0_RGMII1_RXC_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_RGMII2_RXC_I",
+            "clk_name": "CLK_J7200_BOARD_0_RGMII2_RXC_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_RGMII3_RXC_I",
+            "clk_name": "CLK_J7200_BOARD_0_RGMII3_RXC_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_RGMII4_RXC_I",
+            "clk_name": "CLK_J7200_BOARD_0_RGMII4_RXC_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_RGMII_MHZ_250_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_RGMII_MHZ_50_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 5
+        },
+        {
+            "input_name": "DEV_CPSW0_RGMII_MHZ_5_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 50
+        },
+        {
+            "input_name": "DEV_CPSW0_RMII_MHZ_50_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_RMII_REF_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES1_REFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN2_REFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES1_RXCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN2_RXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES1_RXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN2_RXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES1_TXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN2_TXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES1_TXMCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN2_TXMCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES2_REFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN3_REFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES2_RXCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN3_RXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES2_RXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN3_RXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES2_TXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN3_TXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES2_TXMCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN3_TXMCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES3_REFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN0_REFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES3_RXCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN0_RXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES3_RXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN0_RXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES3_TXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN0_TXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES3_TXMCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN0_TXMCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES4_REFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN1_REFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES4_RXCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN1_RXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES4_RXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN1_RXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES4_TXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN1_TXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW0_SERDES4_TXMCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP1_LN1_TXMCLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_CPT2_AGGR0": [
+        {
+            "input_name": "DEV_CPT2_AGGR0_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_CPT2_AGGR1": [
+        {
+            "input_name": "DEV_CPT2_AGGR1_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_WKUP_DMSC0": [],
+    "J7200_DEV_CPT2_AGGR2": [
+        {
+            "input_name": "DEV_CPT2_AGGR2_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_MCU_CPT2_AGGR0": [
+        {
+            "input_name": "DEV_MCU_CPT2_AGGR0_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 3
+        }
+    ],
+    "J7200_DEV_CPT2_AGGR3": [
+        {
+            "input_name": "DEV_CPT2_AGGR3_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_CPSW_TX_RGMII0": [
+        {
+            "input_name": "DEV_CPSW_TX_RGMII0_PRE_RGMII1_TCLK",
+            "clk_name": "CLK_J7200_CPSW_5XUSS_MAIN_0_PRE_RGMII1_TCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW_TX_RGMII0_PRE_RGMII2_TCLK",
+            "clk_name": "CLK_J7200_CPSW_5XUSS_MAIN_0_PRE_RGMII2_TCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW_TX_RGMII0_PRE_RGMII3_TCLK",
+            "clk_name": "CLK_J7200_CPSW_5XUSS_MAIN_0_PRE_RGMII3_TCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_CPSW_TX_RGMII0_PRE_RGMII4_TCLK",
+            "clk_name": "CLK_J7200_CPSW_5XUSS_MAIN_0_PRE_RGMII4_TCLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_STM0": [
+        {
+            "input_name": "DEV_STM0_ATB_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_STM0_CORE_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_STM0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_DCC0": [
+        {
+            "input_name": "DEV_DCC0_DCC_CLKSRC0_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_0_HSDIVOUT1_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC0_DCC_CLKSRC1_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_0_HSDIVOUT2_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC0_DCC_CLKSRC2_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_0_HSDIVOUT3_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC0_DCC_CLKSRC3_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_0_HSDIVOUT4_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC0_DCC_CLKSRC4_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC0_DCC_CLKSRC5_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_HFOSC1_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC0_DCC_CLKSRC6_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC0_DCC_INPUT00_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC0_DCC_INPUT01_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_HFOSC1_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC0_DCC_INPUT02_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC0_DCC_INPUT10_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_DCC0_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_DCC1": [
+        {
+            "input_name": "DEV_DCC1_DCC_CLKSRC0_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC1_DCC_CLKSRC1_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_0_HSDIVOUT6_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC1_DCC_CLKSRC2_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_0_HSDIVOUT7_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC1_DCC_CLKSRC3_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC1_DCC_CLKSRC4_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT1_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC1_DCC_CLKSRC5_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT2_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC1_DCC_CLKSRC6_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT3_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC1_DCC_INPUT00_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC1_DCC_INPUT01_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_HFOSC1_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC1_DCC_INPUT02_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC1_DCC_INPUT10_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_DCC1_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_DCC2": [
+        {
+            "input_name": "DEV_DCC2_DCC_CLKSRC0_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_1_HSDIVOUT7_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC2_DCC_CLKSRC2_CLK",
+            "clk_name": "CLK_J7200_CPSW5X_CPTS_RFT_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC2_DCC_CLKSRC3_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_2_HSDIVOUT4_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC2_DCC_CLKSRC4_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_2_HSDIVOUT6_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC2_DCC_CLKSRC5_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_2_HSDIVOUT1_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_DCC2_DCC_CLKSRC6_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_2_HSDIVOUT2_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC2_DCC_CLKSRC7_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC2_DCC_INPUT00_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC2_DCC_INPUT01_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_HFOSC1_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC2_DCC_INPUT02_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC2_DCC_INPUT10_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_DCC2_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_DCC3": [
+        {
+            "input_name": "DEV_DCC3_DCC_CLKSRC0_CLK",
+            "clk_name": "CLK_J7200_HSDIV2_16FFT_MAIN_4_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC3_DCC_CLKSRC2_CLK",
+            "clk_name": "CLK_J7200_HSDIV2_16FFT_MAIN_4_HSDIVOUT2_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC3_DCC_CLKSRC3_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT3_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC3_DCC_CLKSRC4_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT4_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC3_DCC_CLKSRC5_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_32K_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC3_DCC_CLKSRC6_CLK",
+            "clk_name": "CLK_J7200_HSDIV0_16FFT_MAIN_7_HSDIVOUT0_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_DCC3_DCC_CLKSRC7_CLK",
+            "clk_name": "CLK_J7200_HSDIV0_16FFT_MAIN_8_HSDIVOUT0_CLK",
+            "div": 8
+        },
+        {
+            "input_name": "DEV_DCC3_DCC_INPUT00_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC3_DCC_INPUT01_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_HFOSC1_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC3_DCC_INPUT02_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC3_DCC_INPUT10_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_DCC3_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_DCC4": [
+        {
+            "input_name": "DEV_DCC4_DCC_CLKSRC0_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_AUDIO_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC4_DCC_CLKSRC1_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_AUDIO_EXT_REFCLK1_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC4_DCC_CLKSRC2_CLK",
+            "clk_name": "CLK_J7200_HSDIV0_16FFT_MAIN_12_HSDIVOUT0_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_DCC4_DCC_CLKSRC3_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_WKUP_LF_CLKIN_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC4_DCC_CLKSRC4_CLK",
+            "clk_name": "CLK_J7200_HSDIV1_16FFT_MAIN_14_HSDIVOUT0_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_DCC4_DCC_CLKSRC5_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC4_DCC_CLKSRC6_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_RGMII1_RXC_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC4_DCC_CLKSRC7_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_RGMII2_RXC_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC4_DCC_INPUT00_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC4_DCC_INPUT01_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_HFOSC1_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC4_DCC_INPUT02_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC4_DCC_INPUT10_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_DCC4_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCU_TIMER0": [
+        {
+            "input_name": "DEV_MCU_TIMER0_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_TIMER0_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER_CLKSEL_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_DCC5": [
+        {
+            "input_name": "DEV_DCC5_DCC_CLKSRC0_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_RGMII3_RXC_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC5_DCC_CLKSRC1_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_RGMII4_RXC_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC5_DCC_CLKSRC4_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_RMII_REF_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC5_DCC_CLKSRC6_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_GPMC0_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC5_DCC_INPUT00_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC5_DCC_INPUT01_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_HFOSC1_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC5_DCC_INPUT02_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC5_DCC_INPUT10_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC5_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_DCC6": [
+        {
+            "input_name": "DEV_DCC6_DCC_CLKSRC0_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP0_ACLKX_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC6_DCC_CLKSRC1_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP0_ACLKR_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC6_DCC_CLKSRC2_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP1_ACLKX_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC6_DCC_CLKSRC3_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP1_ACLKR_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC6_DCC_CLKSRC4_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP2_ACLKX_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC6_DCC_CLKSRC5_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP2_ACLKR_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC6_DCC_CLKSRC6_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT1_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC6_DCC_CLKSRC7_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT2_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC6_DCC_INPUT00_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC6_DCC_INPUT01_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_HFOSC1_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC6_DCC_INPUT02_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DCC6_DCC_INPUT10_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_DCC6_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MAIN0": [],
+    "J7200_DEV_WKUP_WAKEUP0": [
+        {
+            "input_name": "DEV_WKUP_WAKEUP0_PLL_CTRL_WKUP_CLK24_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV24_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_DCC0": [
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_CLKSRC0_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_1_HSDIVOUT0_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_CLKSRC1_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_1_HSDIVOUT1_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_CLKSRC2_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_1_HSDIVOUT2_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_CLKSRC3_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_1_HSDIVOUT3_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_CLKSRC4_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_1_HSDIVOUT4_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_CLKSRC5_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_32K_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_CLKSRC6_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_WKUP_LF_CLKIN_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_CLKSRC7_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_INPUT00_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_INPUT01_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_32K_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_INPUT02_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_DCC_INPUT10_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 3
+        },
+        {
+            "input_name": "DEV_MCU_DCC0_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MCU_DCC1": [
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_CLKSRC0_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT1_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_CLKSRC1_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT2_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_CLKSRC2_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT3_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_CLKSRC3_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT4_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_CLKSRC4_CLK",
+            "clk_name": "CLK_J7200_HSDIV1_16FFT_MCU_0_HSDIVOUT0_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_CLKSRC5_CLK",
+            "clk_name": "CLK_J7200_HSDIV1_16FFT_MCU_0_HSDIVOUT1_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_CLKSRC6_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_OSPI0_DQS_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_CLKSRC7_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_CPTS0_RFT_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_INPUT00_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_INPUT01_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_WKUP_LF_CLKIN_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_INPUT02_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_DCC_INPUT10_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC1_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MCU_DCC2": [
+        {
+            "input_name": "DEV_MCU_DCC2_DCC_CLKSRC0_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_RMII1_REF_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC2_DCC_CLKSRC1_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_RGMII1_RXC_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC2_DCC_CLKSRC3_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_1_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC2_DCC_CLKSRC6_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC2_DCC_CLKSRC7_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC2_DCC_INPUT00_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC2_DCC_INPUT01_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_EXT_REFCLK0_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC2_DCC_INPUT02_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_DCC2_DCC_INPUT10_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 3
+        },
+        {
+            "input_name": "DEV_MCU_DCC2_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_TIMER0": [
+        {
+            "input_name": "DEV_TIMER0_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER0_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER1": [
+        {
+            "input_name": "DEV_TIMER1_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER1_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_TIMER1_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER2": [
+        {
+            "input_name": "DEV_TIMER2_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER2_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT2",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER3": [
+        {
+            "input_name": "DEV_TIMER3_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER3_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_TIMER3_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER4": [
+        {
+            "input_name": "DEV_TIMER4_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER4_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT4",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER5": [
+        {
+            "input_name": "DEV_TIMER5_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER5_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_TIMER5_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER6": [
+        {
+            "input_name": "DEV_TIMER6_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER6_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT6",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER7": [
+        {
+            "input_name": "DEV_TIMER7_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER7_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_TIMER7_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER8": [
+        {
+            "input_name": "DEV_TIMER8_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER8_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT8",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER9": [
+        {
+            "input_name": "DEV_TIMER9_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER9_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_TIMER9_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER10": [
+        {
+            "input_name": "DEV_TIMER10_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER10_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT10",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_GTC0": [
+        {
+            "input_name": "DEV_GTC0_GTC_CLK",
+            "clk_name": "CLK_J7200_GTC_CLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_GTC0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_TIMER11": [
+        {
+            "input_name": "DEV_TIMER11_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER11_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_TIMER11_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER12": [
+        {
+            "input_name": "DEV_TIMER12_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER12_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT12",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER13": [
+        {
+            "input_name": "DEV_TIMER13_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER13_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_TIMER13_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER14": [
+        {
+            "input_name": "DEV_TIMER14_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER14_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT14",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER15": [
+        {
+            "input_name": "DEV_TIMER15_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER15_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_TIMER15_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER16": [
+        {
+            "input_name": "DEV_TIMER16_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER16_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT16",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER17": [
+        {
+            "input_name": "DEV_TIMER17_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER17_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_TIMER17_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER18": [
+        {
+            "input_name": "DEV_TIMER18_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER18_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT18",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER19": [
+        {
+            "input_name": "DEV_TIMER19_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_TIMER19_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_TIMER19_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER1": [
+        {
+            "input_name": "DEV_MCU_TIMER1_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_TIMER1_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER1_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER2": [
+        {
+            "input_name": "DEV_MCU_TIMER2_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_TIMER2_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER_CLKSEL_OUT2",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER3": [
+        {
+            "input_name": "DEV_MCU_TIMER3_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_TIMER3_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER3_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER4": [
+        {
+            "input_name": "DEV_MCU_TIMER4_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_TIMER4_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER_CLKSEL_OUT4",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER5": [
+        {
+            "input_name": "DEV_MCU_TIMER5_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_TIMER5_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER5_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER6": [
+        {
+            "input_name": "DEV_MCU_TIMER6_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 3
+        },
+        {
+            "input_name": "DEV_MCU_TIMER6_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER_CLKSEL_OUT6",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER7": [
+        {
+            "input_name": "DEV_MCU_TIMER7_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_TIMER7_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER7_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER8": [
+        {
+            "input_name": "DEV_MCU_TIMER8_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_TIMER8_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER_CLKSEL_OUT8",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER9": [
+        {
+            "input_name": "DEV_MCU_TIMER9_TIMER_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_TIMER9_TIMER_TCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER9_CASCADE_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_ECAP0": [
+        {
+            "input_name": "DEV_ECAP0_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_ECAP1": [
+        {
+            "input_name": "DEV_ECAP1_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_ECAP2": [
+        {
+            "input_name": "DEV_ECAP2_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_EHRPWM0": [
+        {
+            "input_name": "DEV_EHRPWM0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_EHRPWM1": [
+        {
+            "input_name": "DEV_EHRPWM1_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_EHRPWM2": [
+        {
+            "input_name": "DEV_EHRPWM2_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_EHRPWM3": [
+        {
+            "input_name": "DEV_EHRPWM3_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_EHRPWM4": [
+        {
+            "input_name": "DEV_EHRPWM4_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_EHRPWM5": [
+        {
+            "input_name": "DEV_EHRPWM5_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_ELM0": [
+        {
+            "input_name": "DEV_ELM0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_EMIF_DATA_0_VD": [],
+    "J7200_DEV_MMCSD0": [
+        {
+            "input_name": "DEV_MMCSD0_EMMCSS_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MMCSD0_EMMCSS_XIN_CLK",
+            "clk_name": "CLK_J7200_EMMCSD_REFCLK_SEL_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MMCSD1": [
+        {
+            "input_name": "DEV_MMCSD1_EMMCSDSS_IO_CLK_I",
+            "clk_name": "CLK_J7200_EMMCSD4SS_MAIN_0_EMMCSDSS_IO_CLK_O",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MMCSD1_EMMCSDSS_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MMCSD1_EMMCSDSS_XIN_CLK",
+            "clk_name": "CLK_J7200_EMMCSD_REFCLK_SEL_OUT1",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_EQEP0": [
+        {
+            "input_name": "DEV_EQEP0_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_EQEP1": [
+        {
+            "input_name": "DEV_EQEP1_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_EQEP2": [
+        {
+            "input_name": "DEV_EQEP2_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_ESM0": [
+        {
+            "input_name": "DEV_ESM0_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCU_ESM0": [
+        {
+            "input_name": "DEV_MCU_ESM0_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_WKUP_ESM0": [
+        {
+            "input_name": "DEV_WKUP_ESM0_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MCU_FSS0": [],
+    "J7200_DEV_MCU_FSS0_FSAS_0": [
+        {
+            "input_name": "DEV_MCU_FSS0_FSAS_0_GCLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_FSS0_HYPERBUS1P0_0": [
+        {
+            "input_name": "DEV_MCU_FSS0_HYPERBUS1P0_0_CBA_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_FSS0_HYPERBUS1P0_0_HPB_CLKX1_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT4_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MCU_FSS0_HYPERBUS1P0_0_HPB_CLKX1_INV_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT4_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MCU_FSS0_HYPERBUS1P0_0_HPB_CLKX2_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT4_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_FSS0_HYPERBUS1P0_0_HPB_CLKX2_INV_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT4_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_FSS0_OSPI_0": [
+        {
+            "input_name": "DEV_MCU_FSS0_OSPI_0_OSPI_DQS_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_OSPI0_DQS_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_FSS0_OSPI_0_OSPI_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_FSS0_OSPI_0_OSPI_ICLK_CLK",
+            "clk_name": "CLK_J7200_MCU_OSPI0_ICLK_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_FSS0_OSPI_0_OSPI_PCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_FSS0_OSPI_0_OSPI_RCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_OSPI_REF_CLK_SEL_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_FSS0_OSPI_1": [
+        {
+            "input_name": "DEV_MCU_FSS0_OSPI_1_OSPI_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_FSS0_OSPI_1_OSPI_PCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_FSS0_OSPI_1_OSPI_RCLK_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_1_HSDIVOUT4_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_GPIO0": [
+        {
+            "input_name": "DEV_GPIO0_MMR_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_GPIO2": [
+        {
+            "input_name": "DEV_GPIO2_MMR_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_GPIO4": [
+        {
+            "input_name": "DEV_GPIO4_MMR_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_GPIO6": [
+        {
+            "input_name": "DEV_GPIO6_MMR_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_WKUP_GPIO0": [
+        {
+            "input_name": "DEV_WKUP_GPIO0_MMR_CLK",
+            "clk_name": "CLK_J7200_WKUP_GPIO0_CLKSEL_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_WKUP_GPIO1": [
+        {
+            "input_name": "DEV_WKUP_GPIO1_MMR_CLK",
+            "clk_name": "CLK_J7200_WKUP_GPIO0_CLKSEL_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_GPMC0": [
+        {
+            "input_name": "DEV_GPMC0_FUNC_CLK",
+            "clk_name": "CLK_J7200_GPMC_FCLK_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_GPMC0_PI_GPMC_RET_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_GPMC0_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_GPMC0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_I3C0": [
+        {
+            "input_name": "DEV_I3C0_I3C_PCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_I3C0_I3C_SCL_DI",
+            "clk_name": "CLK_J7200_BOARD_0_I3C0_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_I3C0_I3C_SCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCU_I3C0": [
+        {
+            "input_name": "DEV_MCU_I3C0_I3C_PCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_I3C0_I3C_SCL_DI",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_I3C0_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_I3C0_I3C_SCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MCU_I3C1": [
+        {
+            "input_name": "DEV_MCU_I3C1_I3C_PCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_I3C1_I3C_SCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_CMPEVENT_INTRTR0": [
+        {
+            "input_name": "DEV_CMPEVENT_INTRTR0_INTR_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_LED0": [
+        {
+            "input_name": "DEV_LED0_LED_CLK",
+            "clk_name": "CLK_J7200_BOARD_0_LED_CLK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_LED0_VBUS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_MAIN2MCU_LVL_INTRTR0": [],
+    "J7200_DEV_MAIN2MCU_PLS_INTRTR0": [],
+    "J7200_DEV_GPIOMUX_INTRTR0": [
+        {
+            "input_name": "DEV_GPIOMUX_INTRTR0_INTR_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_WKUP_PORZ_SYNC0": [
+        {
+            "input_name": "DEV_WKUP_PORZ_SYNC0_CLK_12M_RC_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_PSC0": [
+        {
+            "input_name": "DEV_PSC0_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PSC0_SLOW_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 24
+        }
+    ],
+    "J7200_DEV_TIMESYNC_INTRTR0": [],
+    "J7200_DEV_WKUP_GPIOMUX_INTRTR0": [],
+    "J7200_DEV_WKUP_PSC0": [
+        {
+            "input_name": "DEV_WKUP_PSC0_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_WKUP_PSC0_SLOW_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 24
+        }
+    ],
+    "J7200_DEV_PBIST0": [
+        {
+            "input_name": "DEV_PBIST0_CLK1_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PBIST0_CLK2_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_PBIST0_CLK3_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_3_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PBIST0_CLK4_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST0_CLK5_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST0_CLK6_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST0_CLK7_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST0_CLK8_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_PBIST1": [
+        {
+            "input_name": "DEV_PBIST1_CLK1_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST1_CLK2_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST1_CLK3_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST1_CLK4_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST1_CLK5_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST1_CLK6_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST1_CLK7_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST1_CLK8_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_PBIST2": [
+        {
+            "input_name": "DEV_PBIST2_CLK1_CLK",
+            "clk_name": "CLK_J7200_HSDIV1_16FFT_MAIN_14_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PBIST2_CLK2_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST2_CLK3_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST2_CLK4_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST2_CLK5_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST2_CLK6_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST2_CLK7_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_PBIST2_CLK8_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCU_PBIST0": [
+        {
+            "input_name": "DEV_MCU_PBIST0_CLK1_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MCU_PBIST0_CLK2_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 3
+        },
+        {
+            "input_name": "DEV_MCU_PBIST0_CLK3_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_PBIST0_CLK4_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST0_CLK5_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST0_CLK6_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST0_CLK7_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST0_CLK8_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        }
+    ],
+    "J7200_DEV_MCU_PBIST1": [
+        {
+            "input_name": "DEV_MCU_PBIST1_CLK1_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MCU_PBIST1_CLK2_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_1_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_PBIST1_CLK3_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT4_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_MCU_PBIST1_CLK4_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 3
+        },
+        {
+            "input_name": "DEV_MCU_PBIST1_CLK5_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_PBIST1_CLK6_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST1_CLK7_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST1_CLK8_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        }
+    ],
+    "J7200_DEV_MCU_PBIST2": [
+        {
+            "input_name": "DEV_MCU_PBIST2_CLK1_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_PBIST2_CLK2_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST2_CLK3_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST2_CLK4_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST2_CLK5_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST2_CLK6_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST2_CLK7_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        },
+        {
+            "input_name": "DEV_MCU_PBIST2_CLK8_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 12
+        }
+    ],
+    "J7200_DEV_WKUP_DDPA0": [
+        {
+            "input_name": "DEV_WKUP_DDPA0_DDPA_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_UART0": [
+        {
+            "input_name": "DEV_UART0_FCLK_CLK",
+            "clk_name": "CLK_J7200_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_UART0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCU_UART0": [
+        {
+            "input_name": "DEV_MCU_UART0_FCLK_CLK",
+            "clk_name": "CLK_J7200_MCUUSART_CLK_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_UART0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MCAN14": [
+        {
+            "input_name": "DEV_MCAN14_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT14_0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN14_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN15": [
+        {
+            "input_name": "DEV_MCAN15_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT15_0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN15_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN16": [
+        {
+            "input_name": "DEV_MCAN16_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT16_0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN16_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN17": [
+        {
+            "input_name": "DEV_MCAN17_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT17_0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN17_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_WKUP_VTM0": [
+        {
+            "input_name": "DEV_WKUP_VTM0_FIX_REF2_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_WKUP_VTM0_FIX_REF_CLK",
+            "clk_name": "CLK_J7200_GLUELOGIC_HFOSC0_CLKOUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_WKUP_VTM0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MAIN2WKUPMCU_VD": [],
+    "J7200_DEV_MCAN0": [
+        {
+            "input_name": "DEV_MCAN0_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN0_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_BOARD0": [
+        {
+            "input_name": "DEV_BOARD0_AUDIO_EXT_REFCLK0_IN",
+            "clk_name": "CLK_J7200_AUDIO_REFCLKO_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_AUDIO_EXT_REFCLK1_IN",
+            "clk_name": "CLK_J7200_AUDIO_REFCLKO_MUX_OUT1",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_CLKOUT_IN",
+            "clk_name": "CLK_J7200_CLKOUT_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_GPMC0_CLKOUT_IN",
+            "clk_name": "CLK_J7200_GPMC_MAIN_0_PO_GPMC_DEV_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_GPMC0_CLK_IN",
+            "clk_name": "CLK_J7200_GPMC_MAIN_0_PO_GPMC_DEV_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_GPMC0_FCLK_MUX_IN",
+            "clk_name": "CLK_J7200_GPMC_FCLK_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_I3C0_SCL_IN",
+            "clk_name": "CLK_J7200_I3C_MAIN_0_I3C_SCL_DO",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCASP0_ACLKR_IN",
+            "clk_name": "CLK_J7200_MCASP_MAIN_0_MCASP_ACLKR_POUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCASP0_ACLKX_IN",
+            "clk_name": "CLK_J7200_MCASP_MAIN_0_MCASP_ACLKX_POUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCASP1_ACLKR_IN",
+            "clk_name": "CLK_J7200_MCASP_MAIN_1_MCASP_ACLKR_POUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCASP1_ACLKX_IN",
+            "clk_name": "CLK_J7200_MCASP_MAIN_1_MCASP_ACLKX_POUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCASP2_ACLKR_IN",
+            "clk_name": "CLK_J7200_MCASP_MAIN_2_MCASP_ACLKR_POUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCASP2_ACLKX_IN",
+            "clk_name": "CLK_J7200_MCASP_MAIN_2_MCASP_ACLKX_POUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_CLKOUT0_IN",
+            "clk_name": "CLK_J7200_MCU_CLKOUT_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_HYPERBUS0_CKN_IN",
+            "clk_name": "CLK_J7200_FSS_MCU_0_HYPERBUS1P0_0_HPB_OUT_CLK_N",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_HYPERBUS0_CK_IN",
+            "clk_name": "CLK_J7200_FSS_MCU_0_HYPERBUS1P0_0_HPB_OUT_CLK_P",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_I2C0_SCL_IN",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_I2C0_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_I3C0_SCL_IN",
+            "clk_name": "CLK_J7200_I3C_MCU_0_I3C_SCL_DO",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_MDIO0_MDC_IN",
+            "clk_name": "CLK_J7200_CPSW_2GUSS_MCU_0_MDIO_MDCLK_O",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_OBSCLK0_IN",
+            "clk_name": "CLK_J7200_MCU_OBSCLK_OUTMUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_OSPI0_CLK_IN",
+            "clk_name": "CLK_J7200_FSS_MCU_0_OSPI_0_OSPI_OCLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_OSPI0_LBCLKO_IN",
+            "clk_name": "CLK_J7200_FSS_MCU_0_OSPI_0_OSPI_OCLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_RGMII1_TXC_IN",
+            "clk_name": "CLK_J7200_CPSW_2GUSS_MCU_0_RGMII1_TXC_O",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_SPI0_CLK_IN",
+            "clk_name": "CLK_J7200_SPI_MCU_0_IO_CLKSPIO_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_SPI1_CLK_IN",
+            "clk_name": "CLK_J7200_SPI_MCU_1_IO_CLKSPIO_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MCU_SYSCLKOUT0_IN",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_SYSCLKOUT_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MDIO0_MDC_IN",
+            "clk_name": "CLK_J7200_CPSW_5XUSS_MAIN_0_MDIO_MDCLK_O",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_MMC1_CLK_IN",
+            "clk_name": "CLK_J7200_EMMCSD4SS_MAIN_0_EMMCSDSS_IO_CLK_O",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_OBSCLK0_IN",
+            "clk_name": "CLK_J7200_OSBCLK0_DIV_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_OBSCLK1_IN",
+            "clk_name": "CLK_J7200_OSBCLK0_DIV_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_OBSCLK2_IN",
+            "clk_name": "CLK_J7200_OSBCLK0_DIV_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_RGMII1_TXC_IN",
+            "clk_name": "CLK_J7200_J7VCL_CPSW_TX_RGMII_WRAP_MAIN_0_IO__RGMII1_TXC__A",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_RGMII2_TXC_IN",
+            "clk_name": "CLK_J7200_J7VCL_CPSW_TX_RGMII_WRAP_MAIN_0_IO__RGMII2_TXC__A",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_RGMII3_TXC_IN",
+            "clk_name": "CLK_J7200_J7VCL_CPSW_TX_RGMII_WRAP_MAIN_0_IO__RGMII3_TXC__A",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_RGMII4_TXC_IN",
+            "clk_name": "CLK_J7200_J7VCL_CPSW_TX_RGMII_WRAP_MAIN_0_IO__RGMII4_TXC__A",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_SPI0_CLK_IN",
+            "clk_name": "CLK_J7200_SPI_MAIN_0_IO_CLKSPIO_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_SPI1_CLK_IN",
+            "clk_name": "CLK_J7200_SPI_MAIN_1_IO_CLKSPIO_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_SPI2_CLK_IN",
+            "clk_name": "CLK_J7200_SPI_MAIN_2_IO_CLKSPIO_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_SPI3_CLK_IN",
+            "clk_name": "CLK_J7200_SPI_MAIN_3_IO_CLKSPIO_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_SPI5_CLK_IN",
+            "clk_name": "CLK_J7200_SPI_MAIN_5_IO_CLKSPIO_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_SPI6_CLK_IN",
+            "clk_name": "CLK_J7200_SPI_MAIN_6_IO_CLKSPIO_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_SPI7_CLK_IN",
+            "clk_name": "CLK_J7200_SPI_MAIN_7_IO_CLKSPIO_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_SYSCLKOUT0_IN",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_SYSCLKOUT_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_TRC_CLK_IN",
+            "clk_name": "CLK_J7200_DEBUGSS_K3_WRAP_CV0_MAIN_0_CSTPIU_TRACECLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_BOARD0_WKUP_I2C0_SCL_IN",
+            "clk_name": "CLK_J7200_MSHSI2C_WKUP_0_PORSCL",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCAN1": [
+        {
+            "input_name": "DEV_MCAN1_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT1",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN1_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN2": [
+        {
+            "input_name": "DEV_MCAN2_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT2",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN2_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN3": [
+        {
+            "input_name": "DEV_MCAN3_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT3",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN3_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN4": [
+        {
+            "input_name": "DEV_MCAN4_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT4",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN4_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN5": [
+        {
+            "input_name": "DEV_MCAN5_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT5",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN5_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN6": [
+        {
+            "input_name": "DEV_MCAN6_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT6",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN6_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN7": [
+        {
+            "input_name": "DEV_MCAN7_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT7",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN7_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN8": [
+        {
+            "input_name": "DEV_MCAN8_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT8",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN8_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN9": [
+        {
+            "input_name": "DEV_MCAN9_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT9",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN9_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN10": [
+        {
+            "input_name": "DEV_MCAN10_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT10",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN10_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN11": [
+        {
+            "input_name": "DEV_MCAN11_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT11",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN11_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN12": [
+        {
+            "input_name": "DEV_MCAN12_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT12",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN12_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCAN13": [
+        {
+            "input_name": "DEV_MCAN13_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCAN_CLK_MUX_OUT13",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCAN13_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCU_MCAN0": [
+        {
+            "input_name": "DEV_MCU_MCAN0_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_MCAN_CLK_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_MCAN0_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MCU_MCAN1": [
+        {
+            "input_name": "DEV_MCU_MCAN1_MCANSS_CCLK_CLK",
+            "clk_name": "CLK_J7200_MCU_MCAN_CLK_SEL_OUT1",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_MCAN1_MCANSS_HCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MCASP0": [
+        {
+            "input_name": "DEV_MCASP0_AUX_CLK",
+            "clk_name": "CLK_J7200_MCASP_AUXCLK_SEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP0_MCASP_ACLKR_PIN",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP0_ACLKR_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP0_MCASP_ACLKX_PIN",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP0_ACLKX_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP0_MCASP_AHCLKR_PIN",
+            "clk_name": "CLK_J7200_MCASP_AHCLKR_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP0_MCASP_AHCLKX_PIN",
+            "clk_name": "CLK_J7200_MCASP_AHCLKX_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_MCASP1": [
+        {
+            "input_name": "DEV_MCASP1_AUX_CLK",
+            "clk_name": "CLK_J7200_MCASP_AUXCLK_SEL_OUT1",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP1_MCASP_ACLKR_PIN",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP1_ACLKR_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP1_MCASP_ACLKX_PIN",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP1_ACLKX_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP1_MCASP_AHCLKR_PIN",
+            "clk_name": "CLK_J7200_MCASP_AHCLKR_MUX_OUT1",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP1_MCASP_AHCLKX_PIN",
+            "clk_name": "CLK_J7200_MCASP_AHCLKX_MUX_OUT1",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP1_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_MCASP2": [
+        {
+            "input_name": "DEV_MCASP2_AUX_CLK",
+            "clk_name": "CLK_J7200_MCASP_AUXCLK_SEL_OUT2",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP2_MCASP_ACLKR_PIN",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP2_ACLKR_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP2_MCASP_ACLKX_PIN",
+            "clk_name": "CLK_J7200_BOARD_0_MCASP2_ACLKX_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP2_MCASP_AHCLKR_PIN",
+            "clk_name": "CLK_J7200_MCASP_AHCLKR_MUX_OUT2",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP2_MCASP_AHCLKX_PIN",
+            "clk_name": "CLK_J7200_MCASP_AHCLKX_MUX_OUT2",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCASP2_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_I2C0": [
+        {
+            "input_name": "DEV_I2C0_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_I2C0_PISCL",
+            "clk_name": "CLK_J7200_BOARD_0_I2C0_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_I2C0_PISYS_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT0_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_I2C1": [
+        {
+            "input_name": "DEV_I2C1_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_I2C1_PISCL",
+            "clk_name": "CLK_J7200_BOARD_0_I2C1_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_I2C1_PISYS_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT0_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_I2C2": [
+        {
+            "input_name": "DEV_I2C2_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_I2C2_PISCL",
+            "clk_name": "CLK_J7200_BOARD_0_I2C2_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_I2C2_PISYS_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT0_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_I2C3": [
+        {
+            "input_name": "DEV_I2C3_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_I2C3_PISCL",
+            "clk_name": "CLK_J7200_BOARD_0_I2C3_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_I2C3_PISYS_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT0_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_I2C4": [
+        {
+            "input_name": "DEV_I2C4_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_I2C4_PISCL",
+            "clk_name": "CLK_J7200_BOARD_0_I2C4_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_I2C4_PISYS_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT0_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_I2C5": [
+        {
+            "input_name": "DEV_I2C5_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_I2C5_PISCL",
+            "clk_name": "CLK_J7200_BOARD_0_I2C5_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_I2C5_PISYS_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT0_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_I2C6": [
+        {
+            "input_name": "DEV_I2C6_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_I2C6_PISCL",
+            "clk_name": "CLK_J7200_BOARD_0_I2C6_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_I2C6_PISYS_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_1_HSDIVOUT0_CLK",
+            "div": 2
+        }
+    ],
+    "J7200_DEV_MCU_I2C0": [
+        {
+            "input_name": "DEV_MCU_I2C0_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_I2C0_PISCL",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_I2C0_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_I2C0_PISYS_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_1_HSDIVOUT3_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_I2C1": [
+        {
+            "input_name": "DEV_MCU_I2C1_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_I2C1_PISCL",
+            "clk_name": "CLK_J7200_BOARD_0_MCU_I2C1_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_I2C1_PISYS_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_1_HSDIVOUT3_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_WKUP_I2C0": [
+        {
+            "input_name": "DEV_WKUP_I2C0_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_WKUP_I2C0_PISCL",
+            "clk_name": "CLK_J7200_BOARD_0_WKUP_I2C0_SCL_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_WKUP_I2C0_PISYS_CLK",
+            "clk_name": "CLK_J7200_WKUP_I2C0_MCUPLL_BYPASS_CLKSEL_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0": [],
+    "J7200_DEV_NAVSS0_CPTS_0": [
+        {
+            "input_name": "DEV_NAVSS0_CPTS_0_RCLK",
+            "clk_name": "CLK_J7200_NAVSS_CPTS_RCLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_NAVSS0_CPTS_0_VBUSP_GCLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_A72SS0_CORE0_0": [
+        {
+            "input_name": "DEV_A72SS0_CORE0_0_ARM_CLK_CLK",
+            "clk_name": "CLK_J7200_HSDIV0_16FFT_MAIN_8_HSDIVOUT0_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_A72SS0_CORE0_1": [
+        {
+            "input_name": "DEV_A72SS0_CORE0_1_ARM_CLK_CLK",
+            "clk_name": "CLK_J7200_HSDIV0_16FFT_MAIN_8_HSDIVOUT0_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_DTI_0": [
+        {
+            "input_name": "DEV_NAVSS0_DTI_0_CLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MODSS_INTA_0": [
+        {
+            "input_name": "DEV_NAVSS0_MODSS_INTA_0_SYS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MODSS_INTA_1": [
+        {
+            "input_name": "DEV_NAVSS0_MODSS_INTA_1_SYS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_UDMASS_INTA_0": [
+        {
+            "input_name": "DEV_NAVSS0_UDMASS_INTA_0_SYS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_PROXY_0": [
+        {
+            "input_name": "DEV_NAVSS0_PROXY_0_CLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_RINGACC_0": [
+        {
+            "input_name": "DEV_NAVSS0_RINGACC_0_SYS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_UDMAP_0": [
+        {
+            "input_name": "DEV_NAVSS0_UDMAP_0_SYS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_INTR_ROUTER_0": [
+        {
+            "input_name": "DEV_NAVSS0_INTR_ROUTER_0_INTR_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_0": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_0_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_1": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_1_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_2": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_2_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_3": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_3_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_4": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_4_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_5": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_5_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_6": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_6_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_7": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_7_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_8": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_8_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_9": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_9_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_10": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_10_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MAILBOX_11": [
+        {
+            "input_name": "DEV_NAVSS0_MAILBOX_11_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_SPINLOCK_0": [
+        {
+            "input_name": "DEV_NAVSS0_SPINLOCK_0_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_MCRC_0": [
+        {
+            "input_name": "DEV_NAVSS0_MCRC_0_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_TBU_0": [
+        {
+            "input_name": "DEV_NAVSS0_TBU_0_CLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_TIMERMGR_0": [
+        {
+            "input_name": "DEV_NAVSS0_TIMERMGR_0_EON_TICK_EVT",
+            "clk_name": "CLK_J7200_NAVSS256VCL_MAIN_0_CPTS_0_TS_GENF0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_NAVSS0_TIMERMGR_0_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_TIMERMGR_1": [
+        {
+            "input_name": "DEV_NAVSS0_TIMERMGR_1_EON_TICK_EVT",
+            "clk_name": "CLK_J7200_NAVSS256VCL_MAIN_0_CPTS_0_TS_GENF1",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_NAVSS0_TIMERMGR_1_VCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_NAVSS0": [],
+    "J7200_DEV_MCU_NAVSS0_UDMASS_INTA_0": [
+        {
+            "input_name": "DEV_MCU_NAVSS0_UDMASS_INTA_0_SYS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_NAVSS0_PROXY0": [
+        {
+            "input_name": "DEV_MCU_NAVSS0_PROXY0_CLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_NAVSS0_RINGACC0": [
+        {
+            "input_name": "DEV_MCU_NAVSS0_RINGACC0_SYS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_NAVSS0_UDMAP_0": [
+        {
+            "input_name": "DEV_MCU_NAVSS0_UDMAP_0_SYS_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_NAVSS0_INTR_0": [
+        {
+            "input_name": "DEV_MCU_NAVSS0_INTR_0_INTR_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_NAVSS0_MCRC_0": [
+        {
+            "input_name": "DEV_MCU_NAVSS0_MCRC_0_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_PCIE1": [
+        {
+            "input_name": "DEV_PCIE1_PCIE_CBA_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_CPTS_RCLK_CLK",
+            "clk_name": "CLK_J7200_PCIE1_CPTS_RCLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE0_REFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN0_REFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE0_RXCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN0_RXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE0_RXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN0_RXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE0_TXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN0_TXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE0_TXMCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN0_TXMCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE1_REFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN1_REFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE1_RXCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN1_RXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE1_RXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN1_RXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE1_TXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN1_TXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE1_TXMCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN1_TXMCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE2_REFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN2_REFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE2_RXCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN2_RXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE2_RXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN2_RXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE2_TXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN2_TXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE2_TXMCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN2_TXMCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE3_REFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN3_REFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE3_RXCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN3_RXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE3_RXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN3_RXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE3_TXFCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN3_TXFCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_LANE3_TXMCLK",
+            "clk_name": "CLK_J7200_WIZ16B8M4CT2_MAIN_1_IP2_LN3_TXMCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_PCIE1_PCIE_PM_CLK",
+            "clk_name": "CLK_J7200_J7VC_WAKEUP_16FF_WKUP_0_WKUP_RCOSC_12P5M_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_R5FSS0": [],
+    "J7200_DEV_R5FSS0_CORE0": [
+        {
+            "input_name": "DEV_R5FSS0_CORE0_CPU_CLK",
+            "clk_name": "CLK_J7200_HSDIV1_16FFT_MAIN_14_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_R5FSS0_CORE0_INTERFACE_CLK",
+            "clk_name": "CLK_J7200_HSDIV1_16FFT_MAIN_14_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_R5FSS0_CORE0_INTERFACE_PHASE",
+            "clk_name": "CLK_J7200_HSDIV1_16FFT_MAIN_14_HSDIVOUT0_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_R5FSS0_CORE1": [
+        {
+            "input_name": "DEV_R5FSS0_CORE1_CPU_CLK",
+            "clk_name": "CLK_J7200_HSDIV1_16FFT_MAIN_14_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_R5FSS0_CORE1_INTERFACE_CLK",
+            "clk_name": "CLK_J7200_HSDIV1_16FFT_MAIN_14_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_R5FSS0_CORE1_INTERFACE_PHASE",
+            "clk_name": "CLK_J7200_HSDIV1_16FFT_MAIN_14_HSDIVOUT0_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_R5FSS0": [],
+    "J7200_DEV_MCU_R5FSS0_CORE0": [
+        {
+            "input_name": "DEV_MCU_R5FSS0_CORE0_CPU_CLK",
+            "clk_name": "CLK_J7200_MCU_R5_CORE0_CLKSEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_R5FSS0_CORE0_INTERFACE_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_R5FSS0_CORE0_INTERFACE_PHASE",
+            "clk_name": "CLK_J7200_MCU_R5_PHASE0_CLKSEL_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_R5FSS0_CORE1": [
+        {
+            "input_name": "DEV_MCU_R5FSS0_CORE1_CPU_CLK",
+            "clk_name": "CLK_J7200_MCU_R5_CORE1_CLKSEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_R5FSS0_CORE1_INTERFACE_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_R5FSS0_CORE1_INTERFACE_PHASE",
+            "clk_name": "CLK_J7200_MCU_R5_PHASE1_CLKSEL_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_RTI0": [
+        {
+            "input_name": "DEV_RTI0_RTI_CLK",
+            "clk_name": "CLK_J7200_MAIN_WWDT_CLKSEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_RTI0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_RTI1": [
+        {
+            "input_name": "DEV_RTI1_RTI_CLK",
+            "clk_name": "CLK_J7200_MAIN_WWDT_CLKSEL_OUT1",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_RTI1_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_RTI28": [
+        {
+            "input_name": "DEV_RTI28_RTI_CLK",
+            "clk_name": "CLK_J7200_MAIN_WWDT_CLKSEL_OUT6",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_RTI28_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_RTI29": [
+        {
+            "input_name": "DEV_RTI29_RTI_CLK",
+            "clk_name": "CLK_J7200_MAIN_WWDT_CLKSEL_OUT7",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_RTI29_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCU_RTI0": [
+        {
+            "input_name": "DEV_MCU_RTI0_RTI_CLK",
+            "clk_name": "CLK_J7200_MCU_WWD_CLKSEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_RTI0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MCU_RTI1": [
+        {
+            "input_name": "DEV_MCU_RTI1_RTI_CLK",
+            "clk_name": "CLK_J7200_MCU_WWD_CLKSEL_OUT1",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_RTI1_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MCU_SA2_UL0": [
+        {
+            "input_name": "DEV_MCU_SA2_UL0_PKA_IN_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_1_HSDIVOUT0_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_SA2_UL0_X1_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        },
+        {
+            "input_name": "DEV_MCU_SA2_UL0_X2_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 3
+        }
+    ],
+    "J7200_DEV_MCSPI0": [
+        {
+            "input_name": "DEV_MCSPI0_CLKSPIREF_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCSPI0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCSPI1": [
+        {
+            "input_name": "DEV_MCSPI1_CLKSPIREF_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCSPI1_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCSPI2": [
+        {
+            "input_name": "DEV_MCSPI2_CLKSPIREF_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCSPI2_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCSPI3": [
+        {
+            "input_name": "DEV_MCSPI3_CLKSPIREF_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCSPI3_IO_CLKSPII_CLK",
+            "clk_name": "CLK_J7200_SPI3_CLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCSPI3_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCSPI4": [
+        {
+            "input_name": "DEV_MCSPI4_CLKSPIREF_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCSPI4_IO_CLKSPII_CLK",
+            "clk_name": "CLK_J7200_SPI_MAIN_4_IO_CLKSPIO_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCSPI4_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCSPI5": [
+        {
+            "input_name": "DEV_MCSPI5_CLKSPIREF_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCSPI5_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCSPI6": [
+        {
+            "input_name": "DEV_MCSPI6_CLKSPIREF_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCSPI6_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCSPI7": [
+        {
+            "input_name": "DEV_MCSPI7_CLKSPIREF_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_0_HSDIVOUT5_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCSPI7_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_MCU_MCSPI0": [
+        {
+            "input_name": "DEV_MCU_MCSPI0_CLKSPIREF_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT0_CLK",
+            "div": 5
+        },
+        {
+            "input_name": "DEV_MCU_MCSPI0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MCU_MCSPI1": [
+        {
+            "input_name": "DEV_MCU_MCSPI1_CLKSPIREF_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT0_CLK",
+            "div": 5
+        },
+        {
+            "input_name": "DEV_MCU_MCSPI1_IO_CLKSPII_CLK",
+            "clk_name": "CLK_J7200_MCU_SPI1_CLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_MCSPI1_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_MCU_MCSPI2": [
+        {
+            "input_name": "DEV_MCU_MCSPI2_CLKSPIREF_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MCU_2_HSDIVOUT0_CLK",
+            "div": 5
+        },
+        {
+            "input_name": "DEV_MCU_MCSPI2_IO_CLKSPII_CLK",
+            "clk_name": "CLK_J7200_SPI_MCU_2_IO_CLKSPIO_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_MCU_MCSPI2_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_UART1": [
+        {
+            "input_name": "DEV_UART1_FCLK_CLK",
+            "clk_name": "CLK_J7200_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT1",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_UART1_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_UART2": [
+        {
+            "input_name": "DEV_UART2_FCLK_CLK",
+            "clk_name": "CLK_J7200_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT2",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_UART2_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_UART3": [
+        {
+            "input_name": "DEV_UART3_FCLK_CLK",
+            "clk_name": "CLK_J7200_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT3",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_UART3_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_UART4": [
+        {
+            "input_name": "DEV_UART4_FCLK_CLK",
+            "clk_name": "CLK_J7200_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT4",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_UART4_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_UART5": [
+        {
+            "input_name": "DEV_UART5_FCLK_CLK",
+            "clk_name": "CLK_J7200_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT5",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_UART5_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_UART6": [
+        {
+            "input_name": "DEV_UART6_FCLK_CLK",
+            "clk_name": "CLK_J7200_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT6",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_UART6_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_UART7": [
+        {
+            "input_name": "DEV_UART7_FCLK_CLK",
+            "clk_name": "CLK_J7200_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT7",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_UART7_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_UART8": [
+        {
+            "input_name": "DEV_UART8_FCLK_CLK",
+            "clk_name": "CLK_J7200_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT8",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_UART8_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_UART9": [
+        {
+            "input_name": "DEV_UART9_FCLK_CLK",
+            "clk_name": "CLK_J7200_USART_PROGRAMMABLE_CLOCK_DIVIDER_OUT9",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_UART9_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        }
+    ],
+    "J7200_DEV_WKUP_UART0": [
+        {
+            "input_name": "DEV_WKUP_UART0_FCLK_CLK",
+            "clk_name": "CLK_J7200_WKUP_USART_MCUPLL_BYPASS_CLKSEL_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_WKUP_UART0_VBUSP_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 6
+        }
+    ],
+    "J7200_DEV_USB0": [
+        {
+            "input_name": "DEV_USB0_ACLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_USB0_BUF_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_USB0_CLK_LPM_CLK",
+            "clk_name": "CLK_J7200_POSTDIV2_16FFT_MAIN_1_HSDIVOUT7_CLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_USB0_PCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_USB0_PIPE_REFCLK",
+            "clk_name": "CLK_J7200_USB0_SERDES_REFCLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_USB0_PIPE_RXCLK",
+            "clk_name": "CLK_J7200_USB0_SERDES_RXCLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_USB0_PIPE_RXFCLK",
+            "clk_name": "CLK_J7200_USB0_SERDES_RXFCLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_USB0_PIPE_TXFCLK",
+            "clk_name": "CLK_J7200_USB0_SERDES_TXFCLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_USB0_PIPE_TXMCLK",
+            "clk_name": "CLK_J7200_USB0_SERDES_TXMCLK_MUX_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_USB0_USB2_APB_PCLK_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_USB0_USB2_REFCLOCK_CLK",
+            "clk_name": "CLK_J7200_USB0_REFCLK_SEL_OUT0",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_SERDES_10G1": [
+        {
+            "input_name": "DEV_SERDES_10G1_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_SERDES_10G1_CORE_REF_CLK",
+            "clk_name": "CLK_J7200_SERDES0_CORE_REFCLK_OUT0",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_SERDES_10G1_IP1_LN0_TXCLK",
+            "clk_name": "CLK_J7200_CPSW_5XUSS_MAIN_0_SERDES3_TXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_SERDES_10G1_IP1_LN1_TXCLK",
+            "clk_name": "CLK_J7200_CPSW_5XUSS_MAIN_0_SERDES4_TXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_SERDES_10G1_IP1_LN2_TXCLK",
+            "clk_name": "CLK_J7200_CPSW_5XUSS_MAIN_0_SERDES1_TXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_SERDES_10G1_IP1_LN3_TXCLK",
+            "clk_name": "CLK_J7200_CPSW_5XUSS_MAIN_0_SERDES2_TXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_SERDES_10G1_IP2_LN0_TXCLK",
+            "clk_name": "CLK_J7200_PCIE_G3X4_128_MAIN_1_PCIE_LANE0_TXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_SERDES_10G1_IP2_LN1_TXCLK",
+            "clk_name": "CLK_J7200_PCIE_G3X4_128_MAIN_1_PCIE_LANE1_TXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_SERDES_10G1_IP2_LN2_TXCLK",
+            "clk_name": "CLK_J7200_PCIE_G3X4_128_MAIN_1_PCIE_LANE2_TXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_SERDES_10G1_IP2_LN3_TXCLK",
+            "clk_name": "CLK_J7200_PCIE_G3X4_128_MAIN_1_PCIE_LANE3_TXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_SERDES_10G1_IP3_LN1_TXCLK",
+            "clk_name": "CLK_J7200_USB3P0SS_16FFC_MAIN_0_PIPE_TXCLK",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_SERDES_10G1_IP3_LN3_TXCLK",
+            "clk_name": "CLK_J7200_USB3P0SS_16FFC_MAIN_0_PIPE_TXCLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_WKUPMCU2MAIN_VD": [],
+    "J7200_DEV_NAVSS0_MODSS": [
+        {
+            "input_name": "DEV_NAVSS0_MODSS_VD2CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_UDMASS": [
+        {
+            "input_name": "DEV_NAVSS0_UDMASS_VD2CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_NAVSS0_VIRTSS": [
+        {
+            "input_name": "DEV_NAVSS0_VIRTSS_VD2CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_NAVSS0_MODSS": [
+        {
+            "input_name": "DEV_MCU_NAVSS0_MODSS_VD2CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_NAVSS0_UDMASS": [
+        {
+            "input_name": "DEV_MCU_NAVSS0_UDMASS_VD2CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_WKUP_0_CHIP_DIV1_CLK_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_DEBUGSS_WRAP0": [
+        {
+            "input_name": "DEV_DEBUGSS_WRAP0_ATB_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 2
+        },
+        {
+            "input_name": "DEV_DEBUGSS_WRAP0_CORE_CLK",
+            "clk_name": "CLK_J7200_K3_PLL_CTRL_WRAP_MAIN_0_CHIP_DIV1_CLK_CLK",
+            "div": 4
+        },
+        {
+            "input_name": "DEV_DEBUGSS_WRAP0_JTAG_TCK",
+            "clk_name": "CLK_J7200_BOARD_0_TCK_OUT",
+            "div": 1
+        },
+        {
+            "input_name": "DEV_DEBUGSS_WRAP0_TREXPT_CLK",
+            "clk_name": "CLK_J7200_HSDIV4_16FFT_MAIN_2_HSDIVOUT3_CLK",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_FFI_MAIN_INFRA_CBASS_VD": [],
+    "J7200_DEV_FFI_MAIN_IP_CBASS_VD": [],
+    "J7200_DEV_FFI_MAIN_RC_CBASS_VD": [],
+    "J7200_DEV_MCU_TIMER1_CLKSEL_VD": [
+        {
+            "input_name": "DEV_MCU_TIMER1_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER_CLKSEL_OUT1",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER3_CLKSEL_VD": [
+        {
+            "input_name": "DEV_MCU_TIMER3_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER_CLKSEL_OUT3",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER5_CLKSEL_VD": [
+        {
+            "input_name": "DEV_MCU_TIMER5_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER_CLKSEL_OUT5",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER7_CLKSEL_VD": [
+        {
+            "input_name": "DEV_MCU_TIMER7_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER_CLKSEL_OUT7",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MCU_TIMER9_CLKSEL_VD": [
+        {
+            "input_name": "DEV_MCU_TIMER9_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MCU_TIMER_CLKSEL_OUT9",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER1_CLKSEL_VD": [
+        {
+            "input_name": "DEV_TIMER1_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT1",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER3_CLKSEL_VD": [
+        {
+            "input_name": "DEV_TIMER3_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT3",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER5_CLKSEL_VD": [
+        {
+            "input_name": "DEV_TIMER5_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT5",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER7_CLKSEL_VD": [
+        {
+            "input_name": "DEV_TIMER7_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT7",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER9_CLKSEL_VD": [
+        {
+            "input_name": "DEV_TIMER9_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT9",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER11_CLKSEL_VD": [
+        {
+            "input_name": "DEV_TIMER11_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT11",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER13_CLKSEL_VD": [
+        {
+            "input_name": "DEV_TIMER13_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT13",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER15_CLKSEL_VD": [
+        {
+            "input_name": "DEV_TIMER15_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT15",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER17_CLKSEL_VD": [
+        {
+            "input_name": "DEV_TIMER17_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT17",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_TIMER19_CLKSEL_VD": [
+        {
+            "input_name": "DEV_TIMER19_CLKSEL_VD_CLK",
+            "clk_name": "CLK_J7200_MAIN_TIMER_CLKSEL_OUT19",
+            "div": 1
+        }
+    ],
+    "J7200_DEV_MAIN_PLL8_SEL_EXTWAVE_VD": [
+        {
+            "input_name": "DEV_MAIN_PLL8_SEL_EXTWAVE_VD_CLK",
+            "clk_name": "CLK_J7200_MAIN_PLL8_SEL_EXTWAVE_OUT0",
+            "div": 1
+        }
+    ]
+}

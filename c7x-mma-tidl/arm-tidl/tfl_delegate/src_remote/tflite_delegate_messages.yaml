@@ -1,0 +1,17 @@
+header : TFLITE_DELEGATE_MESSAGES
+
+tflite_delegate_create_exec_delegate:
+    resp:
+    - status: int32_t
+    - message: std::string
+    - delegate_ptr: uint64_t
+    req:
+    - __skip_serialize__
+    - options: std::vector<std::pair<std::string, std::string>>
+
+tflite_delegate_delete_exec_delegate:
+    resp:
+    - status: int32_t
+    req:
+    - delegate_ptr: uint64_t
+

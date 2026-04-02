@@ -1,0 +1,26 @@
+modelType          = 0
+inputNetFile       = "../../test/testvecs/models/public/caffe/mobileNet1.0v1/mobilenet_deploy.prototxt"
+inputParamsFile    = "../../test/testvecs/models/public/caffe/mobileNet1.0v1/mobilenet.caffemodel"
+outputNetFile      = "../../test/testvecs/config/tidl_models/caffe/tidl_net_mobilenet_v1_u16.bin"
+outputParamsFile   = "../../test/testvecs/config/tidl_models/caffe/tidl_io_mobilenet_v1_u16_"
+inDataNorm  = 1
+inMean = 103.94 116.78 123.68
+inScale = 0.017 0.017 0.017
+inDataFormat = 0
+resizeWidth = 256
+resizeHeight = 256
+inWidth  = 224
+inHeight = 224 
+inNumChannels = 3
+inData = ../../test/testvecs/config/imageNet_sample_val.txt
+#postProcType = 1
+#quantizationStyle = 3
+perfSimConfig = ../../test/testvecs/config/import/device_config.cfg
+numFeatureBits = 16
+inElementType  = 2
+numParamBits      = 12
+#numFeatureBits = 8
+#numParamBits   = 8
+
+
+quantParamsPrototxtFile = "../../test/testvecs/config/tidl_models/quant_params/caffe/mobilenet_v1_u16_quant_params.prototxt"

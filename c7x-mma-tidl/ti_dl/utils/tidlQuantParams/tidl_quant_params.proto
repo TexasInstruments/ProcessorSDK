@@ -1,0 +1,47 @@
+syntax = "proto2";
+
+package tidl_quant_params;
+
+// Top level configuration for the message storing TIDL Network Quantization Parameters
+message TIDLNetQuantParams {
+  optional int32 num_layers = 1;
+  optional TidlQuantType quant_type = 2 [default = SYMMETRIC];
+  optional TidlCalibType calib_type = 3 [default = PERTENSOR];
+  repeated TidlLayerQuantParams layers = 4;
+}
+
+// Quantization Type
+enum TidlQuantType {
+SYMMETRIC = 1;
+ASYMMETRIC = 2;
+}
+
+// Calibration Type
+enum TidlCalibType {
+PERTENSOR = 1;
+PERCHANNEL = 2;
+}
+
+// Configuration for storing TIDL Layer Quantization Parameters
+message TidlLayerQuantParams {
+  optional uint32 layer_index = 1;
+  optional string layer_name = 2; 
+  optional string layer_type = 3;
+  optional uint32 bit_depth = 4 [default = 8];
+  repeated TidlTensorQuantParams outputs = 5;
+  repeated TidlTensorQuantParams weights = 6;
+  repeated TidlTensorQuantParams bias = 7;
+  repeated TidlTensorQuantParams slope = 8;
+}
+
+// Configuration for storing TIDL Tensor Quantization Parameters
+message TidlTensorQuantParams {
+  optional bool is_symmetric = 1 [default = false];
+  optional float min = 2 [default = -3.4028234664e+38]; 
+  optional float max = 3 [default = 3.4028234664e+38]; 
+  optional uint32 size = 4;
+  optional string element_type = 5;
+  repeated double scale = 6 [packed=true];
+  repeated int32 zero_point = 7 [packed=true];  
+  repeated double value = 8 [packed=true];
+}

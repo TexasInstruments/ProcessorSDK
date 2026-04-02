@@ -1,0 +1,16 @@
+@startuml
+
+actor  user
+participant app_psc
+participant LpscDrv
+
+user-> app_psc : getPscData
+loop for all lpsc in socPscData
+     app_psc ->LpscDrv :getLpscData
+     LpscDrv -> app_psc : return {pd_status, md_status}
+    
+end
+app_psc -> app_psc : createPscHierarchyfromLpscData
+app_psc -> user   : pscHeirarchyData
+
+@enduml

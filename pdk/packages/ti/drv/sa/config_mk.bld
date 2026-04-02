@@ -1,0 +1,55 @@
+/******************************************************************************
+ * FILE PURPOSE: Build configuration Script for the uart Driver
+ ******************************************************************************
+ * FILE NAME: config.bld
+ *
+ * DESCRIPTION:
+ *  This file contains the build configuration script for the uart driver
+ *  and is responsible for configuration of the paths for the various
+ *  tools required to build the driver.
+ *
+ * Copyright (C) 2017, Texas Instruments, Inc.
+ *****************************************************************************/
+/* Get the Tools Base directory from the Environment Variable. */
+var c66ToolsBaseDir = java.lang.System.getenv("C6X_GEN_INSTALL_PATH");
+var c674ToolsBaseDir = java.lang.System.getenv("C6X_GEN_INSTALL_PATH");
+var m4ToolsBaseDir = java.lang.System.getenv("TOOLCHAIN_PATH_M4");
+var a15ToolsBaseDir = java.lang.System.getenv("TOOLCHAIN_PATH_A15");
+var a9ToolsBaseDir = java.lang.System.getenv("TOOLCHAIN_PATH_A9");
+var arm9ToolsBaseDir = java.lang.System.getenv("TOOLCHAIN_PATH_ARM9");
+var a8ToolsBaseDir = java.lang.System.getenv("TOOLCHAIN_PATH_A8");
+var r5fToolsBaseDir = java.lang.System.getenv("TOOLCHAIN_PATH_R5F");
+var a53ToolsBaseDir = java.lang.System.getenv("TOOLCHAIN_PATH_A53");
+var a72ToolsBaseDir = java.lang.System.getenv("TOOLCHAIN_PATH_A72");
+
+
+/* Get the base directory for the uart Socket Driver Package */
+var lldPath = new java.io.File(".//").getPath();
+
+/* Include Path */
+var lldIncludePath = " -I" + lldPath + "/src" + " -I" + lldPath;
+
+/* Configure the uart Socket Release Version Information */
+/* 3 steps: remove SPACE and TAB, convert to string and split to make array */
+var lldReleaseVersion = (""+Pkg.version.replace(/\s/g, "")).split(',');
+
+/* Do not print the compiler options */
+var pOpts = 0;
+
+/* should library be explicity be specified for package.bld 
+ * for makefile based builds that use this config_mk.bld,
+ * lib folder is not packaged automatically, need to
+ * provide the lib folder for explicit package.bld list
+ */
+var pkgLibExplicitly = 1;
+
+/* List of all devices that needs to be build via XDC
+ * As the build happens through makefile, there is nothing to build via XDC
+ * using the below for packaging infrastructure
+ */
+var socs = [];
+var devices = [];
+var build_devices = [];
+Build.useTargets = null;
+Build.targets = []
+

@@ -1,0 +1,26 @@
+{
+    "vtm": {
+        "VTM_DEVINFO_PWR0": "0x00000004",
+        "VTM_CFG_REG_CFG1": "0xb00000",
+        "VTM_CFG_REG_CFG2": "0xb01000",
+        "TMPSENS_CTRL_OFFSET": "0x300",
+        "TMPSENS_STAT_OFFSET": "0x308",
+        "INSTANCE_OFFSET": "0x20",
+        "CONFIG_VALUE": "0x50",
+        "bitFields": {
+            "numOfSensor": {
+                "startBit": 4,
+                "endBit": 7
+            },
+            "adcCode": {
+                "startBit": 0,
+                "endBit": 9
+            }
+        },
+        "sensorMap": {
+            "0": {"description": "Near DSS OLDI, in-between two C7x"},
+            "1": {"description": "In-between GPU, VPAC and A53"},
+            "2": {"description": "Near A53 and LPDDR"}
+        }
+    }
+}

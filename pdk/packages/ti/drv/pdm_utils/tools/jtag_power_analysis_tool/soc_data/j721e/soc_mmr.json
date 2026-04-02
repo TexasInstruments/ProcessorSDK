@@ -1,0 +1,29 @@
+{
+    "vtm": {
+        "VTM_DEVINFO_PWR0": "0x00000004",
+        "VTM_CFG_REG_CFG1": "0x42040000",
+        "VTM_CFG_REG_CFG2": "0x42050000",
+        "TMPSENS_CTRL_OFFSET": "0x300",
+        "TMPSENS_STAT_OFFSET": "0x308",
+        "INSTANCE_OFFSET": "0x20",
+        "CONFIG_VALUE": "0x50",
+        "SDL_VTM_EFUSE_BASE_ADDR": "0x43000300",
+        "bitFields": {
+            "numOfSensor": {
+                "startBit": 4,
+                "endBit": 7
+            },
+            "adcCode": {
+                "startBit": 0,
+                "endBit": 9
+            }
+        },
+        "sensorMap": {
+            "0": {"description": "Sensor in VD_WKUP"},
+            "1": {"description": "Sensor in VD_CORE near near MPU region"},
+            "2": {"description": "Sensor in VD_CC near C7x region"},
+            "3": {"description": "Sensor in VD_CORE near GPU region"},
+            "4": {"description": "Sensor in VD_CORE near CPSW0 and R5FSS region"}
+        }
+    }
+}

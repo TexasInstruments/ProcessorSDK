@@ -1,0 +1,229 @@
+#
+# This file is the makefile for building sciclient .
+#
+ifeq ($(RULES_MAKE), )
+include $(PDK_INSTALL_PATH)/ti/build/Rules.make
+else
+include $(RULES_MAKE)
+endif
+
+# SoC Specific source files
+ifeq ($(SOC),$(filter $(SOC), am65xx))
+  SCICLIENT_SOCVER = V0
+endif
+ifeq ($(SOC),$(filter $(SOC), j721e))
+  SCICLIENT_SOCVER = V1
+endif
+ifeq ($(SOC),$(filter $(SOC), j7200))
+  SCICLIENT_SOCVER = V2
+endif
+ifeq ($(SOC),$(filter $(SOC), am64x))
+  SCICLIENT_SOCVER = V3
+endif
+ifeq ($(SOC),$(filter $(SOC), j721s2))
+  SCICLIENT_SOCVER = V4
+endif
+ifeq ($(SOC),$(filter $(SOC), j784s4 j742s2))
+  SCICLIENT_SOCVER = V6
+endif
+
+# Special case for Windows Build
+ifeq ($(OS),Windows_NT)
+  EXE_EXT=.exe
+endif
+
+# ObjCopy Tool
+ifneq ("$(wildcard $(TOOLCHAIN_PATH_GCC)/bin/arm-none-eabi-objcopy$(EXE_EXT))","")
+SCICLIENT_OBJCOPY?=$(TOOLCHAIN_PATH_GCC)/bin/arm-none-eabi-objcopy$(EXE_EXT)
+endif
+ifneq ("$(wildcard $(TOOLCHAIN_PATH_GCC_ARCH64)/bin/$(GCC_ARCH64_BIN_PREFIX)-objcopy$(EXE_EXT))","")
+SCICLIENT_OBJCOPY?=$(TOOLCHAIN_PATH_GCC_ARCH64)/bin/$(GCC_ARCH64_BIN_PREFIX)-objcopy$(EXE_EXT)
+endif
+
+# Other SBL Tools
+ifneq ("$(wildcard $(PDK_SBL_AUTO_COMP_PATH)/tools)","")
+  SBL_TOOLS_PATH=$(PDK_SBL_AUTO_COMP_PATH)/tools
+else
+  SBL_TOOLS_PATH=$(PDK_SBL_COMP_PATH)/tools
+endif
+export SCICLIENT_OBJCOPY
+
+# Certificate Generation script
+ifeq ($(OS),Windows_NT)
+  SCICLIENT_CERT_GEN=powershell -executionpolicy unrestricted -command $(ROOTDIR)/ti/build/makerules/x509CertificateGen.ps1
+  BIN2C_EXE=bin2c.exe
+  PYTHON=python
+else
+  SCICLIENT_CERT_GEN=$(ROOTDIR)/ti/build/makerules/x509CertificateGen.sh
+  BIN2C_EXE=bin2c.out
+  PYTHON=python3
+endif
+
+# Bin to C header file tools
+BIN2C_GEN=$(ROOTDIR)/ti/drv/sciclient/tools/bin2c/$(BIN2C_EXE)
+
+# Certificate Keys
+ifeq ($(BUILD_HS),yes)
+SCICLIENT_CERT_KEY=$(ROOTDIR)/ti/build/makerules/k3_dev_mpk.pem
+else
+SCICLIENT_CERT_KEY=$(ROOTDIR)/ti/build/makerules/rom_degenerateKey.pem
+endif
+
+# For matching cfg files (purposely truncated to match main cfg file)
+BRD_CFG := sciclient_defaultBoard
+CFG_DIR := $(ROOTDIR)/ti/drv/sciclient/soc/$(SCICLIENT_SOCVER)
+
+# These will be used to distinguish between an HS configuration and
+# .. a GP configuration in the rules below.
+ifeq ($(BUILD_HS),yes)
+SGN_EXT := .hs.signed
+HEX_EXT := _hexhs.h
+else
+SGN_EXT := .signed
+HEX_EXT := _hex.h
+endif
+
+# Parser SOC derivation
+ifeq ($(SOC),$(filter $(SOC), j721e))
+PARSER_SOC := j721e
+endif
+ifeq ($(SOC),$(filter $(SOC), j7200))
+PARSER_SOC := j7200
+endif
+ifeq ($(SOC),$(filter $(SOC), am65xx))
+PARSER_SOC := am6
+PARSER_SOC2 := am65x_sr2
+endif
+ifeq ($(SOC),$(filter $(SOC), am64x))
+PARSER_SOC := am64x
+endif
+ifeq ($(SOC),$(filter $(SOC), j721s2))
+PARSER_SOC := j721s2
+endif
+ifeq ($(SOC),$(filter $(SOC), j784s4))
+PARSER_SOC := j784s4
+endif
+ifeq ($(SOC),$(filter $(SOC), j742s2))
+PARSER_SOC := j742s2
+endif
+
+VALIDATOR_JSON := $(ROOTDIR)/ti/drv/sciclient/soc/sysfw/binaries/scripts/sysfw_boardcfg_rules.json
+VALIDATOR_SCRIPT := $(ROOTDIR)/ti/drv/sciclient/soc/sysfw/binaries/scripts/sysfw_boardcfg_validator.py
+COMBINE_SCRIPT := $(ROOTDIR)/ti/drv/sciclient/tools/sysfw_boardcfg_blob_creator.py
+
+HS_SUFFIX=
+ifeq ($(BUILD_HS),yes)
+HS_SUFFIX=_hs
+endif
+
+APP_NAME=sciclient_boardcfg$(HS_SUFFIX)
+
+# List all the external components/interfaces, whose interface header files
+# need to be included for this component
+INCLUDE_EXTERNAL_INTERFACES = pdk osal
+
+# We want to create an include-able header file with a hex representation of
+# .. each board configuration (signed according to SoC). Because each Board
+# .. Configuration will require one of these header files, we can simply parse
+# .. through the appropriate SOC directory and generate one of these hex header
+# .. files for each Board Configuration file.
+HEXFILES := $(foreach file, \
+		$(wildcard $(CFG_DIR)/$(BRD_CFG)*.c), \
+		$(subst .c,$(HEX_EXT),$(file)))
+
+# Append the proper hex-file targets to "all" to guarantee they are
+# .. generated if missing/a board configuration file has been changed
+.PHONY: sciclient_boardcfg$(HS_SUFFIX) $(HEXFILES)
+
+$(APP_NAME): $(HEXFILES)
+
+# Include common make files
+ifeq ($(MAKERULEDIR), )
+#Makerule path not defined, define this and assume relative path from ROOTDIR
+  MAKERULEDIR := $(ROOTDIR)/ti/build/makerules
+  export MAKERULEDIR
+endif
+include $(MAKERULEDIR)/common.mk
+
+COMBINED_DM_BRDCFG := $(CFG_DIR)/combined-dm-cfg.bin
+COMBINED_TIFS_BRDCFG := $(CFG_DIR)/combined-tifs-cfg.bin
+
+.PHONY: sciclient_boardcfg $(COMBINED_DM_BRDCFG) $(COMBINED_TIFS_BRDCFG)
+$(APP_NAME): $(HEXFILES) $(COMBINED_DM_BRDCFG) $(COMBINED_TIFS_BRDCFG)
+
+define CREATE_HEX_GEN
+
+$(2).c:
+
+# Build the Board Configuration object files. A modified Configuration file
+# .. will trigger this chain for that particular configuration
+$(OBJDIR)/$(1).$(OBJEXT) : $(2).c
+ifeq ($(CORE), mcu1_0)
+	@echo "Build Board Configuration Obj Files"
+	$(MKDIR) -p $(OBJDIR)
+	$(CC) $(_CFLAGS) $(INCLUDES) $(CFLAGS_DIROPTS) -DBUILD_MCU1_0 -x c $(2).c -o $(OBJDIR)/$(notdir $(2)).$(OBJEXT)
+endif
+
+# Copy the raw binary into an intermediate file (will get deleted by make)
+$(OBJDIR)/$(1).bin.unsigned : SHELL:=/bin/bash   # HERE: this is setting the shell for this step only
+$(OBJDIR)/$(1).bin.unsigned : $(OBJDIR)/$(1).$(OBJEXT)
+ifeq ($(CORE), mcu1_0)
+	@echo "Create unsigned Board Configuration binary"
+	$(SCICLIENT_OBJCOPY) -S -O binary $(OBJDIR)/$(notdir $(2)).$(OBJEXT) $(OBJDIR)/$(1).bin.unsigned
+	# If the file name has sr2 in the name, then we need to use a different soc in the validator.
+
+ifeq ($(findstring sr2, $(OBJDIR)/$(BRD_CFG)$(1).bin.unsigned),sr2)
+	$(PYTHON) $(VALIDATOR_SCRIPT) -b $(OBJDIR)/$(1).bin.unsigned -s $(PARSER_SOC2) -l $(OBJDIR)/output_$(BRD_CFG).log -i -o $(OBJDIR)/$(1)_temp.bin.unsigned -r $(VALIDATOR_JSON)
+else
+	$(PYTHON) $(VALIDATOR_SCRIPT) -b $(OBJDIR)/$(1).bin.unsigned -s $(PARSER_SOC) -l $(OBJDIR)/output_$(BRD_CFG).log -i -o $(OBJDIR)/$(1)_temp.bin.unsigned -r $(VALIDATOR_JSON)
+endif
+	$(MV) $(OBJDIR)/$(1)_temp.bin.unsigned $(OBJDIR)/$(1).bin.unsigned
+endif
+
+# If an HS signature is required, sign it with the HS key (will get deleted by make)
+$(OBJDIR)/$(1).bin.hs.signed : $(OBJDIR)/$(1).bin.unsigned
+ifeq ($(CORE), mcu1_0)
+	@echo "Sign Board Configuration with HS key"
+ifneq ($(OS),Windows_NT)
+	$(CHMOD) a+x $(SCICLIENT_CERT_GEN)
+endif
+	$(SCICLIENT_CERT_GEN) -b $(OBJDIR)/$(1).bin.unsigned -o $(OBJDIR)/$(1).bin.hs.signed -k $(SCICLIENT_CERT_KEY) -f 1
+endif
+
+# If a GP signature is required, sign it with the GP key (will get deleted by make)
+$(OBJDIR)/$(1).bin.signed : $(OBJDIR)/$(1).bin.unsigned
+ifeq ($(CORE), mcu1_0)
+	@echo "Sign Board Configuration with GP key"
+	@echo "  (note: GP board configuration not ACTUALLY signed with anything)"
+	$(CP) $(OBJDIR)/$(1).bin.unsigned $(OBJDIR)/$(1).bin.signed
+endif
+
+# Generate the actual header file from the signed Board Configuration binary.
+# This rule determines the type of signature required in the previous rules.
+$(CFG_DIR)/$(1).h : $(OBJDIR)/$(1).bin$(SGN_EXT)
+ifeq ($(CORE), mcu1_0)
+	@echo "Generate include-able header file from signed Board Configuration"
+ifneq ($(OS),Windows_NT)
+	$(CHMOD) a+x $(BIN2C_GEN)
+endif
+	$(BIN2C_GEN) $(OBJDIR)/$(1).bin$(SGN_EXT) $(CFG_DIR)/$(1).h $(subst default,,$(notdir $(2)))
+endif
+endef
+
+$(foreach HEXFILE,$(HEXFILES),$(eval $(call CREATE_HEX_GEN,$(notdir $(basename $(HEXFILE))),$(subst $(HEX_EXT),,$(HEXFILE)))))
+
+# For combined boot images, creates the combined brdcfg bin files combined-tifs-brdcfg.bin and combined-dm-brdcfg.bin
+ifeq ($(SBL_IMAGE_TYPE),combined)
+SHELL:=/bin/bash
+$(COMBINED_DM_BRDCFG): $(OBJDIR)/$(BRD_CFG)cfg_pm_hex.bin.unsigned $(OBJDIR)/$(BRD_CFG)cfg_rm_hex.bin.unsigned
+	$(PYTHON) $(COMBINE_SCRIPT) -p $(OBJDIR)/$(BRD_CFG)cfg_pm_hex.bin.unsigned -r $(OBJDIR)/$(BRD_CFG)cfg_rm_hex.bin.unsigned -o $@
+	@echo "Created combined-dm-brdcfg.bin file"
+$(COMBINED_TIFS_BRDCFG): $(OBJDIR)/$(BRD_CFG)cfg_hex.bin.unsigned $(OBJDIR)/$(BRD_CFG)cfg_security_hex.bin.unsigned $(OBJDIR)/$(BRD_CFG)cfg_pm_hex.bin.unsigned $(OBJDIR)/$(BRD_CFG)cfg_tifs_rm_hex.bin.unsigned
+	$(PYTHON) $(COMBINE_SCRIPT) -b $(OBJDIR)/$(BRD_CFG)cfg_hex.bin.unsigned -s $(OBJDIR)/$(BRD_CFG)cfg_security_hex.bin.unsigned -p $(OBJDIR)/$(BRD_CFG)cfg_pm_hex.bin.unsigned -r $(OBJDIR)/$(BRD_CFG)cfg_tifs_rm_hex.bin.unsigned -o $@
+	@echo "Created combined-tifs-brdcfg.bin"
+endif
+
+# OBJs and libraries are built by using rule defined in rules_<target>.mk
+#     and need not be explicitly specified here
+
+# Nothing beyond this point

@@ -1,0 +1,83 @@
+@startuml
+
+class JtagTool {
+    + run()
+}
+
+class Driver {
+    + createDriver(drvToCreate: string, inst_name: string)
+    
+}
+
+class ClkDrv extends Driver{
+    + getParentClock()
+    + getClockPathUptoRoot()
+}
+
+class LpscDrv extends Driver {
+    + getLpscData(lpscInst)
+}
+
+class PllDrv extends Driver{
+    + getPllDivs(pll_inst)
+    + isPllEnabled(pll_inst)
+    + getNumHsdivs(pll_inst)
+    + getHsdivOutFreq(pll_inst, id)
+    + getPllAllHsdivsOutFreq(pll_inst)
+    + getPllOutFreq(pll_inst)
+    + getPllStatus(pll_inst)
+}
+class ClkDrvFromDevice extends ClkDrv {
+    + getParentClock()
+}
+
+class ClkDrvDivReg extends ClkDrv {
+    + getParentClock()
+}
+
+class ClkDrvFixed extends ClkDrv {
+    + getParentClock()
+}
+
+class ClkDrvSocHfosc0 extends ClkDrv {
+    + getParentClock()
+    + getHfoscFreq()
+}
+
+class ClkDrvMuxReg extends ClkDrv {
+    + getParentClock()
+    + getMuxSelSetting()
+}
+
+class ClkDrvPll extends ClkDrv {
+    + getParentClock()
+  
+}
+
+class ClkDrvPllctrlMuxRegRo extends ClkDrv {
+     + getParentClock()
+}
+
+class ClkDrvMuxDpi1Clk extends ClkDrv {}
+class ClkDrvMuxDpi2Pclk extends ClkDrv {}
+class ClkDrvMuxDpi3Pclk extends ClkDrv {}
+class ClkDrvMuxDpi0Pclk extends ClkDrv {}
+
+class ClkDrvDivRegGo extends ClkDrvDivReg {
+    + getParentClock(): { div: number, parent: string }
+}
+
+class ClkDrvDivPll16fftHsdiv extends ClkDrvDivReg {
+    + getParentClock(): { div: number, parent: string }
+}
+
+class ClkDrvDivPll16fftPostdivHsdiv extends ClkDrvDivPll16fftHsdiv {
+    + getParentClock(): { div: number, parent: string }
+}
+
+class ClkDrvDivPll16fftPostdiv extends ClkDrvPll {
+    + getParentClock(): { div: number, parent: string }
+}
+
+ClkDrvPll --* PllDrv 
+@enduml

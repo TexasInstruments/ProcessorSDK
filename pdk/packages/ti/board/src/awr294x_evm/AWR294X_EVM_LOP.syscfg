@@ -1,0 +1,239 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --device "AWR294X" --package "LOP" --part "Default"
+ * @versions {"data":"2021040517","timestamp":"2021040517","tool":"1.8.0+1863","templates":null}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const ERROR        = scripting.addModule("/ti/peripherals/ERROR", {}, false);
+const ERROR1       = ERROR.addInstance();
+const JTAG         = scripting.addModule("/ti/peripherals/JTAG", {}, false);
+const JTAG1        = JTAG.addInstance();
+const MCU_CLKOUT   = scripting.addModule("/ti/peripherals/MCU_CLKOUT", {}, false);
+const MCU_CLKOUT1  = MCU_CLKOUT.addInstance();
+const MSS_EPWM     = scripting.addModule("/ti/peripherals/MSS_EPWM", {}, false);
+const MSS_EPWM1    = MSS_EPWM.addInstance();
+const MSS_EPWM2    = MSS_EPWM.addInstance();
+const MSS_GPIO     = scripting.addModule("/ti/peripherals/MSS_GPIO", {}, false);
+const MSS_GPIO1    = MSS_GPIO.addInstance();
+const MSS_GPIO2    = MSS_GPIO.addInstance();
+const MSS_GPIO3    = MSS_GPIO.addInstance();
+const MSS_GPIO4    = MSS_GPIO.addInstance();
+const MSS_GPIO5    = MSS_GPIO.addInstance();
+const MSS_GPIO6    = MSS_GPIO.addInstance();
+const MSS_GPIO7    = MSS_GPIO.addInstance();
+const MSS_GPIO8    = MSS_GPIO.addInstance();
+const MSS_GPIO9    = MSS_GPIO.addInstance();
+const MSS_GPIO10   = MSS_GPIO.addInstance();
+const MSS_GPIO11   = MSS_GPIO.addInstance();
+const MSS_GPIO12   = MSS_GPIO.addInstance();
+const MSS_GPIO13   = MSS_GPIO.addInstance();
+const MSS_GPIO14   = MSS_GPIO.addInstance();
+const MSS_I2C      = scripting.addModule("/ti/peripherals/MSS_I2C", {}, false);
+const MSS_I2C1     = MSS_I2C.addInstance();
+const MSS_MCAN     = scripting.addModule("/ti/peripherals/MSS_MCAN", {}, false);
+const MSS_MCAN1    = MSS_MCAN.addInstance();
+const MSS_MCAN2    = MSS_MCAN.addInstance();
+const MSS_MDIO     = scripting.addModule("/ti/peripherals/MSS_MDIO", {}, false);
+const MSS_MDIO1    = MSS_MDIO.addInstance();
+const MSS_MIBSPI   = scripting.addModule("/ti/peripherals/MSS_MIBSPI", {}, false);
+const MSS_MIBSPI1  = MSS_MIBSPI.addInstance();
+const MSS_MIBSPI2  = MSS_MIBSPI.addInstance();
+const MSS_QSPI     = scripting.addModule("/ti/peripherals/MSS_QSPI", {}, false);
+const MSS_QSPI1    = MSS_QSPI.addInstance();
+const MSS_RGMII    = scripting.addModule("/ti/peripherals/MSS_RGMII", {}, false);
+const MSS_RGMII1   = MSS_RGMII.addInstance();
+const MSS_RS232    = scripting.addModule("/ti/peripherals/MSS_RS232", {}, false);
+const MSS_RS2321   = MSS_RS232.addInstance();
+const MSS_UART     = scripting.addModule("/ti/peripherals/MSS_UART", {}, false);
+const MSS_UART1    = MSS_UART.addInstance();
+const PMIC_CLKOUT  = scripting.addModule("/ti/peripherals/PMIC_CLKOUT", {}, false);
+const PMIC_CLKOUT1 = PMIC_CLKOUT.addInstance();
+const XREF_CLK0    = scripting.addModule("/ti/peripherals/XREF_CLK0", {}, false);
+const XREF_CLK01   = XREF_CLK0.addInstance();
+const XREF_CLK1    = scripting.addModule("/ti/peripherals/XREF_CLK1", {}, false);
+const XREF_CLK11   = XREF_CLK1.addInstance();
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+ERROR1.$name                    = "MyERROR0";
+ERROR1.peripheral.$assign       = "ERROR0";
+ERROR1.peripheral.RESET.$assign = "A7";
+ERROR1.peripheral.OUT.$assign   = "A8";
+
+JTAG1.$name                  = "MyJTAG0";
+JTAG1.peripheral.$assign     = "JTAG0";
+JTAG1.peripheral.TCK.$assign = "B13";
+JTAG1.peripheral.TMS.$assign = "B14";
+JTAG1.peripheral.TDI.$assign = "B15";
+JTAG1.peripheral.TDO.$assign = "B16";
+
+MCU_CLKOUT1.$name                     = "MyMCU_CLKOUT0";
+MCU_CLKOUT1.peripheral.$assign        = "MCU_CLKOUT0";
+MCU_CLKOUT1.peripheral.CLKOUT.$assign = "T18";
+
+MSS_EPWM1.$name                   = "MyMSS_EPWM0";
+MSS_EPWM1.peripheral["0"].$assign = "B19";
+MSS_EPWM1.peripheral["1"].$assign = "A18";
+MSS_EPWM1.peripheral.$assign      = "MSS_EPWMA";
+MSS_EPWM1.peripheral.SYNCI.$used  = false;
+MSS_EPWM1.peripheral.SYNCO.$used  = false;
+
+MSS_EPWM2.$name                   = "MyMSS_EPWM1";
+MSS_EPWM2.peripheral["0"].$assign = "B18";
+MSS_EPWM2.peripheral["1"].$used   = false;
+MSS_EPWM2.peripheral.$assign      = "MSS_EPWMB";
+MSS_EPWM2.peripheral.SYNCI.$used  = false;
+MSS_EPWM2.peripheral.SYNCO.$used  = false;
+
+MSS_GPIO1.$name                  = "MyMSS_GPIO0";
+MSS_GPIO1.peripheral.PIN.$assign = "B10";
+
+MSS_GPIO2.$name                  = "MyMSS_GPIO1";
+MSS_GPIO2.peripheral.PIN.$assign = "A11";
+
+MSS_GPIO3.$name                  = "MyMSS_GPIO2";
+MSS_GPIO3.peripheral.PIN.$assign = "E19";
+
+MSS_GPIO4.$name                  = "MyMSS_GPIO3";
+MSS_GPIO4.peripheral.PIN.$assign = "R19";
+
+MSS_GPIO5.$name                  = "MyMSS_GPIO4";
+MSS_GPIO5.peripheral.PIN.$assign = "R20";
+
+MSS_GPIO6.$name                  = "MyMSS_GPIO5";
+MSS_GPIO6.peripheral.PIN.$assign = "T19";
+
+MSS_GPIO7.$name                  = "MyMSS_GPIO6";
+MSS_GPIO7.peripheral.PIN.$assign = "T20";
+
+MSS_GPIO8.$name                  = "MyMSS_GPIO7";
+MSS_GPIO8.peripheral.PIN.$assign = "P19";
+
+MSS_GPIO9.$name                  = "MyMSS_GPIO8";
+MSS_GPIO9.peripheral.PIN.$assign = "N19";
+
+MSS_GPIO10.$name                  = "MyMSS_GPIO9";
+MSS_GPIO10.peripheral.PIN.$assign = "B12";
+
+MSS_GPIO11.$name                  = "MyMSS_GPIO10";
+MSS_GPIO11.peripheral.PIN.$assign = "A10";
+
+MSS_GPIO12.$name                  = "MyMSS_GPIO11";
+MSS_GPIO12.peripheral.PIN.$assign = "B11";
+
+MSS_GPIO13.$name                  = "MyMSS_GPIO12";
+MSS_GPIO13.peripheral.PIN.$assign = "U20";
+
+MSS_GPIO14.$name                  = "MyMSS_GPIO13";
+MSS_GPIO14.peripheral.PIN.$assign = "W18";
+
+MSS_I2C1.$name                  = "MyMSS_I2C0";
+MSS_I2C1.peripheral.$assign     = "MSS_I2CA";
+MSS_I2C1.peripheral.SDA.$assign = "W5";
+MSS_I2C1.peripheral.SCL.$assign = "Y5";
+
+MSS_MCAN1.$name                 = "MyMSS_MCAN0";
+MSS_MCAN1.peripheral.$assign    = "MSS_MCANA";
+MSS_MCAN1.peripheral.RX.$assign = "C19";
+MSS_MCAN1.peripheral.TX.$assign = "D19";
+
+MSS_MCAN2.$name                 = "MyMSS_MCAN1";
+MSS_MCAN2.peripheral.RX.$assign = "B17";
+MSS_MCAN2.peripheral.TX.$assign = "A17";
+
+MSS_MDIO1.$name                   = "MyMSS_MDIO0";
+MSS_MDIO1.peripheral.$assign      = "MSS_MDIO0";
+MSS_MDIO1.peripheral.DATA.$assign = "V1";
+MSS_MDIO1.peripheral.CLK.$assign  = "V2";
+
+MSS_MIBSPI1.$name                      = "MyMSS_MIBSPI0";
+MSS_MIBSPI1.peripheral.$assign         = "MSS_MIBSPIA";
+MSS_MIBSPI1.peripheral.HOSTIRQ.$assign = "W17";
+MSS_MIBSPI1.peripheral.CS1.$used       = false;
+MSS_MIBSPI1.peripheral.CS2.$used       = false;
+MSS_MIBSPI1.peripheral.MOSI.$assign    = "Y18";
+MSS_MIBSPI1.peripheral.MISO.$assign    = "Y19";
+MSS_MIBSPI1.peripheral.CLK.$assign     = "W19";
+MSS_MIBSPI1.peripheral.CS0.$assign     = "V18";
+
+MSS_MIBSPI2.$name                    = "MyMSS_MIBSPI1";
+MSS_MIBSPI2.peripheral.$assign       = "MSS_MIBSPIB";
+MSS_MIBSPI2.peripheral.HOSTIRQ.$used = false;
+MSS_MIBSPI2.peripheral.CS1.$used     = false;
+MSS_MIBSPI2.peripheral.CS2.$used     = false;
+MSS_MIBSPI2.peripheral.MOSI.$assign  = "Y15";
+MSS_MIBSPI2.peripheral.MISO.$assign  = "W15";
+MSS_MIBSPI2.peripheral.CLK.$assign   = "W16";
+MSS_MIBSPI2.peripheral.CS0.$assign   = "Y17";
+
+MSS_QSPI1.$name                   = "MyMSS_QSPI0";
+MSS_QSPI1.peripheral["0"].$assign = "W7";
+MSS_QSPI1.peripheral["1"].$assign = "W13";
+MSS_QSPI1.peripheral["2"].$assign = "W14";
+MSS_QSPI1.peripheral["3"].$assign = "Y10";
+MSS_QSPI1.peripheral.$assign      = "MSS_QSPI0";
+MSS_QSPI1.peripheral.CLK.$assign  = "W8";
+MSS_QSPI1.peripheral.CS.$assign   = "Y11";
+
+MSS_RGMII1.$name                   = "MyMSS_RGMII0";
+MSS_RGMII1.peripheral.$assign      = "MSS_RGMII0";
+MSS_RGMII1.peripheral.TCTL.$assign = "W1";
+MSS_RGMII1.peripheral.RCTL.$assign = "V8";
+MSS_RGMII1.peripheral.TD3.$assign  = "V7";
+MSS_RGMII1.peripheral.TD2.$assign  = "V5";
+MSS_RGMII1.peripheral.TD1.$assign  = "Y2";
+MSS_RGMII1.peripheral.TD0.$assign  = "W2";
+MSS_RGMII1.peripheral.TCLK.$assign = "V4";
+MSS_RGMII1.peripheral.RCLK.$assign = "W3";
+MSS_RGMII1.peripheral.RD3.$assign  = "V3";
+MSS_RGMII1.peripheral.RD2.$assign  = "V6";
+
+MSS_RS2321.$name                 = "MyMSS_RS2320";
+MSS_RS2321.peripheral.RX.$assign = "C20";
+MSS_RS2321.peripheral.TX.$assign = "B20";
+
+MSS_UART1.$name                 = "MyMSS_UART0";
+MSS_UART1.peripheral.$assign    = "MSS_UARTA";
+MSS_UART1.peripheral.RX.$assign = "A13";
+MSS_UART1.peripheral.TX.$assign = "A12";
+
+PMIC_CLKOUT1.$name                     = "MyPMIC_CLKOUT0";
+PMIC_CLKOUT1.peripheral.$assign        = "PMIC_CLKOUT0";
+PMIC_CLKOUT1.peripheral.CLKOUT.$assign = "U19";
+
+XREF_CLK01.$name                   = "MyXREF_CLK00";
+XREF_CLK01.peripheral.CLK0.$assign = "B9";
+
+XREF_CLK11.$name                   = "MyXREF_CLK10";
+XREF_CLK11.peripheral.CLK1.$assign = "A9";
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+MSS_GPIO1.peripheral.$suggestSolution      = "MSS_GPIO0";
+MSS_GPIO2.peripheral.$suggestSolution      = "MSS_GPIO0";
+MSS_GPIO3.peripheral.$suggestSolution      = "MSS_GPIO0";
+MSS_GPIO4.peripheral.$suggestSolution      = "MSS_GPIO0";
+MSS_GPIO5.peripheral.$suggestSolution      = "MSS_GPIO0";
+MSS_GPIO6.peripheral.$suggestSolution      = "MSS_GPIO0";
+MSS_GPIO7.peripheral.$suggestSolution      = "MSS_GPIO0";
+MSS_GPIO8.peripheral.$suggestSolution      = "MSS_GPIO0";
+MSS_GPIO9.peripheral.$suggestSolution      = "MSS_GPIO0";
+MSS_GPIO10.peripheral.$suggestSolution     = "MSS_GPIO0";
+MSS_GPIO11.peripheral.$suggestSolution     = "MSS_GPIO0";
+MSS_GPIO12.peripheral.$suggestSolution     = "MSS_GPIO0";
+MSS_GPIO13.peripheral.$suggestSolution     = "MSS_GPIO0";
+MSS_GPIO14.peripheral.$suggestSolution     = "MSS_GPIO0";
+MSS_MCAN2.peripheral.$suggestSolution      = "MSS_MCANB";
+MSS_RGMII1.peripheral.RD1.$suggestSolution = "W6";
+MSS_RGMII1.peripheral.RD0.$suggestSolution = "Y3";
+MSS_RS2321.peripheral.$suggestSolution     = "MSS_RS2320";
+XREF_CLK01.peripheral.$suggestSolution     = "XREF_CLK00";
+XREF_CLK11.peripheral.$suggestSolution     = "XREF_CLK10";

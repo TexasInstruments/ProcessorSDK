@@ -1,0 +1,163 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --device "J7200_DRA821_SR1.0_alpha" --package "ALM" --part "Default"
+ * @versions {"data":"20201003","timestamp":"2020060911","tool":"1.4.0+1234","templates":"20190604"}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const powerDomains = scripting.addModule("/ti/corePinmux/powerDomains");
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+powerDomains.CANUART          = "3.3 V";
+powerDomains.MMC1             = "3.3 V";
+powerDomains.MCU_CPSW2G_RGMII = "3.3 V";
+powerDomains.MCU_GENERAL      = "3.3 V";
+powerDomains.GENERAL          = "3.3 V";
+
+/**
+ * These are the peripherals and settings in this configuration
+ */
+const iDEBUGSS1                    = scripting.addPeripheral("DEBUGSS");
+iDEBUGSS1.$name                    = "MyDEBUGSS1";
+iDEBUGSS1.CLK.$used                = false;
+iDEBUGSS1.CTL.$used                = false;
+iDEBUGSS1.TMS.$assign              = "U4";
+iDEBUGSS1.TDI.$assign              = "F19";
+iDEBUGSS1.TDO.$assign              = "F21";
+iDEBUGSS1.DATA0.$used              = false;
+iDEBUGSS1.DATA1.$used              = false;
+iDEBUGSS1.DATA2.$used              = false;
+iDEBUGSS1.DATA3.$used              = false;
+iDEBUGSS1.DATA4.$used              = false;
+iDEBUGSS1.DATA5.$used              = false;
+iDEBUGSS1.DATA6.$used              = false;
+iDEBUGSS1.DATA7.$used              = false;
+iDEBUGSS1.DATA8.$used              = false;
+iDEBUGSS1.DATA9.$used              = false;
+iDEBUGSS1.DATA10.$used             = false;
+iDEBUGSS1.DATA11.$used             = false;
+iDEBUGSS1.DATA12.$used             = false;
+iDEBUGSS1.DATA13.$used             = false;
+iDEBUGSS1.DATA14.$used             = false;
+iDEBUGSS1.DATA15.$used             = false;
+iDEBUGSS1.DATA16.$used             = false;
+iDEBUGSS1.DATA17.$used             = false;
+iDEBUGSS1.DATA18.$used             = false;
+iDEBUGSS1.DATA19.$used             = false;
+iDEBUGSS1.DATA20.$used             = false;
+iDEBUGSS1.DATA21.$used             = false;
+iDEBUGSS1.DATA22.$used             = false;
+iDEBUGSS1.DATA23.$used             = false;
+iDEBUGSS1.EMU0.$assign             = "A13";
+iDEBUGSS1.EMU1.$assign             = "D12";
+iDEBUGSS1.TCK.$assign              = "B15";
+iDEBUGSS1.TRSTn.$assign            = "B20";
+const iGPIO1                       = scripting.addPeripheral("GPIO");
+iGPIO1.$name                       = "MyGPIO1";
+iGPIO1.$assignVoltage              = "3.3 V";
+iGPIO1["4"].$assign                = "AA20";
+iGPIO1["4"].$used                  = true;
+iGPIO1["12"].$assign               = "V16";
+iGPIO1["27"].$assign               = "T14";
+iGPIO1["27"].$used                 = true;
+iGPIO1["28"].$assign               = "U18";
+iGPIO1["28"].$used                 = true;
+iGPIO1["44"].$assign               = "U13";
+iGPIO1["55"].$assign               = "T5";
+const iI2C1                        = scripting.addPeripheral("I2C");
+iI2C1.$name                        = "MyI2C0";
+iI2C1.$assign                      = "I2C0";
+iI2C1.$assignVoltage               = "3.3 V";
+iI2C1.SCL.$assign                  = "V3";
+iI2C1.SDA.$assign                  = "W2";
+const iMDIO1                       = scripting.addPeripheral("MDIO");
+iMDIO1.$name                       = "MyMDIO0";
+iMDIO1.$assignVoltage              = "3.3 V";
+iMDIO1.MDC.$assign                 = "W19";
+iMDIO1.MDIO.$assign                = "W14";
+const iOSC1                        = scripting.addPeripheral("OSC");
+iOSC1.$name                        = "MyOSC1";
+iOSC1.$assignVoltage               = "1.8 V";
+iOSC1.XO.$assign                   = "J19";
+iOSC1.XI.$assign                   = "K19";
+const iRGMII1                      = scripting.addPeripheral("RGMII");
+iRGMII1.$name                      = "MyRGMII2";
+iRGMII1.$assign                    = "RGMII2";
+iRGMII1.$assignVoltage             = "3.3 V";
+iRGMII1.RD0.$assign                = "Y13";
+iRGMII1.RD1.$assign                = "AA15";
+iRGMII1.RD2.$assign                = "AA14";
+iRGMII1.RD3.$assign                = "AA18";
+iRGMII1.RXC.$assign                = "Y14";
+iRGMII1.RX_CTL.$assign             = "AA16";
+iRGMII1.TD0.$assign                = "W17";
+iRGMII1.TD1.$assign                = "W20";
+iRGMII1.TD2.$assign                = "V14";
+iRGMII1.TD3.$assign                = "V13";
+iRGMII1.TXC.$assign                = "W21";
+iRGMII1.TX_CTL.$assign             = "U12";
+const iSERDES1                     = scripting.addPeripheral("SERDES");
+iSERDES1.$name                     = "MySERDES0";
+iSERDES1.$assignVoltage            = "1.8 V";
+iSERDES1.REFCLK_N.$assign          = "AA8";
+iSERDES1.REFCLK_P.$assign          = "AA9";
+const iSGMII1                      = scripting.addPeripheral("SGMII");
+iSGMII1.$name                      = "MySGMII1";
+iSGMII1.$assign                    = "SGMII1";
+iSGMII1.$assignVoltage             = "1.8 V";
+iSGMII1.RXN0.$assign               = "Y7";
+iSGMII1.RXP0.$assign               = "Y8";
+iSGMII1.TXN0.$assign               = "AA5";
+iSGMII1.TXP0.$assign               = "AA6";
+const iSYSTEM1                     = scripting.addPeripheral("SYSTEM");
+iSYSTEM1.$name                     = "MySYSTEM1";
+iSYSTEM1.$assignVoltage            = "3.3 V";
+iSYSTEM1.AUDIO_EXT_REFCLK0.$used   = false;
+iSYSTEM1.AUDIO_EXT_REFCLK1.$used   = false;
+iSYSTEM1.EXTINTn.$assign           = "U6";
+iSYSTEM1.EXT_REFCLK1.$used         = false;
+iSYSTEM1.FCLK_MUX.$used            = false;
+iSYSTEM1.OBSCLK0.$used             = false;
+iSYSTEM1.OBSCLK1.$used             = false;
+iSYSTEM1.OBSCLK2.$used             = false;
+iSYSTEM1.RESETSTATz.$assign        = "U2";
+iSYSTEM1.SOC_SAFETY_ERRORn.$assign = "V2";
+iSYSTEM1.SYNC0_OUT.$used           = false;
+iSYSTEM1.SYNC1_OUT.$used           = false;
+iSYSTEM1.SYNC2_OUT.$used           = false;
+iSYSTEM1.SYNC3_OUT.$used           = false;
+iSYSTEM1.SYSCLKOUT0.$used          = false;
+const iUART1                       = scripting.addPeripheral("UART");
+iUART1.$name                       = "MyUART3";
+iUART1.$assign                     = "USART3";
+iUART1.$assignVoltage              = "3.3 V";
+iUART1.$useCase                    = "UART_2";
+iUART1.RXD.$assign                 = "Y18";
+iUART1.TXD.$assign                 = "Y19";
+iUART1.CTSn.$assign                = "T15";
+iUART1.CTSn.$used                  = false;
+iUART1.RTSn.$assign                = "U19";
+iUART1.RTSn.$used                  = false;
+const iWKUP_I2C1                   = scripting.addPeripheral("WKUP_I2C");
+iWKUP_I2C1.$name                   = "MyWKUP_I2C0";
+iWKUP_I2C1.$assignVoltage          = "3.3 V";
+iWKUP_I2C1.SCL.$assign             = "F20";
+iWKUP_I2C1.SDA.$assign             = "H21";
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+iDEBUGSS1.$suggestSolution  = "DEBUG0";
+iGPIO1.$suggestSolution     = "GPIO0";
+iMDIO1.$suggestSolution     = "MDIO0";
+iOSC1.$suggestSolution      = "OSC1";
+iSERDES1.$suggestSolution   = "SERDES0";
+iSYSTEM1.$suggestSolution   = "SYSTEM0";
+iWKUP_I2C1.$suggestSolution = "WKUP_I2C0";

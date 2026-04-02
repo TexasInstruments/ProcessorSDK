@@ -1,0 +1,47 @@
+#--------------------------------------------------------
+# basic info
+SENSOR_MACRO_IN_HEADER          SENSOR_ONSEMI_AR0820_UB953_LI
+SENSOR_NAME_UPPERCASE           AR0820
+SENSOR_NAME_LOWERCASE           ar0820
+SENSOR_TEMPLATE_DIR             template_onsemi
+SENSOR_OUTPUT_DIR               out_ar0820
+SENSOR_DCC_ID                   820
+
+#--------------------------------------------------------
+# sensor config
+SENSOR_RESOLUTION_WIDTH         3840
+SENSOR_RESOLUTION_HEIGHT        2160
+SENSOR_META_HEIGHT_BEFORE          0
+SENSOR_META_HEIGHT_AFTER           0
+SENSOR_RAW_MSB_LOCATION           11
+SENSOR_INIT_FILE              input_ar0820/ar0820_regs.txt
+SENSOR_USE_PCAL_D3                 0
+
+# sensor stream on/off
+SENSOR_STREAM_REG_ADDR          0x301A
+SENSOR_STREAM_ON_VALUE          0x005C
+SENSOR_STREAM_OFF_VALUE         0x0058
+SENSOR_STREAM_ON_REG2           0
+SENSOR_STREAM_ON_VAL2           0x00
+
+#--------------------------------------------------------
+# serdes config
+SENSOR_8_BIT_I2C_ADDRESS        0x20
+SERIALIZER_8_BIT_I2C_ADDRESS    0x30
+SERDES_USE_FPDLINK4                0           #0: fpdlin3, 1: fpdlin4 
+SER_CFG_I2C_STRAP                  1           #0: 3.3V, 1: 1.8V
+
+#--------------------------------------------------------
+# GPIO settings
+# fpdlink3 LSB 4-bit for mask
+# fpdlink4 LSB 4-bit for mask + MSB 4-bit for GPIO_RMTEN
+SER_LOCAL_GPIO_DATA                0x0F        # 4-bit mask
+
+SER_GPIO_INPUT_CTRL             0xF0
+
+# clock divider setttings
+# fpdlink3 "SENSOR_INPUT_CLK = 4000 * M / N / SER_HS_CLK_DIV"
+# fpdlink4 "SENSOR_INPUT_CLK = 7550 * M / N / 8"                (fix SER_HS_CLK_DIV to 3) 
+SER_HS_CLK_DIV                  2           #0: 1x, 1:2x, 2:4x, 3:8x
+SER_DIV_M_VAL                   1
+SER_DIV_N_VAL                   40

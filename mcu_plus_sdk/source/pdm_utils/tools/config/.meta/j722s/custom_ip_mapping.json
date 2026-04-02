@@ -1,0 +1,22 @@
+{
+    "CSI TX ESC CLK": {
+		"ip_name": "J722S_DEV_CSI_TX_IF0",
+		"input_name": "DEV_CSI_TX_IF0_ESC_CLK_CLK",
+		"tisci_ip_name": "TISCI_DEV_CSI_TX_IF0",
+		"tisci_input_name": "TISCI_DEV_CSI_TX_IF0_ESC_CLK_CLK",
+		"lpsc_name": "LPSC_main_csi_tx0",
+		"programmable": true,
+		"default_freq_mhz": 16,
+        "enableLpsc": true
+	},
+	"CSI TX MAIN CLK": {
+		"ip_name": "J722S_DEV_CSI_TX_IF0",
+		"input_name": "DEV_CSI_TX_IF0_MAIN_CLK_CLK",
+		"tisci_ip_name": "TISCI_DEV_CSI_TX_IF0",
+		"tisci_input_name": "TISCI_DEV_CSI_TX_IF0_MAIN_CLK_CLK",
+		"lpsc_name": "LPSC_main_csi_tx0",
+		"programmable": true,
+		"default_freq_mhz": 500,
+        "enableLpsc": true
+	}
+}

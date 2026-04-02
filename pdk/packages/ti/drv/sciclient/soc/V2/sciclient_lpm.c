@@ -1,0 +1,119 @@
+/*
+ * Copyright (c) 2023, Texas Instruments Incorporated
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * *  Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ * *  Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * *  Neither the name of Texas Instruments Incorporated nor the names of
+ *    its contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+ * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/**
+ * \file sciclient_lpm.c
+ *
+ * \brief Implements low power mode sequence
+ *
+ */
+
+/* ========================================================================== */
+/*                             Include Files                                  */
+/* ========================================================================== */
+
+#include <stdint.h>
+#include <ti/csl/csl_types.h>
+#include <osal_hwi.h>
+#include <ti/drv/sciclient/sciclient.h>
+#include <ti/drv/sciclient/src/sciclient/sciclient_s2r.h>
+
+/* ========================================================================== */
+/*                           Macros & Typedefs                                */
+/* ========================================================================== */
+
+/* None */
+
+/* ========================================================================== */
+/*                            Global Variables                                */
+/* ========================================================================== */
+
+/* None */
+
+/* ========================================================================== */
+/*                          Function Definitions                              */
+/* ========================================================================== */
+
+int32_t Sciclient_prepareSleep(uint32_t *msg_recv)
+{
+    struct tisci_msg_prepare_sleep_req *req =
+        (struct tisci_msg_prepare_sleep_req *) msg_recv;
+    int32_t ret = CSL_PASS;
+
+    if (NULL == req)
+    {
+        ret = CSL_EFAIL;
+    }
+
+    /* Only DM_MANAGED mode is supported for now */
+    if ((ret != CSL_PASS) || (req->mode != TISCI_MSG_VALUE_SLEEP_MODE_DM_MANAGED))
+    {
+        ret = EINVAL;
+    }
+
+    return ret;
+}
+
+int32_t Sciclient_enterSleep(uint32_t *msg_recv)
+{
+    int32_t ret = CSL_PASS;
+    int32_t mode = -1;
+    struct tisci_msg_enter_sleep_req *req =
+        (struct tisci_msg_enter_sleep_req *) msg_recv;
+
+    if (NULL == req)
+    {
+        ret = CSL_EFAIL;
+    }
+
+    if (ret == CSL_PASS)
+    {
+        mode = req->mode;
+    }
+
+    if ((mode != TISCI_MSG_VALUE_SLEEP_MODE_SOC_OFF) &&
+        (mode != TISCI_MSG_VALUE_SLEEP_MODE_IO_ONLY_PLUS_DDR))
+    {
+        ret = EINVAL;
+    }
+    else
+    {
+        (void)osal_hwip_disable();
+
+        Sciclient_goRetention(mode);
+        /* We never reach this point as we enter into low power mode
+         * and we reload the DM during resume.
+         */
+    }
+
+    return ret;
+}

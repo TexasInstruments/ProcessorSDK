@@ -1,0 +1,20 @@
+/******************************************************************************
+ * FILE PURPOSE: Build configuration Script for the GPADC Driver
+ ******************************************************************************
+ * FILE NAME: config_mk.bld
+ *
+ * DESCRIPTION: 
+ *  This file contains the build configuration script for the GPADC driver
+ *  and is responsible for configuration of the paths for the various 
+ *  tools required to build the driver.
+ *
+ * Copyright (C) 2021, Texas Instruments, Inc.
+ *****************************************************************************/
+
+/* Configure the GPADC Release Version Information */
+var gpadcDriverReleaseVersion = (""+Pkg.version.replace(/\s/g, "")).split(',');
+
+var Build = xdc.useModule('xdc.bld.BuildEnvironment');
+Build.useTargets=null;
+
+

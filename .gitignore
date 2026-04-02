@@ -1,0 +1,218 @@
+# IDE
+.idea/
+.vscode/
+
+# tar
+*.tar.gz
+*.tar.xz
+
+# Compiler
+ti-cgt-armllvm_*/
+
+# Other Docs and release notes
+doxygen/
+internal_docs/
+index.html
+
+# ignore internal repos/packages 
+sdl/
+mcusw/
+psdk_rtos/
+
+# Download from server as tar/zip or binary
+mmalib_*/
+vxlib_*/
+cg_xml_*/
+fftlib*/
+mathlib*/
+dsplib*/
+protobuf*/
+
+# Repos and Dependencies
+trusted-firmware-a/
+vhwa_c_models/
+core-secdev-k3/
+glm/
+opkg-utils*/
+optee_os/
+SRVDEPS/
+
+# staging area
+targetfs/
+bootfs/
+toolchain/
+downloads/
+toolchain/
+.component_versions_*_env
+
+# Temp Files
+temp.md
+
+
+###############################################
+
+# App Utils
+app_utils/lib/
+
+###############################################
+
+# c7x-mma-tidl 
+c7x-mma-tidl/out/*
+c7x-mma-tidl/ti_dl/lib/
+c7x-mma-tidl/ti_dl/test/out*
+c7x-mma-tidl/ti_dl/algo/*.c
+c7x-mma-tidl/ti_dl/algo/src/*.asm
+c7x-mma-tidl/ti_dl/algo/*.asm
+c7x-mma-tidl/ti_dl/algo/src/priv/*.asm
+c7x-mma-tidl/ti_dl/algo/*.h
+c7x-mma-tidl/ti_dl/test/out/*
+c7x-mma-tidl/ti_dl/test/testvecs/config/tidl_models/*.bin
+c7x-mma-tidl/ti_dl/utils/tidlModelImport/*.ilk
+c7x-mma-tidl/ti_dl/utils/tidlModelImport/*.pdb
+c7x-mma-tidl/ti_dl/utils/tidlModelImport/*.gitignore
+c7x-mma-tidl/ti_dl/test/testvecs/config/caffe-jacinto-models/*
+c7x-mma-tidl/ti_dl/test/testvecs/config/tensorflow_models/*
+c7x-mma-tidl/ti_dl/docs/doxygen/html/*
+c7x-mma-tidl/ti_dl/docs/doxygen/man/*
+c7x-mma-tidl/ti_dl/test/testvecs/models/*
+c7x-mma-tidl/ti_dl/test/testvecs/output/*
+c7x-mma-tidl/ti_dl/test/trace/*
+c7x-mma-tidl/ti_dl/test/testvecs/config/tidl_models/*
+c7x-mma-tidl/ti_dl/test/quantStatsTool/*
+c7x-mma-tidl/ti_dl/utils/tidlModelGraphviz/out/*
+c7x-mma-tidl/ti_dl/utils/tidlModelImport/out/*
+c7x-mma-tidl/ti_dl/utils/perfsim/ti_cnnperfsim*
+c7x-mma-tidl/ti_dl/utils/perfsim/*.csv
+c7x-mma-tidl/ti_dl/utils/perfsim/*.xlsx
+c7x-mma-tidl/ti_dl/utils/tidlDebuggerEVM/__pycache__
+c7x-mma-tidl/ti_dl/utils/perfsim/*.txt
+c7x-mma-tidl/ti_dl/utils/tidlDebuggerEVM/evm_connection/__pycache__
+c7x-mma-tidl/ti_dl/utils/tidlDebuggerEVM/comparator/__pycache__
+c7x-mma-tidl/ti_dl/utils/tidlDebuggerEVM/inference/__pycache__
+c7x-mma-tidl/ti_dl/utils/tidlMultiDeviceDebugger/__pycache__
+c7x-mma-tidl/ti_dl/utils/tidlMultiDeviceDebugger/page_handlers/__pycache__
+c7x-mma-tidl/arm-tidl/onnxrt_ep/out/
+c7x-mma-tidl/arm-tidl/rt/out/
+c7x-mma-tidl/arm-tidl/tfl_delegate/out/
+c7x-mma-tidl/arm-tidl/tidlrt_ep/out/
+c7x-mma-tidl/arm-tidl/tiovx_kernels/lib/
+c7x-mma-tidl/arm-tidl/tiovx_kernels/out/
+
+
+# c7x-mma-tidl Docs
+c7x-mma-tidl/ti_dl/docs
+c7x-mma-tidl/ti_dl/utils/tidlrtInterface/docs
+c7x-mma-tidl/TIDeepLearningProduct_ReleaseNotes.html
+
+###############################################
+
+# Edgeai
+edgeai/edgeai-apps-utils/LINUX
+edgeai/edgeai-tiovx-kernels/LINUX
+edgeai/LINUX/
+
+./edgeai/edgeai-tiovx-apps/docs
+./edgeai/edgeai-tiovx-apps/docs/docs
+
+###############################################
+
+# Imaging
+imaging/docs
+imaging/imaging_release_notes.html
+
+###############################################
+
+# Ethfw
+ethfw/ethfw_logs
+ethfw/docs
+ethfw/ethfw_manifest.html
+ethfw/ethfw_release_notes.html
+
+###############################################
+
+# Vision Apps
+vision_apps/docs
+vision_apps/vision_apps_release_notes.html
+
+###############################################
+
+# Vxlib
+vxlib/docs
+vxlib/vxlib_*_release_notes.html
+
+###############################################
+
+# Tiovx
+tiovx/docs
+tiovx/tiovx_release_notes.html
+
+###############################################
+
+# TidlAlg
+tiadalg/lib/
+tiadalg/out/
+tiadalg/docs
+tiadalg/TIAutonomousDrivingAlgorithmLibrary_ReleaseNotes.html
+
+
+###############################################
+
+# ivision
+ivision/docs
+ivision/ivision_release_notes.html
+
+###############################################
+
+# ti-perception-toolkit
+ti-perception-toolkit/docs
+ti-perception-toolkit/ptk_release_notes.html
+
+###############################################
+
+# MCU Plus SDK 
+mcu_plus_sdk/docs/am64x_am243x/T_M_SEM_Adapter_Board_files.zip
+mcu_plus_sdk/**/CMakeError.log
+mcu_plus_sdk/**/CMakeOutput.log
+mcu_plus_sdk/**/CMakeCache.txt
+
+
+# MCU Plus SDK Docs
+mcu_plus_sdk/docs
+mcu_plus_sdk/source/pdm_utils/docs
+mcu_plus_sdk/source/drivers/vhwa/docs
+mcu_plus_sdk/source/safety_checkers/docs
+mcu_plus_sdk/README_FIRST_AM62PX.html
+mcu_plus_sdk/README_FIRST_J722S.html
+mcu_plus_sdk/README_FIRST_AM263X.html
+mcu_plus_sdk/README_FIRST_AM243X.html
+mcu_plus_sdk/README_FIRST_AM62AX.html
+mcu_plus_sdk/README_FIRST_AWR294X.html
+mcu_plus_sdk/README_FIRST_AM64X.html
+mcu_plus_sdk/README_FIRST_AM62X.html
+mcu_plus_sdk/README_FIRST_AM273X.html
+
+
+###############################################
+
+# PDK
+
+pdk/**/.*
+pdk/**/lib
+pdk/**/packages/ti/boot/sbl/example/boot_app/multicore_images/
+pdk/**/packages/ti/boot/sbl/example/boot_app/binary/
+pdk/**/packages/ti/safety_checkers
+pdk/**/*.d
+pdk/**/*.o
+pdk/**/CMakeError.log
+pdk/**/CMakeOutput.log
+pdk/**/CMakeCache.txt
+
+pdk/packages/ti/binary/
+
+# PDK Docs
+pdk/**/docs/
+pdk/**/internal_docs/
+pdk/**/system-firmware-public-documentation/
+
+
+###############################################

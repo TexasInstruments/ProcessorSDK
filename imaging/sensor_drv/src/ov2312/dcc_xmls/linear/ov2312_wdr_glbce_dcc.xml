@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GLBCE_xml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--this is a comment-->
+	<dcc_name>glbce</dcc_name>
+	<dcc_header>
+		<camera_module_id>    2312 </camera_module_id>
+		<dcc_descriptor_id>   6 </dcc_descriptor_id>
+		<algorithm_vendor_id>  1 </algorithm_vendor_id>
+		<tunning_tool_version> 0 </tunning_tool_version>
+	</dcc_header>
+	<!--=======================================================================-->
+
+	<typedef>
+		<iss_glbce type="struct">
+            <strength      type="uint32"> </strength>
+            <intensity_var type="uint32"> </intensity_var>
+            <space_var     type="uint32"> </space_var>
+            <slope_min_lim type="uint32">  </slope_min_lim>
+            <slope_max_lim type="uint32">  </slope_max_lim>
+            <fwd_prcpt_en  type="uint32">  </fwd_prcpt_en>
+            <fwd_prcpt_lut type="uint32[65]"> </fwd_prcpt_lut>
+            <rev_prcpt_en  type="uint32">  </rev_prcpt_en>
+            <rev_prcpt_lut type="uint32[65]"> </rev_prcpt_lut>
+            <asym_lut      type="uint32[33]"> </asym_lut>
+		</iss_glbce>
+	</typedef>
+	<!--=======================================================================-->
+	<use_case val="65535"> <!-- DCC_USE_CASE_PREVIEW_ALL -->
+		<n-space>
+			<region0 class="0">
+			<gain val="0" min="0" max="100">  </gain>
+			</region0>
+		</n-space>
+
+		<parameter_package>
+		<!-- parameters for photospace class 0-->
+			<glbce_params type="iss_glbce" >
+			{
+				0, // strength_ir: u8
+				12, // intensity_var: u4
+				7, // spatial_var: u4
+				64, // slope_min_limit: u8
+				72, // slope_max_limit: u8
+				0, // fwd_prcpt_lut_enable
+				{   // fwd_prcpt_lut
+				  #include "fwd_prcpt_lut.txt"
+				},
+				0, // rev_prcpt_lut_enable
+				{   // rev_prcpt_lut
+				  #include "rev_prcpt_lut.txt"
+				},
+				{   // asym_lut
+				  #include "asym_lut.txt"
+				}
+			}
+			</glbce_params>
+		</parameter_package>
+	</use_case>
+	<!--=====================================================================-->
+</GLBCE_xml>

@@ -1,0 +1,38 @@
+#
+# This file is the makefile for updating sciserver version info.
+#
+
+all: gen_rmpmhal_version gen_sciserver_version
+
+.PHONY: gen_rmpmhal_version
+.PHONY: gen_sciserver_version
+
+gen_rmpmhal_version:
+ifneq ($(OS),Windows_NT)
+	@$(ECHO) \# Check and update: src/version/rmpmhal_version.h
+	@TMPFILE=$$(mktemp) && \
+	src/version/generate_rmpmhal_ver.sh > $$TMPFILE && \
+	if [ -s $$TMPFILE ]; \
+	then \
+		if cmp -s src/version/rmpmhal_version.h $$TMPFILE; \
+		then rm $$TMPFILE; \
+		else mv $$TMPFILE src/version/rmpmhal_version.h; \
+		fi; \
+	else rm $$TMPFILE; \
+	fi
+endif
+
+gen_sciserver_version:
+ifneq ($(OS),Windows_NT)
+	@$(ECHO) \# Check and update: src/version/sciserver_version.h
+	@TMPFILE=$$(mktemp) && \
+	src/version/generate_sciserver_ver.sh > $$TMPFILE && \
+	if [ -s $$TMPFILE ]; \
+	then \
+		if cmp -s src/version/sciserver_version.h $$TMPFILE; \
+		then rm $$TMPFILE; \
+		else mv $$TMPFILE src/version/sciserver_version.h; \
+		fi; \
+	else rm $$TMPFILE; \
+	fi
+endif

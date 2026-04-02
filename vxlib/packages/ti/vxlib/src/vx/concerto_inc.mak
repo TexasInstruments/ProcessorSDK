@@ -1,0 +1,24 @@
+LIBLIST := vx/VXLIB_convolve_3x3_i8u_c16s_o8u \
+vx/VXLIB_convolve_3x3_i8u_c16s_o16s \
+vx/VXLIB_convolve_5x5_i8u_c16s_o8u \
+vx/VXLIB_convolve_5x5_i8u_c16s_o16s \
+vx/VXLIB_convolve_7x7_i8u_c16s_o8u \
+vx/VXLIB_convolve_7x7_i8u_c16s_o16s \
+vx/VXLIB_add_i8u_i16s_o16s \
+vx/VXLIB_addWeight_i8u_i8u_o8u \
+vx/VXLIB_addSquare_i8u_i16s_o16s \
+vx/VXLIB_harrisCornersDetect_i32f \
+vx/VXLIB_histogramSimple_i8u_o32u \
+vx/VXLIB_histogramCdfLut_i32u_o8u \
+vx/VXLIB_tableLookup_i8u_o8u \
+vx/VXLIB_fastCornersDetect_i8u \
+vx/VXLIB_fastCornersScore_i8u \
+vx/VXLIB_fastCornersNMS_i8u \
+vx/VXLIB_channelCopy_1to1_i8u_o8u \
+vx/VXLIB_channelCombine_2to1_i8u_o8u \
+vx/VXLIB_scharr_3x3_i8u_o16s_o16s \
+vx/VXLIB_channelExtract_1of2_i8u_o8u \
+vx/VXLIB_channelExtract_1of4_i8u_o8u \
+vx/VXLIB_colorConvert_RGBtoYUV4_i8u_o8u \
+vx/VXLIB_colorConvert_RGBXtoYUV4_i8u_o8u \
+vx/VXLIB_colorConvert_YUVXtoIYUV_i8u_o8u \

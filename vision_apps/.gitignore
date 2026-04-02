@@ -1,0 +1,9 @@
+tools/scripts/build-rgx.sh
+internal_docs
+lib/
+out/
+test_out/
+*.egg-info
+*.pyc
+__pycache__
+platform/*/rtos/*/generated

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IPIPE_DPC_OTF_xml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--this is comment-->
+  <dcc_name>rawfe_dpc_otf</dcc_name>
+  <dcc_header>
+    <camera_module_id>     2312 </camera_module_id>
+	  <dcc_descriptor_id>   8 </dcc_descriptor_id>
+	  <algorithm_vendor_id>  1 </algorithm_vendor_id>
+	  <tunning_tool_version> 0 </tunning_tool_version>
+  </dcc_header>
+  <!--=======================================================================-->
+    <typedef>
+		<cfg_dpc_otf_vars type="struct">
+		  <enable	    type="uint16">  </enable>
+		  <thr_0	    type="uint16">  </thr_0>
+		  <slp_0	    type="int16">   </slp_0>
+		  <thr_512	    type="uint16">  </thr_512>
+		  <slp_512	    type="int16">   </slp_512>
+		  <thr_1024	    type="uint16">  </thr_1024>
+		  <slp_1024	    type="int16">   </slp_1024>
+		  <thr_2048	    type="uint16">  </thr_2048>
+		  <slp_2048	    type="int16">   </slp_2048>
+		  <thr_4096	    type="uint16">  </thr_4096>
+		  <slp_4096	    type="int16">   </slp_4096>
+		  <thr_8192	    type="uint16">  </thr_8192>
+		  <slp_8192	    type="int16">   </slp_8192>
+		  <thr_16384	type="uint16">  </thr_16384>
+		  <slp_16384	type="int16">   </slp_16384>
+		  <thr_32768	type="uint16">  </thr_32768>
+		  <slp_32768	type="int16">   </slp_32768>
+		</cfg_dpc_otf_vars>
+    </typedef>    
+  <!--=======================================================================-->
+    
+    <use_case val="1023">
+        <n-space>
+		
+            <region0 class="0">
+				<colortemperature val="2" min="0" max="20000">  </colortemperature>
+				<exposure val="1" min="0" max="10000000">  </exposure>
+				<gain val="0" min="0" max="1024">  </gain>
+			</region0>
+		
+		</n-space>
+		
+       <parameter_package>           
+             <cfg_rawfe_dpc_otf type="cfg_dpc_otf_vars">
+			 {
+				1, // enable
+				65535, // thr_0       U16
+				0, // slp_0       S12Q8
+				65535, // thr_512     U16
+				0, // slp_512     S12Q8
+				65535, // thr_1024    U16
+				0, // slp_1024    S12Q8
+				65535, // thr_2048    U16
+				0, // slp_2048    S12Q8
+				65535, // thr_4096    U16
+				0, // slp_4096    S12Q8
+				65535, // thr_8192    U16
+				0, // slp_8192    S12Q8
+				65535, // thr_16384   U16
+				0, // slp_16384   S12Q8
+				65535, // thr_32768   U16
+				0, // slp_32768   S12Q8
+			}
+			</cfg_rawfe_dpc_otf>
+        </parameter_package>
+		
+    </use_case>
+	
+  <!--=====================================================================-->
+</IPIPE_DPC_OTF_xml>

@@ -1,0 +1,159 @@
+#*******************************************************************************
+#* FILE PURPOSE: Top level makefile for Creating Component Libraries for ARM
+#* architectures
+#*******************************************************************************
+#* FILE NAME: makefile
+#*
+#* DESCRIPTION: Defines Compiler tools paths, libraries , Build Options 
+#*
+#*
+#*******************************************************************************
+#*
+# (Mandatory) Specify where various tools are installed.
+
+#Default Do not use the shared object libraries for the test/example applications
+export USEDYNAMIC_LIB ?= "no"
+
+# Output for prebuilt generated libraries
+export DEVICE ?=k2h
+export ARMV7LIBDIR ?=./lib
+export ARMV7OBJDIR ?=./obj/$(DEVICE)
+export ARMV7BINDIR ?=./bin/$(DEVICE)
+
+# ROOT Directory
+export ROOTDIR := ../../..
+
+
+# INCLUDE Directory
+export INCDIR := ../../..;$(PDK_INSTALL_PATH);$(ROOTDIR)
+
+# Common Macros used in make
+
+ifndef RM
+export RM = rm -f
+endif
+
+ifndef CP
+export CP = cp -p
+endif
+
+export MKDIR = mkdir -p
+
+ifndef RMDIR
+export RMDIR = rm -rf
+endif
+
+ifndef SED
+export SED = sed
+endif
+
+ifndef MAKE
+export MAKE = make
+endif
+
+# PHONY Targets
+.PHONY: all clean lib distclean examples install installbin tests installsa3gppEnabler installlib  installhdr utils
+
+# all rule
+all: .executables
+.executables: lib examples utils
+
+tests:
+# dummy rule to get pass sa build error when top level makefile issues this rule
+
+utils:
+	$(MAKE) -f ./util/coreDump/$(DEVICE)/armv7/linux/build/makefile all
+
+# Libraries
+lib: .libraries
+
+# examples Stub to add Examples
+examples: 
+	$(MAKE) -f ./example/SaBasicExample/$(DEVICE)/armv7/linux/build/makefile all
+	$(MAKE) -f ./example/SaMultiCoreExample/$(DEVICE)/armv7/linux/build/makefile all
+
+# Make rule to create $(ARMV7LIBDIR)/libsa.a libsa.so library
+.libraries: $(ARMV7LIBDIR)/libsa.a libsa.so
+
+$(ARMV7LIBDIR)/libsa.a:
+	@$(MAKE) -f ./build/armv7/libsa_aearmv7.mk $@
+
+libsa.so:	
+	@$(MAKE) -f ./build/armv7/libsa_aearmv7.mk $@	
+	
+# Rule to clean $(ARMV7LIBDIR)/libsa.a library
+clean:
+	@$(MAKE) -f ./build/armv7/libsa_aearmv7.mk $@
+	@$(MAKE) -f ./example/SaBasicExample/$(DEVICE)/armv7/linux/build/makefile $@	
+	@$(MAKE) -f ./example/SaMultiCoreExample/$(DEVICE)/armv7/linux/build/makefile $@
+	@$(MAKE) -f ./util/coreDump/$(DEVICE)/armv7/linux/build/makefile $@	
+	@$(RM) $(ARMV7LIBDIR)/libsa.a
+	@$(RM) $(ARMV7LIBDIR)/libsa.so
+	@$(RM) $(ARMV7LIBDIR)/libsa.so.*	
+	@$(RM) $(ARMV7LIBDIR)/.created	
+	@$(RMDIR) $(ARMV7OBJDIR)/sa
+	@$(RMDIR) $(ARMV7BINDIR)/sa
+
+distclean: clean
+
+installbin:
+	install -d $(INSTALL_BIN_BASE_DIR)
+	install -c -m 755 $(ARMV7BINDIR)/sa/example/saBasicExample.out $(INSTALL_BIN_BASE_DIR)/saBasicExample_$(DEVICE).out
+	install -c -m 755 $(ARMV7BINDIR)/sa/example/saMCExample.out $(INSTALL_BIN_BASE_DIR)/saMCExample_$(DEVICE).out
+	install -c -m 755 $(ARMV7BINDIR)/sa/util/saCoreDumpUtil_$(DEVICE).out $(INSTALL_BIN_BASE_DIR)/saCoreDumpUtil_$(DEVICE).out
+	install -c -m 755 $(ARMV7BINDIR)/sa/example/saBasicExample_so.out $(INSTALL_BIN_BASE_DIR)/saBasicExample_so_$(DEVICE).out
+	install -c -m 755 $(ARMV7BINDIR)/sa/example/saMCExample_so.out $(INSTALL_BIN_BASE_DIR)/saMCExample_so_$(DEVICE).out
+
+install:
+	install -d $(INSTALL_INC_BASE_DIR)/ti/drv/sa/fw/v0
+	install -d $(INSTALL_INC_BASE_DIR)/ti/drv/sa/fw/v1
+	install -d $(INSTALL_LIB_BASE_DIR)
+	$(CP) ./*.h          $(INSTALL_INC_BASE_DIR)/ti/drv/sa
+	$(CP) ./fw/safw.h    $(INSTALL_INC_BASE_DIR)/ti/drv/sa/fw
+	$(CP) ./fw/v0/safw.h $(INSTALL_INC_BASE_DIR)/ti/drv/sa/fw/v0
+	$(CP) ./fw/v1/safw.h $(INSTALL_INC_BASE_DIR)/ti/drv/sa/fw/v1
+	$(CP) ./fw/v0/*_bin.c   $(INSTALL_INC_BASE_DIR)/ti/drv/sa/fw/v0
+	$(CP) ./fw/v1/*_bin.c   $(INSTALL_INC_BASE_DIR)/ti/drv/sa/fw/v1
+	@$(CP) -r $(ARMV7LIBDIR)/*.a       $(INSTALL_LIB_BASE_DIR)
+	@$(CP) -r $(ARMV7LIBDIR)/*.so       $(INSTALL_LIB_BASE_DIR)	
+	@$(CP) -r $(ARMV7LIBDIR)/*.so.*     $(INSTALL_LIB_BASE_DIR)
+
+
+ifeq ($(SA3GPPENABLER_IFACE_FILES), yes)
+installhdr:	
+	@install -d $(SA3GPPENABLER_INSTALL_BASE_DIR)/usr/include/ti/drv/sa/sa3gppEnabler
+	@$(CP) ./sa3gppEnabler/sa3gpp.h   $(SA3GPPENABLER_INSTALL_BASE_DIR)/usr/include/ti/drv/sa/sa3gppEnabler
+	@$(CP) ./sa3gppEnabler/sa3gppver.h   $(SA3GPPENABLER_INSTALL_BASE_DIR)/usr/include/ti/drv/sa/sa3gppEnabler
+	@echo " "
+	@echo "     installed Sa 3GPP enabler interface files under" $(SA3GPPENABLER_INSTALL_BASE_DIR)/usr/include
+	@echo "     installed SA 3gpp Enabler Library files under" $(SA3GPPENABLER_INSTALL_BASE_DIR)/usr/lib	
+	@echo " "
+else
+installhdr:
+	@echo " "
+	@echo "     installed Sa 3GPP enabler library files under" $(SA3GPPENABLER_INSTALL_BASE_DIR)/usr/lib
+	@echo " "
+endif
+
+installlib:
+	@install -d $(SA3GPPENABLER_INSTALL_BASE_DIR)/usr/lib
+	@$(CP) -r ./sa3gppEnabler/lib/armv7/*.a     $(SA3GPPENABLER_INSTALL_BASE_DIR)/usr/lib
+	@$(CP) -r ./sa3gppEnabler/lib/armv7/*.so    $(SA3GPPENABLER_INSTALL_BASE_DIR)/usr/lib
+	@$(CP) -r ./sa3gppEnabler/lib/armv7/*.so*   $(SA3GPPENABLER_INSTALL_BASE_DIR)/usr/lib
+
+ifndef SA3GPPENABLER_INSTALL_BASE_DIR
+installsa3gppenabler:
+	@echo "     Error:"
+	@echo "           SA3GPPENABLER_INSTALL_BASE_DIR is not defined"
+	@echo " "
+	@echo "     Usage:"
+	@echo "           make -f makefile_armv7 SA3GPPENABLER_INSTALL_BASE_DIR=<base_dir> SA3GPPENABLER_IFACE_FILES=yes <optional>"
+	@echo " "
+	@echo "     Description: "
+	@echo "          Installs the Sa 3gpp Enabler library files under <base_dir>/usr/lib and"
+	@echo "          when SA3GPPENABLER_IFACE_FILES = yes,"
+	@echo "          installs the 3gpp enabler interface files under <base_dir>/usr/include/ti/drv/sa/sa3gppEnabler"
+	@echo " "
+else
+installsa3gppenabler: installlib installhdr
+endif

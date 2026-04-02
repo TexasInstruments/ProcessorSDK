@@ -1,0 +1,29 @@
+# Format:
+# Run script | Delay in seconds | orig datasheet produced by app | datasheet folder | renamed datasheet name in folder | Datasheet Title | Num cameras
+
+# Demos without capture
+run_app_tidl.sh            | 30 | dl_demos_app_tidl.md       | 02_dl_demos | 020_app_tidl_8bit_datasheet.md | Object Classification Application (8bit) Datasheet | 0 |
+run_app_tidl_16bit.sh      | 10 | dl_demos_app_tidl.md       | 02_dl_demos | 021_app_tidl_16bit_datasheet.md | Object Classification Application (16bit) Datasheet | 0 |
+run_app_tidl_avp.sh        | 60 | dl_demos_app_tidl_avp.md   | 02_dl_demos | 026_app_tidl_avp_datasheet.md | Auto Valet Parking Application 1 Datasheet | 0 |
+run_app_tidl_avp2.sh       | 35 | dl_demos_app_tidl_avp2.md  | 02_dl_demos | 027_app_tidl_avp2_datasheet.md | Auto Valet Parking Application 2 Datasheet | 0 |
+run_app_tidl_avp3.sh       | 35 | dl_demos_app_tidl_avp3.md  | 02_dl_demos | 028_app_tidl_avp3_datasheet.md | Auto Valet Parking Application 3 Datasheet | 0 |
+run_app_tidl_od.sh         | 10 | dl_demos_app_tidl_od.md    | 02_dl_demos | 023_app_tidl_od_datasheet.md | Object Detection Application Datasheet | 0 |
+run_app_tidl_seg.sh        | 10 | dl_demos_app_tidl_seg.md   | 02_dl_demos | 024_app_tidl_seg_8bit_datasheet.md | Semantic Segmentation Application (8bit) Datasheet | 0 |
+run_app_tidl_seg_16bit.sh  | 10 | dl_demos_app_tidl_seg.md   | 02_dl_demos | 025_app_tidl_seg_16bit_datasheet.md | Semantic Segmentation Application (16bit) Datasheet | 0 |
+run_app_tidl_vl.sh         | 10 | dl_demos_app_tidl_vl.md    | 02_dl_demos | 030_app_tidl_vl_datasheet.md | Visual Localization Application Datasheet | 0 |
+run_app_sfm.sh             | 15 | cv_demos_app_sfm.md        | 10_cv_demos | 101_app_sfm_datasheet.md | Structure From Motion Application Datasheet | 0 |
+run_app_stereo.sh          | 20 | basic_demos_app_stereo.md  | 01_basic_demos | 014_app_app_stereo_datasheet.md | Stereo Disparity Application Datasheet | 0 |
+run_app_dof.sh             | 10 | basic_demos_app_dense_optical_flow.md | 01_basic_demos | 015_app_dense_optical_flow_datasheet.md | Dense Optical Flow Application Datasheet | 0 |
+
+# Demos with capture
+run_app_single_cam.sh     | 10 | basic_demos_app_single_cam.md    | 01_basic_demos | 010_app_single_cam_datasheet.md | Single Camera Application Datasheet | 1 |
+run_app_tidl_cam.sh       | 10 | dl_demos_app_tidl_cam.md         | 02_dl_demos | 022_app_tidl_cam_datasheet.md | Camera based Object Classification Application Datasheet | 1 |
+run_app_tidl_od_cam.sh    | 10 | dl_demos_app_tidl_od_cam.md      | 02_dl_demos | 0231_app_tidl_od_cam_datasheet.md | Camera Based Object Detection Application Datasheet | 1 |
+run_app_tidl_seg_cam.sh   | 10 | dl_demos_app_tidl_seg_cam.md     | 02_dl_demos | 0251_app_tidl_seg_cam_datasheet.md | Camera Based Semantic Segmentation Application Datasheet | 1 |
+run_app_multi_cam.sh      | 10 | basic_demos_app_multi_cam.md     | 01_basic_demos | 011_app_multi_cam_4ch_datasheet.md | Multi camera application (4Ch) Datasheet | 4 |
+run_app_multi_cam.sh      | 10 | basic_demos_app_multi_cam.md     | 01_basic_demos | 012_app_multi_cam_8ch_datasheet.md | Multi camera application (8Ch) Datasheet | 8 |
+#run_app_tidl_avp4.sh     | 10 | dl_demos_app_tidl_avp4.md        | 02_dl_demos | 029_app_tidl_avp4_datasheet.md | Auto Valet Parking Application 3 Datasheet | 4 |
+run_app_srv.sh            | 10 | apps_srv_demos_app_srv_camera.md | 03_srv_demos | 051_app_srv_camera_datasheet.md | Surround View Application Datasheet | 4 |
+
+# Demo that doesn't have datasheet (may need to provision differently, or just run standalone)
+#run_app_srv_avp.sh        | 10 | dl_demos_app_tidl.md             | 03_srv_demos |  |

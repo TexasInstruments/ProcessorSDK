@@ -1,0 +1,1 @@
+/opt/vision_apps/vx_app_multi_cam_ahp.out --cfg /opt/vision_apps/app_multi_cam.cfg

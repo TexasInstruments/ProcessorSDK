@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfg_pcid_xml xmlns:xsi="http://www.w3.org/2001/xmlschema-instance" xmlns:xsd="http://www.w3.org/2001/xmlschema">
+  <!--this is a comment-->
+    <dcc_name>cfg_pcid</dcc_name>
+    <dcc_header>
+		<camera_module_id>    2312 </camera_module_id>
+	    <dcc_descriptor_id>   39 </dcc_descriptor_id>
+	    <algorithm_vendor_id>  1 </algorithm_vendor_id>
+	    <tunning_tool_version> 0 </tunning_tool_version>
+    </dcc_header>
+<!--=======================================================================-->
+    <typedef>
+        <cfg_pcid_vars type="struct">
+            <pcid_i_fmt type="uint32"> </pcid_i_fmt>
+            <pcid_o_fmt type="uint32"> </pcid_o_fmt>
+            <pcid_o_sel type="uint32"> </pcid_o_sel>
+
+            <pcid_ha_th1 type="uint32"> </pcid_ha_th1>
+            <pcid_ha_th2 type="uint32"> </pcid_ha_th2>
+            <pcid_ha_th3 type="uint32"> </pcid_ha_th3>
+            <pcid_hfx_scale type="uint32"> </pcid_hfx_scale>
+            <pcid_hfx_scale_ir type="uint32"> </pcid_hfx_scale_ir>
+            <pcid_irsub_scale type="uint32[4]"> </pcid_irsub_scale>
+            <pcid_irsub_cutoff type="uint32"> </pcid_irsub_cutoff>
+            <pcid_irsub_trans_bw type="uint32"> </pcid_irsub_trans_bw>
+            <pcid_irsub_trans_bw_recip type="uint32"> </pcid_irsub_trans_bw_recip>
+            <pcid_dist_factor type="uint32[5]"> </pcid_dist_factor>
+
+            <pcid_remap type="uint16"> </pcid_remap>
+            <pcid_remap_lut type="uint16[609]"> </pcid_remap_lut>
+        </cfg_pcid_vars>
+    </typedef>
+<!--=======================================================================-->
+    <use_case val="1023">
+        <n-space>
+            <region0 class="0">
+                <exposure val="1" min="0" max="2000000">  </exposure>
+                <gain val="0" min="0" max="100000">  </gain>
+            </region0>
+        </n-space>
+
+        <parameter_package>
+            <pcid_dcc type="cfg_pcid_vars">
+            {
+              0     // pcid_i_fmt      // RGBIR format: 0~7
+              0     // pcid_o_fmt      // 0: B at IR; 1: R at IR
+              0     // pcid_o_sel      // 0: IR to DDR; 1: IR to VISS
+
+               8192  // pcid_ha_th1
+              16320  // pcid_ha_th2
+              32768  // pcid_ha_th3
+              128    // pcid_hfx_scale
+              128    // pcid_hfx_scale_ir
+              {256,256,256,256}    // pcid_irsub_scale
+              64745  // pcid_irsub_cutoff
+                  5  // pcid_irsub_trans_bw
+                 51  // pcid_irsub_trans_bw_recip
+              {256,256,192,128,64}  // pcid_dist_factor[5]
+
+              1     // pcid_remap      // remapLUT enable
+              {
+                  //#include "lut_pcid.txt"                          // 16b to 12b
+                  #include "lut_pcid_remap_16bto8b_shf8_blk0.txt"    // 16b to 8b
+              }
+            }
+          </pcid_dcc>
+        </parameter_package>
+    </use_case>
+<!--=====================================================================-->
+</cfg_pcid_xml>

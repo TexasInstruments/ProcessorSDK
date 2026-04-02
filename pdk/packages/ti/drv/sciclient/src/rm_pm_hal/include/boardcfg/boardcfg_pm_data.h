@@ -1,0 +1,205 @@
+/*
+ * System Firmware Source File
+ *
+ * Board Configuration Data Structures
+ *
+ * Copyright (C) 2025, Texas Instruments Incorporated
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * *  Redistributions of source code must retain the above copyright
+ * notice, this list of conditions and the following disclaimer.
+ *
+ * *  Redistributions in binary form must reproduce the above copyright
+ * notice, this list of conditions and the following disclaimer in the
+ * documentation and/or other materials provided with the distribution.
+ *
+ * *  Neither the name of Texas Instruments Incorporated nor the names of
+ * its contributors may be used to endorse or promote products derived
+ * from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+ * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+#ifndef BOARD_CFG_PM_H
+#define BOARD_CFG_PM_H
+
+#define BOARDCFG_PM_LPM_CFG_MAGIC_NUM          (0x4C41U)
+#define BOARDCFG_PM_PMIC_CFG_MAGIC_NUM         (0x8A1DU)
+#define BOARDCFG_PM_PLL_CFG_MAGIC_NUM          (0xC31EU)
+#define BOARDCFG_PM_DEV_CFG_MAGIC_NUM          (0x74B1U)
+#define BOARDCFG_PM_RSVD_ENTRY_CFG_MAGIC_NUM   (0x3CFAU)
+
+#define BOARDCFG_PM_ABI_MAJ_VALUE_V0           (0x00)
+#define BOARDCFG_PM_ABI_MIN_VALUE_V0           (0x01)
+
+#define BOARDCFG_PM_ABI_MAJ_VALUE_V1           (0x01)
+#define BOARDCFG_PM_ABI_MIN_VALUE_V1           (0x01)
+#define PM_RSVD_ENTRIES_MAX                    (32U)
+
+/**
+ * \brief Contains a unique magic number for each substructure and the size
+ *      of the associated superstructure for data validation/API
+ *      compatibility checks.
+ *
+ * \param magic Unique magic number for data integrity check.
+ * \param size `sizeof(superstructure containing this header)` for data
+ *           integrity check.
+ */
+struct boardcfg_substructure_pm_header {
+	uint16_t	magic;
+	uint16_t	size;
+} __attribute__((__packed__));
+
+/**
+ * \brief Board Config data ABI version.
+ *
+ * \param boardcfg_abi_maj Major Board Config data ABI version.
+ * \param boardcfg_abi_min Minor Board Config data ABI version.
+ */
+struct boardcfg_abi_pm_rev {
+	uint8_t boardcfg_abi_maj;
+	uint8_t boardcfg_abi_min;
+} __attribute__((__packed__));
+
+/**
+ * \brief Board Config LPM configuration.
+ *
+ * \param subhdr Common substructure header.
+ * \param boardcfg_suspend_initiator Board Config suspend initiator.
+ * \param boardcfg_lpm_mode Board Config LPM mode.
+ */
+struct boardcfg_pm_lpm_cfg {
+	struct boardcfg_substructure_pm_header	subhdr;
+	uint8_t					boardcfg_suspend_initiator;
+	uint8_t					boardcfg_lpm_mode;
+	uint16_t				lpm_rsvd1;
+	uint32_t				lpm_rsvd2;
+} __attribute__((__packed__));
+
+/**
+ * \brief PMIC configuration.
+ *
+ * \param subhdr Common substructure header.
+ * \param pmic_cfg_1 Power Management IC configuration (PMIC) registers.
+ * \param pmic_cfg_2 Power Management IC configuration (PMIC) registers.
+ * \param pmic_cfg_3 Power Management IC configuration (PMIC) registers.
+ */
+struct boardcfg_pm_rsvd_pmic_cfg {
+	struct boardcfg_substructure_pm_header	subhdr;
+	uint32_t				pmic_cfg_1;
+	uint32_t				pmic_cfg_2;
+	uint32_t				pmic_cfg_3;
+} __attribute__((__packed__));
+
+struct boardcfg_pm_rsvd_entry {
+	uint16_t	reserved1;
+	uint16_t	reserved2;
+	uint16_t	reserved3;
+	uint8_t		reserved4;
+	uint8_t		reserved5;
+} __attribute__((__packed__));
+
+/**
+ * \brief Reserved configuration.
+ *
+ * \param subhdr Common substructure header.
+ * \param resrv_1 Reserved field.
+ * \param resrv_2 Reserved field.
+ * \param resrv_3 Reserved field.
+ */
+struct boardcfg_pm_rsvd_cfg {
+	struct boardcfg_substructure_pm_header	subhdr;
+	uint32_t				reserved_1;
+	uint32_t				reserved_2;
+	uint32_t				reserved_3;
+	uint16_t				reserved_entry_size;
+} __attribute__((__packed__));
+
+/**
+ * \brief Power Management PLL configuration entry.
+ *
+ * \param dev_id Device ID.
+ * \param clk_id Clock ID.
+ * \param pll_freq PLL frequency.
+ */
+struct boardcfg_pm_pll_cfg_entry {
+	uint32_t	dev_id;
+	uint32_t	clk_id;
+	uint64_t	pll_freq;
+} __attribute__((__packed__));
+
+/**
+ * \brief Power Management PLL configuration.
+ *
+ * \param subhdr Common substructure header.
+ * \param pll_cfg_entries PLL configuration entries.
+ */
+struct boardcfg_pm_pll_cfg {
+	struct boardcfg_substructure_pm_header	subhdr;
+	struct boardcfg_pm_pll_cfg_entry	pll_cfg_entries[5];
+} __attribute__((__packed__));
+
+/**
+ * \brief Power Management Device configuration entry.
+ *
+ * \param dev_id Device ID.
+ * \param state Device state.
+ * \param flag Device flag.
+ */
+struct boardcfg_pm_dev_cfg_entry {
+	uint32_t	dev_id;
+	uint32_t	state;
+	uint32_t	flag;
+} __attribute__((__packed__));
+
+/**
+ * \brief Power Management Device configuration.
+ *
+ * \param subhdr Common substructure header.
+ * \param dev_cfg_entries Device configuration entries.
+ */
+struct boardcfg_pm_dev_cfg {
+	struct boardcfg_substructure_pm_header	subhdr;
+	struct boardcfg_pm_dev_cfg_entry	dev_cfg_entries[5];
+} __attribute__((__packed__));
+
+/**
+ * \brief Power Management configuration.
+ *
+ * \param rev Power Management board config ABI version (separate from Board
+ *            Config ABI version)
+ *
+ * \param lpm_cfg Low power mode configuration
+ *
+ * \param pll_cfg Array of PLL configuration structures
+ *
+ * \param dev_cfg Array of power management device configuration structures
+ *
+ * \param rsvd_pmic_cfg Array of PMIC configuration structures
+ *
+ * \param rsvd_cfg Array of power management reserved structures
+ */
+struct boardcfg_pm {
+	struct boardcfg_abi_pm_rev		rev;
+	struct boardcfg_pm_lpm_cfg		lpm_cfg;
+	struct boardcfg_pm_pll_cfg		pll_cfg;
+	struct boardcfg_pm_dev_cfg		dev_cfg;
+	struct boardcfg_pm_rsvd_pmic_cfg	rsvd_pmic_cfg;
+	struct boardcfg_pm_rsvd_cfg		rsvd_cfg;
+} __attribute__((__packed__));
+
+#endif          /* BOARD_CFG_PM_H */

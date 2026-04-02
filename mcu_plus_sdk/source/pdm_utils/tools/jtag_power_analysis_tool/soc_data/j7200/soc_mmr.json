@@ -1,0 +1,26 @@
+{
+    "vtm": {
+        "VTM_DEVINFO_PWR0": "0x00000004",
+        "VTM_CFG_REG_CFG1": "0x42040000",
+        "VTM_CFG_REG_CFG2": "0x42050000",
+        "TMPSENS_CTRL_OFFSET": "0x300",
+        "TMPSENS_STAT_OFFSET": "0x308",
+        "INSTANCE_OFFSET": "0x20",
+        "CONFIG_VALUE": "0x50",
+        "bitFields": {
+            "numOfSensor": {
+                "startBit": 4,
+                "endBit": 7
+            },
+            "adcCode": {
+                "startBit": 0,
+                "endBit": 9
+            }
+        },
+        "sensorMap": {
+            "0": {"description": "Sensor near MCU_R5FSS"},
+            "1": {"description": "Sensor near LPDDR4 and A72 region"},
+            "2": {"description": "Sensor near main R5FSS, PLL clustering"}
+        }
+    }
+}

@@ -1,0 +1,110 @@
+#
+# Copyright (c) 2017-2020, Texas Instruments Incorporated
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# *  Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+# *  Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# *  Neither the name of Texas Instruments Incorporated nor the names of
+#    its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+# THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+# EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Power Management configuration
+#
+# For a description of the syntax of this configuration file,
+# see https://www.kernel.org/doc/Documentation/kbuild/kconfig-language.txt
+# NOTE: We ONLY support "bool"
+#
+
+menu "Power Management Feature support"
+
+config PM
+	bool "Power Management support"
+	help
+	 Enable Power management support
+
+config PSC
+	bool "PSC Controller support"
+	depends on PM
+	help
+	 Enable support for PSC controller
+
+config PSC_PD_MAX_COUNT_64
+	bool "Expand power tree to support 64 power domains"
+	depends on PSC
+	default n
+	default y if SOC_J721S2
+	default y if SOC_J784S4
+	help
+	 Enable support for 64 power domains (PD). Default is 32 PDs.
+
+config PSC_PTSTAT_ERRATA
+        bool "Enable support for PSC PTSTAT ERRATA"
+        depends on PSC
+        default y if SOC_AM6
+        default y if SOC_J721E
+        help
+         Enable support for PSC PTSTAT ERRATA
+
+config CLOCK
+	bool "Enable support for clock"
+	depends on PM
+	help
+	 Enable support for clocks
+
+config CLK_RPLL028
+	bool "Enable support rdpll028 PLL"
+	depends on CLOCK
+	help
+	 Enable support rdpll028 PLL
+
+config CLK_ADPLLM
+	bool "Enable support for adpllm PLL"
+	depends on CLOCK
+	help
+	 Enable support for adpllm PLL
+
+config CLK_PLL_16FFT
+	bool "Enable support for 16fft pllfrac2/pllfracf"
+	depends on CLOCK
+	help
+	 Enable support for 16fft pllfrac2/pllfracf
+
+config CLK_PLL_16FFT_FRACF_CALIBRATION
+	bool "Enable support for 16fft pllfracf calibration"
+	depends on CLK_PLL_16FFT
+	default n if SOC_AM6
+	default n if SOC_J721E
+	default y if SOC_J7200
+	default y if SOC_J721S2
+	default y if SOC_J784S4
+	help
+	 Enable support for 16fft pllfracf calibration
+
+config CLK_PLL_DESKEW
+	bool "Enable support for 16fft deskew PLL"
+	depends on CLOCK
+	help
+	 Enable support for 16fft deskew PLL
+
+endmenu

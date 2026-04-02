@@ -1,0 +1,599 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="template_files/filelist.xml">
+<title>This is 2.0.2.0 release of the SA LLD for KeyStone2 Devices</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>a0271529</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Aravind Batni</o:LastAuthor>
+  <o:Revision>10</o:Revision>
+  <o:TotalTime>123</o:TotalTime>
+  <o:Created>2012-04-19T19:32:00Z</o:Created>
+  <o:LastSaved>2013-05-16T14:58:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>326</o:Words>
+  <o:Characters>2742</o:Characters>
+  <o:Company>Texas Instruments</o:Company>
+  <o:Lines>22</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>3062</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="template_files/themedata.thmx">
+<link rel=colorSchemeMapping href="template_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>125</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" LatentStyleCount="267">
+  <w:LsdException Locked="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="99" Name="No List"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true"
+   Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 5 0 0 0 0 0 0 0;
+	mso-font-alt:\65B0\7D30\660E\9AD4;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611969 684719354 22 0 1048577 0;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 5 0 0 0 0 0 0 0;
+	mso-font-alt:\65B0\7D30\660E\9AD4;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611969 684719354 22 0 1048577 0;}
+@font-face
+	{font-family:"\@PMingLiU";
+	panose-1:2 2 5 0 0 0 0 0 0 0;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611969 684719354 22 0 1048577 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1593833729 1073750107 16 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{mso-style-unhide:no;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-unhide:no;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+span.apple-style-span
+	{mso-style-name:apple-style-span;
+	mso-style-unhide:no;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;
+	mso-style-unhide:no;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:891035942;
+	mso-list-template-ids:-706942632;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1689940534;
+	mso-list-template-ids:-1688583136;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=blue style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:"Verdana","sans-serif"'>This
+is the <b>02.00.02.00 release </b>of the SA LLD to be used with KeyStone2
+devices.<br>
+<br>
+This package of SA LLD should be used by drivers and applications that
+interface with the Security Accelerator (SA) within NetCP</span><span
+style='font-size:8.0pt;font-family:"Verdana","sans-serif";mso-fareast-font-family:
+PMingLiU;mso-fareast-language:ZH-TW'>, which </span><span style='font-size:
+8.0pt;font-family:"Verdana","sans-serif";mso-fareast-font-family:PMingLiU'>provides
+hardware engines to perform encryption, decryption, and authentication
+operations on packets for commonly supported protocols, including IPsec ESP and
+AH, SRTP, and Air Cipher. The SA also provides the hardware modules to assist
+the host in generating public keys and random numbers.</span><span
+style='font-size:8.0pt;font-family:"Verdana","sans-serif"'> The SA LLD provides
+software building block to implement the security network applications
+including IPSEC, SRTP and 3GPP Air Ciphering on TI </span><span class=SpellE><span
+style='font-size:8.0pt;font-family:"Verdana","sans-serif";mso-fareast-font-family:
+PMingLiU;mso-fareast-language:ZH-TW'>KeyStone</span></span><span
+style='font-size:8.0pt;font-family:"Verdana","sans-serif";mso-fareast-font-family:
+PMingLiU;mso-fareast-language:ZH-TW'> devices</span><span style='font-size:
+8.0pt;font-family:"Verdana","sans-serif"'>. It also provides examples and unit
+tests to facilitate the integration and testing of network security protocols.
+The SA LLD builds on Multicore Software Development Kit (MCSDK) to achieve
+platform abstraction, networking, and inter-core communication. </span><span
+style='font-size:8.0pt;font-family:"Verdana","sans-serif";mso-fareast-font-family:
+PMingLiU;mso-fareast-language:ZH-TW'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-language:ZH-TW'>Although SASS supports 3GPP specific Ciphering and
+Authentication algorithms such as Kasumi F8/F9 and Snow3G</span><span
+style='font-size:8.0pt;font-family:"Verdana","sans-serif"'> </span><span
+style='font-size:8.0pt;font-family:"Verdana","sans-serif";mso-fareast-language:
+ZH-TW'>F8, those algorithms are locked out in this standard SA LLD
+distribution. In order to access 3GPP specific functionalities, one must obtain
+ETSI licensing as described at <a
+href="http://www.etsi.org/WebSite/OurServices/Algorithms/3gppalgorithms.aspx">http://www.etsi.org/WebSite/OurServices/Algorithms/3gppalgorithms.aspx</a></span><span
+style='font-size:8.0pt;font-family:"Verdana","sans-serif";mso-fareast-font-family:
+PMingLiU;mso-fareast-language:ZH-TW'> and then download </span><span
+style='font-size:8.0pt;font-family:"Verdana","sans-serif";mso-fareast-language:
+ZH-TW'>the SASS 3GPP Enabler </span><span style='font-size:8.0pt;font-family:
+"Verdana","sans-serif";mso-fareast-font-family:PMingLiU;mso-fareast-language:
+ZH-TW'>package </span><span style='font-size:8.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-language:ZH-TW'>from TI.</span><span style='font-size:8.0pt;
+font-family:"Verdana","sans-serif";mso-fareast-font-family:PMingLiU;mso-fareast-language:
+ZH-TW'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;mso-bidi-font-size:11.0pt;
+mso-fareast-font-family:PMingLiU'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-font-family:PMingLiU'>For further information on the SA and SA LLD,
+please refer to the <span style='mso-bidi-font-style:italic'>Keystone Architecture
+Security Accelerator User Guide</span> at:&nbsp; <span style='color:#993366'><a
+href="http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sprugy6"
+title="http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sprugy6">http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=sprugy6</a></span></span><span
+style='font-size:11.0pt;mso-bidi-font-size:8.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-font-family:PMingLiU;color:#993366'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:"Verdana","sans-serif"'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:8.0pt;font-family:"Verdana","sans-serif"'>Supported
+Platforms</span></b><span style='font-size:8.0pt;font-family:"Verdana","sans-serif"'>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:"Verdana","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-font-family:PMingLiU;color:black'>The Security Accelerator Low
+Level Driver (SA LLD) requires encryption-enabled <span class=SpellE>KeyStone</span>
+devices or encryption-enabled <span class=SpellE>KeyStone</span> Evaluation
+Modules (EVMs).&nbsp;&nbsp; It will not execute on <span class=SpellE>KeyStone</span>
+devices and EVMs that do not support the Security Accelerator
+(hardware-accelerated encryption).&nbsp; &nbsp;&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-font-family:PMingLiU;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-font-family:PMingLiU;color:black'>For a list of the most current
+encryption-enabled <span class=SpellE>KeyStone</span> devices and EVMs, please
+contact your local TI sales representative.<o:p></o:p></span></p>
+
+<p style='margin-bottom:12.0pt'><b><span style='font-size:8.0pt;font-family:
+"Verdana","sans-serif"'>Software Defects</span></b><span style='font-size:8.0pt;
+font-family:"Verdana","sans-serif"'> <br>
+None </span><span style='font-size:8.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p></o:p></span></p>
+
+<p><b><span style='font-size:8.0pt;font-family:"Verdana","sans-serif"'>Support</span></b><span
+style='font-size:8.0pt;font-family:"Verdana","sans-serif"'> <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:"Verdana","sans-serif"'>For
+technical discussions and issues, please visit <o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='font-size:8.0pt;
+     font-family:"Verdana","sans-serif"'><a
+     href="http://e2e.ti.com/support/dsp/c6000_multi-core_dsps/f/639.aspx"
+     target="_blank"><b>C66x Multicore forum</b></a> <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='font-size:8.0pt;
+     font-family:"Verdana","sans-serif"'><a
+     href="http://e2e.ti.com/support/embedded/f/355.aspx" target="_blank"><b>BIOS
+     Embedded Software forum</b></a> <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='font-size:8.0pt;
+     font-family:"Verdana","sans-serif"'><a
+     href="http://e2e.ti.com/support/development_tools/code_composer_studio/f/81/t/3131.aspx"
+     target="_blank"><b>Code Composer Studio forum</b></a> <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='font-size:8.0pt;
+     font-family:"Verdana","sans-serif"'><a
+     href="http://e2e.ti.com/support/development_tools/compiler/f/343/t/34317.aspx"
+     target="_blank"><b>TI C/C++ Compiler forum</b></a> <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo3;tab-stops:list .5in'><span style='font-size:8.0pt;
+     font-family:"Verdana","sans-serif"'><a href="http://processors.wiki.ti.com"
+     title="Main Page"><b>Embedded Processors wiki</b></a> <o:p></o:p></span></li>
+</ul>
+
+<p><span style='font-size:8.0pt;font-family:"Verdana","sans-serif"'>When asking
+for help in the forum you should tag your posts in the Subject with
+&quot;MCSDK&quot;, the part number (e.g. &quot;C6678&quot;) and software
+component (e.g. &quot;SALLD&quot;). <o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

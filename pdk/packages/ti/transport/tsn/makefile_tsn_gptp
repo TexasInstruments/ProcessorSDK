@@ -1,0 +1,100 @@
+#
+# This file is the makefile for building gptp library.
+#
+ifeq ($(RULES_MAKE), )
+include $(PDK_INSTALL_PATH)/ti/build/Rules.make
+else
+include $(RULES_MAKE)
+endif
+
+MODULE_NAME = tsn_gptp
+
+SRCDIR = tsn_gptp tsn_gptp/gptpconf tsn_gptp/tilld
+INCDIR = tsn_gptp tsn_combase/tilld/jacinto tsn_uniconf/yangs tsn_uniconf/yangs/cores
+
+SRC_PATH := $(PDK_TSN_COMP_PATH)/tsn-stack/tsn_gptp
+
+# List all the external components/interfaces, whose interface header files
+# need to be included for this component
+INCLUDE_INTERNAL_INTERFACES =
+INCLUDE_EXTERNAL_INTERFACES = pdk tsn_unibase tsn_combase tsn_uniconf
+
+# Common source files and CFLAGS across all platforms and cores
+SRCS_COMMON += announce_interval_setting_sm.c \
+	clock_master_sync_offset_sm.c \
+	clock_master_sync_receive_sm.c \
+	clock_master_sync_send_sm.c \
+	clock_slave_sync_sm.c \
+	gm_stable_sm.c \
+	gptp_capable_receive_sm.c \
+	gptp_capable_transmit_sm.c \
+	gptp_capable_interval_setting_sm.c\
+	gptp2_debug_defs.c \
+	gptpclock.c \
+	gptpcommon.c \
+	gptpman.c \
+	gptpmasterclock.c \
+	gptpmasterclock_response.c \
+	link_delay_interval_setting_sm.c \
+	md_abnormal_hooks.c \
+	md_announce_receive_sm.c \
+	md_announce_send_sm.c \
+	md_pdelay_req_sm.c \
+	md_pdelay_resp_sm.c \
+	md_signaling_receive_sm.c \
+	md_signaling_send_sm.c \
+	md_sync_receive_sm.c \
+	md_sync_send_sm.c \
+	mdeth.c \
+	mind.c \
+	one_step_tx_oper_setting_sm.c \
+	port_announce_information_ext_sm.c \
+	port_announce_information_sm.c \
+	port_announce_receive_sm.c \
+	port_announce_transmit_sm.c \
+	port_state_selection_sm.c \
+	port_state_setting_ext_sm.c \
+	port_sync_sync_receive_sm.c \
+	port_sync_sync_send_sm.c \
+	site_sync_sync_sm.c \
+	sync_interval_setting_sm.c \
+	gptpgcfg.c \
+	lld_gptpnet.c \
+	lld_gptpclock.c \
+	lld_ptpdevclock.c \
+	xl4-extmod-xl4gptp.c \
+	xl4-extmod-xl4gptp_runconf.c \
+	gptp_perfmon.c \
+
+PACKAGE_SRCS_COMMON = ../tsn_component.mk ../makefile_tsn_gptp ../tsn-stack/eval_inc
+PACKAGE_SRCS_COMMON += $(SRCDIR)
+
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j721e_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j721e_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j7200_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j7200_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j721s2_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j721s2_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j784s4_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j784s4_evm.r5f.ti-arm-clang.lib
+PACKAGE_SRCS_COMMON += ../tsn-stack/license_lib/yangemb-freertos.j742s2_evm.r5f.ti-arm-clang.lib ../tsn-stack/eval_lib/tsn_lldp-freertos.j742s2_evm.r5f.ti-arm-clang.lib
+
+CFLAGS_LOCAL_COMMON = $(PDK_CFLAGS) $(TSN_CFLAGS) -DTSNPKGVERSION=\"1.2.8\" \
+	-DUB_LOGCAT=3 -DUB_LOGTSTYPE=UB_CLOCK_REALTIME \
+	-include $(PDK_TSN_COMP_PATH)/tsn-stack/tsn_buildconf/jacinto_buildconf.h \
+	-include $(SRC_PATH)/tilld/lld_gptp_private.h
+
+# Core/SoC/platform specific source files and CFLAGS
+# Example:
+#   SRCS_<core/SoC/platform-name> =
+#   CFLAGS_LOCAL_<core/SoC/platform-name> =
+
+# Include common make files
+ifeq ($(MAKERULEDIR), )
+  #Makerule path not defined, define this and assume relative path from ROOTDIR
+  MAKERULEDIR := $(ROOTDIR)/ti/build/makerules
+  export MAKERULEDIR
+endif
+
+include $(MAKERULEDIR)/common.mk
+
+# OBJs and libraries are built by using rule defined in rules_<target>.mk
+#     and need not be explicitly specified here
+
+# Nothing beyond this point

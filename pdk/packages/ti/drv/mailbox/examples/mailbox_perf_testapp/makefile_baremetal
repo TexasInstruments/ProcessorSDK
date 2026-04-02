@@ -1,0 +1,75 @@
+#
+# This file is the makefile for building mailbox LLD perf app.
+#
+ifeq ($(RULES_MAKE), )
+include $(PDK_INSTALL_PATH)/ti/build/Rules.make
+else
+include $(RULES_MAKE)
+endif
+
+APP_NAME = mailbox_baremetal_perf_testapp
+BUILD_OS_TYPE = baremetal
+SRCDIR = .
+INCDIR =
+
+PACKAGE_SRCS_COMMON = .
+
+# List all the external components/interfaces, whose interface header files
+#  need to be included for this component
+INCLUDE_EXTERNAL_INTERFACES = pdk
+
+# List all the components required by the application
+ifeq ($(BOARD),$(filter $(BOARD), am64x_evm))
+  COMP_LIST_COMMON += $(PDK_COMMON_BAREMETAL_COMP) 
+else
+  COMP_LIST_COMMON += csl
+endif
+COMP_LIST_COMMON += csl_utils_common csl_uart_console mailbox
+
+ifeq ($(SOC),$(filter $(SOC), am64x))
+SRCS_COMMON = mailbox_perf_main_baremetal.c mailbox_perf_app.c
+SRCDIR += ./$(SOC)
+INCDIR += ./$(SOC)
+endif
+
+ifeq ($(SOC),$(filter $(SOC), am64x))
+EXTERNAL_LNKCMD_FILE_LOCAL = $(SOC)/linker_$(CORE).lds
+endif
+
+CFLAGS_LOCAL_COMMON = $(PDK_CFLAGS)
+
+ifeq ($(ISA),$(filter $(ISA), a53 a72))
+  LNKFLAGS_LOCAL_$(CORE) += --entry Entry
+endif
+
+# Baremetal Interrupt mode
+ifeq ($(ISA),$(filter $(ISA), r5f a53))
+CFLAGS_LOCAL_COMMON += -DBARE_METAL -DMEASURE_LATENCY_DISTRIBUTION
+endif
+
+# Baremetal Interrupt mode with detailed profiling
+#ifeq ($(ISA),$(filter $(ISA), r5f a53))
+#CFLAGS_LOCAL_COMMON += -DBARE_METAL -DMEASURE_LATENCY_DISTRIBUTION -DDETAILED_PROFILING
+#endif
+
+ifeq ($(CORE),mpu1_0)
+CFLAGS_LOCAL_COMMON += -DSYSTEM_MASTER
+endif
+
+# Core/SoC/platform specific source files and CFLAGS
+# Example:
+#   SRCS_<core/SoC/platform-name> =
+#   CFLAGS_LOCAL_<core/SoC/platform-name> =
+
+# Include common make files
+ifeq ($(MAKERULEDIR), )
+#Makerule path not defined, define this and assume relative path from ROOTDIR
+  MAKERULEDIR := $(ROOTDIR)/ti/build/makerules
+  export MAKERULEDIR
+endif
+include $(MAKERULEDIR)/common.mk
+
+# OBJs and libraries are built by using rule defined in rules_<target>.mk
+#     and need not be explicitly specified here
+
+# Nothing beyond this point

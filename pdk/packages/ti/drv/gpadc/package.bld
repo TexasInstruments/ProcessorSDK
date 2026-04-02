@@ -1,0 +1,12 @@
+/******************************************************************************
+ * FILE PURPOSE: Build description for the GPADC Driver
+ ******************************************************************************
+ * FILE NAME: package.bld
+ *
+ * DESCRIPTION: 
+ *  This file contains the build specification and description for the GPADC driver
+ *
+ *
+ * Copyright (C) 2021, Texas Instruments, Inc.
+ *****************************************************************************/
+
