@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) Texas Instruments Incorporated 2018
+ *  Copyright (c) Texas Instruments Incorporated 2018-2026
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -85,8 +85,11 @@ static uint16_t grpmsg_endpt = 0;
 
 /* this should be >= RPMessage_getObjMemRequired() */
 #define IPC_RPMESSAGE_OBJ_SIZE  (256u)
-
+#if defined(SOC_AM62A)
+#define RPMSG_DATA_SIZE         ((IPC_RPMESSAGE_NUM_VRING_BUF * MSGSIZE) + IPC_RPMESSAGE_OBJ_SIZE)
+#else
 #define RPMSG_DATA_SIZE         (256u*MSGSIZE + IPC_RPMESSAGE_OBJ_SIZE)
+#endif
 
 #if defined (SOC_J721E)
 static uint32_t g_app_to_ipc_cpu_id[APP_IPC_CPU_MAX] =
@@ -440,6 +443,7 @@ static void rpmsg_responderFxn(void* arg0, void* arg1)
             {
                 len = (uint16_t)snprintf(str, MSGSIZE-(1u), "pong %d", n);
             }
+            str[len++] = '\0';
 
             #ifdef APP_IPC_ECHO_TEST_DEBUG
             appLogPrintf("IPC: RecvTask: Sending msg #%d \"%s\" len %d bytes from %s to %s\n",

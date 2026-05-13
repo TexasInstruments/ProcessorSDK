@@ -112,7 +112,7 @@ else ifeq ($(SOC),am62a)
   ifeq ($(TISDK_IMAGE), edgeai)
     export PSDK_LINUX_PATH ?= $(HOME)/ti-processor-sdk-linux-edgeai-am62a-evm-11.02.09.03
   else
-    export PSDK_LINUX_PATH ?= $(HOME)/ti-processor-sdk-linux-adas-am62a-evm-11.02.11.01
+    export PSDK_LINUX_PATH ?= $(HOME)/ti-processor-sdk-linux-adas-am62a-evm-11.02.11.02
   endif
 endif
 

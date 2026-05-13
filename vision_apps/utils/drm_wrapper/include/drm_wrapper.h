@@ -150,11 +150,31 @@ int32_t appDrmWrapperRegisterBuffer(app_drm_wrapper_handle_t *handle,
                                     uint32_t buf_idx);
 
 /**
+ * \brief Wait for the previously submitted page flip to complete
+ *
+ * Blocks until the DRM VBlank event for the last flip is received,
+ * i.e., until the hardware has latched the new framebuffer and the
+ * buffer that was just replaced is no longer being scanned out.
+ *
+ * Call this BEFORE writing (blitting) into the back buffer to guarantee
+ * it is not the active scanout buffer at the time of the write.
+ * Returns immediately if no flip is in flight.
+ *
+ * \param [in] handle       DRM wrapper handle
+ *
+ * \return 0 on success, negative value on failure
+ */
+int32_t appDrmWrapperWaitFlipDone(app_drm_wrapper_handle_t *handle);
+
+/**
  * \brief Render a registered buffer to the display
  *
- * Performs a page flip to display the specified buffer.
- * This function will wait for the previous page flip to complete
- * before submitting a new one.
+ * Waits for the previous page flip to complete, then performs a page
+ * flip to display the specified buffer at the next VBlank.
+ *
+ * When double-buffering, prefer calling appDrmWrapperWaitFlipDone()
+ * before writing the back buffer, then appDrmWrapperRender() to submit
+ * the flip; the internal wait will then be a no-op.
  *
  * \param [in] handle       DRM wrapper handle
  * \param [in] buf_idx      Buffer index to display (must be registered first)

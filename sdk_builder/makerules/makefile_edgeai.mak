@@ -253,7 +253,6 @@ edgeai_qnx_install:
 	if [ -d $(EDGEAI_QNX_STAGING) ]; then \
 		mkdir -p $(EDGEAI_INSTALL_PATH)/edgeai; \
 		cp -rL $(LINUX_FS_PATH)/opt/edgeai-test-data $(EDGEAI_INSTALL_PATH)/edgeai; \
-		cp -rL $(LINUX_FS_PATH)/opt/model_zoo $(EDGEAI_INSTALL_PATH); \
 		cp -rL $(LINUX_FS_PATH)/opt/imaging $(EDGEAI_INSTALL_PATH)/edgeai; \
 		cp -rL $(EDGEAI_QNX_STAGING)/usr/bin $(EDGEAI_INSTALL_PATH)/edgeai; \
 		cp -rL $(EDGEAI_QNX_STAGING)/usr/lib/* $(EDGEAI_INSTALL_PATH)/tilib; \

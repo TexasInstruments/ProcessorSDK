@@ -544,9 +544,13 @@ echo "[opkg-utils] Checking ..." # opkg is needed for running rule in vision_app
 if [ -d opkg-utils-${OPKG_VERSION} ]; then
     echo "opkg-utils-${OPKG_VERSION} found!"
 else
-    wget --tries=5 https://git.yoctoproject.org/opkg-utils/snapshot/opkg-utils-${OPKG_VERSION}.tar.gz --no-check-certificate
-    tar -xf opkg-utils-${OPKG_VERSION}.tar.gz
-    rm opkg-utils-${OPKG_VERSION}.tar.gz
+    mkdir opkg-utils-${OPKG_VERSION} 
+    cd opkg-utils-${OPKG_VERSION} 
+    git init
+    git remote add origin https://git.yoctoproject.org/git/opkg-utils
+    git fetch --depth 1 origin $OPKG_VERSION
+    git checkout FETCH_HEAD 
+    cd .. 
 fi
 echo "[opkg-utils] Done"
 

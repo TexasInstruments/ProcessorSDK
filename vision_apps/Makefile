@@ -32,7 +32,9 @@ ifeq ($(SOC),am62a)
 DIRECTORIES += utils/app_init
 DIRECTORIES += utils/sciserver
 DIRECTORIES += utils/mpu
-
+ifeq ($(BUILD_QNX_MPU),yes)
+BUILD_DEFS+=QNX_MPU
+endif
 DIRECTORIES += platform/$(SOC)
 
 DIRECTORIES += modules

@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2018 Texas Instruments Incorporated
+ * Copyright (c) 2018-2026 Texas Instruments Incorporated
  *
  * All rights reserved not granted herein.
  *
@@ -73,6 +73,10 @@
 #define ENABLE_IPC_MPU1_0
 #define ENABLE_IPC_MCU1_0
 #define ENABLE_IPC_C7x_1
+
+#if defined(QNX_MPU)
+#define ENABLE_IPC_MCU2_0
+#endif
 
 #define ENABLE_UDMA
 #define ENABLE_UDMA_COPY

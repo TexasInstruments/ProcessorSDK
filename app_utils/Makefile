@@ -12,6 +12,9 @@ BUILD_DEFS += $(SOC_DEF)
 
 ifeq ($(SOC), am62a)
 BUILD_DEFS += $(TISDK_IMAGE)
+ifeq ($(BUILD_QNX_MPU),yes)
+BUILD_DEFS+=QNX_MPU
+endif
 endif
 
 DIRECTORIES := utils

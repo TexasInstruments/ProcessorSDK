@@ -95,13 +95,23 @@ link_directories(${TARGET_FS}/usr/lib/aarch64-linux
                  )
 
 if ("${TARGET_OS}" STREQUAL "QNX")
-    link_directories(${PSDK_QNX_PATH}/qnx/resmgr/ipc_qnx_rsmgr/usr/aarch64/so.le/
-	                 ${PSDK_QNX_PATH}/qnx/resmgr/udma_qnx_rsmgr/usr/aarch64/so.le/
-		             ${PSDK_QNX_PATH}/qnx/sharedmemallocator/usr/aarch64/so.le/
-		             ${PSDK_QNX_PATH}/qnx/pdk_libs/pdk/aarch64/so.le/
-		             ${PSDK_QNX_PATH}/qnx/pdk_libs/sciclient/aarch64/so.le/
-		             ${PSDK_QNX_PATH}/qnx/pdk_libs/udmalld/aarch64/so.le/
-		            )
+    if ("${TARGET_SOC_LOWER}" STREQUAL "tda54")
+        link_directories(${PSDK_QNX_PATH}/src/resmgrs/ipc/tiipc-usr/aarch64/so.le/
+                         ${PSDK_QNX_PATH}/src/resmgrs/sharedmemallocator/usr/aarch64/so.le/
+                        )
+    else()
+        link_directories(${PSDK_QNX_PATH}/qnx/codec/vpu/OpenMAXIL/core/nto/aarch64/so.le/
+                         ${PSDK_QNX_PATH}/qnx/codec/vpu/OpenMAXIL/utility/nto/aarch64/so.le/
+                         ${PSDK_QNX_PATH}/qnx/resmgr/ipc_qnx_rsmgr/usr/aarch64/so.le/
+                         ${PSDK_QNX_PATH}/qnx/resmgr/udma_qnx_rsmgr/usr/aarch64/so.le/
+                         ${PSDK_QNX_PATH}/qnx/sharedmemallocator/usr/aarch64/so.le/
+                         ${PSDK_QNX_PATH}/qnx/pdk_libs/pdk/aarch64/so.le/
+                         ${PSDK_QNX_PATH}/qnx/pdk_libs/sciclient/aarch64/so.le/
+                         ${PSDK_QNX_PATH}/qnx/pdk_libs/udmalld/aarch64/so.le/
+                         ${PSDK_QNX_PATH}/qnx/pdk_libs/csirxlld/aarch64/so.le/
+                         ${PSDK_QNX_PATH}/qnx/pdk_libs/fvid2lld/aarch64/so.le/
+                        )
+    endif()
 endif()
 
 #message("PROJECT_SOURCE_DIR = ${PROJECT_SOURCE_DIR}")
@@ -132,14 +142,21 @@ set(SYSTEM_LINK_LIBS
     )
 
 if ("${TARGET_OS}" STREQUAL "QNX")
-    list(APPEND
-         SYSTEM_LINK_LIBS
-         sharedmemallocator
-         tiudma-usr
-         tiipc-usr
-         ti-udmalld
-         ti-pdk
-         ti-sciclient)
+    if ("${TARGET_SOC_LOWER}" STREQUAL "tda54")
+        list(APPEND
+             SYSTEM_LINK_LIBS
+             sharedmemallocator
+             tiipc-usr)
+    else()
+        list(APPEND
+             SYSTEM_LINK_LIBS
+             sharedmemallocator
+             tiudma-usr
+             tiipc-usr
+             ti-udmalld
+             ti-pdk
+             ti-sciclient)
+    endif()
 endif()
 
 set(COMMON_LINK_LIBS

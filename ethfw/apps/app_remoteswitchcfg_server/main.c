@@ -174,7 +174,7 @@
 #define ETHAPP_IPC_VRING_MEM_SIZE               (8U * 1024U * 1024U)
 #elif defined(SOC_J784S4) || defined(SOC_J742S2)
 #define ETHAPP_IPC_VRING_MEM_SIZE               (48U * 1024U * 1024U)
-#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX)
+#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX) || defined(SOC_J722S)
 #define ETHAPP_IPC_VRING_MEM_SIZE               (0x2000U)
 #else
 #error "Unsupported device"
@@ -206,7 +206,7 @@
 #define ETHAPP_DFLT_PORT_MASK                   (CPSW_ALE_HOST_PORT_MASK | \
                                                  CPSW_ALE_MACPORT_TO_PORTMASK(ENET_MAC_PORT_3) | \
                                                  CPSW_ALE_MACPORT_TO_PORTMASK(ENET_MAC_PORT_5))
-#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined (SOC_AM62AX)
+#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined (SOC_AM62AX) || defined(SOC_J722S)
 #if defined(ENABLE_MAC_ONLY_PORTS)
 #define ETHAPP_DFLT_PORT_MASK                   (CPSW_ALE_HOST_PORT_MASK | \
                                                  CPSW_ALE_MACPORT_TO_PORTMASK(ENET_MAC_PORT_1))
@@ -573,7 +573,7 @@ static EthAppObj gEthAppObj =
 #elif defined(SOC_J7200)
     .enetType = ENET_CPSW_5G,
     .instId   = 0U,
-#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX)
+#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX) || defined(SOC_J722S)
     .enetType = ENET_CPSW_3G,
     .instId   = 0U,
 #endif
@@ -621,14 +621,15 @@ static Enet_MacPort gEthAppPorts[] =
 #endif
 #endif
 
-#if defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX)
+#if defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX) || defined(SOC_J722S)
     ENET_MAC_PORT_1,
     ENET_MAC_PORT_2,
 #endif
 };
 
 #if defined(ETHFW_GPTP_SUPPORT)
-#if !((defined(SOC_AM62PX)  || defined(SOC_AM62DX)|| defined(SOC_AM62AX)) && defined(ETHFW_BOOT_TIME_PROFILING))
+#if !((defined(SOC_AM62PX)  || defined(SOC_AM62DX)|| defined(SOC_AM62AX) || defined(SOC_J722S)) && defined(ETHFW_BOOT_TIME_PROFILING))
+
 /* Ethernet ports where gPTP support is enabled, it must be composed of
  * ports in non MAC-only mode */
 static Enet_MacPort gEthAppSwitchPorts[]=
@@ -664,7 +665,7 @@ static Enet_MacPort gEthAppSwitchPorts[]=
 #endif
 #endif
 
-#if defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX)
+#if defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX) || defined(SOC_J722S)
     ENET_MAC_PORT_1,
 #if !defined(ENABLE_MAC_ONLY_PORTS)
     ENET_MAC_PORT_2,
@@ -864,7 +865,7 @@ static EthFwVlan_VlanCfg gEthApp_vlanCfg[] =
         .regMcastFloodMask   = ETHAPP_DFLT_PORT_MASK,
         .unregMcastFloodMask = ETHAPP_DFLT_PORT_MASK,
         .virtMemberMask      = ETHAPP_DFLT_VIRT_PORT_MASK,
-        .untagMask           = 0U,
+        .untagMask           = 0U,  /* Accept untagged packets on all ports */
     },
 };
 
@@ -949,7 +950,7 @@ static uint32_t gEthAppRemoteProc[] =
     IPC_MPU1_0, IPC_MCU1_0, IPC_MCU1_1, IPC_MCU2_1,
     IPC_MCU3_0, IPC_MCU3_1, IPC_MCU4_0, IPC_MCU4_1,
     IPC_C7X_1,  IPC_C7X_2,  IPC_C7X_3,
-#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX)
+#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX) || defined(SOC_J722S)
     IPC_MCU2_1,
 #endif
 };
@@ -1437,7 +1438,7 @@ static int32_t EthApp_initEthFw(void)
 #elif defined(SOC_J784S4) || defined(SOC_J742S2)
         ethFwCfg.ppsConfig.tsrIn = CSLR_TIMESYNC_INTRTR0_IN_CPSW_9XUSSM0_CPTS_GENF0_0;
         ethFwCfg.ppsConfig.tsrOut = ETHAPP_PPS_TIMESYNC_INTR_SYNC3_OUT_PIN;
-#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX)
+#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_AM62AX) || defined(SOC_J722S)
         ETHFWTRACE_WARN("PPS via GenF is not supported for this SoC");
 #else
 #error "TSN: Unsupported SoC"
@@ -1895,11 +1896,11 @@ static void EthApp_netifLinkChangeCb(struct netif *pNetif)
 {
     if (netif_is_link_up(pNetif))
     {
-    	EnetAppUtils_print("[%d]Network Link UP Event\r\n", pNetif->num);
+        EnetAppUtils_print("[%d]Network Link UP Event\r\n", pNetif->num);
     }
     else
     {
-    	EnetAppUtils_print("[%d]Network Link DOWN Event\r\n", pNetif->num);
+        EnetAppUtils_print("[%d]Network Link DOWN Event\r\n", pNetif->num);
     }
     return;
 }

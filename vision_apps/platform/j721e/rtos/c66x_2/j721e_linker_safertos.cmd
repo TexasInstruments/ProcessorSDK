@@ -99,7 +99,9 @@ SECTIONS
                         LOAD_END( lnkUnprivilegedDataEndAddr )
     {
         .rodata:
-        .bss:
+        .bss: {}
+        RUN_START(__BSS_START)
+        RUN_END(__BSS_END)
         .neardata:
         .cio:
         .data:

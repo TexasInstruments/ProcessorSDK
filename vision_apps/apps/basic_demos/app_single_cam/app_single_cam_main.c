@@ -62,7 +62,14 @@
 
 #include "app_single_cam_main.h"
 #include <utils/iss/include/app_iss.h>
+#if defined(SOC_AM62A)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-function"
+#endif
 #include "app_test.h"
+#if defined(SOC_AM62A)
+#pragma GCC diagnostic pop
+#endif
 #include <TI/hwa_vpac_msc.h>
 #include <TI/video_io_kernels.h>
 #include <TI/video_io_capture.h>
@@ -80,6 +87,7 @@
 #if defined(SOC_AM62A) && defined(QNX)
 /*AM62A: QNX to use screen package for displaying frames on A53*/
 #include <screen/screen.h>
+#include <time.h>
 screen_context_t screen_ctx = NULL;
 screen_window_t screen_win = NULL;
 #endif
@@ -89,6 +97,7 @@ screen_window_t screen_win = NULL;
 #include <utils/drm_wrapper/include/drm_wrapper.h>
 #include <xf86drm.h>
 #include <xf86drmMode.h>
+#include <time.h>
 #define  DRM_FORMAT_NV12                0x3231564E
 #endif
 
@@ -143,63 +152,103 @@ int32_t app_run_screen(AppObj *obj)
     /* connect to screen */
     err = screen_create_context(&screen_ctx, SCREEN_APPLICATION_CONTEXT);
     if(err != 0) {
-        printf("Failed to create screen context\n");
+        printf("[QNX Screen] Failed to create screen context\n");
+        return err;
     }
 
     /* create a window */
     err = screen_create_window(&screen_win, screen_ctx);
     if(err != 0) {
-        printf("Failed to create screen window\n");
+        printf("[QNX Screen] Failed to create screen window\n");
+        return err;
     }
 
     err = screen_set_window_property_iv(screen_win, SCREEN_PROPERTY_USAGE, &usage);
     if(err != 0) {
-        printf("Failed to set usage property\n");
+        printf("[QNX Screen] Failed to set usage property\n");
+        return err;
     }
+
     err = screen_set_window_property_iv(screen_win, SCREEN_PROPERTY_FORMAT, &screenFormat);
     if(err != 0) {
-        printf("Failed to set format prpoerty\n");
+        printf("[QNX Screen] Failed to set format property\n");
+        return err;
     }
 
     /* create screen buffers */
     int nbuffers = 2;
     err = screen_create_window_buffers(screen_win, nbuffers);
     if(err != 0) {
-        printf("Failed to create window buffer\n");
+        printf("[QNX Screen] Failed to create window buffer\n");
+        return err;
     }
+
+    printf("[QNX Screen] Display initialized\n");
 
     while(1)
     {
+        vx_image source_image;
+
+        /* SYNCHRONIZED ACCESS: Wait for graph task to provide completed buffer */
+        if(vx_true_e == obj->scaler_enable)
+        {
+            struct timespec ts;
+            clock_gettime(CLOCK_REALTIME, &ts);
+            ts.tv_sec += 1;  /* 1-second timeout */
+
+            /* Wait for signal from graph task: "frame ready" */
+            if (sem_timedwait(&obj->disp_frame_ready_sem, &ts) != 0)
+            {
+                /* Timeout - check if we should exit */
+                if(obj->stop_screen_task == 1) {
+                    break;
+                }
+                continue;  /* Try again */
+            }
+
+            /* Graph task has provided a completed buffer */
+            source_image = obj->screen_frame;
+        }
+        else
+        {
+            /* Fallback: no scaler or old behavior (may still have tearing) */
+            source_image = obj->display_image;
+        }
+
+        /* Get screen buffer properties */
         int buffer_size[2];
         err = screen_get_window_property_iv(screen_win, SCREEN_PROPERTY_BUFFER_SIZE, buffer_size);
         if(err != 0) {
-            printf("Failed to get window buffer size\n");
+            printf("[QNX Screen] Failed to get window buffer size\n");
+            break;
         }
 
         screen_buffer_t screen_buf[2];
         err = screen_get_window_property_pv(screen_win, SCREEN_PROPERTY_RENDER_BUFFERS, (void **)&screen_buf);
         if(err != 0) {
-            printf("Failed to get window buffer\n");
+            printf("[QNX Screen] Failed to get window buffer\n");
+            break;
         }
 
         /* obtain pointers to the buffers */
         void *ptr1 = NULL;
         err = screen_get_buffer_property_pv(screen_buf[0], SCREEN_PROPERTY_POINTER, (void **)&ptr1);
         if(err != 0) {
-            printf("Failed to get buffer pointer\n");
+            printf("[QNX Screen] Failed to get buffer pointer\n");
+            break;
         }
 
         int buf_stride1 = 0;
         err = screen_get_buffer_property_iv(screen_buf[0], SCREEN_PROPERTY_STRIDE, &buf_stride1);
         if(err != 0) {
-           printf("Failed to get buffer stride1\n");
+           printf("[QNX Screen] Failed to get buffer stride\n");
+           break;
         }
 
-        /* copy frames from OVX buffer to screen buffer*/
-        vx_image display_image = obj->display_image;
-        vxQueryImage(display_image, VX_IMAGE_WIDTH, &width, sizeof(vx_uint32));
-        vxQueryImage(display_image, VX_IMAGE_HEIGHT, &height, sizeof(vx_uint32));
-        vxQueryImage(display_image, VX_IMAGE_FORMAT, &df, sizeof(vx_df_image));
+        /* Query source image properties */
+        vxQueryImage(source_image, VX_IMAGE_WIDTH, &width, sizeof(vx_uint32));
+        vxQueryImage(source_image, VX_IMAGE_HEIGHT, &height, sizeof(vx_uint32));
+        vxQueryImage(source_image, VX_IMAGE_FORMAT, &df, sizeof(vx_df_image));
 
         if(VX_DF_IMAGE_NV12 == df)
         {
@@ -219,74 +268,80 @@ int32_t app_run_screen(AppObj *obj)
         rect.end_x = width;
         rect.end_y = height;
 
-        vxMapImagePatch(display_image,
+        /* Copy Y plane from TIOVX buffer to screen buffer */
+        vxMapImagePatch(source_image,
             &rect,
-            0,
+            0,  /* Plane 0 = Y */
             &map_id1,
             &image_addr,
             &data_ptr1,
-            VX_WRITE_ONLY,
+            VX_READ_ONLY,
             VX_MEMORY_TYPE_HOST,
             VX_NOGAP_X
             );
 
         if(!data_ptr1)
         {
-            printf("data_ptr1 is NULL \n");
-            return -1;
+            printf("[QNX Screen] data_ptr1 is NULL\n");
+            break;
         }
 
         imgaddr_width  = image_addr.dim_x;
         imgaddr_height = image_addr.dim_y;
         imgaddr_stride = image_addr.stride_y;
 
-        /*  The current implementation performs memcpy of frame from TIOVX buffer
-         *  to screen buffer. This is not the optimal implementation and needs to
-         *  be updated going ahead for better G2G latency figures
-         */
-        for(i=0;i<height;i++)
+        for(i=0; i<height; i++)
         {
             memcpy(ptr1, data_ptr1, imgaddr_width*num_bytes_per_4pixels/4);
             data_ptr1 += imgaddr_stride;
-            ptr1 += (buf_stride1);
+            ptr1 += buf_stride1;
         }
-        vxUnmapImagePatch(display_image, map_id1);
+        vxUnmapImagePatch(source_image, map_id1);
 
+        /* Copy UV plane if NV12 format */
         if(VX_DF_IMAGE_NV12 == df || TIVX_DF_IMAGE_NV12_P12 == df)
         {
-            vxMapImagePatch(display_image,
+            vxMapImagePatch(source_image,
                 &rect,
-                1,
+                1,  /* Plane 1 = UV */
                 &map_id2,
                 &image_addr,
                 &data_ptr2,
-                VX_WRITE_ONLY,
+                VX_READ_ONLY,
                 VX_MEMORY_TYPE_HOST,
                 VX_NOGAP_X
                 );
 
             if(!data_ptr2)
             {
-                printf("data_ptr2 is NULL \n");
-                return -1;
+                printf("[QNX Screen] data_ptr2 is NULL\n");
+                break;
             }
 
             imgaddr_width  = image_addr.dim_x;
             imgaddr_height = image_addr.dim_y;
             imgaddr_stride = image_addr.stride_y;
 
-            for(i=0;i<imgaddr_height/2;i++)
+            for(i=0; i<imgaddr_height/2; i++)
             {
                 memcpy(ptr1, data_ptr2, imgaddr_width*num_bytes_per_4pixels/4);
                 data_ptr2 += imgaddr_stride;
                 ptr1 += buf_stride1;
             }
-            vxUnmapImagePatch(display_image, map_id2);
+            vxUnmapImagePatch(source_image, map_id2);
         }
 
+        /* Signal graph task: copy done, buffer can be re-enqueued */
+        if(vx_true_e == obj->scaler_enable)
+        {
+            sem_post(&obj->disp_frame_done_sem);
+        }
+
+        /* Post frame to display */
         err = screen_post_window(screen_win, screen_buf[0], 0, NULL, 0);
         if(err != 0) {
-            printf("Failed to post window\n");
+            printf("[QNX Screen] Failed to post window\n");
+            break;
         }
 
         if(obj->stop_screen_task == 1)
@@ -415,12 +470,18 @@ static void app_drm_clear_nv12(vx_image image, vx_uint32 w, vx_uint32 h)
 }
 
 /**
- * \brief Linux DRM display task function using zero-copy via DMA-BUF
+ * \brief Linux DRM display task function with double-buffered canvases
  *
- * This function uses the drm_wrapper to render TIOVX images directly
- * to the display without memory copy operations. When the display image
- * is smaller than the display resolution (1920x1080), a letterboxed
- * canvas is created and the image is centered with black borders.
+ * Two NV12 canvases are allocated and registered as DRM framebuffers
+ * (buf_idx 0 and 1).  Each iteration blits the latest TIOVX output into
+ * the back canvas, then flips to it.  Combined with the VBlank-gated
+ * page_flip_pending wait in appDrmWrapperRender, this ensures the DSS
+ * has finished scanning out a canvas before it is overwritten.
+ *
+ * When the pipeline image is smaller than the display resolution the
+ * canvas is sized to the display and the image is centered (letterbox).
+ * When sizes match the canvas equals the image size and the blit is a
+ * full-frame copy.
  */
 int32_t app_run_drm_display(AppObj *obj)
 {
@@ -431,11 +492,12 @@ int32_t app_run_drm_display(AppObj *obj)
     vx_df_image df;
     uint32_t drm_pix_format;
     uint32_t buf_idx = 0;
-    vx_image drm_image;             /* Image registered with DRM */
-    vx_image canvas = NULL;         /* Letterbox canvas (if needed) */
+    vx_image canvas[2] = {NULL, NULL}; /* Double-buffered canvases for DRM */
+    uint32_t canvas_w, canvas_h;       /* Canvas dimensions (>= image size) */
     int needs_letterbox = 0;
-    uint32_t disp_w = 1920;         /* Display resolution from CRTC */
+    uint32_t disp_w = 1920;
     uint32_t disp_h = 1080;
+    uint32_t i;
 
     /* Query display image properties */
     vx_image display_image = obj->display_image;
@@ -446,24 +508,19 @@ int32_t app_run_drm_display(AppObj *obj)
     /* Map TIOVX format to DRM format */
     if (VX_DF_IMAGE_NV12 == df)
     {
-        drm_pix_format = DRM_FORMAT_NV12; /* DRM_FORMAT_NV12 */
+        drm_pix_format = DRM_FORMAT_NV12;
     }
     else if (TIVX_DF_IMAGE_NV12_P12 == df)
     {
-        /* NV12 P12 not directly supported, fallback to NV12 */
-        drm_pix_format = DRM_FORMAT_NV12; /* DRM_FORMAT_NV12 */
+        drm_pix_format = DRM_FORMAT_NV12;
     }
     else
     {
         printf("[DRM] Unsupported pixel format 0x%x, defaulting to NV12\n", df);
-        drm_pix_format = DRM_FORMAT_NV12; /* DRM_FORMAT_NV12 */
+        drm_pix_format = DRM_FORMAT_NV12;
     }
 
-    /*
-     * Query the actual display resolution from the DRM CRTC mode.
-     * If the display image is smaller than the display, create a
-     * letterboxed canvas at the display resolution.
-     */
+    /* Query actual display resolution from DRM CRTC */
     {
         int tmp_fd;
         drmModeCrtcPtr crtc;
@@ -487,71 +544,121 @@ int32_t app_run_drm_display(AppObj *obj)
                disp_w, disp_h, width, height);
     }
 
-    if (width < disp_w || height < disp_h)
+    needs_letterbox = (width < disp_w || height < disp_h);
+    canvas_w = needs_letterbox ? disp_w : width;
+    canvas_h = needs_letterbox ? disp_h : height;
+
+    if (needs_letterbox)
     {
-        needs_letterbox = 1;
-        canvas = vxCreateImage(obj->context, disp_w, disp_h, VX_DF_IMAGE_NV12);
-        if (canvas == NULL)
-        {
-            printf("[DRM] Failed to create letterbox canvas\n");
-            return -1;
-        }
-
-        app_drm_clear_nv12(canvas, disp_w, disp_h);
-
-        drm_image = canvas;
         printf("[DRM] Letterbox mode: %ux%u centered in %ux%u\n",
-               width, height, disp_w, disp_h);
-    }
-    else
-    {
-        drm_image = display_image;
+               width, height, canvas_w, canvas_h);
     }
 
-    /* Initialize DRM wrapper with actual display resolution */
-    drm_cfg.width = needs_letterbox ? disp_w : width;
-    drm_cfg.height = needs_letterbox ? disp_h : height;
+    /* Allocate two canvases for double buffering */
+    for (i = 0; i < 2u; i++)
+    {
+        canvas[i] = vxCreateImage(obj->context, canvas_w, canvas_h,
+                                  VX_DF_IMAGE_NV12);
+        if (canvas[i] == NULL)
+        {
+            printf("[DRM] Failed to create canvas[%u]\n", i);
+            goto cleanup_canvas;
+        }
+        /* Fill borders with black (Y=0, UV=128) */
+        app_drm_clear_nv12(canvas[i], canvas_w, canvas_h);
+        /* Pre-populate with current pipeline frame so first modeset
+         * has valid pixel content */
+        app_drm_letterbox_nv12(canvas[i], display_image,
+                               canvas_w, canvas_h, width, height);
+    }
+
+    /* Initialize DRM wrapper */
+    drm_cfg.width      = canvas_w;
+    drm_cfg.height     = canvas_h;
     drm_cfg.pix_format = drm_pix_format;
-    drm_cfg.bufq_depth = 1;
+    drm_cfg.bufq_depth = 2;
 
     drm_handle = appDrmWrapperCreate(&drm_cfg);
     if (drm_handle == NULL)
     {
         printf("[DRM] Failed to create DRM wrapper\n");
-        if (canvas != NULL) vxReleaseImage(&canvas);
-        return -1;
+        goto cleanup_canvas;
     }
 
     obj->drm_handle = (void *)drm_handle;
 
-    /* For letterbox: do initial blit so the registered buffer has content */
-    if (needs_letterbox)
+    /* Register both canvases; buf_idx 0 triggers the initial modeset */
+    for (i = 0; i < 2u; i++)
     {
-        app_drm_letterbox_nv12(canvas, display_image,
-                               disp_w, disp_h, width, height);
+        status = appDrmWrapperRegisterBuffer(drm_handle, canvas[i], i);
+        if (status < 0)
+        {
+            printf("[DRM] Failed to register canvas[%u]\n", i);
+            appDrmWrapperDelete(drm_handle);
+            obj->drm_handle = NULL;
+            goto cleanup_canvas;
+        }
     }
 
-    status = appDrmWrapperRegisterBuffer(drm_handle, drm_image, 0);
-    if (status < 0)
-    {
-        printf("[DRM] Failed to register buffer\n");
-        appDrmWrapperDelete(drm_handle);
-        obj->drm_handle = NULL;
-        if (canvas != NULL) vxReleaseImage(&canvas);
-        return -1;
-    }
+    printf("[DRM] DRM display initialized: %ux%u, double-buffered\n",
+           canvas_w, canvas_h);
 
-    printf("[DRM] DRM display initialized: %ux%u\n",
-           drm_cfg.width, drm_cfg.height);
-
-    /* Main display loop */
+    /*
+     * Main display loop — fully synchronised with the TIOVX pipeline.
+     *
+     * Per-iteration sequence:
+     *   1. sem_wait(disp_frame_ready_sem): block until the graph task has
+     *      dequeued a completed scaler output buffer and stored it in
+     *      obj->drm_frame.  This buffer is guaranteed fully written by
+     *      TIOVX — no source-side read/write race.
+     *   2. appDrmWrapperWaitFlipDone: block until the previous DRM page flip
+     *      has completed (VBlank fired) so canvas[buf_idx] is the retired
+     *      back buffer and safe to overwrite.
+     *   3. Blit obj->drm_frame → canvas[buf_idx].
+     *   4. sem_post(disp_frame_done_sem): tell the graph task the buffer has
+     *      been consumed and may be re-enqueued to TIOVX.
+     *   5. Submit the page flip to canvas[buf_idx].
+     *   6. Advance buf_idx.
+     */
+    buf_idx = 0;
     while (1)
     {
-        /* For letterbox mode, copy updated frame into canvas each iteration */
-        if (needs_letterbox)
+        vx_image src_frame;
+
+        if (vx_true_e == obj->scaler_enable)
         {
-            app_drm_letterbox_nv12(canvas, display_image,
-                                   disp_w, disp_h, width, height);
+            /*
+             * Scaler output is a graph parameter: wait for the graph task to
+             * dequeue a guaranteed-complete frame before blitting.
+             */
+            struct timespec ts;
+            clock_gettime(CLOCK_REALTIME, &ts);
+            ts.tv_sec += 1;  /* 1-second timeout so stop_drm_task is polled */
+            if (sem_timedwait(&obj->disp_frame_ready_sem, &ts) != 0)
+            {
+                if (obj->stop_drm_task == 1) { break; }
+                continue;
+            }
+            src_frame = obj->drm_frame;
+        }
+        else
+        {
+            /* No scaler graph parameter: fall back to reading display_image
+             * directly (source-side race possible but display works).      */
+            src_frame = display_image;
+        }
+
+        /* Ensure back canvas is no longer being scanned out */
+        appDrmWrapperWaitFlipDone(drm_handle);
+
+        /* Blit completed frame into the safe back buffer */
+        app_drm_letterbox_nv12(canvas[buf_idx], src_frame,
+                               canvas_w, canvas_h, width, height);
+
+        if (vx_true_e == obj->scaler_enable)
+        {
+            /* Signal graph task: blit done, buffer may be re-enqueued */
+            sem_post(&obj->disp_frame_done_sem);
         }
 
         status = appDrmWrapperRender(drm_handle, buf_idx);
@@ -561,15 +668,28 @@ int32_t app_run_drm_display(AppObj *obj)
             break;
         }
 
+        buf_idx = (buf_idx + 1u) % 2u;
+
         if (obj->stop_drm_task == 1)
         {
             break;
         }
     }
 
-    if (canvas != NULL)
+    /* Unblock the graph task if it is blocked on disp_frame_done_sem */
+    if (vx_true_e == obj->scaler_enable)
     {
-        vxReleaseImage(&canvas);
+        sem_post(&obj->disp_frame_done_sem);
+    }
+
+cleanup_canvas:
+    for (i = 0; i < 2u; i++)
+    {
+        if (canvas[i] != NULL)
+        {
+            vxReleaseImage(&canvas[i]);
+            canvas[i] = NULL;
+        }
     }
 
     return status;
@@ -651,15 +771,29 @@ vx_status app_init(AppObj *obj)
 
     obj->stop_task = 0;
     obj->stop_task_done = 0;
+
 #if defined(SOC_AM62A) && defined(QNX)
     obj->stop_screen_task = 0;
     obj->stop_screen_task_done = 0;
 #endif
+
 #if defined(SOC_AM62A) && defined(LINUX)
     obj->stop_drm_task = 0;
     obj->stop_drm_task_done = 0;
     obj->drm_handle = NULL;
+    obj->drm_frame  = NULL;
 #endif
+
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+    /* Common initialization for synchronization */
+    sem_init(&obj->disp_frame_ready_sem, 0, 0);
+    sem_init(&obj->disp_frame_done_sem,  0, 0);
+#endif
+
+#if defined(SOC_AM62A) && defined(QNX)
+    obj->screen_frame = NULL;
+#endif
+
     obj->selectedCam = 0xFF;
 
     if(status == VX_SUCCESS)
@@ -845,6 +979,13 @@ vx_status app_init(AppObj *obj)
 vx_status app_deinit(AppObj *obj)
 {
     vx_status status = VX_FAILURE;
+
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+    /* Common cleanup for synchronization */
+    sem_destroy(&obj->disp_frame_ready_sem);
+    sem_destroy(&obj->disp_frame_done_sem);
+#endif
+
     tivxHwaUnLoadKernels(obj->context);
     APP_PRINTF("tivxHwaUnLoadKernels done\n");
 
@@ -918,12 +1059,19 @@ vx_status app_create_graph(AppObj *obj)
 
     uint32_t channel_mask = (1<<obj->selectedCam);
 
+    /* On AM62A Linux/QNX the scaler output is a second graph parameter so
+     * the app can receive the exact completed buffer from TIOVX.        */
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+    vx_uint32 params_list_depth = 2;
+#else
     vx_uint32 params_list_depth = 1;
+#endif
     if(obj->test_mode == 1)
     {
-        params_list_depth = 2;
+        params_list_depth++;
     }
-    vx_graph_parameter_queue_params_t graph_parameters_queue_params_list[params_list_depth];
+    /* Fixed-size to avoid VLA; 3 covers all combinations. */
+    vx_graph_parameter_queue_params_t graph_parameters_queue_params_list[3];
 
     printf("Querying %s \n", obj->sensor_name);
     memset(&sensorParams, 0, sizeof(sensorParams));
@@ -1246,12 +1394,30 @@ Sensor driver does not support metadata yet.
             vx_uint16 scaler_out_w, scaler_out_h;
             obj->scaler_enable = vx_true_e;
             appIssGetResizeParams(obj->table_width, obj->table_height, obj->display_params.outWidth, obj->display_params.outHeight, &scaler_out_w, &scaler_out_h);
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+            /* Allocate one image per pipeline slot; all are exposed as a
+             * graph output parameter so we can dequeue the exact buffer
+             * TIOVX just finished writing (eliminates source-side tearing). */
+            for(buf_id = 0; buf_id < obj->num_cap_buf; buf_id++)
+            {
+                obj->scaler_out_imgs[buf_id] = vxCreateImage(obj->context,
+                                                              scaler_out_w,
+                                                              scaler_out_h,
+                                                              VX_DF_IMAGE_NV12);
+            }
+            obj->scaler_out_img = obj->scaler_out_imgs[0];
+#else
             obj->scaler_out_img = vxCreateImage(obj->context, scaler_out_w, scaler_out_h, VX_DF_IMAGE_NV12);
+#endif
             obj->scalerNode = tivxVpacMscScaleNode(obj->graph, obj->ldc_out, obj->scaler_out_img, NULL, NULL, NULL, NULL);
+#if !(defined(SOC_AM62A) && (defined(LINUX) || defined(QNX)))
+            /* On AM62A Linux/QNX the scaler output is managed as a graph
+             * parameter below; skip internal buffer count management.   */
             if(status == VX_SUCCESS)
             {
                 status = tivxSetNodeParameterNumBufByIndex(obj->scalerNode, 1u, obj->num_cap_buf);
             }
+#endif
             obj->display_params.outHeight = scaler_out_h;
 #ifdef VPAC3
         /* HV display scaler height modification */
@@ -1302,12 +1468,25 @@ Sensor driver does not support metadata yet.
         {
             vx_uint16 scaler_out_w, scaler_out_h;
             appIssGetResizeParams(image_width, image_height, obj->display_params.outWidth, obj->display_params.outHeight, &scaler_out_w, &scaler_out_h);
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+            for(buf_id = 0; buf_id < obj->num_cap_buf; buf_id++)
+            {
+                obj->scaler_out_imgs[buf_id] = vxCreateImage(obj->context,
+                                                              scaler_out_w,
+                                                              scaler_out_h,
+                                                              VX_DF_IMAGE_NV12);
+            }
+            obj->scaler_out_img = obj->scaler_out_imgs[0];
+#else
             obj->scaler_out_img = vxCreateImage(obj->context, scaler_out_w, scaler_out_h, VX_DF_IMAGE_NV12);
+#endif
             obj->scalerNode = tivxVpacMscScaleNode(obj->graph, ldc_in_image, obj->scaler_out_img, NULL, NULL, NULL, NULL);
+#if !(defined(SOC_AM62A) && (defined(LINUX) || defined(QNX)))
             if(status == VX_SUCCESS)
             {
                 status = tivxSetNodeParameterNumBufByIndex(obj->scalerNode, 1u, obj->num_cap_buf);
             }
+#endif
             if(status == VX_SUCCESS)
             {
                 status = vxSetNodeTarget(obj->scalerNode, VX_TARGET_STRING, TIVX_TARGET_VPAC_MSC1);
@@ -1402,11 +1581,26 @@ Sensor driver does not support metadata yet.
     /* input @ node index 1, becomes graph parameter 0 */
     add_graph_parameter_by_node_index(obj->graph, obj->capture_node, 1);
 
-    /* set graph schedule config such that graph parameter @ index 0 is enqueuable */
     graph_parameters_queue_params_list[graph_parameter_num].graph_parameter_index = graph_parameter_num;
     graph_parameters_queue_params_list[graph_parameter_num].refs_list_size = obj->num_cap_buf;
     graph_parameters_queue_params_list[graph_parameter_num].refs_list = (vx_reference*)&(obj->cap_frames[0]);
     graph_parameter_num++;
+
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+    /* Scaler output becomes graph parameter 1.  By managing these buffers
+     * as graph parameters we can dequeue the exact image TIOVX just
+     * finished writing, which eliminates the source-side read/write race
+     * that causes tearing when blitting from display_image.             */
+    if(vx_true_e == obj->scaler_enable)
+    {
+        add_graph_parameter_by_node_index(obj->graph, obj->scalerNode, 1);
+        graph_parameters_queue_params_list[graph_parameter_num].graph_parameter_index = graph_parameter_num;
+        graph_parameters_queue_params_list[graph_parameter_num].refs_list_size = obj->num_cap_buf;
+        graph_parameters_queue_params_list[graph_parameter_num].refs_list =
+                (vx_reference*)&(obj->scaler_out_imgs[0]);
+        graph_parameter_num++;
+    }
+#endif
 
     if(obj->test_mode == 1)
     {
@@ -1444,6 +1638,9 @@ Sensor driver does not support metadata yet.
     if(vx_true_e == obj->scaler_enable)
     {
         tivx_vpac_msc_coefficients_t sc_coeffs;
+        #if defined(VPAC3) || defined(VPAC3L)
+            tivx_vpac_msc_input_params_t msc_input_params;
+        #endif
         vx_reference refs[1];
 
         printf("Scaler is enabled\n");
@@ -1460,6 +1657,34 @@ Sensor driver does not support metadata yet.
         {
             status = tivxNodeSendCommand(obj->scalerNode, 0u, TIVX_VPAC_MSC_CMD_SET_COEFF, refs, 1u);
         }
+
+        #if defined(VPAC3) || defined(VPAC3L)
+            /* Configure MSC input parameters with simultaneous processing enabled */
+            if(status == VX_SUCCESS)
+            {
+                vx_user_data_object msc_input_params_obj;
+
+                tivx_vpac_msc_input_params_init(&msc_input_params);
+                msc_input_params.is_enable_simul_processing = 1;
+
+                msc_input_params_obj = vxCreateUserDataObject(obj->context, "tivx_vpac_msc_input_params_t",
+                sizeof(tivx_vpac_msc_input_params_t), &msc_input_params);
+
+                refs[0] = (vx_reference)msc_input_params_obj;
+                status = tivxNodeSendCommand(obj->scalerNode, 0u, TIVX_VPAC_MSC_CMD_SET_INPUT_PARAMS, refs, 1u);
+
+                vxReleaseUserDataObject(&msc_input_params_obj);
+
+                if(status == VX_SUCCESS)
+                {
+                    printf("MSC simultaneous processing enabled\n");
+                }
+                else
+                {
+                    printf("Failed to enable MSC simultaneous processing, status=%d", status);
+                }
+            }
+        #endif
     }
     else
     {
@@ -1689,11 +1914,24 @@ vx_status app_delete_graph(AppObj *obj)
     }
     if(vx_true_e == obj->scaler_enable)
     {
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+        for(buf_id = 0; buf_id < obj->num_cap_buf; buf_id++)
+        {
+            if(NULL != obj->scaler_out_imgs[buf_id])
+            {
+                APP_PRINTF("releasing scaler_out_imgs[%u]\n", buf_id);
+                status |= vxReleaseImage(&obj->scaler_out_imgs[buf_id]);
+                obj->scaler_out_imgs[buf_id] = NULL;
+            }
+        }
+        obj->scaler_out_img = NULL;
+#else
         if (NULL != obj->scaler_out_img)
         {
             APP_PRINTF("releasing Scaler Output Image \n");
             status |= vxReleaseImage(&obj->scaler_out_img);
         }
+#endif
 
         if(NULL != obj->scalerNode)
         {
@@ -1804,6 +2042,15 @@ vx_status app_run_graph(AppObj *obj)
         {
             status = vxGraphParameterEnqueueReadyRef(obj->graph, 1, (vx_reference*)&(obj->display_image), 1);
         }
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+        /* Pre-enqueue all scaler output buffers (graph parameter 1) so
+         * TIOVX can start pipelining immediately.                       */
+        if((status == VX_SUCCESS) && (vx_true_e == obj->scaler_enable))
+        {
+            status = vxGraphParameterEnqueueReadyRef(obj->graph, 1,
+                        (vx_reference*)&(obj->scaler_out_imgs[buf_id]), 1);
+        }
+#endif
     }
 
     /*
@@ -1849,7 +2096,12 @@ vx_status app_run_graph(AppObj *obj)
 
     for(i=0; i<frm_loop_cnt; i++)
     {
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+        vx_image out_scaler_frame = NULL;
+        uint32_t num_refs_scaler  = 0;
+#else
         vx_image test_image;
+#endif
         appPerfPointBegin(&obj->total_perf);
         graph_parameter_num = 0;
         if(status == VX_SUCCESS)
@@ -1857,6 +2109,26 @@ vx_status app_run_graph(AppObj *obj)
             status = vxGraphParameterDequeueDoneRef(obj->graph, graph_parameter_num, (vx_reference*)&out_capture_frames, 1, &num_refs_capture);
         }
         graph_parameter_num++;
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+        /* Dequeue the completed scaler output for this pipeline iteration.
+         * After this call the buffer is guaranteed fully written by TIOVX.*/
+        if((status == VX_SUCCESS) && (vx_true_e == obj->scaler_enable))
+        {
+            status = vxGraphParameterDequeueDoneRef(obj->graph, graph_parameter_num,
+                        (vx_reference*)&out_scaler_frame, 1, &num_refs_scaler);
+            graph_parameter_num++;
+
+            /* Hand the completed frame to the display task and wait until it
+             * has finished copying before we re-enqueue the buffer.     */
+#if defined(LINUX)
+            obj->drm_frame = out_scaler_frame;
+#elif defined(QNX)
+            obj->screen_frame = out_scaler_frame;
+#endif
+            sem_post(&obj->disp_frame_ready_sem);
+            sem_wait(&obj->disp_frame_done_sem);
+        }
+#else
         if((status == VX_SUCCESS) && (obj->test_mode == 1))
         {
             status = vxGraphParameterDequeueDoneRef(obj->graph, 1, (vx_reference*)&test_image, 1, &num_refs_capture);
@@ -1870,18 +2142,30 @@ vx_status app_run_graph(AppObj *obj)
             }
             populate_gatherer(obj->sensor_sel, 0, actual_checksum);
         }
+#endif
         APP_PRINTF(" i %d...\n", i);
         graph_parameter_num = 0;
+#if !(defined(SOC_AM62A) && (defined(LINUX) || defined(QNX)))
         if((status == VX_SUCCESS) && (obj->test_mode == 1))
         {
             status = vxGraphParameterEnqueueReadyRef(obj->graph, 1, (vx_reference*)&test_image, 1);
         }
+#endif
         if(status == VX_SUCCESS)
         {
             status = vxGraphParameterEnqueueReadyRef(obj->graph, graph_parameter_num, (vx_reference*)&out_capture_frames, 1);
         }
         graph_parameter_num++;
-
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+        /* Re-enqueue scaler buffer only after display task has finished
+         * reading it (sem_wait above returned).
+         * Scaler output is always graph parameter index 1.              */
+        if((status == VX_SUCCESS) && (vx_true_e == obj->scaler_enable) && (NULL != out_scaler_frame))
+        {
+            status = vxGraphParameterEnqueueReadyRef(obj->graph, 1,
+                        (vx_reference*)&out_scaler_frame, 1);
+        }
+#endif
         appPerfPointEnd(&obj->total_perf);
 
         if((obj->stop_task) || (status != VX_SUCCESS))
@@ -1889,6 +2173,15 @@ vx_status app_run_graph(AppObj *obj)
             break;
         }
     }
+
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+    /* Ensure the display task is not left blocking on disp_frame_done_sem
+     * after the graph loop exits (e.g. on 'x' keypress).              */
+    if(vx_true_e == obj->scaler_enable)
+    {
+        sem_post(&obj->disp_frame_ready_sem);
+    }
+#endif
 
     if(status == VX_SUCCESS)
     {

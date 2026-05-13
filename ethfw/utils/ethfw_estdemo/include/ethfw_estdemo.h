@@ -1,6 +1,7 @@
 /*
  *
- * Copyright (c) 2024-2025 Texas Instruments Incorporated
+
+ * Copyright (c) 2024-2026 Texas Instruments Incorporated
  *
  * All rights reserved not granted herein.
  *
@@ -96,7 +97,7 @@ extern "C" {
 #define DEFAULT_INTERFACE_INDEX         (1U)
 #elif defined(SOC_J784S4) || defined(SOC_J742S2)
 #define DEFAULT_INTERFACE_INDEX         (0U)
-#elif defined(SOC_AM62PX) || defined(SOC_AM62DX)
+#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_J722S)
 #define DEFAULT_INTERFACE_INDEX         (0U)
 #endif
 

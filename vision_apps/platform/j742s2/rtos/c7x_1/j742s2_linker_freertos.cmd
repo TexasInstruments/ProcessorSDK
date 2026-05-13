@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2024 Texas Instruments Incorporated
+ * Copyright (c) 2024-2026 Texas Instruments Incorporated
  *
  * All rights reserved not granted herein.
  *
@@ -79,6 +79,8 @@ SECTIONS
     .text       >       DDR_C7x_1 ALIGN(0x200000)
 
     .bss        >       DDR_C7x_1  /* Zero-initialized data */
+    RUN_START(__BSS_START)
+    RUN_END(__BSS_END)
     .data       >       DDR_C7x_1  /* Initialized data */
 
     .cinit      >       DDR_C7x_1  /* could be part of const */

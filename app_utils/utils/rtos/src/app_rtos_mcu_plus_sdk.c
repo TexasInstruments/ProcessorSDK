@@ -68,6 +68,20 @@
 #include <kernel/dpl/ClockP.h>
 #include <app_rtos_mcu_plus_priv.h>
 
+#ifndef QNX
+#if defined(SOC_J722S)
+extern uint32_t __BSS_START;
+extern uint32_t __BSS_END;
+
+void extended_system_pre_init(void)
+{
+    /* initialize .bss section to zero */
+    uint32_t bss_size = ((uintptr_t)&__BSS_END - (uintptr_t)&__BSS_START);
+    memset((void*)&__BSS_START, 0x00, bss_size);
+}
+#endif
+#endif
+
 /* Semaphore */
 
 static SemaphoreP_Object gAppRtosSemaphoreObjs[APP_RTOS_MAX_SEMAPHORE_COUNT];

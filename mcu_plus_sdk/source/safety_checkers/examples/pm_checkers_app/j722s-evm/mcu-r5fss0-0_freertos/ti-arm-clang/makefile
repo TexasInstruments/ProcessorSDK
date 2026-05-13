@@ -36,8 +36,8 @@ TARGETS := $(BOOTIMAGE_NAME)
 ifeq ($(DEVICE_TYPE), HS)
    TARGETS += $(BOOTIMAGE_NAME_HS)
 endif
-SCISERVER_IMAGE_PATH:=$(MCU_PLUS_SDK_PATH)/tools/sysfw/sciserver_binary/j722s
-SCISERVER_BOOTIMAGE_RPRC_NAME:=$(SCISERVER_IMAGE_PATH)/sciclient_get_version.release.rprc
+SCISERVER_IMAGE_PATH:=$(MCU_PLUS_SDK_PATH)/examples/drivers/sciclient/sciclient_get_version/j722s-evm/wkup-r5fss0-0_freertos/ti-arm-clang
+SCISERVER_BOOTIMAGE_RPRC_NAME:=$(SCISERVER_IMAGE_PATH)/sciclient_get_version.$(PROFILE).rprc
 
 FILES_common := \
 	pm_checkers_app.c \
@@ -240,7 +240,7 @@ syscfg: ../example.syscfg
 	$(SYSCFG_NODE) $(SYSCFG_CLI_PATH)/dist/cli.js --product $(SYSCFG_SDKPRODUCT) --device J722S_TDA4VEN_TDA4AEN_AM67 --context mcu-r5fss0-0 --part Default --package AMW --output generated/ ../example.syscfg
 
 syscfg-gui:
-	$(SYSCFG_NWJS) $(SYSCFG_PATH) --product $(SYSCFG_SDKPRODUCT) --device J722S_TDA4VEN_TDA4AEN_AM67 --context mcu-r5fss0-0 --part Default --package AMW --output generated/  ../example.syscfg
+	$(SYSCFG_GUI_SCRIPT) --product $(SYSCFG_SDKPRODUCT) --device J722S_TDA4VEN_TDA4AEN_AM67 --context mcu-r5fss0-0 --part Default --package AMW --output generated/  ../example.syscfg
 
 #
 # Generation of boot image which can be loaded by Secondary Boot Loader (SBL)
@@ -287,7 +287,7 @@ MULTI_CORE_IMAGE_PARAMS = \
 MULTI_CORE_IMAGE_PARAMS_XIP = \
 	$(BOOTIMAGE_RPRC_NAME_XIP)@$(BOOTIMAGE_CORE_ID_mcu-r5fss0-0) \
 
-$(BOOTIMAGE_NAME): $(OUTNAME)
+$(BOOTIMAGE_NAME): $(OUTNAME) $(SCISERVER_BOOTIMAGE_RPRC_NAME)
 	@echo  Boot image: j722s:mcu-r5fss0-0:freertos:ti-arm-clang $(BOOTIMAGE_PATH)/$@ ...
 ifneq ($(OS),Windows_NT)
 	$(CHMOD) a+x $(XIPGEN_CMD)
@@ -330,4 +330,6 @@ endif
 	@echo  Boot image: j722s:mcu-r5fss0-0:freertos:ti-arm-clang $(BOOTIMAGE_PATH)/$(BOOTIMAGE_NAME_HS) Done !!!
 	@echo  .
 endif
+$(SCISERVER_BOOTIMAGE_RPRC_NAME):
+	$(MAKE) -C $(MCU_PLUS_SDK_PATH)/examples/drivers/sciclient/sciclient_get_version/j722s-evm/wkup-r5fss0-0_freertos/ti-arm-clang -f makefile PROFILE=$(PROFILE) all
 -include $(addprefix $(OBJDIR)/, $(DEPS))

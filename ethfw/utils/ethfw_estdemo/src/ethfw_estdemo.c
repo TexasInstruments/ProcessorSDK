@@ -1041,7 +1041,7 @@ int32_t EthFwEstDemo_initialize(EstDemoAppCtx *ctx,
 #elif defined(SOC_J7200)
     enetType = ENET_CPSW_5G,
     instId   = 0U,
-#elif defined(SOC_AM62PX) || defined(SOC_AM62DX)
+#elif defined(SOC_AM62PX) || defined(SOC_AM62DX) || defined(SOC_J722S)
     enetType = ENET_CPSW_3G,
     instId   = 0U,
 #endif

@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2018 Texas Instruments Incorporated
+ * Copyright (c) 2018-2026 Texas Instruments Incorporated
  *
  * All rights reserved not granted herein.
  *
@@ -94,6 +94,8 @@ SECTIONS
     GROUP  palign( 0x10000 ), LOAD_START( lnkRamStartAddr ), LOAD_END( lnkRamEndAddr )
     {
         .bss                    : {}  /* Zero-initialized data */
+        RUN_START(__BSS_START)
+        RUN_END(__BSS_END)
         .data                   : {}  /* Initialized data */
 
         .init_array             : {}  /* C++ initializations */

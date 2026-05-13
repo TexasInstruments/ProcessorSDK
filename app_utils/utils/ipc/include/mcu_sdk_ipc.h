@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2022 Texas Instruments Incorporated
+ * Copyright (c) 2022-2026 Texas Instruments Incorporated
  *
  * All rights reserved not granted herein.
  *
@@ -71,7 +71,11 @@
 #define Ipc_mpGetName(name)     SOC_getCoreName(name)
 
 /* #defines */
-#define IPC_SOK                 SystemP_SUCCESS 
-#define RPMESSAGE_LOCAL_ENDPT   15
+#if defined (SOC_AM62A)
+/* Number of a buffers in a VRING, i.e depth of VRING queue */
+#define IPC_RPMESSAGE_NUM_VRING_BUF         (256U)
+#endif
+#define IPC_SOK                             SystemP_SUCCESS 
+#define RPMESSAGE_LOCAL_ENDPT               (15U)
 
 #endif

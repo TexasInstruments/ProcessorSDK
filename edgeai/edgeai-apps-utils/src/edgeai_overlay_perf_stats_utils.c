@@ -81,7 +81,7 @@ int32_t update_edgeai_perf_stats(EdgeAIPerfStats *perf_stats)
 
 int32_t overlay_graph(Overlay *overlay, Stats *stats)
 {
-    uint32_t i, j, k, value;
+    uint32_t i, value;
     char buffer[24];
     uint32_t graph_width, graph_height;
     uint32_t graph_pos_x, graph_pos_y;
@@ -204,7 +204,7 @@ int32_t overlay_graph(Overlay *overlay, Stats *stats)
 #if defined(TARGET_CPU_A72) || defined(TARGET_CPU_A53)
 #if defined(SOC_AM62A) || defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_J722S) || defined(SOC_J742S2)
     app_perf_stats_cpu_load_t cpu_load;
-    for (j = 0; j < APP_IPC_CPU_MAX; j++)
+    for (uint32_t j = 0; j < APP_IPC_CPU_MAX; j++)
     {
         char *cpuName = appIpcGetCpuName(j);
         if (appIpcIsCpuEnabled(j))
@@ -244,10 +244,10 @@ int32_t overlay_graph(Overlay *overlay, Stats *stats)
         }
     }
 
-    for (j = 0; j < stats->hwa_count; j++)
+    for (uint32_t j = 0; j < stats->hwa_count; j++)
     {
         app_perf_stats_hwa_load_t *hwaLoad;
-        for (k = 0; k < APP_PERF_HWA_MAX; k++)
+        for (uint32_t k = 0; k < APP_PERF_HWA_MAX; k++)
         {
             app_perf_hwa_id_t id = (app_perf_hwa_id_t) k;
             hwaLoad = &stats->hwa_loads[j].hwa_stats[id];
@@ -344,7 +344,6 @@ int32_t overlay_graph(Overlay *overlay, Stats *stats)
 
 int32_t overlay_text(Overlay *overlay, Stats *stats)
 {
-    uint32_t i, j;
     uint32_t overlay_height;
     uint32_t text_y_pos;
     uint32_t value;
@@ -417,7 +416,7 @@ int32_t overlay_text(Overlay *overlay, Stats *stats)
 #if defined(TARGET_CPU_A72) || defined(TARGET_CPU_A53)
 #if defined(SOC_AM62A) || defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_J722S) || defined(SOC_J742S2)
     app_perf_stats_cpu_load_t cpu_load;
-    for (i = 0; i < APP_IPC_CPU_MAX; i++)
+    for (uint32_t i = 0; i < APP_IPC_CPU_MAX; i++)
     {
         char *cpuName = appIpcGetCpuName(i);
         if (appIpcIsCpuEnabled(i))
@@ -453,10 +452,10 @@ int32_t overlay_text(Overlay *overlay, Stats *stats)
         }
     }
 
-    for (i = 0; i < stats->hwa_count; i++)
+    for (uint32_t i = 0; i < stats->hwa_count; i++)
     {
         app_perf_stats_hwa_load_t *hwaLoad;
-        for (j = 0; j < APP_PERF_HWA_MAX; j++)
+        for (uint32_t j = 0; j < APP_PERF_HWA_MAX; j++)
         {
             app_perf_hwa_id_t id = (app_perf_hwa_id_t) j;
             hwaLoad = &stats->hwa_loads[i].hwa_stats[id];
@@ -537,7 +536,7 @@ int32_t overlay_text(Overlay *overlay, Stats *stats)
     if(overlay->show_temp && NUM_THERMAL_ZONE > 0)
     {
         uint32_t cpu_temp_idx = 0;
-        for (i = 0; i < NUM_THERMAL_ZONE; i++)
+        for (uint32_t i = 0; i < NUM_THERMAL_ZONE; i++)
         {
             if(NULL != strstr (stats->soc_temp.thermal_zone_name[i], "CPU"))
             {
@@ -561,8 +560,6 @@ int32_t overlay_text(Overlay *overlay, Stats *stats)
 
 void read_stats(Stats *stats)
 {
-    uint32_t i, j;
-
     // CPU Load
     perfStatsCpuLoadCalc(&stats->cpu_load);
     perfStatsResetCpuLoadCalc(&stats->cpu_load);
@@ -577,7 +574,7 @@ void read_stats(Stats *stats)
 #if defined(TARGET_CPU_A72) || defined(TARGET_CPU_A53)
 #if defined(SOC_AM62A) || defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_J722S) || defined(SOC_J742S2)
     // C7x and MCU Load
-    for (i = 0; i < APP_IPC_CPU_MAX; i++)
+    for (uint32_t i = 0; i < APP_IPC_CPU_MAX; i++)
     {
         char *cpuName = appIpcGetCpuName(i);
         if (appIpcIsCpuEnabled(i) &&
@@ -604,7 +601,7 @@ void read_stats(Stats *stats)
     appPerfStatsHwaStatsGet (APP_IPC_CPU_MPU1_0, &stats->hwa_loads[stats->hwa_count++]);
 
     // Reset C7X and MCU load
-    for (i = 0; i < APP_IPC_CPU_MAX; i++)
+    for (uint32_t i = 0; i < APP_IPC_CPU_MAX; i++)
     {
         char *cpuName = appIpcGetCpuName(i);
         if (appIpcIsCpuEnabled(i) &&
@@ -643,7 +640,7 @@ void read_stats(Stats *stats)
 #if defined(SOC_AM62A) || defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_J722S) || defined(SOC_J742S2)
 
     // C7x and MCU Load
-    for (i = 0; i < APP_IPC_CPU_MAX; i++)
+    for (uint32_t i = 0; i < APP_IPC_CPU_MAX; i++)
     {
         char *cpuName = appIpcGetCpuName(i);
         if (appIpcIsCpuEnabled(i))
@@ -658,10 +655,10 @@ void read_stats(Stats *stats)
     }
 
     //HWA
-    for (i = 0; i < stats->hwa_count; i++)
+    for (uint32_t i = 0; i < stats->hwa_count; i++)
     {
         app_perf_stats_hwa_load_t *hwaLoad;
-        for (j = 0; j < APP_PERF_HWA_MAX; j++)
+        for (uint32_t j = 0; j < APP_PERF_HWA_MAX; j++)
         {
             app_perf_hwa_id_t id = (app_perf_hwa_id_t) j;
             hwaLoad = &stats->hwa_loads[i].hwa_stats[id];

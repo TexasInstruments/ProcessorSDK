@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2017-2025 Texas Instruments Incorporated
+ * Copyright (c) 2017-2026 Texas Instruments Incorporated
  *
  * All rights reserved not granted herein.
  *
@@ -82,8 +82,10 @@
 #include <tx_port.h>
 #endif
 
+#if !defined (SOC_AM62A)
 /* Number of a buffers in a VRING, i.e depth of VRING queue */
 #define IPC_RPMESSAGE_NUM_VRING_BUF       (256U)
+#endif
 /* Max size of a buffer in a VRING */
 #define IPC_RPMESSAGE_MAX_VRING_BUF_SIZE  (512U)
 /* Size of each VRING is
@@ -113,11 +115,15 @@ static uint8_t g_app_rpmessage_ctrl_params_buf[APP_IPC_RPMESSAGE_CTRL_PARAMS_BUF
 #define APP_IPC_RPMESSAGE_RPMSG_TX_BUF_SIZE  IPC_RPMESSAGE_BUF_SIZE(APP_IPC_RPMESSAGE_RPMSG_TX_NUM_BUF)
 static uint8_t g_app_rpmessage_rpmsg_tx_buf[APP_IPC_CPU_MAX][APP_IPC_RPMESSAGE_RPMSG_TX_BUF_SIZE] __attribute__ ((aligned(1024)));
 
+#if !defined(SOC_AM62A)
 #define APP_IPC_RPMESSAGE_RPMSG_RX_NUM_BUF   (256u)
+#endif
 #define APP_IPC_RPMESSAGE_RPMSG_RX_BUF_SIZE  IPC_RPMESSAGE_BUF_SIZE(APP_IPC_RPMESSAGE_RPMSG_RX_NUM_BUF)
 static uint8_t g_app_rpmessage_rpmsg_rx_buf[APP_IPC_RPMESSAGE_RPMSG_RX_BUF_SIZE] __attribute__ ((aligned(1024)));
 #else
+#if !defined (SOC_AM62A)
 static uint32_t getVringIndexPDK(uint32_t numProc, uint32_t selfId, uint32_t remoteId);
+#endif
 #endif
 
 /* IMPORTANT NOTE: For C7x,
@@ -375,7 +381,14 @@ static uint32_t g_app_to_ipc_cpu_id[APP_IPC_CPU_MAX] =
 {
     CSL_CORE_ID_A53SS0_0,
     CSL_CORE_ID_R5FSS0_0,
-    CSL_CORE_ID_C75SS0_0
+    CSL_CORE_ID_C75SS0_0,
+#if defined(QNX_MPU)
+    CSL_CORE_ID_MCU_R5FSS0_0,
+    APP_MCUSDK_IPC_CPU_INVALID,
+    APP_MCUSDK_IPC_CPU_INVALID,
+    APP_MCUSDK_IPC_CPU_INVALID,
+    APP_MCUSDK_IPC_CPU_INVALID
+#endif
 };
 
 static uint32_t g_ipc_to_app_cpu_id[CSL_CORE_ID_MAX] =
@@ -425,6 +438,7 @@ static uint32_t g_ipc_to_app_cpu_id[CSL_CORE_ID_MAX] =
   volatile uint8_t gbShutdownRemotecoreID;
   volatile uint8_t gbSuspended;
   volatile uint8_t gbSuspendRemotecoreID; 
+  static uint32_t gVring_id[APP_IPC_CPU_MAX][APP_IPC_CPU_MAX];
 #endif
 
 static int32_t appIpcCreateRpmsgRxTask(app_ipc_obj_t *obj);
@@ -533,7 +547,7 @@ static void appLpmSuspendTaskMain(void *arg0, void *arg1)
     {
         /*Wait for suspend from linux*/
         appRtosSemaphorePend(g_lpm_suspend_sem,APP_RTOS_SEMAPHORE_WAIT_FOREVER);
-        IpcNotify_sendMsg(gbSuspendRemotecoreID, IPC_NOTIFY_CLIENT_ID_RP_MBOX, (uint32_t)IPC_NOTIFY_RP_MBOX_SUSPEND_ACK, 1u); 
+        IpcNotify_sendMsg(gbSuspendRemotecoreID, IPC_NOTIFY_CLIENT_ID_RP_MBOX, (uint32_t)IPC_NOTIFY_RP_MBOX_SUSPEND_ACK, 1u);
         if (gbSuspended == 1u)
         {
             break;
@@ -771,6 +785,64 @@ void appIpcInitPrmSetDefault(app_ipc_init_prm_t *prm)
 }
 
 #if defined (MCU_PLUS_SDK)
+#if defined (SOC_AM62A)
+void sortEnabledCoreIdsAscending(uint32_t *arr, int size) 
+{
+    uint8_t outerCoreId, innerCoreId;
+    if((arr != NULL) && (size > 1))
+    {
+        for(outerCoreId = 0; outerCoreId < size-1; outerCoreId++) 
+        {
+            for(innerCoreId = 0; innerCoreId < size-outerCoreId-1; innerCoreId++) 
+            {
+                if(arr[innerCoreId] > arr[innerCoreId+1]) 
+                {
+                    uint32_t tempCoreId = arr[innerCoreId];
+                    arr[innerCoreId] = arr[innerCoreId+1];
+                    arr[innerCoreId+1] = tempCoreId;
+                }
+            }
+        }
+    }
+}
+void vringAllocateForCores(uint32_t enabled_Cores[], uint32_t numCores)
+{
+    uint32_t vringIndex = 0;
+    uint32_t selfCoreId, remoteCoreId;
+    uint8_t i, j;
+
+    if((enabled_Cores != NULL) && (numCores > 1))
+    {
+        sortEnabledCoreIdsAscending(enabled_Cores, numCores);
+
+        for( i = 0; i < numCores; i ++)
+        {
+            selfCoreId = enabled_Cores[i];
+            if(selfCoreId < APP_IPC_CPU_MAX)
+            {
+                for(j = 0; j < numCores; j++)
+                {
+                    remoteCoreId = enabled_Cores[j];
+                    if(remoteCoreId < APP_IPC_CPU_MAX)
+                    {
+                        if(selfCoreId == remoteCoreId)
+                        {
+                            gVring_id[selfCoreId][remoteCoreId] = UINT32_MAX;
+                        }
+                        else
+                        {
+                            gVring_id[selfCoreId][remoteCoreId] = vringIndex;
+                            vringIndex++;
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+}
+#else
 static uint32_t getVringIndexPDK(uint32_t numProc, uint32_t selfId, uint32_t remoteId)
 {
     uint32_t cnt = 0, a , b, i;
@@ -803,6 +875,7 @@ static uint32_t getVringIndexPDK(uint32_t numProc, uint32_t selfId, uint32_t rem
 
     return res;
 }
+#endif
 #endif
 
 int32_t appIpcInit(app_ipc_init_prm_t *prm)
@@ -1158,7 +1231,16 @@ s<justification start> APP_UTILS_BRANCH_COVERAGE_IPC_RTOS_UBR008
 
         /* initialize parameters to default */
         RPMessage_Params_init(&rpmsgParams);
+#if defined (SOC_AM62A)
+        uint32_t enabled_Cores[prm->num_cpus];
+        uint8_t coreIndex;
+        for(coreIndex = 0U; coreIndex < prm->num_cpus; coreIndex++)
+        {
+            enabled_Cores[coreIndex] = g_app_to_ipc_cpu_id[prm->enabled_cpu_id_list[coreIndex]];
+        }
 
+        vringAllocateForCores(enabled_Cores, prm->num_cpus);
+#endif
         /* VRING mapping from source core to destination core, '-1' means NO VRING */
         /* for each name, construct a N x N object mapping SRC CPU to DST CPU VRING ID,
         Assign VRING IDs to each SRC/DST pair, skip assignment when SRC == DST */
@@ -1178,7 +1260,11 @@ s<justification start> APP_UTILS_BRANCH_COVERAGE_IPC_RTOS_UBR008
                     }
                     else
                     {
+#if defined (SOC_AM62A)
+                        rxTxMap[src_core_id][dst_core_id] = gVring_id[src_core_id][dst_core_id];
+#else
                         rxTxMap[src_core_id][dst_core_id] = getVringIndexPDK(APP_IPC_CPU_MAX, src_core_id, dst_core_id);
+#endif
                     }
                 }
             }

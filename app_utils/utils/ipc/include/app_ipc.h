@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2017 Texas Instruments Incorporated
+ * Copyright (c) 2017-2026 Texas Instruments Incorporated
  *
  * All rights reserved not granted herein.
  *
@@ -213,7 +213,19 @@ extern "C" {
 /** \brief CPU ID */
 #define APP_IPC_CPU_C7x_1   ( 2u)
 /** \brief Max CPU ID */
+#if defined (QNX_MPU)
+/*  QNX Vring Allocation Logic is different from PDK Logic , This is based on all core id's Hence APP_IPC_CPU_MAX is 8.
+    AUTOSAR will run on mcu2 core hence it is considered for Vring Allocation even though our application does not need mcu2_0 core.
+    QNX and Linux Application uses 3 cores(mcpu, mcu1 and c7x) for IPC communication, Hence IPC_MAX_PROCS is kept to 3
+   */
+/** \brief CPU ID */
+#define APP_IPC_CPU_MCU2_0  ( 3u)
+/** \brief Max CPU ID */
+#define APP_IPC_CPU_MAX     ( 8u)
+#else
 #define APP_IPC_CPU_MAX     ( 3u)
+#endif
+
 /** \brief Invalid CPU ID */
 #define APP_IPC_CPU_INVALID (0xFFu)
 #if defined(MCU_PLUS_SDK)
@@ -278,6 +290,9 @@ extern "C" {
 /** \brief RPMsg Port used for RPMsg proto echo test */
 #define APP_IPC_RPMSG_PROTO_ECHO_TEST_RPMSG_PORT_ID  (12u)
 
+#if defined (SOC_AM62A)
+#define APP_IPC_RPMESSAGE_RPMSG_RX_NUM_BUF   (256U)
+#endif
 /* @} */
 
 /**

@@ -91,6 +91,8 @@ SECTIONS
     GROUP  palign( 0x10000 ), LOAD_START( lnkRamStartAddr ), LOAD_END( lnkRamEndAddr )
     {
         .bss                                                    : {} align( 4 )
+        RUN_START(__BSS_START)
+        RUN_END(__BSS_END)
         .far                                                    : {} align( 4 )
         .data                                                   : {} palign( 128 )
         .boardcfg_data                                          : {} palign( 128 )

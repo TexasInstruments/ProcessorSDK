@@ -92,6 +92,7 @@ void perfStatsReadProcStat(uint64_t cnt[], uint32_t num_cnt)
     char str[256];
     const char d[2] = " ";
     char* token;
+    char* status = NULL;
 
     for(i=0; i<num_cnt; i++)
     {
@@ -102,21 +103,25 @@ void perfStatsReadProcStat(uint64_t cnt[], uint32_t num_cnt)
     if(fp != NULL)
     {
         str[0] = 0;
-        fgets(str,256,fp);
+        status = fgets(str,256,fp);
         fclose(fp);
 
-        token = strtok(str,d);
-
-        i = 0;
-        while(token!=NULL && i < num_cnt)
+        if (status != NULL)
         {
-            token = strtok(NULL,d);
-            if(token!=NULL)
+            token = strtok(str,d);
+
+            i = 0;
+            while(token!=NULL && i < num_cnt)
             {
-                cnt[i] = atoi(token);
-                i++;
+                token = strtok(NULL,d);
+                if(token!=NULL)
+                {
+                    cnt[i] = atoi(token);
+                    i++;
+                }
             }
         }
+
     }
 }
 

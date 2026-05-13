@@ -378,6 +378,12 @@ int32_t appInit()
     log_init_prm.log_rd_cpu_enable[APP_IPC_CPU_C7x_1] = 1;
     fileio_init_prm.fileio_rd_cpu_enable[APP_IPC_CPU_C7x_1] = 1;
     #endif
+    #ifdef ENABLE_IPC_MCU2_0
+    ipc_init_prm.enabled_cpu_id_list[ipc_init_prm.num_cpus] = APP_IPC_CPU_MCU2_0;
+    ipc_init_prm.num_cpus++;
+    log_init_prm.log_rd_cpu_enable[APP_IPC_CPU_MCU2_0] = 1;
+    fileio_init_prm.fileio_rd_cpu_enable[APP_IPC_CPU_MCU2_0] = 1;
+    #endif
     ipc_init_prm.tiovx_obj_desc_mem = (void*)g_tiovx_obj_desc_mem;
     ipc_init_prm.tiovx_obj_desc_mem_size = TIOVX_OBJ_DESC_SHARED_MEM_SIZE;
     ipc_init_prm.tiovx_log_rt_mem   = (void*)TIOVX_LOG_RT_MEM_ADDR;
@@ -503,7 +509,11 @@ int32_t appInit()
                 if((host_os_type == APP_HOST_TYPE_LINUX) || (host_os_type == APP_HOST_TYPE_QNX))
                 {
                     /* dont sync with MPU1 running linux/qnx since that is taken care by the kernel */
+#if defined(QNX_MPU)
+                    if((ipc_init_prm.enabled_cpu_id_list[i]!=APP_IPC_CPU_MPU1_0) && (ipc_init_prm.enabled_cpu_id_list[i] != APP_IPC_CPU_MCU2_0))
+#else
                     if(ipc_init_prm.enabled_cpu_id_list[i]!=APP_IPC_CPU_MPU1_0)
+#endif    
                     {
                         sync_cpu_id_list[num_sync_cpus] = ipc_init_prm.enabled_cpu_id_list[i];
                         num_sync_cpus++;
@@ -511,8 +521,14 @@ int32_t appInit()
                 }
                 else
                 {
-                    sync_cpu_id_list[num_sync_cpus] = ipc_init_prm.enabled_cpu_id_list[i];
-                    num_sync_cpus++;
+#if defined(QNX_MPU)
+                    if(ipc_init_prm.enabled_cpu_id_list[i] != APP_IPC_CPU_MCU2_0) /* don't sync with MCU R5f */
+#endif
+                    {
+                        sync_cpu_id_list[num_sync_cpus] = ipc_init_prm.enabled_cpu_id_list[i];
+                        num_sync_cpus++;
+                    }
+
                 }
             }
         }

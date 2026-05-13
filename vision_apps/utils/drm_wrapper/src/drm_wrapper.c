@@ -73,6 +73,9 @@ struct _app_drm_wrapper_handle
 
     /** \brief Flag indicating first frame */
     int first_frame;
+
+    /** \brief Flag indicating a page flip is in flight (cleared by VBlank callback) */
+    volatile int page_flip_pending;
 };
 
 /**
@@ -82,8 +85,8 @@ static void app_drm_page_flip_handler(int fd, uint32_t sequence,
                                       uint32_t tv_sec, uint32_t tv_usec,
                                       void *user_data)
 {
-    int *page_flip_done = (int *)user_data;
-    *page_flip_done = 1;
+    app_drm_wrapper_handle_t *handle = (app_drm_wrapper_handle_t *)user_data;
+    handle->page_flip_pending = 0;
 }
 
 /**
@@ -138,9 +141,10 @@ app_drm_wrapper_handle_t* appDrmWrapperCreate(app_drm_wrapper_cfg_t *cfg)
     memset(handle, 0, sizeof(app_drm_wrapper_handle_t));
     memcpy(&handle->cfg, cfg, sizeof(app_drm_wrapper_cfg_t));
 
-    handle->drm_fd       = -1;
-    handle->modeset_done = 0;
-    handle->first_frame  = 1;
+    handle->drm_fd            = -1;
+    handle->modeset_done      = 0;
+    handle->first_frame       = 1;
+    handle->page_flip_pending = 0;
 
     /* Open DRM device - tidss is the TI Display Subsystem driver */
     handle->drm_fd = drmOpen("tidss", NULL);
@@ -369,11 +373,54 @@ int32_t appDrmWrapperRegisterBuffer(app_drm_wrapper_handle_t *handle,
     return status;
 }
 
+int32_t appDrmWrapperWaitFlipDone(app_drm_wrapper_handle_t *handle)
+{
+    struct pollfd pfd;
+    int ret;
+
+    if (handle == NULL)
+    {
+        APP_DRM_WRAPPER_LOG_ERROR("Invalid handle");
+        return -1;
+    }
+
+    if (!handle->page_flip_pending)
+    {
+        return 0;
+    }
+
+    memset(&pfd, 0, sizeof(pfd));
+    pfd.fd     = handle->drm_fd;
+    pfd.events = POLLIN;
+
+    while (handle->page_flip_pending)
+    {
+        ret = poll(&pfd, 1, APP_DRM_PAGE_FLIP_TIMEOUT);
+        if (ret > 0 && (pfd.revents & POLLIN))
+        {
+            drmHandleEvent(handle->drm_fd, &g_drm_event_ctx);
+        }
+        else if (ret == 0)
+        {
+            APP_DRM_WRAPPER_LOG_ERROR("Page flip timed out");
+            handle->page_flip_pending = 0;
+            break;
+        }
+        else
+        {
+            APP_DRM_WRAPPER_LOG_ERROR("poll() error: %d (%s)",
+                                      errno, strerror(errno));
+            break;
+        }
+    }
+
+    return 0;
+}
+
 int32_t appDrmWrapperRender(app_drm_wrapper_handle_t *handle, uint32_t buf_idx)
 {
     int32_t status = 0;
     struct pollfd pfd;
-    int page_flip_done = 0;
     int ret;
 
     if (handle == NULL)
@@ -395,22 +442,38 @@ int32_t appDrmWrapperRender(app_drm_wrapper_handle_t *handle, uint32_t buf_idx)
         return -1;
     }
 
-    /* Wait for previous page flip to complete (skip for first frame) */
+    /*
+     * Wait for the previous page flip to complete before touching the
+     * back buffer.  The VBlank callback clears page_flip_pending; we must
+     * not proceed until it does so the DSS has finished scanning out the
+     * buffer we are about to overwrite.  Skip on first frame since no
+     * flip has been submitted yet.
+     */
     if (handle->first_frame == 0)
     {
         memset(&pfd, 0, sizeof(pfd));
         pfd.fd     = handle->drm_fd;
         pfd.events = POLLIN;
 
-        while (page_flip_done == 0)
+        while (handle->page_flip_pending)
         {
             ret = poll(&pfd, 1, APP_DRM_PAGE_FLIP_TIMEOUT);
             if (ret > 0 && (pfd.revents & POLLIN))
             {
                 drmHandleEvent(handle->drm_fd, &g_drm_event_ctx);
             }
-            /* Check if callback was invoked */
-            page_flip_done = 1; /* Exit after one poll iteration */
+            else if (ret == 0)
+            {
+                APP_DRM_WRAPPER_LOG_ERROR("Page flip timed out");
+                handle->page_flip_pending = 0;
+                break;
+            }
+            else
+            {
+                APP_DRM_WRAPPER_LOG_ERROR("poll() error: %d (%s)",
+                                          errno, strerror(errno));
+                break;
+            }
         }
     }
     else
@@ -418,15 +481,16 @@ int32_t appDrmWrapperRender(app_drm_wrapper_handle_t *handle, uint32_t buf_idx)
         handle->first_frame = 0;
     }
 
-    /* Submit new page flip */
-    page_flip_done = 0;
+    /* Mark flip in-flight before submitting; callback clears it at VBlank */
+    handle->page_flip_pending = 1;
     ret = drmModePageFlip(handle->drm_fd,
                           handle->cfg.crtc_id,
                           handle->fb_ids[buf_idx],
                           DRM_MODE_PAGE_FLIP_EVENT,
-                          &page_flip_done);
+                          handle);
     if (ret < 0)
     {
+        handle->page_flip_pending = 0;
         APP_DRM_WRAPPER_LOG_ERROR("Page flip failed: %d (%s)",
                                   errno, strerror(errno));
         return -1;

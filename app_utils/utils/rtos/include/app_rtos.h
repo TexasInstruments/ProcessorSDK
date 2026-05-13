@@ -64,6 +64,7 @@
 #define APP_RTOS_H
 
 #include <stdint.h>
+#include <string.h>
 
 /**
  * \defgroup group_vision_apps_utils_rtos Application RTOS OSAL/DPL APIs

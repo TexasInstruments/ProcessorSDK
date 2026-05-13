@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2023 Texas Instruments Incorporated
+ * Copyright (c) 2023-2026 Texas Instruments Incorporated
  *
  * All rights reserved not granted herein.
  *
@@ -3561,7 +3561,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int8x8x3_t RGB0, RGB1;
@@ -3731,7 +3731,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int8x8x3_t RGB0, RGB1;
@@ -3974,7 +3974,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint8x8x3_t RGB0, RGB1;
@@ -4144,7 +4144,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint8x8x3_t RGB0, RGB1;
@@ -4387,7 +4387,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t RGB0, RGB1;
@@ -4557,7 +4557,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t RGB0, RGB1;
@@ -4800,7 +4800,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -4970,7 +4970,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -5213,7 +5213,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t RGB0, RGB1;
@@ -5405,7 +5405,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int32x4x3_t RGB00, RGB01, RGB10, RGB11;
@@ -5657,7 +5657,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -5849,7 +5849,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint32x4x3_t RGB00, RGB01, RGB10, RGB11;
@@ -6101,7 +6101,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -6293,7 +6293,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             float32x4x3_t RGB00, RGB01, RGB10, RGB11;
@@ -6532,7 +6532,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int8x8x3_t BGR0, BGR1;
@@ -6702,7 +6702,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int8x8x3_t BGR0, BGR1;
@@ -6945,7 +6945,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint8x8x3_t BGR0, BGR1;
@@ -7115,7 +7115,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint8x8x3_t BGR0, BGR1;
@@ -7358,7 +7358,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t BGR0, BGR1;
@@ -7528,7 +7528,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t BGR0, BGR1;
@@ -7771,7 +7771,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t BGR0, BGR1;
@@ -7941,7 +7941,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t BGR0, BGR1;
@@ -8184,7 +8184,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t RGB0, RGB1;
@@ -8376,7 +8376,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int32x4x3_t BGR00, BGR01, BGR10, BGR11;
@@ -8628,7 +8628,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -8820,7 +8820,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint32x4x3_t BGR00, BGR01, BGR10, BGR11;
@@ -9072,7 +9072,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -9264,7 +9264,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             float32x4x3_t BGR00, BGR01, BGR10, BGR11;
@@ -9506,7 +9506,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int8x8x3_t RGB0, RGB1;
@@ -9678,7 +9678,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int8x8x3_t RGB0, RGB1;
@@ -9923,7 +9923,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint8x8x3_t RGB0, RGB1;
@@ -10095,7 +10095,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint8x8x3_t RGB0, RGB1;
@@ -10340,7 +10340,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t RGB0, RGB1;
@@ -10512,7 +10512,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t RGB0, RGB1;
@@ -10757,7 +10757,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -10929,7 +10929,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -11174,7 +11174,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t RGB0, RGB1;
@@ -11372,7 +11372,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int32x4x3_t RGB00, RGB01, RGB10, RGB11;
@@ -11630,7 +11630,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -11828,7 +11828,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint32x4x3_t RGB00, RGB01, RGB10, RGB11;
@@ -12086,7 +12086,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -12284,7 +12284,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             float32x4x3_t RGB00, RGB01, RGB10, RGB11;
@@ -12529,7 +12529,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int8x8x3_t BGR0, BGR1;
@@ -12701,7 +12701,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int8x8x3_t BGR0, BGR1;
@@ -12946,7 +12946,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint8x8x3_t BGR0, BGR1;
@@ -13118,7 +13118,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint8x8x3_t BGR0, BGR1;
@@ -13363,7 +13363,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t BGR0, BGR1;
@@ -13535,7 +13535,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t BGR0, BGR1;
@@ -13780,7 +13780,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t BGR0, BGR1;
@@ -13952,7 +13952,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t BGR0, BGR1;
@@ -14197,7 +14197,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int16x8x3_t RGB0, RGB1;
@@ -14395,7 +14395,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             int32x4x3_t BGR00, BGR01, BGR10, BGR11;
@@ -14653,7 +14653,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -14851,7 +14851,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint32x4x3_t BGR00, BGR01, BGR10, BGR11;
@@ -15109,7 +15109,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             uint16x8x3_t RGB0, RGB1;
@@ -15307,7 +15307,7 @@ void dlPreProcess_NV12_image
                         for( pos_x=0; pos_x < ((prms->input_width >> 3) << 3); pos_x+=8 ) {
 
                             uint8x8_t Y0, Y1;
-                            int32x4_t U_f, U_s, V_f, V_s;
+                            int32x4_t U_f = vdupq_n_s32(0), U_s = vdupq_n_s32(0), V_f = vdupq_n_s32(0), V_s = vdupq_n_s32(0);
                             int16x4_t tmp_mid_f, tmp_mid_s;
                             int16x8_t tmp_mid;
                             float32x4x3_t BGR00, BGR01, BGR10, BGR11;

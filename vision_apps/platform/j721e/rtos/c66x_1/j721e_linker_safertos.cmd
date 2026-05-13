@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2018 Texas Instruments Incorporated
+ * Copyright (c) 2018-2026 Texas Instruments Incorporated
  *
  * All rights reserved not granted herein.
  *
@@ -99,7 +99,9 @@ SECTIONS
                         LOAD_END( lnkUnprivilegedDataEndAddr )
     {
         .rodata:
-        .bss:
+        .bss: {}
+        RUN_START(__BSS_START)
+        RUN_END(__BSS_END)
         .neardata:
         .cio:
         .data:

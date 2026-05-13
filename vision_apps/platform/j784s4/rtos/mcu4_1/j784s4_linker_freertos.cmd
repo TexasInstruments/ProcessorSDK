@@ -53,6 +53,8 @@ SECTIONS
     .cinit              : {} palign(8)      > DDR_MCU4_1
     .pinit              : {} palign(8)      > R5F_TCMA
     .bss                : {} align(4)       > DDR_MCU4_1
+    RUN_START(__BSS_START)
+    RUN_END(__BSS_END)
     .far                : {} align(4)       > DDR_MCU4_1
     .data               : {} palign(128)    > DDR_MCU4_1
     .sysmem             : {} align(8)       > DDR_MCU4_1

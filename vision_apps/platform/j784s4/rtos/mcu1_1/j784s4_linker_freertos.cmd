@@ -52,6 +52,8 @@ SECTIONS
     .rodata             : {} palign(8)      > DDR_MCU1_1
     .cinit              : {} palign(8)      > DDR_MCU1_1
     .bss                : {} align(4)       > DDR_MCU1_1
+    RUN_START(__BSS_START)
+    RUN_END(__BSS_END)
     .far                : {} align(4)       > DDR_MCU1_1
     .data               : {} palign(128)    > DDR_MCU1_1
     .sysmem             : {}                > DDR_MCU1_1

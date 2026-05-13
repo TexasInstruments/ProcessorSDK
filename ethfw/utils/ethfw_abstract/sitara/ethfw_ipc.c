@@ -393,7 +393,7 @@ int32_t EthFwIpc_getRemoteEndPt(uint32_t currProcId,
     bool isFound = false;
     uintptr_t key;
     uint32_t endPtTableIdx = 0U;
-
+    
     while (!isFound)
     {
         key = EnetOsal_disableAllIntr();

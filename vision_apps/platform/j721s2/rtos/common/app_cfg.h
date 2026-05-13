@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (c) 2018 Texas Instruments Incorporated
+ * Copyright (c) 2026 Texas Instruments Incorporated
  *
  * All rights reserved not granted herein.
  *
@@ -74,8 +74,8 @@
 //#define ENABLE_IPC_MCU1_1
 #define ENABLE_IPC_MCU2_0
 #define ENABLE_IPC_MCU2_1
-//#define ENABLE_IPC_MCU3_0
-//#define ENABLE_IPC_MCU3_1
+#define ENABLE_IPC_MCU3_0
+#define ENABLE_IPC_MCU3_1
 
 #if (defined(ECU_FC))                                         // Enabling C7x_1 IPC only for FC Demo
     #define ENABLE_IPC_C7x_1

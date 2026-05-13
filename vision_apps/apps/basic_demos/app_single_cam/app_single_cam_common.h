@@ -73,6 +73,9 @@
 #if defined(LINUX) || defined (QNX)
 #include <sys/stat.h>
 #endif
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+#include <semaphore.h>
+#endif
 
 #include <iss_sensors.h>
 #include <iss_sensor_if.h>
@@ -172,17 +175,44 @@ typedef struct {
     tivx_task task;
     uint32_t stop_task;
     uint32_t stop_task_done;
+
 #if defined(SOC_AM62A) && defined(QNX)
+    /* QNX-specific display task variables */
     tivx_task screen_task;
     uint32_t stop_screen_task;
     uint32_t stop_screen_task_done;
 #endif
+
 #if defined(SOC_AM62A) && defined(LINUX)
+    /* Linux-specific DRM variables */
     void *drm_handle;
     tivx_task drm_task;
     uint32_t stop_drm_task;
     uint32_t stop_drm_task_done;
     uint32_t drm_buf_idx;
+#endif
+
+#if defined(SOC_AM62A) && (defined(LINUX) || defined(QNX))
+    /* Common synchronization variables for AM62A Linux and QNX to eliminate screen tearing.
+     * Both platforms use graph parameters and semaphores for synchronized buffer access. */
+
+    /* Per-frame scaler output images — exposed as graph output parameter so
+     * the app knows exactly which buffer TIOVX just finished writing.      */
+    vx_image scaler_out_imgs[MAX_NUM_BUF];
+
+    /* Semaphores for synchronization between graph task and display task */
+    sem_t disp_frame_ready_sem;  /* Graph task → Display task: frame ready */
+    sem_t disp_frame_done_sem;   /* Display task → Graph task: copy done   */
+#endif
+
+#if defined(SOC_AM62A) && defined(LINUX)
+    /* Linux: Pointer to TIOVX-completed frame the DRM task should blit from */
+    vx_image drm_frame;
+#endif
+
+#if defined(SOC_AM62A) && defined(QNX)
+    /* QNX: Pointer to TIOVX-completed frame the screen task should copy from */
+    vx_image screen_frame;
 #endif
 
     uint32_t ldc_enable;
